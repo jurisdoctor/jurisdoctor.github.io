@@ -26,6 +26,7 @@ const config: Config = {
     extend: {
       animation: {
         profileCircles: "profileCircles 8s ease-in-out infinite 1s",
+        scrollWheel: "scroll 1s ease infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -42,6 +43,14 @@ const config: Config = {
           },
           "100%": {
             borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
+          },
+        },
+        scroll: {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "30%": {
+            transform: "translateY(3.75rem)",
           },
         },
       },
