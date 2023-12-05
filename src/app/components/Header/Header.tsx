@@ -11,7 +11,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <header className="xl:bottom-0 xl:top-[var(--top-initial)] w-full fixed top-0 left-0 z-[var(--z-fixed)] bg-[var(--body-color)]">
-      <nav className="max-w-[968px] 2xl:mx-[var(--mb-1-5)] xl:h-[var(--header-height)] m-auto h-[calc(var(--header-height)+1.5rem)] flex justify-between items-center gap-1">
+      <nav className="max-w-[968px] 2xl:mx-[var(--mb-1-5)] xl:h-[var(--header-height)] m-auto h-[calc(var(--header-height)+1.5rem)] flex justify-between items-center gap-6">
         <a href="/">tom</a>
 
         <div
