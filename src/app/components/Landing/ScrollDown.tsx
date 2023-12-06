@@ -2,7 +2,7 @@ import { FaArrowDown } from "react-icons/fa";
 
 const ScrollDown = () => {
   return (
-    <div className="xl:hidden pt-12">
+    <div className="xl:hidden pb-14">
       <a href="#about" className="flex align-center">
         <svg
           width="32px"

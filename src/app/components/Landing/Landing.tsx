@@ -6,7 +6,7 @@ import ScrollDown from "./ScrollDown";
 const Landing = () => {
   return (
     <section id="home" className="2xl:px-8 pt-[10vh] pb-2">
-      <div className="max-w-[968px] mx-auto grid gap-6 home__container">
+      <div className="max-w-[968px] mx-auto grid gap-y-28 home__container">
         <div className="2xl:grid-cols-[100px_repeat(2,1fr)] 2xl:gap-x-5 xl:grid-cols-[0.5fr_3fr] grid grid-cols-[116px_repeat(2,1fr)] pt-20 gap-x-8 items-center">
           <Social />
 

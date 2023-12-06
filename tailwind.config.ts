@@ -17,11 +17,8 @@ const config: Config = {
       lg: { max: "576px" },
       // => @media (max-width: 576px) { ... }
 
-      md: { max: "767px" },
+      md: { max: "350px" },
       // => @media (max-width: 767px) { ... }
-
-      sm: { max: "350px" },
-      // => @media (max-width: 350px) { ... }
     },
     extend: {
       animation: {
