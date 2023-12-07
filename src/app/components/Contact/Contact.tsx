@@ -68,12 +68,12 @@ const Contact = () => {
                 name="message"
                 cols={30}
                 rows={10}
-                className="absolute top-0 left-0 w-full border-[2px] border-solid border-[rgba(0,0,0,0.3)] bg-transparent text-[var(--text-color)] outline-transparent rounded-xl p-6 z-10 resize-none h-[11rem]"
+                className="absolute h-[11rem] top-0 left-0 w-full border-[2px] border-solid border-[rgba(0,0,0,0.3)] bg-transparent text-[var(--text-color)] outline-transparent rounded-xl p-6 z-10 resize-none"
                 placeholder="Start here"
               ></textarea>
             </div>
 
-            <button className="inline-flex bg-[var(--title-color)] text-[var(--container-color)] py-5 px-8 rounded-2xl font-medium button--flex items-center">
+            <button className="relative bg-[var(--title-color)] text-[var(--container-color)] py-5 px-8 rounded-2xl font-medium button--flex items-center mt-24 z-20">
               Send Message 📨
             </button>
           </form>
