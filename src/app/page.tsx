@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Contact from "./components/Contact";
 import Header from "./components/Header";
 import History from "./components/History/History";
 import Landing from "./components/Landing";
@@ -13,6 +14,7 @@ export default function Home() {
         <About />
         <Skills />
         <History />
+        <Contact />
       </main>
     </main>
   );

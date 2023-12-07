@@ -16,7 +16,7 @@ const History = () => {
   };
 
   return (
-    <section className="qualification pt-24 pb-8">
+    <section className="pt-24 pb-8" id="portfolio">
       <h2 className="text-4xl text-center">History</h2>
 
       <span className="block text-sm mb-16 text-center">My Journey</span>
