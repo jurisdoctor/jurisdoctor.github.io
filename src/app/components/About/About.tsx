@@ -21,9 +21,10 @@ const About = () => {
         <div className="2xl:text-center">
           <Info />
           <p className="2xl:px-20 2xl:mb-8 pr-16 mb-10">
-            Experienced Senior Frontend Engineer with a demonstrated history of
-            working in Startup & Enterprise companies building Web and iOS +
-            Android Applications.
+            Seasoned Senior Frontend Engineer, showcasing a proven track record
+            in both Startup and Enterprise environments, specializing in
+            crafting dynamic Web and cross-platform iOS and Android
+            Applications.
           </p>
 
           <a

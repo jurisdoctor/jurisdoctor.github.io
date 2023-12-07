@@ -3,24 +3,28 @@ import { CiLocationArrow1 } from "react-icons/ci";
 
 const Contact = () => {
   return (
-    <section className="contact pt-24 pb-8" id="contact">
+    <section
+      className="2xl:gap-x-12 xl:grid-cols-1 xl:gap-y-12 pt-24 pb-12"
+      id="contact"
+    >
       <h2 className="text-4xl text-[var(--title-color)] text-center">
         Get in touch
       </h2>
       <span className="block text-sm text-center mb-16">Contact Me</span>
 
-      <div className="grid-cols-2 justify-center gap-x-24 pb-12 max-w-[768px] mx-auto grid">
+      {/* <div className="2xl:gap-x-12 xl:grid-cols-1 xl:gap-y-12 grid-cols-2 justify-center gap-x-24 pb-12 max-w-[768px] mx-auto grid"> */}
+      <div className="max-w-[500px] mx-auto grid">
         <div className="contact__content">
           <h3 className="text-center text-xl font-medium mb-6">Talk to me</h3>
 
-          <div className="grid gap-y-1 col-grids-[300px]">
-            <div className="bg-[var(--container-color)] border-[1px] border-solid border-[rgba(0,0,0,0.1)] p-4 rounded-xl text-center">
+          <div className="xl:grid-cols-1 xl:gap-y-12 grid gap-y-1 col-grids-[300px]">
+            <div className="xl:w-[60vw] xl:mx-auto xl:justify-center bg-[var(--container-color)] border-[1px] border-solid border-[rgba(0,0,0,0.1)] p-4 rounded-xl text-center">
               <LuContact2 className="m-auto text-3xl text-[var(--title-color)] mb-1" />
               <h3 className="text-xs font-medium">Email</h3>
               <span className="text-xs block mb-3">tomtldr@gmail.com</span>
 
               <a
-                href="mainto:tomtldr@gmail.com"
+                href="mailto:tomtldr@gmail.com"
                 className="text-[var(--text-color)] text-xs inline-flex items-center justify-center gap-x-1"
               >
                 Write me{" "}
@@ -30,7 +34,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="contact__content">
+        {/* <div className="xl:mx-auto">
           <h3 className="text-center text-xl font-medium mb-6">
             Write me your project
           </h3>
@@ -77,7 +81,7 @@ const Contact = () => {
               Send Message 📨
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   );

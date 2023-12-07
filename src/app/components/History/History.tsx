@@ -83,17 +83,17 @@ const History = () => {
                   Masters - Math
                 </span>
                 <div className="flex text-xs">
-                  <LuCalendarDays className="mr-1 my-auto" /> 2019 - 2020
+                  <LuCalendarDays className="mr-1 my-auto" /> 2014 - 2016
                 </div>
               </div>
             </div>
 
             <div className="grid grid-cols-[1fr_max-content_1fr] gap-x-6">
               <div>
-                <h3 className="text-xs font-medium">Software Engineer II</h3>
-                <span className="inline-block text-xs mb-4">Oracle</span>
+                <h3 className="text-xs font-medium">TBD</h3>
+                <span className="inline-block text-xs mb-4">Juris Doctor</span>
                 <div className="flex text-xs">
-                  <LuCalendarDays className="mr-1 my-auto" /> 2018-2019
+                  <LuCalendarDays className="mr-1 my-auto" /> Present -
                 </div>
               </div>
 
@@ -102,24 +102,6 @@ const History = () => {
                 <span className="block w-[1px] h-full bg-[var(--text-color)] translate-x-[6px] translate-y-[-7px]">
                   {" "}
                 </span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-[1fr_max-content_1fr] gap-x-6">
-              <div></div>
-
-              <div>
-                <span className="inline-block w-[13px] h-[13px] bg-[--text-color] rounded-[50%]"></span>
-                <span className="block w-[1px] h-full bg-[var(--text-color)] translate-x-[6px] translate-y-[-7px]"></span>
-              </div>
-              <div>
-                <h3 className="text-xs font-medium">Frontend Engineer</h3>
-                <span className="inline-block text-xs mb-4">
-                  Kaiser Permanente
-                </span>
-                <div className="flex text-xs">
-                  <LuCalendarDays className="mr-1 my-auto" /> 2016-2018
-                </div>
               </div>
             </div>
           </div>

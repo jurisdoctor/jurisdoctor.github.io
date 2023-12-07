@@ -1,4 +1,3 @@
-import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
