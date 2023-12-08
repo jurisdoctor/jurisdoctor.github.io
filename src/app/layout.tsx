@@ -1,25 +1,22 @@
-import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
-import './globals.css';
+import type { Metadata } from "next";
+import { Quicksand } from "next/font/google";
+import "./globals.css";
 
-const poppins = Poppins({
-  subsets: ['latin'] ,
-  weight: ['400', '500'],
-})
+const quicksand = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'tom',
-  description: 'site de tom',
-}
+  title: "tom",
+  description: "side de tom",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={quicksand.className}>{children}</body>
     </html>
-  )
+  );
 }
