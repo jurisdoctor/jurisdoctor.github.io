@@ -1,0 +1,60 @@
+const Data = [
+  {
+    id: 1,
+    category: "education",
+    icon: "icon-graduation",
+    year: "2014 - 2016",
+    title: "Masters -- Mathematics",
+    desc: "California State University, East Bay",
+  },
+  {
+    id: 2,
+    category: "education",
+    icon: "icon-graduation",
+    year: "2010 - 2013",
+    title: "Bachelors -- Mathematics",
+    desc: "University of California, Santa Barbara",
+  },
+  {
+    id: 3,
+    category: "education",
+    icon: "icon-graduation",
+    year: "Present -",
+    title: "Juris Doctor",
+    desc: "TBD",
+  },
+  {
+    id: 4,
+    category: "experience",
+    icon: "icon-briefcase",
+    year: "2020 - 2023",
+    title: "Technical Lead",
+    desc: "Avail Medsystems",
+  },
+  {
+    id: 5,
+    category: "experience",
+    icon: "icon-briefcase",
+    year: "2019 - 2020",
+    title: "Lead Frontend Engineer",
+    desc: "Sofar Ocean",
+  },
+  {
+    id: 6,
+    category: "experience",
+    icon: "icon-briefcase",
+    year: "2018 - 2019",
+    title: "Software Engineer II",
+    desc: "Oracle",
+  },
+  {
+    id: 7,
+    category: "experience",
+    icon: "icon-briefcase",
+    year: "2016 - 2018",
+    title: "Frontend Engineer",
+    desc: "Kaiser Permanente",
+  },
+];
+
+export default Data;

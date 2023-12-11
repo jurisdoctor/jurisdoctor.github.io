@@ -6,12 +6,12 @@ import Shapes from "./Shapes";
 const Home = () => {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center max-w-[1008px] mx-auto px-[15px]"
+      className="relative mx-auto flex min-h-screen max-w-[1008px] items-center justify-center px-[15px]"
       id="home"
     >
       <div className="max-w-[540px] text-center">
         <Image
-          className="h-auto mx-auto max-w-full mb-6"
+          className="mx-auto mb-6 h-auto max-w-full"
           src="/assets/avatar-1.svg"
           width={125}
           height={125}
@@ -24,7 +24,7 @@ const Home = () => {
 
         <a
           href="#contact"
-          className="inline-block bg-[var(--primary-color)] border-[1px] border-solid border-transparent rounded-[1.875rem] text-white font-bold leading-4 py-3 px-8 mb-1 shadow-lg hover:animate-pulse"
+          className="mb-1 inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse"
         >
           Poke!
         </a>

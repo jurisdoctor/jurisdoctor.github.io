@@ -10,7 +10,7 @@ const LandingScreen = () => {
     <>
       <Sidebar />
 
-      <main className="ml-[110px]">
+      <main className="ml-[110px] lg:ml-0">
         <Home />
         <About />
         <Resume />
