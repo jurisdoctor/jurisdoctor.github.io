@@ -5,7 +5,7 @@ import { FaYelp } from "react-icons/fa";
 
 const AboutBox = () => {
   return (
-    <div className="grid-cols-4 gap-x-7 mt-16 grid">
+    <div className="mt-16 grid grid-cols-4 gap-x-7 md:grid-cols-[repeat(2,150px)] md:justify-center md:gap-y-6">
       <div className="flex gap-x-6">
         <GiFireSpellCast className="text-4xl text-[#dedeea]" />
 

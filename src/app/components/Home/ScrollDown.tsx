@@ -1,10 +1,10 @@
 const ScrollDown = () => {
   return (
-    <div className="w-full absolute bottom-10 left-0">
+    <div className="absolute bottom-10 left-0 w-full">
       <a href="#about" className="mouse__wrapper">
         <span className="text-xs">Scroll Down</span>
-        <span className="h-6 w-5 relative  mt-3 mx-auto rounded-2xl block border-[2px] border-solid border-[#454360]">
-          <span className="h-1 w-1 absolute top-2 left-[50%] -translate-x-2/4 bg-[var(--title-color)] rounded-[100%] animate-mouseBounce"></span>
+        <span className="relative mx-auto mt-3  block h-6 w-5 rounded-xl border-[2px] border-solid border-[#454360]">
+          <span className="absolute left-[50%] top-2 h-1 w-1 -translate-x-2/4 animate-mouseBounce rounded-[100%] bg-[var(--title-color)]"></span>
         </span>
       </a>
     </div>

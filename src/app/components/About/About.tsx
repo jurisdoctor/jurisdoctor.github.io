@@ -4,21 +4,21 @@ import AboutBox from "./AboutBox";
 const About = () => {
   return (
     <section
-      className="about max-w-[1080px] mx-auto px-[15px] pt-28 pb-8"
+      className="about mx-auto max-w-[1080px] px-[15px] pb-8 pt-28"
       id="about"
     >
-      <h2 className="relative text-4xl font-bold ml-3.5 mb-14">about</h2>
+      <h2 className="relative mb-14 ml-3.5 text-4xl font-bold">about</h2>
 
-      <div className="grid-cols-[3fr_9fr] gap-x-7 grid">
+      <div className="xs:grid-cols-1 grid grid-cols-[3fr_9fr] gap-x-7 md:grid-cols-[320px] xl:grid-cols-[720px] xl:justify-center xl:gap-x-[1.875rem]">
         <Image
-          className="h-auto align-middle max-w-full"
+          className="h-auto max-w-full align-middle xl:justify-self-center"
           src="/assets/avatar-2.svg"
           width={125}
           height={125}
           alt="Picture of the author"
         />
 
-        <div className="relative p-7 bg-[var(--container-color)] rounded-2xl shadow-xl grid grid-cols-2 gap-x-7 items-start before:content-[''] before:w-0 before:h-0 before:border-y-[10px] before:border-y-solid before:border-y-transparent before:border-r-[15px] before:border-r-solid before:border-r-[var(--container-color)] before:absolute before:left-[-0.93rem] before:top-[20%]">
+        <div className="before:border-y-solid before:border-r-solid relative grid grid-cols-2 items-start gap-x-7 rounded-xl bg-[var(--container-color)] p-7 shadow-xl before:absolute before:left-[-0.93rem] before:top-[20%] before:h-0 before:w-0 before:border-y-[10px] before:border-r-[15px] before:border-y-transparent before:border-r-[var(--container-color)] before:content-[''] md:grid-cols-1 md:gap-y-7 md:before:left-[47%] xl:before:left-[49%] xl:before:top-[-20px] xl:before:border-x-[10px] xl:before:border-x-transparent xl:before:border-b-white">
           <div className="about__info">
             <p className="mb-4 text-justify">
               This space is where lines of code converge into transformative
@@ -27,15 +27,15 @@ const About = () => {
             </p>
             <a
               href=""
-              className="inline-block bg-[var(--primary-color)] border-[1px] border-solid border-transparent rounded-[1.875rem] text-white font-bold leading-4 py-3 px-8 mb-1 shadow-lg hover:animate-pulse"
+              className="mb-1 inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse"
             >
               Download CV
             </a>
           </div>
 
-          <div className="gap-y-5 grid">
+          <div className="grid gap-y-5">
             <div className="skills__data">
-              <div className="flex justify-between mb-4">
+              <div className="mb-4 flex justify-between">
                 <h3 className="text-base font-semibold">
                   React & React Native
                 </h3>
@@ -43,29 +43,29 @@ const About = () => {
               </div>
 
               <div className="h-[7px] rounded bg-[#f1f1f1]">
-                <div className="h-[7px] rounded block w-[90%] bg-[rgb(255,209,92)]"></div>
+                <div className="block h-[7px] w-[90%] rounded bg-[rgb(255,209,92)]"></div>
               </div>
             </div>
 
             <div className="skills__data">
-              <div className="flex justify-between mb-4">
+              <div className="mb-4 flex justify-between">
                 <h3 className="text-base font-semibold">Node</h3>
                 <span className="leading-5">70%</span>
               </div>
 
               <div className="h-[7px] rounded bg-[#f1f1f1]">
-                <div className="h-[7px] rounded block w-[70%] bg-[rgb(255,209,92)]"></div>
+                <div className="block h-[7px] w-[70%] rounded bg-[rgb(255,209,92)]"></div>
               </div>
             </div>
 
             <div className="skills__data">
-              <div className="flex justify-between mb-4">
+              <div className="mb-4 flex justify-between">
                 <h3 className="text-base font-semibold">Golang</h3>
                 <span className="leading-5 ">75%</span>
               </div>
 
               <div className="h-[7px] rounded bg-[#f1f1f1]">
-                <div className="h-[7px] rounded block w-[75%] bg-[rgb(255,209,92)]"></div>
+                <div className="block h-[7px] w-[75%] rounded bg-[rgb(255,209,92)]"></div>
               </div>
             </div>
           </div>
