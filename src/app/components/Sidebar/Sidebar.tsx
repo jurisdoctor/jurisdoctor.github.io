@@ -14,7 +14,7 @@ const Sidebar = () => {
   const [toggle, setToggle] = useState(false);
 
   const navToggle =
-    "fixed left-7 top-5 z-10 flex h-[40px] w-[45px] cursor-pointer items-center justify-center border-[1px] border-solid border-[#e8dfec] bg-[var(--body-color)] lg:flex duration-300";
+    "fixed left-[1.875rem] top-5 z-10 hidden h-[40px] w-[45px] cursor-pointer items-center justify-center border-[1px] border-solid border-[#e8dfec] bg-[var(--body-color)] lg:flex rounded-lg duration-300 shadow-md";
 
   const aside =
     "l-0 t-0 fixed z-10 flex min-h-screen w-[110px] flex-col justify-between border-r border-solid border-[rgba(0,0,0,0.5)] bg-[var(--body-color)] p-10 lg:left-[-110px] duration-300";

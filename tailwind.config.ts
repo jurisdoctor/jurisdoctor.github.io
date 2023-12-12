@@ -47,9 +47,9 @@ const config: Config = {
         },
         animateSway: {
           "0%,60%,100%": { transform: "rotate(0.0deg)" },
-          "10%,30%": { transform: "rotate(14deg)" },
-          "20%": { transform: "rotate(-8deg)" },
-          "40%": { transform: "rotate(-4deg)" },
+          "10%,30%": { transform: "rotate(24deg)" },
+          "20%": { transform: "rotate(-18deg)" },
+          "40%": { transform: "rotate(-34deg)" },
           "50%": { transform: "rotate(10.0deg)" },
         },
       },
