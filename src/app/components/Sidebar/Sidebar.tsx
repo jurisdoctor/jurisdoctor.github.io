@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <aside className={toggle ? `${aside} lg:left-0` : `${aside}`}>
+      <aside className={toggle ? `${aside} lg:!left-0` : `${aside}`}>
         <a href="#home" className="nav__logo">
           <Image
             className="h-auto max-w-full align-middle"

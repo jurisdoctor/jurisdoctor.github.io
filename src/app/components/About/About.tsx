@@ -9,7 +9,7 @@ const About = () => {
     >
       <h2 className="relative mb-14 ml-3.5 text-4xl font-bold">about</h2>
 
-      <div className="xs:grid-cols-1 grid grid-cols-[3fr_9fr] gap-x-7 md:grid-cols-[320px] xl:grid-cols-[720px] xl:justify-center xl:gap-x-[1.875rem]">
+      <div className="grid grid-cols-[3fr_9fr] gap-x-7 xl:grid-cols-[720px] xl:justify-center xl:gap-x-[1.875rem] md:grid-cols-[320px] xs:grid-cols-1">
         <Image
           className="h-auto max-w-full align-middle xl:justify-self-center"
           src="/assets/avatar-2.svg"
@@ -18,15 +18,16 @@ const About = () => {
           alt="Picture of the author"
         />
 
-        <div className="before:border-y-solid before:border-r-solid relative grid grid-cols-2 items-start gap-x-7 rounded-xl bg-[var(--container-color)] p-7 shadow-xl before:absolute before:left-[-0.93rem] before:top-[20%] before:h-0 before:w-0 before:border-y-[10px] before:border-r-[15px] before:border-y-transparent before:border-r-[var(--container-color)] before:content-[''] md:grid-cols-1 md:gap-y-7 md:before:left-[47%] xl:before:left-[49%] xl:before:top-[-20px] xl:before:border-x-[10px] xl:before:border-x-transparent xl:before:border-b-white">
-          <div className="about__info">
+        <div className="before:border-y-solid before:border-r-solid relative grid grid-cols-2 items-start gap-x-7 rounded-xl bg-[var(--container-color)] p-7 shadow-xl before:absolute before:left-[-0.93rem] before:top-[20%] before:h-0 before:w-0 before:border-y-[10px] before:border-r-[15px] before:border-y-transparent before:border-r-[var(--container-color)] before:content-[''] xl:before:left-[49%] xl:before:top-[-20px] xl:before:border-x-[10px] xl:before:border-x-transparent xl:before:border-b-white md:grid-cols-1 md:gap-y-7 md:before:left-[47%]">
+          <div className="md:text-center">
             <p className="mb-4 text-justify">
               This space is where lines of code converge into transformative
               creations. As a passionate developer, I breathe life into ideas
               and craft digital experiences that leave an impact.
             </p>
             <a
-              href=""
+              href="/assets/resume.pdf"
+              target="_blank"
               className="mb-1 inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse"
             >
               Download CV
