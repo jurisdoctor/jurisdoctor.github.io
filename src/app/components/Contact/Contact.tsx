@@ -1,13 +1,15 @@
 const Contact = () => {
   return (
     <section
-      className="contact m-auto max-w-[1080px] px-[15px] pb-24 pt-28"
+      className="contact m-auto max-w-[1080px] animate-fadeIn px-[15px] pb-24 pt-28 lg:pt-12"
       id="contact"
     >
-      <h2 className="relative mb-14 ml-3.5 text-4xl font-bold">Say 👋🏼!</h2>
+      <h2 className="relative mb-14 ml-3.5 text-4xl font-bold lg:mb-8 lg:ml-0 lg:text-center">
+        Say 👋🏼!
+      </h2>
 
       <div className="xs:grid-cols-1 grid grid-cols-[4fr_8fr] gap-x-[1.875rem] md:grid-cols-[310px] md:gap-y-[1.875rem] lg:grid-cols-[300px_360px] lg:justify-center">
-        <div className="md:text-center">
+        <div className="ml-3.5 md:text-center">
           <h3 className="mb-2 text-xl">I am an open book</h3>
           <p className="contact__details">Hit me up anytime!</p>
         </div>

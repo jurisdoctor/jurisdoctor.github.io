@@ -4,7 +4,7 @@ const Data = [
     category: "education",
     icon: "icon-graduation",
     year: "2014 - 2016",
-    title: "Masters -- Mathematics",
+    title: "Masters — Mathematics",
     desc: "California State University, East Bay",
   },
   {
@@ -12,7 +12,7 @@ const Data = [
     category: "education",
     icon: "icon-graduation",
     year: "2010 - 2013",
-    title: "Bachelors -- Mathematics",
+    title: "Bachelors — Mathematics",
     desc: "University of California, Santa Barbara",
   },
   {
@@ -24,10 +24,18 @@ const Data = [
     desc: "TBD",
   },
   {
+    id: 8,
+    category: "experience",
+    icon: "icon-briefcase",
+    year: "2025 - Present",
+    title: "Senior Software Engineer",
+    desc: "Fastly",
+  },
+  {
     id: 4,
     category: "experience",
     icon: "icon-briefcase",
-    year: "2020 - 2023",
+    year: "2020 - 2025",
     title: "Technical Lead",
     desc: "Avail Medsystems",
   },
