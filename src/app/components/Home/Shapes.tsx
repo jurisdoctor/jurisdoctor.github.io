@@ -1,10 +1,10 @@
 const Shapes = () => {
   return (
-    <div className="absolute left-0 top-0 -z-[10] h-full w-full">
+    <div className="pointer-events-none absolute left-0 top-0 z-0 h-full w-full">
       <svg
         width="27"
         height="29"
-        className="absolute left-[2%] top-[10%] animate-dribbleSway"
+        className="absolute left-[2%] top-[10%] animate-drift1"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -17,7 +17,7 @@ const Shapes = () => {
       <svg
         width="26"
         height="26"
-        className="absolute left-[18%] top-[30%] animate-dribbleSway"
+        className="absolute left-[18%] top-[30%] animate-drift8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -32,7 +32,7 @@ const Shapes = () => {
       <svg
         width="30"
         height="25"
-        className="absolute bottom-[30%] left-[5%] animate-dribbleSway"
+        className="absolute bottom-[30%] left-[5%] animate-drift9"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -45,7 +45,7 @@ const Shapes = () => {
       <svg
         width="15"
         height="23"
-        className="absolute bottom-[10%] left-[2%] animate-dribbleSway"
+        className="absolute bottom-[10%] left-[2%] animate-drift7"
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
@@ -62,7 +62,7 @@ const Shapes = () => {
       <svg
         width="15"
         height="23"
-        className="absolute left-[44%] top-[10%] animate-dribbleSway"
+        className="absolute left-[44%] top-[10%] animate-drift12"
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
@@ -79,7 +79,7 @@ const Shapes = () => {
       <svg
         width="49"
         height="17"
-        className="absolute bottom-[10%] left-[36%] animate-dribbleSway"
+        className="absolute bottom-[10%] left-[36%] animate-drift10"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g fill="#FF4C60" fillRule="evenodd">
@@ -91,7 +91,7 @@ const Shapes = () => {
       <svg
         width="26"
         height="26"
-        className="absolute right-[25%] top-[20%] animate-dribbleSway"
+        className="absolute right-[25%] top-[20%] animate-drift5"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -106,7 +106,7 @@ const Shapes = () => {
       <svg
         width="19"
         height="21"
-        className="absolute bottom-[20%] right-[24%] animate-dribbleSway"
+        className="absolute bottom-[20%] right-[24%] animate-drift4"
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
@@ -123,7 +123,7 @@ const Shapes = () => {
       <svg
         width="30"
         height="25"
-        className="absolute right-[2%] top-[10%] animate-dribbleSway"
+        className="absolute right-[2%] top-[10%] animate-drift11"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -136,7 +136,7 @@ const Shapes = () => {
       <svg
         width="47"
         height="29"
-        className="absolute left-[11%] top-[45%] animate-dribbleSway"
+        className="absolute left-[11%] top-[45%] animate-drift6"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g fill="#44D7B6" fillRule="evenodd">
@@ -148,7 +148,7 @@ const Shapes = () => {
       <svg
         width="33"
         height="20"
-        className="absolute bottom-[10%] right-[2%] animate-dribbleSway"
+        className="absolute bottom-[10%] right-[2%] animate-drift3"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

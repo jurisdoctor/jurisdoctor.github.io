@@ -4,17 +4,19 @@ import About from "../components/About";
 import Resume from "../components/Resume";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
+import ScrollReset from "../components/ScrollReset";
 
 const LandingScreen = () => {
   return (
     <>
+      <ScrollReset />
       <Sidebar />
 
       <main className="ml-[110px] lg:ml-0">
         <Home />
         <About />
         <Resume />
-        <Portfolio />
+        {/* <Portfolio /> */}
         <Contact />
       </main>
     </>
