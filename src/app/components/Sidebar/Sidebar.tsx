@@ -1,17 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import { IoHomeOutline } from "react-icons/io5";
-import { PiPerson } from "react-icons/pi";
-import { LuGraduationCap } from "react-icons/lu";
-import { IoLayersOutline } from "react-icons/io5";
-import { FaCode } from "react-icons/fa";
-import { BsChat } from "react-icons/bs";
-import { LuMenu } from "react-icons/lu";
+import {
+  LuHome,
+  LuUser,
+  LuFileText,
+  LuLayers,
+  LuCode,
+  LuMessageCircle,
+  LuMenu,
+} from "react-icons/lu";
 import { useState } from "react";
 
 const Sidebar = () => {
   const [toggle, setToggle] = useState(false);
+
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const navToggle =
     "fixed left-[1.875rem] top-5 z-10 hidden h-[40px] w-[45px] cursor-pointer items-center justify-center border-[1px] border-solid border-[#e8dfec] bg-[var(--body-color)] lg:flex rounded-lg duration-300 shadow-md";
@@ -22,7 +32,11 @@ const Sidebar = () => {
   return (
     <>
       <aside className={toggle ? `${aside} lg:!left-0` : `${aside}`}>
-        <a href="#home" className="nav__logo">
+        <a
+          href="#home"
+          onClick={(e) => scrollToSection(e, "home")}
+          className="nav__logo"
+        >
           <Image
             className="h-auto max-w-full align-middle"
             src="/assets/logo.svg"
@@ -38,49 +52,53 @@ const Sidebar = () => {
               <li className="nav__item">
                 <a
                   href="#home"
+                  onClick={(e) => scrollToSection(e, "home")}
                   className="text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
                 >
-                  <IoHomeOutline />
+                  <LuHome />
                 </a>
               </li>
               <li className="nav__item">
                 <a
                   href="#about"
+                  onClick={(e) => scrollToSection(e, "about")}
                   className="text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
                 >
-                  <PiPerson />
+                  <LuUser />
                 </a>
               </li>
               <li className="nav__item">
                 <a
                   href="#resume"
+                  onClick={(e) => scrollToSection(e, "resume")}
                   className="text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
                 >
-                  <LuGraduationCap />
+                  <LuFileText />
                 </a>
               </li>
-              <li className="nav__item">
+              {/* <li className="nav__item">
                 <a
                   href="#portfolio"
                   className="text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
                 >
-                  <IoLayersOutline />
+                  <LuLayers />
                 </a>
-              </li>
+              </li> */}
               {/* <li className="nav__item">
                 <a
                   href="#skills"
                   className="text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
                 >
-                  <FaCode />
+                  <LuCode />
                 </a>
               </li> */}
               <li className="nav__item">
                 <a
                   href="#contact"
+                  onClick={(e) => scrollToSection(e, "contact")}
                   className="text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
                 >
-                  <BsChat />
+                  <LuMessageCircle />
                 </a>
               </li>
             </ul>
@@ -88,7 +106,7 @@ const Sidebar = () => {
         </nav>
 
         <div className="mx-auto -rotate-180 text-xs text-[hsl(245,15%,65%)] [writing-mode:vertical-lr]">
-          <span className="copyright">&copy; 2023 - 2024</span>
+          <span className="copyright">&copy; 2023 - Present</span>
         </div>
       </aside>
 
