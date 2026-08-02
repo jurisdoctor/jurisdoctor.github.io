@@ -1,41 +1,76 @@
+/**
+ * Split either side of the "=" so a card's lines can share one grid and the
+ * equals signs stack in a column.
+ */
+export interface LineType {
+  /** plain left-hand side, e.g. "1 gram" */
+  left?: string;
+  /** or a stacked fraction instead, rather than "1/1,000" */
+  top?: string;
+  bottom?: string;
+  /** the same value as a decimal, shown alongside the fraction */
+  decimal?: string;
+  /** the unit the fraction and the decimal both carry */
+  unit?: string;
+  right: string;
+}
+
 export interface PrefixType {
   name: string;
   meaning: string;
-  lines: string[];
+  lines: LineType[];
 }
 
 export const Prefixes: PrefixType[] = [
   {
     name: "Micro-",
     meaning: "One millionth (u)",
-    lines: ["1 gram = 1,000,000 micrograms", "1/1,000,000 g = 1 ug (mcg)*"],
+    lines: [
+      { left: "1 gram", right: "1,000,000 micrograms" },
+      {
+        top: "1",
+        bottom: "1,000,000",
+        decimal: "0.000001",
+        unit: "g",
+        right: "1 ug (mcg)*",
+      },
+    ],
   },
   {
     name: "Milli-",
     meaning: "One thousandth (m)",
     lines: [
-      "1 gram = 1,000 milligrams",
-      "1/1,000 g = 1 mg",
-      "1 liter = 1,000 milliliters",
-      "1/1,000 L = 1 mL",
-      "1 meter = 1,000 millimeters",
-      "1/1,000 m = 1 mm",
+      { left: "1 gram", right: "1,000 milligrams" },
+      { top: "1", bottom: "1,000", decimal: "0.001", unit: "g", right: "1 mg" },
+      { left: "1 liter", right: "1,000 milliliters" },
+      { top: "1", bottom: "1,000", decimal: "0.001", unit: "L", right: "1 mL" },
+      { left: "1 meter", right: "1,000 millimeters" },
+      { top: "1", bottom: "1,000", decimal: "0.001", unit: "m", right: "1 mm" },
     ],
   },
   {
     name: "Centi-",
     meaning: "One hundredth (c)",
-    lines: ["1 meter = 100 centimeters", "1/100 m = 1 cm"],
+    lines: [
+      { left: "1 meter", right: "100 centimeters" },
+      { top: "1", bottom: "100", decimal: "0.01", unit: "m", right: "1 cm" },
+    ],
   },
   {
     name: "Deci-",
     meaning: "One tenth (d)",
-    lines: ["1 liter = 10 deciliters", "1/10 L = 1 dL"],
+    lines: [
+      { left: "1 liter", right: "10 deciliters" },
+      { top: "1", bottom: "10", decimal: "0.1", unit: "L", right: "1 dL" },
+    ],
   },
   {
     name: "Kilo-",
     meaning: "One thousand (k)",
-    lines: ["1,000 grams = 1 kilogram", "1/1,000 kg = 1 g"],
+    lines: [
+      { left: "1,000 grams", right: "1 kilogram" },
+      { top: "1", bottom: "1,000", decimal: "0.001", unit: "kg", right: "1 g" },
+    ],
   },
 ];
 
@@ -43,6 +78,14 @@ export interface RowType {
   left: string;
   right: string;
 }
+
+export const MetricConversions: RowType[] = [
+  { left: "1 kilogram (kg)", right: "1,000 grams (g)" },
+  { left: "1 gram (g)", right: "1,000 milligrams (mg)" },
+  { left: "1 milligram (mg)", right: "1,000 micrograms (mcg)" },
+  { left: "1 liter (L)", right: "1,000 milliliters (mL)" },
+  { left: "1 milliliter (mL)", right: "1 cubic centimeter (cc)" },
+];
 
 export const Household: RowType[] = [
   { left: "1 pound (lb)", right: "16 ounces (oz)" },
@@ -78,19 +121,32 @@ export const Ladders: LadderType[] = [
     family: "mass",
     title: "Mass",
     chain: ["1 g", "10 dg", "100 cg", "1,000 mg", "1,000,000 mcg"],
-    keys: ["1 kg = 1,000 g", "1 g = 1,000 mg", "1 mg = 1,000 mcg"],
+    keys: [
+      "1 kg = 1,000 g",
+      "1 g = 1,000 mg",
+      "1 mg = 1,000 mcg",
+      "1 kg = 2.2 lbs",
+    ],
   },
   {
     family: "volume",
     title: "Volume",
     chain: ["1 L", "10 dL", "100 cL", "1,000 mL"],
-    keys: ["1 L = 1,000 mL", "1 L = 10 dL", "1 dL = 100 mL"],
+    keys: [
+      "1 L = 1,000 mL",
+      "1 L = 10 dL",
+      "1 dL = 100 mL",
+      "1 mL = 1 cc",
+      "1 fl oz = 30 mL",
+      "1 Tbsp = 15 mL",
+      "1 tsp = 5 mL",
+    ],
   },
   {
     family: "length",
     title: "Length",
     chain: ["1 m", "10 dm", "100 cm", "1,000 mm"],
-    keys: ["1 m = 100 cm", "1 m = 1,000 mm", "1 cm = 10 mm"],
+    keys: ["1 m = 100 cm", "1 m = 1,000 mm", "1 cm = 10 mm", "1 in = 2.54 cm"],
   },
   {
     family: "household",
@@ -102,6 +158,7 @@ export const Ladders: LadderType[] = [
       "1 qt = 2 pt",
       "1 gal = 4 qt",
       "1 lb = 16 oz",
+      "1 ft = 12 in",
     ],
   },
 ];

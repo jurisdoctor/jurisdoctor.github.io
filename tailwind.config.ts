@@ -43,6 +43,7 @@ const config: Config = {
         drift11: "drift11 8.5s ease-in-out infinite",
         drift12: "drift12 11s linear infinite",
         fillBar: "fillBar 1.5s ease-out forwards",
+        strike: "strike 2.6s ease-in-out infinite",
         indeterminate: "indeterminate 1.8s ease-in-out infinite",
         fadeIn: "fadeIn 0.6s ease-out both",
       },
@@ -151,6 +152,15 @@ const config: Config = {
         fillBar: {
           "0%": { transform: "scaleX(0)" },
           "100%": { transform: "scaleX(1)" },
+        },
+        // draws through, holds, clears, then does it again
+        strike: {
+          "0%": { width: "0%", opacity: "1" },
+          "30%": { width: "100%", opacity: "1" },
+          "75%": { width: "100%", opacity: "1" },
+          "88%": { width: "100%", opacity: "0" },
+          "89%": { width: "0%", opacity: "0" },
+          "100%": { width: "0%", opacity: "0" },
         },
         indeterminate: {
           "0%": { transform: "translateX(-100%)" },

@@ -22,8 +22,6 @@ interface QuestionType {
   given: string;
   unit: string;
   answer: number;
-  /** the conversion this question comes from, e.g. "1 Tbsp = 15 mL" */
-  base: string;
   work: WorkType;
 }
 
@@ -52,9 +50,6 @@ const buildQuestion = (previous?: QuestionType): QuestionType => {
     given: `${givenValue} ${from.unit}`,
     unit: to.unit,
     answer,
-    base: `${format(rule.from.value)} ${rule.from.unit} = ${format(
-      rule.to.value,
-    )} ${rule.to.unit}`,
     work: {
       givenValue,
       givenUnit: from.unit,
@@ -75,10 +70,31 @@ const buildQuestion = (previous?: QuestionType): QuestionType => {
   return question;
 };
 
-/** the ladder and the equalities behind whichever family the question came from */
-const Help = ({ family }: { family: FamilyType }) => {
+const mentions = (key: string, unit: string) =>
+  new RegExp(`(^|[\\s=])${unit.replace("/", "\\/")}($|\\s|,)`).test(key);
+
+/**
+ * The equality joining both of the question's units, if there is one — that's
+ * the single line worth showing. Failing that (g to mcg has no one-hop rule)
+ * fall back to every equality touching either unit, which is the route.
+ */
+const relevant = (keys: string[], units: string[]) => {
+  const both = keys.filter((key) => units.every((unit) => mentions(key, unit)));
+  return both.length
+    ? both
+    : keys.filter((key) => units.some((unit) => mentions(key, unit)));
+};
+
+/**
+ * The ladder and the equalities behind the question — filtered to the units it
+ * actually involves, so a ft/in question doesn't hand back the tablespoons.
+ */
+const Help = ({ family, units }: { family: FamilyType; units: string[] }) => {
   const ladder = Ladders.find((l) => l.family === family);
   if (!ladder) return null;
+
+  const keys = relevant(ladder.keys, units);
+  if (!keys.length && !ladder.chain) return null;
 
   return (
     <div className="mt-5 rounded-2xl bg-[var(--body-color)] p-5">
@@ -101,21 +117,24 @@ const Help = ({ family }: { family: FamilyType }) => {
         </div>
       )}
 
-      <div className="mt-3 grid gap-y-1">
-        {ladder.keys.map((key) => (
-          <span key={key} className="text-sm">
-            {key}
-          </span>
-        ))}
-      </div>
+      {keys.length > 0 && (
+        <div className="mt-3 grid gap-y-1">
+          {keys.map((key) => (
+            <span key={key} className="text-sm">
+              {key}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
-/** the units that cancel are struck through, the way you'd cross them out on paper */
+/** the units that cancel get crossed out, on a loop, the way you would on paper */
 const Cancelled = ({ unit }: { unit: string }) => (
-  <span className="text-[#8b88b1] line-through decoration-[var(--primary-color)] decoration-2">
+  <span className="relative inline-block">
     {unit}
+    <span className="absolute left-0 top-1/2 h-[2px] w-full animate-strike bg-[var(--primary-color)] motion-reduce:animate-none" />
   </span>
 );
 
@@ -228,25 +247,24 @@ const Practice = () => {
             </h3>
 
             <div className="mb-4 flex items-center gap-x-4 sm:flex-col sm:items-stretch sm:gap-y-4">
-              <div className="relative h-14 flex-1">
-                <input
-                  ref={inputRef}
-                  type="text"
-                  inputMode="decimal"
-                  autoComplete="off"
-                  value={entry}
-                  // read-only rather than disabled so it keeps focus and
-                  // enter still moves on to the next question
-                  readOnly={status !== "answering"}
-                  onChange={(e) => setEntry(e.target.value)}
-                  placeholder={`Answer in ${question.unit}`}
-                  className={`absolute left-0 top-0 z-10 h-full w-full rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none ${
-                    status === "answering" ? "" : "opacity-60"
-                  }`}
-                />
-              </div>
+              <input
+                ref={inputRef}
+                type="text"
+                inputMode="decimal"
+                autoComplete="off"
+                value={entry}
+                // read-only rather than disabled so it keeps focus and
+                // enter still moves on to the next question
+                readOnly={status !== "answering"}
+                onChange={(e) => setEntry(e.target.value)}
+                placeholder={`Answer in ${question.unit}`}
+                // flex-none once stacked, or flex-1 would zero out the height
+                className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${
+                  status === "answering" ? "" : "opacity-60"
+                }`}
+              />
 
-              <button type="submit" className={button}>
+              <button type="submit" className={`${button} shrink-0`}>
                 {status === "answering" ? "Check" : "Next"}
               </button>
             </div>
@@ -277,9 +295,11 @@ const Practice = () => {
 
                 {status === "missed" && (
                   <>
-                    <p className="mt-5 text-sm font-bold">{question.base}</p>
                     <Work work={question.work} />
-                    <Help family={question.family} />
+                    <Help
+                      family={question.family}
+                      units={[question.work.givenUnit, question.unit]}
+                    />
                   </>
                 )}
               </div>

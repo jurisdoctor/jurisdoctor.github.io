@@ -1,11 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useRef, useState } from "react";
+import { LuDices } from "react-icons/lu";
 import { ScenarioType, Scenarios, StepType, TermType } from "./Scenarios";
 
-/** fisher-yates over the indexes, so every scenario comes up once per pass */
+/** the default: straight through, 1 to 75 */
+const inOrder = () => Scenarios.map((_, id) => id);
+
+/** fisher-yates over the indexes, so every scenario still comes up once per pass */
 const shuffled = () => {
-  const order = Scenarios.map((_, id) => id);
+  const order = inOrder();
   for (let i = order.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [order[i], order[j]] = [order[j], order[i]];
@@ -29,47 +33,121 @@ const accepted = (given: number, answer: number, tolerance: number) =>
     (places) => Math.abs(given - Number(answer.toFixed(places))) < 1e-9,
   );
 
-const Term = ({ term }: { term: TermType }) => {
+/** a unit that reads as a unit, not "40 + 20 + 2 mL/hr" */
+const UNIT = /^[A-Za-z]+(?:\s[A-Za-z]+)?(?:\/[A-Za-z]+)*$/;
+
+/** the unit half of "1,000 mcg" */
+const unitOf = (text: string) => text.replace(/^[\d.,\s]+/, "").trim();
+
+/** "mg/day" sits above the line as mg and below it as day */
+const split = (unit: string) => {
+  const [over, ...under] = unit.split("/");
+  return { over: over ? [over] : [], under };
+};
+
+/**
+ * Which units cancel across the whole chain: anything that turns up both above
+ * and below a line. A fraction's bottom flips, so its "1 kg" counts as below.
+ */
+const cancelled = (chain: TermType[]) => {
+  const over: string[] = [];
+  const under: string[] = [];
+
+  const add = (text: string | undefined, flipped: boolean) => {
+    const unit = unitOf(text ?? "");
+    if (!UNIT.test(unit)) return;
+
+    const { over: o, under: u } = split(unit);
+    over.push(...(flipped ? u : o));
+    under.push(...(flipped ? o : u));
+  };
+
+  for (const term of chain) {
+    add(term.value, false);
+    add(term.top, false);
+    add(term.bottom, true);
+  }
+
+  return new Set(over.filter((unit) => under.includes(unit)));
+};
+
+/** the moving red line, looping so it reads like a gif */
+const Strike = ({ unit }: { unit: string }) => (
+  <span className="relative inline-block">
+    {unit}
+    <span className="absolute left-0 top-1/2 h-[2px] w-full animate-strike bg-[var(--primary-color)] motion-reduce:animate-none" />
+  </span>
+);
+
+/** a quantity with its cancelling units crossed out */
+const Value = ({ text, cancel }: { text: string; cancel: Set<string> }) => {
+  const unit = unitOf(text);
+  if (!UNIT.test(unit)) return <span>{text}</span>;
+
+  const lead = text.slice(0, text.length - unit.length);
+
+  return (
+    <span>
+      {lead}
+      {unit.split("/").map((token, id) => (
+        <Fragment key={token + id}>
+          {id > 0 && "/"}
+          {cancel.has(token) ? <Strike unit={token} /> : token}
+        </Fragment>
+      ))}
+    </span>
+  );
+};
+
+const Term = ({ term, cancel }: { term: TermType; cancel: Set<string> }) => {
   if (term.value) {
-    return <span>{term.value}</span>;
+    return <Value text={term.value} cancel={cancel} />;
   }
 
   return (
     <span className="inline-flex flex-col text-center leading-tight">
-      <span className="px-3 pb-1">{term.top}</span>
+      <span className="px-3 pb-1">
+        <Value text={term.top ?? ""} cancel={cancel} />
+      </span>
       <span className="border-t border-solid border-[var(--text-color)] px-3 pt-1">
-        {term.bottom}
+        <Value text={term.bottom ?? ""} cancel={cancel} />
       </span>
     </span>
   );
 };
 
-const Step = ({ step, number }: { step: StepType; number: number }) => (
-  <div className="mb-6 last:mb-0">
-    <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
-      {step.label}
-    </span>
+const Step = ({ step, number }: { step: StepType; number: number }) => {
+  const cancel = cancelled(step.chain);
 
-    <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-2 sm:text-sm">
-      {step.chain.map((term, id) => (
-        <span key={id} className="flex items-center gap-x-3">
-          {id > 0 && <span className="text-[#8b88b1]">×</span>}
-          <Term term={term} />
-        </span>
-      ))}
-
-      <span className="text-[#8b88b1]">=</span>
-      <span className="font-bold text-[var(--title-color)]">{step.result}</span>
-    </div>
-
-    <div className="mt-3 flex gap-x-3">
-      <span className="mt-0.5 shrink-0 self-start rounded-full bg-[hsla(43,100%,68%,0.25)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
-        Tip {number}
+  return (
+    <div className="mb-6 last:mb-0">
+      <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+        {step.label}
       </span>
-      <p className="max-w-[70ch] text-sm text-[#8b88b1]">{step.why}</p>
+
+      <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-2 sm:text-sm">
+        {step.chain.map((term, id) => (
+          <span key={id} className="flex items-center gap-x-3">
+            {id > 0 && <span className="text-[#8b88b1]">×</span>}
+            <Term term={term} cancel={cancel} />
+          </span>
+        ))}
+
+        <span className="text-[#8b88b1]">=</span>
+        <span className="font-bold text-[var(--title-color)]">
+          {step.result}
+        </span>
+      </div>
+
+      <div className="mt-3 flex gap-x-3">
+        <span className="mt-0.5 shrink-0 self-start rounded-full bg-[hsla(43,100%,68%,0.25)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
+          Tip {number}
+        </span>
+        <p className="max-w-[70ch] text-sm text-[#8b88b1]">{step.why}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 /** one numbered row of the six-question set-up */
 const Question = ({
@@ -164,23 +242,31 @@ const Verdict = ({
 );
 
 const ScenarioPractice = () => {
-  // the order is drawn on the client so the prerendered html still hydrates
-  const [order, setOrder] = useState<number[] | null>(null);
+  // sequential unless you ask for the dice, so the prerender hydrates cleanly
+  const [order, setOrder] = useState<number[]>(inOrder);
+  const [random, setRandom] = useState(false);
   const [position, setPosition] = useState(0);
   const [entry, setEntry] = useState("");
   const [status, setStatus] = useState<Status>("answering");
   const [score, setScore] = useState({ right: 0, asked: 0 });
   const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => setOrder(shuffled()), []);
+  const scenario = Scenarios[order[position]];
 
-  const scenario = order ? Scenarios[order[position]] : null;
+  const reorder = () => {
+    const next = !random;
+    setRandom(next);
+    setOrder(next ? shuffled() : inOrder());
+    setPosition(0);
+    setEntry("");
+    setStatus("answering");
+  };
 
   const next = () => {
     setPosition((prev) => {
-      // reshuffle once you've been through the whole set
+      // back to the top at the end, reshuffling first if the dice is on
       if (prev + 1 >= Scenarios.length) {
-        setOrder(shuffled());
+        if (random) setOrder(shuffled());
         return 0;
       }
       return prev + 1;
@@ -226,69 +312,79 @@ const ScenarioPractice = () => {
         Nursing Scenarios
       </h2>
       <p className="mb-8 ml-3.5 text-sm lg:ml-0 lg:text-center">
-        Word problems from the floor, in random order. Miss one and the
-        dimensional analysis gets worked out step by step.
+        Word problems from the floor. Miss one and the dimensional analysis gets
+        worked out step by step.
       </p>
 
       <div className="animate-fadeIn rounded-xl bg-[var(--container-color)] p-7 shadow-xl">
-        {!scenario ? (
-          <p className="py-6 text-center text-[#8b88b1]">
-            Shuffling {Scenarios.length} scenarios…
-          </p>
-        ) : (
-          <form onSubmit={onSubmit}>
-            <div className="mb-3 flex items-center justify-between gap-x-4">
+        <form onSubmit={onSubmit}>
+          <div className="mb-3 flex items-center justify-between gap-x-4">
+            <span className="flex items-center gap-x-3">
               <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
                 {position + 1} of {Scenarios.length}
               </span>
-              <span className="text-sm text-[#8b88b1]">
-                {score.right} / {score.asked}
-              </span>
-            </div>
 
-            <h3 className="mb-3 text-xl">{scenario.title}</h3>
-            <p className="mb-6">{scenario.prompt}</p>
-
-            <div className="mb-4 flex items-center gap-x-4 sm:flex-col sm:items-stretch sm:gap-y-4">
-              <div className="relative h-14 flex-1">
-                <input
-                  ref={inputRef}
-                  type="text"
-                  inputMode="decimal"
-                  autoComplete="off"
-                  value={entry}
-                  // read-only rather than disabled so it keeps focus and
-                  // enter still moves on to the next scenario
-                  readOnly={status !== "answering"}
-                  onChange={(e) => setEntry(e.target.value)}
-                  placeholder={`Answer in ${scenario.unit}`}
-                  className={`absolute left-0 top-0 z-10 h-full w-full rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none ${
-                    status === "answering" ? "" : "opacity-60"
-                  }`}
-                />
-              </div>
-
-              <button type="submit" className={button}>
-                {status === "answering" ? "Check" : "Next"}
+              <button
+                type="button"
+                onClick={reorder}
+                title={random ? "Back to order" : "Shuffle the scenarios"}
+                aria-pressed={random}
+                className={`flex h-7 w-7 items-center justify-center rounded-full duration-300 ${
+                  random
+                    ? "bg-[var(--primary-color)] text-white"
+                    : "bg-[var(--body-color)] text-[#8b88b1] hover:text-[var(--title-color)]"
+                }`}
+              >
+                <LuDices />
               </button>
+            </span>
+
+            <span className="text-sm text-[#8b88b1]">
+              {score.right} / {score.asked}
+            </span>
+          </div>
+
+          <h3 className="mb-3 text-xl">{scenario.title}</h3>
+          <p className="mb-6">{scenario.prompt}</p>
+
+          <div className="mb-4 flex items-center gap-x-4 sm:flex-col sm:items-stretch sm:gap-y-4">
+            <input
+              ref={inputRef}
+              type="text"
+              inputMode="decimal"
+              autoComplete="off"
+              value={entry}
+              // read-only rather than disabled so it keeps focus and
+              // enter still moves on to the next scenario
+              readOnly={status !== "answering"}
+              onChange={(e) => setEntry(e.target.value)}
+              placeholder={`Answer in ${scenario.unit}`}
+              // flex-none once stacked, or flex-1 would zero out the height
+              className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${
+                status === "answering" ? "" : "opacity-60"
+              }`}
+            />
+
+            <button type="submit" className={`${button} shrink-0`}>
+              {status === "answering" ? "Check" : "Next"}
+            </button>
+          </div>
+
+          {status !== "answering" && (
+            <div className="animate-fadeIn">
+              <Verdict
+                correct={status === "solved"}
+                answer={`${formatAnswer(scenario.answer)} ${scenario.unit}`}
+              />
+
+              {status === "missed" && <Solution scenario={scenario} />}
+
+              {scenario.note && (
+                <p className="mt-4 text-sm text-[#8b88b1]">{scenario.note}</p>
+              )}
             </div>
-
-            {status !== "answering" && (
-              <div className="animate-fadeIn">
-                <Verdict
-                  correct={status === "solved"}
-                  answer={`${formatAnswer(scenario.answer)} ${scenario.unit}`}
-                />
-
-                {status === "missed" && <Solution scenario={scenario} />}
-
-                {scenario.note && (
-                  <p className="mt-4 text-sm text-[#8b88b1]">{scenario.note}</p>
-                )}
-              </div>
-            )}
-          </form>
-        )}
+          )}
+        </form>
       </div>
     </section>
   );
