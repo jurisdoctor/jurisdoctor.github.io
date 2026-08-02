@@ -228,25 +228,24 @@ const Practice = () => {
             </h3>
 
             <div className="mb-4 flex items-center gap-x-4 sm:flex-col sm:items-stretch sm:gap-y-4">
-              <div className="relative h-14 flex-1">
-                <input
-                  ref={inputRef}
-                  type="text"
-                  inputMode="decimal"
-                  autoComplete="off"
-                  value={entry}
-                  // read-only rather than disabled so it keeps focus and
-                  // enter still moves on to the next question
-                  readOnly={status !== "answering"}
-                  onChange={(e) => setEntry(e.target.value)}
-                  placeholder={`Answer in ${question.unit}`}
-                  className={`absolute left-0 top-0 z-10 h-full w-full rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none ${
-                    status === "answering" ? "" : "opacity-60"
-                  }`}
-                />
-              </div>
+              <input
+                ref={inputRef}
+                type="text"
+                inputMode="decimal"
+                autoComplete="off"
+                value={entry}
+                // read-only rather than disabled so it keeps focus and
+                // enter still moves on to the next question
+                readOnly={status !== "answering"}
+                onChange={(e) => setEntry(e.target.value)}
+                placeholder={`Answer in ${question.unit}`}
+                // flex-none once stacked, or flex-1 would zero out the height
+                className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${
+                  status === "answering" ? "" : "opacity-60"
+                }`}
+              />
 
-              <button type="submit" className={button}>
+              <button type="submit" className={`${button} shrink-0`}>
                 {status === "answering" ? "Check" : "Next"}
               </button>
             </div>
