@@ -18,7 +18,7 @@ const Resume = () => {
 
   return (
     <section
-      className="resume mx-auto max-w-[1080px] animate-fadeIn px-[15px] pb-8 pt-28 lg:pt-12"
+      className="resume mx-auto max-w-[1080px] animate-fadeIn px-10 md:px-6 pb-8 pt-28 lg:pt-12"
       id="resume"
     >
       <h2 className="relative mb-14 ml-3.5 text-4xl font-bold lg:mb-8 lg:ml-0 lg:text-center">
