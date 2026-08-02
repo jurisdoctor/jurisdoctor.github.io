@@ -1,12 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   LuHome,
   LuUser,
   LuFileText,
   LuLayers,
   LuCode,
+  LuCalculator,
   LuMessageCircle,
   LuMenu,
 } from "react-icons/lu";
@@ -14,14 +17,23 @@ import { useState } from "react";
 
 const Sidebar = () => {
   const [toggle, setToggle] = useState(false);
+  const onLanding = usePathname() === "/";
 
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
     id: string,
   ) => {
+    // off the landing page there is nothing to scroll to — let the link route
+    if (!onLanding) return;
+
     e.preventDefault();
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const navLink =
+    "text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]";
+
+  const sectionHref = (id: string) => (onLanding ? `#${id}` : `/#${id}`);
 
   const navToggle =
     "fixed left-[1.875rem] top-5 z-10 hidden h-[40px] w-[45px] cursor-pointer items-center justify-center border-[1px] border-solid border-[#e8dfec] bg-[var(--body-color)] lg:flex rounded-lg duration-300 shadow-md";
@@ -32,8 +44,8 @@ const Sidebar = () => {
   return (
     <>
       <aside className={toggle ? `${aside} lg:!left-0` : `${aside}`}>
-        <a
-          href="#home"
+        <Link
+          href={sectionHref("home")}
           onClick={(e) => scrollToSection(e, "home")}
           className="nav__logo"
         >
@@ -44,37 +56,47 @@ const Sidebar = () => {
             height={40}
             alt="Picture of the author"
           />
-        </a>
+        </Link>
 
         <nav className="nav">
           <div className="nav__menu">
             <ul className="flex flex-col gap-y-4">
               <li className="nav__item">
-                <a
-                  href="#home"
+                <Link
+                  href={sectionHref("home")}
                   onClick={(e) => scrollToSection(e, "home")}
-                  className="text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
+                  className={navLink}
                 >
                   <LuHome />
-                </a>
+                </Link>
               </li>
               <li className="nav__item">
-                <a
-                  href="#about"
+                <Link
+                  href={sectionHref("about")}
                   onClick={(e) => scrollToSection(e, "about")}
-                  className="text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
+                  className={navLink}
                 >
                   <LuUser />
-                </a>
+                </Link>
               </li>
               <li className="nav__item">
-                <a
-                  href="#resume"
+                <Link
+                  href={sectionHref("resume")}
                   onClick={(e) => scrollToSection(e, "resume")}
-                  className="text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
+                  className={navLink}
                 >
                   <LuFileText />
-                </a>
+                </Link>
+              </li>
+              <li className="nav__item">
+                <Link
+                  href="/dosage-calculations"
+                  className={`${navLink} ${
+                    onLanding ? "" : "!text-[hsl(43,100%,68%)]"
+                  }`}
+                >
+                  <LuCalculator />
+                </Link>
               </li>
               {/* <li className="nav__item">
                 <a
@@ -93,13 +115,13 @@ const Sidebar = () => {
                 </a>
               </li> */}
               <li className="nav__item">
-                <a
-                  href="#contact"
+                <Link
+                  href={sectionHref("contact")}
                   onClick={(e) => scrollToSection(e, "contact")}
-                  className="text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
+                  className={navLink}
                 >
                   <LuMessageCircle />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
