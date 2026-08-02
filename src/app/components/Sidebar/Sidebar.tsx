@@ -23,6 +23,9 @@ const Sidebar = () => {
     e: React.MouseEvent<HTMLAnchorElement>,
     id: string,
   ) => {
+    // tapping a link on mobile should take the drawer with it
+    setToggle(false);
+
     // off the landing page there is nothing to scroll to — let the link route
     if (!onLanding) return;
 
@@ -43,6 +46,15 @@ const Sidebar = () => {
 
   return (
     <>
+      {/* tap-anywhere-else to dismiss; only exists while the drawer is open */}
+      {toggle && (
+        <div
+          className="fixed inset-0 z-[9] hidden bg-[rgba(0,0,0,0.2)] lg:block"
+          onClick={() => setToggle(false)}
+          aria-hidden
+        />
+      )}
+
       <aside className={toggle ? `${aside} lg:!left-0` : `${aside}`}>
         <Link
           href={sectionHref("home")}
@@ -91,6 +103,7 @@ const Sidebar = () => {
               <li className="nav__item">
                 <Link
                   href="/dosage-calculations"
+                  onClick={() => setToggle(false)}
                   className={`${navLink} ${
                     onLanding ? "" : "!text-[hsl(43,100%,68%)]"
                   }`}
