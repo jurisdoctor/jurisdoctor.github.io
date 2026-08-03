@@ -1,7 +1,6 @@
 import Conversions from "./Conversions";
 import Practice from "./Practice";
 import ScenarioPractice from "./ScenarioPractice";
-
 const DosageCalculations = () => {
   return (
     <section className="mx-auto max-w-[1080px] animate-fadeIn px-10 pb-24 pt-28 lg:pt-12 md:px-6">
@@ -18,5 +17,4 @@ const DosageCalculations = () => {
     </section>
   );
 };
-
 export default DosageCalculations;

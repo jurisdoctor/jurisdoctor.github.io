@@ -1,13 +1,9 @@
 "use client";
-
 import { useRef, useState } from "react";
-import { FamilyType, Ladders, Rules, RuleType } from "./Data";
-
+import { FamilyType, Ladders, numeric, Rules, RuleType } from "./Data";
 interface WorkType {
-  /** what the question handed you, e.g. 150 mL */
   givenValue: string;
   givenUnit: string;
-  /** the conversion factor, target unit on top so the given unit cancels */
   topValue: string;
   topUnit: string;
   bottomValue: string;
@@ -15,7 +11,6 @@ interface WorkType {
   answerValue: string;
   answerUnit: string;
 }
-
 interface QuestionType {
   group: string;
   family: FamilyType;
@@ -24,26 +19,18 @@ interface QuestionType {
   answer: number;
   work: WorkType;
 }
-
 type Status = "answering" | "solved" | "missed";
-
 const format = (n: number) =>
   new Intl.NumberFormat("en-US", { maximumFractionDigits: 6 }).format(n);
-
-/** trims the float noise that sneaks in on things like 2.54 * 3 */
 const tidy = (n: number) => Math.round(n * 1e6) / 1e6;
-
 const buildQuestion = (previous?: QuestionType): QuestionType => {
   const rule: RuleType = Rules[Math.floor(Math.random() * Rules.length)];
   const step = rule.steps[Math.floor(Math.random() * rule.steps.length)];
   const flipped = Math.random() < 0.5;
-
   const from = flipped ? rule.to : rule.from;
   const to = flipped ? rule.from : rule.to;
-
   const givenValue = format(tidy(from.value * step));
   const answer = tidy(to.value * step);
-
   const question: QuestionType = {
     group: rule.group,
     family: rule.family,
@@ -61,41 +48,24 @@ const buildQuestion = (previous?: QuestionType): QuestionType => {
       answerUnit: to.unit,
     },
   };
-
-  // never ask the same one twice in a row
   if (previous && previous.given === question.given) {
     return buildQuestion(previous);
   }
-
   return question;
 };
-
 const mentions = (key: string, unit: string) =>
   new RegExp(`(^|[\\s=])${unit.replace("/", "\\/")}($|\\s|,)`).test(key);
-
-/**
- * The equality joining both of the question's units, if there is one — that's
- * the single line worth showing. Failing that (g to mcg has no one-hop rule)
- * fall back to every equality touching either unit, which is the route.
- */
 const relevant = (keys: string[], units: string[]) => {
   const both = keys.filter((key) => units.every((unit) => mentions(key, unit)));
   return both.length
     ? both
     : keys.filter((key) => units.some((unit) => mentions(key, unit)));
 };
-
-/**
- * The ladder and the equalities behind the question — filtered to the units it
- * actually involves, so a ft/in question doesn't hand back the tablespoons.
- */
 const Help = ({ family, units }: { family: FamilyType; units: string[] }) => {
   const ladder = Ladders.find((l) => l.family === family);
   if (!ladder) return null;
-
   const keys = relevant(ladder.keys, units);
   if (!keys.length && !ladder.chain) return null;
-
   return (
     <div className="mt-5 rounded-2xl bg-[var(--body-color)] p-5">
       <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
@@ -129,15 +99,12 @@ const Help = ({ family, units }: { family: FamilyType; units: string[] }) => {
     </div>
   );
 };
-
-/** the units that cancel get crossed out, on a loop, the way you would on paper */
 const Cancelled = ({ unit }: { unit: string }) => (
   <span className="relative inline-block">
     {unit}
     <span className="absolute left-0 top-1/2 h-[2px] w-full animate-strike bg-[var(--primary-color)] motion-reduce:animate-none" />
   </span>
 );
-
 const Work = ({ work }: { work: WorkType }) => (
   <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-lg sm:text-base">
     <span>
@@ -162,46 +129,36 @@ const Work = ({ work }: { work: WorkType }) => (
     </span>
   </div>
 );
-
 const Practice = () => {
   const [question, setQuestion] = useState<QuestionType | null>(null);
   const [entry, setEntry] = useState("");
   const [status, setStatus] = useState<Status>("answering");
   const [score, setScore] = useState({ right: 0, asked: 0 });
   const inputRef = useRef<HTMLInputElement>(null);
-
   const start = () => {
     setQuestion(buildQuestion());
     setEntry("");
     setStatus("answering");
     setScore({ right: 0, asked: 0 });
   };
-
   const next = () => {
     setQuestion((prev) => buildQuestion(prev ?? undefined));
     setEntry("");
     setStatus("answering");
     inputRef.current?.focus();
   };
-
   const check = () => {
     if (!question) return;
-
     const given = Number(entry.replace(/,/g, "").trim());
     if (entry.trim() === "" || Number.isNaN(given)) return;
-
     const isRight = Math.abs(tidy(given) - question.answer) < 1e-6;
-
     setStatus(isRight ? "solved" : "missed");
     setScore((prev) => ({
       right: prev.right + (isRight ? 1 : 0),
       asked: prev.asked + 1,
     }));
-
-    // clicking Check moves focus to the button — put it back so enter carries on
     inputRef.current?.focus();
   };
-
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (status === "answering") {
@@ -210,10 +167,8 @@ const Practice = () => {
       next();
     }
   };
-
   const button =
     "inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse";
-
   return (
     <section className="mb-8" id="practice">
       <h2 className="relative mb-8 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center">
@@ -232,7 +187,7 @@ const Practice = () => {
             </button>
           </div>
         ) : (
-          <form onSubmit={onSubmit}>
+          <form method="dialog" onSubmit={onSubmit}>
             <div className="mb-4 flex items-center justify-between">
               <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
                 {question.group}
@@ -253,15 +208,10 @@ const Practice = () => {
                 inputMode="decimal"
                 autoComplete="off"
                 value={entry}
-                // read-only rather than disabled so it keeps focus and
-                // enter still moves on to the next question
                 readOnly={status !== "answering"}
-                onChange={(e) => setEntry(e.target.value)}
+                onChange={(e) => setEntry(numeric(e.target.value))}
                 placeholder={`Answer in ${question.unit}`}
-                // flex-none once stacked, or flex-1 would zero out the height
-                className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${
-                  status === "answering" ? "" : "opacity-60"
-                }`}
+                className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${status === "answering" ? "" : "opacity-60"}`}
               />
 
               <button type="submit" className={`${button} shrink-0`}>
@@ -310,5 +260,4 @@ const Practice = () => {
     </section>
   );
 };
-
 export default Practice;
