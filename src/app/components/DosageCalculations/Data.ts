@@ -89,6 +89,8 @@ export const Household: RowType[] = [
 ];
 export const MetricToHousehold: RowType[] = [
   { left: "1 kilogram (kg)", right: "2.2 pounds (lbs)" },
+  { left: "240 milliliters (mL)", right: "1 cup (c) of liquid" },
+  { left: "120 milliliters (mL)", right: "1 cup (c) of ice" },
   { left: "30 milliliters (mL)", right: "1 fluid ounce (fl oz)" },
   { left: "15 milliliters (mL)", right: "1 tablespoon (Tbsp)" },
   { left: "5 milliliters (mL)", right: "1 teaspoon (tsp)" },
@@ -122,6 +124,8 @@ export const Ladders: LadderType[] = [
       "1 L = 10 dL",
       "1 dL = 100 mL",
       "1 mL = 1 cc",
+      "1 c of liquid = 240 mL",
+      "1 c of ice = 120 mL",
       "1 fl oz = 30 mL",
       "1 Tbsp = 15 mL",
       "1 tsp = 5 mL",

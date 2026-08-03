@@ -1,7 +1,9 @@
 "use client";
 import { Fragment, RefObject, useEffect, useRef, useState } from "react";
-import { LuDices } from "react-icons/lu";
+import { LuChevronDown } from "react-icons/lu";
 import { numeric } from "./Data";
+import ProblemSet from "./ProblemSet";
+import { useSaved } from "./Saved";
 import {
   FormulaType,
   RoundingType,
@@ -10,16 +12,13 @@ import {
   StepType,
   TermType,
 } from "./Scenarios";
-const inOrder = () => Scenarios.map((_, id) => id);
-const shuffled = () => {
-  const order = inOrder();
-  for (let i = order.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [order[i], order[j]] = [order[j], order[i]];
-  }
-  return order;
-};
 type Status = "answering" | "solved" | "missed";
+interface SavedType {
+  position: number;
+  entry: string;
+  status: Status;
+  done: Record<string, Status>;
+}
 const formatAnswer = (n: number) =>
   new Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format(n);
 const accepted = (given: number, answer: number, tolerance: number) =>
@@ -505,7 +504,7 @@ const Verdict = ({
   answer: React.ReactNode;
 }) => (
   <div
-    className={`mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 ${correct ? "bg-[rgba(68,215,182,0.12)]" : "bg-[hsla(353,100%,65%,0.1)]"}`}
+    className={`mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 last:mb-0 ${correct ? "bg-[rgba(68,215,182,0.12)]" : "bg-[hsla(353,100%,65%,0.1)]"}`}
   >
     <span
       className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${correct ? "bg-[rgb(68,215,182)]" : "bg-[var(--primary-color)]"}`}
@@ -518,50 +517,67 @@ const Verdict = ({
     </span>
   </div>
 );
+const KEY = "dosage:scenarios:v2";
+const fresh = (): SavedType => ({
+  position: 0,
+  entry: "",
+  status: "answering",
+  done: {},
+});
+const valid = (saved: SavedType) =>
+  !!saved &&
+  !!saved.done &&
+  typeof saved.done === "object" &&
+  Number.isInteger(saved.position) &&
+  saved.position >= 0 &&
+  saved.position < Scenarios.length;
 const ScenarioPractice = () => {
-  const [order, setOrder] = useState<number[]>(inOrder);
-  const [random, setRandom] = useState(false);
-  const [position, setPosition] = useState(0);
-  const [entry, setEntry] = useState("");
-  const [status, setStatus] = useState<Status>("answering");
-  const [score, setScore] = useState({ right: 0, asked: 0 });
+  const [saved, setSaved] = useSaved(KEY, fresh, valid);
+  const [open, setOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const scenario = Scenarios[order[position]];
-  const reorder = () => {
-    const next = !random;
-    setRandom(next);
-    setOrder(next ? shuffled() : inOrder());
-    setPosition(0);
-    setEntry("");
-    setStatus("answering");
+  const scenario = Scenarios[saved.position];
+  const asked = Object.keys(saved.done).length;
+  const right = Object.values(saved.done).filter(
+    (state) => state === "solved",
+  ).length;
+  const jump = (index: number) => {
+    setSaved((prev) => ({
+      ...prev,
+      position: index,
+      entry: "",
+      status: "answering",
+    }));
+    inputRef.current?.focus();
   };
+  const reset = () => setSaved(fresh());
   const next = () => {
-    setPosition((prev) => {
-      if (prev + 1 >= Scenarios.length) {
-        if (random) setOrder(shuffled());
-        return 0;
-      }
-      return prev + 1;
-    });
-    setEntry("");
-    setStatus("answering");
+    setSaved((prev) => ({
+      ...prev,
+      position: (prev.position + 1) % Scenarios.length,
+      entry: "",
+      status: "answering",
+    }));
+    inputRef.current?.focus();
+  };
+  const retry = () => {
+    setSaved((prev) => ({ ...prev, entry: "", status: "answering" }));
     inputRef.current?.focus();
   };
   const check = () => {
     if (!scenario) return;
-    const given = Number(entry.replace(/,/g, "").trim());
-    if (entry.trim() === "" || Number.isNaN(given)) return;
+    const given = Number(saved.entry.replace(/,/g, "").trim());
+    if (saved.entry.trim() === "" || Number.isNaN(given)) return;
     const isRight = accepted(given, scenario.answer, scenario.tolerance);
-    setStatus(isRight ? "solved" : "missed");
-    setScore((prev) => ({
-      right: prev.right + (isRight ? 1 : 0),
-      asked: prev.asked + 1,
+    setSaved((prev) => ({
+      ...prev,
+      status: isRight ? "solved" : "missed",
+      done: { ...prev.done, [prev.position]: isRight ? "solved" : "missed" },
     }));
     inputRef.current?.focus();
   };
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (status === "answering") {
+    if (saved.status === "answering") {
       check();
     } else {
       next();
@@ -569,6 +585,8 @@ const ScenarioPractice = () => {
   };
   const button =
     "inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse";
+  const ghost =
+    "inline-block rounded-[1.875rem] border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)] hover:animate-pulse";
   return (
     <section className="mb-16" id="scenarios">
       <h2 className="relative mb-2 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center">
@@ -577,31 +595,43 @@ const ScenarioPractice = () => {
 
       <div className="animate-fadeIn rounded-xl bg-[var(--container-color)] p-7 shadow-xl">
         <form method="dialog" onSubmit={onSubmit}>
-          <div className="mb-3 flex items-center justify-between gap-x-4">
-            <span className="flex items-center gap-x-3">
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+            <span className="flex flex-wrap items-center gap-x-3 gap-y-2">
               <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
-                {position + 1} of {Scenarios.length}
+                {saved.position + 1} of {Scenarios.length}
               </span>
 
               <button
                 type="button"
-                onClick={reorder}
-                title={random ? "Back to order" : "Shuffle the scenarios"}
-                aria-pressed={random}
-                className={`flex h-7 w-7 items-center justify-center rounded-full duration-300 ${
-                  random
+                onClick={() => setOpen((prev) => !prev)}
+                aria-expanded={open}
+                className={`flex items-center gap-x-1.5 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide duration-300 ${
+                  open
                     ? "bg-[var(--primary-color)] text-white"
                     : "bg-[var(--body-color)] text-[#8b88b1] hover:text-[var(--title-color)]"
                 }`}
               >
-                <LuDices />
+                Problem set
+                <LuChevronDown
+                  className={`duration-300 ${open ? "rotate-180" : ""}`}
+                />
               </button>
             </span>
 
             <span className="text-sm text-[#8b88b1]">
-              {score.right} / {score.asked}
+              {right} / {asked}
             </span>
           </div>
+
+          {open && (
+            <ProblemSet
+              total={Scenarios.length}
+              position={saved.position}
+              done={saved.done}
+              onPick={jump}
+              onReset={reset}
+            />
+          )}
 
           <p className="mb-6 text-lg sm:text-base">{scenario.prompt}</p>
 
@@ -611,26 +641,41 @@ const ScenarioPractice = () => {
               type="text"
               inputMode="decimal"
               autoComplete="off"
-              value={entry}
-              readOnly={status !== "answering"}
-              onChange={(e) => setEntry(numeric(e.target.value))}
+              value={saved.entry}
+              readOnly={saved.status !== "answering"}
+              onChange={(e) =>
+                setSaved((prev) => ({
+                  ...prev,
+                  entry: numeric(e.target.value),
+                }))
+              }
               placeholder={`Answer in ${scenario.unit}`}
-              className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${status === "answering" ? "" : "opacity-60"}`}
+              className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${saved.status === "answering" ? "" : "opacity-60"}`}
             />
 
+            {saved.status === "missed" && (
+              <button
+                type="button"
+                onClick={retry}
+                className={`${ghost} shrink-0`}
+              >
+                Try again
+              </button>
+            )}
+
             <button type="submit" className={`${button} shrink-0`}>
-              {status === "answering" ? "Check" : "Next"}
+              {saved.status === "answering" ? "Check" : "Next"}
             </button>
           </div>
 
-          {status !== "answering" && (
+          {saved.status !== "answering" && (
             <div className="animate-fadeIn">
               <Verdict
-                correct={status === "solved"}
+                correct={saved.status === "solved"}
                 answer={`${formatAnswer(scenario.answer)} ${scenario.unit}`}
               />
 
-              {status === "missed" && <Solution scenario={scenario} />}
+              {saved.status === "missed" && <Solution scenario={scenario} />}
 
               {scenario.note && (
                 <p className="mt-4 text-sm text-[#8b88b1]">{scenario.note}</p>
