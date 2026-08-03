@@ -1,13 +1,16 @@
 "use client";
-
-import { Fragment, useRef, useState } from "react";
+import { Fragment, RefObject, useEffect, useRef, useState } from "react";
 import { LuDices } from "react-icons/lu";
-import { ScenarioType, Scenarios, StepType, TermType } from "./Scenarios";
-
-/** the default: straight through, 1 to 75 */
+import { numeric } from "./Data";
+import {
+  FormulaType,
+  RoundingType,
+  ScenarioType,
+  Scenarios,
+  StepType,
+  TermType,
+} from "./Scenarios";
 const inOrder = () => Scenarios.map((_, id) => id);
-
-/** fisher-yates over the indexes, so every scenario still comes up once per pass */
 const shuffled = () => {
   const order = inOrder();
   for (let i = order.length - 1; i > 0; i--) {
@@ -16,111 +19,303 @@ const shuffled = () => {
   }
   return order;
 };
-
 type Status = "answering" | "solved" | "missed";
-
 const formatAnswer = (n: number) =>
   new Intl.NumberFormat("en-US", { maximumFractionDigits: 4 }).format(n);
-
-/**
- * Counts as correct if it's within the scenario's tolerance, or if it's the
- * exact answer rounded the way you'd actually chart it — 11.25 mL typed as
- * 11.3 is right, not wrong.
- */
 const accepted = (given: number, answer: number, tolerance: number) =>
   Math.abs(given - answer) <= tolerance ||
   [1, 2, 3].some(
     (places) => Math.abs(given - Number(answer.toFixed(places))) < 1e-9,
   );
-
-/** a unit that reads as a unit, not "40 + 20 + 2 mL/hr" */
 const UNIT = /^[A-Za-z]+(?:\s[A-Za-z]+)?(?:\/[A-Za-z]+)*$/;
-
-/** the unit half of "1,000 mcg" */
 const unitOf = (text: string) => text.replace(/^[\d.,\s]+/, "").trim();
-
-/** "mg/day" sits above the line as mg and below it as day */
 const split = (unit: string) => {
   const [over, ...under] = unit.split("/");
   return { over: over ? [over] : [], under };
 };
-
-/**
- * Which units cancel across the whole chain: anything that turns up both above
- * and below a line. A fraction's bottom flips, so its "1 kg" counts as below.
- */
 const cancelled = (chain: TermType[]) => {
   const over: string[] = [];
   const under: string[] = [];
-
   const add = (text: string | undefined, flipped: boolean) => {
     const unit = unitOf(text ?? "");
     if (!UNIT.test(unit)) return;
-
     const { over: o, under: u } = split(unit);
     over.push(...(flipped ? u : o));
     under.push(...(flipped ? o : u));
   };
-
   for (const term of chain) {
     add(term.value, false);
     add(term.top, false);
     add(term.bottom, true);
   }
-
   return new Set(over.filter((unit) => under.includes(unit)));
 };
-
-/** the moving red line, looping so it reads like a gif */
 const Strike = ({ unit }: { unit: string }) => (
   <span className="relative inline-block">
     {unit}
     <span className="absolute left-0 top-1/2 h-[2px] w-full animate-strike bg-[var(--primary-color)] motion-reduce:animate-none" />
   </span>
 );
-
-/** a quantity with its cancelling units crossed out */
+const Token = ({ unit, cancel }: { unit: string; cancel: Set<string> }) =>
+  cancel.has(unit) ? <Strike unit={unit} /> : <>{unit}</>;
 const Value = ({ text, cancel }: { text: string; cancel: Set<string> }) => {
   const unit = unitOf(text);
   if (!UNIT.test(unit)) return <span>{text}</span>;
-
   const lead = text.slice(0, text.length - unit.length);
-
   return (
     <span>
       {lead}
       {unit.split("/").map((token, id) => (
         <Fragment key={token + id}>
           {id > 0 && "/"}
-          {cancel.has(token) ? <Strike unit={token} /> : token}
+          <Token unit={token} cancel={cancel} />
         </Fragment>
       ))}
     </span>
   );
 };
-
+const line = "border-t border-solid border-[var(--text-color)]";
+const Quantity = ({ text, cancel }: { text: string; cancel: Set<string> }) => {
+  const unit = unitOf(text);
+  const tokens = unit.split("/");
+  if (!UNIT.test(unit) || tokens.length === 1) {
+    return <Value text={text} cancel={cancel} />;
+  }
+  const lead = text.slice(0, text.length - unit.length);
+  const [over, ...under] = tokens;
+  return (
+    <span className="inline-flex flex-col text-center leading-tight">
+      <span className="px-2 pb-1">
+        {lead}
+        <Token unit={over} cancel={cancel} />
+      </span>
+      <span className={`${line} px-2 pt-1`}>
+        {under.map((token, id) => (
+          <Fragment key={token + id}>
+            {id > 0 && "/"}
+            <Token unit={token} cancel={cancel} />
+          </Fragment>
+        ))}
+      </span>
+    </span>
+  );
+};
 const Term = ({ term, cancel }: { term: TermType; cancel: Set<string> }) => {
   if (term.value) {
-    return <Value text={term.value} cancel={cancel} />;
+    return <Quantity text={term.value} cancel={cancel} />;
   }
-
   return (
     <span className="inline-flex flex-col text-center leading-tight">
       <span className="px-3 pb-1">
         <Value text={term.top ?? ""} cancel={cancel} />
       </span>
-      <span className="border-t border-solid border-[var(--text-color)] px-3 pt-1">
+      <span className={`${line} px-3 pt-1`}>
         <Value text={term.bottom ?? ""} cancel={cancel} />
       </span>
     </span>
   );
 };
+const rearrangeOf = (chain: TermType[]) => {
+  const frac = chain.find((term) => term.top && term.bottom);
+  if (!frac?.top || !frac.bottom) return null;
 
-const Step = ({ step, number }: { step: StepType; number: number }) => {
-  const cancel = cancelled(step.chain);
+  const topUnit = unitOf(frac.top);
+  const perUnit = unitOf(frac.bottom);
+  if (!UNIT.test(topUnit) || !UNIT.test(perUnit)) return null;
+
+  const [amountUnit, ...rest] = topUnit.split("/");
+  if (!rest.length) return null;
+
+  const lead = frac.top.slice(0, frac.top.length - topUnit.length);
+
+  return {
+    amount: `${lead}${amountUnit}`,
+    first: perUnit,
+    second: rest.join("/"),
+  };
+};
+
+const travel = (distance: number, axis: "x" | "y") => {
+  const move =
+    axis === "x" ? `translateX(${distance}px)` : `translateY(${distance}px)`;
+  return [
+    { transform: "translate(0)", offset: 0 },
+    { transform: "translate(0)", offset: 0.2 },
+    { transform: move, offset: 0.45 },
+    { transform: move, offset: 0.7 },
+    { transform: "translate(0)", offset: 0.95 },
+    { transform: "translate(0)", offset: 1 },
+  ];
+};
+
+const useSwap = (
+  aRef: RefObject<HTMLSpanElement>,
+  bRef: RefObject<HTMLSpanElement>,
+  axis: "x" | "y",
+  tokens: string,
+) => {
+  useEffect(() => {
+    const a = aRef.current;
+    const b = bRef.current;
+    if (!a || !b) return;
+
+    let running: Animation[] = [];
+
+    const start = () => {
+      running.forEach((animation) => animation.cancel());
+      running = [];
+
+      if (axis === "x") {
+        a.style.width = "";
+        b.style.width = "";
+        const widest = Math.max(
+          a.getBoundingClientRect().width,
+          b.getBoundingClientRect().width,
+        );
+        a.style.width = `${widest}px`;
+        b.style.width = `${widest}px`;
+      }
+
+      const from = a.getBoundingClientRect();
+      const to = b.getBoundingClientRect();
+      const distance = axis === "x" ? to.left - from.left : to.top - from.top;
+
+      if (!distance) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      const timing = {
+        duration: 3400,
+        iterations: Infinity,
+        easing: "ease-in-out",
+      };
+
+      running = [
+        a.animate(travel(distance, axis), timing),
+        b.animate(travel(-distance, axis), timing),
+      ];
+    };
+
+    start();
+    window.addEventListener("resize", start);
+    return () => {
+      window.removeEventListener("resize", start);
+      running.forEach((animation) => animation.cancel());
+    };
+  }, [aRef, bRef, axis, tokens]);
+};
+
+const Swap = ({ first, second }: { first: string; second: string }) => {
+  const firstRef = useRef<HTMLSpanElement>(null);
+  const secondRef = useRef<HTMLSpanElement>(null);
+  useSwap(firstRef, secondRef, "x", `${first}/${second}`);
 
   return (
-    <div className="mb-6 last:mb-0">
+    <span className="inline-flex items-center gap-x-1 whitespace-nowrap">
+      <span ref={firstRef} className="inline-block text-center">
+        {first}
+      </span>
+      <span>×</span>
+      <span ref={secondRef} className="inline-block text-center">
+        {second}
+      </span>
+    </span>
+  );
+};
+
+const Nested = ({
+  amount,
+  first,
+  second,
+}: {
+  amount: string;
+  first: string;
+  second: string;
+}) => {
+  const firstRef = useRef<HTMLSpanElement>(null);
+  const secondRef = useRef<HTMLSpanElement>(null);
+  useSwap(firstRef, secondRef, "y", `${first}/${second}`);
+
+  return (
+    <span className="inline-flex flex-col text-center leading-tight">
+      <span className="px-3 pb-1">
+        <span className="inline-flex flex-col text-center leading-tight">
+          <span className="px-2 pb-1 text-[#8b88b1]">{amount}</span>
+          <span className={`${line} px-2 pt-1`}>
+            <span ref={firstRef} className="inline-block">
+              {first}
+            </span>
+          </span>
+        </span>
+      </span>
+      <span className={`${line} px-3 pt-1`}>
+        <span ref={secondRef} className="inline-block">
+          {second}
+        </span>
+      </span>
+    </span>
+  );
+};
+
+const flipOf = (tip: string) => {
+  const parts = tip.match(/^(.+?) per (.+?) is the same as/);
+  return parts ? { top: parts[1], bottom: parts[2] } : null;
+};
+
+const Flip = ({ top, bottom }: { top: string; bottom: string }) => {
+  const topRef = useRef<HTMLSpanElement>(null);
+  const bottomRef = useRef<HTMLSpanElement>(null);
+  useSwap(topRef, bottomRef, "y", `${top}/${bottom}`);
+
+  return (
+    <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+      <span className="inline-flex flex-col text-center leading-tight">
+        <span className="px-3 pb-1">
+          <span ref={topRef} className="inline-block">
+            {top}
+          </span>
+        </span>
+        <span className={`${line} px-3 pt-1`}>
+          <span ref={bottomRef} className="inline-block">
+            {bottom}
+          </span>
+        </span>
+      </span>
+    </div>
+  );
+};
+
+const Rearrange = ({
+  amount,
+  first,
+  second,
+}: {
+  amount: string;
+  first: string;
+  second: string;
+}) => (
+  <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+    <span className="text-[#8b88b1]">
+      {amount}/{first}/{second}
+    </span>
+    <span className="text-[#8b88b1]">=</span>
+    <span className="inline-flex flex-col text-center leading-tight">
+      <span className="px-3 pb-1">{amount}</span>
+      <span className={`${line} px-3 pt-1`}>
+        <Swap first={first} second={second} />
+      </span>
+    </span>
+    <span className="text-[#8b88b1]">=</span>
+    <Nested amount={amount} first={first} second={second} />
+  </div>
+);
+
+const SWAP_TIP = "swap round";
+
+const Step = ({ step, firstTip }: { step: StepType; firstTip: number }) => {
+  const cancel = cancelled(step.chain);
+  const rearrange = rearrangeOf(step.chain);
+  return (
+    <div className="mb-7 last:mb-0">
       <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
         {step.label}
       </span>
@@ -139,17 +334,99 @@ const Step = ({ step, number }: { step: StepType; number: number }) => {
         </span>
       </div>
 
-      <div className="mt-3 flex gap-x-3">
-        <span className="mt-0.5 shrink-0 self-start rounded-full bg-[hsla(43,100%,68%,0.25)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
-          Tip {number}
-        </span>
-        <p className="max-w-[70ch] text-sm text-[#8b88b1]">{step.why}</p>
+      <div className="mt-3 grid gap-y-3">
+        {step.tips.map((tip, id) => {
+          const flip = flipOf(tip);
+          return (
+            <div key={tip} className="flex gap-x-3">
+              <span className="-mt-0.5 shrink-0 self-start rounded-full bg-[hsla(43,100%,68%,0.25)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
+                Step {firstTip + id}
+              </span>
+              <div className="min-w-0 flex-1">
+                <p className="max-w-[70ch] text-sm text-[#8b88b1]">{tip}</p>
+                {rearrange && tip.includes(SWAP_TIP) && (
+                  <Rearrange {...rearrange} />
+                )}
+                {flip && <Flip {...flip} />}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 };
+const BLUE = "rgb(64,132,255)";
+const markAt = (exact: string, place: string) => {
+  const dot = exact.indexOf(".");
+  if (dot < 0) return -1;
+  if (place.startsWith("whole")) return dot - 1;
+  if (place.startsWith("hundredth")) return dot + 2;
+  return dot + 1;
+};
+const Round = ({
+  rounding,
+  step,
+}: {
+  rounding: RoundingType;
+  step: number;
+}) => {
+  const at = markAt(rounding.exact, rounding.place);
+  const before = at < 0 ? rounding.exact : rounding.exact.slice(0, at);
+  const digit = at < 0 ? "" : rounding.exact[at];
+  const after = at < 0 ? "" : rounding.exact.slice(at + 1);
+  return (
+    <div className="mb-7 last:mb-0">
+      <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+        Round
+      </span>
 
-/** one numbered row of the six-question set-up */
+      <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-2 sm:text-sm">
+        <span>
+          {before}
+          <span className="relative inline-block">
+            <span style={{ color: BLUE }} className="font-bold">
+              {digit}
+            </span>
+            <span
+              style={{ backgroundColor: BLUE }}
+              className="absolute -bottom-0.5 left-0 h-[2px] w-full origin-left animate-mark motion-reduce:animate-none"
+            />
+          </span>
+          {after}
+        </span>
+
+        <span className="text-[#8b88b1]">=</span>
+        <span className="font-bold text-[var(--title-color)]">
+          {rounding.rounded}
+        </span>
+      </div>
+
+      <div className="mt-3 flex gap-x-3">
+        <span className="-mt-0.5 shrink-0 self-start rounded-full bg-[hsla(43,100%,68%,0.25)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
+          Step {step}
+        </span>
+        <p className="max-w-[70ch] text-sm text-[#8b88b1]">
+          Remember, the question asks you to round to the nearest{" "}
+          {rounding.place}. The marked digit is the one you keep.
+        </p>
+      </div>
+    </div>
+  );
+};
+const Formula = ({ formula }: { formula: FormulaType }) => (
+  <div className="mb-7">
+    <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+      Formula
+    </span>
+    <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-2 sm:text-sm">
+      <span className="inline-flex flex-col text-center leading-tight">
+        <span className="px-3 pb-1">{formula.top}</span>
+        <span className={`${line} px-3 pt-1`}>{formula.bottom}</span>
+      </span>
+    </div>
+  </div>
+);
 const Question = ({
   number,
   title,
@@ -175,12 +452,8 @@ const Question = ({
     </div>
   </div>
 );
-
-/** the same six questions as the reference card, filled in for this scenario */
 const Solution = ({ scenario }: { scenario: ScenarioType }) => {
   const { setup } = scenario;
-  const convertAt = setup.lookups.length + 2;
-
   return (
     <div className="grid gap-y-5">
       <Question
@@ -189,32 +462,41 @@ const Solution = ({ scenario }: { scenario: ScenarioType }) => {
         answer={setup.unit}
       />
 
-      {setup.lookups.map((lookup, id) => (
-        <Question
-          key={lookup.label}
-          number={id + 2}
-          title={`Determine the ${lookup.label.toLowerCase()}.`}
-          answer={lookup.value}
-        />
-      ))}
-
       <Question
-        number={convertAt}
+        number={2}
         title="Do you need to convert units?"
         answer={setup.convert}
       />
 
-      <Question number={convertAt + 1} title="Set up the problem and solve.">
+      <Question number={3} title="Set up the problem and solve.">
         <div className="mt-4">
+          {scenario.formula && <Formula formula={scenario.formula} />}
+
           {scenario.steps.map((step, id) => (
-            <Step key={id} step={step} number={id + 1} />
+            <Step
+              key={id}
+              step={step}
+              firstTip={
+                scenario.steps
+                  .slice(0, id)
+                  .reduce((n, prev) => n + prev.tips.length, 0) + 1
+              }
+            />
           ))}
+
+          {scenario.rounding && (
+            <Round
+              rounding={scenario.rounding}
+              step={
+                scenario.steps.reduce((n, step) => n + step.tips.length, 0) + 1
+              }
+            />
+          )}
         </div>
       </Question>
     </div>
   );
 };
-
 const Verdict = ({
   correct,
   answer,
@@ -223,14 +505,10 @@ const Verdict = ({
   answer: React.ReactNode;
 }) => (
   <div
-    className={`mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 ${
-      correct ? "bg-[rgba(68,215,182,0.12)]" : "bg-[hsla(353,100%,65%,0.1)]"
-    }`}
+    className={`mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 ${correct ? "bg-[rgba(68,215,182,0.12)]" : "bg-[hsla(353,100%,65%,0.1)]"}`}
   >
     <span
-      className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${
-        correct ? "bg-[rgb(68,215,182)]" : "bg-[var(--primary-color)]"
-      }`}
+      className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${correct ? "bg-[rgb(68,215,182)]" : "bg-[var(--primary-color)]"}`}
     >
       {correct ? "Correct ✅" : "Not quite"}
     </span>
@@ -240,9 +518,7 @@ const Verdict = ({
     </span>
   </div>
 );
-
 const ScenarioPractice = () => {
-  // sequential unless you ask for the dice, so the prerender hydrates cleanly
   const [order, setOrder] = useState<number[]>(inOrder);
   const [random, setRandom] = useState(false);
   const [position, setPosition] = useState(0);
@@ -250,9 +526,7 @@ const ScenarioPractice = () => {
   const [status, setStatus] = useState<Status>("answering");
   const [score, setScore] = useState({ right: 0, asked: 0 });
   const inputRef = useRef<HTMLInputElement>(null);
-
   const scenario = Scenarios[order[position]];
-
   const reorder = () => {
     const next = !random;
     setRandom(next);
@@ -261,10 +535,8 @@ const ScenarioPractice = () => {
     setEntry("");
     setStatus("answering");
   };
-
   const next = () => {
     setPosition((prev) => {
-      // back to the top at the end, reshuffling first if the dice is on
       if (prev + 1 >= Scenarios.length) {
         if (random) setOrder(shuffled());
         return 0;
@@ -275,25 +547,18 @@ const ScenarioPractice = () => {
     setStatus("answering");
     inputRef.current?.focus();
   };
-
   const check = () => {
     if (!scenario) return;
-
     const given = Number(entry.replace(/,/g, "").trim());
     if (entry.trim() === "" || Number.isNaN(given)) return;
-
     const isRight = accepted(given, scenario.answer, scenario.tolerance);
-
     setStatus(isRight ? "solved" : "missed");
     setScore((prev) => ({
       right: prev.right + (isRight ? 1 : 0),
       asked: prev.asked + 1,
     }));
-
-    // clicking Check moves focus to the button — put it back so enter carries on
     inputRef.current?.focus();
   };
-
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (status === "answering") {
@@ -302,22 +567,16 @@ const ScenarioPractice = () => {
       next();
     }
   };
-
   const button =
     "inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse";
-
   return (
     <section className="mb-16" id="scenarios">
       <h2 className="relative mb-2 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center">
-        Nursing Scenarios
+        Nursing Dosages
       </h2>
-      <p className="mb-8 ml-3.5 text-sm lg:ml-0 lg:text-center">
-        Word problems from the floor. Miss one and the dimensional analysis gets
-        worked out step by step.
-      </p>
 
       <div className="animate-fadeIn rounded-xl bg-[var(--container-color)] p-7 shadow-xl">
-        <form onSubmit={onSubmit}>
+        <form method="dialog" onSubmit={onSubmit}>
           <div className="mb-3 flex items-center justify-between gap-x-4">
             <span className="flex items-center gap-x-3">
               <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
@@ -344,8 +603,7 @@ const ScenarioPractice = () => {
             </span>
           </div>
 
-          <h3 className="mb-3 text-xl">{scenario.title}</h3>
-          <p className="mb-6">{scenario.prompt}</p>
+          <p className="mb-6 text-lg sm:text-base">{scenario.prompt}</p>
 
           <div className="mb-4 flex items-center gap-x-4 sm:flex-col sm:items-stretch sm:gap-y-4">
             <input
@@ -354,15 +612,10 @@ const ScenarioPractice = () => {
               inputMode="decimal"
               autoComplete="off"
               value={entry}
-              // read-only rather than disabled so it keeps focus and
-              // enter still moves on to the next scenario
               readOnly={status !== "answering"}
-              onChange={(e) => setEntry(e.target.value)}
+              onChange={(e) => setEntry(numeric(e.target.value))}
               placeholder={`Answer in ${scenario.unit}`}
-              // flex-none once stacked, or flex-1 would zero out the height
-              className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${
-                status === "answering" ? "" : "opacity-60"
-              }`}
+              className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${status === "answering" ? "" : "opacity-60"}`}
             />
 
             <button type="submit" className={`${button} shrink-0`}>
@@ -389,5 +642,4 @@ const ScenarioPractice = () => {
     </section>
   );
 };
-
 export default ScenarioPractice;

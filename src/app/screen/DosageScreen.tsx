@@ -1,7 +1,6 @@
 import Sidebar from "../components/Sidebar";
 import DosageCalculations from "../components/DosageCalculations";
 import ScrollReset from "../components/ScrollReset";
-
 const DosageScreen = () => {
   return (
     <>
@@ -14,5 +13,4 @@ const DosageScreen = () => {
     </>
   );
 };
-
 export default DosageScreen;

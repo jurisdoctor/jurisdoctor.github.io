@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import DosageScreen from "../screen/DosageScreen";
-
 export const metadata: Metadata = {
-  title: "dosage calculations",
-  description: "conversions and practice for dosage calculations",
+  title: "Dosage Calculations",
+  description: "Conversions and practice for dosage calculations",
 };
-
 const DosageCalculationsPage = () => {
   return (
     <>
@@ -13,5 +11,4 @@ const DosageCalculationsPage = () => {
     </>
   );
 };
-
 export default DosageCalculationsPage;
