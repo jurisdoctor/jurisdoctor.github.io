@@ -44,6 +44,7 @@ const config: Config = {
         drift12: "drift12 11s linear infinite",
         fillBar: "fillBar 1.5s ease-out forwards",
         strike: "strike 2.6s ease-in-out infinite",
+        mark: "mark 2.6s ease-in-out infinite",
         indeterminate: "indeterminate 1.8s ease-in-out infinite",
         fadeIn: "fadeIn 0.6s ease-out both",
       },
@@ -152,6 +153,15 @@ const config: Config = {
         fillBar: {
           "0%": { transform: "scaleX(0)" },
           "100%": { transform: "scaleX(1)" },
+        },
+        // slides in under the digit you round at, holds, clears, repeats
+        mark: {
+          "0%": { transform: "scaleX(0)", opacity: "1" },
+          "30%": { transform: "scaleX(1)", opacity: "1" },
+          "75%": { transform: "scaleX(1)", opacity: "1" },
+          "88%": { transform: "scaleX(1)", opacity: "0" },
+          "89%": { transform: "scaleX(0)", opacity: "0" },
+          "100%": { transform: "scaleX(0)", opacity: "0" },
         },
         // draws through, holds, clears, then does it again
         strike: {
