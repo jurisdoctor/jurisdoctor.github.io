@@ -1,26 +1,20 @@
-/**
- * Split either side of the "=" so a card's lines can share one grid and the
- * equals signs stack in a column.
- */
+export const numeric = (raw: string) => {
+  const [first, ...rest] = raw.replace(/[^\d.,]/g, "").split(".");
+  return rest.length ? `${first}.${rest.join("")}` : first;
+};
 export interface LineType {
-  /** plain left-hand side, e.g. "1 gram" */
   left?: string;
-  /** or a stacked fraction instead, rather than "1/1,000" */
   top?: string;
   bottom?: string;
-  /** the same value as a decimal, shown alongside the fraction */
   decimal?: string;
-  /** the unit the fraction and the decimal both carry */
   unit?: string;
   right: string;
 }
-
 export interface PrefixType {
   name: string;
   meaning: string;
   lines: LineType[];
 }
-
 export const Prefixes: PrefixType[] = [
   {
     name: "Micro-",
@@ -73,12 +67,10 @@ export const Prefixes: PrefixType[] = [
     ],
   },
 ];
-
 export interface RowType {
   left: string;
   right: string;
 }
-
 export const MetricConversions: RowType[] = [
   { left: "1 kilogram (kg)", right: "1,000 grams (g)" },
   { left: "1 gram (g)", right: "1,000 milligrams (mg)" },
@@ -86,7 +78,6 @@ export const MetricConversions: RowType[] = [
   { left: "1 liter (L)", right: "1,000 milliliters (mL)" },
   { left: "1 milliliter (mL)", right: "1 cubic centimeter (cc)" },
 ];
-
 export const Household: RowType[] = [
   { left: "1 pound (lb)", right: "16 ounces (oz)" },
   { left: "1 tablespoon (Tbsp)", right: "3 teaspoons (tsp)" },
@@ -96,7 +87,6 @@ export const Household: RowType[] = [
   { left: "1 gallon (gal)", right: "4 quarts (qts)" },
   { left: "1 foot (ft)", right: "12 inches (in)" },
 ];
-
 export const MetricToHousehold: RowType[] = [
   { left: "1 kilogram (kg)", right: "2.2 pounds (lbs)" },
   { left: "30 milliliters (mL)", right: "1 fluid ounce (fl oz)" },
@@ -104,18 +94,13 @@ export const MetricToHousehold: RowType[] = [
   { left: "5 milliliters (mL)", right: "1 teaspoon (tsp)" },
   { left: "2.54 centimeters (cm)", right: "1 inch (in)" },
 ];
-
 export type FamilyType = "mass" | "volume" | "length" | "household";
-
 export interface LadderType {
   family: FamilyType;
   title: string;
-  /** the whole ladder in one line, biggest unit first */
   chain?: string[];
-  /** the equalities worth knowing cold */
   keys: string[];
 }
-
 export const Ladders: LadderType[] = [
   {
     family: "mass",
@@ -162,18 +147,20 @@ export const Ladders: LadderType[] = [
     ],
   },
 ];
-
 export interface RuleType {
   group: string;
   family: FamilyType;
-  from: { value: number; unit: string };
-  to: { value: number; unit: string };
-  /** multipliers that keep both sides of the question tidy */
+  from: {
+    value: number;
+    unit: string;
+  };
+  to: {
+    value: number;
+    unit: string;
+  };
   steps: number[];
 }
-
 export const Rules: RuleType[] = [
-  // ======== Metric ========
   {
     group: "Metric",
     family: "mass",
@@ -230,8 +217,6 @@ export const Rules: RuleType[] = [
     to: { value: 1000, unit: "g" },
     steps: [1, 2, 3, 5, 10],
   },
-
-  // ======== Household ========
   {
     group: "Household",
     family: "household",
@@ -281,8 +266,6 @@ export const Rules: RuleType[] = [
     to: { value: 12, unit: "in" },
     steps: [1, 2, 3, 4, 5, 10],
   },
-
-  // ======== Metric <-> Household ========
   {
     group: "Metric & Household",
     family: "mass",

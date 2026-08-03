@@ -6,20 +6,12 @@ import {
   MetricToHousehold,
   RowType,
 } from "./Data";
-
 const card =
   "rounded-xl bg-[var(--container-color)] p-7 lg:p-5 sm:p-7 shadow-xl animate-fadeIn";
-
-// side by side down to 576px — the columns get tight well before that, so the
-// type and gaps step down rather than the row breaking apart
 const rowClass =
   "grid grid-cols-[1fr_auto_1fr] items-center gap-x-4 border-b border-solid border-[#f1f1f1] py-2 last:border-none lg:gap-x-2 lg:text-sm md:gap-x-1 md:text-xs sm:grid-cols-1 sm:gap-y-1 sm:text-center sm:text-base";
-
-/** the two tables shed padding as their columns narrow */
 const tableCard =
   "rounded-xl bg-[var(--container-color)] shadow-xl animate-fadeIn p-7 md:p-4 sm:p-7";
-
-/** one table of equalities, headed and boxed */
 const Table = ({
   title,
   rows,
@@ -57,7 +49,6 @@ const Table = ({
     </div>
   </div>
 );
-
 const Conversions = () => {
   return (
     <section className="mb-16" id="conversions">
@@ -75,9 +66,6 @@ const Conversions = () => {
             <h3 className="text-xl">{prefix.name}</h3>
             <span className="text-sm text-[#8b88b1]">{prefix.meaning}</span>
 
-            {/* one grid for the whole card, so every "=" lands in one column;
-                sized to its content and centred, so a wide card doesn't leave
-                the lines stranded against the left edge */}
             <div className="mx-auto mt-3 grid w-fit grid-cols-[auto_auto_auto] items-center gap-x-2 gap-y-2 text-sm lg:gap-x-1.5 lg:text-xs sm:gap-x-2 sm:text-sm">
               {prefix.lines.map((line) => (
                 <Fragment key={line.right + (line.bottom ?? line.left ?? "")}>
@@ -128,5 +116,4 @@ const Conversions = () => {
     </section>
   );
 };
-
 export default Conversions;

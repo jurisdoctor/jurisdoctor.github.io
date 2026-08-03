@@ -1,12 +1,11 @@
 {
   "name": "tom",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev:isolated": "NEXT_DIST_DIR=.next-preview next dev",
+    "dev": "node scripts/dev.mjs",
+    "dev:clean": "rm -rf .next-dev && node scripts/dev.mjs",
     "build": "next build",
-    "build:isolated": "NEXT_DIST_DIR=.next-verify next build",
     "start": "next start",
     "lint": "next lint"
   },

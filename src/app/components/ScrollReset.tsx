@@ -1,6 +1,7 @@
 "use client";
-
 import { useEffect } from "react";
+
+export const SCROLL_TO = "scrollTo";
 
 const ScrollReset = () => {
   useEffect(() => {
@@ -8,15 +9,20 @@ const ScrollReset = () => {
       window.history.scrollRestoration = "manual";
     }
 
-    // arriving at a section link (e.g. /#about) — let the hash win
-    if (window.location.hash) {
-      document
-        .getElementById(window.location.hash.slice(1))
-        ?.scrollIntoView({ behavior: "smooth" });
+    const target =
+      sessionStorage.getItem(SCROLL_TO) || window.location.hash.slice(1);
+
+    if (!target) {
+      window.scrollTo(0, 0);
       return;
     }
 
-    window.scrollTo(0, 0);
+    const timer = window.setTimeout(() => {
+      document.getElementById(target)?.scrollIntoView({ behavior: "instant" });
+      sessionStorage.removeItem(SCROLL_TO);
+    }, 0);
+
+    return () => window.clearTimeout(timer);
   }, []);
 
   return null;
