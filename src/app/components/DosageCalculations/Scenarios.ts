@@ -3716,10 +3716,10 @@ export const Scenarios: ScenarioType[] = [
     title: "Day Shift Fluid Intake",
     prompt:
       "A 2 days post-op patient consumed 3 cups of ice, 325 mL of Boost, 2 tablespoons of honey, 4 oz of jello, two chicken sandwiches, 1/2 cup of pudding and 4 oz of black tea during the day shift. What is the day shift fluid intake total in mL?",
-    answer: 1045,
+    answer: 955,
     unit: "mL",
     tolerance: 1,
-    setup: { unit: "mL", convert: "Yes → cups and oz to mL" },
+    setup: { unit: "mL", convert: "Yes → cups, tablespoons and oz to mL" },
     steps: [
       {
         label: "Ice",
@@ -3737,21 +3737,21 @@ export const Scenarios: ScenarioType[] = [
         tips: ["Already in mL, so it goes straight into the total."],
       },
       {
+        label: "Honey",
+        chain: [v("2 Tbsp"), f("15 mL", "1 Tbsp")],
+        result: "30 mL",
+        tips: [
+          "Honey pours, so it counts as intake.",
+          "1 Tbsp = 15 mL, written with mL on top so the Tbsp cancels.",
+        ],
+      },
+      {
         label: "Jello",
         chain: [v("4 oz"), f("30 mL", "1 oz")],
         result: "120 mL",
         tips: [
           "Jello is liquid at room temperature, so it counts as intake.",
           "1 fl oz = 30 mL, written with mL on top so the oz cancels.",
-        ],
-      },
-      {
-        label: "Pudding",
-        chain: [v("0.5 c"), f("240 mL", "1 c")],
-        result: "120 mL",
-        tips: [
-          "Pudding counts too, and a cup of liquid is 240 mL.",
-          "Half of 240 mL leaves 120 mL.",
         ],
       },
       {
@@ -3762,15 +3762,15 @@ export const Scenarios: ScenarioType[] = [
       },
       {
         label: "Day shift total",
-        chain: [v("360 mL + 325 mL + 120 mL + 120 mL + 120 mL")],
-        result: "1,045 mL",
+        chain: [v("360 mL + 325 mL + 30 mL + 120 mL + 120 mL")],
+        result: "955 mL",
         tips: [
           "Nothing cancels here. It is plain addition.",
-          "The chicken sandwiches and the honey stay out. Solid food is not counted as fluid intake.",
+          "The pudding and the chicken sandwiches stay out. Everything else on the tray counts.",
         ],
       },
     ],
-    note: "Ice at half volume and solid food excluded are the two things this question is really testing.",
+    note: "NOTE: we do not count pudding or solid food in fluid intake. Jello and honey do count, because they are liquid at room temperature.",
   },
   {
     id: 125,
@@ -4068,10 +4068,11 @@ export const Scenarios: ScenarioType[] = [
         result: "1,020 mL",
         tips: [
           "Nothing cancels here. It is plain addition.",
-          "The toast stays out. Solid food is not counted as fluid intake.",
+          "Only the toast stays out. Solid food is not counted as fluid intake.",
         ],
       },
     ],
+    note: "NOTE: we do not count pudding or solid food in fluid intake. Jello and honey do count, because they are liquid at room temperature.",
   },
   {
     id: 135,
@@ -4318,7 +4319,10 @@ export const Scenarios: ScenarioType[] = [
         label: "Jello",
         chain: [v("3 oz"), f("30 mL", "1 oz")],
         result: "90 mL",
-        tips: ["1 fl oz = 30 mL, written with mL on top so the oz cancels."],
+        tips: [
+          "Jello is liquid at room temperature, so it counts as intake.",
+          "1 fl oz = 30 mL, written with mL on top so the oz cancels.",
+        ],
       },
       {
         label: "Coffee",
@@ -4330,10 +4334,13 @@ export const Scenarios: ScenarioType[] = [
         label: "Evening total",
         chain: [v("120 mL + 180 mL + 90 mL + 240 mL")],
         result: "630 mL",
-        tips: ["Nothing cancels here. It is plain addition."],
+        tips: [
+          "Nothing cancels here. It is plain addition.",
+          "Everything on this list counts. Two cups, worth two different amounts, is the only trap.",
+        ],
       },
     ],
-    note: "Two cups in this question, worth two different amounts. Ice is 120 mL and coffee is 240 mL.",
+    note: "NOTE: we do not count pudding or solid food in fluid intake. Jello and honey do count, because they are liquid at room temperature.",
   },
   {
     id: 145,
@@ -4704,10 +4711,10 @@ export const Scenarios: ScenarioType[] = [
     title: "Twenty Four Hour Fluid Intake",
     prompt:
       "Over 24 hours a patient consumed 4 cups of ice, two 240 mL cartons of Ensure, 8 oz of jello, 1 1/2 cups of broth, 6 oz of tea, 3 tablespoons of honey, two slices of toast and a chicken breast. What is the 24 hour fluid intake total in mL?",
-    answer: 1740,
+    answer: 1785,
     unit: "mL",
     tolerance: 1,
-    setup: { unit: "mL", convert: "Yes → cups and oz to mL" },
+    setup: { unit: "mL", convert: "Yes → cups, tablespoons and oz to mL" },
     steps: [
       {
         label: "Ice",
@@ -4727,7 +4734,10 @@ export const Scenarios: ScenarioType[] = [
         label: "Jello",
         chain: [v("8 oz"), f("30 mL", "1 oz")],
         result: "240 mL",
-        tips: ["1 fl oz = 30 mL, written with mL on top so the oz cancels."],
+        tips: [
+          "Jello is liquid at room temperature, so it counts as intake.",
+          "1 fl oz = 30 mL, written with mL on top so the oz cancels.",
+        ],
       },
       {
         label: "Broth",
@@ -4742,16 +4752,25 @@ export const Scenarios: ScenarioType[] = [
         tips: ["Same 30 mL per ounce again."],
       },
       {
+        label: "Honey",
+        chain: [v("3 Tbsp"), f("15 mL", "1 Tbsp")],
+        result: "45 mL",
+        tips: [
+          "Honey pours, so it counts as intake.",
+          "1 Tbsp = 15 mL, written with mL on top so the Tbsp cancels.",
+        ],
+      },
+      {
         label: "Total intake",
-        chain: [v("480 mL + 480 mL + 240 mL + 360 mL + 180 mL")],
-        result: "1,740 mL",
+        chain: [v("480 mL + 480 mL + 240 mL + 360 mL + 180 mL + 45 mL")],
+        result: "1,785 mL",
         tips: [
           "Nothing cancels here. It is plain addition.",
-          "The honey, the toast and the chicken breast all stay out. Solid food is not counted as fluid intake.",
+          "Only the toast and the chicken breast stay out. Solid food is not counted as fluid intake.",
         ],
       },
     ],
-    note: "Two different cup values in one question. Ice is 120 mL and broth is 240 mL.",
+    note: "NOTE: we do not count pudding or solid food in fluid intake. Jello and honey do count, because they are liquid at room temperature.",
   },
   {
     id: 155,
