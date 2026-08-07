@@ -2,7 +2,7 @@
 import { Fragment, RefObject, useEffect, useRef, useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
 import { numeric } from "./Data";
-import ProblemSet from "./ProblemSet";
+import ProblemSet, { MARKS } from "./ProblemSet";
 import { useSaved } from "./Saved";
 import {
   FormulaType,
@@ -517,7 +517,7 @@ const Verdict = ({
     </span>
   </div>
 );
-const KEY = "dosage:scenarios:v2";
+const KEY = "dosage:scenarios:v3";
 const fresh = (): SavedType => ({
   position: 0,
   entry: "",
@@ -599,6 +599,11 @@ const ScenarioPractice = () => {
             <span className="flex flex-wrap items-center gap-x-3 gap-y-2">
               <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
                 {saved.position + 1} of {Scenarios.length}
+                {scenario.mark && (
+                  <span className={`ml-1.5 ${MARKS[scenario.mark].tone}`}>
+                    {MARKS[scenario.mark].char}
+                  </span>
+                )}
               </span>
 
               <button
@@ -625,6 +630,10 @@ const ScenarioPractice = () => {
 
           {open && (
             <ProblemSet
+              marks={(index) => {
+                const flag = Scenarios[index]?.mark;
+                return flag ? MARKS[flag] : undefined;
+              }}
               total={Scenarios.length}
               position={saved.position}
               done={saved.done}

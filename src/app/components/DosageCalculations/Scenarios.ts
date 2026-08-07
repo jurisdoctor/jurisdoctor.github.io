@@ -24,6 +24,7 @@ export interface RoundingType {
 }
 export interface ScenarioType {
   id: number;
+  mark?: "star" | "star2" | "skull";
   title: string;
   prompt: string;
   answer: number;
@@ -146,11 +147,16 @@ const whyTitrate = (to: string, from: string, kg: string) => [
   `From there it's the usual set-up: the ${kg} weight is the quantity, the dose is the relationship.`,
   `Write the dose with kg on the bottom so the kg cancels.`,
 ];
-const whyWeightHourly = (kg: string, order: string) => [
-  `Start with the ${kg} body weight and hang ${order} off it so the kg cancels.`,
-  `Remember that ${order} means the amount is divided by kg and by hr, and those two can swap round:`,
-  `The order is already per hour, so there's no 60 min per 1 hr step. Adding one anyway is the easiest way to land 60× off.`,
-];
+const whyWeightHourly = (kg: string, order: string) => {
+  const per = order.split("/").pop() ?? "hr";
+  return [
+    `Start with the ${kg} body weight and hang ${order} off it so the kg cancels.`,
+    `Remember that ${order} means the amount is divided by kg and by ${per}, and those two can swap round:`,
+    per === "hr"
+      ? `The order is already per hour, so there's no 60 min per 1 hr step. Adding one anyway is the easiest way to land 60× off.`
+      : `The order is per ${per}, not per hour, so a time conversion is still coming before this reaches a pump rate.`,
+  ];
+};
 const whyMcgBag = (bag: string) => [
   `The bag (${bag}) is labelled in mcg, the same unit you're already carrying.`,
   `It goes straight in with mL on top, no conversion needed. The mcg cancels and leaves mL/hr.`,
@@ -467,7 +473,7 @@ export const Scenarios: ScenarioType[] = [
         tips: whyVolume("160 mg per 5 mL", "mg"),
       },
     ],
-    note: "Safe dose check: at 15 mg/kg every 6 hours the child gets 60 mg/kg/day, under the 75 mg/kg/day ceiling in the order, so it's within range.",
+    note: "Safe dose check: the order works out to 15 mg/kg per dose, or 360 mg. No frequency and no ceiling were given here, so verify both against your drug reference and institutional limits before administering.",
   },
   {
     id: 11,
@@ -663,7 +669,7 @@ export const Scenarios: ScenarioType[] = [
         tips: whyVolume("250 mg per 5 mL", "mg"),
       },
     ],
-    note: "Safe dose check: the order works out to 150 mg/kg/day, or 3,300 mg/day. No ceiling was given here, so verify the mg/kg/day against your drug reference and institutional limits before administering.",
+    note: "Safe dose check: the order works out to 150 mg/kg/day, or 3,300 mg/day. No ceiling was given here, so verify it against your drug reference and institutional limits before administering.",
   },
   {
     id: 18,
@@ -1146,6 +1152,7 @@ export const Scenarios: ScenarioType[] = [
         tips: whyVolume("160 mg per 5 mL", "mg"),
       },
     ],
+    note: "Safe dose check: every 6 hours makes 4 doses, so the order works out to 48 mg/kg/day, or 864 mg/day. No ceiling was given here, so verify it against your drug reference and institutional limits before administering.",
   },
   {
     id: 33,
@@ -1626,7 +1633,7 @@ export const Scenarios: ScenarioType[] = [
         tips: whyVolume("100 mg/mL", "mg"),
       },
     ],
-    note: "Safe dose check: 1,760 mg/day is 1.76 g, under the 4 g/day maximum in the order, so it's within range.",
+    note: "Safe dose check: the order works out to 80 mg/kg/day, or 1,760 mg/day. No ceiling was given here, so verify it against your drug reference and institutional limits before administering.",
   },
   {
     id: 48,
@@ -2100,7 +2107,7 @@ export const Scenarios: ScenarioType[] = [
         tips: whyVolume("200 mg per 5 mL", "mg"),
       },
     ],
-    note: "Safe dose check: 2,500 mg/day is 2.5 g, under the 3 g/day maximum in the order, so it's within range.",
+    note: "Safe dose check: the order works out to 100 mg/kg/day, or 2,500 mg/day. No ceiling was given here, so verify it against your drug reference and institutional limits before administering.",
   },
   {
     id: 63,
@@ -2593,7 +2600,7 @@ export const Scenarios: ScenarioType[] = [
     note: "Scored means it breaks cleanly in half, so half a tablet is a real dose here.",
   },
   {
-    id: 81,
+    id: 80,
     title: "Penicillin IM Dose",
     prompt:
       "Your order reads penicillin 1.2 million units IM daily. You have penicillin 500,000 units/mL. How should you prepare the correct dose?",
@@ -2615,7 +2622,7 @@ export const Scenarios: ScenarioType[] = [
     note: "1.2 million written out is 1,200,000 units.",
   },
   {
-    id: 82,
+    id: 81,
     title: "Labetalol IV Push",
     prompt:
       "Your order reads labetalol 40 mg IV push every 10 minutes until blood pressure is lower than 140/90 mm Hg. You have labetalol 5 mg/mL available. How should you prepare the correct dose?",
@@ -2637,7 +2644,7 @@ export const Scenarios: ScenarioType[] = [
     note: "The every-10-minutes part sets the schedule, not the volume of one dose.",
   },
   {
-    id: 83,
+    id: 82,
     title: "Ergocalciferol Liquid",
     prompt:
       "You have on hand ergocalciferol liquid 8,000 units/2 mL. Your order reads ergocalciferol 225,000 units PO daily. How should you prepare the correct dose? (Do not round.)",
@@ -2658,7 +2665,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 84,
+    id: 83,
     title: "Ergocalciferol Tablets",
     prompt:
       "Your order reads ergocalciferol 225,000 units PO daily. You have on hand ergocalciferol in 50,000 unit tablets. How many do you administer?",
@@ -2679,7 +2686,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 85,
+    id: 84,
     title: "Cortisone Tablets",
     prompt:
       "Your order reads cortisone 15 mg PO every morning. You have on hand cortisone 10 mg tablets. How should you prepare the correct dose?",
@@ -2700,7 +2707,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 86,
+    id: 85,
     title: "Amoxicillin Suspension",
     prompt:
       "Amoxil (amoxicillin) suspension 180 mg PO bid is ordered for a patient who cannot swallow pills. It is supplied as 125 mg/5 mL. How many milliliters should you administer?",
@@ -2722,7 +2729,7 @@ export const Scenarios: ScenarioType[] = [
     note: "bid tells you how often, not how much. 180 mg is already the single dose.",
   },
   {
-    id: 87,
+    id: 86,
     title: "Diltiazem Scored Tablets",
     prompt:
       "Diltiazem (Cardizem) 90 mg PO tid is ordered for a patient with hypertension. It is supplied in 60 mg scored tablets. How many tablets should you administer?",
@@ -2743,7 +2750,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 88,
+    id: 87,
     title: "Atropine Preoperative Dose",
     prompt:
       "Atropine 0.6 mg IM is ordered preoperatively. It is supplied as 0.4 mg/mL. How many milliliters should you administer?",
@@ -2764,7 +2771,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 91,
+    id: 88,
     title: "Diphenhydramine IM",
     prompt:
       "You have an order for diphenhydramine hydrochloride (Benadryl) 40 mg IM ASAP. You have on hand Benadryl 25 mg/mL. How many milliliters do you prepare?",
@@ -2785,7 +2792,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 92,
+    id: 89,
     title: "Digoxin Tablets",
     prompt:
       "You have digoxin (Lanoxin) 0.25 mg tablets, and you need to administer 0.375 mg PO. How many tablets should you administer?",
@@ -2806,7 +2813,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 93,
+    id: 90,
     title: "Phenobarbital IV",
     prompt:
       "Phenobarbital is supplied as 60 mg/mL. You need to administer 160 mg IV stat. How many milliliters should you administer? (Round to the nearest tenth.)",
@@ -2832,7 +2839,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 94,
+    id: 91,
     title: "Furosemide IV Volume",
     prompt:
       "You have an order for furosemide (Lasix) 80 mg IV every morning. You have on hand Lasix 20 mg in 2 mL sterile water. How many milliliters should you prepare?",
@@ -2853,7 +2860,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 95,
+    id: 92,
     title: "Furosemide Tablets",
     prompt:
       "You need to administer 40 mg of furosemide (Lasix) PO. You have on hand Lasix 20 mg tablets. How many tablets should you give?",
@@ -2874,7 +2881,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 96,
+    id: 93,
     title: "Heparin Subcutaneous",
     prompt:
       "You have an order for heparin 3,000 units SC every 12 hours. You have available 5,000 units/mL. How many milliliters will you give?",
@@ -2895,7 +2902,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 97,
+    id: 94,
     title: "Captopril Scored Tablets",
     prompt:
       "A patient is sent home on captopril (Capoten) 6.25 mg PO bid. Her pharmacist dispenses 25 mg scored tablets. How many tablets should the patient take for each dose?",
@@ -2917,7 +2924,7 @@ export const Scenarios: ScenarioType[] = [
     note: "A quarter of a scored tablet. Worth querying, since most scored tablets only break reliably in half.",
   },
   {
-    id: 98,
+    id: 95,
     title: "Phenobarbital Elixir",
     prompt:
       "You have an order for phenobarbital 50 mg PO at bedtime. It is supplied as phenobarbital elixir 20 mg/5 mL. How much will you administer?",
@@ -2938,7 +2945,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 99,
+    id: 96,
     title: "Lorazepam IM",
     prompt:
       "You need to administer lorazepam (Ativan) 3 mg IM to an agitated patient. You have on hand 4 mg/mL. How much do you prepare? (Do not round.)",
@@ -2959,7 +2966,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 100,
+    id: 97,
     title: "Methylprednisolone IV Push",
     prompt:
       "You need to administer 125 mg of methylprednisolone sodium succinate (Solu-Medrol) IV push bid to a patient with an acute exacerbation of COPD. You have on hand 40 mg/mL. How much do you prepare? (Round to the nearest tenth.)",
@@ -2985,7 +2992,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 101,
+    id: 98,
     title: "Warfarin Dose Adjustment",
     prompt:
       "A patient has a bottle of warfarin (Coumadin) 5 mg tablets at home. After his most recent INR, the doctor calls and tells him to take 7.5 mg/day. How many tablets should the patient take?",
@@ -3006,7 +3013,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 102,
+    id: 99,
     title: "Penicillin Syringe Volume",
     prompt:
       "You have on hand penicillin 300,000 units/mL. Your order reads penicillin 1,000,000 units IM. How will you fill the syringe? (Round to the nearest tenth.)",
@@ -3032,7 +3039,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 103,
+    id: 100,
     title: "Alprazolam Tablets",
     prompt:
       "The physician orders alprazolam (Xanax) 0.5 mg PO. You have on hand Xanax 0.25 mg tablets. How many will you give?",
@@ -3053,7 +3060,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 105,
+    id: 101,
     title: "Erythromycin Suspension",
     prompt:
       "You need to administer 400 mg of erythromycin PO. You have on hand a suspension of 125 mg/5 mL. How much will you prepare?",
@@ -3074,7 +3081,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 106,
+    id: 102,
     title: "Meperidine IM",
     prompt:
       "The physician orders meperidine 75 mg IM every 4 to 6 hours prn for a patient admitted with acute cholecystitis. You have on hand meperidine 50 mg/mL. How much will you give?",
@@ -3095,7 +3102,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 107,
+    id: 103,
     title: "Methylprednisolone IM",
     prompt:
       "A patient is receiving 60 mg of methylprednisolone IM every 8 hours. You have on hand 75 mg/mL. How much will you draw up?",
@@ -3117,7 +3124,7 @@ export const Scenarios: ScenarioType[] = [
     note: "The dose is smaller than what's in 1 mL, so the answer is under a millilitre. That's expected, not a mistake.",
   },
   {
-    id: 108,
+    id: 104,
     title: "Acetaminophen Elixir",
     prompt:
       "Your patient has a headache but has difficulty swallowing pills. The physician orders acetaminophen 1,000 mg PO every 4 to 6 hours prn. You have acetaminophen elixir 160 mg in 5 mL. How much will you administer? (Do not round.)",
@@ -3138,7 +3145,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 109,
+    id: 105,
     title: "Morphine IM Stat",
     prompt:
       "A patient is admitted to the emergency room with a fractured leg. The physician orders morphine 15 mg IM stat. You have on hand morphine 10 mg/mL. How many milliliters will you administer?",
@@ -3159,7 +3166,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 110,
+    id: 106,
     title: "Methylprednisolone From Two Vials",
     prompt:
       "A patient is receiving 160 mg of methylprednisolone IM every 12 hours. You have on hand two vials that each contain 125 mg/2 mL. How much will you draw into a syringe? (Round to the nearest tenth.)",
@@ -3186,7 +3193,7 @@ export const Scenarios: ScenarioType[] = [
     note: "One vial holds only 2 mL, so this dose spans both. That's why there are two vials, not because it's two doses.",
   },
   {
-    id: 111,
+    id: 107,
     title: "Lorazepam Tablets",
     prompt:
       "You have available lorazepam (Ativan) 0.5 mg tablets, and you need to administer 1 mg PO. How many tablets will you administer?",
@@ -3207,7 +3214,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 113,
+    id: 108,
     title: "Codeine IM",
     prompt:
       'The physician writes a "now" order for codeine 45 mg IM for a patient with a vertebral compression fracture. You have on hand codeine 60 mg/2 mL. How many milliliters should you give?',
@@ -3228,7 +3235,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 114,
+    id: 109,
     title: "Digoxin Daily Tablets",
     prompt:
       "A patient with heart failure has a daily order for digoxin 0.25 mg PO. Digoxin 0.125 mg tablets are available. How many tablets should you give?",
@@ -3249,7 +3256,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 80,
+    id: 110,
     title: "Fluid Restriction in Cups",
     prompt:
       "A home care patient must restrict fluid intake to 2 L every 24 hours. He has only household measuring cups. How many cups may he drink daily without exceeding the 2 L limit?",
@@ -3292,7 +3299,7 @@ export const Scenarios: ScenarioType[] = [
     note: "8.33 cups is the arithmetic, but the order is a ceiling, so round down: 8 full cups is the most he can drink without going over. A cup is 8 fl oz, roughly 240 mL.",
   },
   {
-    id: 89,
+    id: 111,
     title: "Acetaminophen Safe Dose Check",
     prompt:
       "Each acetaminophen (Tylenol) #3 tablet has 325 mg of acetaminophen and 30 mg of codeine. A patient is told to take 2 tablets PO every 4 hours for pain. The maximum safe dose of acetaminophen is 4 g/day. How many grams of acetaminophen will the patient take in 24 hours?",
@@ -3342,7 +3349,7 @@ export const Scenarios: ScenarioType[] = [
     note: "3.9 g/day sits just under the 4 g/day maximum, so the acetaminophen is within range, but only barely. It leaves no room for any other paracetamol-containing product. The codeine has no fixed ceiling here. It varies with tolerance.",
   },
   {
-    id: 90,
+    id: 112,
     title: "Acetaminophen Over 24 Hours",
     prompt:
       "A patient is taking acetaminophen (Tylenol) 325 mg, 2 tablets PO every 6 hours. How many grams is the patient receiving in 24 hours?",
@@ -3389,7 +3396,7 @@ export const Scenarios: ScenarioType[] = [
     ],
   },
   {
-    id: 104,
+    id: 113,
     title: "Erythromycin Tablets",
     prompt:
       "You need to administer 250 mg of erythromycin PO. You have on hand 0.5 g tablets. How many tablets will you give?",
@@ -3419,7 +3426,7 @@ export const Scenarios: ScenarioType[] = [
     note: "Half a tablet. Check that it's scored before breaking it.",
   },
   {
-    id: 112,
+    id: 114,
     title: "Acetaminophen Elixir Per Dose",
     prompt:
       "A patient is instructed to take acetaminophen (Tylenol) liquid (elixir) 650 mg qid. The elixir is 160 mg/5 mL. How many milliliters per dose should the patient take? (Round to the nearest whole number.)",
@@ -3444,5 +3451,1715 @@ export const Scenarios: ScenarioType[] = [
       },
     ],
     note: "qid means four times a day, which sets the schedule, not this dose.",
+  },
+  {
+    id: 115,
+    mark: "star",
+    title: "Lactulose Volume",
+    prompt:
+      "A nurse is preparing to administer Lactulose 30 g at 0900 and available Lactulose is 20 g/30 mL. How many mL should the nurse administer?",
+    answer: 45,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "No" },
+    steps: [
+      {
+        label: "Volume",
+        chain: [v("30 g"), f("30 mL", "20 g")],
+        result: "45 mL",
+        tips: whyOrderVolume("30 g", "20 g per 30 mL", "g"),
+      },
+    ],
+    note: "The 0900 is the schedule, not part of the arithmetic.",
+  },
+  {
+    id: 116,
+    mark: "star",
+    title: "Teaspoons to Milliliters",
+    prompt:
+      "A patient is prescribed 2 teaspoons of Delsym. How many milliliters (mL) should the nurse administer?",
+    answer: 10,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "Yes → tsp to mL" },
+    steps: [
+      {
+        label: "Volume",
+        chain: [v("2 tsp"), f("5 mL", "1 tsp")],
+        result: "10 mL",
+        tips: [
+          "Start with what's ordered → 2 tsp. That's your quantity.",
+          "1 tsp = 5 mL is the household to metric equality, so that's the factor.",
+          FLIP("1 tsp per 5 mL"),
+          "You want mL, so use the side with mL on top. The tsp cancels and mL is what's left.",
+        ],
+      },
+    ],
+    note: "Teaspoons at the bedside always become mL before you draw anything up.",
+  },
+  {
+    id: 117,
+    mark: "star",
+    title: "Amoxicillin Tablets Per Day",
+    prompt:
+      "The provider orders 1 gram of amoxicillin BID (twice a day). The available tablets are 250 mg. How many tablets should the nurse administer for a day?",
+    answer: 8,
+    unit: "tablets",
+    tolerance: 0.1,
+    setup: { unit: "tablets", convert: "Yes → g to mg" },
+    steps: [
+      {
+        label: "Convert",
+        chain: [v("1 g"), f("1,000 mg", "1 g")],
+        result: "1,000 mg",
+        tips: [
+          "The order is in grams and the tablets are labelled in mg, so the units have to match before anything can cancel.",
+          "1 g = 1,000 mg, written with mg on top so the g cancels.",
+        ],
+      },
+      {
+        label: "Tablets per dose",
+        chain: [v("1,000 mg"), f("1 tablet", "250 mg")],
+        result: "4 tablets",
+        tips: whyTablets("1,000 mg", "250 mg per tablet"),
+      },
+      {
+        label: "Tablets for the day",
+        chain: [v("2 doses"), f("4 tablets", "1 dose")],
+        result: "8 tablets",
+        tips: [
+          "BID means twice a day, so the day holds 2 doses. That count is your quantity now.",
+          "4 tablets per 1 dose is the relationship. The doses cancel and tablets are what is left.",
+        ],
+      },
+    ],
+    note: "Read the last line carefully. Per dose is 4, per day is 8.",
+  },
+  {
+    id: 118,
+    mark: "star",
+    title: "Vancomycin Total Over A Course",
+    prompt:
+      "A nurse needs to administer PO vancomycin 125 mg capsule for C-diff TID (three times a day) for 7 days. How much mg of vancomycin does the patient take over 7 days?",
+    answer: 2625,
+    unit: "mg",
+    tolerance: 1,
+    setup: { unit: "mg", convert: "No" },
+    steps: [
+      {
+        label: "Daily dose",
+        chain: [v("125 mg/dose"), f("3 doses", "1 day")],
+        result: "375 mg/day",
+        tips: [
+          "Start with what's in one capsule → 125 mg. That's your quantity.",
+          "TID means three times a day, so 3 doses per 1 day is the relationship that turns a dose into a daily total.",
+        ],
+      },
+      {
+        label: "Whole course",
+        chain: [v("375 mg/day"), f("7 days", "1 course")],
+        result: "2,625 mg",
+        tips: [
+          "Now stretch the daily total across the days ordered.",
+          "Multiply by 7 days and the per day cancels, leaving the milligrams for the full course.",
+        ],
+      },
+    ],
+    note: "Nothing needs converting here. Every number is already in mg.",
+  },
+  {
+    id: 119,
+    mark: "star",
+    title: "Ciprofloxacin Tablets Per Dose",
+    prompt:
+      "A patient needs to take ciprofloxacin 500 mg in the morning and evening for 10 days. The available tablet is 200 mg. How many tablets should the nurse administer for this morning?",
+    answer: 2.5,
+    unit: "tablets",
+    tolerance: 0.05,
+    setup: { unit: "tablets", convert: "No" },
+    steps: [
+      {
+        label: "Tablets",
+        chain: [v("500 mg"), f("1 tablet", "200 mg")],
+        result: "2.5 tablets",
+        tips: whyTablets("500 mg", "200 mg per tablet"),
+      },
+    ],
+    note: "The 10 days and the evening dose are there to distract you. This morning is one dose.",
+  },
+  {
+    id: 120,
+    mark: "star",
+    title: "Lactated Ringer's Drip Rate",
+    prompt:
+      "You need to infuse 500 mL of Lactated Ringer's over 30 min. The drop factor of the tubing is 15 gtt/mL. Calculate the flow rate in gtt/min. (Round to the nearest whole number.)",
+    answer: 250,
+    unit: "gtt/min",
+    formula: {
+      top: "volume (mL) × drop factor (gtt/mL)",
+      bottom: "time (min)",
+    },
+    tolerance: 0.5,
+    setup: { unit: "gtt/min", convert: "No" },
+    steps: [
+      {
+        label: "Drip rate",
+        chain: [f("500 mL", "30 min"), f("15 gtt", "1 mL")],
+        result: "250 gtt/min",
+        tips: [
+          "The volume and its time make a rate on their own → 500 mL over 30 min.",
+          "The drop factor is the relationship, written with gtt on top so the mL cancels.",
+          "The time is already in minutes, so there is no hour conversion to make here.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 121,
+    mark: "star",
+    title: "Vancomycin Drip Rate",
+    prompt:
+      "You have an order for 1 g of vancomycin mixed with NS 250 mL infusing over 2 hours. The drop factor of the tubing is 10 gtt/mL. What is the drip rate for the vancomycin? (Round to the nearest whole number.)",
+    answer: 20.83,
+    unit: "gtt/min",
+    formula: {
+      top: "volume (mL) × drop factor (gtt/mL)",
+      bottom: "time (min)",
+    },
+    rounding: {
+      exact: "20.83 gtt/min",
+      place: "whole number",
+      rounded: "21 gtt/min",
+    },
+    tolerance: 0.5,
+    setup: { unit: "gtt/min", convert: "Yes → hr to min" },
+    steps: [
+      {
+        label: "Drip rate",
+        chain: [f("250 mL", "2 hr"), f("10 gtt", "1 mL"), f("1 hr", "60 min")],
+        result: "20.83 gtt/min",
+        tips: [
+          "The bag and its time make the rate → 250 mL over 2 hr.",
+          "The drop factor goes in with gtt on top so the mL cancels.",
+          "The answer has to be per minute, so 1 hr over 60 min turns the hours into minutes.",
+        ],
+      },
+    ],
+    note: "The 1 g of vancomycin never enters the arithmetic. You are timing the bag, not the drug.",
+  },
+  {
+    id: 122,
+    mark: "star",
+    title: "IVIG Starting Rate",
+    prompt:
+      "A child weighs 60 lbs and a nurse needs to administer IVIG at 0900. The pharmacy recommended initiating the infusion at 0.5 mL/kg/hr for 30 minutes. What rate should the nurse start at? (Round to the nearest whole number.)",
+    answer: 13.64,
+    unit: "mL/hr",
+    rounding: {
+      exact: "13.64 mL/hr",
+      place: "whole number",
+      rounded: "14 mL/hr",
+    },
+    tolerance: 0.5,
+    setup: { unit: "mL/hr", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("60 lbs"), f("1 kg", "2.2 lbs")],
+        result: "27.27 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Rate",
+        chain: [v("27.27 kg"), f("0.5 mL/hr", "1 kg")],
+        result: "13.64 mL/hr",
+        tips: whyWeightHourly("27.27 kg", "0.5 mL/kg/hr"),
+      },
+    ],
+    note: "The 30 minutes tells you when to reassess, not what to set the pump to.",
+  },
+  {
+    id: 123,
+    mark: "star",
+    title: "Ativan Prepared Volume",
+    prompt:
+      "A nurse needs to administer 4 mg of Ativan intravenously. Ativan is available in a 4 mg/2 mL vial and the medication requires 2 mL of Normal Saline to be diluted. How many mL should the nurse prepare?",
+    answer: 4,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "No" },
+    steps: [
+      {
+        label: "Drug volume",
+        chain: [v("4 mg"), f("2 mL", "4 mg")],
+        result: "2 mL",
+        tips: whyOrderVolume("4 mg", "4 mg per 2 mL", "mg"),
+      },
+      {
+        label: "Prepared volume",
+        chain: [v("2 mL + 2 mL")],
+        result: "4 mL",
+        tips: [
+          "The question asks what is in the syringe, not what the dose is.",
+          "The 2 mL of drug and the 2 mL of Normal Saline both go in. Nothing cancels here. It is plain addition.",
+        ],
+      },
+    ],
+    note: "Diluent counts when the question says prepare. It would not count if the question asked for the dose.",
+  },
+  {
+    id: 124,
+    mark: "star",
+    title: "Day Shift Fluid Intake",
+    prompt:
+      "A 2 days post-op patient consumed 3 cups of ice, 325 mL of Boost, 2 tablespoons of honey, 4 oz of jello, two chicken sandwiches, 1/2 cup of pudding and 4 oz of black tea during the day shift. What is the day shift fluid intake total in mL?",
+    answer: 1045,
+    unit: "mL",
+    tolerance: 1,
+    setup: { unit: "mL", convert: "Yes → cups and oz to mL" },
+    steps: [
+      {
+        label: "Ice",
+        chain: [v("3 c"), f("120 mL", "1 c")],
+        result: "360 mL",
+        tips: [
+          "Ice melts down to about half its volume, so a cup of ice counts as 120 mL and not 240 mL.",
+          "Write it with mL on top so the cups cancel.",
+        ],
+      },
+      {
+        label: "Boost",
+        chain: [v("325 mL")],
+        result: "325 mL",
+        tips: ["Already in mL, so it goes straight into the total."],
+      },
+      {
+        label: "Jello",
+        chain: [v("4 oz"), f("30 mL", "1 oz")],
+        result: "120 mL",
+        tips: [
+          "Jello is liquid at room temperature, so it counts as intake.",
+          "1 fl oz = 30 mL, written with mL on top so the oz cancels.",
+        ],
+      },
+      {
+        label: "Pudding",
+        chain: [v("0.5 c"), f("240 mL", "1 c")],
+        result: "120 mL",
+        tips: [
+          "Pudding counts too, and a cup of liquid is 240 mL.",
+          "Half of 240 mL leaves 120 mL.",
+        ],
+      },
+      {
+        label: "Tea",
+        chain: [v("4 oz"), f("30 mL", "1 oz")],
+        result: "120 mL",
+        tips: ["Same 30 mL per ounce that you used for the jello."],
+      },
+      {
+        label: "Day shift total",
+        chain: [v("360 mL + 325 mL + 120 mL + 120 mL + 120 mL")],
+        result: "1,045 mL",
+        tips: [
+          "Nothing cancels here. It is plain addition.",
+          "The chicken sandwiches and the honey stay out. Solid food is not counted as fluid intake.",
+        ],
+      },
+    ],
+    note: "Ice at half volume and solid food excluded are the two things this question is really testing.",
+  },
+  {
+    id: 125,
+    mark: "star",
+    title: "Lactulose Volume II",
+    prompt:
+      "A nurse is preparing to administer Lactulose 20 g and the available Lactulose is 10 g/15 mL. How many mL should the nurse administer?",
+    answer: 30,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "No" },
+    steps: [
+      {
+        label: "Volume",
+        chain: [v("20 g"), f("15 mL", "10 g")],
+        result: "30 mL",
+        tips: whyOrderVolume("20 g", "10 g per 15 mL", "g"),
+      },
+    ],
+  },
+  {
+    id: 126,
+    mark: "star",
+    title: "Teaspoons to Milliliters II",
+    prompt:
+      "A child is prescribed 1.5 teaspoons of acetaminophen elixir. How many milliliters (mL) should the nurse administer?",
+    answer: 7.5,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "Yes → tsp to mL" },
+    steps: [
+      {
+        label: "Volume",
+        chain: [v("1.5 tsp"), f("5 mL", "1 tsp")],
+        result: "7.5 mL",
+        tips: [
+          "Start with what's ordered → 1.5 tsp. That's your quantity.",
+          "1 tsp = 5 mL is the equality doing the converting.",
+          FLIP("1 tsp per 5 mL"),
+          "You want mL, so use the side with mL on top. The tsp cancels and mL is what's left.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 127,
+    mark: "star",
+    title: "Cephalexin Capsules Per Day",
+    prompt:
+      "The provider orders 750 mg of cephalexin TID (three times a day). The available capsules are 250 mg. How many capsules should the nurse administer for a day?",
+    answer: 9,
+    unit: "capsules",
+    tolerance: 0.1,
+    setup: { unit: "capsules", convert: "No" },
+    steps: [
+      {
+        label: "Capsules per dose",
+        chain: [v("750 mg"), f("1 capsule", "250 mg")],
+        result: "3 capsules",
+        tips: whyTablets("750 mg", "250 mg per capsule"),
+      },
+      {
+        label: "Capsules for the day",
+        chain: [v("3 doses"), f("3 capsules", "1 dose")],
+        result: "9 capsules",
+        tips: [
+          "TID means three times a day, so the day holds 3 doses. That count is your quantity now.",
+          "3 capsules per 1 dose is the relationship. The doses cancel and capsules are what is left.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 128,
+    mark: "star",
+    title: "Metronidazole Total Over A Course",
+    prompt:
+      "A patient takes metronidazole 500 mg PO TID (three times a day) for 10 days. How many mg of metronidazole does the patient take over the whole course?",
+    answer: 15000,
+    unit: "mg",
+    tolerance: 1,
+    setup: { unit: "mg", convert: "No" },
+    steps: [
+      {
+        label: "Daily dose",
+        chain: [v("500 mg/dose"), f("3 doses", "1 day")],
+        result: "1,500 mg/day",
+        tips: [
+          "Start with one dose → 500 mg. That's your quantity.",
+          "Three doses per day turns a single dose into a daily total.",
+        ],
+      },
+      {
+        label: "Whole course",
+        chain: [v("1,500 mg/day"), f("10 days", "1 course")],
+        result: "15,000 mg",
+        tips: [
+          "Stretch the daily total across the 10 days ordered.",
+          "The per day cancels and the milligrams for the full course are left.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 129,
+    mark: "star",
+    title: "Levofloxacin Tablets Per Dose",
+    prompt:
+      "A patient is prescribed levofloxacin 750 mg daily for 7 days. The available tablet is 250 mg. How many tablets should the nurse administer for this morning?",
+    answer: 3,
+    unit: "tablets",
+    tolerance: 0.05,
+    setup: { unit: "tablets", convert: "No" },
+    steps: [
+      {
+        label: "Tablets",
+        chain: [v("750 mg"), f("1 tablet", "250 mg")],
+        result: "3 tablets",
+        tips: whyTablets("750 mg", "250 mg per tablet"),
+      },
+    ],
+    note: "The 7 days sets the course. This morning is still one dose.",
+  },
+  {
+    id: 130,
+    mark: "star",
+    title: "Normal Saline Drip Rate",
+    prompt:
+      "You need to infuse 1,000 mL of NS over 8 hours. The drop factor of the tubing is 15 gtt/mL. Calculate the flow rate in gtt/min. (Round to the nearest whole number.)",
+    answer: 31.25,
+    unit: "gtt/min",
+    formula: {
+      top: "volume (mL) × drop factor (gtt/mL)",
+      bottom: "time (min)",
+    },
+    rounding: {
+      exact: "31.25 gtt/min",
+      place: "whole number",
+      rounded: "31 gtt/min",
+    },
+    tolerance: 0.5,
+    setup: { unit: "gtt/min", convert: "Yes → hr to min" },
+    steps: [
+      {
+        label: "Drip rate",
+        chain: [
+          f("1,000 mL", "8 hr"),
+          f("15 gtt", "1 mL"),
+          f("1 hr", "60 min"),
+        ],
+        result: "31.25 gtt/min",
+        tips: [
+          "The bag and its time make the rate → 1,000 mL over 8 hr.",
+          "The drop factor goes in with gtt on top so the mL cancels.",
+          "1 hr over 60 min turns the hours into minutes so the answer comes out per minute.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 131,
+    mark: "star",
+    title: "Ceftriaxone Drip Rate",
+    prompt:
+      "An order reads ceftriaxone 2 g in 100 mL of NS to infuse over 30 minutes. The drop factor of the tubing is 20 gtt/mL. What is the drip rate? (Round to the nearest whole number.)",
+    answer: 66.67,
+    unit: "gtt/min",
+    formula: {
+      top: "volume (mL) × drop factor (gtt/mL)",
+      bottom: "time (min)",
+    },
+    rounding: {
+      exact: "66.67 gtt/min",
+      place: "whole number",
+      rounded: "67 gtt/min",
+    },
+    tolerance: 0.5,
+    setup: { unit: "gtt/min", convert: "No" },
+    steps: [
+      {
+        label: "Drip rate",
+        chain: [f("100 mL", "30 min"), f("20 gtt", "1 mL")],
+        result: "66.67 gtt/min",
+        tips: [
+          "The bag and its time make the rate → 100 mL over 30 min.",
+          "The drop factor goes in with gtt on top so the mL cancels.",
+          "The time is already in minutes, so there is no hour conversion here.",
+        ],
+      },
+    ],
+    note: "The 2 g of ceftriaxone never enters the arithmetic. You are timing the bag.",
+  },
+  {
+    id: 132,
+    mark: "star",
+    title: "IVIG Starting Rate II",
+    prompt:
+      "A child weighs 44 lbs and the pharmacy recommends starting IVIG at 0.5 mL/kg/hr. What rate should the nurse start at?",
+    answer: 10,
+    unit: "mL/hr",
+    tolerance: 0.2,
+    setup: { unit: "mL/hr", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("44 lbs"), f("1 kg", "2.2 lbs")],
+        result: "20 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Rate",
+        chain: [v("20 kg"), f("0.5 mL/hr", "1 kg")],
+        result: "10 mL/hr",
+        tips: whyWeightHourly("20 kg", "0.5 mL/kg/hr"),
+      },
+    ],
+  },
+  {
+    id: 133,
+    mark: "star",
+    title: "Hydromorphone Prepared Volume",
+    prompt:
+      "A nurse needs to administer 2 mg of hydromorphone intravenously. It is available in a 2 mg/1 mL vial and the dose is diluted with 9 mL of Normal Saline. How many mL should the nurse prepare?",
+    answer: 10,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "No" },
+    steps: [
+      {
+        label: "Drug volume",
+        chain: [v("2 mg"), f("1 mL", "2 mg")],
+        result: "1 mL",
+        tips: whyOrderVolume("2 mg", "2 mg per 1 mL", "mg"),
+      },
+      {
+        label: "Prepared volume",
+        chain: [v("1 mL + 9 mL")],
+        result: "10 mL",
+        tips: [
+          "The question asks what is in the syringe, so the diluent counts.",
+          "Nothing cancels here. It is plain addition.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 134,
+    mark: "star",
+    title: "Night Shift Fluid Intake",
+    prompt:
+      "During the night shift a patient consumed 2 cups of ice, 1 cup of apple juice, 6 oz of broth, 1/2 cup of gelatin, 8 oz of milk and two slices of toast. What is the night shift fluid intake total in mL?",
+    answer: 1020,
+    unit: "mL",
+    tolerance: 1,
+    setup: { unit: "mL", convert: "Yes → cups and oz to mL" },
+    steps: [
+      {
+        label: "Ice",
+        chain: [v("2 c"), f("120 mL", "1 c")],
+        result: "240 mL",
+        tips: [
+          "Ice melts to about half its volume, so a cup of ice counts as 120 mL.",
+        ],
+      },
+      {
+        label: "Apple juice",
+        chain: [v("1 c"), f("240 mL", "1 c")],
+        result: "240 mL",
+        tips: ["A cup of liquid is the full 240 mL."],
+      },
+      {
+        label: "Broth",
+        chain: [v("6 oz"), f("30 mL", "1 oz")],
+        result: "180 mL",
+        tips: ["1 fl oz = 30 mL, written with mL on top so the oz cancels."],
+      },
+      {
+        label: "Gelatin",
+        chain: [v("0.5 c"), f("240 mL", "1 c")],
+        result: "120 mL",
+        tips: ["Gelatin is liquid at room temperature, so it counts."],
+      },
+      {
+        label: "Milk",
+        chain: [v("8 oz"), f("30 mL", "1 oz")],
+        result: "240 mL",
+        tips: ["Same 30 mL per ounce again."],
+      },
+      {
+        label: "Night shift total",
+        chain: [v("240 mL + 240 mL + 180 mL + 120 mL + 240 mL")],
+        result: "1,020 mL",
+        tips: [
+          "Nothing cancels here. It is plain addition.",
+          "The toast stays out. Solid food is not counted as fluid intake.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 135,
+    mark: "star2",
+    title: "Potassium Chloride Volume",
+    prompt:
+      "A nurse is preparing potassium chloride 20 mEq. The available vial is 40 mEq/20 mL. How many mL should the nurse draw up?",
+    answer: 10,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "No" },
+    steps: [
+      {
+        label: "Volume",
+        chain: [v("20 mEq"), f("20 mL", "40 mEq")],
+        result: "10 mL",
+        tips: whyOrderVolume("20 mEq", "40 mEq per 20 mL", "mEq"),
+      },
+    ],
+  },
+  {
+    id: 136,
+    mark: "star2",
+    title: "Tablespoons to Milliliters",
+    prompt:
+      "A patient is prescribed 3 tablespoons of magnesium hydroxide. How many milliliters (mL) should the nurse administer?",
+    answer: 45,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "Yes → Tbsp to mL" },
+    steps: [
+      {
+        label: "Volume",
+        chain: [v("3 Tbsp"), f("15 mL", "1 Tbsp")],
+        result: "45 mL",
+        tips: [
+          "Start with what's ordered → 3 Tbsp. That's your quantity.",
+          "1 Tbsp = 15 mL is the household to metric equality, so that's the factor.",
+          FLIP("1 Tbsp per 15 mL"),
+          "You want mL, so use the side with mL on top. The Tbsp cancels and mL is what's left.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 137,
+    mark: "star2",
+    title: "Furosemide Tablets",
+    prompt:
+      "The provider orders furosemide 80 mg PO. The available tablets are 40 mg. How many tablets should the nurse administer?",
+    answer: 2,
+    unit: "tablets",
+    tolerance: 0.05,
+    setup: { unit: "tablets", convert: "No" },
+    steps: [
+      {
+        label: "Tablets",
+        chain: [v("80 mg"), f("1 tablet", "40 mg")],
+        result: "2 tablets",
+        tips: whyTablets("80 mg", "40 mg per tablet"),
+      },
+    ],
+  },
+  {
+    id: 138,
+    mark: "star2",
+    title: "Prednisone Total Over A Course",
+    prompt:
+      "A patient takes prednisone 10 mg PO once daily for 5 days. How many mg of prednisone does the patient take over the whole course?",
+    answer: 50,
+    unit: "mg",
+    tolerance: 0.5,
+    setup: { unit: "mg", convert: "No" },
+    steps: [
+      {
+        label: "Whole course",
+        chain: [v("10 mg/day"), f("5 days", "1 course")],
+        result: "50 mg",
+        tips: [
+          "Start with the daily dose → 10 mg per day. That's your quantity.",
+          "Once daily means one dose a day, so the days are the only thing multiplying it.",
+          "The per day cancels and the milligrams for the course are left.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 139,
+    mark: "star2",
+    title: "Digoxin Tablets",
+    prompt:
+      "The provider orders digoxin 0.25 mg PO daily. The available tablets are 0.125 mg. How many tablets should the nurse administer?",
+    answer: 2,
+    unit: "tablets",
+    tolerance: 0.05,
+    setup: { unit: "tablets", convert: "No" },
+    steps: [
+      {
+        label: "Tablets",
+        chain: [v("0.25 mg"), f("1 tablet", "0.125 mg")],
+        result: "2 tablets",
+        tips: whyTablets("0.25 mg", "0.125 mg per tablet"),
+      },
+    ],
+    note: "Decimals do not change the method. 0.25 divided by 0.125 is still just a division.",
+  },
+  {
+    id: 140,
+    mark: "star2",
+    title: "One Hour Drip Rate",
+    prompt:
+      "You need to infuse 250 mL of NS over 1 hour. The drop factor of the tubing is 20 gtt/mL. Calculate the flow rate in gtt/min. (Round to the nearest whole number.)",
+    answer: 83.33,
+    unit: "gtt/min",
+    formula: {
+      top: "volume (mL) × drop factor (gtt/mL)",
+      bottom: "time (min)",
+    },
+    rounding: {
+      exact: "83.33 gtt/min",
+      place: "whole number",
+      rounded: "83 gtt/min",
+    },
+    tolerance: 0.5,
+    setup: { unit: "gtt/min", convert: "Yes → hr to min" },
+    steps: [
+      {
+        label: "Drip rate",
+        chain: [f("250 mL", "1 hr"), f("20 gtt", "1 mL"), f("1 hr", "60 min")],
+        result: "83.33 gtt/min",
+        tips: [
+          "The bag and its time make the rate → 250 mL over 1 hr.",
+          "The drop factor goes in with gtt on top so the mL cancels.",
+          "1 hr over 60 min turns the hours into minutes.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 141,
+    mark: "star2",
+    title: "Ten Hour Drip Rate",
+    prompt:
+      "You need to infuse 1,000 mL of NS over 10 hours. The drop factor of the tubing is 15 gtt/mL. Calculate the flow rate in gtt/min.",
+    answer: 25,
+    unit: "gtt/min",
+    formula: {
+      top: "volume (mL) × drop factor (gtt/mL)",
+      bottom: "time (min)",
+    },
+    tolerance: 0.5,
+    setup: { unit: "gtt/min", convert: "Yes → hr to min" },
+    steps: [
+      {
+        label: "Drip rate",
+        chain: [
+          f("1,000 mL", "10 hr"),
+          f("15 gtt", "1 mL"),
+          f("1 hr", "60 min"),
+        ],
+        result: "25 gtt/min",
+        tips: [
+          "The bag and its time make the rate → 1,000 mL over 10 hr.",
+          "The drop factor goes in with gtt on top so the mL cancels.",
+          "1 hr over 60 min turns the hours into minutes.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 142,
+    mark: "star2",
+    title: "Heparin Bolus By Weight",
+    prompt:
+      "A patient weighing 132 lbs is ordered a heparin bolus of 80 units/kg. How many units should the nurse administer?",
+    answer: 4800,
+    unit: "units",
+    tolerance: 1,
+    setup: { unit: "units", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("132 lbs"), f("1 kg", "2.2 lbs")],
+        result: "60 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Bolus",
+        chain: [v("60 kg"), f("80 units", "1 kg")],
+        result: "4,800 units",
+        tips: whyWeight("60 kg", "80 units/kg", "4,800 units"),
+      },
+    ],
+  },
+  {
+    id: 143,
+    mark: "star2",
+    title: "Morphine Volume",
+    prompt:
+      "A nurse needs to administer morphine 6 mg intravenously. The vial is labelled 10 mg/mL. How many mL should the nurse draw up?",
+    answer: 0.6,
+    unit: "mL",
+    tolerance: 0.02,
+    setup: { unit: "mL", convert: "No" },
+    steps: [
+      {
+        label: "Volume",
+        chain: [v("6 mg"), f("1 mL", "10 mg")],
+        result: "0.6 mL",
+        tips: whyOrderVolume("6 mg", "10 mg per 1 mL", "mg"),
+      },
+    ],
+    note: "An answer under 1 mL is normal for a concentrated vial. Always lead the decimal with a zero.",
+  },
+  {
+    id: 144,
+    mark: "star2",
+    title: "Evening Fluid Intake",
+    prompt:
+      "During the evening a patient consumed 1 cup of ice, 180 mL of cranberry juice, 3 oz of jello and 1 cup of coffee. What is the evening fluid intake total in mL?",
+    answer: 630,
+    unit: "mL",
+    tolerance: 1,
+    setup: { unit: "mL", convert: "Yes → cups and oz to mL" },
+    steps: [
+      {
+        label: "Ice",
+        chain: [v("1 c"), f("120 mL", "1 c")],
+        result: "120 mL",
+        tips: [
+          "Ice melts to about half its volume, so a cup of ice counts as 120 mL.",
+        ],
+      },
+      {
+        label: "Juice",
+        chain: [v("180 mL")],
+        result: "180 mL",
+        tips: ["Already in mL, so it goes straight into the total."],
+      },
+      {
+        label: "Jello",
+        chain: [v("3 oz"), f("30 mL", "1 oz")],
+        result: "90 mL",
+        tips: ["1 fl oz = 30 mL, written with mL on top so the oz cancels."],
+      },
+      {
+        label: "Coffee",
+        chain: [v("1 c"), f("240 mL", "1 c")],
+        result: "240 mL",
+        tips: ["A cup of liquid is the full 240 mL, unlike the cup of ice."],
+      },
+      {
+        label: "Evening total",
+        chain: [v("120 mL + 180 mL + 90 mL + 240 mL")],
+        result: "630 mL",
+        tips: ["Nothing cancels here. It is plain addition."],
+      },
+    ],
+    note: "Two cups in this question, worth two different amounts. Ice is 120 mL and coffee is 240 mL.",
+  },
+  {
+    id: 145,
+    mark: "skull",
+    title: "Weight-Based Lactulose",
+    prompt:
+      "A provider orders Lactulose 0.05 g/kg for a patient weighing 176 lbs. The available Lactulose is 20 g/30 mL. How many mL should the nurse administer?",
+    answer: 6,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("176 lbs"), f("1 kg", "2.2 lbs")],
+        result: "80 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Dose",
+        chain: [v("80 kg"), f("0.05 g", "1 kg")],
+        result: "4 g",
+        tips: whyWeight("80 kg", "0.05 g/kg", "4 g"),
+      },
+      {
+        label: "Volume",
+        chain: [v("4 g"), f("30 mL", "20 g")],
+        result: "6 mL",
+        tips: whyOrderVolume("4 g", "20 g per 30 mL", "g"),
+      },
+    ],
+    note: "Three steps stacked. Convert the weight, find the dose, then turn the dose into a volume.",
+  },
+  {
+    id: 146,
+    mark: "skull",
+    title: "Delsym Total Course Volume",
+    prompt:
+      "A patient is prescribed 1.5 teaspoons of Delsym q12h for 5 days. How many total milliliters (mL) will the patient take over the whole course?",
+    answer: 75,
+    unit: "mL",
+    tolerance: 0.5,
+    setup: { unit: "mL", convert: "Yes → tsp to mL" },
+    steps: [
+      {
+        label: "Volume per dose",
+        chain: [v("1.5 tsp"), f("5 mL", "1 tsp")],
+        result: "7.5 mL",
+        tips: [
+          "Start with what's ordered → 1.5 tsp. That's your quantity.",
+          "1 tsp = 5 mL is the equality doing the converting.",
+          FLIP("1 tsp per 5 mL"),
+        ],
+      },
+      {
+        label: "Doses",
+        chain: [
+          f("24 hr", "1 day"),
+          f("1 dose", "12 hr"),
+          f("5 days", "1 course"),
+        ],
+        result: "10 doses",
+        tips: [
+          "q12h means one dose every 12 hours, so build the number of doses from the clock.",
+          "24 hr per day over 12 hr per dose gives 2 doses a day, and 5 days makes 10 doses.",
+        ],
+      },
+      {
+        label: "Course volume",
+        chain: [v("7.5 mL/dose"), f("10 doses", "1 course")],
+        result: "75 mL",
+        tips: [
+          "Now multiply the volume of one dose by the number of doses.",
+          "The doses cancel and mL for the whole course is what's left.",
+        ],
+      },
+    ],
+    note: "q12h is where this one catches people. It is 2 doses a day, not 12.",
+  },
+  {
+    id: 147,
+    mark: "skull",
+    title: "Pediatric Amoxicillin Volume",
+    prompt:
+      "A child weighing 33 lbs is prescribed amoxicillin 45 mg/kg/day divided BID. The available suspension is 250 mg/5 mL. How many mL should the nurse administer per dose?",
+    answer: 6.75,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("33 lbs"), f("1 kg", "2.2 lbs")],
+        result: "15 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Daily dose",
+        chain: [v("15 kg"), f("45 mg/day", "1 kg")],
+        result: "675 mg/day",
+        tips: whyWeight("15 kg", "45 mg/kg/day", "675 mg/day"),
+      },
+      {
+        label: "Per dose",
+        chain: [v("675 mg/day"), f("1 day", "2 doses")],
+        result: "337.5 mg",
+        tips: whyDivide("2 doses"),
+      },
+      {
+        label: "Volume",
+        chain: [v("337.5 mg"), f("5 mL", "250 mg")],
+        result: "6.75 mL",
+        tips: whyOrderVolume("337.5 mg", "250 mg per 5 mL", "mg"),
+      },
+    ],
+    note: "Divided BID means the 45 mg/kg is the daily total, not the dose.",
+  },
+  {
+    id: 148,
+    mark: "skull",
+    title: "Vancomycin Grams Over Three Days",
+    prompt:
+      "A patient weighing 198 lbs is prescribed vancomycin 15 mg/kg IV q12h. How many grams of vancomycin will the patient receive over 3 days?",
+    answer: 8.1,
+    unit: "g",
+    tolerance: 0.05,
+    setup: { unit: "g", convert: "Yes → lbs to kg and mg to g" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("198 lbs"), f("1 kg", "2.2 lbs")],
+        result: "90 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Dose",
+        chain: [v("90 kg"), f("15 mg", "1 kg")],
+        result: "1,350 mg",
+        tips: whyWeight("90 kg", "15 mg/kg", "1,350 mg"),
+      },
+      {
+        label: "Three days",
+        chain: [
+          v("1,350 mg/dose"),
+          f("2 doses", "1 day"),
+          f("3 days", "1 course"),
+        ],
+        result: "8,100 mg",
+        tips: [
+          "q12h is 2 doses a day, so the clock gives you the doses.",
+          "Two doses a day across 3 days is 6 doses in total.",
+        ],
+      },
+      {
+        label: "Convert",
+        chain: [v("8,100 mg"), f("1 g", "1,000 mg")],
+        result: "8.1 g",
+        tips: [
+          "The question asks for grams but everything so far has been in mg.",
+          "1 g = 1,000 mg, written with g on top so the mg cancels.",
+        ],
+      },
+    ],
+    note: "Four steps and the answer unit is not the unit you were working in. Check the last line.",
+  },
+  {
+    id: 149,
+    mark: "skull",
+    title: "Ciprofloxacin Premix Drip Rate",
+    prompt:
+      "An order reads ciprofloxacin 400 mg IV q8h. It arrives as 400 mg in a 200 mL premix bag to infuse over 60 minutes. The drop factor is 15 gtt/mL. What is the drip rate? (Round to the nearest whole number.)",
+    answer: 50,
+    unit: "gtt/min",
+    formula: {
+      top: "volume (mL) × drop factor (gtt/mL)",
+      bottom: "time (min)",
+    },
+    tolerance: 0.5,
+    setup: { unit: "gtt/min", convert: "No" },
+    steps: [
+      {
+        label: "Drip rate",
+        chain: [f("200 mL", "60 min"), f("15 gtt", "1 mL")],
+        result: "50 gtt/min",
+        tips: [
+          "The bag and its time make the rate → 200 mL over 60 min.",
+          "The drop factor goes in with gtt on top so the mL cancels.",
+          "The 400 mg and the q8h are there to distract you. Neither one changes the drip rate.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 150,
+    mark: "skull",
+    title: "Split Infusion Drip Rate",
+    prompt:
+      "An order reads 1,500 mL of Lactated Ringer's. The first 500 mL runs over 30 minutes and the remainder runs over 4 hours. The drop factor is 10 gtt/mL. What is the drip rate for the remainder? (Round to the nearest whole number.)",
+    answer: 41.67,
+    unit: "gtt/min",
+    formula: {
+      top: "volume (mL) × drop factor (gtt/mL)",
+      bottom: "time (min)",
+    },
+    rounding: {
+      exact: "41.67 gtt/min",
+      place: "whole number",
+      rounded: "42 gtt/min",
+    },
+    tolerance: 0.5,
+    setup: { unit: "gtt/min", convert: "Yes → hr to min" },
+    steps: [
+      {
+        label: "Remainder",
+        chain: [v("1,500 mL - 500 mL")],
+        result: "1,000 mL",
+        tips: [
+          "The question asks about the remainder, so take the bolus off the total first.",
+          "Nothing cancels here. It is plain subtraction.",
+        ],
+      },
+      {
+        label: "Drip rate",
+        chain: [
+          f("1,000 mL", "4 hr"),
+          f("10 gtt", "1 mL"),
+          f("1 hr", "60 min"),
+        ],
+        result: "41.67 gtt/min",
+        tips: [
+          "Now the remainder and its own time make the rate → 1,000 mL over 4 hr.",
+          "The drop factor goes in with gtt on top so the mL cancels.",
+          "1 hr over 60 min turns the hours into minutes.",
+        ],
+      },
+    ],
+    note: "The 30 minute bolus has its own rate. It is not part of this calculation.",
+  },
+  {
+    id: 151,
+    mark: "skull",
+    title: "Weight-Based Heparin Rate",
+    prompt:
+      "A patient weighing 165 lbs is on a heparin drip at 12 units/kg/hr. The bag is 25,000 units in 250 mL of D5W. What rate should the pump be set to in mL/hr?",
+    answer: 9,
+    unit: "mL/hr",
+    tolerance: 0.1,
+    setup: { unit: "mL/hr", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("165 lbs"), f("1 kg", "2.2 lbs")],
+        result: "75 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Units per hour",
+        chain: [v("75 kg"), f("12 units/hr", "1 kg")],
+        result: "900 units/hr",
+        tips: whyWeightHourly("75 kg", "12 units/kg/hr"),
+      },
+      {
+        label: "Pump rate",
+        chain: [v("900 units/hr"), f("250 mL", "25,000 units")],
+        result: "9 mL/hr",
+        tips: whyUnitsBag("25,000 units per 250 mL"),
+      },
+    ],
+    note: "Three units in play at once. Pounds become kilograms, kilograms become units, units become millilitres.",
+  },
+  {
+    id: 152,
+    mark: "skull",
+    title: "IVIG Titration Rate",
+    prompt:
+      "A child weighing 66 lbs starts IVIG at 0.5 mL/kg/hr. The rate increases by 0.5 mL/kg/hr every 30 minutes as tolerated. What rate in mL/hr should the pump be set to during the fourth 30 minute interval?",
+    answer: 60,
+    unit: "mL/hr",
+    tolerance: 0.5,
+    setup: { unit: "mL/hr", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("66 lbs"), f("1 kg", "2.2 lbs")],
+        result: "30 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Fourth interval",
+        chain: [v("0.5 mL/kg/hr + 0.5 mL/kg/hr + 0.5 mL/kg/hr + 0.5 mL/kg/hr")],
+        result: "2 mL/kg/hr",
+        tips: [
+          "The first interval runs at 0.5, and each later interval adds another 0.5.",
+          "The fourth interval is the third increase, so it runs at 2 mL/kg/hr.",
+        ],
+      },
+      {
+        label: "Pump rate",
+        chain: [v("30 kg"), f("2 mL/hr", "1 kg")],
+        result: "60 mL/hr",
+        tips: whyWeightHourly("30 kg", "2 mL/kg/hr"),
+      },
+    ],
+    note: "Count the intervals carefully. The first one is the starting rate, not the first increase.",
+  },
+  {
+    id: 153,
+    mark: "skull",
+    title: "Weight-Based Ativan Prepared Volume",
+    prompt:
+      "A provider orders Ativan 0.05 mg/kg IV for a patient weighing 154 lbs. The vial is 2 mg/mL and the dose is diluted with an equal volume of Normal Saline. How many mL should the nurse prepare?",
+    answer: 3.5,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("154 lbs"), f("1 kg", "2.2 lbs")],
+        result: "70 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Dose",
+        chain: [v("70 kg"), f("0.05 mg", "1 kg")],
+        result: "3.5 mg",
+        tips: whyWeight("70 kg", "0.05 mg/kg", "3.5 mg"),
+      },
+      {
+        label: "Drug volume",
+        chain: [v("3.5 mg"), f("1 mL", "2 mg")],
+        result: "1.75 mL",
+        tips: whyOrderVolume("3.5 mg", "2 mg per 1 mL", "mg"),
+      },
+      {
+        label: "Prepared volume",
+        chain: [v("1.75 mL + 1.75 mL")],
+        result: "3.5 mL",
+        tips: [
+          "An equal volume of Normal Saline means the diluent matches the drug volume.",
+          "Nothing cancels here. It is plain addition.",
+        ],
+      },
+    ],
+    note: "The dose in mg and the prepared volume in mL happen to be the same number here. That is a coincidence, not a rule.",
+  },
+  {
+    id: 154,
+    mark: "skull",
+    title: "Twenty Four Hour Fluid Intake",
+    prompt:
+      "Over 24 hours a patient consumed 4 cups of ice, two 240 mL cartons of Ensure, 8 oz of jello, 1 1/2 cups of broth, 6 oz of tea, 3 tablespoons of honey, two slices of toast and a chicken breast. What is the 24 hour fluid intake total in mL?",
+    answer: 1740,
+    unit: "mL",
+    tolerance: 1,
+    setup: { unit: "mL", convert: "Yes → cups and oz to mL" },
+    steps: [
+      {
+        label: "Ice",
+        chain: [v("4 c"), f("120 mL", "1 c")],
+        result: "480 mL",
+        tips: [
+          "Ice melts to about half its volume, so a cup of ice counts as 120 mL.",
+        ],
+      },
+      {
+        label: "Ensure",
+        chain: [v("2 cartons"), f("240 mL", "1 carton")],
+        result: "480 mL",
+        tips: ["Already in mL, so the only work is doubling it."],
+      },
+      {
+        label: "Jello",
+        chain: [v("8 oz"), f("30 mL", "1 oz")],
+        result: "240 mL",
+        tips: ["1 fl oz = 30 mL, written with mL on top so the oz cancels."],
+      },
+      {
+        label: "Broth",
+        chain: [v("1.5 c"), f("240 mL", "1 c")],
+        result: "360 mL",
+        tips: ["Broth is a liquid, so a cup counts as the full 240 mL."],
+      },
+      {
+        label: "Tea",
+        chain: [v("6 oz"), f("30 mL", "1 oz")],
+        result: "180 mL",
+        tips: ["Same 30 mL per ounce again."],
+      },
+      {
+        label: "Total intake",
+        chain: [v("480 mL + 480 mL + 240 mL + 360 mL + 180 mL")],
+        result: "1,740 mL",
+        tips: [
+          "Nothing cancels here. It is plain addition.",
+          "The honey, the toast and the chicken breast all stay out. Solid food is not counted as fluid intake.",
+        ],
+      },
+    ],
+    note: "Two different cup values in one question. Ice is 120 mL and broth is 240 mL.",
+  },
+  {
+    id: 155,
+    mark: "skull",
+    title: "Dopamine Drip By Weight",
+    prompt:
+      "A patient weighing 176 lbs is on dopamine 400 mg in 250 mL of D5W ordered at 5 mcg/kg/min. What rate in mL/hr should the pump be set to?",
+    answer: 15,
+    unit: "mL/hr",
+    tolerance: 0.2,
+    setup: { unit: "mL/hr", convert: "Yes → lbs to kg, mcg to mg, min to hr" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("176 lbs"), f("1 kg", "2.2 lbs")],
+        result: "80 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Dose per minute",
+        chain: [v("80 kg"), f("5 mcg/min", "1 kg")],
+        result: "400 mcg/min",
+        tips: whyWeightHourly("80 kg", "5 mcg/kg/min"),
+      },
+      {
+        label: "Dose per hour",
+        chain: [v("400 mcg/min"), f("60 min", "1 hr"), f("1 mg", "1,000 mcg")],
+        result: "24 mg/hr",
+        tips: [
+          "The pump runs per hour, so 60 min per 1 hr turns the minutes into hours.",
+          "The bag is labelled in mg, so 1 mg per 1,000 mcg gets you into the bag's own unit.",
+        ],
+      },
+      {
+        label: "Pump rate",
+        chain: [v("24 mg/hr"), f("250 mL", "400 mg")],
+        result: "15 mL/hr",
+        tips: whyUnitsBag("400 mg per 250 mL"),
+      },
+    ],
+    note: "Four conversions stacked in one problem. Pounds, micrograms, minutes, then the bag.",
+  },
+  {
+    id: 156,
+    mark: "skull",
+    title: "Pediatric Ampicillin Volume",
+    prompt:
+      "A child weighing 27.5 lbs is prescribed ampicillin 200 mg/kg/day divided q6h. The vial is reconstituted to 250 mg/mL. How many mL should the nurse administer per dose?",
+    answer: 2.5,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("27.5 lbs"), f("1 kg", "2.2 lbs")],
+        result: "12.5 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Daily dose",
+        chain: [v("12.5 kg"), f("200 mg/day", "1 kg")],
+        result: "2,500 mg/day",
+        tips: whyWeight("12.5 kg", "200 mg/kg/day", "2,500 mg/day"),
+      },
+      {
+        label: "Doses per day",
+        chain: [f("24 hr", "1 day"), f("1 dose", "6 hr")],
+        result: "4 doses/day",
+        tips: [
+          "q6h means one dose every 6 hours, so let the clock give you the count.",
+          "24 hr in a day over 6 hr per dose leaves 4 doses a day.",
+        ],
+      },
+      {
+        label: "Per dose",
+        chain: [v("2,500 mg/day"), f("1 day", "4 doses")],
+        result: "625 mg",
+        tips: whyDivide("4 doses"),
+      },
+      {
+        label: "Volume",
+        chain: [v("625 mg"), f("1 mL", "250 mg")],
+        result: "2.5 mL",
+        tips: whyOrderVolume("625 mg", "250 mg per 1 mL", "mg"),
+      },
+    ],
+    note: "Five steps. The q6h has to become a number of doses before the daily total can be split.",
+  },
+  {
+    id: 157,
+    mark: "skull",
+    title: "Heparin Rate By Weight",
+    prompt:
+      "A patient weighing 209 lbs is on a heparin drip at 18 units/kg/hr. The bag is 25,000 units in 500 mL of D5W. What rate in mL/hr should the pump be set to? (Round to the nearest tenth.)",
+    answer: 34.2,
+    unit: "mL/hr",
+    rounding: {
+      exact: "34.2 mL/hr",
+      place: "tenth",
+      rounded: "34.2 mL/hr",
+    },
+    tolerance: 0.1,
+    setup: { unit: "mL/hr", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("209 lbs"), f("1 kg", "2.2 lbs")],
+        result: "95 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Units per hour",
+        chain: [v("95 kg"), f("18 units/hr", "1 kg")],
+        result: "1,710 units/hr",
+        tips: whyWeightHourly("95 kg", "18 units/kg/hr"),
+      },
+      {
+        label: "Pump rate",
+        chain: [v("1,710 units/hr"), f("500 mL", "25,000 units")],
+        result: "34.2 mL/hr",
+        tips: whyUnitsBag("25,000 units per 500 mL"),
+      },
+    ],
+    note: "The 209 lbs is deliberately awkward. It still divides cleanly by 2.2.",
+  },
+  {
+    id: 158,
+    mark: "skull",
+    title: "Nitroglycerin Drip Rate",
+    prompt:
+      "Nitroglycerin 50 mg is mixed in 250 mL of D5W and ordered at 20 mcg/min. What rate in mL/hr should the pump be set to?",
+    answer: 6,
+    unit: "mL/hr",
+    tolerance: 0.1,
+    setup: { unit: "mL/hr", convert: "Yes → mcg to mg and min to hr" },
+    steps: [
+      {
+        label: "Dose per hour",
+        chain: [v("20 mcg/min"), f("60 min", "1 hr"), f("1 mg", "1,000 mcg")],
+        result: "1.2 mg/hr",
+        tips: [
+          "Start with what's ordered → 20 mcg/min. It's a rate and it still leads, because it is the quantity being converted.",
+          "60 min per 1 hr turns the minutes into hours, because the pump runs per hour.",
+          "The bag is labelled in mg, so 1 mg per 1,000 mcg gets you into the bag's own unit.",
+        ],
+      },
+      {
+        label: "Pump rate",
+        chain: [v("1.2 mg/hr"), f("250 mL", "50 mg")],
+        result: "6 mL/hr",
+        tips: whyUnitsBag("50 mg per 250 mL"),
+      },
+    ],
+    note: "No weight in this one. The trap is converting mcg to mg and minutes to hours in the same breath.",
+  },
+  {
+    id: 159,
+    mark: "skull",
+    title: "Reconstituted Vial Withdrawal",
+    prompt:
+      "A vial contains 2 g of powder. The nurse reconstitutes it with 6.6 mL of sterile water, which yields a concentration of 250 mg/mL. The order is for 1.25 g IV, to be further diluted in 100 mL of NS. How many mL should the nurse withdraw from the vial?",
+    answer: 5,
+    unit: "mL",
+    tolerance: 0.1,
+    setup: { unit: "mL", convert: "Yes → g to mg" },
+    steps: [
+      {
+        label: "Convert",
+        chain: [v("1.25 g"), f("1,000 mg", "1 g")],
+        result: "1,250 mg",
+        tips: [
+          "The order is in grams and the vial is labelled in mg, so the units have to match before anything can cancel.",
+          "1 g = 1,000 mg, written with mg on top so the g cancels.",
+        ],
+      },
+      {
+        label: "Withdraw",
+        chain: [v("1,250 mg"), f("1 mL", "250 mg")],
+        result: "5 mL",
+        tips: whyOrderVolume("1,250 mg", "250 mg per 1 mL", "mg"),
+      },
+    ],
+    note: "Three numbers in this question do nothing. The 2 g on the label, the 6.6 mL of sterile water and the 100 mL of NS are all distractors. Only the concentration and the order matter.",
+  },
+  {
+    id: 160,
+    mark: "skull",
+    title: "Vancomycin Pump Rate",
+    prompt:
+      "An order reads vancomycin 1.5 g in 250 mL of NS to infuse over 90 minutes on a pump. What rate in mL/hr should the pump be set to? (Round to the nearest whole number.)",
+    answer: 166.67,
+    unit: "mL/hr",
+    rounding: {
+      exact: "166.67 mL/hr",
+      place: "whole number",
+      rounded: "167 mL/hr",
+    },
+    tolerance: 0.5,
+    setup: { unit: "mL/hr", convert: "Yes → min to hr" },
+    steps: [
+      {
+        label: "Pump rate",
+        chain: [f("250 mL", "90 min"), f("60 min", "1 hr")],
+        result: "166.67 mL/hr",
+        tips: [
+          "The bag and its time make the rate → 250 mL over 90 min.",
+          "A pump is set in mL/hr, so 60 min per 1 hr turns the minutes into hours.",
+          "There is no drop factor here. A pump does not count drops.",
+        ],
+      },
+    ],
+    note: "The 1.5 g never enters the arithmetic, and neither does a drop factor. Read what the device needs.",
+  },
+  {
+    id: 161,
+    mark: "skull",
+    title: "Twenty Four Hour IV Intake",
+    prompt:
+      "Over 24 hours a patient received 2 L of NS, TPN running at 100 mL/hr for 12 hours and three IV push medications of 10 mL each. What is the total intake in mL?",
+    answer: 3230,
+    unit: "mL",
+    tolerance: 2,
+    setup: { unit: "mL", convert: "Yes → L to mL" },
+    steps: [
+      {
+        label: "Normal saline",
+        chain: [v("2 L"), f("1,000 mL", "1 L")],
+        result: "2,000 mL",
+        tips: [
+          "The answer has to be in mL but the bag is written in litres, so convert first.",
+          "1 L = 1,000 mL, written with mL on top so the L cancels.",
+        ],
+      },
+      {
+        label: "TPN",
+        chain: [v("100 mL/hr"), f("12 hr", "1 shift")],
+        result: "1,200 mL",
+        tips: [
+          "A rate becomes a volume once you multiply it by how long it ran.",
+          "The hours cancel and the millilitres are left.",
+        ],
+      },
+      {
+        label: "IV pushes",
+        chain: [v("3 pushes"), f("10 mL", "1 push")],
+        result: "30 mL",
+        tips: [
+          "Small volumes still count. Three pushes at 10 mL each is 30 mL.",
+        ],
+      },
+      {
+        label: "Total intake",
+        chain: [v("2,000 mL + 1,200 mL + 30 mL")],
+        result: "3,230 mL",
+        tips: ["Nothing cancels here. It is plain addition."],
+      },
+    ],
+    note: "The IV pushes are easy to forget, and they are exactly what this question is checking.",
+  },
+  {
+    id: 162,
+    mark: "skull",
+    title: "Tablets Over A Whole Course",
+    prompt:
+      "The provider orders 1.5 g of an antibiotic PO q12h for 5 days. The available tablets are 750 mg. How many tablets will the patient take over the whole course?",
+    answer: 20,
+    unit: "tablets",
+    tolerance: 0.1,
+    setup: { unit: "tablets", convert: "Yes → g to mg" },
+    steps: [
+      {
+        label: "Convert",
+        chain: [v("1.5 g"), f("1,000 mg", "1 g")],
+        result: "1,500 mg",
+        tips: [
+          "The order is in grams and the tablets are labelled in mg, so the units have to match before anything can cancel.",
+          "1 g = 1,000 mg, written with mg on top so the g cancels.",
+        ],
+      },
+      {
+        label: "Tablets per dose",
+        chain: [v("1,500 mg"), f("1 tablet", "750 mg")],
+        result: "2 tablets",
+        tips: whyTablets("1,500 mg", "750 mg per tablet"),
+      },
+      {
+        label: "Doses in the course",
+        chain: [
+          f("24 hr", "1 day"),
+          f("1 dose", "12 hr"),
+          f("5 days", "1 course"),
+        ],
+        result: "10 doses",
+        tips: [
+          "q12h means one dose every 12 hours, so let the clock give you the count.",
+          "24 hr in a day over 12 hr per dose is 2 doses a day, and 5 days makes 10 doses.",
+        ],
+      },
+      {
+        label: "Tablets for the course",
+        chain: [v("10 doses"), f("2 tablets", "1 dose")],
+        result: "20 tablets",
+        tips: [
+          "The course holds 10 doses, so that count is your quantity now.",
+          "2 tablets per 1 dose is the relationship. The doses cancel and tablets are what is left.",
+        ],
+      },
+    ],
+    note: "Per dose is 2, per day is 4, for the course is 20. Read which one the question wants.",
+  },
+  {
+    id: 163,
+    mark: "skull",
+    title: "Gentamicin Volume By Weight",
+    prompt:
+      "A patient weighing 143 lbs is ordered gentamicin 2.5 mg/kg IV q8h. The vial is labelled 40 mg/mL. How many mL should the nurse draw up per dose? (Round to the nearest tenth.)",
+    answer: 4.0625,
+    unit: "mL",
+    rounding: {
+      exact: "4.0625 mL",
+      place: "tenth",
+      rounded: "4.1 mL",
+    },
+    tolerance: 0.06,
+    setup: { unit: "mL", convert: "Yes → lbs to kg" },
+    steps: [
+      {
+        label: "Weight",
+        chain: [v("143 lbs"), f("1 kg", "2.2 lbs")],
+        result: "65 kg",
+        tips: [
+          "The order is per kilogram but the weight is in pounds, so convert first.",
+          "1 kg = 2.2 lbs, written with kg on top so the lbs cancel.",
+        ],
+      },
+      {
+        label: "Dose",
+        chain: [v("65 kg"), f("2.5 mg", "1 kg")],
+        result: "162.5 mg",
+        tips: whyWeight("65 kg", "2.5 mg/kg", "162.5 mg"),
+      },
+      {
+        label: "Volume",
+        chain: [v("162.5 mg"), f("1 mL", "40 mg")],
+        result: "4.0625 mL",
+        tips: whyOrderVolume("162.5 mg", "40 mg per 1 mL", "mg"),
+      },
+    ],
+    note: "The q8h sets the schedule. This is one dose, not a daily total.",
+  },
+  {
+    id: 164,
+    mark: "skull",
+    title: "IVIG Volume Over Two Hours",
+    prompt:
+      "A 30 kg child receives IVIG at 0.5 mL/kg/hr for the first 30 minutes, then 1 mL/kg/hr for the next 30 minutes, then 2 mL/kg/hr for the rest. How many mL will the child receive in the first 2 hours?",
+    answer: 82.5,
+    unit: "mL",
+    tolerance: 0.5,
+    setup: { unit: "mL", convert: "Yes → min to hr" },
+    steps: [
+      {
+        label: "First half hour",
+        chain: [v("30 kg"), f("0.5 mL/hr", "1 kg"), f("0.5 hr", "1 step")],
+        result: "7.5 mL",
+        tips: [
+          "The rate is per kilogram per hour, so the weight turns it into a plain mL/hr first.",
+          "30 kg at 0.5 mL/kg/hr is 15 mL/hr, and it only runs for half an hour.",
+        ],
+      },
+      {
+        label: "Second half hour",
+        chain: [v("30 kg"), f("1 mL/hr", "1 kg"), f("0.5 hr", "1 step")],
+        result: "15 mL",
+        tips: [
+          "The rate doubles to 1 mL/kg/hr, which is 30 mL/hr for this child.",
+          "It also runs for only half an hour, so half of 30 mL is what goes in.",
+        ],
+      },
+      {
+        label: "Final hour",
+        chain: [v("30 kg"), f("2 mL/hr", "1 kg"), f("1 hr", "1 step")],
+        result: "60 mL",
+        tips: [
+          "The third rate is 2 mL/kg/hr, which is 60 mL/hr for this child.",
+          "The first two steps used up one hour, so this rate covers the remaining full hour.",
+        ],
+      },
+      {
+        label: "Two hour total",
+        chain: [v("7.5 mL + 15 mL + 60 mL")],
+        result: "82.5 mL",
+        tips: [
+          "Nothing cancels here. It is plain addition.",
+          "Each rate has to be multiplied by its own stretch of time before anything can be added.",
+        ],
+      },
+    ],
+    note: "Three different rates over three different lengths of time. Volume is rate multiplied by time, every single time.",
   },
 ];
