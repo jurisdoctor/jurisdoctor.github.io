@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Cycle from "./Cycle";
 import Reflow from "./Reflow";
 import {
   Prefixes,
@@ -43,7 +44,9 @@ const Table = ({
           <div key={`${row.left} ${row.right}`} className={rowClass}>
             <span className="text-right sm:text-center">{row.left}</span>
             <span className="font-bold text-[var(--primary-color)]">=</span>
-            <span>{row.right}</span>
+            <Cycle
+              options={Array.isArray(row.right) ? row.right : [row.right]}
+            />
           </div>
         ))}
       </div>
@@ -71,19 +74,26 @@ const Conversions = () => {
               {prefix.lines.map((line) => (
                 <Fragment key={line.right + (line.bottom ?? line.left ?? "")}>
                   {line.bottom ? (
-                    <span className="flex items-center gap-x-2 justify-self-end">
-                      <span className="inline-flex flex-col text-center leading-tight">
-                        <span className="px-1">{line.top}</span>
-                        <span className="border-t border-solid border-[var(--text-color)] px-1">
-                          {line.bottom}
-                        </span>
-                      </span>
-                      <span>{line.unit}</span>
-                      <em className="text-[#8b88b1]">or</em>
-                      <span className="whitespace-nowrap">
-                        {line.decimal} {line.unit}
-                      </span>
-                    </span>
+                    <Cycle
+                      className="justify-items-end justify-self-end"
+                      options={[
+                        <span
+                          key="fraction"
+                          className="flex items-center gap-x-2"
+                        >
+                          <span className="inline-flex flex-col text-center leading-tight">
+                            <span className="px-1">{line.top}</span>
+                            <span className="border-t border-solid border-[var(--text-color)] px-1">
+                              {line.bottom}
+                            </span>
+                          </span>
+                          <span>{line.unit}</span>
+                        </span>,
+                        <span key="decimal" className="whitespace-nowrap">
+                          {line.decimal} {line.unit}
+                        </span>,
+                      ]}
+                    />
                   ) : (
                     <span className="justify-self-end whitespace-nowrap">
                       {line.left}
