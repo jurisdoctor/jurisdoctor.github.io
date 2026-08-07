@@ -59,19 +59,58 @@ const makeQuestion = (
     },
   };
 };
-const Questions: QuestionType[] = Rules.flatMap((rule) =>
-  rule.steps.flatMap((step) => [
-    makeQuestion(rule, step, false),
-    makeQuestion(rule, step, true),
-  ]),
+const SEED = 11686;
+const scatter = (questions: QuestionType[]) => {
+  let seed = SEED;
+  const random = () => {
+    seed = (seed * 1664525 + 1013904223) % 4294967296;
+    return seed / 4294967296;
+  };
+  const order = [...questions];
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  return order;
+};
+const Questions: QuestionType[] = scatter(
+  Rules.flatMap((rule) =>
+    rule.steps.flatMap((step) => [
+      makeQuestion(rule, step, false),
+      makeQuestion(rule, step, true),
+    ]),
+  ),
 );
 const mentions = (key: string, unit: string) =>
   new RegExp(`(^|[\\s=])${unit.replace("/", "\\/")}($|\\s|,)`).test(key);
+const VOLUME = [
+  "tsp",
+  "Tbsp",
+  "fl oz",
+  "c",
+  "c of liquid",
+  "c of ice",
+  "pt",
+  "qt",
+  "gal",
+  "mL",
+  "L",
+  "dL",
+  "cL",
+  "cc",
+];
 const relevant = (keys: string[], units: string[]) => {
   const both = keys.filter((key) => units.every((unit) => mentions(key, unit)));
-  return both.length
-    ? both
-    : keys.filter((key) => units.some((unit) => mentions(key, unit)));
+  const either = keys.filter((key) =>
+    units.some((unit) => mentions(key, unit)),
+  );
+  if (!both.length) return either;
+  const poured = units.every((unit) => VOLUME.includes(unit));
+  if (!poured || units.includes("mL")) return both;
+  return [
+    ...both,
+    ...either.filter((key) => !both.includes(key) && mentions(key, "mL")),
+  ];
 };
 const Help = ({
   family,
@@ -150,7 +189,7 @@ const Work = ({ work }: { work: WorkType }) => (
     </span>
   </div>
 );
-const KEY = "dosage:practice:v2";
+const KEY = "dosage:practice:v3";
 const fresh = (): SavedType => ({
   position: 0,
   entry: "",

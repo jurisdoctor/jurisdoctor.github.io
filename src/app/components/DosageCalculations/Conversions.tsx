@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Reflow from "./Reflow";
 import {
   Prefixes,
   Household,
@@ -7,7 +8,7 @@ import {
   RowType,
 } from "./Data";
 const card =
-  "rounded-xl bg-[var(--container-color)] p-7 lg:p-5 sm:p-7 shadow-xl animate-fadeIn";
+  "rounded-xl bg-[var(--container-color)] p-7 lg:p-5 sm:p-7 shadow-xl animate-fadeIn mb-7 md:mb-4 break-inside-avoid";
 const rowClass =
   "grid grid-cols-[1fr_auto_1fr] items-center gap-x-4 border-b border-solid border-[#f1f1f1] py-2 last:border-none lg:gap-x-2 lg:text-sm md:gap-x-1 md:text-xs sm:grid-cols-1 sm:gap-y-1 sm:text-center sm:text-base";
 const tableCard =
@@ -21,7 +22,7 @@ const Table = ({
   rows: RowType[];
   headers?: [string, string];
 }) => (
-  <div>
+  <div className="mb-10 break-inside-avoid md:mb-7">
     <h3 className="mb-4 ml-3.5 text-xl lg:ml-0 lg:text-center">{title}</h3>
 
     <div className={tableCard}>
@@ -39,7 +40,7 @@ const Table = ({
 
       <div className="grid gap-y-1">
         {rows.map((row) => (
-          <div key={row.left} className={rowClass}>
+          <div key={`${row.left} ${row.right}`} className={rowClass}>
             <span className="text-right sm:text-center">{row.left}</span>
             <span className="font-bold text-[var(--primary-color)]">=</span>
             <span>{row.right}</span>
@@ -60,7 +61,7 @@ const Conversions = () => {
         Metric System Prefixes
       </h3>
 
-      <div className="mb-4 grid grid-cols-2 items-start gap-7 md:gap-4 sm:grid-cols-1">
+      <Reflow className="mb-4 columns-[26rem] gap-7 md:gap-4">
         {Prefixes.map((prefix) => (
           <div key={prefix.name} className={card}>
             <h3 className="text-xl">{prefix.name}</h3>
@@ -98,21 +99,21 @@ const Conversions = () => {
             </div>
           </div>
         ))}
-      </div>
+      </Reflow>
 
       <p className="mb-14 ml-3.5 text-xs italic text-[#8b88b1] lg:ml-0 lg:text-center">
         *Use abbreviation &quot;mcg&quot; for medical documentation.
       </p>
 
-      <div className="grid grid-cols-2 items-start gap-x-7 gap-y-10 md:gap-x-4 sm:grid-cols-1">
+      <Reflow className="columns-[26rem] gap-7 md:gap-4">
         <Table title="Metric System Conversions" rows={MetricConversions} />
         <Table title="Household System Conversions" rows={Household} />
         <Table
           title="Conversions Between Metric & Household Units"
           rows={MetricToHousehold}
-          headers={["Metric System", "Household System"]}
+          headers={["Household System", "Metric System"]}
         />
-      </div>
+      </Reflow>
     </section>
   );
 };
