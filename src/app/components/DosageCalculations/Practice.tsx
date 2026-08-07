@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
-import { FamilyType, Ladders, numeric, Rules, RuleType } from "./Data";
+import { FamilyType, Ladders, Mixes, numeric, Rules, RuleType } from "./Data";
 import ProblemSet from "./ProblemSet";
 import { useSaved } from "./Saved";
 interface WorkType {
@@ -14,13 +14,19 @@ interface WorkType {
   answerValue: string;
   answerUnit: string;
 }
+interface PartType {
+  text: string;
+  value: number;
+}
 interface QuestionType {
   group: string;
   family: FamilyType;
   given: string;
   unit: string;
   answer: number;
-  work: WorkType;
+  work?: WorkType;
+  parts?: PartType[];
+  hint?: string[];
 }
 type Status = "answering" | "solved" | "missed";
 interface SavedType {
@@ -59,7 +65,7 @@ const makeQuestion = (
     },
   };
 };
-const SEED = 11686;
+const SEED = 4056;
 const scatter = (questions: QuestionType[]) => {
   let seed = SEED;
   const random = () => {
@@ -73,17 +79,26 @@ const scatter = (questions: QuestionType[]) => {
   }
   return order;
 };
-const Questions: QuestionType[] = scatter(
-  Rules.flatMap((rule) =>
+const Questions: QuestionType[] = scatter([
+  ...Rules.flatMap((rule) =>
     rule.steps.flatMap((step) => [
       makeQuestion(rule, step, false),
       makeQuestion(rule, step, true),
     ]),
   ),
-);
+  ...Mixes.map((mix) => ({
+    group: mix.group,
+    family: mix.family,
+    given: mix.given,
+    unit: mix.unit,
+    answer: mix.parts.reduce((sum, part) => sum + part.value, 0),
+    parts: mix.parts,
+    hint: mix.hint,
+  })),
+]);
 const mentions = (key: string, unit: string) =>
   new RegExp(`(^|[\\s=])${unit.replace("/", "\\/")}($|\\s|,)`).test(key);
-const VOLUME = [
+const SPOONS = [
   "tsp",
   "Tbsp",
   "fl oz",
@@ -93,38 +108,63 @@ const VOLUME = [
   "pt",
   "qt",
   "gal",
-  "mL",
-  "L",
-  "dL",
-  "cL",
-  "cc",
 ];
+const sideUnit = (side: string) => side.trim().replace(/^[\d.,]+\s*/, "");
+const edgeOf = (key: string) => {
+  const [left, right] = key.split(" = ");
+  if (!left || !right) return null;
+  return [sideUnit(left), sideUnit(right)];
+};
+const pathKeys = (keys: string[], from: string, to: string) => {
+  const edges = keys
+    .map((key) => ({ key, pair: edgeOf(key) }))
+    .filter((edge): edge is { key: string; pair: string[] } => !!edge.pair);
+  const queue = [{ unit: from, used: [] as string[] }];
+  const seen = new Set([from]);
+  while (queue.length) {
+    const step = queue.shift();
+    if (!step) break;
+    if (step.unit === to) return step.used;
+    for (const edge of edges) {
+      const [a, b] = edge.pair;
+      const next = a === step.unit ? b : b === step.unit ? a : null;
+      if (!next || seen.has(next)) continue;
+      seen.add(next);
+      queue.push({ unit: next, used: [...step.used, edge.key] });
+    }
+  }
+  return [];
+};
 const relevant = (keys: string[], units: string[]) => {
-  const both = keys.filter((key) => units.every((unit) => mentions(key, unit)));
-  const either = keys.filter((key) =>
-    units.some((unit) => mentions(key, unit)),
-  );
-  if (!both.length) return either;
-  const poured = units.every((unit) => VOLUME.includes(unit));
-  if (!poured || units.includes("mL")) return both;
+  const path = pathKeys(keys, units[0], units[1]);
+  const household = units.some((unit) => SPOONS.includes(unit));
+  if (!household || units.includes("mL")) return path;
   return [
-    ...both,
-    ...either.filter((key) => !both.includes(key) && mentions(key, "mL")),
+    ...path,
+    ...keys.filter(
+      (key) =>
+        !path.includes(key) &&
+        mentions(key, "mL") &&
+        units.some((unit) => mentions(key, unit)),
+    ),
   ];
 };
+const rungUnit = (rung: string) => rung.split(" ").pop();
 const Help = ({
   family,
   units,
-  group,
+  only,
 }: {
   family: FamilyType;
   units: string[];
-  group: string;
+  only?: string[];
 }) => {
   const ladder = Ladders.find((l) => l.family === family);
   if (!ladder) return null;
-  const keys = relevant(ladder.keys, units);
-  const chain = group === "Metric" ? ladder.chain : undefined;
+  const keys = only ?? relevant(ladder.keys, units);
+  const rungs = new Set((ladder.chain ?? []).map(rungUnit));
+  const onLadder = !only && units.every((unit) => rungs.has(unit));
+  const chain = onLadder ? ladder.chain : undefined;
   if (!keys.length && !chain) return null;
   return (
     <div className="mt-5 rounded-2xl bg-[var(--body-color)] p-5">
@@ -165,6 +205,31 @@ const Cancelled = ({ unit }: { unit: string }) => (
     <span className="absolute left-0 top-1/2 h-[2px] w-full animate-strike bg-[var(--primary-color)] motion-reduce:animate-none" />
   </span>
 );
+const Parts = ({
+  parts,
+  total,
+  unit,
+}: {
+  parts: PartType[];
+  total: number;
+  unit: string;
+}) => (
+  <div className="mt-3 grid gap-y-2 text-lg sm:text-base">
+    {parts.map((part) => (
+      <span key={part.text} className="flex flex-wrap items-center gap-x-3">
+        <span className="text-[#8b88b1]">{part.text}</span>
+        <span className="font-bold text-[var(--primary-color)]">=</span>
+        <span>{format(part.value)} mL</span>
+      </span>
+    ))}
+
+    <span className="flex flex-wrap items-center gap-x-3 border-t border-solid border-[#f1f1f1] pt-2 font-bold text-[var(--title-color)]">
+      Total
+      <span className="font-bold text-[var(--primary-color)]">=</span>
+      {format(total)} {unit}
+    </span>
+  </div>
+);
 const Work = ({ work }: { work: WorkType }) => (
   <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-lg sm:text-base">
     <span>
@@ -189,7 +254,7 @@ const Work = ({ work }: { work: WorkType }) => (
     </span>
   </div>
 );
-const KEY = "dosage:practice:v3";
+const KEY = "dosage:practice:v6";
 const fresh = (): SavedType => ({
   position: 0,
   entry: "",
@@ -372,11 +437,24 @@ const Practice = () => {
 
               {saved.status === "missed" && (
                 <>
-                  <Work work={question.work} />
+                  {question.parts ? (
+                    <Parts
+                      parts={question.parts}
+                      total={question.answer}
+                      unit={question.unit}
+                    />
+                  ) : (
+                    question.work && <Work work={question.work} />
+                  )}
+
                   <Help
                     family={question.family}
-                    units={[question.work.givenUnit, question.unit]}
-                    group={question.group}
+                    units={
+                      question.work
+                        ? [question.work.givenUnit, question.unit]
+                        : []
+                    }
+                    only={question.hint}
                   />
                 </>
               )}
