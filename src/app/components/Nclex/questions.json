@@ -22,7 +22,7 @@
       26
     ],
     "chaptersPending": [],
-    "notes": "Each option carries its own rationale so a wrong answer can be explained in place. 'takeaway' is the clinical rule; 'strategy' is the transferable test-taking move and is wrapped in <em> tags, so render it with innerHTML rather than textContent.",
+    "notes": "Each option carries its own rationale so a wrong answer can be explained in place. 'takeaway' is the clinical rule and 'strategy' is the transferable test-taking move. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags.",
     "questionTypes": {
       "multiple_choice": "one correct option; answer is a string",
       "sata": "select all that apply; answer is an array and is scored all or nothing"
@@ -66,7 +66,7 @@
           ],
           "answer": "B",
           "takeaway": "An individual incident goes to the charge nurse. A pattern goes to the practice council, the policy, or QI.",
-          "strategy": "<em>When a stem says already or each time, that option is disqualified. When two options sit in the same category, the tiebreaker is effectiveness, not correctness.</em>",
+          "strategy": "When a stem says already or each time, that option is disqualified. When two options sit in the same category, the tiebreaker is effectiveness, not correctness.",
           "type": "multiple_choice"
         },
         {
@@ -102,7 +102,7 @@
           ],
           "answer": "B",
           "takeaway": "Standards 1 through 6 are ADPIE. Everything above 6 is about how you conduct yourself in the role.",
-          "strategy": "<em>Ask whether there is a patient in the sentence. Committee, policy, mentoring, and self-evaluation are always Professional Performance.</em>",
+          "strategy": "Ask whether there is a patient in the sentence. Committee, policy, mentoring, and self-evaluation are always Professional Performance.",
           "type": "multiple_choice"
         },
         {
@@ -138,7 +138,7 @@
           ],
           "answer": "B",
           "takeaway": "EBP looks outward at the literature. QI looks inward at your own data.",
-          "strategy": "<em>If the nurse read, it is EBP. If she counted and counted again, it is QI. Re-measuring is the tell.</em>",
+          "strategy": "If the nurse read, it is EBP. If she counted and counted again, it is QI. Re-measuring is the tell.",
           "type": "multiple_choice"
         },
         {
@@ -174,7 +174,7 @@
           ],
           "answer": "B",
           "takeaway": "Benner's levels are sorted by perception, not by years of experience.",
-          "strategy": "<em>Look for what the nurse notices, not how long she has worked. Seeing the whole picture and sensing that it deviates is proficient.</em>",
+          "strategy": "Look for what the nurse notices, not how long she has worked. Seeing the whole picture and sensing that it deviates is proficient.",
           "type": "multiple_choice"
         },
         {
@@ -228,7 +228,7 @@
             "F"
           ],
           "takeaway": "Standards 1 through 6 are ADPIE. Everything above 6 is about how you conduct yourself in the role.",
-          "strategy": "<em>Ask whether there is a patient in the sentence. Committee, policy, mentoring, and self-evaluation are always Professional Performance.</em>"
+          "strategy": "Ask whether there is a patient in the sentence. Committee, policy, mentoring, and self-evaluation are always Professional Performance."
         },
         {
           "id": "ch1-q5",
@@ -263,7 +263,7 @@
           ],
           "answer": "B",
           "takeaway": "A license is a privilege, not a right, and a multistate license extends both the privilege and the accountability.",
-          "strategy": "<em>When a stem crosses state lines, ask what the compact shares. It shares discipline as readily as it shares privileges.</em>",
+          "strategy": "When a stem crosses state lines, ask what the compact shares. It shares discipline as readily as it shares privileges.",
           "type": "multiple_choice"
         },
         {
@@ -299,7 +299,7 @@
           ],
           "answer": "B",
           "takeaway": "ICN pairs with the code of ethics. ANA pairs with scope and standards.",
-          "strategy": "<em>Watch for the word international in the stem. It is doing the work.</em>",
+          "strategy": "Watch for the word international in the stem. It is doing the work.",
           "type": "multiple_choice"
         },
         {
@@ -336,7 +336,7 @@
           ],
           "answer": "B",
           "takeaway": "The RN owns the nursing process. LPNs care for stable patients with predictable outcomes.",
-          "strategy": "<em>If the option contains assess, plan, or evaluate, it stays with the RN.</em>"
+          "strategy": "If the option contains assess, plan, or evaluate, it stays with the RN."
         },
         {
           "id": "ch1-q7",
@@ -371,7 +371,7 @@
           ],
           "answer": "B",
           "takeaway": "Advocacy protects the choice, not the outcome. You defend the patient's right to decide even when you would decide differently.",
-          "strategy": "<em>If the nurse is making sure the patient's position is heard by someone with power, that is advocacy.</em>",
+          "strategy": "If the nurse is making sure the patient's position is heard by someone with power, that is advocacy.",
           "type": "multiple_choice"
         },
         {
@@ -425,7 +425,7 @@
             "E"
           ],
           "takeaway": "The six are patient-centered care, teamwork and collaboration, evidence-based practice, quality improvement, safety, and informatics.",
-          "strategy": "<em>Distractors here are real nursing concepts that belong to another framework. Knowing the list of six is the only defense.</em>"
+          "strategy": "Distractors here are real nursing concepts that belong to another framework. Knowing the list of six is the only defense."
         },
         {
           "id": "ch1-q8",
@@ -460,7 +460,7 @@
           ],
           "answer": "B",
           "takeaway": "Evidence-based practice is evidence plus clinical expertise plus patient values. Drop any one and it is no longer EBP.",
-          "strategy": "<em>When an option applies research while ignoring what the patient said, it is testing whether you remember the third element.</em>",
+          "strategy": "When an option applies research while ignoring what the patient said, it is testing whether you remember the third element.",
           "type": "multiple_choice"
         },
         {
@@ -496,7 +496,7 @@
           ],
           "answer": "D",
           "takeaway": "Scope is the ceiling and competence is the floor. Check the ceiling first.",
-          "strategy": "<em>Options offering permission from a provider, a peer, or the patient are all attempts to expand scope from outside. None of them work.</em>",
+          "strategy": "Options offering permission from a provider, a peer, or the patient are all attempts to expand scope from outside. None of them work.",
           "type": "multiple_choice"
         },
         {
@@ -533,7 +533,7 @@
           ],
           "answer": "D",
           "takeaway": "Scope is the ceiling and competence is the floor. You must speak up when an assignment falls below the floor.",
-          "strategy": "<em>The answer is rarely refuse or comply. It is usually communicate and negotiate.</em>"
+          "strategy": "The answer is rarely refuse or comply. It is usually communicate and negotiate."
         },
         {
           "id": "ch1-s3",
@@ -585,7 +585,7 @@
             "C"
           ],
           "takeaway": "Scope is the ceiling, competence is the floor, and agency policy sits between them.",
-          "strategy": "<em>Options offering permission from a provider, a peer, or the patient are attempts to expand scope from outside. None work.</em>"
+          "strategy": "Options offering permission from a provider, a peer, or the patient are attempts to expand scope from outside. None work."
         },
         {
           "id": "ch1-q10",
@@ -620,7 +620,7 @@
           ],
           "answer": "D",
           "takeaway": "Technology changes the workflow, never the accountability.",
-          "strategy": "<em>Any option that moves responsibility from the nurse to a device, a protocol, or another person is wrong on principle.</em>",
+          "strategy": "Any option that moves responsibility from the nurse to a device, a protocol, or another person is wrong on principle.",
           "type": "multiple_choice"
         }
       ]
@@ -662,7 +662,7 @@
           ],
           "answer": "C",
           "takeaway": "Primary prevents, secondary detects, tertiary limits damage.",
-          "strategy": "<em>The word screening almost always signals secondary prevention. Teaching before disease is primary; rehabilitation after is tertiary.</em>",
+          "strategy": "The word screening almost always signals secondary prevention. Teaching before disease is primary; rehabilitation after is tertiary.",
           "type": "multiple_choice"
         },
         {
@@ -698,7 +698,7 @@
           ],
           "answer": "D",
           "takeaway": "Levels of care describe where the patient is in the system. Levels of prevention describe what the intervention is trying to do.",
-          "strategy": "<em>When both words appear as options, check whether the stem is describing a setting or an intervention.</em>",
+          "strategy": "When both words appear as options, check whether the stem is describing a setting or an intervention.",
           "type": "multiple_choice"
         },
         {
@@ -734,7 +734,7 @@
           ],
           "answer": "D",
           "takeaway": "Assess the social determinants before concluding a patient will not follow a plan.",
-          "strategy": "<em>When a stem gives you details about work, transport, housing, or money, those details are the answer. They were not included as scenery.</em>",
+          "strategy": "When a stem gives you details about work, transport, housing, or money, those details are the answer. They were not included as scenery.",
           "type": "multiple_choice"
         },
         {
@@ -770,7 +770,7 @@
           ],
           "answer": "C",
           "takeaway": "Discharge planning is not paperwork. It is arranging who does the care next and telling them the plan.",
-          "strategy": "<em>Look for the option that names the next caregiver. Instructions and appointments do not by themselves continue care.</em>",
+          "strategy": "Look for the option that names the next caregiver. Instructions and appointments do not by themselves continue care.",
           "type": "multiple_choice"
         },
         {
@@ -825,7 +825,7 @@
             "F"
           ],
           "takeaway": "Five domains: economic stability, education, health care access, neighborhood and built environment, and social and community context.",
-          "strategy": "<em>Anything biological or genetic is a risk factor rather than a social determinant.</em>"
+          "strategy": "Anything biological or genetic is a risk factor rather than a social determinant."
         },
         {
           "id": "ch2-q5",
@@ -860,7 +860,7 @@
           ],
           "answer": "B",
           "takeaway": "The four nurse-sensitive never events are CAUTI, CLABSI, stage 3 and 4 pressure injuries, and falls with injury.",
-          "strategy": "<em>Ask whether the condition was preventable by nursing care and whether it was present on admission. Both must be true for it to count.</em>",
+          "strategy": "Ask whether the condition was preventable by nursing care and whether it was present on admission. Both must be true for it to count.",
           "type": "multiple_choice"
         },
         {
@@ -896,7 +896,7 @@
           ],
           "answer": "C",
           "takeaway": "Restorative aims at recovery of function. Continuing care supports ongoing need without expecting recovery.",
-          "strategy": "<em>Look for the goal in the stem. Returning home signals restorative. Indefinite support signals continuing.</em>",
+          "strategy": "Look for the goal in the stem. Returning home signals restorative. Indefinite support signals continuing.",
           "type": "multiple_choice"
         },
         {
@@ -933,7 +933,7 @@
           ],
           "answer": "D",
           "takeaway": "Primary care is where people enter the system. Tertiary is the most specialized end of it.",
-          "strategy": "<em>Ask how specialized the service is and whether a referral was needed.</em>"
+          "strategy": "Ask how specialized the service is and whether a referral was needed."
         },
         {
           "id": "ch2-q7",
@@ -968,7 +968,7 @@
           ],
           "answer": "A",
           "takeaway": "Access is a chain. A facility that closes removes a link, and the CAH designation exists to keep that link in place.",
-          "strategy": "<em>Match the problem in the stem to what the option was designed to solve. Rural closure points to CAH.</em>",
+          "strategy": "Match the problem in the stem to what the option was designed to solve. Rural closure points to CAH.",
           "type": "multiple_choice"
         },
         {
@@ -1022,7 +1022,7 @@
             "D"
           ],
           "takeaway": "The four are CAUTI, CLABSI, stage 3 and 4 pressure injuries, and falls with injury.",
-          "strategy": "<em>Two conditions must both hold: preventable by nursing care, and not present on admission.</em>"
+          "strategy": "Two conditions must both hold: preventable by nursing care, and not present on admission."
         },
         {
           "id": "ch2-q8",
@@ -1057,7 +1057,7 @@
           ],
           "answer": "A",
           "takeaway": "Discharge planning starts at admission, because what the patient needs at home is knowable long before they go there.",
-          "strategy": "<em>On timing questions, the earliest defensible option is usually correct, because anticipation is the nursing move.</em>",
+          "strategy": "On timing questions, the earliest defensible option is usually correct, because anticipation is the nursing move.",
           "type": "multiple_choice"
         },
         {
@@ -1093,7 +1093,7 @@
           ],
           "answer": "C",
           "takeaway": "Coughing with food or liquids after a stroke means dysphagia until proven otherwise, and the swallow evaluation comes before anything enters the mouth.",
-          "strategy": "<em>Choose the consultant who addresses the risk that could harm the patient soonest.</em>",
+          "strategy": "Choose the consultant who addresses the risk that could harm the patient soonest.",
           "type": "multiple_choice"
         },
         {
@@ -1130,7 +1130,7 @@
           ],
           "answer": "A",
           "takeaway": "Cost is one of the strongest influences on adherence, and it is a barrier you can act on.",
-          "strategy": "<em>When a patient describes a money problem, the answer addresses the money, not the teaching.</em>"
+          "strategy": "When a patient describes a money problem, the answer addresses the money, not the teaching."
         },
         {
           "id": "ch2-s3",
@@ -1183,7 +1183,7 @@
             "E"
           ],
           "takeaway": "Discharge planning arranges who does the care next, confirms they can do it, and makes sure they have what they need.",
-          "strategy": "<em>Reject options that document or schedule without confirming anyone can actually perform the care.</em>"
+          "strategy": "Reject options that document or schedule without confirming anyone can actually perform the care."
         },
         {
           "id": "ch2-q10",
@@ -1218,7 +1218,7 @@
           ],
           "answer": "D",
           "takeaway": "NDNQI is nurse-sensitive, unit-level, and required for Magnet.",
-          "strategy": "<em>Match the acronym to what it measures. Nurse-sensitive clinical outcomes point to NDNQI.</em>",
+          "strategy": "Match the acronym to what it measures. Nurse-sensitive clinical outcomes point to NDNQI.",
           "type": "multiple_choice"
         }
       ]
@@ -1260,7 +1260,7 @@
           ],
           "answer": "B",
           "takeaway": "The clinical model is the narrowest definition of health and the eudaimonistic is the broadest.",
-          "strategy": "<em>Match the patient's own words to the model. Potential and self-actualization point to eudaimonistic; working and functioning point to role performance.</em>",
+          "strategy": "Match the patient's own words to the model. Potential and self-actualization point to eudaimonistic; working and functioning point to role performance.",
           "type": "multiple_choice"
         },
         {
@@ -1296,7 +1296,7 @@
           ],
           "answer": "C",
           "takeaway": "Cues to action is the component people forget, and it is usually what a nursing intervention supplies.",
-          "strategy": "<em>Ask what changed between the two moments in the stem. Whatever changed is the component being tested.</em>",
+          "strategy": "Ask what changed between the two moments in the stem. Whatever changed is the component being tested.",
           "type": "multiple_choice"
         },
         {
@@ -1332,7 +1332,7 @@
           ],
           "answer": "C",
           "takeaway": "Symptom experience includes interpretation, and misinterpretation is why patients delay.",
-          "strategy": "<em>Track what the patient has actually done. If he has not contacted anyone, he cannot be past the first stage.</em>",
+          "strategy": "Track what the patient has actually done. If he has not contacted anyone, he cannot be past the first stage.",
           "type": "multiple_choice"
         },
         {
@@ -1368,7 +1368,7 @@
           ],
           "answer": "D",
           "takeaway": "Assess all risk factors, but intervene on the modifiable ones.",
-          "strategy": "<em>Sort the options into modifiable and non-modifiable first. The answer is almost always in the modifiable group.</em>",
+          "strategy": "Sort the options into modifiable and non-modifiable first. The answer is almost always in the modifiable group.",
           "type": "multiple_choice"
         },
         {
@@ -1422,7 +1422,7 @@
             "F"
           ],
           "takeaway": "Assess all risk factors and intervene on the modifiable ones.",
-          "strategy": "<em>Sort into modifiable and non-modifiable first. Age, sex, ethnicity, and family history are never the teaching target.</em>"
+          "strategy": "Sort into modifiable and non-modifiable first. Age, sex, ethnicity, and family history are never the teaching target."
         },
         {
           "id": "ch6-q5",
@@ -1457,7 +1457,7 @@
           ],
           "answer": "D",
           "takeaway": "Rehabilitation is always tertiary, even when the teaching also prevents a future event.",
-          "strategy": "<em>Ask whether the disease already exists. If yes, primary is eliminated immediately.</em>",
+          "strategy": "Ask whether the disease already exists. If yes, primary is eliminated immediately.",
           "type": "multiple_choice"
         },
         {
@@ -1493,7 +1493,7 @@
           ],
           "answer": "A",
           "takeaway": "Chronic illness is measured by its effect on the person's life, not only by its duration.",
-          "strategy": "<em>Look for the option that names the human response rather than only the disease course.</em>",
+          "strategy": "Look for the option that names the human response rather than only the disease course.",
           "type": "multiple_choice"
         },
         {
@@ -1530,7 +1530,7 @@
           ],
           "answer": "A",
           "takeaway": "Contemplation is thinking about it. Preparation is planning it. Action is doing it.",
-          "strategy": "<em>Look for whether a concrete step has been taken. Thinking alone is contemplation.</em>"
+          "strategy": "Look for whether a concrete step has been taken. Thinking alone is contemplation."
         },
         {
           "id": "ch6-q7",
@@ -1565,7 +1565,7 @@
           ],
           "answer": "D",
           "takeaway": "Primary prevention is delivered to people who do not have the condition.",
-          "strategy": "<em>Ask who receives the intervention. Everyone means primary; those who screened positive means secondary; those already diagnosed means tertiary.</em>",
+          "strategy": "Ask who receives the intervention. Everyone means primary; those who screened positive means secondary; those already diagnosed means tertiary.",
           "type": "multiple_choice"
         },
         {
@@ -1620,7 +1620,7 @@
             "E"
           ],
           "takeaway": "Belief alone changes nothing. Cues to action is usually what a nursing intervention supplies.",
-          "strategy": "<em>Precontemplation, contemplation, and the other stage words belong to the Transtheoretical Model, not the HBM.</em>"
+          "strategy": "Precontemplation, contemplation, and the other stage words belong to the Transtheoretical Model, not the HBM."
         },
         {
           "id": "ch6-q8",
@@ -1655,7 +1655,7 @@
           ],
           "answer": "A",
           "takeaway": "Body image disturbance is a human response, and the intervention is to open the conversation, not to fix the appearance.",
-          "strategy": "<em>Choose the response that invites the patient to say more. Reassurance and scheduling both end the conversation.</em>",
+          "strategy": "Choose the response that invites the patient to say more. Reassurance and scheduling both end the conversation.",
           "type": "multiple_choice"
         },
         {
@@ -1691,7 +1691,7 @@
           ],
           "answer": "A",
           "takeaway": "Illness happens to a family, not only to a patient, and the caregiver is also someone you assess.",
-          "strategy": "<em>When an option jumps to a solution and another gathers information, gather information first.</em>",
+          "strategy": "When an option jumps to a solution and another gathers information, gather information first.",
           "type": "multiple_choice"
         },
         {
@@ -1728,7 +1728,7 @@
           ],
           "answer": "D",
           "takeaway": "Some dependency during acute illness is normal. The nursing concern is whether it persists past recovery.",
-          "strategy": "<em>Distinguish an expected stage of illness behavior from a pathological response.</em>"
+          "strategy": "Distinguish an expected stage of illness behavior from a pathological response."
         },
         {
           "id": "ch6-s3",
@@ -1781,7 +1781,7 @@
             "F"
           ],
           "takeaway": "Once the disease exists, primary is off the table. Detection is secondary; limiting damage is tertiary.",
-          "strategy": "<em>Ask first whether the person already has the condition. That single question eliminates half the options.</em>"
+          "strategy": "Ask first whether the person already has the condition. That single question eliminates half the options."
         },
         {
           "id": "ch6-q10",
@@ -1816,7 +1816,7 @@
           ],
           "answer": "A",
           "takeaway": "Health and illness are not opposites. A person can be seriously ill and still be moving toward wellness.",
-          "strategy": "<em>Any option defining health as the absence of disease is using the narrowest model and is usually wrong on this topic.</em>",
+          "strategy": "Any option defining health as the absence of disease is using the narrowest model and is usually wrong on this topic.",
           "type": "multiple_choice"
         }
       ]
@@ -1858,7 +1858,7 @@
           ],
           "answer": "D",
           "takeaway": "Presence is an intervention. Sitting quietly is doing something, not doing nothing.",
-          "strategy": "<em>When a patient is overwhelmed, the correct answer is usually the one that stays and says least.</em>",
+          "strategy": "When a patient is overwhelmed, the correct answer is usually the one that stays and says least.",
           "type": "multiple_choice"
         },
         {
@@ -1894,7 +1894,7 @@
           ],
           "answer": "C",
           "takeaway": "Swanson's processes are knowing, being with, doing for, enabling, and maintaining belief.",
-          "strategy": "<em>Being with is presence. Doing for is action. Enabling is teaching and supporting. Match the verb in the stem.</em>",
+          "strategy": "Being with is presence. Doing for is action. Enabling is teaching and supporting. Match the verb in the stem.",
           "type": "multiple_choice"
         },
         {
@@ -1930,7 +1930,7 @@
           ],
           "answer": "A",
           "takeaway": "Not all people from a culture communicate the same way. Group knowledge is a prompt to ask, not a conclusion.",
-          "strategy": "<em>Any option that applies a group generalization to an individual is wrong, even when the generalization is accurate on average.</em>",
+          "strategy": "Any option that applies a group generalization to an individual is wrong, even when the generalization is accurate on average.",
           "type": "multiple_choice"
         },
         {
@@ -1966,7 +1966,7 @@
           ],
           "answer": "A",
           "takeaway": "Caring includes the family, and policies are starting points rather than final answers.",
-          "strategy": "<em>When one option enforces a rule and another explores the need behind the request, explore first.</em>",
+          "strategy": "When one option enforces a rule and another explores the need behind the request, explore first.",
           "type": "multiple_choice"
         },
         {
@@ -2021,7 +2021,7 @@
             "E"
           ],
           "takeaway": "Knowing, being with, doing for, enabling, maintaining belief.",
-          "strategy": "<em>The distractor here is always a real nursing concept from a neighbouring framework.</em>"
+          "strategy": "The distractor here is always a real nursing concept from a neighbouring framework."
         },
         {
           "id": "ch7-q5",
@@ -2056,7 +2056,7 @@
           ],
           "answer": "B",
           "takeaway": "When a patient opens a difficult subject, that moment is the intervention. Tasks reschedule; disclosures often do not.",
-          "strategy": "<em>Options that hand the patient to another person or another time are avoidance dressed as efficiency.</em>",
+          "strategy": "Options that hand the patient to another person or another time are avoidance dressed as efficiency.",
           "type": "multiple_choice"
         },
         {
@@ -2092,7 +2092,7 @@
           ],
           "answer": "A",
           "takeaway": "The four touch zones are social, consent, vulnerable, and intimate. The intimate zone requires permission and great sensitivity.",
-          "strategy": "<em>Announce what you are about to touch and why, every time. Any option that skips the explanation is wrong.</em>",
+          "strategy": "Announce what you are about to touch and why, every time. Any option that skips the explanation is wrong.",
           "type": "multiple_choice"
         },
         {
@@ -2129,7 +2129,7 @@
           ],
           "answer": "D",
           "takeaway": "Speak to an unresponsive patient as though he can hear, and tell the family they can too.",
-          "strategy": "<em>Answers that reduce a family's connection at end of life are rarely correct.</em>"
+          "strategy": "Answers that reduce a family's connection at end of life are rarely correct."
         },
         {
           "id": "ch7-q7",
@@ -2164,7 +2164,7 @@
           ],
           "answer": "B",
           "takeaway": "Caring for yourself is part of the job, and compassion fatigue is an occupational risk rather than a personal failing.",
-          "strategy": "<em>Where a nurse describes her own distress, the answer usually names it and seeks support rather than restructuring the work.</em>",
+          "strategy": "Where a nurse describes her own distress, the answer usually names it and seeks support rather than restructuring the work.",
           "type": "multiple_choice"
         },
         {
@@ -2218,7 +2218,7 @@
             "D"
           ],
           "takeaway": "Social zone needs no permission. Consent zone does. Vulnerable needs special care, intimate needs permission and sensitivity.",
-          "strategy": "<em>The consent zone is wider than it feels. Wrists and feet catch people out.</em>"
+          "strategy": "The consent zone is wider than it feels. Wrists and feet catch people out."
         },
         {
           "id": "ch7-q8",
@@ -2253,7 +2253,7 @@
           ],
           "answer": "C",
           "takeaway": "Knowing the patient drives clinical judgment. A finding is abnormal relative to this person, not only to a textbook range.",
-          "strategy": "<em>When options offer more data versus more familiarity, familiarity wins on questions about subtle change.</em>",
+          "strategy": "When options offer more data versus more familiarity, familiarity wins on questions about subtle change.",
           "type": "multiple_choice"
         },
         {
@@ -2289,7 +2289,7 @@
           ],
           "answer": "A",
           "takeaway": "What patients describe as caring is usually relational, not technical.",
-          "strategy": "<em>On what patients value questions, choose the relational option over the technical one.</em>",
+          "strategy": "On what patients value questions, choose the relational option over the technical one.",
           "type": "multiple_choice"
         },
         {
@@ -2326,7 +2326,7 @@
           ],
           "answer": "D",
           "takeaway": "The therapeutic relationship has a purpose and an endpoint. Termination is a phase, not a failure.",
-          "strategy": "<em>The right answer holds the boundary and preserves the relationship at the same time.</em>"
+          "strategy": "The right answer holds the boundary and preserves the relationship at the same time."
         },
         {
           "id": "ch7-s3",
@@ -2379,7 +2379,7 @@
             "E"
           ],
           "takeaway": "Caring for yourself is part of the job, and compassion fatigue is an occupational risk rather than a personal failing.",
-          "strategy": "<em>Distractors in wellness questions are often healthy behaviors dressed up to look like symptoms.</em>"
+          "strategy": "Distractors in wellness questions are often healthy behaviors dressed up to look like symptoms."
         },
         {
           "id": "ch7-q10",
@@ -2414,7 +2414,7 @@
           ],
           "answer": "D",
           "takeaway": "Advocacy protects the choice, not the outcome. You defend the patient's right to decide even when you disagree.",
-          "strategy": "<em>If the nurse disagrees and still protects the decision, the answer names advocacy or autonomy, never paternalism.</em>",
+          "strategy": "If the nurse disagrees and still protects the decision, the answer names advocacy or autonomy, never paternalism.",
           "type": "multiple_choice"
         }
       ]
@@ -2456,7 +2456,7 @@
           ],
           "answer": "B",
           "takeaway": "Recognizing cues is noticing which data matters. Analyzing cues is deciding what the data means.",
-          "strategy": "<em>Find the last thing the nurse did in the stem, not the first. The verb at the end tells you the step.</em>",
+          "strategy": "Find the last thing the nurse did in the stem, not the first. The verb at the end tells you the step.",
           "type": "multiple_choice"
         },
         {
@@ -2492,7 +2492,7 @@
           ],
           "answer": "A",
           "takeaway": "The three levels of critical thinking are basic, complex, and commitment. Benner's five stages are a separate model.",
-          "strategy": "<em>Do not mix the two models. If the options include novice or proficient alongside basic or complex, check which model the stem is describing.</em>",
+          "strategy": "Do not mix the two models. If the options include novice or proficient alongside basic or complex, check which model the stem is describing.",
           "type": "multiple_choice"
         },
         {
@@ -2528,7 +2528,7 @@
           ],
           "answer": "D",
           "takeaway": "ADPIE is what nurses do. The CJMM is how nurses think.",
-          "strategy": "<em>Any option that separates the two into different situations or different nurses is wrong.</em>",
+          "strategy": "Any option that separates the two into different situations or different nurses is wrong.",
           "type": "multiple_choice"
         },
         {
@@ -2564,7 +2564,7 @@
           ],
           "answer": "D",
           "takeaway": "Reflection-in-action is adapting now. Reflection-on-action is learning afterward.",
-          "strategy": "<em>Check the tense. During care means in-action; after the shift means on-action.</em>",
+          "strategy": "Check the tense. During care means in-action; after the shift means on-action.",
           "type": "multiple_choice"
         },
         {
@@ -2619,7 +2619,7 @@
             "E"
           ],
           "takeaway": "Six skills: recognize cues, analyze cues, prioritize hypotheses, generate solutions, take action, evaluate outcomes.",
-          "strategy": "<em>The sixth step is evaluate outcomes. Anything else offered as a step is a distractor.</em>"
+          "strategy": "The sixth step is evaluate outcomes. Anything else offered as a step is a distractor."
         },
         {
           "id": "ch15-q5",
@@ -2654,7 +2654,7 @@
           ],
           "answer": "A",
           "takeaway": "Intuition is not recommended for beginning nurses as a basis for action, because it runs on experience they do not yet have.",
-          "strategy": "<em>Turn a feeling into data. The right answer converts the perception into an assessment, not into a phone call.</em>",
+          "strategy": "Turn a feeling into data. The right answer converts the perception into an assessment, not into a phone call.",
           "type": "multiple_choice"
         },
         {
@@ -2690,7 +2690,7 @@
           ],
           "answer": "B",
           "takeaway": "Humility is what makes asking for help a professional strength rather than an admission of failure.",
-          "strategy": "<em>Match the attitude to the behavior in the stem. Asking for help is humility; sticking with a hard problem is perseverance.</em>",
+          "strategy": "Match the attitude to the behavior in the stem. Asking for help is humility; sticking with a hard problem is perseverance.",
           "type": "multiple_choice"
         },
         {
@@ -2727,7 +2727,7 @@
           ],
           "answer": "D",
           "takeaway": "Generate solutions is the planning step. You list what could work before choosing what to do.",
-          "strategy": "<em>Considering several possible actions without performing one is generating solutions.</em>"
+          "strategy": "Considering several possible actions without performing one is generating solutions."
         },
         {
           "id": "ch15-q7",
@@ -2762,7 +2762,7 @@
           ],
           "answer": "D",
           "takeaway": "Prioritizing hypotheses asks which problem is most likely and most urgent, and those two do not always point the same way.",
-          "strategy": "<em>Count the possible explanations. If the stem gives you several and asks which to pursue, it is testing prioritization.</em>",
+          "strategy": "Count the possible explanations. If the stem gives you several and asks which to pursue, it is testing prioritization.",
           "type": "multiple_choice"
         },
         {
@@ -2816,7 +2816,7 @@
             "F"
           ],
           "takeaway": "ABCs first, then acute changes in mental status and glucose. An actual problem beats a potential one.",
-          "strategy": "<em>Sort into actual and potential problems first, then apply ABCs to the actual ones.</em>"
+          "strategy": "Sort into actual and potential problems first, then apply ABCs to the actual ones."
         },
         {
           "id": "ch15-q8",
@@ -2851,7 +2851,7 @@
           ],
           "answer": "C",
           "takeaway": "ABCs outrank everything, and an actual problem beats a potential one.",
-          "strategy": "<em>Sort the options into actual and potential problems first, then apply ABCs to the actual ones.</em>",
+          "strategy": "Sort the options into actual and potential problems first, then apply ABCs to the actual ones.",
           "type": "multiple_choice"
         },
         {
@@ -2887,7 +2887,7 @@
           ],
           "answer": "A",
           "takeaway": "A finding is abnormal relative to this patient, not only relative to a textbook range.",
-          "strategy": "<em>When a value is technically normal, look for the option that supplies the patient's own baseline.</em>",
+          "strategy": "When a value is technically normal, look for the option that supplies the patient's own baseline.",
           "type": "multiple_choice"
         },
         {
@@ -2924,7 +2924,7 @@
           ],
           "answer": "B",
           "takeaway": "A concept map shows how problems connect, which is what reveals interventions that solve more than one.",
-          "strategy": "<em>Purpose questions favor the option about understanding relationships over the ones about documentation.</em>"
+          "strategy": "Purpose questions favor the option about understanding relationships over the ones about documentation."
         },
         {
           "id": "ch15-s3",
@@ -2977,7 +2977,7 @@
             "E"
           ],
           "takeaway": "Critical thinking attitudes include humility, perseverance, independent thinking, integrity, creativity, and confidence.",
-          "strategy": "<em>Any option describing deference to authority or selective use of data is wrong on principle.</em>"
+          "strategy": "Any option describing deference to authority or selective use of data is wrong on principle."
         },
         {
           "id": "ch15-q10",
@@ -3012,7 +3012,7 @@
           ],
           "answer": "B",
           "takeaway": "Diagnostic reasoning comes before clinical judgment and covers the assessment and diagnosis steps.",
-          "strategy": "<em>Locate the action in ADPIE. Diagnostic reasoning lives in the first two steps only.</em>",
+          "strategy": "Locate the action in ADPIE. Diagnostic reasoning lives in the first two steps only.",
           "type": "multiple_choice"
         }
       ]
@@ -3055,7 +3055,7 @@
           ],
           "answer": "C",
           "takeaway": "Subjective is what the patient tells you. Objective is what you observe or measure.",
-          "strategy": "<em>If you could confirm it without the patient speaking, it is objective.</em>"
+          "strategy": "If you could confirm it without the patient speaking, it is objective."
         },
         {
           "id": "ch16-q2",
@@ -3091,7 +3091,7 @@
           ],
           "answer": "B",
           "takeaway": "Data becomes cues, cues cluster into a pattern, the pattern produces an inference, and validation comes before you commit to it.",
-          "strategy": "<em>Find where the stem stops. Drawing a conclusion is inference; confirming it is validation.</em>"
+          "strategy": "Find where the stem stops. Drawing a conclusion is inference; confirming it is validation."
         },
         {
           "id": "ch16-q3",
@@ -3127,7 +3127,7 @@
           ],
           "answer": "A",
           "takeaway": "When verbal and nonverbal data conflict, validate before you conclude.",
-          "strategy": "<em>The right answer names what you observed and hands it back to the patient.</em>"
+          "strategy": "The right answer names what you observed and hands it back to the patient."
         },
         {
           "id": "ch16-q4",
@@ -3163,7 +3163,7 @@
           ],
           "answer": "B",
           "takeaway": "Open the interview broad and let the patient set the direction, then narrow with focused questions.",
-          "strategy": "<em>Eliminate closed, leading, and why questions first. That usually leaves one option.</em>"
+          "strategy": "Eliminate closed, leading, and why questions first. That usually leaves one option."
         },
         {
           "id": "ch16-s1",
@@ -3216,7 +3216,7 @@
             "F"
           ],
           "takeaway": "Behavior you observe is objective. What the behavior means to the patient is subjective.",
-          "strategy": "<em>Ask whether you could record it without the patient speaking.</em>"
+          "strategy": "Ask whether you could record it without the patient speaking."
         },
         {
           "id": "ch16-q5",
@@ -3252,7 +3252,7 @@
           ],
           "answer": "D",
           "takeaway": "Quality goes in the patient's own words. Offer adjectives and they will simply agree with one.",
-          "strategy": "<em>Match the question in the stem to the letter. Waiting without offering words is the tell for quality.</em>"
+          "strategy": "Match the question in the stem to the letter. Waiting without offering words is the tell for quality."
         },
         {
           "id": "ch16-q6",
@@ -3288,7 +3288,7 @@
           ],
           "answer": "C",
           "takeaway": "Comprehensive on admission when things are stable, problem-focused when something changes.",
-          "strategy": "<em>Acute change in the stem always points to a focused assessment.</em>"
+          "strategy": "Acute change in the stem always points to a focused assessment."
         },
         {
           "id": "ch16-q11",
@@ -3324,7 +3324,7 @@
           ],
           "answer": "A",
           "takeaway": "Confusion is not a normal part of aging, and in an older adult it may be the first sign of infection.",
-          "strategy": "<em>When a stem pairs an older adult with new confusion, treat it as a red flag rather than a baseline.</em>"
+          "strategy": "When a stem pairs an older adult with new confusion, treat it as a red flag rather than a baseline."
         },
         {
           "id": "ch16-q7",
@@ -3360,7 +3360,7 @@
           ],
           "answer": "B",
           "takeaway": "The patient is the primary source. Everything and everyone else is secondary.",
-          "strategy": "<em>If the patient can speak, no other source outranks them.</em>"
+          "strategy": "If the patient can speak, no other source outranks them."
         },
         {
           "id": "ch16-s2",
@@ -3413,7 +3413,7 @@
             "E"
           ],
           "takeaway": "Technique is not decoration. It determines the quality of the data you collect.",
-          "strategy": "<em>Reject anything closed, leading, why-based, or divided in attention.</em>"
+          "strategy": "Reject anything closed, leading, why-based, or divided in attention."
         },
         {
           "id": "ch16-q8",
@@ -3449,7 +3449,7 @@
           ],
           "answer": "B",
           "takeaway": "Termination is not just ending. It summarizes and gives the patient a last opening.",
-          "strategy": "<em>Summarizing appears in the closing phase of almost every communication framework.</em>"
+          "strategy": "Summarizing appears in the closing phase of almost every communication framework."
         },
         {
           "id": "ch16-q9",
@@ -3485,7 +3485,7 @@
           ],
           "answer": "A",
           "takeaway": "Back channeling keeps the patient talking without steering what they say.",
-          "strategy": "<em>Short encouragers that add no content are back channeling.</em>"
+          "strategy": "Short encouragers that add no content are back channeling."
         },
         {
           "id": "ch16-q12",
@@ -3521,7 +3521,7 @@
           ],
           "answer": "A",
           "takeaway": "Document what you found, not the conclusion you drew from it.",
-          "strategy": "<em>Within normal limits and appears fine are both too vague to defend.</em>"
+          "strategy": "Within normal limits and appears fine are both too vague to defend."
         },
         {
           "id": "ch16-s3",
@@ -3574,7 +3574,7 @@
             "F"
           ],
           "takeaway": "Comprehensive when stable and establishing a baseline, focused when something changes or you are checking a response.",
-          "strategy": "<em>New, sudden, or after an intervention all point to focused.</em>"
+          "strategy": "New, sudden, or after an intervention all point to focused."
         },
         {
           "id": "ch16-q10",
@@ -3610,7 +3610,7 @@
           ],
           "answer": "C",
           "takeaway": "Assess before you intervene, and assess before you report. The monitor is data, not the patient.",
-          "strategy": "<em>When one option gathers data and the others act on it, gather first unless the patient is in arrest.</em>"
+          "strategy": "When one option gathers data and the others act on it, gather first unless the patient is in arrest."
         }
       ]
     },
@@ -3652,7 +3652,7 @@
           ],
           "answer": "C",
           "takeaway": "Nurses treat responses, not diseases.",
-          "strategy": "<em>Ask whether you could do something about it without an order. If not, it is medical.</em>"
+          "strategy": "Ask whether you could do something about it without an order. If not, it is medical."
         },
         {
           "id": "ch17-q2",
@@ -3688,7 +3688,7 @@
           ],
           "answer": "D",
           "takeaway": "A risk diagnosis has two parts and no related evidence, because nothing has happened yet.",
-          "strategy": "<em>Count the parts. Three parts on a risk diagnosis is automatically wrong.</em>"
+          "strategy": "Count the parts. Three parts on a risk diagnosis is automatically wrong."
         },
         {
           "id": "ch17-q3",
@@ -3724,7 +3724,7 @@
           ],
           "answer": "A",
           "takeaway": "Never write a related factor that implies the care team caused the problem. The record is a legal document.",
-          "strategy": "<em>Read the related factor aloud and ask whether it would sound like an admission in court.</em>"
+          "strategy": "Read the related factor aloud and ask whether it would sound like an admission in court."
         },
         {
           "id": "ch17-q4",
@@ -3760,7 +3760,7 @@
           ],
           "answer": "C",
           "takeaway": "Problem-focused takes three parts. Risk and health promotion take two.",
-          "strategy": "<em>The number of parts identifies the type of diagnosis.</em>"
+          "strategy": "The number of parts identifies the type of diagnosis."
         },
         {
           "id": "ch17-s1",
@@ -3813,7 +3813,7 @@
             "F"
           ],
           "takeaway": "Nurses diagnose and treat human responses. Physicians and APRNs diagnose and treat diseases.",
-          "strategy": "<em>If the label names a disease process, it is medical, however often nurses manage the patient who has it.</em>"
+          "strategy": "If the label names a disease process, it is medical, however often nurses manage the patient who has it."
         },
         {
           "id": "ch17-q5",
@@ -3849,7 +3849,7 @@
           ],
           "answer": "D",
           "takeaway": "Impaired communication from hearing loss and impaired communication from a language barrier need completely different plans.",
-          "strategy": "<em>The etiology is what your interventions actually target.</em>"
+          "strategy": "The etiology is what your interventions actually target."
         },
         {
           "id": "ch17-q6",
@@ -3885,7 +3885,7 @@
           ],
           "answer": "C",
           "takeaway": "If you are watching for it rather than treating it, it is collaborative.",
-          "strategy": "<em>Ask whether you could resolve it alone. Monitoring plus notifying signals a collaborative problem.</em>"
+          "strategy": "Ask whether you could resolve it alone. Monitoring plus notifying signals a collaborative problem."
         },
         {
           "id": "ch17-q11",
@@ -3921,7 +3921,7 @@
           ],
           "answer": "D",
           "takeaway": "Defining characteristics are the evidence. The related factor is the cause.",
-          "strategy": "<em>As evidenced by introduces defining characteristics. Related to introduces the etiology.</em>"
+          "strategy": "As evidenced by introduces defining characteristics. Related to introduces the etiology."
         },
         {
           "id": "ch17-q7",
@@ -3957,7 +3957,7 @@
           ],
           "answer": "D",
           "takeaway": "Clustering is what turns scattered findings into a recognizable pattern.",
-          "strategy": "<em>Grouping is clustering. Confirming is validating. Naming is diagnosing.</em>"
+          "strategy": "Grouping is clustering. Confirming is validating. Naming is diagnosing."
         },
         {
           "id": "ch17-s2",
@@ -4010,7 +4010,7 @@
             "F"
           ],
           "takeaway": "Common errors: blaming staff, using a medical diagnosis as the etiology, restating the problem, and adding evidence to a risk diagnosis.",
-          "strategy": "<em>Check the related factor separately from the problem. Most errors live there.</em>"
+          "strategy": "Check the related factor separately from the problem. Most errors live there."
         },
         {
           "id": "ch17-q8",
@@ -4046,7 +4046,7 @@
           ],
           "answer": "B",
           "takeaway": "Health promotion diagnoses start with readiness for enhanced and require a motivated, currently well patient.",
-          "strategy": "<em>The phrase readiness for enhanced identifies this type immediately.</em>"
+          "strategy": "The phrase readiness for enhanced identifies this type immediately."
         },
         {
           "id": "ch17-q9",
@@ -4082,7 +4082,7 @@
           ],
           "answer": "B",
           "takeaway": "ABCs outrank everything, and an actual problem beats a potential one.",
-          "strategy": "<em>Sort into actual and potential first, then apply ABCs within the actual group.</em>"
+          "strategy": "Sort into actual and potential first, then apply ABCs within the actual group."
         },
         {
           "id": "ch17-q12",
@@ -4118,7 +4118,7 @@
           ],
           "answer": "C",
           "takeaway": "Nursing care rests on an accurate list of diagnoses, and accuracy matters more than the number of them.",
-          "strategy": "<em>When new findings appear, the answer reassesses and reprioritizes rather than replacing or waiting.</em>"
+          "strategy": "When new findings appear, the answer reassesses and reprioritizes rather than replacing or waiting."
         },
         {
           "id": "ch17-s3",
@@ -4171,7 +4171,7 @@
             "F"
           ],
           "takeaway": "If you are watching for it and would need an order to treat it, it is collaborative.",
-          "strategy": "<em>The verb monitoring in a stem is a strong signal for a collaborative problem.</em>"
+          "strategy": "The verb monitoring in a stem is a strong signal for a collaborative problem."
         },
         {
           "id": "ch17-q10",
@@ -4207,7 +4207,7 @@
           ],
           "answer": "A",
           "takeaway": "Validate before you conclude. A diagnosis that ignores the patient's history is usually the wrong one.",
-          "strategy": "<em>When a stem gives you a long history of success, the new variable is the answer.</em>"
+          "strategy": "When a stem gives you a long history of success, the new variable is the answer."
         }
       ]
     },
@@ -4249,7 +4249,7 @@
           ],
           "answer": "A",
           "takeaway": "An outcome states what the patient does, not what the nurse does, and it always carries a deadline.",
-          "strategy": "<em>Strike any option containing understand, know, normal, acceptable, or stable.</em>"
+          "strategy": "Strike any option containing understand, know, normal, acceptable, or stable."
         },
         {
           "id": "ch18-q2",
@@ -4285,7 +4285,7 @@
           ],
           "answer": "B",
           "takeaway": "Priority setting is not task ordering. Ask which problem threatens the patient soonest.",
-          "strategy": "<em>Scheduled and due are words that describe convenience, not urgency.</em>"
+          "strategy": "Scheduled and due are words that describe convenience, not urgency."
         },
         {
           "id": "ch18-q3",
@@ -4321,7 +4321,7 @@
           ],
           "answer": "A",
           "takeaway": "Maslow is a guide, not a rigid sequence. Safety is the level most often skipped and psychological needs can be emergent.",
-          "strategy": "<em>Any option that defers all psychosocial concerns until physical needs are complete is testing this trap.</em>"
+          "strategy": "Any option that defers all psychosocial concerns until physical needs are complete is testing this trap."
         },
         {
           "id": "ch18-q4",
@@ -4357,7 +4357,7 @@
           ],
           "answer": "C",
           "takeaway": "Nurse-initiated means you decided and you are accountable. No order needed and no order excuses it.",
-          "strategy": "<em>Ask who decided. If the nurse did, it is independent.</em>"
+          "strategy": "Ask who decided. If the nurse did, it is independent."
         },
         {
           "id": "ch18-s1",
@@ -4409,7 +4409,7 @@
             "E"
           ],
           "takeaway": "Every outcome names the patient, an observable behavior, a measurable criterion, and a time frame.",
-          "strategy": "<em>Cross out anything starting with Nurse will, and anything containing understand, normal, or stable.</em>"
+          "strategy": "Cross out anything starting with Nurse will, and anything containing understand, normal, or stable."
         },
         {
           "id": "ch18-q5",
@@ -4445,7 +4445,7 @@
           ],
           "answer": "B",
           "takeaway": "Partially met is the most common result and it triggers reassessment, not a verdict.",
-          "strategy": "<em>When a result falls between met and not met, the answer involves reassessing before changing anything.</em>"
+          "strategy": "When a result falls between met and not met, the answer involves reassessing before changing anything."
         },
         {
           "id": "ch18-q6",
@@ -4481,7 +4481,7 @@
           ],
           "answer": "D",
           "takeaway": "PT moves the body. OT rebuilds the life.",
-          "strategy": "<em>Dressing, feeding, bathing, and adaptive devices all point to OT.</em>"
+          "strategy": "Dressing, feeding, bathing, and adaptive devices all point to OT."
         },
         {
           "id": "ch18-q11",
@@ -4517,7 +4517,7 @@
           ],
           "answer": "D",
           "takeaway": "Short-term goals are the measurable steps that make a long-term goal reachable.",
-          "strategy": "<em>A short-term goal must be smaller than the long-term one and still observable.</em>"
+          "strategy": "A short-term goal must be smaller than the long-term one and still observable."
         },
         {
           "id": "ch18-q7",
@@ -4553,7 +4553,7 @@
           ],
           "answer": "C",
           "takeaway": "One goal usually has several outcomes, and the outcomes are what you actually measure.",
-          "strategy": "<em>If it is measurable and time-bound, it is an outcome.</em>"
+          "strategy": "If it is measurable and time-bound, it is an outcome."
         },
         {
           "id": "ch18-s2",
@@ -4606,7 +4606,7 @@
             "F"
           ],
           "takeaway": "Independent means you decided, and it also means you are accountable for the decision.",
-          "strategy": "<em>If it needs an order, it is dependent, however routine it feels.</em>"
+          "strategy": "If it needs an order, it is dependent, however routine it feels."
         },
         {
           "id": "ch18-q8",
@@ -4642,7 +4642,7 @@
           ],
           "answer": "A",
           "takeaway": "The care plan exists so care survives a change of shift.",
-          "strategy": "<em>Purpose questions favor the option about patient benefit over the ones about the institution.</em>"
+          "strategy": "Purpose questions favor the option about patient benefit over the ones about the institution."
         },
         {
           "id": "ch18-q9",
@@ -4678,7 +4678,7 @@
           ],
           "answer": "C",
           "takeaway": "Priorities are set with the patient, not for them, and an unaddressed worry blocks everything you try to teach.",
-          "strategy": "<em>When the nurse's priority and the patient's differ, the answer usually addresses the patient's first.</em>"
+          "strategy": "When the nurse's priority and the patient's differ, the answer usually addresses the patient's first."
         },
         {
           "id": "ch18-q12",
@@ -4714,7 +4714,7 @@
           ],
           "answer": "D",
           "takeaway": "Priorities are set with the patient, not for them, and an outcome he did not choose is one he may not pursue.",
-          "strategy": "<em>Choose the option about patient benefit over the ones about institutional convenience.</em>"
+          "strategy": "Choose the option about patient benefit over the ones about institutional convenience."
         },
         {
           "id": "ch18-s3",
@@ -4767,7 +4767,7 @@
             "E"
           ],
           "takeaway": "Use the frameworks in order: ABCs, then actual versus potential, then unstable versus stable, then Maslow.",
-          "strategy": "<em>Any option that turns a guideline into an absolute rule is usually the wrong one.</em>"
+          "strategy": "Any option that turns a guideline into an absolute rule is usually the wrong one."
         },
         {
           "id": "ch18-q10",
@@ -4803,7 +4803,7 @@
           ],
           "answer": "D",
           "takeaway": "A clinical pathway is a plan, not a prescription. Judgment outranks it and variances are normal.",
-          "strategy": "<em>Any option that follows a protocol despite a new abnormal finding is wrong.</em>"
+          "strategy": "Any option that follows a protocol despite a new abnormal finding is wrong."
         }
       ]
     },
@@ -4845,7 +4845,7 @@
           ],
           "answer": "D",
           "takeaway": "Preparation reduces adverse events, and reassessment is the first of the five preparatory activities.",
-          "strategy": "<em>When several options are all reasonable preparation, choose the one that involves looking at the patient.</em>"
+          "strategy": "When several options are all reasonable preparation, choose the one that involves looking at the patient."
         },
         {
           "id": "ch19-q2",
@@ -4881,7 +4881,7 @@
           ],
           "answer": "C",
           "takeaway": "Reassessing asks whether this is still the right problem. Evaluating asks whether the intervention worked.",
-          "strategy": "<em>Check what the nurse is trying to find out, not what she is physically doing.</em>"
+          "strategy": "Check what the nurse is trying to find out, not what she is physically doing."
         },
         {
           "id": "ch19-q3",
@@ -4917,7 +4917,7 @@
           ],
           "answer": "D",
           "takeaway": "A care bundle is three to five interventions that only work performed together. Four of five is not eighty percent of the benefit.",
-          "strategy": "<em>Any option treating a bundle component as optional is wrong.</em>"
+          "strategy": "Any option treating a bundle component as optional is wrong."
         },
         {
           "id": "ch19-q4",
@@ -4953,7 +4953,7 @@
           ],
           "answer": "A",
           "takeaway": "Standing orders let you act first and notify second, which is the reverse of the usual sequence.",
-          "strategy": "<em>When a standing order is named in the stem, the correct answer acts before it calls.</em>"
+          "strategy": "When a standing order is named in the stem, the correct answer acts before it calls."
         },
         {
           "id": "ch19-s1",
@@ -5007,7 +5007,7 @@
             "F"
           ],
           "takeaway": "Three of the five happen before you touch the patient. Preparation is most of the work.",
-          "strategy": "<em>Anything involving charting ahead of care is always wrong.</em>"
+          "strategy": "Anything involving charting ahead of care is always wrong."
         },
         {
           "id": "ch19-q5",
@@ -5043,7 +5043,7 @@
           ],
           "answer": "C",
           "takeaway": "You may delegate tasks, never the nursing process, and stability is the condition that makes a task delegable.",
-          "strategy": "<em>If the option contains assess, teach, evaluate, or plan, it cannot be delegated.</em>"
+          "strategy": "If the option contains assess, teach, evaluate, or plan, it cannot be delegated."
         },
         {
           "id": "ch19-q6",
@@ -5079,7 +5079,7 @@
           ],
           "answer": "B",
           "takeaway": "Ameliorable is the forgotten category. Nobody erred and the harm was still larger than it needed to be.",
-          "strategy": "<em>Ask two questions. Could it have been prevented entirely, and did care fall below standard? Two noes point to ameliorable.</em>"
+          "strategy": "Ask two questions. Could it have been prevented entirely, and did care fall below standard? Two noes point to ameliorable."
         },
         {
           "id": "ch19-q11",
@@ -5115,7 +5115,7 @@
           ],
           "answer": "B",
           "takeaway": "Guidelines are evidence-based recommendations. Protocols are the local rules built from them.",
-          "strategy": "<em>Systematic review points to a guideline. Unique to this setting points to a protocol.</em>"
+          "strategy": "Systematic review points to a guideline. Unique to this setting points to a protocol."
         },
         {
           "id": "ch19-q7",
@@ -5151,7 +5151,7 @@
           ],
           "answer": "C",
           "takeaway": "Do not take shortcuts when assistance is not immediately available. That is how both of you get hurt.",
-          "strategy": "<em>The right answer prepares and gets qualified help. It neither proceeds alone nor refuses.</em>"
+          "strategy": "The right answer prepares and gets qualified help. It neither proceeds alone nor refuses."
         },
         {
           "id": "ch19-s2",
@@ -5204,7 +5204,7 @@
             "E"
           ],
           "takeaway": "Delegation depends on the patient's condition, the person's competence, the complexity, and the supervision required. Never on the task alone.",
-          "strategy": "<em>Assess, teach, evaluate, and plan are never delegable. Reinforce is.</em>"
+          "strategy": "Assess, teach, evaluate, and plan are never delegable. Reinforce is."
         },
         {
           "id": "ch19-q8",
@@ -5240,7 +5240,7 @@
           ],
           "answer": "C",
           "takeaway": "Indirect care includes documentation, delegation, hand-off, infection control, and managing the environment.",
-          "strategy": "<em>Ask whether the patient is present. If not, it is indirect.</em>"
+          "strategy": "Ask whether the patient is present. If not, it is indirect."
         },
         {
           "id": "ch19-q9",
@@ -5276,7 +5276,7 @@
           ],
           "answer": "B",
           "takeaway": "Comfort before teaching, and comfort before most interventions. Symptoms block the attentional set.",
-          "strategy": "<em>When the patient is in pain, nauseated, or anxious, the answer addresses that first.</em>"
+          "strategy": "When the patient is in pain, nauseated, or anxious, the answer addresses that first."
         },
         {
           "id": "ch19-q12",
@@ -5312,7 +5312,7 @@
           ],
           "answer": "B",
           "takeaway": "Education alone does not improve adherence. Education targeted to this patient's situation does.",
-          "strategy": "<em>Options that add information without changing the fit are rarely the answer on adherence questions.</em>"
+          "strategy": "Options that add information without changing the fit are rarely the answer on adherence questions."
         },
         {
           "id": "ch19-s3",
@@ -5365,7 +5365,7 @@
             "E"
           ],
           "takeaway": "Reflection-in-action means reading the patient mid-intervention and modifying as you go.",
-          "strategy": "<em>Separate clinical change from patient preference. Only the first stops the intervention.</em>"
+          "strategy": "Separate clinical change from patient preference. Only the first stops the intervention."
         },
         {
           "id": "ch19-q10",
@@ -5401,7 +5401,7 @@
           ],
           "answer": "C",
           "takeaway": "A plan is a proposal until the patient confirms it. Stop and gather new data rather than finishing what you started.",
-          "strategy": "<em>When a patient waves off a symptom to keep your schedule moving, the symptom is the data.</em>"
+          "strategy": "When a patient waves off a symptom to keep your schedule moving, the symptom is the data."
         }
       ]
     },
@@ -5443,7 +5443,7 @@
           ],
           "answer": "C",
           "takeaway": "You evaluate whether the outcome was met, not whether the intervention got done.",
-          "strategy": "<em>If the charting describes what the nurse did, it is documentation, not evaluation.</em>"
+          "strategy": "If the charting describes what the nurse did, it is documentation, not evaluation."
         },
         {
           "id": "ch20-q2",
@@ -5479,7 +5479,7 @@
           ],
           "answer": "A",
           "takeaway": "Partially met is the most common finding and it triggers reassessment.",
-          "strategy": "<em>Compare the performance word for word against the outcome as written. Independently is a criterion, not a decoration.</em>"
+          "strategy": "Compare the performance word for word against the outcome as written. Independently is a criterion, not a decoration."
         },
         {
           "id": "ch20-q3",
@@ -5515,7 +5515,7 @@
           ],
           "answer": "C",
           "takeaway": "The domain decides the evaluation. Psychomotor outcomes are evaluated by return demonstration.",
-          "strategy": "<em>Match the verb in the outcome. Demonstrate means you watch.</em>"
+          "strategy": "Match the verb in the outcome. Demonstrate means you watch."
         },
         {
           "id": "ch20-q4",
@@ -5551,7 +5551,7 @@
           ],
           "answer": "B",
           "takeaway": "One observation is not evaluation. You are looking for consistency in change over time.",
-          "strategy": "<em>Watch for the words once or today. Single-point data rarely supports a conclusion about progress.</em>"
+          "strategy": "Watch for the words once or today. Single-point data rarely supports a conclusion about progress."
         },
         {
           "id": "ch20-s1",
@@ -5603,7 +5603,7 @@
             "E"
           ],
           "takeaway": "Replace do you understand with tell me in your own words, and can you do this with show me.",
-          "strategy": "<em>Any evaluation method answerable with yes or no is not evaluation.</em>"
+          "strategy": "Any evaluation method answerable with yes or no is not evaluation."
         },
         {
           "id": "ch20-q5",
@@ -5639,7 +5639,7 @@
           ],
           "answer": "C",
           "takeaway": "Run SMART on the outcome before blaming the plan.",
-          "strategy": "<em>When an outcome fails, suspect the outcome before you suspect the care.</em>"
+          "strategy": "When an outcome fails, suspect the outcome before you suspect the care."
         },
         {
           "id": "ch20-q6",
@@ -5675,7 +5675,7 @@
           ],
           "answer": "D",
           "takeaway": "Met means confirm, then continue or discontinue, and document the discontinuation.",
-          "strategy": "<em>Look for the option that tells the rest of the team. Undocumented discontinuation is invisible.</em>"
+          "strategy": "Look for the option that tells the rest of the team. Undocumented discontinuation is invisible."
         },
         {
           "id": "ch20-q11",
@@ -5711,7 +5711,7 @@
           ],
           "answer": "A",
           "takeaway": "Document the discontinuation, or the team keeps delivering care the patient no longer needs.",
-          "strategy": "<em>Look for the option that communicates beyond the current shift.</em>"
+          "strategy": "Look for the option that communicates beyond the current shift."
         },
         {
           "id": "ch20-q7",
@@ -5747,7 +5747,7 @@
           ],
           "answer": "A",
           "takeaway": "For pain, breathing, nausea, and grief, patient self-report is the only accurate measure there is.",
-          "strategy": "<em>Any option that replaces the patient's number with the nurse's impression is wrong.</em>"
+          "strategy": "Any option that replaces the patient's number with the nurse's impression is wrong."
         },
         {
           "id": "ch20-s2",
@@ -5801,7 +5801,7 @@
             "F"
           ],
           "takeaway": "Unmet triggers a full reassessment of the diagnosis, the outcome, the time frame, and the interventions.",
-          "strategy": "<em>Options that label the patient are never the answer on evaluation questions.</em>"
+          "strategy": "Options that label the patient are never the answer on evaluation questions."
         },
         {
           "id": "ch20-q8",
@@ -5837,7 +5837,7 @@
           ],
           "answer": "B",
           "takeaway": "Evaluation data becomes new assessment data, and the process starts its next loop immediately.",
-          "strategy": "<em>Any option describing the nursing process as ending is wrong.</em>"
+          "strategy": "Any option describing the nursing process as ending is wrong."
         },
         {
           "id": "ch20-q9",
@@ -5873,7 +5873,7 @@
           ],
           "answer": "B",
           "takeaway": "Revision often means changing the frequency rather than abandoning the intervention.",
-          "strategy": "<em>Before discarding an intervention, ask whether it was simply not done often enough.</em>"
+          "strategy": "Before discarding an intervention, ask whether it was simply not done often enough."
         },
         {
           "id": "ch20-q12",
@@ -5909,7 +5909,7 @@
           ],
           "answer": "C",
           "takeaway": "When an outcome is missed, look for the new data before you repeat the intervention.",
-          "strategy": "<em>An unmet outcome with a newly discovered cause means revise the plan, not repeat it.</em>"
+          "strategy": "An unmet outcome with a newly discovered cause means revise the plan, not repeat it."
         },
         {
           "id": "ch20-s3",
@@ -5962,7 +5962,7 @@
             "E"
           ],
           "takeaway": "Nurse-sensitive means nursing care measurably changes the rate, which is why Medicare will not reimburse these four.",
-          "strategy": "<em>Ask whether better nursing care would move the number. If not, it is not nurse-sensitive.</em>"
+          "strategy": "Ask whether better nursing care would move the number. If not, it is not nurse-sensitive."
         },
         {
           "id": "ch20-q10",
@@ -5998,7 +5998,7 @@
           ],
           "answer": "A",
           "takeaway": "Person-centered evaluation includes asking the patient whether what mattered to them improved.",
-          "strategy": "<em>When the outcome is about an experience, the patient is the instrument.</em>"
+          "strategy": "When the outcome is about an experience, the patient is the instrument."
         }
       ]
     },
@@ -6040,7 +6040,7 @@
           ],
           "answer": "C",
           "takeaway": "Advocacy protects the choice, not the outcome. A competent patient may make a decision you would not make.",
-          "strategy": "<em>Any option that recruits others to change the patient's mind is coercion in a friendly disguise.</em>"
+          "strategy": "Any option that recruits others to change the patient's mind is coercion in a friendly disguise."
         },
         {
           "id": "ch22-q2",
@@ -6076,7 +6076,7 @@
           ],
           "answer": "B",
           "takeaway": "Beneficence and nonmaleficence are not synonyms. One does good, the other avoids harm.",
-          "strategy": "<em>Ask whether the action adds benefit or removes risk. Removing risk is nonmaleficence.</em>"
+          "strategy": "Ask whether the action adds benefit or removes risk. Removing risk is nonmaleficence."
         },
         {
           "id": "ch22-q3",
@@ -6112,7 +6112,7 @@
           ],
           "answer": "C",
           "takeaway": "Veracity does not require you to deliver news outside your scope. It requires you not to deceive.",
-          "strategy": "<em>Look for the option that is fully true and stays in scope. Lying and overstepping are both wrong.</em>"
+          "strategy": "Look for the option that is fully true and stays in scope. Lying and overstepping are both wrong."
         },
         {
           "id": "ch22-q4",
@@ -6148,7 +6148,7 @@
           ],
           "answer": "B",
           "takeaway": "Moral distress is knowing what is right and being constrained from doing it. That constraint is the defining feature.",
-          "strategy": "<em>If the nurse is unsure what is right, it is a dilemma. If she is sure and cannot act, it is moral distress.</em>"
+          "strategy": "If the nurse is unsure what is right, it is a dilemma. If she is sure and cannot act, it is moral distress."
         },
         {
           "id": "ch22-s1",
@@ -6202,7 +6202,7 @@
             "F"
           ],
           "takeaway": "Autonomy, beneficence, nonmaleficence, justice, fidelity, and veracity.",
-          "strategy": "<em>Distractors here are usually organizational values rather than ethical ones.</em>"
+          "strategy": "Distractors here are usually organizational values rather than ethical ones."
         },
         {
           "id": "ch22-q5",
@@ -6238,7 +6238,7 @@
           ],
           "answer": "D",
           "takeaway": "A strong emotional reaction to a patient signals a threatened value. Notice it before it shapes your care.",
-          "strategy": "<em>Self-awareness comes before reassignment or disclosure.</em>"
+          "strategy": "Self-awareness comes before reassignment or disclosure."
         },
         {
           "id": "ch22-q6",
@@ -6274,7 +6274,7 @@
           ],
           "answer": "B",
           "takeaway": "Provision 5 is the one that makes self-care an ethical obligation rather than an optional extra.",
-          "strategy": "<em>Provisions 1 to 3 concern the patient, 4 to 6 concern you and your practice, 7 to 9 concern the profession.</em>"
+          "strategy": "Provisions 1 to 3 concern the patient, 4 to 6 concern you and your practice, 7 to 9 concern the profession."
         },
         {
           "id": "ch22-q11",
@@ -6310,7 +6310,7 @@
           ],
           "answer": "C",
           "takeaway": "Following through on commitments is what makes everything else you say credible.",
-          "strategy": "<em>Broken promise points to fidelity. Untruth points to veracity.</em>"
+          "strategy": "Broken promise points to fidelity. Untruth points to veracity."
         },
         {
           "id": "ch22-q7",
@@ -6346,7 +6346,7 @@
           ],
           "answer": "D",
           "takeaway": "Justice governs distribution. It becomes visible when resources are not sufficient for everyone.",
-          "strategy": "<em>When the stem involves scarcity or allocation, the answer is justice.</em>"
+          "strategy": "When the stem involves scarcity or allocation, the answer is justice."
         },
         {
           "id": "ch22-s2",
@@ -6399,7 +6399,7 @@
             "E"
           ],
           "takeaway": "Moral distress is an occupational reality. What determines its effect is whether it is named and worked through.",
-          "strategy": "<em>Options describing avoidance or resignation are wrong on wellness questions.</em>"
+          "strategy": "Options describing avoidance or resignation are wrong on wellness questions."
         },
         {
           "id": "ch22-q8",
@@ -6435,7 +6435,7 @@
           ],
           "answer": "D",
           "takeaway": "Ethical reasoning starts the same way clinical reasoning does. Gather the data first.",
-          "strategy": "<em>Assess before you intervene applies to ethics as much as to patient care.</em>"
+          "strategy": "Assess before you intervene applies to ethics as much as to patient care."
         },
         {
           "id": "ch22-q9",
@@ -6471,7 +6471,7 @@
           ],
           "answer": "D",
           "takeaway": "Advocacy protects the choice and then works to make it safe. Paternalism replaces the choice.",
-          "strategy": "<em>If the nurse's action supports the patient's stated wish, it cannot be paternalism.</em>"
+          "strategy": "If the nurse's action supports the patient's stated wish, it cannot be paternalism."
         },
         {
           "id": "ch22-q12",
@@ -6507,7 +6507,7 @@
           ],
           "answer": "A",
           "takeaway": "An ethical dilemma involves two defensible positions in conflict, not a safety problem or a policy dispute.",
-          "strategy": "<em>If one side is simply wrong or unsafe, it is not a dilemma.</em>"
+          "strategy": "If one side is simply wrong or unsafe, it is not a dilemma."
         },
         {
           "id": "ch22-s3",
@@ -6560,7 +6560,7 @@
             "F"
           ],
           "takeaway": "Access without a care relationship is itself a breach, whether or not you tell anyone.",
-          "strategy": "<em>Ask two questions: is this person on the care team, and is this required by law?</em>"
+          "strategy": "Ask two questions: is this person on the care team, and is this required by law?"
         },
         {
           "id": "ch22-q10",
@@ -6596,7 +6596,7 @@
           ],
           "answer": "C",
           "takeaway": "Confidentiality belongs to the patient, and only the patient can waive it.",
-          "strategy": "<em>When someone asks for information, the answer usually involves asking the patient first.</em>"
+          "strategy": "When someone asks for information, the answer usually involves asking the patient first."
         }
       ]
     },
@@ -6638,7 +6638,7 @@
           ],
           "answer": "C",
           "takeaway": "All four elements must be present: duty, breach of duty, causation, and damages.",
-          "strategy": "<em>Check for harm. Most distractors describe a breach with no resulting damage.</em>"
+          "strategy": "Check for harm. Most distractors describe a breach with no resulting damage."
         },
         {
           "id": "ch23-q2",
@@ -6674,7 +6674,7 @@
           ],
           "answer": "C",
           "takeaway": "The nurse witnesses the signature and confirms understanding. The provider supplies the information.",
-          "strategy": "<em>Any option where the nurse explains the surgical procedure oversteps scope.</em>"
+          "strategy": "Any option where the nurse explains the surgical procedure oversteps scope."
         },
         {
           "id": "ch23-q3",
@@ -6710,7 +6710,7 @@
           ],
           "answer": "A",
           "takeaway": "Carry out an incorrect order and it becomes your error. Documenting the doubt does not protect the patient.",
-          "strategy": "<em>Any option that administers a known-wrong order is wrong regardless of who confirmed it.</em>"
+          "strategy": "Any option that administers a known-wrong order is wrong regardless of who confirmed it."
         },
         {
           "id": "ch23-q4",
@@ -6746,7 +6746,7 @@
           ],
           "answer": "B",
           "takeaway": "The occurrence report and the health record are separate documents and never reference each other.",
-          "strategy": "<em>Anything speculative, blame-assigning, or referencing the incident report is wrong.</em>"
+          "strategy": "Anything speculative, blame-assigning, or referencing the incident report is wrong."
         },
         {
           "id": "ch23-s1",
@@ -6799,7 +6799,7 @@
             "D"
           ],
           "takeaway": "Duty, breach, causation, damages. All four or no claim.",
-          "strategy": "<em>Negligence is unintentional by definition. Any option requiring intent is wrong.</em>"
+          "strategy": "Negligence is unintentional by definition. Any option requiring intent is wrong."
         },
         {
           "id": "ch23-q5",
@@ -6835,7 +6835,7 @@
           ],
           "answer": "D",
           "takeaway": "Least restrictive intervention first, and there is no such thing as a valid as-needed restraint order.",
-          "strategy": "<em>If restraint appears as a first action, it is wrong. Alternatives always come first.</em>"
+          "strategy": "If restraint appears as a first action, it is wrong. Alternatives always come first."
         },
         {
           "id": "ch23-q6",
@@ -6871,7 +6871,7 @@
           ],
           "answer": "B",
           "takeaway": "An advance directive exists to speak for the patient when he cannot. Family preference does not override it.",
-          "strategy": "<em>When a documented patient wish conflicts with family demand, the documented wish governs.</em>"
+          "strategy": "When a documented patient wish conflicts with family demand, the documented wish governs."
         },
         {
           "id": "ch23-q11",
@@ -6907,7 +6907,7 @@
           ],
           "answer": "A",
           "takeaway": "Assault is the threat. Battery is the contact. An order never overrides a competent refusal.",
-          "strategy": "<em>Look for two separate acts in the stem. A threat plus contact means both.</em>"
+          "strategy": "Look for two separate acts in the stem. A threat plus contact means both."
         },
         {
           "id": "ch23-q7",
@@ -6943,7 +6943,7 @@
           ],
           "answer": "D",
           "takeaway": "Being a student is not a defense. You are accountable for what you do.",
-          "strategy": "<em>Any option removing accountability from the person who performed the act is wrong.</em>"
+          "strategy": "Any option removing accountability from the person who performed the act is wrong."
         },
         {
           "id": "ch23-s2",
@@ -6996,7 +6996,7 @@
             "F"
           ],
           "takeaway": "Restraints are a last resort, time limited, ordered specifically, monitored, and documented with the alternatives that failed.",
-          "strategy": "<em>Anything permitting restraints for convenience or on an as-needed basis is wrong.</em>"
+          "strategy": "Anything permitting restraints for convenience or on an as-needed basis is wrong."
         },
         {
           "id": "ch23-q8",
@@ -7032,7 +7032,7 @@
           ],
           "answer": "C",
           "takeaway": "Good Samaritan laws cover good faith voluntary aid within your competence, not gross negligence.",
-          "strategy": "<em>Watch for options adding conditions the law does not impose.</em>"
+          "strategy": "Watch for options adding conditions the law does not impose."
         },
         {
           "id": "ch23-q9",
@@ -7068,7 +7068,7 @@
           ],
           "answer": "A",
           "takeaway": "Mandated reporters report reasonable suspicion. Proof is the investigating agency's job, not yours.",
-          "strategy": "<em>Any option that gathers more evidence before reporting suspected abuse is wrong.</em>"
+          "strategy": "Any option that gathers more evidence before reporting suspected abuse is wrong."
         },
         {
           "id": "ch23-q12",
@@ -7104,7 +7104,7 @@
           ],
           "answer": "B",
           "takeaway": "The standard is what a reasonably prudent nurse would have done, not what the outcome happened to be.",
-          "strategy": "<em>Any option defining the standard by outcome or by one person's instruction is wrong.</em>"
+          "strategy": "Any option defining the standard by outcome or by one person's instruction is wrong."
         },
         {
           "id": "ch23-s3",
@@ -7157,7 +7157,7 @@
             "E"
           ],
           "takeaway": "The record is a legal document. Never chart ahead, never obscure, never speculate, and never reference the occurrence report.",
-          "strategy": "<em>Ask how the entry would read aloud in court.</em>"
+          "strategy": "Ask how the entry would read aloud in court."
         },
         {
           "id": "ch23-q10",
@@ -7193,7 +7193,7 @@
           ],
           "answer": "A",
           "takeaway": "Never delete. Correct in a way that leaves the original visible and the change attributable.",
-          "strategy": "<em>Any option involving deletion or removal is wrong in a legal record.</em>"
+          "strategy": "Any option involving deletion or removal is wrong in a legal record."
         }
       ]
     },
@@ -7235,7 +7235,7 @@
           ],
           "answer": "A",
           "takeaway": "The kindest-sounding option is usually wrong. The correct one often sounds flatter because it does not resolve anything.",
-          "strategy": "<em>Ask whether the response invites more or ends the conversation.</em>"
+          "strategy": "Ask whether the response invites more or ends the conversation."
         },
         {
           "id": "ch24-q2",
@@ -7271,7 +7271,7 @@
           ],
           "answer": "B",
           "takeaway": "Rephrase why into what. Not why are you anxious, but you seem upset, what is on your mind.",
-          "strategy": "<em>Scan for the word why. It is a blocking technique nearly every time it appears.</em>"
+          "strategy": "Scan for the word why. It is a blocking technique nearly every time it appears."
         },
         {
           "id": "ch24-q3",
@@ -7307,7 +7307,7 @@
           ],
           "answer": "A",
           "takeaway": "When verbal and nonverbal conflict, the nonverbal is the true message.",
-          "strategy": "<em>The right answer usually starts with what the nurse observed rather than what the patient said.</em>"
+          "strategy": "The right answer usually starts with what the nurse observed rather than what the patient said."
         },
         {
           "id": "ch24-q4",
@@ -7343,7 +7343,7 @@
           ],
           "answer": "A",
           "takeaway": "Never use family, friends, or children as interpreters. Professional interpretation is a legal requirement, not a courtesy.",
-          "strategy": "<em>Any option using a family member to interpret is wrong.</em>"
+          "strategy": "Any option using a family member to interpret is wrong."
         },
         {
           "id": "ch24-s1",
@@ -7396,7 +7396,7 @@
             "E"
           ],
           "takeaway": "Approval blocks as surely as disapproval, because it tells the patient which answer you wanted.",
-          "strategy": "<em>Reassurance, advice, why, subject changes, and judgments in either direction all block.</em>"
+          "strategy": "Reassurance, advice, why, subject changes, and judgments in either direction all block."
         },
         {
           "id": "ch24-q5",
@@ -7432,7 +7432,7 @@
           ],
           "answer": "A",
           "takeaway": "Silence is an intervention, and it is especially therapeutic during profound sadness or grief.",
-          "strategy": "<em>When the patient initiated the silence, let the patient break it.</em>"
+          "strategy": "When the patient initiated the silence, let the patient break it."
         },
         {
           "id": "ch24-q6",
@@ -7468,7 +7468,7 @@
           ],
           "answer": "D",
           "takeaway": "Normal volume, visible mouth, quiet environment, and rephrase rather than repeat.",
-          "strategy": "<em>Any option involving shouting is wrong.</em>"
+          "strategy": "Any option involving shouting is wrong."
         },
         {
           "id": "ch24-q11",
@@ -7504,7 +7504,7 @@
           ],
           "answer": "C",
           "takeaway": "Assertive means expressing your position without judging or attacking. Passive avoids and aggressive attacks.",
-          "strategy": "<em>The assertive option is specific, uses I statements, and asks a question rather than issuing an accusation.</em>"
+          "strategy": "The assertive option is specific, uses I statements, and asks a question rather than issuing an accusation."
         },
         {
           "id": "ch24-q7",
@@ -7540,7 +7540,7 @@
           ],
           "answer": "A",
           "takeaway": "Say what you want. I need you to come see him is a legitimate nursing recommendation.",
-          "strategy": "<em>When a stem walks through SBAR and stops early, the missing letter is the answer.</em>"
+          "strategy": "When a stem walks through SBAR and stops early, the missing letter is the answer."
         },
         {
           "id": "ch24-s2",
@@ -7593,7 +7593,7 @@
             "F"
           ],
           "takeaway": "Expressive aphasia affects output, not intelligence. Adapt the channel and keep the patient in the conversation.",
-          "strategy": "<em>Any option that speaks around the patient rather than to him is wrong.</em>"
+          "strategy": "Any option that speaks around the patient rather than to him is wrong."
         },
         {
           "id": "ch24-q8",
@@ -7629,7 +7629,7 @@
           ],
           "answer": "A",
           "takeaway": "Speak to an unresponsive patient as though he can hear, and never talk about him in his presence.",
-          "strategy": "<em>Any option treating an unresponsive patient as absent from the room is wrong.</em>"
+          "strategy": "Any option treating an unresponsive patient as absent from the room is wrong."
         },
         {
           "id": "ch24-q9",
@@ -7665,7 +7665,7 @@
           ],
           "answer": "C",
           "takeaway": "The intimate touch zone requires permission and great sensitivity. Announce what you will touch and why.",
-          "strategy": "<em>Any option that skips explanation before intimate contact is wrong.</em>"
+          "strategy": "Any option that skips explanation before intimate contact is wrong."
         },
         {
           "id": "ch24-q12",
@@ -7701,7 +7701,7 @@
           ],
           "answer": "B",
           "takeaway": "Lateral violence jeopardizes patient safety because intimidation makes nurses less likely to speak up.",
-          "strategy": "<em>The first step is usually direct and calm. Escalation comes after that fails.</em>"
+          "strategy": "The first step is usually direct and calm. Escalation comes after that fails."
         },
         {
           "id": "ch24-s3",
@@ -7755,7 +7755,7 @@
             "E"
           ],
           "takeaway": "Two lists of six are taught. One adds context and environment, the other adds referent. Learn all seven.",
-          "strategy": "<em>If asked for six, check which list the stem is using. If simply asked to name them, give all seven.</em>"
+          "strategy": "If asked for six, check which list the stem is using. If simply asked to name them, give all seven."
         },
         {
           "id": "ch24-q10",
@@ -7791,7 +7791,7 @@
           ],
           "answer": "D",
           "takeaway": "Failure to communicate sits alongside failure to assess and failure to rescue. The harm comes from what did not happen.",
-          "strategy": "<em>Options that treat documentation as a substitute for communication are wrong.</em>"
+          "strategy": "Options that treat documentation as a substitute for communication are wrong."
         }
       ]
     },
@@ -7833,7 +7833,7 @@
           ],
           "answer": "D",
           "takeaway": "Replace do you understand with tell me in your own words.",
-          "strategy": "<em>Any evaluation method answerable with yes or no is not evaluation.</em>"
+          "strategy": "Any evaluation method answerable with yes or no is not evaluation."
         },
         {
           "id": "ch25-q2",
@@ -7869,7 +7869,7 @@
           ],
           "answer": "D",
           "takeaway": "Patients cannot learn while they are unable to accept the loss. Teach the present until they reach resolution.",
-          "strategy": "<em>Match the teaching to the stage. Denial, anger, and bargaining all get present-tense teaching only.</em>"
+          "strategy": "Match the teaching to the stage. Denial, anger, and bargaining all get present-tense teaching only."
         },
         {
           "id": "ch25-q3",
@@ -7905,7 +7905,7 @@
           ],
           "answer": "D",
           "takeaway": "The domain decides the method and the evaluation. A psychomotor outcome checked by asking questions has not been evaluated.",
-          "strategy": "<em>Find the verb in the outcome. Demonstrate means you watch.</em>"
+          "strategy": "Find the verb in the outcome. Demonstrate means you watch."
         },
         {
           "id": "ch25-q4",
@@ -7941,7 +7941,7 @@
           ],
           "answer": "A",
           "takeaway": "Missed appointments, blank forms, poor adherence, and no questions are cues, not character.",
-          "strategy": "<em>When you are about to write nonadherent, look first for the quiet signs of low health literacy.</em>"
+          "strategy": "When you are about to write nonadherent, look first for the quiet signs of low health literacy."
         },
         {
           "id": "ch25-s1",
@@ -7995,7 +7995,7 @@
             "F"
           ],
           "takeaway": "Around 90 percent of adults struggle with health literacy at some point, and good readers can still have poor health literacy.",
-          "strategy": "<em>Behaviors that look like disinterest are usually concealment. Behaviors that seek clarification are not.</em>"
+          "strategy": "Behaviors that look like disinterest are usually concealment. Behaviors that seek clarification are not."
         },
         {
           "id": "ch25-q5",
@@ -8031,7 +8031,7 @@
           ],
           "answer": "C",
           "takeaway": "Patient education is in the nurse's scope and cannot be delegated. Reinforcing is permitted; teaching is not.",
-          "strategy": "<em>Assess, teach, evaluate, and plan never move. Reinforce does.</em>"
+          "strategy": "Assess, teach, evaluate, and plan never move. Reinforce does."
         },
         {
           "id": "ch25-q6",
@@ -8067,7 +8067,7 @@
           ],
           "answer": "A",
           "takeaway": "A learning objective states observable patient behavior with a criterion and a deadline.",
-          "strategy": "<em>Strike anything starting with Nurse will, and anything containing understand or better.</em>"
+          "strategy": "Strike anything starting with Nurse will, and anything containing understand or better."
         },
         {
           "id": "ch25-q11",
@@ -8103,7 +8103,7 @@
           ],
           "answer": "C",
           "takeaway": "Teach when alert and rested, keep sessions short, use large high-contrast print, and avoid blues and greens.",
-          "strategy": "<em>Adaptations should support the patient's participation, not replace it.</em>"
+          "strategy": "Adaptations should support the patient's participation, not replace it."
         },
         {
           "id": "ch25-q7",
@@ -8139,7 +8139,7 @@
           ],
           "answer": "C",
           "takeaway": "Physical needs and comfort come first. A patient in pain nods rather than learns.",
-          "strategy": "<em>When the patient is in pain, nauseated, or highly anxious, address that first.</em>"
+          "strategy": "When the patient is in pain, nauseated, or highly anxious, address that first."
         },
         {
           "id": "ch25-s2",
@@ -8193,7 +8193,7 @@
             "F"
           ],
           "takeaway": "Plain language, visuals, few key points, teach-back, and reinforcement. Create a shame-free environment.",
-          "strategy": "<em>Any option that adds vocabulary rather than removing it is wrong.</em>"
+          "strategy": "Any option that adds vocabulary rather than removing it is wrong."
         },
         {
           "id": "ch25-q8",
@@ -8229,7 +8229,7 @@
           ],
           "answer": "C",
           "takeaway": "Do not assume family should be involved. Ask the patient, then confirm the caregiver can actually do it.",
-          "strategy": "<em>The right answer names who will do the care and verifies it by return demonstration.</em>"
+          "strategy": "The right answer names who will do the care and verifies it by return demonstration."
         },
         {
           "id": "ch25-q9",
@@ -8265,7 +8265,7 @@
           ],
           "answer": "B",
           "takeaway": "Match the approach to the situation. Telling for urgency and high anxiety, participating when there is time.",
-          "strategy": "<em>Time pressure and high anxiety in a stem both point to telling.</em>"
+          "strategy": "Time pressure and high anxiety in a stem both point to telling."
         },
         {
           "id": "ch25-q12",
@@ -8301,7 +8301,7 @@
           ],
           "answer": "C",
           "takeaway": "Patients who need knowledge for survival are more motivated than patients learning for health promotion.",
-          "strategy": "<em>Ask what happens tonight if the patient does not learn it. Immediacy drives motivation.</em>"
+          "strategy": "Ask what happens tonight if the patient does not learn it. Immediacy drives motivation."
         },
         {
           "id": "ch25-s3",
@@ -8355,7 +8355,7 @@
             "F"
           ],
           "takeaway": "Assess knowledge, barriers, and ability, then readiness, then learning needs.",
-          "strategy": "<em>Factors about the nurse's schedule are never the answer on assessment questions.</em>"
+          "strategy": "Factors about the nurse's schedule are never the answer on assessment questions."
         },
         {
           "id": "ch25-q10",
@@ -8391,7 +8391,7 @@
           ],
           "answer": "A",
           "takeaway": "Document what was taught, the method, the response, the level of understanding, and what still needs teaching.",
-          "strategy": "<em>The best documentation option is the one containing an observable patient behavior.</em>"
+          "strategy": "The best documentation option is the one containing an observable patient behavior."
         }
       ]
     },
@@ -8433,7 +8433,7 @@
           ],
           "answer": "C",
           "takeaway": "EHR is the lifetime record. EMR is one visit.",
-          "strategy": "<em>Match the letter to the scope. Health is broader than medical.</em>"
+          "strategy": "Match the letter to the scope. Health is broader than medical."
         },
         {
           "id": "ch26-q2",
@@ -8469,7 +8469,7 @@
           ],
           "answer": "D",
           "takeaway": "Factual, accurate, complete, current, and organized. Descriptions, not conclusions.",
-          "strategy": "<em>Reject entries containing appears, seems, well, or uncooperative.</em>"
+          "strategy": "Reject entries containing appears, seems, well, or uncooperative."
         },
         {
           "id": "ch26-q3",
@@ -8505,7 +8505,7 @@
           ],
           "answer": "B",
           "takeaway": "Write it, read it back, get confirmation, document who and when.",
-          "strategy": "<em>Any option that omits read-back is wrong.</em>"
+          "strategy": "Any option that omits read-back is wrong."
         },
         {
           "id": "ch26-q4",
@@ -8541,7 +8541,7 @@
           ],
           "answer": "B",
           "takeaway": "Anonymized is not unidentifiable. Social media posting about patients is prohibited, full stop.",
-          "strategy": "<em>Any option permitting a patient story online is wrong.</em>"
+          "strategy": "Any option permitting a patient story online is wrong."
         },
         {
           "id": "ch26-s1",
@@ -8594,7 +8594,7 @@
             "E"
           ],
           "takeaway": "Factual, accurate, complete, current, organized, and appropriate use of abbreviations.",
-          "strategy": "<em>Reject anything interpretive, delayed, or judgmental.</em>"
+          "strategy": "Reject anything interpretive, delayed, or judgmental."
         },
         {
           "id": "ch26-q5",
@@ -8630,7 +8630,7 @@
           ],
           "answer": "C",
           "takeaway": "Never obliterate. Corrections leave the original readable and identify who changed it.",
-          "strategy": "<em>Options involving erasing, removing, or covering are wrong in a legal record.</em>"
+          "strategy": "Options involving erasing, removing, or covering are wrong in a legal record."
         },
         {
           "id": "ch26-q6",
@@ -8666,7 +8666,7 @@
           ],
           "answer": "D",
           "takeaway": "Do not override the safeguard. It fires when the automatic action is wrong.",
-          "strategy": "<em>Any option that proceeds past an alert without verification is wrong.</em>"
+          "strategy": "Any option that proceeds past an alert without verification is wrong."
         },
         {
           "id": "ch26-q11",
@@ -8702,7 +8702,7 @@
           ],
           "answer": "B",
           "takeaway": "Informatics is not computer skill. It is turning recorded data into a clinical decision.",
-          "strategy": "<em>When a stem describes a trend, the answer acts on the trend.</em>"
+          "strategy": "When a stem describes a trend, the answer acts on the trend."
         },
         {
           "id": "ch26-q7",
@@ -8738,7 +8738,7 @@
           ],
           "answer": "A",
           "takeaway": "Hand-off is closed-loop. It finishes when the receiver repeats it back.",
-          "strategy": "<em>The same teach-back logic used with patients applies to colleagues.</em>"
+          "strategy": "The same teach-back logic used with patients applies to colleagues."
         },
         {
           "id": "ch26-s2",
@@ -8791,7 +8791,7 @@
             "E"
           ],
           "takeaway": "Eighteen identifiers count as PHI, and access without a care relationship is a breach even if nothing is shared.",
-          "strategy": "<em>Anything involving personal devices or shared credentials is wrong.</em>"
+          "strategy": "Anything involving personal devices or shared credentials is wrong."
         },
         {
           "id": "ch26-q8",
@@ -8827,7 +8827,7 @@
           ],
           "answer": "B",
           "takeaway": "Chart after you do it, never before. Charting ahead is falsification whatever the findings turn out to be.",
-          "strategy": "<em>Any option permitting documentation before the care is wrong.</em>"
+          "strategy": "Any option permitting documentation before the care is wrong."
         },
         {
           "id": "ch26-q9",
@@ -8863,7 +8863,7 @@
           ],
           "answer": "D",
           "takeaway": "Occurrence reports capture events regardless of harm, and they never appear in the health record.",
-          "strategy": "<em>Two separate documents, and they never mention each other.</em>"
+          "strategy": "Two separate documents, and they never mention each other."
         },
         {
           "id": "ch26-q12",
@@ -8899,7 +8899,7 @@
           ],
           "answer": "D",
           "takeaway": "In home health and long-term care, documentation drives both continuity of care and reimbursement.",
-          "strategy": "<em>OASIS and MDS in a stem both point to reimbursement-linked documentation.</em>"
+          "strategy": "OASIS and MDS in a stem both point to reimbursement-linked documentation."
         },
         {
           "id": "ch26-s3",
@@ -8952,7 +8952,7 @@
             "E"
           ],
           "takeaway": "Match the format to what you are recording. Focus charting is the most flexible; charting by exception is the fastest and the riskiest.",
-          "strategy": "<em>Learn what each letter stands for and the format questions become straightforward.</em>"
+          "strategy": "Learn what each letter stands for and the format questions become straightforward."
         },
         {
           "id": "ch26-q10",
@@ -8988,7 +8988,7 @@
           ],
           "answer": "A",
           "takeaway": "Informatics is not computer skills. It is turning data into a clinical decision.",
-          "strategy": "<em>Choose the option where information changes what the nurse does.</em>"
+          "strategy": "Choose the option where information changes what the nurse does."
         }
       ]
     }
