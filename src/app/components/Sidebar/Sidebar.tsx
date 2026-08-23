@@ -9,6 +9,7 @@ import {
   LuLayers,
   LuCode,
   LuCalculator,
+  LuBookOpen,
   LuMessageCircle,
   LuMenu,
 } from "react-icons/lu";
@@ -16,7 +17,8 @@ import { useState } from "react";
 import { SCROLL_TO } from "../ScrollReset";
 const Sidebar = () => {
   const [toggle, setToggle] = useState(false);
-  const onLanding = usePathname() === "/";
+  const path = usePathname();
+  const onLanding = path === "/";
   const router = useRouter();
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -97,9 +99,19 @@ const Sidebar = () => {
                 <Link
                   href="/dosage-calculations"
                   onClick={() => setToggle(false)}
-                  className={`${navLink} ${onLanding ? "" : "!text-[hsl(43,100%,68%)]"}`}
+                  className={`${navLink} ${path === "/dosage-calculations" ? "!text-[hsl(43,100%,68%)]" : ""}`}
                 >
                   <LuCalculator />
+                </Link>
+              </li>
+
+              <li className="nav__item">
+                <Link
+                  href="/nclex"
+                  onClick={() => setToggle(false)}
+                  className={`${navLink} ${path === "/nclex" ? "!text-[hsl(43,100%,68%)]" : ""}`}
+                >
+                  <LuBookOpen />
                 </Link>
               </li>
 
