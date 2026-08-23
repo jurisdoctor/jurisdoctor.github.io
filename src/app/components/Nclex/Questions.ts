@@ -58,12 +58,37 @@ const ROSTER = [
   { id: 26, title: "Informatics and Documentation", pages: 10 },
 ];
 
+const strip = (text: string) =>
+  text
+    .replace(/<[^>]*>/g, "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#0?39;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const clean = (question: QuestionType): QuestionType => ({
+  ...question,
+  topic: strip(question.topic),
+  stem: strip(question.stem),
+  takeaway: strip(question.takeaway),
+  strategy: strip(question.strategy),
+  options: question.options.map((option) => ({
+    ...option,
+    text: strip(option.text),
+    rationale: strip(option.rationale),
+  })),
+});
+
 const bank = data.chapters as unknown as BankType[];
 const banked = new Map(bank.map((chapter) => [chapter.id, chapter.questions]));
 
 export const Chapters: ChapterType[] = ROSTER.map((entry) => ({
   ...entry,
-  questions: banked.get(entry.id) ?? [],
+  questions: (banked.get(entry.id) ?? []).map(clean),
 }));
 
 export const Ready = Chapters.filter((chapter) => chapter.questions.length > 0);

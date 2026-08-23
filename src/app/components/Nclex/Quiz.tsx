@@ -135,12 +135,20 @@ const Verdict = ({ correct, multi }: { correct: boolean; multi: boolean }) => (
   </div>
 );
 
-const Aside = ({ label, body }: { label: string; body: string }) => (
+const Aside = ({
+  label,
+  body,
+  italic,
+}: {
+  label: string;
+  body: string;
+  italic?: boolean;
+}) => (
   <div>
     <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
       {label}
     </span>
-    <p className="mt-1 max-w-[80ch]">{body}</p>
+    <p className={`mt-1 max-w-[80ch] ${italic ? "italic" : ""}`}>{body}</p>
   </div>
 );
 
@@ -306,7 +314,7 @@ const Quiz = ({
 
           <div className="mb-6 grid gap-y-4 rounded-2xl bg-[var(--body-color)] p-5">
             <Aside label="Takeaway" body={question.takeaway} />
-            <Aside label="Strategy" body={question.strategy} />
+            <Aside label="Strategy" body={question.strategy} italic />
           </div>
 
           <div className="flex flex-wrap gap-4">
