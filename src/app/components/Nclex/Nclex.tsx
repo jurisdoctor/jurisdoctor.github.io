@@ -58,7 +58,7 @@ const Nclex = () => {
 
   return (
     <section className="relative mx-auto max-w-[1080px] animate-fadeIn px-10 pb-24 pt-28 lg:pt-12 md:px-6">
-      <div className="pointer-events-none fixed inset-0 z-0">
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
         <Shapes />
       </div>
 
