@@ -2,9 +2,13 @@ import Sidebar from "../components/Sidebar";
 import Shapes from "../components/Home/Shapes";
 import ScrollReset from "../components/ScrollReset";
 
-// Under construction. To restore the question bank, put questions.json back in
-// src/app/components/Nclex/, drop it from .gitignore, then swap the placeholder
-// below for the two commented lines.
+// Under construction. To restore the question bank:
+//   1. put questions.json back in src/app/components/Nclex/
+//   2. drop that path from .gitignore
+//   3. drop "src/app/components/Nclex" from exclude in tsconfig.json,
+//      otherwise the page builds but the components are never typechecked
+//   4. uncomment the two imports and the Gate block below, and delete the
+//      placeholder section
 // import Nclex from "../components/Nclex";
 // import Gate from "../components/Nclex/Gate";
 
