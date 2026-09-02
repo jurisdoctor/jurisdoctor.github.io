@@ -36,6 +36,3 @@ yarn-error.log*
 next-env.d.ts
 /.next-dev/
 .claude
-
-# NCLEX question bank, kept out of the repo while the page is down
-src/app/components/Nclex/questions.json
