@@ -56,8 +56,17 @@ const strip = (text: string) =>
     .replace(/\s+/g, " ")
     .trim();
 
+const answerOf = (question: QuestionType) => {
+  if (Array.isArray(question.answer)) return question.answer;
+  const packed = question.options
+    .map((option) => option.id)
+    .filter((id) => question.answer.includes(id));
+  return packed.length > 1 ? packed : question.answer;
+};
+
 const clean = (question: QuestionType): QuestionType => ({
   ...question,
+  answer: answerOf(question),
   topic: strip(question.topic),
   stem: strip(question.stem),
   takeaway: strip(question.takeaway),

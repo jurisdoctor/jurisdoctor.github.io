@@ -3,7 +3,7 @@
   "course": "N55 Fundamentals of Nursing",
   "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
   "schemaVersion": 2,
-  "questionCount": 225,
+  "questionCount": 240,
   "chaptersIncluded": [
    1,
    2,
@@ -19,7 +19,8 @@
    23,
    24,
    25,
-   26
+   26,
+   56
   ],
   "chaptersPending": [],
   "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags.",
@@ -42,7 +43,8 @@
    23,
    24,
    25,
-   26
+   26,
+   56
   ]
  },
  "chapters": [
@@ -14228,6 +14230,942 @@
        }
       ],
       "verdict": "That leaves A. Informatics is using information and technology to support clinical decisions."
+     }
+    }
+   ]
+  },
+  {
+   "id": "56",
+   "title": "The Endocrine System and Diabetes Mellitus",
+   "questions": [
+    {
+     "id": "ch56-q1",
+     "topic": "DKA versus HHS",
+     "difficulty": "application",
+     "stem": "A 71-year-old with type 2 diabetes is admitted after four days of increasing confusion. Blood glucose is 642 mg/dL, serum ketones are negative, and serum pH is 7.38. Which condition does the nurse suspect?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Diabetic ketoacidosis",
+       "correct": false,
+       "rationale": "DKA requires ketones and acidosis. Both are absent here, and DKA develops within about 24 hours rather than over four days."
+      },
+      {
+       "id": "B",
+       "text": "Hyperosmolar hyperglycemic state",
+       "correct": true,
+       "rationale": "Extreme hyperglycemia with no ketones and a normal pH, developing slowly, in a client with type 2 diabetes. The confusion comes from profound dehydration."
+      },
+      {
+       "id": "C",
+       "text": "Hypoglycemia",
+       "correct": false,
+       "rationale": "The glucose is 642 mg/dL. Nothing about this is low."
+      },
+      {
+       "id": "D",
+       "text": "Somogyi effect",
+       "correct": false,
+       "rationale": "Somogyi is a rebound morning high after a night-time low, not a four-day decline with a glucose over 600."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "The dividing line between DKA and HHS is ketones, not the glucose number.",
+     "strategy": "Sort the acute complications by ketones and pH first. The glucose figure is the least useful discriminator, because HHS runs higher than DKA.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Three data points decide it: no ketones, normal pH, four-day onset."
+       },
+       {
+        "action": "Cut A",
+        "detail": "No ketones and no acidosis rules out DKA."
+       },
+       {
+        "action": "Cut C",
+        "detail": "Glucose 642 is not hypoglycemia."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Somogyi is an overnight pattern, not a four-day illness."
+       }
+      ],
+      "verdict": "That leaves B. HHS is slower, higher, ketone-free, and carries mortality up to 20 percent."
+     }
+    },
+    {
+     "id": "ch56-q2",
+     "topic": "Foot care teaching",
+     "difficulty": "application",
+     "stem": "The nurse observes a student teaching a client with diabetes about foot care. The nurse intervenes if the student makes which statement?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Inspect your feet and the soles daily for blisters, redness, or drainage",
+       "correct": false,
+       "rationale": "Correct. Daily inspection catches injury the client cannot feel because of neuropathy."
+      },
+      {
+       "id": "B",
+       "text": "Apply moisturizer to the tops and bottoms of your feet, and between your toes",
+       "correct": true,
+       "rationale": "Moisturizer goes on the tops and bottoms but never between the toes. Trapped moisture in a warm dark space grows fungus."
+      },
+      {
+       "id": "C",
+       "text": "Buy new shoes at the end of the day",
+       "correct": false,
+       "rationale": "Correct. Feet swell through the day, so shoes fitted in the morning are too tight by evening."
+      },
+      {
+       "id": "D",
+       "text": "Check the water temperature before bathing",
+       "correct": false,
+       "rationale": "Correct. Neuropathy means the client may not feel a scald until the burn has happened."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "Moisturize the tops and bottoms, never between the toes.",
+     "strategy": "In a spot-the-error item, three options are correct practice. Verify each against a rule you can name; the one you cannot justify is the answer.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Negative polarity"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Intervenes means find the error. Three statements will be correct."
+       },
+       {
+        "action": "Keep A",
+        "detail": "Daily inspection is standard teaching."
+       },
+       {
+        "action": "Keep C",
+        "detail": "End-of-day shoe fitting accounts for swelling."
+       },
+       {
+        "action": "Keep D",
+        "detail": "Water temperature checking addresses neuropathy."
+       }
+      ],
+      "verdict": "That leaves B. Every foot-care rule traces to neuropathy or to poor circulation and infection risk; moisture between the toes belongs to the second."
+     }
+    },
+    {
+     "id": "ch56-q3",
+     "topic": "Somogyi versus dawn",
+     "difficulty": "application",
+     "stem": "A client with type 1 diabetes reports fasting glucose readings near 240 mg/dL every morning for a week, and wakes at night with sweating and headaches. Which action does the nurse anticipate?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Increasing the evening insulin dose",
+       "correct": false,
+       "rationale": "The likeliest error in this scenario. If a night-time low is driving the morning high, more evening insulin deepens the low and worsens the rebound."
+      },
+      {
+       "id": "B",
+       "text": "Obtaining a blood glucose between 0200 and 0300",
+       "correct": true,
+       "rationale": "The only way to distinguish Somogyi from dawn phenomenon. A low at 0300 means Somogyi; a normal value means dawn phenomenon."
+      },
+      {
+       "id": "C",
+       "text": "Adding rapid-acting insulin at breakfast",
+       "correct": false,
+       "rationale": "Treats the morning number without identifying its cause, and does nothing about an overnight low."
+      },
+      {
+       "id": "D",
+       "text": "Restricting carbohydrates at the evening meal",
+       "correct": false,
+       "rationale": "Would make an overnight low more likely, not less."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "Check the 0300 glucose before changing anything. Somogyi and dawn phenomenon look identical in the morning and need opposite adjustments.",
+     "strategy": "Night sweats and morning headache are signs of an unwitnessed overnight low. When a stem offers them, the assessment step comes before any dose change.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Assessment before intervention"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Two clues: a high fasting glucose and symptoms of a night-time low."
+       },
+       {
+        "action": "Cut A",
+        "detail": "Changes the dose before establishing the cause, and may worsen it."
+       },
+       {
+        "action": "Cut C",
+        "detail": "Addresses the number, not the mechanism."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Increases the risk of the overnight low."
+       }
+      ],
+      "verdict": "That leaves B. Assessment precedes intervention, and here the assessment is a single overnight glucose."
+     }
+    },
+    {
+     "id": "ch56-q4",
+     "topic": "Sick day rules",
+     "difficulty": "comprehension",
+     "stem": "The nurse teaches a client with type 1 diabetes about managing illness. Which statement indicates the teaching has been effective?",
+     "options": [
+      {
+       "id": "A",
+       "text": "If I am not eating, I should hold my insulin until I can eat again",
+       "correct": false,
+       "rationale": "The most dangerous misconception in diabetes self-management. Illness raises glucose through stress hormones whether or not the client eats, and withholding insulin in type 1 leads to DKA."
+      },
+      {
+       "id": "B",
+       "text": "I will take my insulin as prescribed and check my glucose every 3 to 4 hours",
+       "correct": true,
+       "rationale": "Both sick day rules. Insulin continues and monitoring becomes more frequent, because illness is when control is hardest."
+      },
+      {
+       "id": "C",
+       "text": "I will check my glucose once daily until I feel better",
+       "correct": false,
+       "rationale": "Less monitoring at the moment more is needed."
+      },
+      {
+       "id": "D",
+       "text": "I should avoid all fluids until the vomiting stops",
+       "correct": false,
+       "rationale": "Reversed. With vomiting, diarrhea, or fever the client drinks fluids every half hour to an hour and reports it, because dehydration is the immediate threat."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "Illness raises glucose even when the client is not eating. Insulin continues and monitoring increases.",
+     "strategy": "Sick day items reward the answer that sounds like more work. Holding medication and reducing monitoring both feel intuitive and are both wrong.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Positive polarity: find the correct statement."
+       },
+       {
+        "action": "Cut A",
+        "detail": "Holding insulin in type 1 during illness causes DKA."
+       },
+       {
+        "action": "Cut C",
+        "detail": "Monitoring should increase, not decrease."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Fluids are encouraged during vomiting, not withheld."
+       }
+      ],
+      "verdict": "That leaves B, which pairs continued insulin with 3 to 4 hourly glucose checks."
+     }
+    },
+    {
+     "id": "ch56-q5",
+     "topic": "Exercise safety",
+     "difficulty": "application",
+     "stem": "A client with type 2 diabetes is about to use the treadmill. The blood glucose reads 88 mg/dL. Which action does the nurse take?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Proceed with the exercise as planned",
+       "correct": false,
+       "rationale": "88 is normal at rest and too low to start activity. Exercise drives glucose down further."
+      },
+      {
+       "id": "B",
+       "text": "Provide a carbohydrate snack before the activity",
+       "correct": true,
+       "rationale": "The teaching point is explicit: check the glucose before activity, and if it is below 100 mg/dL take a carbohydrate snack to prevent exercise-induced hypoglycemia."
+      },
+      {
+       "id": "C",
+       "text": "Hold the activity and notify the provider",
+       "correct": false,
+       "rationale": "Over-cautious. Exercise is part of the treatment plan; it needs a snack, not cancellation."
+      },
+      {
+       "id": "D",
+       "text": "Administer the scheduled rapid-acting insulin first",
+       "correct": false,
+       "rationale": "Would lower the glucose further just as activity lowers it again."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "Glucose below 100 before exercise means a carbohydrate snack first.",
+     "strategy": "A normal-looking number can still be unsafe for what is about to happen. Read the number against the activity, not against the reference range.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "88 mg/dL is within normal limits but the client is about to exercise."
+       },
+       {
+        "action": "Cut A",
+        "detail": "Ignores the threshold of 100 before activity."
+       },
+       {
+        "action": "Cut C",
+        "detail": "Cancels an intervention that only needed preparation."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Compounds the fall in glucose."
+       }
+      ],
+      "verdict": "That leaves B. The rule is under 100, snack first."
+     }
+    },
+    {
+     "id": "ch56-q6",
+     "topic": "DKA assessment",
+     "difficulty": "comprehension",
+     "stem": "The nurse assesses a client admitted with diabetic ketoacidosis. Which finding does the nurse expect?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Shallow, slow respirations",
+       "correct": false,
+       "rationale": "The opposite. Respirations are deep and rapid because the lungs are compensating for acidosis."
+      },
+      {
+       "id": "B",
+       "text": "Deep, rapid respirations with a fruity breath odor",
+       "correct": true,
+       "rationale": "Kussmaul respirations blow off carbon dioxide to raise the pH, and the fruity odor is exhaled ketones."
+      },
+      {
+       "id": "C",
+       "text": "Serum pH of 7.46",
+       "correct": false,
+       "rationale": "That is alkalosis. DKA produces a pH below 7.3."
+      },
+      {
+       "id": "D",
+       "text": "Absent ketones in the urine",
+       "correct": false,
+       "rationale": "Ketones are the defining feature of DKA and appear in both urine and serum."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "Kussmaul respirations are compensation for acidosis, not an airway problem. Treat with insulin and fluids.",
+     "strategy": "Do not reach for oxygen or suctioning when you see deep rapid breathing in DKA. Correcting the acidosis is what stops it.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "The question asks for an expected finding in DKA."
+       },
+       {
+        "action": "Cut A",
+        "detail": "Respirations are deep and rapid, not shallow and slow."
+       },
+       {
+        "action": "Cut C",
+        "detail": "7.46 is alkalotic; DKA is acidotic."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Ketones define the condition."
+       }
+      ],
+      "verdict": "That leaves B, which pairs the respiratory pattern with the exhaled ketones."
+     }
+    },
+    {
+     "id": "ch56-q7",
+     "topic": "Hypoglycemia management",
+     "difficulty": "application",
+     "stem": "A client with diabetes becomes shaky, diaphoretic, and confused. The glucose reads 58 mg/dL. The client is alert and swallowing safely. Which action does the nurse take first?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Administer intramuscular glucagon",
+       "correct": false,
+       "rationale": "Reserved for a client who cannot swallow safely. This client can take oral carbohydrate, which is faster and less invasive."
+      },
+      {
+       "id": "B",
+       "text": "Give 15 g of a fast-acting carbohydrate",
+       "correct": true,
+       "rationale": "The Rule of 15. Below 70 mg/dL with intact swallowing, give 15 g of fast-acting carbohydrate, wait 15 minutes, and retest."
+      },
+      {
+       "id": "C",
+       "text": "Start an intravenous dextrose infusion",
+       "correct": false,
+       "rationale": "Also reserved for unsafe swallowing, and it requires access this client does not need."
+      },
+      {
+       "id": "D",
+       "text": "Recheck the glucose in 30 minutes",
+       "correct": false,
+       "rationale": "Delays treatment of a symptomatic low that can progress to seizures and loss of consciousness."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "Conscious and swallowing safely means oral carbohydrate. Unsafe swallowing means glucagon or intravenous dextrose.",
+     "strategy": "The route is decided by swallowing, not by how low the number is. Check the stem for whether the client can protect the airway.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Priority key word"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Key word first, and the stem states the client is alert and swallowing safely."
+       },
+       {
+        "action": "Cut A",
+        "detail": "Glucagon is for the client who cannot swallow."
+       },
+       {
+        "action": "Cut C",
+        "detail": "Intravenous dextrose is for the same situation."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Waiting is not a treatment for symptomatic hypoglycemia."
+       }
+      ],
+      "verdict": "That leaves B. Then wait 15 minutes and retest, because one dose is often not enough."
+     }
+    },
+    {
+     "id": "ch56-q8",
+     "topic": "Diagnostic values",
+     "difficulty": "knowledge",
+     "stem": "The nurse reviews laboratory results. Which result is diagnostic of diabetes mellitus?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Fasting glucose 112 mg/dL",
+       "correct": false,
+       "rationale": "Prediabetes. The fasting range for prediabetes is 100 to 125; diabetes begins at 126."
+      },
+      {
+       "id": "B",
+       "text": "Glucose tolerance test 168 mg/dL",
+       "correct": false,
+       "rationale": "Prediabetes. The GTT range for prediabetes is 140 to 199; diabetes begins at 200."
+      },
+      {
+       "id": "C",
+       "text": "Hemoglobin A1C of 7.2%",
+       "correct": true,
+       "rationale": "Diabetes is diagnosed above 6.5%. This value reflects roughly three months of average control."
+      },
+      {
+       "id": "D",
+       "text": "Random glucose 154 mg/dL in an asymptomatic client",
+       "correct": false,
+       "rationale": "A random value is diagnostic at 200 or higher and only with symptoms present."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "Fasting 126, GTT 200, random 200 with symptoms, A1C above 6.5%.",
+     "strategy": "Two of the four thresholds are fasting values and two are post-load or random. Decide which kind of value the option is before comparing it to a cut-off.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Only one option needs to cross a diagnostic threshold."
+       },
+       {
+        "action": "Cut A",
+        "detail": "112 falls in the prediabetes range of 100 to 125."
+       },
+       {
+        "action": "Cut B",
+        "detail": "168 falls in the prediabetes range of 140 to 199."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Random values need 200 and symptoms."
+       }
+      ],
+      "verdict": "That leaves C. A1C above 6.5% is diagnostic on its own."
+     }
+    },
+    {
+     "id": "ch56-q9",
+     "topic": "Polyuria mechanism",
+     "difficulty": "comprehension",
+     "stem": "A client asks why high blood sugar causes frequent urination. Which explanation by the nurse is correct?",
+     "options": [
+      {
+       "id": "A",
+       "text": "High glucose damages the kidneys, causing them to leak fluid",
+       "correct": false,
+       "rationale": "Describes nephropathy, which is a chronic complication developing over years. It does not explain polyuria at the onset of illness."
+      },
+      {
+       "id": "B",
+       "text": "Glucose spills into the urine and draws water with it",
+       "correct": true,
+       "rationale": "Osmotic diuresis. Above roughly 180 mg/dL the kidney's reabsorption capacity is exceeded, glucose enters the urine, and being osmotically active it pulls water and electrolytes along."
+      },
+      {
+       "id": "C",
+       "text": "Insulin deficiency directly stimulates the bladder",
+       "correct": false,
+       "rationale": "Insulin has no direct action on the bladder."
+      },
+      {
+       "id": "D",
+       "text": "Ketones irritate the urinary tract, increasing urgency",
+       "correct": false,
+       "rationale": "Ketones appear in urine but do not cause the polyuria, which occurs in hyperglycemia with or without ketones."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "Polyuria is osmotic diuresis. It drives the dehydration, which drives the polydipsia.",
+     "strategy": "The three Ps come from one process. Understanding it means you can reason to any of them rather than memorizing all three.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "The question asks for the mechanism, not the consequence."
+       },
+       {
+        "action": "Cut A",
+        "detail": "Nephropathy is a late complication, not the cause of new polyuria."
+       },
+       {
+        "action": "Cut C",
+        "detail": "No such mechanism exists."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Polyuria occurs in HHS, where ketones are absent."
+       }
+      ],
+      "verdict": "That leaves B. Glucose is osmotically active and takes water with it."
+     }
+    },
+    {
+     "id": "ch56-q10",
+     "topic": "Chronic complications",
+     "difficulty": "comprehension",
+     "stem": "A client with long-standing diabetes reports tingling and numbness in both feet. The nurse recognizes this as which complication?",
+     "options": [
+      {
+       "id": "A",
+       "text": "A macrovascular complication",
+       "correct": false,
+       "rationale": "Macrovascular complications involve large vessels: coronary artery disease, myocardial infarction, and stroke."
+      },
+      {
+       "id": "B",
+       "text": "A microvascular complication",
+       "correct": true,
+       "rationale": "Neuropathy is microvascular, alongside retinopathy and nephropathy. Small vessels supply the nerves, the eye, and the kidney."
+      },
+      {
+       "id": "C",
+       "text": "An expected change of aging",
+       "correct": false,
+       "rationale": "A specific bilateral sensory change in a client with diabetes warrants assessment, not attribution to age."
+      },
+      {
+       "id": "D",
+       "text": "An early sign of hypoglycemia",
+       "correct": false,
+       "rationale": "Hypoglycemia produces shakiness, diaphoresis, tachycardia, and confusion, not a chronic bilateral sensory loss."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "Micro is small vessels: eyes, kidneys, nerves. Macro is large vessels: heart and brain.",
+     "strategy": "The prefix tells you which organs are involved. Sorting by vessel size answers most complication items without further recall.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Bilateral sensory change in the feet in long-standing diabetes."
+       },
+       {
+        "action": "Cut A",
+        "detail": "Large-vessel disease affects the heart and brain."
+       },
+       {
+        "action": "Cut C",
+        "detail": "A change from baseline is assessed, not attributed to aging."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Wrong symptom cluster and wrong time course."
+       }
+      ],
+      "verdict": "That leaves B. Neuropathy plus poor circulation is why diabetic feet lose limbs."
+     }
+    },
+    {
+     "id": "ch56-q11",
+     "topic": "Potassium in DKA",
+     "difficulty": "application",
+     "stem": "A client is admitted in diabetic ketoacidosis. The serum potassium is 5.1 mEq/L. An insulin infusion is started. Which action is the priority?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Withhold all potassium replacement because the level is elevated",
+       "correct": false,
+       "rationale": "The level is misleading. Acidosis has pushed potassium out of cells while days of osmotic diuresis depleted the total body store."
+      },
+      {
+       "id": "B",
+       "text": "Monitor the serum potassium frequently during the insulin infusion",
+       "correct": true,
+       "rationale": "Insulin drives potassium into cells and correcting the acidosis reverses the shift, so the serum level can fall quickly and cause dysrhythmias."
+      },
+      {
+       "id": "C",
+       "text": "Administer sodium bicarbonate to correct the acidosis rapidly",
+       "correct": false,
+       "rationale": "Not a routine intervention, and correcting the pH quickly would accelerate the potassium shift the nurse is trying to control."
+      },
+      {
+       "id": "D",
+       "text": "Restrict all intravenous fluids until the potassium normalizes",
+       "correct": false,
+       "rationale": "Fluid resuscitation is a priority in DKA. Withholding it worsens the dehydration."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "A normal or high potassium in DKA hides a real deficit that treatment is about to expose.",
+     "strategy": "When a stem gives a lab value that looks reassuring in a client whose physiology is shifting, ask what the treatment will do to that value.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Priority key word"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Key word priority. Insulin has just been started."
+       },
+       {
+        "action": "Cut A",
+        "detail": "Treats the number as if it reflected total body potassium."
+       },
+       {
+        "action": "Cut C",
+        "detail": "Not routine, and it accelerates the shift."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Fluids are central to DKA management."
+       }
+      ],
+      "verdict": "That leaves B. Potassium replacement runs alongside the insulin, not after it."
+     }
+    },
+    {
+     "id": "ch56-q12",
+     "topic": "Type 1 versus type 2",
+     "difficulty": "comprehension",
+     "stem": "A client asks why insulin is required for type 1 diabetes but sometimes also for type 2. Which response by the nurse is most accurate?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Type 2 diabetes eventually becomes type 1 diabetes",
+       "correct": false,
+       "rationale": "They are separate conditions. Type 2 does not convert to type 1."
+      },
+      {
+       "id": "B",
+       "text": "Needing insulin in type 2 means the client failed to follow the treatment plan",
+       "correct": false,
+       "rationale": "A harmful misconception. Insulin use reflects the natural course of the disease, not the client's effort."
+      },
+      {
+       "id": "C",
+       "text": "In type 1 there is no insulin from the start, and in type 2 the pancreas may eventually fail to keep up with the resistance",
+       "correct": true,
+       "rationale": "Type 1 is autoimmune destruction of beta cells. Type 2 begins as resistance, and over time the beta cells become exhausted so production declines as well."
+      },
+      {
+       "id": "D",
+       "text": "Insulin in type 2 is used only during hospitalization",
+       "correct": false,
+       "rationale": "Many clients with type 2 use insulin long term at home."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "Type 1 has no insulin. Type 2 begins with resistance and adds declining production over time.",
+     "strategy": "Watch for options that blame the client. They are almost always wrong and they are written to feel plausible.",
+     "type": "multiple_choice",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "The client is asking about mechanism, so the answer should explain one."
+       },
+       {
+        "action": "Cut A",
+        "detail": "The two types do not convert."
+       },
+       {
+        "action": "Cut B",
+        "detail": "Blames the client and is factually wrong."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Insulin is widely used at home in type 2."
+       }
+      ],
+      "verdict": "That leaves C. Declining production is also why a client with type 2 can develop DKA under enough stress."
+     }
+    },
+    {
+     "id": "ch56-s1",
+     "type": "sata",
+     "topic": "Presentation in children",
+     "difficulty": "application",
+     "stem": "A parent brings a 9-year-old to the clinic. Which findings support a possible new diagnosis of type 1 diabetes? Select all that apply.",
+     "options": [
+      {
+       "id": "A",
+       "text": "New bedwetting after years of being dry at night",
+       "correct": true,
+       "rationale": "Enuresis is polyuria in a child, and it is often what brings the family in."
+      },
+      {
+       "id": "B",
+       "text": "Excessive thirst",
+       "correct": true,
+       "rationale": "Polydipsia, the body's response to fluid lost through osmotic diuresis."
+      },
+      {
+       "id": "C",
+       "text": "Weight gain over the past month",
+       "correct": false,
+       "rationale": "Weight loss, not gain, accompanies new type 1 diabetes. Without insulin the body breaks down fat and muscle."
+      },
+      {
+       "id": "D",
+       "text": "Unusual fatigue and irritability",
+       "correct": true,
+       "rationale": "Both are named presenting features in children."
+      },
+      {
+       "id": "E",
+       "text": "Excessive hunger",
+       "correct": true,
+       "rationale": "Polyphagia. The cells are starved of glucose even though the blood is full of it."
+      },
+      {
+       "id": "F",
+       "text": "Dark velvety patches on the neck",
+       "correct": false,
+       "rationale": "Acanthosis nigricans is a sign of insulin resistance and points to type 2, not type 1."
+      }
+     ],
+     "answer": "ABDE",
+     "takeaway": "In children, look for enuresis, irritability, unusual fatigue, and weight loss alongside the three Ps.",
+     "strategy": "Two distractors here are correct diabetes findings attached to the wrong type or the wrong direction. Check each against type 1 specifically.",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Type 1 in a child, so the paediatric presentation applies."
+       },
+       {
+        "action": "Cut C",
+        "detail": "Type 1 causes weight loss."
+       },
+       {
+        "action": "Cut F",
+        "detail": "Acanthosis nigricans indicates insulin resistance, meaning type 2."
+       }
+      ],
+      "verdict": "A, B, D, and E remain: the three Ps in paediatric form plus fatigue and irritability."
+     }
+    },
+    {
+     "id": "ch56-s2",
+     "type": "sata",
+     "topic": "Preventing complications",
+     "difficulty": "application",
+     "stem": "A client newly diagnosed with type 2 diabetes asks how to reduce the risk of complications. Which teaching points does the nurse include? Select all that apply.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Inspect your feet daily",
+       "correct": true,
+       "rationale": "Neuropathy means injury is not felt, so it must be seen."
+      },
+      {
+       "id": "B",
+       "text": "Attend regular eye examinations",
+       "correct": true,
+       "rationale": "Retinopathy can progress to irreversible blindness and is detectable before symptoms appear."
+      },
+      {
+       "id": "C",
+       "text": "Keep blood pressure and lipid levels within target ranges",
+       "correct": true,
+       "rationale": "A stated goal of diabetes management, because macrovascular complications are driven by the same vascular damage."
+      },
+      {
+       "id": "D",
+       "text": "Go barefoot indoors so the feet can breathe",
+       "correct": false,
+       "rationale": "Never barefoot. An unfelt injury on an insensate foot is how ulcers begin."
+      },
+      {
+       "id": "E",
+       "text": "Trim toenails straight across",
+       "correct": true,
+       "rationale": "Reduces ingrown nails, and a podiatrist should do it if neuropathy or thick nails are present."
+      },
+      {
+       "id": "F",
+       "text": "Use a heating pad on the feet in cold weather",
+       "correct": false,
+       "rationale": "Explicitly avoided. Neuropathy means the client may not feel a burn."
+      },
+      {
+       "id": "G",
+       "text": "Report any wound that is not healing",
+       "correct": true,
+       "rationale": "Impaired healing and immune response turn minor injuries into serious infections."
+      }
+     ],
+     "answer": "ABCEG",
+     "takeaway": "Every foot-care rule traces to one of two deficits: the client cannot feel injury, or the injury will not heal.",
+     "strategy": "The two false options both involve exposing the foot to something it cannot feel. Once you see the pattern the item resolves quickly.",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Prevention of complications in a new diagnosis."
+       },
+       {
+        "action": "Cut D",
+        "detail": "Barefoot exposes an insensate foot to injury."
+       },
+       {
+        "action": "Cut F",
+        "detail": "Heating pads risk burns the client will not feel."
+       }
+      ],
+      "verdict": "A, B, C, E, and G remain, covering feet, eyes, vascular targets, and wound reporting."
+     }
+    },
+    {
+     "id": "ch56-s3",
+     "type": "sata",
+     "topic": "Hypoglycemia recognition",
+     "difficulty": "comprehension",
+     "stem": "Which findings should the nurse recognize as signs of hypoglycemia? Select all that apply.",
+     "options": [
+      {
+       "id": "A",
+       "text": "Diaphoresis",
+       "correct": true,
+       "rationale": "A sympathetic response to falling glucose and one of the earliest signs."
+      },
+      {
+       "id": "B",
+       "text": "Shakiness",
+       "correct": true,
+       "rationale": "Also sympathetic, and often the first thing the client notices."
+      },
+      {
+       "id": "C",
+       "text": "Deep, rapid respirations with fruity breath",
+       "correct": false,
+       "rationale": "Kussmaul respirations and exhaled ketones belong to DKA, which is hyperglycemia."
+      },
+      {
+       "id": "D",
+       "text": "Confusion",
+       "correct": true,
+       "rationale": "The brain depends on a continuous glucose supply, so cognition changes early."
+      },
+      {
+       "id": "E",
+       "text": "Tachycardia",
+       "correct": true,
+       "rationale": "Part of the same sympathetic response."
+      },
+      {
+       "id": "F",
+       "text": "Polyuria and polydipsia",
+       "correct": false,
+       "rationale": "Osmotic diuresis requires high glucose. These are hyperglycemic findings."
+      }
+     ],
+     "answer": "ABDE",
+     "takeaway": "Hypoglycemia is sympathetic activation plus altered cognition. Hyperglycemia is fluid loss plus, in DKA, acidosis.",
+     "strategy": "Sorting findings by which state produces them prevents the most common error in diabetes items, which is treating one emergency as the other.",
+     "elimination": {
+      "strategies": [
+       "Treat each option as true or false"
+      ],
+      "steps": [
+       {
+        "action": "Read the stem",
+        "detail": "Signs of hypoglycemia specifically."
+       },
+       {
+        "action": "Cut C",
+        "detail": "Kussmaul respirations and fruity breath are DKA findings."
+       },
+       {
+        "action": "Cut F",
+        "detail": "The three Ps require hyperglycemia."
+       }
+      ],
+      "verdict": "A, B, D, and E remain. Severe hypoglycemia progresses to seizures and loss of consciousness."
      }
     }
    ]
