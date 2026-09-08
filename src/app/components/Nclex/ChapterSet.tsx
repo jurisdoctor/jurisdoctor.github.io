@@ -1,8 +1,8 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ChapterType } from "./Questions";
+import { ChapterType, labelOf } from "./Questions";
 
-export type PickType = number | "all";
+export type PickType = string;
 export type ResultType = "solved" | "missed";
 
 const Reset = ({ onReset }: { onReset: () => void }) => {
@@ -66,12 +66,12 @@ const ChapterSet = ({
   onStart: (pick: PickType, at: number) => void;
   onReset: () => void;
 }) => {
-  const [open, setOpen] = useState<number | null>(null);
+  const [open, setOpen] = useState<string | null>(null);
   const [arrow, setArrow] = useState(0);
   const gridRef = useRef<HTMLDivElement>(null);
-  const tiles = useRef(new Map<number, HTMLButtonElement>());
+  const tiles = useRef(new Map<string, HTMLButtonElement>());
 
-  const place = useCallback((id: number) => {
+  const place = useCallback((id: string) => {
     const tile = tiles.current.get(id);
     const grid = gridRef.current;
     if (!tile || !grid) return;
@@ -154,8 +154,8 @@ const ChapterSet = ({
               aria-expanded={here}
               title={
                 count
-                  ? `Chapter ${chapter.id} · ${chapter.title} · ${count} questions`
-                  : `Chapter ${chapter.id} · ${chapter.title} · no questions yet`
+                  ? `${labelOf(chapter)} · ${count} questions`
+                  : `${labelOf(chapter)} · no questions yet`
               }
               className={`relative h-10 rounded-lg text-xs font-bold duration-300 ${
                 active === chapter.id ? "ring-2 ring-[hsl(219,100%,72%)]" : ""
@@ -190,10 +190,10 @@ const ChapterSet = ({
 
           <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <span className="font-bold text-[var(--title-color)]">
-              Chapter {shown.id} · {shown.title}
+              {labelOf(shown)}
             </span>
             <span className="text-xs text-[#8b88b1]">
-              {shown.questions.length} questions · {shown.pages} pages
+              {shown.questions.length} questions
             </span>
           </div>
 

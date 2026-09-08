@@ -7,6 +7,7 @@ import {
   AllQuestions,
   Chapters,
   Course,
+  labelOf,
   QuestionType,
   Textbook,
 } from "./Questions";
@@ -37,7 +38,7 @@ const Nclex = () => {
   }, []);
 
   const chapter =
-    typeof pick === "number"
+    pick && pick !== "all"
       ? Chapters.find((entry) => entry.id === pick)
       : undefined;
 
@@ -50,11 +51,7 @@ const Nclex = () => {
     setRun((prev) => prev + 1);
   };
   const label =
-    pick === "all"
-      ? "All chapters"
-      : chapter
-        ? `Chapter ${chapter.id} · ${chapter.title}`
-        : "";
+    pick === "all" ? "All chapters" : chapter ? labelOf(chapter) : "";
 
   return (
     <section className="relative mx-auto max-w-[1080px] animate-fadeIn px-10 pb-24 pt-28 lg:pt-12 md:px-6">

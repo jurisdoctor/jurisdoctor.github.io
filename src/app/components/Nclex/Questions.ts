@@ -28,35 +28,21 @@ export const isMulti = (question: QuestionType) =>
   Array.isArray(question.answer) ||
   keysOf(question).length > 1;
 export interface ChapterType {
-  id: number;
+  id: string;
   title: string;
-  pages: number;
   questions: QuestionType[];
 }
 
 interface BankType {
-  id: number;
+  id: string | number;
   title: string;
   questions: QuestionType[];
 }
 
-const ROSTER = [
-  { id: 1, title: "Nursing Today", pages: 11 },
-  { id: 2, title: "Health Care Delivery", pages: 11 },
-  { id: 6, title: "Health and Wellness", pages: 9 },
-  { id: 7, title: "Caring", pages: 7 },
-  { id: 15, title: "Critical Thinking and Clinical Judgment", pages: 6 },
-  { id: 16, title: "Nursing Assessment", pages: 7 },
-  { id: 17, title: "Nursing Diagnosis", pages: 6 },
-  { id: 18, title: "Planning Nursing Care", pages: 7 },
-  { id: 19, title: "Implementing Nursing Care", pages: 7 },
-  { id: 20, title: "Evaluation", pages: 6 },
-  { id: 22, title: "Ethics and Values", pages: 9 },
-  { id: 23, title: "Legal Implications", pages: 10 },
-  { id: 24, title: "Communication", pages: 7 },
-  { id: 25, title: "Patient Education", pages: 7 },
-  { id: 26, title: "Informatics and Documentation", pages: 10 },
-];
+export const labelOf = (chapter: ChapterType) =>
+  /^\d+$/.test(chapter.id)
+    ? `Chapter ${chapter.id} · ${chapter.title}`
+    : chapter.title;
 
 const strip = (text: string) =>
   text
@@ -84,11 +70,11 @@ const clean = (question: QuestionType): QuestionType => ({
 });
 
 const bank = data.chapters as unknown as BankType[];
-const banked = new Map(bank.map((chapter) => [chapter.id, chapter.questions]));
 
-export const Chapters: ChapterType[] = ROSTER.map((entry) => ({
-  ...entry,
-  questions: (banked.get(entry.id) ?? []).map(clean),
+export const Chapters: ChapterType[] = bank.map((chapter) => ({
+  id: String(chapter.id),
+  title: chapter.title,
+  questions: chapter.questions.map(clean),
 }));
 
 export const Ready = Chapters.filter((chapter) => chapter.questions.length > 0);
