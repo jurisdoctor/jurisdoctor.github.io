@@ -1,6 +1,6 @@
 "use client";
-import { useRef, useState } from "react";
-import { OptionType, poolsOf, QuestionType } from "./Questions";
+import { Fragment, useRef, useState } from "react";
+import { OptionType, PoolType, poolsOf, QuestionType } from "./Questions";
 
 const SHAKE = [
   { transform: "translateX(0)" },
@@ -18,7 +18,7 @@ const POP = [
 
 const ORDER = ["actions", "condition", "parameters"];
 
-const sortPools = (entries: [string, { label: string; select: number }][]) =>
+const sortPools = (entries: [string, PoolType][]) =>
   [...entries].sort((a, b) => ORDER.indexOf(a[0]) - ORDER.indexOf(b[0]));
 
 const Connector = ({ flip }: { flip?: boolean }) => (
@@ -170,13 +170,15 @@ const Bowtie = ({
     drop(key, id);
   };
 
+  const scored = pools.reduce(
+    (sum, [key]) =>
+      sum + (placed[key] ?? []).filter((id) => rightIn(key, id)).length,
+    0,
+  );
+  const total = pools.reduce((sum, [, pool]) => sum + pool.select, 0);
+
   const check = () => {
-    const hit = pools.every(([key, pool]) => {
-      const here = placed[key] ?? [];
-      return (
-        here.length === pool.select && here.every((id) => rightIn(key, id))
-      );
-    });
+    const hit = scored === total;
 
     const node = frameRef.current;
     if (
@@ -198,7 +200,7 @@ const Bowtie = ({
     onClear();
   };
 
-  const column = (key: string, pool: { label: string; select: number }) => {
+  const column = (key: string, pool: PoolType) => {
     const here = placed[key] ?? [];
     return (
       <div className="flex flex-col gap-y-3">
@@ -241,12 +243,12 @@ const Bowtie = ({
         {column(pools[2][0], pools[2][1])}
       </div>
 
-      <div className="grid gap-y-5">
-        {pools.map(([key, pool]) => {
-          const here = placed[key] ?? [];
-          return (
-            <div key={key}>
-              <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+      <div className="grid grid-cols-[1fr_2.5rem_1fr_2.5rem_1fr] items-start gap-x-2 gap-y-6 lg:grid-cols-1">
+        {pools.map(([key, pool], slot) => (
+          <Fragment key={key}>
+            {slot > 0 && <span aria-hidden className="lg:hidden" />}
+            <div>
+              <span className="block text-center text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
                 {pool.label}
                 <span className="ml-2 font-normal normal-case">
                   choose {pool.select}
@@ -254,8 +256,8 @@ const Bowtie = ({
               </span>
 
               <div className="mt-2 grid gap-y-2">
-                {question.pools?.[key].options.map((option) => {
-                  const taken = here.includes(option.id);
+                {pool.options.map((option) => {
+                  const taken = (placed[key] ?? []).includes(option.id);
                   const shell = answered
                     ? option.correct
                       ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
@@ -276,11 +278,8 @@ const Bowtie = ({
                         onDragEnd={() => setHeld(null)}
                         onClick={() => tap(key, option.id)}
                         aria-pressed={taken}
-                        className={`flex w-full items-start gap-x-3 rounded-xl border-2 border-solid p-3 text-left text-sm duration-300 ${shell}`}
+                        className={`flex w-full items-start gap-x-2 rounded-xl border-2 border-solid p-3 text-left text-sm duration-300 ${shell}`}
                       >
-                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border-2 border-solid border-[var(--primary-color)] text-[10px] font-bold text-[var(--primary-color)]">
-                          {option.id}
-                        </span>
                         <span className="min-w-0 flex-1">{option.text}</span>
                         {answered && option.correct && (
                           <span className="shrink-0">✅</span>
@@ -291,7 +290,7 @@ const Bowtie = ({
                       </button>
 
                       {answered && (
-                        <p className="ml-9 mt-1 animate-fadeIn text-sm text-[#8b88b1]">
+                        <p className="mt-1 animate-fadeIn px-3 text-sm text-[#8b88b1]">
                           {option.rationale}
                         </p>
                       )}
@@ -300,9 +299,19 @@ const Bowtie = ({
                 })}
               </div>
             </div>
-          );
-        })}
+          </Fragment>
+        ))}
       </div>
+
+      {answered && (
+        <p className="mt-6 animate-fadeIn rounded-2xl bg-[var(--body-color)] p-4 text-center">
+          <span className="font-bold text-[var(--title-color)]">
+            {scored} of {total}
+          </span>{" "}
+          boxes placed correctly. Each box is scored on its own, so partial
+          credit counts on the exam.
+        </p>
+      )}
 
       {!answered && (
         <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -323,7 +332,7 @@ const Bowtie = ({
           </button>
           <span className="text-sm text-[#8b88b1]">
             {pools.reduce((sum, [key]) => sum + (placed[key]?.length ?? 0), 0)}{" "}
-            of {pools.reduce((sum, [, pool]) => sum + pool.select, 0)} placed
+            of {total} placed
           </span>
         </div>
       )}
