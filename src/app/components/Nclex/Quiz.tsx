@@ -2,12 +2,18 @@
 import { useEffect, useRef, useState } from "react";
 import Bowtie from "./Bowtie";
 import { ResultType } from "./ChapterSet";
+import Cloze from "./Cloze";
 import Highlight from "./Highlight";
+import Matching from "./Matching";
 import Matrix from "./Matrix";
+import Ordered from "./Ordered";
 import {
+  isCloze,
   isGrid,
   isHighlight,
+  isMatching,
   isMulti,
+  isOrdered,
   keysOf,
   OptionType,
   QuestionType,
@@ -203,7 +209,10 @@ const Quiz = ({
   const bowtie = question.type === "bowtie";
   const grid = isGrid(question);
   const marker = isHighlight(question);
-  const built = bowtie || grid || marker;
+  const ranked = isOrdered(question);
+  const paired = isMatching(question);
+  const gapped = isCloze(question);
+  const built = bowtie || grid || marker || ranked || paired || gapped;
   const multi = built || isMulti(question);
   const keys = built ? [] : keysOf(question);
   const correct = built
@@ -289,7 +298,13 @@ const Quiz = ({
                   ? "Highlight"
                   : grid
                     ? "Matrix"
-                    : "Select all that apply"}
+                    : ranked
+                      ? "Place in order"
+                      : paired
+                        ? "Matching"
+                        : gapped
+                          ? "Drop down"
+                          : "Select all that apply"}
             </span>
           )}
           <span className="rounded-full bg-[var(--body-color)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
@@ -309,6 +324,42 @@ const Quiz = ({
         <p className="mb-4 rounded-2xl bg-[var(--body-color)] p-5 text-[#8b88b1]">
           {question.scenario}
         </p>
+      )}
+
+      {question.data && (
+        <div className="mb-4 overflow-x-auto rounded-2xl bg-[var(--body-color)] p-4">
+          <table className="w-full min-w-[30rem] border-collapse text-sm">
+            <thead>
+              <tr>
+                {question.data.headers.map((head) => (
+                  <th
+                    key={head}
+                    className="p-2 text-left text-xs font-bold uppercase tracking-wide text-[var(--title-color)]"
+                  >
+                    {head}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {question.data.rows.map((row) => (
+                <tr
+                  key={row[0]}
+                  className="border-t-[1px] border-solid border-[#e6e4f0]"
+                >
+                  {row.map((cell, index) => (
+                    <td
+                      key={`${row[0]}-${index}`}
+                      className={`p-2 ${index === 0 ? "font-bold text-[var(--title-color)]" : "text-[#8b88b1]"}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
 
       <p className="mb-6 text-lg sm:text-base">{question.stem}</p>
@@ -331,6 +382,30 @@ const Quiz = ({
         />
       ) : grid ? (
         <Matrix
+          key={`${question.id}-${redo}`}
+          question={question}
+          answered={answered}
+          onSettle={settleBuilt}
+          onClear={() => setAnswered(false)}
+        />
+      ) : ranked ? (
+        <Ordered
+          key={`${question.id}-${redo}`}
+          question={question}
+          answered={answered}
+          onSettle={settleBuilt}
+          onClear={() => setAnswered(false)}
+        />
+      ) : gapped ? (
+        <Cloze
+          key={`${question.id}-${redo}`}
+          question={question}
+          answered={answered}
+          onSettle={settleBuilt}
+          onClear={() => setAnswered(false)}
+        />
+      ) : paired ? (
+        <Matching
           key={`${question.id}-${redo}`}
           question={question}
           answered={answered}

@@ -26,6 +26,48 @@ export interface RowType {
   rationale: string;
 }
 
+export interface ItemType {
+  id: string;
+  text: string;
+  rationale: string;
+}
+
+export interface TermType {
+  id: string;
+  text: string;
+}
+
+export interface DataType {
+  headers: string[];
+  rows: string[][];
+}
+
+export interface BlankType {
+  id: number;
+  options: OptionType[];
+}
+
+const seedOf = (text: string) => {
+  let hash = 2166136261;
+  for (let i = 0; i < text.length; i += 1) {
+    hash ^= text.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0 || 1;
+};
+
+export const shuffled = <T>(items: T[], seed: string) => {
+  let state = seedOf(seed);
+  const order = [...items];
+  for (let i = order.length - 1; i > 0; i -= 1) {
+    state = (state * 1664525 + 1013904223) >>> 0;
+    const j = state % (i + 1);
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  const same = order.every((entry, index) => entry === items[index]);
+  return same && order.length > 1 ? [...order.slice(1), order[0]] : order;
+};
+
 export interface QuestionType {
   id: string;
   type?: string;
@@ -38,6 +80,11 @@ export interface QuestionType {
   segments?: SegmentType[];
   columns?: string[];
   rows?: RowType[];
+  items?: ItemType[];
+  terms?: TermType[];
+  data?: DataType;
+  sentence?: string;
+  blanks?: BlankType[];
   select?: number;
   constraint?: string;
   note?: string;
@@ -52,10 +99,18 @@ export const isHighlight = (question: QuestionType) =>
 export const isGrid = (question: QuestionType) =>
   question.type === "matrix" || question.type === "matrix_multiple_response";
 
+export const isOrdered = (question: QuestionType) =>
+  question.type === "ordered_response";
+
+export const isMatching = (question: QuestionType) =>
+  question.type === "matching";
+
+export const isCloze = (question: QuestionType) => question.type === "cloze";
+
 export const rowKeys = (row: RowType) =>
   Array.isArray(row.answer) ? row.answer : [row.answer];
 
-const SUPPORTED = ["multiple_choice", "sata", "extended_response"];
+const SUPPORTED = ["multiple_choice", "sata", "extended_response", "trend"];
 
 export const poolsOf = (question: QuestionType) =>
   Object.entries(question.pools ?? {});
@@ -79,6 +134,36 @@ export const renderable = (question: QuestionType) => {
     return (
       Array.isArray(question.segments) &&
       question.segments.some((segment) => segment.correct)
+    );
+
+  if (isCloze(question))
+    return (
+      typeof question.sentence === "string" &&
+      Array.isArray(question.blanks) &&
+      question.blanks.length > 0 &&
+      question.blanks.every((blank) =>
+        blank.options.some((option) => option.correct),
+      )
+    );
+
+  if (isOrdered(question))
+    return (
+      Array.isArray(question.options) &&
+      Array.isArray(question.answer) &&
+      question.answer.length === question.options.length
+    );
+
+  if (isMatching(question))
+    return (
+      Array.isArray(question.items) &&
+      Array.isArray(question.terms) &&
+      question.items.length > 0 &&
+      question.items.every(
+        (item) =>
+          typeof (question.answer as unknown as Record<string, string>)?.[
+            item.id
+          ] === "string",
+      )
     );
 
   if (isGrid(question))
@@ -183,6 +268,17 @@ const clean = (question: QuestionType): QuestionType => ({
     ...row,
     text: strip(row.text),
     rationale: strip(row.rationale),
+  })),
+  items: question.items?.map((item) => ({
+    ...item,
+    text: strip(item.text),
+    rationale: strip(item.rationale),
+  })),
+  terms: question.terms?.map((term) => ({ ...term, text: strip(term.text) })),
+  sentence: question.sentence ? strip(question.sentence) : undefined,
+  blanks: question.blanks?.map((blank) => ({
+    ...blank,
+    options: blank.options.map(tidy),
   })),
 });
 
