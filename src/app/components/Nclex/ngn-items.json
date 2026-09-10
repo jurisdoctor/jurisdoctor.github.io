@@ -1,0 +1,1289 @@
+{
+  "meta": {
+    "course": "N55 Fundamentals of Nursing",
+    "purpose": "Sample items for building UI for three NGN types not yet rendered.",
+    "schemaVersion": 1,
+    "types": {
+      "highlight_text": "Render `passage` as inline segments joined by a space. Each segment is clickable and toggles a yellow highlight. `select` is how many are correct. Score +/-: one point per correct segment, minus one per wrong. Each segment carries its own rationale for review.",
+      "highlight_list": "Same interaction as highlight_text but `options` render as a bulleted list instead of prose. The stem states how many to pick; `select` is that count. Enforce at most `select` highlights.",
+      "matrix_multi": "Checkbox grid. `columns` are the headers, `rows` are the findings. Each row's `answer` is an ARRAY, so a finding may belong to more than one column. Existing `matrix` items in questions.json use a STRING answer and are single-select, so branch on Array.isArray(row.answer)."
+    }
+  },
+  "questions": [
+    {
+      "id": "ch1-ngn1",
+      "chapter": 1,
+      "type": "matrix_multi",
+      "topic": "ANA standards",
+      "difficulty": "comprehension",
+      "stem": "For each nurse activity, select every ANA standard category it demonstrates. An activity may belong to more than one.",
+      "columns": [
+        "Standards of Practice",
+        "Standards of Professional Performance"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Completing an admission assessment on a new patient",
+          "answer": ["Standards of Practice"],
+          "rationale": "Assessment is the first Standard of Practice, the nursing process steps."
+        },
+        {
+          "id": "r2",
+          "text": "Reviewing current literature before revising a unit protocol",
+          "answer": ["Standards of Professional Performance"],
+          "rationale": "Evidence-based practice and research is a Standard of Professional Performance."
+        },
+        {
+          "id": "r3",
+          "text": "Precepting a newly licensed nurse and evaluating that nurse's growth",
+          "answer": ["Standards of Professional Performance"],
+          "rationale": "Covers both education and professional practice evaluation, both Performance standards."
+        },
+        {
+          "id": "r4",
+          "text": "Writing measurable outcomes with the patient, then reassessing whether they were met",
+          "answer": ["Standards of Practice"],
+          "rationale": "Outcomes identification and evaluation are both Standards of Practice."
+        },
+        {
+          "id": "r5",
+          "text": "Coordinating a discharge plan with physical therapy and social work",
+          "answer": [
+            "Standards of Practice",
+            "Standards of Professional Performance"
+          ],
+          "rationale": "Coordination of care is a Standard of Practice, and collaboration is a Standard of Professional Performance. This row is the reason the item allows more than one column."
+        }
+      ],
+      "scoring": "+/-",
+      "takeaway": "Standards of Practice follow the nursing process. Standards of Professional Performance describe how the nurse behaves as a professional.",
+      "strategy": "Ask whether the activity is a step in caring for this patient or a statement about the nurse's professional conduct. Coordination sits in both."
+    },
+    {
+      "id": "ch2-ngn1",
+      "chapter": 2,
+      "type": "highlight_list",
+      "topic": "Case management referral",
+      "difficulty": "application",
+      "scenario": "A 68-year-old with heart failure is being discharged after a third admission in four months. He lives alone, has no car, and tells the nurse he sometimes splits his pills to make the prescription last.",
+      "stem": "Highlight the three (3) findings that most support a referral to case management.",
+      "select": 3,
+      "options": [
+        {
+          "id": "A",
+          "text": "Third admission in four months",
+          "correct": true,
+          "rationale": "Readmission patterns are the classic trigger for case management involvement."
+        },
+        {
+          "id": "B",
+          "text": "Reports splitting pills to make the prescription last",
+          "correct": true,
+          "rationale": "Cost-related nonadherence is a resource problem case management exists to solve."
+        },
+        {
+          "id": "C",
+          "text": "Prefers tea to coffee in the morning",
+          "correct": false,
+          "rationale": "A preference with no bearing on discharge safety."
+        },
+        {
+          "id": "D",
+          "text": "No transportation to follow-up appointments",
+          "correct": true,
+          "rationale": "Access to follow-up is a named determinant of readmission."
+        },
+        {
+          "id": "E",
+          "text": "Has a daughter who calls twice weekly",
+          "correct": false,
+          "rationale": "A support, not a gap. It weighs against the need for referral."
+        },
+        {
+          "id": "F",
+          "text": "Weighs himself most mornings",
+          "correct": false,
+          "rationale": "Evidence of self-management, which is what discharge teaching aims for."
+        }
+      ],
+      "answer": ["A", "B", "D"],
+      "scoring": "+/-",
+      "takeaway": "Case management targets the gaps that drive readmission: cost, transportation, and repeat admissions.",
+      "strategy": "Sort each item into barrier or strength. Only barriers support a referral."
+    },
+    {
+      "id": "ch4-ngn1",
+      "chapter": 4,
+      "type": "highlight_text",
+      "topic": "Delirium red flags",
+      "difficulty": "analysis",
+      "scenario": "An 84-year-old was admitted three days ago for a hip fracture. The nurse reads the night shift note.",
+      "stem": "Highlight the findings that require follow-up.",
+      "select": 4,
+      "passage": [
+        {
+          "id": "s1",
+          "text": "Client admitted three days ago following a mechanical fall at home.",
+          "correct": false,
+          "rationale": "Background history, already known and being treated."
+        },
+        {
+          "id": "s2",
+          "text": "Oriented to person only tonight, having been oriented x 3 on admission.",
+          "correct": true,
+          "rationale": "An acute change in orientation is the defining feature of delirium."
+        },
+        {
+          "id": "s3",
+          "text": "Wears reading glasses and a hearing aid.",
+          "correct": false,
+          "rationale": "Sensory changes are expected with aging and are not new."
+        },
+        {
+          "id": "s4",
+          "text": "Pulling at the intravenous line and attempting to climb out of bed.",
+          "correct": true,
+          "rationale": "New agitation plus a fall risk in a client already admitted for a fracture."
+        },
+        {
+          "id": "s5",
+          "text": "Received a sedative at 2200 for sleep.",
+          "correct": true,
+          "rationale": "Sedatives are a named contributor to delirium in older adults."
+        },
+        {
+          "id": "s6",
+          "text": "Family reports she reads the newspaper daily at home.",
+          "correct": false,
+          "rationale": "Establishes a high cognitive baseline, which makes the change meaningful, but is not itself a finding to act on."
+        },
+        {
+          "id": "s7",
+          "text": "No bowel movement since admission.",
+          "correct": true,
+          "rationale": "Constipation and urinary retention are reversible contributors that are easy to miss."
+        },
+        {
+          "id": "s8",
+          "text": "Temperature 36.9 C, heart rate 78, blood pressure 132/76.",
+          "correct": false,
+          "rationale": "All within normal limits."
+        }
+      ],
+      "answer": ["s2", "s4", "s5", "s7"],
+      "scoring": "+/-",
+      "takeaway": "Delirium is acute, fluctuating, and caused by something. Look for the cause rather than treating the agitation.",
+      "strategy": "Highlight only what is new or reversible. Chronic and baseline findings are distractors."
+    },
+    {
+      "id": "ch5-ngn1",
+      "chapter": 5,
+      "type": "matrix_multi",
+      "topic": "Affirming care",
+      "difficulty": "application",
+      "stem": "For each nurse action, select every domain it supports. An action may support more than one.",
+      "columns": [
+        "Creates a safe environment",
+        "Protects privacy",
+        "Improves data accuracy"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Asking the client which name and pronouns to use, then recording them in the chart",
+          "answer": ["Creates a safe environment", "Improves data accuracy"],
+          "rationale": "Signals respect and ensures every later interaction uses correct information."
+        },
+        {
+          "id": "r2",
+          "text": "Collecting an organ inventory rather than assuming based on gender marker",
+          "answer": ["Improves data accuracy"],
+          "rationale": "Determines which screenings apply. A transgender man may still need cervical screening."
+        },
+        {
+          "id": "r3",
+          "text": "Asking about a partner without assuming the partner's gender",
+          "answer": ["Creates a safe environment", "Improves data accuracy"],
+          "rationale": "Avoids forcing a correction and captures the real support system."
+        },
+        {
+          "id": "r4",
+          "text": "Discussing gender identity only where the conversation cannot be overheard",
+          "answer": ["Protects privacy", "Creates a safe environment"],
+          "rationale": "Disclosure carries real risk. Controlling who hears it is part of safety."
+        },
+        {
+          "id": "r5",
+          "text": "Sharing a client's transgender status with staff not involved in their care",
+          "answer": [],
+          "rationale": "Supports no domain. This is a privacy violation. A row with no correct column tests whether the UI allows an all-empty row."
+        }
+      ],
+      "scoring": "+/-",
+      "takeaway": "Affirming care is not only kindness. Accurate identity and anatomy data change which screenings a client receives.",
+      "strategy": "Ask what each action accomplishes. Several accomplish more than one thing, and one accomplishes nothing."
+    },
+    {
+      "id": "ch6-ngn1",
+      "chapter": 6,
+      "type": "matrix_multi",
+      "topic": "Levels of prevention",
+      "difficulty": "comprehension",
+      "stem": "For each activity, select the level of prevention it represents.",
+      "columns": ["Primary", "Secondary", "Tertiary"],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Administering an influenza vaccine to a well adult",
+          "answer": ["Primary"],
+          "rationale": "Prevents the disease before it occurs."
+        },
+        {
+          "id": "r2",
+          "text": "Screening mammography for a woman with no symptoms",
+          "answer": ["Secondary"],
+          "rationale": "Early detection in someone who has no symptoms yet."
+        },
+        {
+          "id": "r3",
+          "text": "Cardiac rehabilitation after a myocardial infarction",
+          "answer": ["Tertiary"],
+          "rationale": "Limits disability and prevents further decline after disease is established."
+        },
+        {
+          "id": "r4",
+          "text": "Teaching foot care to a client with diagnosed diabetes",
+          "answer": ["Tertiary"],
+          "rationale": "The disease exists. This prevents ulceration and amputation, a complication."
+        },
+        {
+          "id": "r5",
+          "text": "A community blood pressure screening event that also hands out low-sodium recipes",
+          "answer": ["Primary", "Secondary"],
+          "rationale": "Screening is secondary, and the dietary teaching is primary prevention for those who screen normal."
+        }
+      ],
+      "scoring": "+/-",
+      "takeaway": "Primary prevents, secondary detects, tertiary limits damage already done.",
+      "strategy": "Ask whether the disease is absent, present but silent, or present and established."
+    },
+    {
+      "id": "ch7-ngn1",
+      "chapter": 7,
+      "type": "highlight_list",
+      "topic": "Caring behaviors",
+      "difficulty": "comprehension",
+      "scenario": "A nurse is assigned to a client who is frightened before a first chemotherapy infusion.",
+      "stem": "Highlight the three (3) actions that best demonstrate caring presence.",
+      "select": 3,
+      "options": [
+        {
+          "id": "A",
+          "text": "Sitting at eye level and allowing silence while the client cries",
+          "correct": true,
+          "rationale": "Presence means being with the client, not fixing the feeling."
+        },
+        {
+          "id": "B",
+          "text": "Telling the client not to worry because most people tolerate it well",
+          "correct": false,
+          "rationale": "False reassurance closes the conversation."
+        },
+        {
+          "id": "C",
+          "text": "Asking what the client is most afraid of",
+          "correct": true,
+          "rationale": "Knowing the client is a core caring behavior and directs everything after it."
+        },
+        {
+          "id": "D",
+          "text": "Completing the infusion checklist efficiently without interrupting",
+          "correct": false,
+          "rationale": "Competent, but task focused rather than a caring behavior."
+        },
+        {
+          "id": "E",
+          "text": "Explaining each step before doing it and pausing for questions",
+          "correct": true,
+          "rationale": "Comforting through predictability, which reduces the fear of the unknown."
+        },
+        {
+          "id": "F",
+          "text": "Offering to call the chaplain instead of continuing the conversation",
+          "correct": false,
+          "rationale": "Referral can be appropriate later, but here it hands off the moment rather than staying in it."
+        }
+      ],
+      "answer": ["A", "C", "E"],
+      "scoring": "+/-",
+      "takeaway": "Caring is measured by presence and knowing the client, not by reassurance or efficiency.",
+      "strategy": "Reject anything that ends the conversation. Caring behaviors keep it open."
+    },
+    {
+      "id": "ch8-ngn1",
+      "chapter": 8,
+      "type": "highlight_text",
+      "topic": "Chronic illness exacerbation",
+      "difficulty": "analysis",
+      "scenario": "A 54-year-old with chronic obstructive pulmonary disease comes to the clinic. The nurse documents the following.",
+      "stem": "Highlight the findings that indicate an exacerbation rather than the client's usual state.",
+      "select": 4,
+      "passage": [
+        {
+          "id": "s1",
+          "text": "Client reports chronic morning cough productive of clear sputum for several years.",
+          "correct": false,
+          "rationale": "The baseline for this client, stated as long-standing."
+        },
+        {
+          "id": "s2",
+          "text": "Sputum has been thick and green for the past two days.",
+          "correct": true,
+          "rationale": "A change in sputum color and consistency signals infection."
+        },
+        {
+          "id": "s3",
+          "text": "Normally walks to the mailbox without stopping, now stops twice.",
+          "correct": true,
+          "rationale": "A decline measured against the client's own baseline, which is what exacerbation means."
+        },
+        {
+          "id": "s4",
+          "text": "Uses two pillows at night, as he has for years.",
+          "correct": false,
+          "rationale": "Unchanged, so it is baseline rather than acute."
+        },
+        {
+          "id": "s5",
+          "text": "Using accessory muscles at rest.",
+          "correct": true,
+          "rationale": "Work of breathing at rest indicates the client is decompensating."
+        },
+        {
+          "id": "s6",
+          "text": "Oxygen saturation 86% on room air, usually 92%.",
+          "correct": true,
+          "rationale": "A six point drop from a stated personal baseline."
+        },
+        {
+          "id": "s7",
+          "text": "Has smoked one pack daily for thirty years.",
+          "correct": false,
+          "rationale": "A risk factor and a teaching opportunity, but not an acute finding."
+        },
+        {
+          "id": "s8",
+          "text": "Barrel chest noted on inspection.",
+          "correct": false,
+          "rationale": "A chronic structural change, present for years in advanced disease."
+        }
+      ],
+      "answer": ["s2", "s3", "s5", "s6"],
+      "scoring": "+/-",
+      "takeaway": "In chronic illness the abnormal finding is not the alarm. The change from that client's own baseline is.",
+      "strategy": "For every finding ask: is this new, or has it always been true for him? Only the new ones count."
+    },
+    {
+      "id": "ch9-ngn1",
+      "chapter": 9,
+      "type": "matrix_multi",
+      "topic": "Culturally responsive care",
+      "difficulty": "application",
+      "stem": "For each action, select every principle it upholds.",
+      "columns": [
+        "Accurate communication",
+        "Respects client autonomy",
+        "Avoids stereotyping"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Using a professional interpreter rather than the client's teenage son",
+          "answer": ["Accurate communication", "Respects client autonomy"],
+          "rationale": "Protects accuracy and confidentiality, and frees the client to speak openly about their own care."
+        },
+        {
+          "id": "r2",
+          "text": "Asking the client what they believe caused the illness",
+          "answer": ["Respects client autonomy", "Avoids stereotyping"],
+          "rationale": "Treats this client as the authority on their own beliefs rather than assuming from background."
+        },
+        {
+          "id": "r3",
+          "text": "Looking up the client's culture in a reference guide and following what it says",
+          "answer": [],
+          "rationale": "Upholds none. Group generalizations applied to an individual are the definition of stereotyping."
+        },
+        {
+          "id": "r4",
+          "text": "Speaking to the client directly while the interpreter translates",
+          "answer": ["Accurate communication", "Respects client autonomy"],
+          "rationale": "Keeps the client as the participant rather than making the interpreter the conversation partner."
+        },
+        {
+          "id": "r5",
+          "text": "Asking whether any practices around food or modesty should shape the plan of care",
+          "answer": [
+            "Respects client autonomy",
+            "Avoids stereotyping",
+            "Accurate communication"
+          ],
+          "rationale": "An open question that gathers real data instead of assuming, and lets the client direct the plan."
+        }
+      ],
+      "scoring": "+/-",
+      "takeaway": "Cultural competence is asking this client, not knowing facts about their group.",
+      "strategy": "Any option where the nurse assumes rather than asks upholds nothing."
+    },
+    {
+      "id": "ch14-ngn1",
+      "chapter": 14,
+      "type": "highlight_text",
+      "topic": "Polypharmacy and falls",
+      "difficulty": "analysis",
+      "scenario": "An 80-year-old comes to the clinic with her daughter for a routine visit.",
+      "stem": "Highlight the findings that increase this client's risk of falling.",
+      "select": 4,
+      "passage": [
+        {
+          "id": "s1",
+          "text": "Client lives alone in a two-story home and does her own cooking.",
+          "correct": false,
+          "rationale": "Describes independence. Stairs alone are not a risk factor without impairment."
+        },
+        {
+          "id": "s2",
+          "text": "Takes nine prescription medications including a diuretic and a benzodiazepine for sleep.",
+          "correct": true,
+          "rationale": "Polypharmacy is a named risk, and both of those classes independently raise fall risk."
+        },
+        {
+          "id": "s3",
+          "text": "Reports feeling dizzy when she stands up quickly.",
+          "correct": true,
+          "rationale": "Orthostatic symptoms are a direct fall mechanism."
+        },
+        {
+          "id": "s4",
+          "text": "Wears bifocals updated last year.",
+          "correct": true,
+          "rationale": "Bifocals distort depth perception at stair edges and are a documented fall contributor."
+        },
+        {
+          "id": "s5",
+          "text": "Daughter reports two loose throw rugs in the hallway.",
+          "correct": true,
+          "rationale": "An environmental hazard and the most easily corrected item here."
+        },
+        {
+          "id": "s6",
+          "text": "Attends a water aerobics class twice weekly.",
+          "correct": false,
+          "rationale": "Exercise is protective and reduces fall risk."
+        },
+        {
+          "id": "s7",
+          "text": "Blood pressure 138/78 seated.",
+          "correct": false,
+          "rationale": "Acceptable, and a single seated reading does not show orthostatic change."
+        }
+      ],
+      "answer": ["s2", "s3", "s4", "s5"],
+      "scoring": "+/-",
+      "takeaway": "Fall risk is multifactorial: medications, sensory changes, orthostasis, and environment.",
+      "strategy": "Distractors here describe function and protective habits. Highlight only what makes a fall more likely."
+    },
+    {
+      "id": "ch15-ngn1",
+      "chapter": 15,
+      "type": "highlight_list",
+      "topic": "Priority findings to report",
+      "difficulty": "analysis",
+      "scenario": "The nurse is preparing to call the provider about a postoperative client.",
+      "stem": "Highlight the three (3) highest priority findings to emphasize to the provider.",
+      "select": 3,
+      "options": [
+        {
+          "id": "A",
+          "text": "Amount of oral intake",
+          "correct": false,
+          "rationale": "Useful data, but not what changes management in the next minutes."
+        },
+        {
+          "id": "B",
+          "text": "Blood pressure falling from 118/72 to 88/50",
+          "correct": true,
+          "rationale": "A falling pressure suggests hypovolemia or sepsis and demands action now."
+        },
+        {
+          "id": "C",
+          "text": "Temperature rising from 37.1 C to 38.9 C",
+          "correct": true,
+          "rationale": "A rising fever with hypotension points toward sepsis."
+        },
+        {
+          "id": "D",
+          "text": "New confusion in a previously alert client",
+          "correct": true,
+          "rationale": "Acute mental status change is an early and often first sign of deterioration."
+        },
+        {
+          "id": "E",
+          "text": "Client's preference for a private room",
+          "correct": false,
+          "rationale": "Not clinical."
+        },
+        {
+          "id": "F",
+          "text": "Dressing dry and intact",
+          "correct": false,
+          "rationale": "A normal finding. Normal findings do not drive a provider call."
+        }
+      ],
+      "answer": ["B", "C", "D"],
+      "scoring": "+/-",
+      "takeaway": "Report the findings that are changing and that point to instability, not the ones that are stable.",
+      "strategy": "Highlight what is trending in the wrong direction. Normal and non-clinical items are distractors."
+    },
+    {
+      "id": "ch16-ngn1",
+      "chapter": 16,
+      "type": "highlight_text",
+      "topic": "Findings requiring intervention",
+      "difficulty": "analysis",
+      "scenario": "The nurse cares for a newly admitted client in the Emergency department.",
+      "stem": "Highlight the findings that require intervention.",
+      "select": 4,
+      "passage": [
+        {
+          "id": "s1",
+          "text": "Client brought to the Emergency department via ambulance.",
+          "correct": false,
+          "rationale": "Mode of arrival, not a clinical finding."
+        },
+        {
+          "id": "s2",
+          "text": "Client is alert and oriented x 3.",
+          "correct": false,
+          "rationale": "A normal neurological finding."
+        },
+        {
+          "id": "s3",
+          "text": "Reports pain 9 out of 10 in the right lower flank, radiating from the right upper quadrant to the mid and lower back for two days.",
+          "correct": true,
+          "rationale": "Severe pain with a radiating pattern requires assessment and management now."
+        },
+        {
+          "id": "s4",
+          "text": "States the pain has increased today over the past seven hours.",
+          "correct": true,
+          "rationale": "A worsening trend, which changes urgency."
+        },
+        {
+          "id": "s5",
+          "text": "Febrile at 38.8 C for the last 24 hours.",
+          "correct": true,
+          "rationale": "Sustained fever with flank pain suggests infection."
+        },
+        {
+          "id": "s6",
+          "text": "Reports vomiting episodes for 48 hours.",
+          "correct": true,
+          "rationale": "Two days of vomiting risks dehydration and electrolyte loss."
+        },
+        {
+          "id": "s7",
+          "text": "Denies dysuria, polyuria, and abdominal pain.",
+          "correct": false,
+          "rationale": "Negative findings. They narrow the differential but need no intervention."
+        }
+      ],
+      "answer": ["s3", "s4", "s5", "s6"],
+      "scoring": "+/-",
+      "takeaway": "Findings that require intervention are abnormal, worsening, or threaten stability. Negatives and normals are neither.",
+      "strategy": "Read each sentence and ask whether it would change what you do in the next hour."
+    },
+    {
+      "id": "ch17-ngn1",
+      "chapter": 17,
+      "type": "matrix_multi",
+      "topic": "Supporting data",
+      "difficulty": "analysis",
+      "scenario": "A 72-year-old admitted with pneumonia has decreased mobility, poor intake, and a reddened sacrum.",
+      "stem": "For each assessment finding, select every nursing diagnosis it supports. A finding may support more than one.",
+      "columns": [
+        "Impaired gas exchange",
+        "Risk for impaired skin integrity",
+        "Imbalanced nutrition"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Oxygen saturation 88% on room air",
+          "answer": ["Impaired gas exchange"],
+          "rationale": "Direct evidence of inadequate oxygenation."
+        },
+        {
+          "id": "r2",
+          "text": "Eating less than 25% of meals for four days",
+          "answer": [
+            "Imbalanced nutrition",
+            "Risk for impaired skin integrity"
+          ],
+          "rationale": "Poor intake is nutritional data and is also a named risk factor for skin breakdown."
+        },
+        {
+          "id": "r3",
+          "text": "Remains in bed, repositioning only with assistance",
+          "answer": [
+            "Risk for impaired skin integrity",
+            "Impaired gas exchange"
+          ],
+          "rationale": "Immobility drives pressure injury and also worsens atelectasis and gas exchange."
+        },
+        {
+          "id": "r4",
+          "text": "Nonblanchable redness over the sacrum",
+          "answer": ["Risk for impaired skin integrity"],
+          "rationale": "Nonblanchable redness is already a stage 1 pressure injury, the strongest single piece of evidence here."
+        },
+        {
+          "id": "r5",
+          "text": "Serum albumin 2.6 g/dL",
+          "answer": [
+            "Imbalanced nutrition",
+            "Risk for impaired skin integrity"
+          ],
+          "rationale": "Low albumin reflects poor protein status and predicts impaired healing."
+        }
+      ],
+      "scoring": "+/-",
+      "takeaway": "One piece of assessment data often supports several diagnoses. That overlap is what the matrix format is testing.",
+      "strategy": "Take each finding across the row and ask separately whether it supports each column."
+    },
+    {
+      "id": "ch18-ngn1",
+      "chapter": 18,
+      "type": "highlight_list",
+      "topic": "Writing outcomes",
+      "difficulty": "application",
+      "stem": "Highlight the three (3) statements that are correctly written client outcomes.",
+      "select": 3,
+      "options": [
+        {
+          "id": "A",
+          "text": "Client will ambulate 20 feet with a walker twice daily by postoperative day three.",
+          "correct": true,
+          "rationale": "Client centered, measurable, and time limited."
+        },
+        {
+          "id": "B",
+          "text": "Encourage the client to ambulate in the hallway.",
+          "correct": false,
+          "rationale": "This is a nursing intervention, not an outcome. It describes what the nurse does."
+        },
+        {
+          "id": "C",
+          "text": "Client will report pain of 3 or less on a 0 to 10 scale within 60 minutes of analgesic administration.",
+          "correct": true,
+          "rationale": "Specific, measurable, and bounded in time."
+        },
+        {
+          "id": "D",
+          "text": "Client will understand the importance of incentive spirometry.",
+          "correct": false,
+          "rationale": "Understand cannot be measured. A correct version would say demonstrate or describe."
+        },
+        {
+          "id": "E",
+          "text": "Client will demonstrate correct insulin self-injection before discharge.",
+          "correct": true,
+          "rationale": "Demonstrate is observable and the timeframe is defined."
+        },
+        {
+          "id": "F",
+          "text": "Client will have adequate oxygenation.",
+          "correct": false,
+          "rationale": "Adequate is undefined, so two nurses could disagree on whether it was met."
+        }
+      ],
+      "answer": ["A", "C", "E"],
+      "scoring": "+/-",
+      "takeaway": "An outcome describes what the client will do, in observable terms, by a stated time.",
+      "strategy": "Reject anything starting with a nurse verb, and anything using understand, adequate, or normal."
+    },
+    {
+      "id": "ch19-ngn1",
+      "chapter": 19,
+      "type": "highlight_list",
+      "topic": "Delegation",
+      "difficulty": "application",
+      "scenario": "A charge nurse is assigning tasks on a busy medical unit that includes assistive personnel.",
+      "stem": "Highlight the three (3) tasks that may be delegated to assistive personnel.",
+      "select": 3,
+      "options": [
+        {
+          "id": "A",
+          "text": "Obtaining routine vital signs on a stable client",
+          "correct": true,
+          "rationale": "A standardized task with a predictable outcome on a stable client."
+        },
+        {
+          "id": "B",
+          "text": "Performing the admission assessment on a new client",
+          "correct": false,
+          "rationale": "Assessment cannot be delegated. It requires nursing judgment."
+        },
+        {
+          "id": "C",
+          "text": "Assisting a client to the bathroom and recording output",
+          "correct": true,
+          "rationale": "Routine care and simple data collection within the scope of assistive personnel."
+        },
+        {
+          "id": "D",
+          "text": "Teaching a client how to use an incentive spirometer",
+          "correct": false,
+          "rationale": "Teaching cannot be delegated."
+        },
+        {
+          "id": "E",
+          "text": "Repositioning a client every two hours",
+          "correct": true,
+          "rationale": "A routine standardized task."
+        },
+        {
+          "id": "F",
+          "text": "Evaluating whether a client's pain improved after medication",
+          "correct": false,
+          "rationale": "Evaluation is a nursing process step and stays with the nurse."
+        }
+      ],
+      "answer": ["A", "C", "E"],
+      "scoring": "+/-",
+      "takeaway": "Assessment, teaching, evaluation, and judgment never transfer. Routine standardized tasks on stable clients may.",
+      "strategy": "If the option starts with assess, teach, evaluate, or plan, it stays with the nurse."
+    },
+    {
+      "id": "ch20-ngn1",
+      "chapter": 20,
+      "type": "matrix_multi",
+      "topic": "Evaluating outcomes",
+      "difficulty": "analysis",
+      "scenario": "The outcome was: client will ambulate 20 feet with a walker twice daily by postoperative day three. It is now day three.",
+      "stem": "For each observation, select whether it shows the outcome was met, and whether it requires the plan to be revised. An observation may be both or neither.",
+      "columns": ["Outcome met", "Revise the plan"],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Client ambulated 25 feet with the walker twice today",
+          "answer": ["Outcome met"],
+          "rationale": "Exceeds the distance and meets the frequency. No revision needed."
+        },
+        {
+          "id": "r2",
+          "text": "Client ambulated 20 feet once today and declined the second walk due to pain",
+          "answer": ["Revise the plan"],
+          "rationale": "Partially met only. Pain is the barrier, so the plan needs a pain management step before ambulation."
+        },
+        {
+          "id": "r3",
+          "text": "Client ambulated 20 feet twice but required two staff for balance",
+          "answer": ["Outcome met", "Revise the plan"],
+          "rationale": "The stated outcome was achieved, yet the assistance level reveals a safety problem the plan did not capture."
+        },
+        {
+          "id": "r4",
+          "text": "Client refused to get out of bed both times",
+          "answer": ["Revise the plan"],
+          "rationale": "Not met, and refusal needs its cause explored before the plan can work."
+        },
+        {
+          "id": "r5",
+          "text": "Client ambulated to the bathroom independently without the walker",
+          "answer": ["Revise the plan"],
+          "rationale": "Not met as written, and it is a safety concern rather than progress if the walker was ordered."
+        }
+      ],
+      "scoring": "+/-",
+      "takeaway": "An outcome can be met and still leave a problem the plan must address.",
+      "strategy": "Evaluate against the outcome exactly as written, then ask separately whether anything new appeared."
+    },
+    {
+      "id": "ch21-ngn1",
+      "chapter": 21,
+      "type": "highlight_list",
+      "topic": "Priority setting",
+      "difficulty": "analysis",
+      "scenario": "A nurse receives report on four clients at the start of the shift.",
+      "stem": "Highlight the three (3) clients the nurse should assess first.",
+      "select": 3,
+      "options": [
+        {
+          "id": "A",
+          "text": "A client with an oxygen saturation of 87% on 2 liters by nasal cannula",
+          "correct": true,
+          "rationale": "Airway and breathing come first, and this is a failing oxygenation."
+        },
+        {
+          "id": "B",
+          "text": "A client requesting a bedpan",
+          "correct": false,
+          "rationale": "A comfort need that can be delegated."
+        },
+        {
+          "id": "C",
+          "text": "A client with new onset chest pain rated 7 out of 10",
+          "correct": true,
+          "rationale": "New chest pain is potentially life threatening and time critical."
+        },
+        {
+          "id": "D",
+          "text": "A client whose blood glucose is 48 mg/dL",
+          "correct": true,
+          "rationale": "Hypoglycemia progresses to seizure and loss of consciousness quickly."
+        },
+        {
+          "id": "E",
+          "text": "A client asking when the provider will round",
+          "correct": false,
+          "rationale": "An information need, not a clinical priority."
+        },
+        {
+          "id": "F",
+          "text": "A client due for a scheduled dressing change",
+          "correct": false,
+          "rationale": "Scheduled routine care that can wait."
+        }
+      ],
+      "answer": ["A", "C", "D"],
+      "scoring": "+/-",
+      "takeaway": "Prioritize by threat to life: airway and breathing, then circulation, then anything that deteriorates quickly.",
+      "strategy": "Separate the unstable from the merely inconvenienced. Requests and scheduled tasks are almost never first."
+    },
+    {
+      "id": "ch22-ngn1",
+      "chapter": 22,
+      "type": "matrix_multi",
+      "topic": "Ethical principles",
+      "difficulty": "analysis",
+      "stem": "For each situation, select every ethical principle involved. A situation may involve more than one.",
+      "columns": ["Autonomy", "Beneficence", "Nonmaleficence", "Justice"],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "A competent client refuses a blood transfusion on religious grounds and the nurse honors it",
+          "answer": ["Autonomy"],
+          "rationale": "The client's right to decide, even against medical advice."
+        },
+        {
+          "id": "r2",
+          "text": "Withholding a medication after noticing the dose ordered is ten times the safe range",
+          "answer": ["Nonmaleficence", "Beneficence"],
+          "rationale": "Prevents harm and acts in the client's interest."
+        },
+        {
+          "id": "r3",
+          "text": "Allocating the last ICU bed by clinical need rather than by who arrived first",
+          "answer": ["Justice"],
+          "rationale": "Fair distribution of a scarce resource."
+        },
+        {
+          "id": "r4",
+          "text": "Explaining risks and benefits fully so a client can decide about surgery",
+          "answer": ["Autonomy", "Beneficence"],
+          "rationale": "Informed consent supports autonomy, and giving the information serves the client's good."
+        },
+        {
+          "id": "r5",
+          "text": "Restraining a confused client for staff convenience",
+          "answer": [],
+          "rationale": "Upholds nothing. It violates autonomy and nonmaleficence, which is different from supporting them."
+        }
+      ],
+      "scoring": "+/-",
+      "takeaway": "Autonomy is the client deciding, beneficence is doing good, nonmaleficence is avoiding harm, justice is fairness.",
+      "strategy": "Ask which principle the action supports, not which it violates. A violating action supports none."
+    },
+    {
+      "id": "ch23-ngn1",
+      "chapter": 23,
+      "type": "matrix_multi",
+      "topic": "Legal risk",
+      "difficulty": "analysis",
+      "stem": "For each nurse action, select every category that applies.",
+      "columns": [
+        "Meets the standard of care",
+        "Creates legal risk",
+        "Requires an incident report"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Documenting a medication as given before actually administering it",
+          "answer": ["Creates legal risk"],
+          "rationale": "Falsified documentation. No incident has occurred yet, but the record is now inaccurate."
+        },
+        {
+          "id": "r2",
+          "text": "Administering a medication to the wrong client and notifying the provider",
+          "answer": ["Creates legal risk", "Requires an incident report"],
+          "rationale": "An error occurred. Reporting it is correct, but the error itself carries liability."
+        },
+        {
+          "id": "r3",
+          "text": "Questioning an illegible order before carrying it out",
+          "answer": ["Meets the standard of care"],
+          "rationale": "The nurse is independently accountable for verifying orders."
+        },
+        {
+          "id": "r4",
+          "text": "Discussing a client's condition in a crowded elevator",
+          "answer": ["Creates legal risk"],
+          "rationale": "A privacy breach under HIPAA."
+        },
+        {
+          "id": "r5",
+          "text": "A client falls while ambulating with the nurse and is uninjured",
+          "answer": ["Requires an incident report"],
+          "rationale": "Any fall is reported regardless of injury. Being present and assisting means the standard was not breached."
+        }
+      ],
+      "scoring": "+/-",
+      "takeaway": "An incident report documents an event. It is not an admission of wrongdoing, and the two do not always occur together.",
+      "strategy": "Ask separately whether an event happened, and whether the nurse acted below the standard."
+    },
+    {
+      "id": "ch24-ngn1",
+      "chapter": 24,
+      "type": "highlight_list",
+      "topic": "Therapeutic communication",
+      "difficulty": "application",
+      "scenario": "A client says quietly, I do not think this treatment is going to work.",
+      "stem": "Highlight the three (3) therapeutic responses.",
+      "select": 3,
+      "options": [
+        {
+          "id": "A",
+          "text": "You sound discouraged.",
+          "correct": true,
+          "rationale": "Reflection names the feeling and invites the client to continue."
+        },
+        {
+          "id": "B",
+          "text": "Why would you say that?",
+          "correct": false,
+          "rationale": "Why questions demand justification and put the client on the defensive."
+        },
+        {
+          "id": "C",
+          "text": "Tell me more about what you are thinking.",
+          "correct": true,
+          "rationale": "An open ended invitation that keeps control with the client."
+        },
+        {
+          "id": "D",
+          "text": "Your doctor is excellent, so try not to worry.",
+          "correct": false,
+          "rationale": "False reassurance plus deflection to someone else."
+        },
+        {
+          "id": "E",
+          "text": "Sitting down and remaining silent for a moment",
+          "correct": true,
+          "rationale": "Silence gives the client room to say the harder thing."
+        },
+        {
+          "id": "F",
+          "text": "Everyone feels that way at first.",
+          "correct": false,
+          "rationale": "Minimizes this client's experience by generalizing it."
+        }
+      ],
+      "answer": ["A", "C", "E"],
+      "scoring": "+/-",
+      "takeaway": "Therapeutic responses open the conversation. Reassurance, why questions, and generalizations close it.",
+      "strategy": "Ask whether the client is likely to say more after this response. If not, it is not therapeutic."
+    },
+    {
+      "id": "ch25-ngn1",
+      "chapter": 25,
+      "type": "matrix_multi",
+      "topic": "Domains of learning",
+      "difficulty": "comprehension",
+      "stem": "For each teaching activity, select every learning domain it addresses.",
+      "columns": ["Cognitive", "Affective", "Psychomotor"],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Client explains which foods raise blood glucose",
+          "answer": ["Cognitive"],
+          "rationale": "Knowledge and understanding."
+        },
+        {
+          "id": "r2",
+          "text": "Client draws up and injects the correct insulin dose",
+          "answer": ["Psychomotor"],
+          "rationale": "A performed skill."
+        },
+        {
+          "id": "r3",
+          "text": "Client states willingness to check glucose before driving",
+          "answer": ["Affective"],
+          "rationale": "Attitude and values, the willingness to adopt a behavior."
+        },
+        {
+          "id": "r4",
+          "text": "Client demonstrates foot inspection while explaining what changes to report",
+          "answer": ["Psychomotor", "Cognitive"],
+          "rationale": "A skill performed and knowledge stated at the same time."
+        },
+        {
+          "id": "r5",
+          "text": "Client describes how diabetes has changed his view of himself and asks to join a support group",
+          "answer": ["Affective", "Cognitive"],
+          "rationale": "Feelings and self concept, together with articulated understanding."
+        }
+      ],
+      "scoring": "+/-",
+      "takeaway": "Cognitive is knowing, affective is feeling and valuing, psychomotor is doing. Real teaching often spans two.",
+      "strategy": "Look at the verb. Explain and describe are cognitive, demonstrate is psychomotor, and willingness is affective."
+    },
+    {
+      "id": "ch26-ngn1",
+      "chapter": 26,
+      "type": "highlight_text",
+      "topic": "Documentation errors",
+      "difficulty": "application",
+      "scenario": "A nurse reviews a colleague's narrative note before the end of shift.",
+      "stem": "Highlight the portions of this note that do not meet documentation standards.",
+      "select": 4,
+      "passage": [
+        {
+          "id": "s1",
+          "text": "0800 Client reports pain 7 out of 10 in the right hip.",
+          "correct": false,
+          "rationale": "Objective, quantified, and timed. This is correct documentation."
+        },
+        {
+          "id": "s2",
+          "text": "Client appears to be drug seeking.",
+          "correct": true,
+          "rationale": "A judgment, not an observation. Records opinion rather than fact."
+        },
+        {
+          "id": "s3",
+          "text": "0815 Hydromorphone 1 mg given intravenously.",
+          "correct": false,
+          "rationale": "Drug, dose, route, and time are all present."
+        },
+        {
+          "id": "s4",
+          "text": "Client was uncooperative during the dressing change.",
+          "correct": true,
+          "rationale": "A label. Should describe the observed behavior instead."
+        },
+        {
+          "id": "s5",
+          "text": "Error in the previous entry covered with correction fluid and rewritten.",
+          "correct": true,
+          "rationale": "Never obscure an entry. Draw a single line, initial, and date it."
+        },
+        {
+          "id": "s6",
+          "text": "0900 Reassessed pain, client reports 3 out of 10.",
+          "correct": false,
+          "rationale": "Correct follow-up documentation showing the response to the intervention."
+        },
+        {
+          "id": "s7",
+          "text": "Charted at 1000 for care planned for 1400 so the shift would not run behind.",
+          "correct": true,
+          "rationale": "Charting in advance is falsification, regardless of intent."
+        }
+      ],
+      "answer": ["s2", "s4", "s5", "s7"],
+      "scoring": "+/-",
+      "takeaway": "Document what you observed, when it happened, and only after it happened.",
+      "strategy": "Highlight anything that is an opinion, a label, an alteration, or written ahead of the event."
+    },
+    {
+      "id": "ch37-ngn1",
+      "chapter": 37,
+      "type": "highlight_text",
+      "topic": "Stress response",
+      "difficulty": "application",
+      "scenario": "A nurse meets with a client whose spouse died four months ago.",
+      "stem": "Highlight the findings that suggest this client needs further intervention rather than expected grieving.",
+      "select": 4,
+      "passage": [
+        {
+          "id": "s1",
+          "text": "Client cries when describing the spouse's last weeks.",
+          "correct": false,
+          "rationale": "Expected grief. Crying about a loss is not pathology."
+        },
+        {
+          "id": "s2",
+          "text": "Reports sleeping two to three hours nightly for the past two months.",
+          "correct": true,
+          "rationale": "Sustained sleep deprivation is a physical consequence needing intervention."
+        },
+        {
+          "id": "s3",
+          "text": "Has lost 20 pounds without trying.",
+          "correct": true,
+          "rationale": "Significant unintentional weight loss signals the stress is causing physical harm."
+        },
+        {
+          "id": "s4",
+          "text": "Keeps a photograph of the spouse on the bedside table.",
+          "correct": false,
+          "rationale": "A normal act of remembrance."
+        },
+        {
+          "id": "s5",
+          "text": "States there is no reason to keep going.",
+          "correct": true,
+          "rationale": "A passive suicidal statement. This is the highest priority finding in the passage."
+        },
+        {
+          "id": "s6",
+          "text": "Has stopped attending the weekly card game she previously enjoyed.",
+          "correct": true,
+          "rationale": "Withdrawal from previously valued activities at four months suggests complicated grief."
+        },
+        {
+          "id": "s7",
+          "text": "Talks with her daughter on the telephone most days.",
+          "correct": false,
+          "rationale": "Maintained social connection, a protective factor."
+        }
+      ],
+      "answer": ["s2", "s3", "s5", "s6"],
+      "scoring": "+/-",
+      "takeaway": "Grief becomes a clinical problem when it produces physical harm, withdrawal, or hopelessness.",
+      "strategy": "Any statement suggesting the client sees no future is highlighted first, every time."
+    },
+    {
+      "id": "ch43-ngn1",
+      "chapter": 43,
+      "type": "highlight_text",
+      "topic": "Sleep hygiene",
+      "difficulty": "application",
+      "scenario": "A client reports difficulty falling asleep and describes a typical evening.",
+      "stem": "Highlight the habits that are interfering with this client's sleep.",
+      "select": 4,
+      "passage": [
+        {
+          "id": "s1",
+          "text": "Goes to bed at approximately the same time each night.",
+          "correct": false,
+          "rationale": "A consistent schedule supports sleep."
+        },
+        {
+          "id": "s2",
+          "text": "Drinks two cups of coffee after dinner.",
+          "correct": true,
+          "rationale": "Caffeine within six hours of bed delays sleep onset."
+        },
+        {
+          "id": "s3",
+          "text": "Watches television in bed until falling asleep.",
+          "correct": true,
+          "rationale": "Breaks the bed and sleep association, and the light suppresses melatonin."
+        },
+        {
+          "id": "s4",
+          "text": "Keeps the bedroom cool and dark.",
+          "correct": false,
+          "rationale": "Both are recommended."
+        },
+        {
+          "id": "s5",
+          "text": "Takes a two-hour nap most afternoons.",
+          "correct": true,
+          "rationale": "Long late naps reduce sleep drive at night."
+        },
+        {
+          "id": "s6",
+          "text": "Has a glass of wine at bedtime to relax.",
+          "correct": true,
+          "rationale": "Alcohol shortens sleep onset but fragments sleep and suppresses REM later in the night."
+        },
+        {
+          "id": "s7",
+          "text": "Walks for 30 minutes each morning.",
+          "correct": false,
+          "rationale": "Morning exercise improves sleep quality."
+        }
+      ],
+      "answer": ["s2", "s3", "s5", "s6"],
+      "scoring": "+/-",
+      "takeaway": "Caffeine, alcohol, long naps, and screens in bed are the four classic sleep hygiene violations.",
+      "strategy": "Alcohol is the trap. Clients describe it as helping, and it makes sleep worse."
+    },
+    {
+      "id": "ch56-ngn1",
+      "chapter": 56,
+      "type": "matrix_multi",
+      "topic": "Diabetic emergencies",
+      "difficulty": "analysis",
+      "stem": "For each finding, select every condition it is consistent with. A finding may support more than one.",
+      "columns": [
+        "Hypoglycemia",
+        "Diabetic ketoacidosis",
+        "Hyperosmolar hyperglycemic state"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Diaphoresis and shakiness",
+          "answer": ["Hypoglycemia"],
+          "rationale": "Adrenergic symptoms from the catecholamine response to falling glucose."
+        },
+        {
+          "id": "r2",
+          "text": "Kussmaul respirations with fruity breath",
+          "answer": ["Diabetic ketoacidosis"],
+          "rationale": "Deep rapid breathing blows off carbon dioxide to compensate for metabolic acidosis, and acetone gives the odor. Specific to DKA."
+        },
+        {
+          "id": "r3",
+          "text": "Altered mental status",
+          "answer": [
+            "Hypoglycemia",
+            "Diabetic ketoacidosis",
+            "Hyperosmolar hyperglycemic state"
+          ],
+          "rationale": "Common to all three, which is why glucose is checked before anything else in a confused diabetic client."
+        },
+        {
+          "id": "r4",
+          "text": "Serum glucose above 600 mg/dL with minimal ketones",
+          "answer": ["Hyperosmolar hyperglycemic state"],
+          "rationale": "Residual insulin suppresses ketogenesis but not hyperglycemia, the defining difference from DKA."
+        },
+        {
+          "id": "r5",
+          "text": "Polyuria and profound dehydration",
+          "answer": [
+            "Diabetic ketoacidosis",
+            "Hyperosmolar hyperglycemic state"
+          ],
+          "rationale": "Osmotic diuresis occurs in both hyperglycemic states, and is most extreme in HHS."
+        },
+        {
+          "id": "r6",
+          "text": "Typically occurs in type 1 diabetes",
+          "answer": ["Diabetic ketoacidosis"],
+          "rationale": "Absolute insulin deficiency permits unrestrained lipolysis and ketone production."
+        }
+      ],
+      "scoring": "+/-",
+      "takeaway": "Ketones separate DKA from HHS. Altered mental status separates none of them, so check a glucose first.",
+      "strategy": "Work column by column for the specific findings, then decide which rows belong to everything."
+    }
+  ]
+}
