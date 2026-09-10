@@ -2,7 +2,16 @@
 import { useEffect, useRef, useState } from "react";
 import Bowtie from "./Bowtie";
 import { ResultType } from "./ChapterSet";
-import { isMulti, keysOf, OptionType, QuestionType } from "./Questions";
+import Highlight from "./Highlight";
+import Matrix from "./Matrix";
+import {
+  isGrid,
+  isHighlight,
+  isMulti,
+  keysOf,
+  OptionType,
+  QuestionType,
+} from "./Questions";
 
 const SHAKE = [
   { transform: "translateX(0)" },
@@ -192,11 +201,19 @@ const Quiz = ({
   if (!question) return null;
 
   const bowtie = question.type === "bowtie";
-  const multi = bowtie || isMulti(question);
-  const keys = bowtie ? [] : keysOf(question);
-  const correct = bowtie
+  const grid = isGrid(question);
+  const marker = isHighlight(question);
+  const built = bowtie || grid || marker;
+  const multi = built || isMulti(question);
+  const keys = built ? [] : keysOf(question);
+  const correct = built
     ? results[question.id] === "solved"
     : chosen.length === keys.length && keys.every((id) => chosen.includes(id));
+
+  const settleBuilt = (hit: boolean) => {
+    setAnswered(true);
+    onResult(question.id, hit);
+  };
 
   const settle = (picks: string[]) => {
     setAnswered(true);
@@ -266,7 +283,13 @@ const Quiz = ({
           </span>
           {multi && (
             <span className="rounded-full bg-[hsl(219,100%,91%)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
-              {bowtie ? "Bow tie" : "Select all that apply"}
+              {bowtie
+                ? "Bow tie"
+                : marker
+                  ? "Highlight"
+                  : grid
+                    ? "Matrix"
+                    : "Select all that apply"}
             </span>
           )}
           <span className="rounded-full bg-[var(--body-color)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
@@ -295,10 +318,23 @@ const Quiz = ({
           key={`${question.id}-${redo}`}
           question={question}
           answered={answered}
-          onSettle={(hit) => {
-            setAnswered(true);
-            onResult(question.id, hit);
-          }}
+          onSettle={settleBuilt}
+          onClear={() => setAnswered(false)}
+        />
+      ) : marker ? (
+        <Highlight
+          key={`${question.id}-${redo}`}
+          question={question}
+          answered={answered}
+          onSettle={settleBuilt}
+          onClear={() => setAnswered(false)}
+        />
+      ) : grid ? (
+        <Matrix
+          key={`${question.id}-${redo}`}
+          question={question}
+          answered={answered}
+          onSettle={settleBuilt}
           onClear={() => setAnswered(false)}
         />
       ) : (
@@ -316,7 +352,7 @@ const Quiz = ({
         </div>
       )}
 
-      {multi && !bowtie && !answered && (
+      {multi && !built && !answered && (
         <div className="flex flex-wrap items-center gap-4">
           <button
             type="button"

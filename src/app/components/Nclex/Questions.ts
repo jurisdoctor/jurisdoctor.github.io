@@ -12,6 +12,20 @@ export interface PoolType {
   options: OptionType[];
 }
 
+export interface SegmentType {
+  id: string;
+  text: string;
+  correct: boolean;
+  rationale: string;
+}
+
+export interface RowType {
+  id: string;
+  text: string;
+  answer: string | string[];
+  rationale: string;
+}
+
 export interface QuestionType {
   id: string;
   type?: string;
@@ -21,10 +35,25 @@ export interface QuestionType {
   stem: string;
   options: OptionType[];
   pools?: Record<string, PoolType>;
+  segments?: SegmentType[];
+  columns?: string[];
+  rows?: RowType[];
+  select?: number;
+  constraint?: string;
+  note?: string;
   answer: string | string[];
   takeaway: string;
   strategy: string;
 }
+
+export const isHighlight = (question: QuestionType) =>
+  question.type === "highlight";
+
+export const isGrid = (question: QuestionType) =>
+  question.type === "matrix" || question.type === "matrix_multiple_response";
+
+export const rowKeys = (row: RowType) =>
+  Array.isArray(row.answer) ? row.answer : [row.answer];
 
 const SUPPORTED = ["multiple_choice", "sata", "extended_response"];
 
@@ -43,12 +72,31 @@ const pooled = (question: QuestionType) => {
   );
 };
 
-export const renderable = (question: QuestionType) =>
-  question.type === "bowtie"
-    ? pooled(question)
-    : SUPPORTED.includes(question.type ?? "multiple_choice") &&
-      Array.isArray(question.options) &&
-      question.options.some((option) => option.correct);
+export const renderable = (question: QuestionType) => {
+  if (question.type === "bowtie") return pooled(question);
+
+  if (isHighlight(question))
+    return (
+      Array.isArray(question.segments) &&
+      question.segments.some((segment) => segment.correct)
+    );
+
+  if (isGrid(question))
+    return (
+      Array.isArray(question.columns) &&
+      Array.isArray(question.rows) &&
+      question.rows.length > 0 &&
+      question.rows.every((row) =>
+        rowKeys(row).every((key) => question.columns?.includes(key)),
+      )
+    );
+
+  return (
+    SUPPORTED.includes(question.type ?? "multiple_choice") &&
+    Array.isArray(question.options) &&
+    question.options.some((option) => option.correct)
+  );
+};
 
 export const keysOf = (question: QuestionType) =>
   question.options
@@ -126,6 +174,16 @@ const clean = (question: QuestionType): QuestionType => ({
     ? question.options.map(tidy)
     : question.options,
   pools: cleanPools(question),
+  segments: question.segments?.map((segment) => ({
+    ...segment,
+    text: strip(segment.text),
+    rationale: strip(segment.rationale),
+  })),
+  rows: question.rows?.map((row) => ({
+    ...row,
+    text: strip(row.text),
+    rationale: strip(row.rationale),
+  })),
 });
 
 const bank = data.chapters as unknown as BankType[];
