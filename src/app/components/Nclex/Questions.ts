@@ -6,6 +6,12 @@ export interface OptionType {
   correct: boolean;
   rationale: string;
 }
+export interface PoolType {
+  label: string;
+  select: number;
+  options: OptionType[];
+}
+
 export interface QuestionType {
   id: string;
   type?: string;
@@ -14,6 +20,7 @@ export interface QuestionType {
   scenario?: string;
   stem: string;
   options: OptionType[];
+  pools?: Record<string, PoolType>;
   answer: string | string[];
   takeaway: string;
   strategy: string;
@@ -21,10 +28,27 @@ export interface QuestionType {
 
 const SUPPORTED = ["multiple_choice", "sata", "extended_response"];
 
+export const poolsOf = (question: QuestionType) =>
+  Object.entries(question.pools ?? {});
+
+const pooled = (question: QuestionType) => {
+  const pools = poolsOf(question);
+  return (
+    pools.length > 0 &&
+    pools.every(
+      ([, pool]) =>
+        Array.isArray(pool.options) &&
+        pool.options.filter((option) => option.correct).length === pool.select,
+    )
+  );
+};
+
 export const renderable = (question: QuestionType) =>
-  SUPPORTED.includes(question.type ?? "multiple_choice") &&
-  Array.isArray(question.options) &&
-  question.options.some((option) => option.correct);
+  question.type === "bowtie"
+    ? pooled(question)
+    : SUPPORTED.includes(question.type ?? "multiple_choice") &&
+      Array.isArray(question.options) &&
+      question.options.some((option) => option.correct);
 
 export const keysOf = (question: QuestionType) =>
   question.options
@@ -66,10 +90,28 @@ const strip = (text: string) =>
 
 const answerOf = (question: QuestionType) => {
   if (Array.isArray(question.answer)) return question.answer;
+  if (typeof question.answer !== "string" || !Array.isArray(question.options))
+    return question.answer;
   const packed = question.options
     .map((option) => option.id)
     .filter((id) => question.answer.includes(id));
   return packed.length > 1 ? packed : question.answer;
+};
+
+const tidy = (option: OptionType) => ({
+  ...option,
+  text: strip(option.text),
+  rationale: strip(option.rationale),
+});
+
+const cleanPools = (question: QuestionType) => {
+  if (!question.pools) return undefined;
+  return Object.fromEntries(
+    Object.entries(question.pools).map(([key, pool]) => [
+      key,
+      { ...pool, label: strip(pool.label), options: pool.options.map(tidy) },
+    ]),
+  );
 };
 
 const clean = (question: QuestionType): QuestionType => ({
@@ -80,11 +122,10 @@ const clean = (question: QuestionType): QuestionType => ({
   stem: strip(question.stem),
   takeaway: strip(question.takeaway),
   strategy: strip(question.strategy),
-  options: question.options.map((option) => ({
-    ...option,
-    text: strip(option.text),
-    rationale: strip(option.rationale),
-  })),
+  options: Array.isArray(question.options)
+    ? question.options.map(tidy)
+    : question.options,
+  pools: cleanPools(question),
 });
 
 const bank = data.chapters as unknown as BankType[];

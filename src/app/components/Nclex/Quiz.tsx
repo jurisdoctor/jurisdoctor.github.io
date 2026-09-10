@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Bowtie from "./Bowtie";
 import { ResultType } from "./ChapterSet";
 import { isMulti, keysOf, OptionType, QuestionType } from "./Questions";
 
@@ -175,6 +176,7 @@ const Quiz = ({
   const [at, setAt] = useState(start);
   const [chosen, setChosen] = useState<string[]>([]);
   const [answered, setAnswered] = useState(false);
+  const [redo, setRedo] = useState(0);
   const [done, setDone] = useState(false);
 
   const right = questions.filter(
@@ -189,10 +191,12 @@ const Quiz = ({
   const question = questions[at];
   if (!question) return null;
 
-  const multi = isMulti(question);
-  const keys = keysOf(question);
-  const correct =
-    chosen.length === keys.length && keys.every((id) => chosen.includes(id));
+  const bowtie = question.type === "bowtie";
+  const multi = bowtie || isMulti(question);
+  const keys = bowtie ? [] : keysOf(question);
+  const correct = bowtie
+    ? results[question.id] === "solved"
+    : chosen.length === keys.length && keys.every((id) => chosen.includes(id));
 
   const settle = (picks: string[]) => {
     setAnswered(true);
@@ -216,6 +220,7 @@ const Quiz = ({
   const clear = () => {
     setChosen([]);
     setAnswered(false);
+    setRedo((prev) => prev + 1);
   };
 
   const next = () => {
@@ -261,7 +266,7 @@ const Quiz = ({
           </span>
           {multi && (
             <span className="rounded-full bg-[hsl(219,100%,91%)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
-              Select all that apply
+              {bowtie ? "Bow tie" : "Select all that apply"}
             </span>
           )}
           <span className="rounded-full bg-[var(--body-color)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
@@ -285,20 +290,33 @@ const Quiz = ({
 
       <p className="mb-6 text-lg sm:text-base">{question.stem}</p>
 
-      <div className="mb-6 grid gap-y-3">
-        {question.options.map((option) => (
-          <Option
-            key={option.id}
-            option={option}
-            chosen={chosen.includes(option.id)}
-            answered={answered}
-            multi={multi}
-            onToggle={toggle}
-          />
-        ))}
-      </div>
+      {bowtie ? (
+        <Bowtie
+          key={`${question.id}-${redo}`}
+          question={question}
+          answered={answered}
+          onSettle={(hit) => {
+            setAnswered(true);
+            onResult(question.id, hit);
+          }}
+          onClear={() => setAnswered(false)}
+        />
+      ) : (
+        <div className="mb-6 grid gap-y-3">
+          {question.options.map((option) => (
+            <Option
+              key={option.id}
+              option={option}
+              chosen={chosen.includes(option.id)}
+              answered={answered}
+              multi={multi}
+              onToggle={toggle}
+            />
+          ))}
+        </div>
+      )}
 
-      {multi && !answered && (
+      {multi && !bowtie && !answered && (
         <div className="flex flex-wrap items-center gap-4">
           <button
             type="button"
