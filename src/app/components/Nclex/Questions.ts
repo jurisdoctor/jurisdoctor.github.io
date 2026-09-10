@@ -11,12 +11,20 @@ export interface QuestionType {
   type?: string;
   topic: string;
   difficulty: string;
+  scenario?: string;
   stem: string;
   options: OptionType[];
   answer: string | string[];
   takeaway: string;
   strategy: string;
 }
+
+const SUPPORTED = ["multiple_choice", "sata", "extended_response"];
+
+export const renderable = (question: QuestionType) =>
+  SUPPORTED.includes(question.type ?? "multiple_choice") &&
+  Array.isArray(question.options) &&
+  question.options.some((option) => option.correct);
 
 export const keysOf = (question: QuestionType) =>
   question.options
@@ -68,6 +76,7 @@ const clean = (question: QuestionType): QuestionType => ({
   ...question,
   answer: answerOf(question),
   topic: strip(question.topic),
+  scenario: question.scenario ? strip(question.scenario) : undefined,
   stem: strip(question.stem),
   takeaway: strip(question.takeaway),
   strategy: strip(question.strategy),
@@ -83,7 +92,7 @@ const bank = data.chapters as unknown as BankType[];
 export const Chapters: ChapterType[] = bank.map((chapter) => ({
   id: String(chapter.id),
   title: chapter.title,
-  questions: chapter.questions.map(clean),
+  questions: chapter.questions.filter(renderable).map(clean),
 }));
 
 export const Ready = Chapters.filter((chapter) => chapter.questions.length > 0);

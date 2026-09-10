@@ -277,6 +277,12 @@ const Quiz = ({
         </span>
       </div>
 
+      {question.scenario && (
+        <p className="mb-4 rounded-2xl bg-[var(--body-color)] p-5 text-[#8b88b1]">
+          {question.scenario}
+        </p>
+      )}
+
       <p className="mb-6 text-lg sm:text-base">{question.stem}</p>
 
       <div className="mb-6 grid gap-y-3">
