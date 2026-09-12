@@ -9,6 +9,7 @@ import Matrix from "./Matrix";
 import Ordered from "./Ordered";
 import {
   isCloze,
+  isCountedPick,
   isGrid,
   isHighlight,
   isMatching,
@@ -107,12 +108,12 @@ const Option = ({
           {option.id}
         </span>
 
-        <span className="min-w-0 flex-1 pt-0.5">{option.text}</span>
+        <span className="min-w-0 flex-1 leading-7">{option.text}</span>
 
-        {won && <span className="shrink-0 pt-0.5">✅</span>}
-        {wrongPick && <span className="shrink-0 pt-0.5">❌</span>}
+        {won && <span className="shrink-0 leading-7">✅</span>}
+        {wrongPick && <span className="shrink-0 leading-7">❌</span>}
         {missed && (
-          <span className="shrink-0 rounded-full bg-[rgba(68,215,182,0.18)] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[var(--title-color)]">
+          <span className="flex h-7 shrink-0 items-center rounded-full bg-[rgba(68,215,182,0.18)] px-2 text-[10px] font-bold uppercase tracking-wide text-[var(--title-color)]">
             Missed
           </span>
         )}
@@ -212,7 +213,10 @@ const Quiz = ({
   const ranked = isOrdered(question);
   const paired = isMatching(question);
   const gapped = isCloze(question);
+  const counted = isCountedPick(question);
+  const need = counted ? (question.select ?? 0) : 0;
   const built = bowtie || grid || marker || ranked || paired || gapped;
+  const staged = !!question.caseId;
   const multi = built || isMulti(question);
   const keys = built ? [] : keysOf(question);
   const correct = built
@@ -285,8 +289,40 @@ const Quiz = ({
 
   return (
     <div className="animate-fadeIn rounded-xl bg-[var(--container-color)] p-7 shadow-xl">
-      <div className="mb-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-        <span className="flex flex-wrap items-center gap-x-3 gap-y-2">
+      {question.caseId && (
+        <div className="mb-4 rounded-2xl bg-[hsl(219,100%,96%)] p-4">
+          <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+            <span className="text-xs font-bold uppercase tracking-wide text-[hsl(219,60%,45%)]">
+              Case study
+            </span>
+            <span className="text-xs font-bold uppercase tracking-wide text-[hsl(219,60%,45%)]">
+              Step {question.caseStep} of {question.caseSteps}
+            </span>
+          </div>
+
+          <p className="mt-1 font-bold text-[var(--title-color)]">
+            {question.caseTitle}
+          </p>
+
+          {question.caseSteps ? (
+            <div className="mt-3 flex gap-x-1">
+              {Array.from({ length: question.caseSteps }).map((_, index) => (
+                <span
+                  key={index}
+                  className={`h-1.5 flex-1 rounded-full duration-300 ${
+                    index < (question.caseStep ?? 0)
+                      ? "bg-[hsl(219,100%,72%)]"
+                      : "bg-[hsl(219,100%,89%)]"
+                  }`}
+                />
+              ))}
+            </div>
+          ) : null}
+        </div>
+      )}
+
+      <div className="mb-3 flex items-start justify-between gap-x-4">
+        <span className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2">
           <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
             {at + 1} of {questions.length}
           </span>
@@ -304,18 +340,20 @@ const Quiz = ({
                         ? "Matching"
                         : gapped
                           ? "Drop down"
-                          : "Select all that apply"}
+                          : counted
+                            ? `Select ${need}`
+                            : "Select all that apply"}
             </span>
           )}
           <span className="rounded-full bg-[var(--body-color)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
             {question.topic}
           </span>
-          <span className="text-xs uppercase tracking-wide text-[#b6b3ce]">
+          <span className="py-1 text-xs uppercase tracking-wide text-[#b6b3ce]">
             {question.difficulty}
           </span>
         </span>
 
-        <span className="text-sm text-[#8b88b1]">
+        <span className="flex h-6 shrink-0 items-center whitespace-nowrap text-sm text-[#8b88b1]">
           {right} / {asked}
         </span>
       </div>
@@ -324,6 +362,26 @@ const Quiz = ({
         <p className="mb-4 rounded-2xl bg-[var(--body-color)] p-5 text-[#8b88b1]">
           {question.scenario}
         </p>
+      )}
+
+      {question.nursesNote && (
+        <div className="mb-4 rounded-2xl border-2 border-solid border-[#e6e4f0] p-5">
+          <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+            Nurses note
+          </span>
+          <p className="mt-1 whitespace-pre-line text-[#8b88b1]">
+            {question.nursesNote}
+          </p>
+        </div>
+      )}
+
+      {question.baseline && (
+        <div className="mb-4 rounded-2xl bg-[var(--body-color)] p-5">
+          <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+            Baseline
+          </span>
+          <p className="mt-1 text-[#8b88b1]">{question.baseline}</p>
+        </div>
       )}
 
       {question.data && (
@@ -431,14 +489,16 @@ const Quiz = ({
         <div className="flex flex-wrap items-center gap-4">
           <button
             type="button"
-            disabled={!chosen.length}
+            disabled={counted ? chosen.length !== need : !chosen.length}
             onClick={() => settle(chosen)}
             className={button}
           >
             Check answer
           </button>
           <span className="text-sm text-[#8b88b1]">
-            {chosen.length} selected
+            {counted
+              ? `${chosen.length} of ${need} selected`
+              : `${chosen.length} selected`}
           </span>
         </div>
       )}
@@ -452,13 +512,25 @@ const Quiz = ({
             <Aside label="Strategy" body={question.strategy} italic />
           </div>
 
-          <div className="flex flex-wrap gap-4">
-            <button type="button" onClick={next} className={button}>
+          <div className="flex flex-wrap items-center gap-4">
+            <button
+              type="button"
+              disabled={staged && !correct}
+              onClick={next}
+              className={button}
+            >
               {at + 1 >= questions.length ? "See score" : "Next question"}
             </button>
             <button type="button" onClick={clear} className={ghost}>
               Redo
             </button>
+
+            {staged && !correct && (
+              <span className="text-sm text-[#8b88b1]">
+                Each step feeds the next, so get this one right before moving
+                on.
+              </span>
+            )}
           </div>
         </div>
       )}

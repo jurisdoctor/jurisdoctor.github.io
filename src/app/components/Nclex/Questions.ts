@@ -1,4 +1,5 @@
 import data from "./questions.json";
+import extra from "./teaching.json";
 
 export interface OptionType {
   id: string;
@@ -70,6 +71,7 @@ export const shuffled = <T>(items: T[], seed: string) => {
 
 export interface QuestionType {
   id: string;
+  ordinal?: number;
   type?: string;
   topic: string;
   difficulty: string;
@@ -85,6 +87,12 @@ export interface QuestionType {
   data?: DataType;
   sentence?: string;
   blanks?: BlankType[];
+  baseline?: string;
+  nursesNote?: string;
+  caseId?: string;
+  caseTitle?: string;
+  caseStep?: number;
+  caseSteps?: number;
   select?: number;
   constraint?: string;
   note?: string;
@@ -97,7 +105,12 @@ export const isHighlight = (question: QuestionType) =>
   question.type === "highlight";
 
 export const isGrid = (question: QuestionType) =>
-  question.type === "matrix" || question.type === "matrix_multiple_response";
+  question.type === "matrix" ||
+  question.type === "matrix_multiple_response" ||
+  question.type === "trend_matrix";
+
+export const isCountedPick = (question: QuestionType) =>
+  question.type === "select_n";
 
 export const isOrdered = (question: QuestionType) =>
   question.type === "ordered_response";
@@ -110,7 +123,13 @@ export const isCloze = (question: QuestionType) => question.type === "cloze";
 export const rowKeys = (row: RowType) =>
   Array.isArray(row.answer) ? row.answer : [row.answer];
 
-const SUPPORTED = ["multiple_choice", "sata", "extended_response", "trend"];
+const SUPPORTED = [
+  "multiple_choice",
+  "sata",
+  "extended_response",
+  "trend",
+  "select_n",
+];
 
 export const poolsOf = (question: QuestionType) =>
   Object.entries(question.pools ?? {});
@@ -195,12 +214,14 @@ export const isMulti = (question: QuestionType) =>
 export interface ChapterType {
   id: string;
   title: string;
+  subtitle?: string;
   questions: QuestionType[];
 }
 
 interface BankType {
   id: string | number;
   title: string;
+  subtitle?: string;
   questions: QuestionType[];
 }
 
@@ -276,21 +297,89 @@ const clean = (question: QuestionType): QuestionType => ({
   })),
   terms: question.terms?.map((term) => ({ ...term, text: strip(term.text) })),
   sentence: question.sentence ? strip(question.sentence) : undefined,
+  baseline: question.baseline ? strip(question.baseline) : undefined,
+  nursesNote: question.nursesNote ? strip(question.nursesNote) : undefined,
   blanks: question.blanks?.map((blank) => ({
     ...blank,
     options: blank.options.map(tidy),
   })),
 });
 
-const bank = data.chapters as unknown as BankType[];
+interface ExtraType extends QuestionType {
+  chapter: string;
+}
 
-export const Chapters: ChapterType[] = bank.map((chapter) => ({
-  id: String(chapter.id),
-  title: chapter.title,
-  questions: chapter.questions.filter(renderable).map(clean),
-}));
+const added = (extra.items as unknown as ExtraType[]).reduce((map, item) => {
+  const bucket = map.get(item.chapter) ?? [];
+  bucket.push(item);
+  map.set(item.chapter, bucket);
+  return map;
+}, new Map<string, QuestionType[]>());
+
+const group = (entries: BankType[], graft: boolean): ChapterType[] =>
+  entries.map((entry) => {
+    const id = String(entry.id);
+    const own = entry.questions.filter(renderable).map(clean);
+    const join = graft
+      ? (added.get(id) ?? []).filter(renderable).map(clean)
+      : [];
+    return {
+      id,
+      title: entry.title,
+      subtitle: entry.subtitle,
+      questions: [...own, ...join].map((question, index) => ({
+        ...question,
+        ordinal: index + 1,
+      })),
+    };
+  });
+
+export const Chapters: ChapterType[] = group(
+  data.chapters as unknown as BankType[],
+  true,
+);
+
+export const Skills: ChapterType[] = group(
+  ((data as { skills?: unknown }).skills ?? []) as BankType[],
+  false,
+);
+
+const caseKey = (question: QuestionType) =>
+  /^ch(\d+)-/.exec(question.caseId ?? "")?.[1] ?? question.caseId ?? "";
+
+export const Cases: ChapterType[] = (() => {
+  const held = new Map<string, QuestionType[]>();
+  Chapters.forEach((chapter) =>
+    chapter.questions.forEach((question) => {
+      if (!question.caseId) return;
+      const bucket = held.get(question.caseId) ?? [];
+      bucket.push(question);
+      held.set(question.caseId, bucket);
+    }),
+  );
+
+  return Array.from(held.entries())
+    .map(([id, steps]) => {
+      const order = [...steps].sort(
+        (a, b) => (a.caseStep ?? 0) - (b.caseStep ?? 0),
+      );
+      return {
+        id: caseKey(order[0]),
+        title: order[0].caseTitle ?? "Case study",
+        subtitle: id,
+        questions: order.map((question, index) => ({
+          ...question,
+          ordinal: question.caseStep ?? index + 1,
+        })),
+      };
+    })
+    .sort((a, b) => Number(a.id) - Number(b.id));
+})();
+
+export const AllCaseQuestions = Cases.flatMap((entry) => entry.questions);
 
 export const Ready = Chapters.filter((chapter) => chapter.questions.length > 0);
 export const AllQuestions = Chapters.flatMap((chapter) => chapter.questions);
+export const AllSkillQuestions = Skills.flatMap((skill) => skill.questions);
 export const Course = data.meta.course;
 export const Textbook = data.meta.textbook;

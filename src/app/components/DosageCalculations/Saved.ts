@@ -1,6 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 
+const drop = (key: string) => {
+  try {
+    window.localStorage.removeItem(key);
+  } catch {}
+};
+
 export const useSaved = <T>(
   key: string,
   fresh: () => T,
@@ -15,10 +21,10 @@ export const useSaved = <T>(
       if (raw) {
         const saved = JSON.parse(raw) as T;
         if (valid(saved)) setValue(saved);
-        else window.localStorage.removeItem(key);
+        else drop(key);
       }
     } catch {
-      window.localStorage.removeItem(key);
+      drop(key);
     }
     setReady(true);
   }, [key, valid]);

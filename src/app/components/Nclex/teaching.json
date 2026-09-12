@@ -1,0 +1,796 @@
+{
+  "meta": {
+    "purpose": "Negative-polarity teaching-evaluation items. Kept separate from questions.json so a generator drop does not overwrite them.",
+    "form": "Which statement indicates a need for further teaching? Three options are correct teaching and are eliminated. The keyed answer is the one statement that is wrong.",
+    "perChapter": 2,
+    "note": "Trimmed once the generator began producing its own further-teaching items. Only ids the bank does not already use are kept."
+  },
+  "items": [
+    {
+      "id": "ch14-t2",
+      "chapter": "14",
+      "type": "multiple_choice",
+      "topic": "Medication safety in older adults",
+      "difficulty": "application",
+      "stem": "A nurse reviews medications with an older adult who takes eight prescriptions. Which statement by the client indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I should bring every bottle, including vitamins and herbal products, to my visits",
+          "correct": false,
+          "rationale": "Correct. Over-the-counter and herbal products count toward polypharmacy and interact."
+        },
+        {
+          "id": "B",
+          "text": "Anything I can buy without a prescription is safe to add on my own",
+          "correct": true,
+          "rationale": "This is the error. Over-the-counter products interact with prescriptions, and several are on lists of medications to avoid in older adults."
+        },
+        {
+          "id": "C",
+          "text": "If a pill makes me feel dizzy I should tell the clinic rather than stop it myself",
+          "correct": false,
+          "rationale": "Correct. Reporting allows the regimen to be adjusted safely."
+        },
+        {
+          "id": "D",
+          "text": "Using one pharmacy helps them catch interactions between my medicines",
+          "correct": false,
+          "rationale": "Correct. A single pharmacy record improves interaction screening."
+        }
+      ],
+      "answer": "B",
+      "takeaway": "Over-the-counter does not mean risk-free, and it counts toward the medication total.",
+      "strategy": "The key treats a category of drug as automatically safe. Absolutes about safety are rarely correct.",
+      "elimination": {
+        "strategies": [
+          "Eliminate absolutes",
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Spot the blanket claim",
+            "detail": "It declares an entire category safe."
+          }
+        ],
+        "verdict": "B is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch15-t2",
+      "chapter": "15",
+      "type": "multiple_choice",
+      "topic": "Setting priorities",
+      "difficulty": "application",
+      "stem": "A preceptor teaches a new graduate how to set priorities. Which statement by the graduate indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Airway and breathing problems come before circulation problems",
+          "correct": false,
+          "rationale": "Correct. The ABC sequence orders life threats."
+        },
+        {
+          "id": "B",
+          "text": "An actual problem generally comes before a risk of a problem",
+          "correct": false,
+          "rationale": "Correct. Actual problems usually outrank potential ones."
+        },
+        {
+          "id": "C",
+          "text": "A change in mental status can be an early sign of deterioration",
+          "correct": false,
+          "rationale": "Correct. Acute mental status change is often the first sign that something is wrong."
+        },
+        {
+          "id": "D",
+          "text": "Whatever the client asks for first should be done first",
+          "correct": true,
+          "rationale": "This is the error. Requests matter, but urgency is set by clinical risk, not by order of asking."
+        }
+      ],
+      "answer": "D",
+      "takeaway": "Priority follows threat to life, not the order requests arrive in.",
+      "strategy": "Three options use a clinical framework. The key uses sequence of asking.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the non-clinical rule",
+            "detail": "Only one option orders care by request rather than risk."
+          }
+        ],
+        "verdict": "D is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch16-t2",
+      "chapter": "16",
+      "type": "multiple_choice",
+      "topic": "Interview technique",
+      "difficulty": "application",
+      "stem": "A nurse teaches a student how to conduct an admission interview. Which statement by the student indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I should start with open-ended questions and narrow down from there",
+          "correct": false,
+          "rationale": "Correct. Open questions gather the client's own account before focusing."
+        },
+        {
+          "id": "B",
+          "text": "I should ask the most sensitive questions first to get them out of the way",
+          "correct": true,
+          "rationale": "This is the error. Sensitive topics come after rapport is established. Leading with them reduces disclosure."
+        },
+        {
+          "id": "C",
+          "text": "I should summarize at the end so the client can correct me",
+          "correct": false,
+          "rationale": "Correct. Validation improves accuracy."
+        },
+        {
+          "id": "D",
+          "text": "I should ask one question at a time rather than stacking several together",
+          "correct": false,
+          "rationale": "Correct. Stacked questions produce incomplete answers."
+        }
+      ],
+      "answer": "B",
+      "takeaway": "Rapport first, sensitive questions later. Sequence affects what the client is willing to tell you.",
+      "strategy": "Three options improve accuracy. The key trades rapport for speed.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the rushed sequence",
+            "detail": "It front-loads sensitive material."
+          }
+        ],
+        "verdict": "B is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch17-t2",
+      "chapter": "17",
+      "type": "multiple_choice",
+      "topic": "Collaborative problems",
+      "difficulty": "analysis",
+      "stem": "A nurse teaches a student about collaborative problems. Which statement by the student indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A collaborative problem needs both nursing and provider interventions",
+          "correct": false,
+          "rationale": "Correct. Collaborative problems require both."
+        },
+        {
+          "id": "B",
+          "text": "Monitoring for postoperative hemorrhage is a collaborative problem",
+          "correct": false,
+          "rationale": "Correct. The nurse monitors and reports, and treatment requires a provider."
+        },
+        {
+          "id": "C",
+          "text": "Nursing diagnoses are treated primarily by independent nursing actions",
+          "correct": false,
+          "rationale": "Correct. That independence is what distinguishes them."
+        },
+        {
+          "id": "D",
+          "text": "Because a collaborative problem needs a provider, nursing has no independent role",
+          "correct": true,
+          "rationale": "This is the error. Surveillance, early detection, and reporting are independent nursing responsibilities and are often what determines the outcome."
+        }
+      ],
+      "answer": "D",
+      "takeaway": "Collaborative does not mean passive. Monitoring and escalation are independent nursing actions.",
+      "strategy": "The key draws a false conclusion from a true premise.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Test the conclusion",
+            "detail": "It moves from needs a provider to nursing has no role."
+          }
+        ],
+        "verdict": "D is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch18-t2",
+      "chapter": "18",
+      "type": "multiple_choice",
+      "topic": "Prioritizing the plan",
+      "difficulty": "application",
+      "stem": "A nurse teaches a student to prioritize a care plan using Maslow. Which statement by the student indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Physiological needs generally come before self-esteem needs",
+          "correct": false,
+          "rationale": "Correct. Lower-level needs are addressed first."
+        },
+        {
+          "id": "B",
+          "text": "Psychosocial needs can wait until every physical need is fully resolved",
+          "correct": true,
+          "rationale": "This is the error. The hierarchy guides priority, not sequence. Psychosocial needs are addressed alongside physical ones, and in some situations they take precedence."
+        },
+        {
+          "id": "C",
+          "text": "Safety needs come before love and belonging needs",
+          "correct": false,
+          "rationale": "Correct ordering within the hierarchy."
+        },
+        {
+          "id": "D",
+          "text": "A client's stated priority should be considered alongside the framework",
+          "correct": false,
+          "rationale": "Correct. The client's own priority is part of planning."
+        }
+      ],
+      "answer": "B",
+      "takeaway": "Maslow orders priority, not permission. Psychosocial care runs in parallel with physical care.",
+      "strategy": "The key turns a guide into a rigid rule. Watch for every and fully.",
+      "elimination": {
+        "strategies": [
+          "Eliminate absolutes",
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Spot the rigid rule",
+            "detail": "It requires every physical need resolved first."
+          }
+        ],
+        "verdict": "B is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch19-t2",
+      "chapter": "19",
+      "type": "multiple_choice",
+      "topic": "Types of nursing interventions",
+      "difficulty": "comprehension",
+      "stem": "An instructor teaches students about nursing interventions. Which statement by a student indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Repositioning a client to prevent pressure injury is an independent intervention",
+          "correct": false,
+          "rationale": "Correct. It requires no order."
+        },
+        {
+          "id": "B",
+          "text": "Administering a prescribed medication is a dependent intervention",
+          "correct": false,
+          "rationale": "Correct. It follows a provider order."
+        },
+        {
+          "id": "C",
+          "text": "Working with the dietitian on a feeding plan is a collaborative intervention",
+          "correct": false,
+          "rationale": "Correct. It involves another discipline."
+        },
+        {
+          "id": "D",
+          "text": "If an order seems wrong I should carry it out and document my concern afterward",
+          "correct": true,
+          "rationale": "This is the error. The nurse must clarify a questionable order before acting. Carrying it out and documenting afterward does not transfer liability."
+        }
+      ],
+      "answer": "D",
+      "takeaway": "Question the order before you carry it out. Documenting a concern does not make an unsafe action safe.",
+      "strategy": "The key sounds procedurally careful while still performing the unsafe act.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the unsafe sequence",
+            "detail": "It acts first and questions second."
+          }
+        ],
+        "verdict": "D is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch20-t2",
+      "chapter": "20",
+      "type": "multiple_choice",
+      "topic": "Revising the plan",
+      "difficulty": "analysis",
+      "stem": "A preceptor teaches a new graduate about revising a plan of care. Which statement by the graduate indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "If the client's condition changes, the plan should change with it",
+          "correct": false,
+          "rationale": "Correct. The plan is dynamic."
+        },
+        {
+          "id": "B",
+          "text": "A plan written on admission should stay unchanged so the record is consistent",
+          "correct": true,
+          "rationale": "This is the error. A static plan stops reflecting the client. Consistency of the record is maintained by documenting changes, not by avoiding them."
+        },
+        {
+          "id": "C",
+          "text": "I should discontinue an intervention that is no longer needed",
+          "correct": false,
+          "rationale": "Correct. Resolved problems are closed out."
+        },
+        {
+          "id": "D",
+          "text": "The client should be involved when goals are revised",
+          "correct": false,
+          "rationale": "Correct. Revision is mutual, like the original planning."
+        }
+      ],
+      "answer": "B",
+      "takeaway": "A care plan that never changes is a care plan nobody is using.",
+      "strategy": "The key protects the document at the expense of the client.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the frozen plan",
+            "detail": "It keeps the plan fixed."
+          }
+        ],
+        "verdict": "B is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch21-t2",
+      "chapter": "21",
+      "type": "multiple_choice",
+      "topic": "Escalating concerns",
+      "difficulty": "application",
+      "stem": "A preceptor teaches a new graduate how to escalate a concern about a deteriorating client. Which statement by the graduate indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I should use a structured format such as SBAR so the message is clear",
+          "correct": false,
+          "rationale": "Correct. Structure reduces omissions under pressure."
+        },
+        {
+          "id": "B",
+          "text": "I should state clearly what I am asking the provider to do",
+          "correct": false,
+          "rationale": "Correct. The recommendation is the part most often left out."
+        },
+        {
+          "id": "C",
+          "text": "I should document what I reported, when, and the response",
+          "correct": false,
+          "rationale": "Correct. The record of escalation matters clinically and legally."
+        },
+        {
+          "id": "D",
+          "text": "If the provider does not respond I should keep waiting rather than go over their head",
+          "correct": true,
+          "rationale": "This is the error. When a client is deteriorating and a concern is unanswered, the nurse is obligated to escalate through the chain of command."
+        }
+      ],
+      "answer": "D",
+      "takeaway": "Escalation is a duty, not a discourtesy. An unanswered concern about a deteriorating client goes up the chain.",
+      "strategy": "The key frames advocacy as rudeness. Client safety outranks hierarchy.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the passive option",
+            "detail": "It waits instead of escalating."
+          }
+        ],
+        "verdict": "D is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch22-t2",
+      "chapter": "22",
+      "type": "multiple_choice",
+      "topic": "Advance directives",
+      "difficulty": "application",
+      "stem": "A nurse teaches a client about advance directives. Which statement by the client indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I can change or cancel my advance directive at any time",
+          "correct": false,
+          "rationale": "Correct. It is revocable while the client has capacity."
+        },
+        {
+          "id": "B",
+          "text": "Once I sign this, I cannot change my mind later",
+          "correct": true,
+          "rationale": "This is the error. Advance directives are not binding on the person who made them and may be revised or revoked at any time."
+        },
+        {
+          "id": "C",
+          "text": "My health care proxy speaks for me only if I cannot speak for myself",
+          "correct": false,
+          "rationale": "Correct. The proxy acts on incapacity."
+        },
+        {
+          "id": "D",
+          "text": "Having a directive does not mean I will receive less care",
+          "correct": false,
+          "rationale": "Correct. A directive guides which treatments are wanted, not the quality of care."
+        }
+      ],
+      "answer": "B",
+      "takeaway": "An advance directive is revocable as long as the client has capacity. It records wishes, it does not lock them.",
+      "strategy": "Look for the option that removes a right the client retains.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the irreversible claim",
+            "detail": "It says the decision cannot be changed."
+          }
+        ],
+        "verdict": "B is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch23-t2",
+      "chapter": "23",
+      "type": "multiple_choice",
+      "topic": "Incident reports",
+      "difficulty": "comprehension",
+      "stem": "A nurse manager teaches staff about incident reports. Which statement by a nurse indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I complete an incident report even if the client was not injured",
+          "correct": false,
+          "rationale": "Correct. Events are reported regardless of outcome."
+        },
+        {
+          "id": "B",
+          "text": "I should document the clinical facts of the event in the client's record",
+          "correct": false,
+          "rationale": "Correct. The clinical event and the client's condition belong in the record."
+        },
+        {
+          "id": "C",
+          "text": "Filing a report is not an admission that anyone did something wrong",
+          "correct": false,
+          "rationale": "Correct. Reports document events, not fault."
+        },
+        {
+          "id": "D",
+          "text": "I should write in the chart that an incident report was completed",
+          "correct": true,
+          "rationale": "This is the error. The incident report is a quality-improvement document and is not referenced in the medical record."
+        }
+      ],
+      "answer": "D",
+      "takeaway": "Chart the event, not the paperwork. Referencing an incident report in the record pulls it into the legal chart.",
+      "strategy": "Three options separate the record from the report. The key links them.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the cross-reference",
+            "detail": "It names the report in the chart."
+          }
+        ],
+        "verdict": "D is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch24-t2",
+      "chapter": "24",
+      "type": "multiple_choice",
+      "topic": "Communicating with sensory impairment",
+      "difficulty": "application",
+      "stem": "A nurse teaches a student to communicate with a client who is hard of hearing. Which statement by the student indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I should face the client so they can see my mouth",
+          "correct": false,
+          "rationale": "Correct. Visual cues support comprehension."
+        },
+        {
+          "id": "B",
+          "text": "I should raise my voice and speak in a higher pitch so it carries",
+          "correct": true,
+          "rationale": "This is the error. Age-related hearing loss affects high frequencies first, so raising pitch makes speech harder to understand. Speak lower and more clearly rather than louder."
+        },
+        {
+          "id": "C",
+          "text": "I should reduce background noise before we talk",
+          "correct": false,
+          "rationale": "Correct. Competing noise is a major barrier."
+        },
+        {
+          "id": "D",
+          "text": "I should confirm understanding rather than assume a nod means yes",
+          "correct": false,
+          "rationale": "Correct. Nodding often signals social politeness rather than comprehension."
+        }
+      ],
+      "answer": "B",
+      "takeaway": "Lower and clearer, not louder and higher. High frequencies are the first to go.",
+      "strategy": "The key follows intuition. Ask which frequencies are actually lost.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Check the pitch",
+            "detail": "It raises the frequency the client hears worst."
+          }
+        ],
+        "verdict": "B is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch25-t2",
+      "chapter": "25",
+      "type": "multiple_choice",
+      "topic": "Health literacy",
+      "difficulty": "application",
+      "stem": "A nurse teaches staff about health literacy. Which statement by a nurse indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I should use plain language rather than clinical terms",
+          "correct": false,
+          "rationale": "Correct. Plain language improves comprehension for everyone."
+        },
+        {
+          "id": "B",
+          "text": "Limited health literacy is not the same as low intelligence",
+          "correct": false,
+          "rationale": "Correct. They are unrelated."
+        },
+        {
+          "id": "C",
+          "text": "Written material should supplement rather than replace conversation",
+          "correct": false,
+          "rationale": "Correct. Handouts reinforce teaching but do not substitute for it."
+        },
+        {
+          "id": "D",
+          "text": "Asking do you understand is enough to confirm learning",
+          "correct": true,
+          "rationale": "This is the error. Clients commonly answer yes regardless of comprehension. Teach-back, asking them to explain it in their own words, is the standard."
+        }
+      ],
+      "answer": "D",
+      "takeaway": "Do you understand invites a yes. Ask the client to explain it back instead.",
+      "strategy": "The key is the most common shortcut in real practice, which is exactly why it is tested.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the yes-or-no check",
+            "detail": "It relies on the client self-reporting understanding."
+          }
+        ],
+        "verdict": "D is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch26-t2",
+      "chapter": "26",
+      "type": "multiple_choice",
+      "topic": "Privacy and the electronic record",
+      "difficulty": "application",
+      "stem": "A nurse teaches staff about privacy in the electronic health record. Which statement by a nurse indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I should log out rather than leave a workstation open",
+          "correct": false,
+          "rationale": "Correct. An open session allows access under the nurse's credentials."
+        },
+        {
+          "id": "B",
+          "text": "I may look up a family member's record if I am only checking they are all right",
+          "correct": true,
+          "rationale": "This is the error. Access is limited to clients in the nurse's care. Curiosity and concern are not treatment relationships, and access is audited."
+        },
+        {
+          "id": "C",
+          "text": "I should not discuss clients in elevators or corridors",
+          "correct": false,
+          "rationale": "Correct. Overheard conversation is a common breach."
+        },
+        {
+          "id": "D",
+          "text": "I should not share my login even with a colleague who has forgotten theirs",
+          "correct": false,
+          "rationale": "Correct. Credentials are individual and every action is attributed to them."
+        }
+      ],
+      "answer": "B",
+      "takeaway": "Access requires a treatment relationship. Good intentions are not authorization, and the audit log does not record intent.",
+      "strategy": "The key supplies a sympathetic motive. Motive does not create access rights.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the unauthorized access",
+            "detail": "It opens a record without a care relationship."
+          }
+        ],
+        "verdict": "B is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch37-t2",
+      "chapter": "37",
+      "type": "multiple_choice",
+      "topic": "Crisis intervention",
+      "difficulty": "analysis",
+      "stem": "An instructor teaches students about crisis intervention. Which statement by a student indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A crisis happens when usual coping methods stop working",
+          "correct": false,
+          "rationale": "Correct definition of crisis."
+        },
+        {
+          "id": "B",
+          "text": "Crisis intervention focuses on the immediate problem rather than long-standing issues",
+          "correct": false,
+          "rationale": "Correct. It is short term and present focused."
+        },
+        {
+          "id": "C",
+          "text": "Safety is assessed first when someone is in crisis",
+          "correct": false,
+          "rationale": "Correct. Safety precedes everything else."
+        },
+        {
+          "id": "D",
+          "text": "If a client says there is no reason to keep going, I should note it and raise it at the next team meeting",
+          "correct": true,
+          "rationale": "This is the error. A statement of hopelessness requires immediate direct assessment of suicidal ideation, not deferral."
+        }
+      ],
+      "answer": "D",
+      "takeaway": "Any statement suggesting the client sees no future is assessed now, directly, not deferred.",
+      "strategy": "Three options are definitions. The key is an action, and it delays.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the delay",
+            "detail": "It postpones a safety assessment."
+          }
+        ],
+        "verdict": "D is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch43-t2",
+      "chapter": "43",
+      "type": "multiple_choice",
+      "topic": "Obstructive sleep apnea",
+      "difficulty": "application",
+      "stem": "A nurse teaches a client newly prescribed continuous positive airway pressure for obstructive sleep apnea. Which statement by the client indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I should wear it every night, including naps",
+          "correct": false,
+          "rationale": "Correct. Apnea occurs whenever the client sleeps."
+        },
+        {
+          "id": "B",
+          "text": "Once I feel more rested I can stop using it",
+          "correct": true,
+          "rationale": "This is the error. Feeling better is the treatment working, not the condition resolving. Apnea returns as soon as the device is stopped."
+        },
+        {
+          "id": "C",
+          "text": "If the mask leaks or hurts I should ask about a refitting rather than stop using it",
+          "correct": false,
+          "rationale": "Correct. Fit problems are solvable and are a leading cause of abandonment."
+        },
+        {
+          "id": "D",
+          "text": "Losing weight may reduce the severity, but I should keep using it until I am reassessed",
+          "correct": false,
+          "rationale": "Correct. Weight loss can help, but therapy continues until reassessment."
+        }
+      ],
+      "answer": "B",
+      "takeaway": "Improvement on therapy is not cure. This is the same error as stopping an antihypertensive because the pressure is now normal.",
+      "strategy": "The key uses symptom relief as evidence the problem is gone.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Find the stop condition",
+            "detail": "It discontinues therapy on feeling better."
+          }
+        ],
+        "verdict": "B is the statement needing correction."
+      }
+    },
+    {
+      "id": "ch56-t2",
+      "chapter": "56",
+      "type": "multiple_choice",
+      "topic": "Hypoglycemia and foot care",
+      "difficulty": "application",
+      "stem": "A nurse reviews self-care with a client who has type 2 diabetes. Which statement by the client indicates a need for further teaching?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I will inspect my feet daily, including between the toes",
+          "correct": false,
+          "rationale": "Correct. Daily inspection detects injury early when sensation is reduced."
+        },
+        {
+          "id": "B",
+          "text": "I will report any sore that is not healing rather than wait for my next visit",
+          "correct": false,
+          "rationale": "Correct. Non-healing wounds need prompt assessment."
+        },
+        {
+          "id": "C",
+          "text": "I will keep glucose tablets with me in case my sugar drops",
+          "correct": false,
+          "rationale": "Correct. Fast-acting carbohydrate should be carried."
+        },
+        {
+          "id": "D",
+          "text": "I will soak my feet in hot water each evening to keep them soft",
+          "correct": true,
+          "rationale": "This is the error. Soaking macerates skin, and reduced sensation from neuropathy means the client may not feel water that is hot enough to burn."
+        }
+      ],
+      "answer": "D",
+      "takeaway": "No soaking and no hot water. Neuropathy means the client cannot rely on sensation to judge temperature or injury.",
+      "strategy": "The key sounds like self-care. Ask what reduced sensation makes unsafe.",
+      "elimination": {
+        "strategies": [
+          "Treat each option as true or false"
+        ],
+        "steps": [
+          {
+            "action": "Apply neuropathy",
+            "detail": "It relies on sensation the client may not have."
+          }
+        ],
+        "verdict": "D is the statement needing correction."
+      }
+    }
+  ]
+}
