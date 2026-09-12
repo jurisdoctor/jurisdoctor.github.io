@@ -255,7 +255,7 @@ const Bowtie = ({
                 </span>
               </span>
 
-              <div className="mt-2 grid gap-y-2">
+              <div className={`mt-2 grid ${answered ? "gap-y-4" : "gap-y-2"}`}>
                 {pool.options.map((option) => {
                   const taken = (placed[key] ?? []).includes(option.id);
                   const shell = answered
@@ -290,7 +290,7 @@ const Bowtie = ({
                       </button>
 
                       {answered && (
-                        <p className="mt-1 animate-fadeIn px-3 text-sm text-[#8b88b1]">
+                        <p className="mt-1.5 animate-fadeIn px-[14px] text-sm leading-6 text-[#8b88b1]">
                           {option.rationale}
                         </p>
                       )}

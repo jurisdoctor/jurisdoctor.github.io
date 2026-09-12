@@ -10,6 +10,7 @@ import {
   ChapterType,
   Chapters,
   Course,
+  Judgment,
   labelOf,
   QuestionType,
   Skills,
@@ -25,7 +26,7 @@ const shuffle = (items: QuestionType[]) => {
   return order;
 };
 
-type SectionType = "chapters" | "skills" | "cases";
+type SectionType = "chapters" | "skills" | "cases" | "judgment";
 
 interface StartType {
   pick: PickType;
@@ -54,12 +55,13 @@ const validMarks = (saved: Record<string, ResultType>) =>
     (entry) => entry === "solved" || entry === "missed",
   );
 
-const SECTIONS: SectionType[] = ["chapters", "skills", "cases"];
+const SECTIONS: SectionType[] = ["chapters", "skills", "cases", "judgment"];
 
 const TITLES: Record<SectionType, string> = {
   chapters: "Chapters",
   skills: "Skills",
   cases: "Case studies",
+  judgment: "Clinical judgment",
 };
 
 const validView = (saved: ViewType) =>
@@ -90,13 +92,15 @@ const Nclex = () => {
   }, []);
 
   const groups =
-    section === "skills" ? Skills : section === "cases" ? Cases : Chapters;
-  const noun =
     section === "skills"
-      ? "skills"
+      ? Skills
       : section === "cases"
-        ? "cases"
-        : "chapters";
+        ? Cases
+        : section === "judgment"
+          ? Judgment
+          : Chapters;
+  const noun =
+    section === "skills" ? "skills" : section === "cases" ? "cases" : "chapters";
 
   const viewFor = useCallback(
     (which: LensType) =>
@@ -168,7 +172,7 @@ const Nclex = () => {
 
   const labelFor = useCallback(
     (entry: ChapterType) =>
-      section === "chapters"
+      section === "chapters" || section === "judgment"
         ? labelOf(entry)
         : section === "cases"
           ? `Chapter ${entry.id} · ${entry.title}`
@@ -182,9 +186,7 @@ const Nclex = () => {
     ? labelFor(group)
     : lens === "incomplete"
       ? `Incomplete ${noun}`
-      : section === "skills"
-        ? "All skills"
-        : "All chapters";
+      : `All ${noun}`;
 
   const reset = () => {
     setResults({});

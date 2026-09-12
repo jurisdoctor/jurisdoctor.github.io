@@ -333,12 +333,25 @@ const group = (entries: BankType[], graft: boolean): ChapterType[] =>
 
 const banked = group(data.chapters as unknown as BankType[], true);
 
+const isJudgment = (question: QuestionType) => /-cj\d+$/.test(question.id);
+
 export const Chapters: ChapterType[] = banked.map((chapter) => ({
   ...chapter,
   questions: chapter.questions
-    .filter((question) => !question.caseId)
+    .filter((question) => !question.caseId && !isJudgment(question))
     .map((question, index) => ({ ...question, ordinal: index + 1 })),
 }));
+
+// Grouped by chapter rather than by clinical-judgment step: the step is the
+// answer, so a step-named group would hand over every answer inside it.
+export const Judgment: ChapterType[] = banked
+  .map((chapter) => ({
+    ...chapter,
+    questions: chapter.questions
+      .filter(isJudgment)
+      .map((question, index) => ({ ...question, ordinal: index + 1 })),
+  }))
+  .filter((chapter) => chapter.questions.length > 0);
 
 export const Skills: ChapterType[] = group(
   ((data as { skills?: unknown }).skills ?? []) as BankType[],
@@ -378,6 +391,7 @@ export const Cases: ChapterType[] = (() => {
 })();
 
 export const AllCaseQuestions = Cases.flatMap((entry) => entry.questions);
+export const AllJudgmentQuestions = Judgment.flatMap((step) => step.questions);
 
 export const Ready = Chapters.filter((chapter) => chapter.questions.length > 0);
 export const AllQuestions = Chapters.flatMap((chapter) => chapter.questions);

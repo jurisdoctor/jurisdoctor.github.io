@@ -120,7 +120,7 @@ const Option = ({
       </button>
 
       {answered && (
-        <p className="ml-11 mt-2 animate-fadeIn text-sm text-[#8b88b1]">
+        <p className="mt-1.5 animate-fadeIn px-[18px] text-sm leading-6 text-[#8b88b1]">
           {option.rationale}
         </p>
       )}
@@ -465,7 +465,7 @@ const Quiz = ({
           onClear={() => setAnswered(false)}
         />
       ) : (
-        <div className="mb-6 grid gap-y-3">
+        <div className={`mb-6 grid ${answered ? "gap-y-6" : "gap-y-3"}`}>
           {question.options.map((option) => (
             <Option
               key={option.id}
