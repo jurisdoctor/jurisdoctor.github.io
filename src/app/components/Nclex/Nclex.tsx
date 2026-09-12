@@ -135,9 +135,15 @@ const Nclex = () => {
           )
         : undefined;
 
-    setDeck(story ? story.questions : pool);
-    setAt(story ? 0 : index);
-    setStarted({ pick: next, at: story ? 0 : index });
+    const run = story ? story.questions : pool;
+    const sequential = run.some((entry) => entry.caseId);
+    const resume = run.findIndex((entry) => results[entry.id] !== "solved");
+    const fallback = story ? 0 : index;
+    const startAt = sequential && resume !== -1 ? resume : fallback;
+
+    setDeck(run);
+    setAt(startAt);
+    setStarted({ pick: next, at: startAt });
   };
 
   const run = (which: LensType) => {

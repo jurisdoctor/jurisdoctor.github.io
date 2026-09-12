@@ -334,10 +334,14 @@ const group = (entries: BankType[], graft: boolean): ChapterType[] =>
     };
   });
 
-export const Chapters: ChapterType[] = group(
-  data.chapters as unknown as BankType[],
-  true,
-);
+const banked = group(data.chapters as unknown as BankType[], true);
+
+export const Chapters: ChapterType[] = banked.map((chapter) => ({
+  ...chapter,
+  questions: chapter.questions
+    .filter((question) => !question.caseId)
+    .map((question, index) => ({ ...question, ordinal: index + 1 })),
+}));
 
 export const Skills: ChapterType[] = group(
   ((data as { skills?: unknown }).skills ?? []) as BankType[],
@@ -349,7 +353,7 @@ const caseKey = (question: QuestionType) =>
 
 export const Cases: ChapterType[] = (() => {
   const held = new Map<string, QuestionType[]>();
-  Chapters.forEach((chapter) =>
+  banked.forEach((chapter) =>
     chapter.questions.forEach((question) => {
       if (!question.caseId) return;
       const bucket = held.get(question.caseId) ?? [];
