@@ -345,12 +345,6 @@ const Quiz = ({
                             : "Select all that apply"}
             </span>
           )}
-          <span className="rounded-full bg-[var(--body-color)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
-            {question.topic}
-          </span>
-          <span className="py-1 text-xs uppercase tracking-wide text-[#b6b3ce]">
-            {question.difficulty}
-          </span>
         </span>
 
         <span className="flex h-6 shrink-0 items-center whitespace-nowrap text-sm text-[#8b88b1]">

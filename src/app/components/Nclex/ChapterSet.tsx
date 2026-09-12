@@ -412,7 +412,7 @@ const ChapterSet = ({
                 <button
                   key={question.id}
                   type="button"
-                  title={question.topic}
+                  title={`Question ${index + 1}`}
                   aria-current={here}
                   onClick={() => onStart(shown.id, index)}
                   className={`h-9 rounded-lg text-xs font-bold duration-300 ${

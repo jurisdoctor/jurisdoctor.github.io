@@ -10,8 +10,6 @@
       "id": "ch14-t2",
       "chapter": "14",
       "type": "multiple_choice",
-      "topic": "Medication safety in older adults",
-      "difficulty": "application",
       "stem": "A nurse reviews medications with an older adult who takes eight prescriptions. Which statement by the client indicates a need for further teaching?",
       "options": [
         {
@@ -60,8 +58,6 @@
       "id": "ch15-t2",
       "chapter": "15",
       "type": "multiple_choice",
-      "topic": "Setting priorities",
-      "difficulty": "application",
       "stem": "A preceptor teaches a new graduate how to set priorities. Which statement by the graduate indicates a need for further teaching?",
       "options": [
         {
@@ -109,8 +105,6 @@
       "id": "ch16-t2",
       "chapter": "16",
       "type": "multiple_choice",
-      "topic": "Interview technique",
-      "difficulty": "application",
       "stem": "A nurse teaches a student how to conduct an admission interview. Which statement by the student indicates a need for further teaching?",
       "options": [
         {
@@ -158,8 +152,6 @@
       "id": "ch17-t2",
       "chapter": "17",
       "type": "multiple_choice",
-      "topic": "Collaborative problems",
-      "difficulty": "analysis",
       "stem": "A nurse teaches a student about collaborative problems. Which statement by the student indicates a need for further teaching?",
       "options": [
         {
@@ -207,8 +199,6 @@
       "id": "ch18-t2",
       "chapter": "18",
       "type": "multiple_choice",
-      "topic": "Prioritizing the plan",
-      "difficulty": "application",
       "stem": "A nurse teaches a student to prioritize a care plan using Maslow. Which statement by the student indicates a need for further teaching?",
       "options": [
         {
@@ -257,8 +247,6 @@
       "id": "ch19-t2",
       "chapter": "19",
       "type": "multiple_choice",
-      "topic": "Types of nursing interventions",
-      "difficulty": "comprehension",
       "stem": "An instructor teaches students about nursing interventions. Which statement by a student indicates a need for further teaching?",
       "options": [
         {
@@ -306,8 +294,6 @@
       "id": "ch20-t2",
       "chapter": "20",
       "type": "multiple_choice",
-      "topic": "Revising the plan",
-      "difficulty": "analysis",
       "stem": "A preceptor teaches a new graduate about revising a plan of care. Which statement by the graduate indicates a need for further teaching?",
       "options": [
         {
@@ -355,8 +341,6 @@
       "id": "ch21-t2",
       "chapter": "21",
       "type": "multiple_choice",
-      "topic": "Escalating concerns",
-      "difficulty": "application",
       "stem": "A preceptor teaches a new graduate how to escalate a concern about a deteriorating client. Which statement by the graduate indicates a need for further teaching?",
       "options": [
         {
@@ -404,8 +388,6 @@
       "id": "ch22-t2",
       "chapter": "22",
       "type": "multiple_choice",
-      "topic": "Advance directives",
-      "difficulty": "application",
       "stem": "A nurse teaches a client about advance directives. Which statement by the client indicates a need for further teaching?",
       "options": [
         {
@@ -453,8 +435,6 @@
       "id": "ch23-t2",
       "chapter": "23",
       "type": "multiple_choice",
-      "topic": "Incident reports",
-      "difficulty": "comprehension",
       "stem": "A nurse manager teaches staff about incident reports. Which statement by a nurse indicates a need for further teaching?",
       "options": [
         {
@@ -502,8 +482,6 @@
       "id": "ch24-t2",
       "chapter": "24",
       "type": "multiple_choice",
-      "topic": "Communicating with sensory impairment",
-      "difficulty": "application",
       "stem": "A nurse teaches a student to communicate with a client who is hard of hearing. Which statement by the student indicates a need for further teaching?",
       "options": [
         {
@@ -551,8 +529,6 @@
       "id": "ch25-t2",
       "chapter": "25",
       "type": "multiple_choice",
-      "topic": "Health literacy",
-      "difficulty": "application",
       "stem": "A nurse teaches staff about health literacy. Which statement by a nurse indicates a need for further teaching?",
       "options": [
         {
@@ -600,8 +576,6 @@
       "id": "ch26-t2",
       "chapter": "26",
       "type": "multiple_choice",
-      "topic": "Privacy and the electronic record",
-      "difficulty": "application",
       "stem": "A nurse teaches staff about privacy in the electronic health record. Which statement by a nurse indicates a need for further teaching?",
       "options": [
         {
@@ -649,8 +623,6 @@
       "id": "ch37-t2",
       "chapter": "37",
       "type": "multiple_choice",
-      "topic": "Crisis intervention",
-      "difficulty": "analysis",
       "stem": "An instructor teaches students about crisis intervention. Which statement by a student indicates a need for further teaching?",
       "options": [
         {
@@ -698,8 +670,6 @@
       "id": "ch43-t2",
       "chapter": "43",
       "type": "multiple_choice",
-      "topic": "Obstructive sleep apnea",
-      "difficulty": "application",
       "stem": "A nurse teaches a client newly prescribed continuous positive airway pressure for obstructive sleep apnea. Which statement by the client indicates a need for further teaching?",
       "options": [
         {
@@ -747,8 +717,6 @@
       "id": "ch56-t2",
       "chapter": "56",
       "type": "multiple_choice",
-      "topic": "Hypoglycemia and foot care",
-      "difficulty": "application",
       "stem": "A nurse reviews self-care with a client who has type 2 diabetes. Which statement by the client indicates a need for further teaching?",
       "options": [
         {

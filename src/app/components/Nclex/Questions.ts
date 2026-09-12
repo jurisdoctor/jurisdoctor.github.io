@@ -73,8 +73,6 @@ export interface QuestionType {
   id: string;
   ordinal?: number;
   type?: string;
-  topic: string;
-  difficulty: string;
   scenario?: string;
   stem: string;
   options: OptionType[];
@@ -271,7 +269,6 @@ const cleanPools = (question: QuestionType) => {
 const clean = (question: QuestionType): QuestionType => ({
   ...question,
   answer: answerOf(question),
-  topic: strip(question.topic),
   scenario: question.scenario ? strip(question.scenario) : undefined,
   stem: strip(question.stem),
   takeaway: strip(question.takeaway),
