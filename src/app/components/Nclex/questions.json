@@ -7659,44 +7659,52 @@
        "id": "r1",
        "text": "Name and pronouns recorded in the record and used by all staff",
        "answer": "Improved",
-       "rationale": "The error has stopped recurring because it is now documented."
+       "rationale": "At admission neither was recorded and staff were guessing. Both are now in the record and in use."
       },
       {
        "id": "r2",
        "text": "No further pronoun errors reported during the admission",
        "answer": "Improved",
-       "rationale": "Correction and recording worked."
+       "rationale": "Errors were happening repeatedly at admission and have stopped."
       },
       {
        "id": "r3",
        "text": "Cervical screening arranged with a clinic appointment booked",
        "answer": "Improved",
-       "rationale": "The screening gap has been closed."
+       "rationale": "He had never been offered it. An appointment is booked, which is a change from nothing."
       },
       {
        "id": "r4",
        "text": "Intake form still offers mother and father fields only",
        "answer": "No change",
-       "rationale": "A systems issue requiring a policy change, and it has not been addressed during this admission."
+       "rationale": "Flagged at admission and still not altered. A system problem outlasts one patient's stay."
       },
       {
        "id": "r5",
        "text": "He reports he had avoided health care for four years before this admission",
-       "answer": "New finding",
-       "rationale": "His history of avoidance was never assessed on admission, and it explains the missed screening."
+       "answer": "No change",
+       "rationale": "A historical fact about the four years before admission. Nothing about it has changed."
       },
       {
        "id": "r6",
        "text": "He asks whether his partner can be recorded as his emergency contact",
        "answer": "New finding",
-       "rationale": "Who he considers family was never asked, and the form's structure is why it did not come up."
+       "rationale": "Not raised at any point earlier in the admission, so there is nothing to compare it against."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch5-case1",
      "caseTitle": "Affirming care for a transgender patient",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Improved",
+      "r2": "Improved",
+      "r3": "Improved",
+      "r4": "No change",
+      "r5": "No change",
+      "r6": "New finding"
+     }
     },
     {
      "id": "ch5-cj1",
@@ -9463,44 +9471,52 @@
        "id": "r1",
        "text": "Smoking cessation support before any lung disease develops",
        "answer": "Primary",
-       "rationale": "Prevents the condition occurring at all."
+       "rationale": "Acts before any disease exists, which is what primary prevention means."
       },
       {
        "id": "r2",
        "text": "Screening his blood pressure and lipids at this visit",
        "answer": "Secondary",
-       "rationale": "Detects a condition already present at an early stage."
+       "rationale": "Screening looks for disease that is present but not yet causing symptoms."
       },
       {
        "id": "r3",
        "text": "Teaching him to manage his hypertension to prevent stroke",
        "answer": "Tertiary",
-       "rationale": "The condition exists and the aim is preventing its complications."
+       "rationale": "He already has hypertension, so this limits the damage it can do."
       },
       {
        "id": "r4",
        "text": "Referring him to cardiac rehabilitation after a future infarction",
        "answer": "Tertiary",
-       "rationale": "Limits damage and restores function in established disease."
+       "rationale": "Rehabilitation after an event reduces further loss of function."
       },
       {
        "id": "r5",
        "text": "A clinic-wide physical activity program for all attendees",
        "answer": "Primary",
-       "rationale": "Prevents onset across a population rather than treating anyone."
+       "rationale": "A population-wide measure aimed at people who are currently well."
       },
       {
        "id": "r6",
        "text": "Arranging a repeat blood pressure check in six weeks",
        "answer": "Secondary",
-       "rationale": "Continues monitoring of a condition already identified."
+       "rationale": "A repeat check is still looking for disease rather than preventing or limiting it."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch6-case1",
      "caseTitle": "Health promotion and behavior change",
      "caseStep": 5,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Primary",
+      "r2": "Secondary",
+      "r3": "Tertiary",
+      "r4": "Tertiary",
+      "r5": "Primary",
+      "r6": "Secondary"
+     }
     },
     {
      "id": "ch6-c6",
@@ -9540,44 +9556,52 @@
        "id": "r1",
        "text": "Smoking five cigarettes daily",
        "answer": "Improved",
-       "rationale": "Down from fifteen, which is progress rather than failure."
+       "rationale": "Down from twenty a day. Not stopped, and a substantial reduction is real progress."
       },
       {
        "id": "r2",
        "text": "Walking 20 minutes most days",
        "answer": "Improved",
-       "rationale": "Up from no regular activity."
+       "rationale": "He was doing no regular activity six months ago."
       },
       {
        "id": "r3",
        "text": "Blood pressure 132/82 with the antihypertensive collected and taken",
        "answer": "Improved",
-       "rationale": "The medication is now in use."
+       "rationale": "Both the reading and the fact he is now collecting and taking the medication."
       },
       {
        "id": "r4",
        "text": "States he still does not really believe it will happen to him",
        "answer": "No change",
-       "rationale": "Perceived susceptibility is unchanged, and it is what will determine whether the gains hold."
+       "rationale": "Perceived susceptibility was the barrier at the outset and it is still the barrier."
       },
       {
        "id": "r5",
        "text": "Reports his partner has also started trying to cut down",
        "answer": "New finding",
-       "rationale": "Household smoking was never assessed, and it affects whether his change is sustainable."
+       "rationale": "His partner's behavior was never assessed before, so there is no baseline for it."
       },
       {
        "id": "r6",
        "text": "Reports increased alcohol intake since reducing cigarettes",
-       "answer": "New finding",
-       "rationale": "Alcohol use was not assessed at the first visit and requires its own attention."
+       "answer": "Declined",
+       "rationale": "Substituting one substance for another. Alcohol was not raised as a problem before."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch6-case1",
      "caseTitle": "Health promotion and behavior change",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Improved",
+      "r2": "Improved",
+      "r3": "Improved",
+      "r4": "No change",
+      "r5": "New finding",
+      "r6": "Declined"
+     }
     },
     {
      "id": "ch6-cj1",
@@ -11397,44 +11421,52 @@
        "id": "r1",
        "text": "Talks with the nurse about what the diagnosis means to her",
        "answer": "Improved",
-       "rationale": "She was quiet and unable to talk on admission."
+       "rationale": "On admission she would not discuss the diagnosis at all."
       },
       {
        "id": "r2",
        "text": "Daughter staying overnight with the team's agreement",
        "answer": "Improved",
-       "rationale": "The request was advocated for rather than refused."
+       "rationale": "She was alone overnight and distressed on the first night."
       },
       {
        "id": "r3",
        "text": "Continent overnight with scheduled toileting",
        "answer": "Improved",
-       "rationale": "The episode has not recurred."
+       "rationale": "She had been incontinent overnight before the toileting schedule started."
       },
       {
        "id": "r4",
        "text": "Still tearful during conversations about her prognosis",
        "answer": "No change",
-       "rationale": "Tearfulness is an expected response to a catastrophic diagnosis rather than a problem to resolve."
+       "rationale": "She was tearful about the prognosis on admission and still is. Expected, and unchanged."
       },
       {
        "id": "r5",
        "text": "Asks the nurse for her personal phone number after discharge",
        "answer": "New finding",
-       "rationale": "A boundary question that was not present on admission, and it arises from the relationship having worked."
+       "rationale": "A boundary question that had not arisen before, and it needs answering rather than scoring."
       },
       {
        "id": "r6",
        "text": "Reports she has not told her son about the diagnosis",
        "answer": "New finding",
-       "rationale": "Her wider family communication was never assessed and may shape her discharge support."
+       "rationale": "Her son was never mentioned in the earlier assessment."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch7-case1",
      "caseTitle": "Caring during a difficult admission",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Improved",
+      "r2": "Improved",
+      "r3": "Improved",
+      "r4": "No change",
+      "r5": "New finding",
+      "r6": "New finding"
+     }
     },
     {
      "id": "ch7-cj1",
@@ -13391,44 +13423,52 @@
        "id": "r1",
        "text": "Weight up 3 kg with new ankle swelling",
        "answer": "Disease",
-       "rationale": "A measurable clinical process occurring in the body."
+       "rationale": "Fluid retention is the pathological process itself, measurable and objective."
       },
       {
        "id": "r2",
        "text": "Walking distance down from 300 to 90 meters",
        "answer": "Both",
-       "rationale": "A measurable physiological limit and a change in what he can do with his day."
+       "rationale": "A measurable decline in capacity, and also the thing that has shrunk his life."
       },
       {
        "id": "r3",
        "text": "Has stopped attending the allotment he tended for 20 years",
        "answer": "Illness experience",
-       "rationale": "What the condition has cost him, which is the personal focus rather than the clinical one."
+       "rationale": "The loss of something that gave his days meaning. No test shows this."
       },
       {
        "id": "r4",
        "text": "Takes medication only when he remembers",
        "answer": "Illness experience",
-       "rationale": "How he is living with the regimen, and it becomes a clinical problem through its effects."
+       "rationale": "How he is living with the condition, which is shaped by what it means to him."
       },
       {
        "id": "r5",
        "text": "Oxygen saturation 93% on room air",
        "answer": "Disease",
-       "rationale": "A measured physiological value."
+       "rationale": "A measured value reflecting the underlying process."
       },
       {
        "id": "r6",
        "text": "Family attributes the changes to getting older",
        "answer": "Illness experience",
-       "rationale": "The family's interpretation of what is happening, which shapes whether he seeks help."
+       "rationale": "How the family makes sense of it, which shapes whether they seek help."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch8-case1",
      "caseTitle": "Living with multiple chronic conditions",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Disease",
+      "r2": "Both",
+      "r3": "Illness experience",
+      "r4": "Illness experience",
+      "r5": "Disease",
+      "r6": "Illness experience"
+     }
     },
     {
      "id": "ch8-cj1",
@@ -23166,44 +23206,52 @@
        "id": "r1",
        "text": "Tolerating thickened fluids without coughing",
        "answer": "Improved",
-       "rationale": "The swallowing assessment has produced a workable consistency."
+       "rationale": "He was coughing on all fluids five days ago."
       },
       {
        "id": "r2",
        "text": "Weight stable with supplements in place",
        "answer": "Improved",
-       "rationale": "The loss has stopped."
+       "rationale": "He was losing weight before the supplements were started."
       },
       {
        "id": "r3",
        "text": "Temperature 36.8 C",
        "answer": "Improved",
-       "rationale": "The aspiration concern has resolved."
+       "rationale": "He was febrile with an aspiration concern at the start."
       },
       {
        "id": "r4",
        "text": "Still requires two assistants to transfer",
        "answer": "No change",
-       "rationale": "Unchanged since admission, and it now becomes the priority problem for rehabilitation."
+       "rationale": "Two assistants were needed then and are needed now."
       },
       {
        "id": "r5",
        "text": "Still cannot manage buttons or shoelaces",
        "answer": "No change",
-       "rationale": "Documented on admission and unchanged, requiring occupational therapy input."
+       "rationale": "The fine motor deficit is unchanged."
       },
       {
        "id": "r6",
        "text": "Reports frustration at not being able to speak as quickly as he thinks",
        "answer": "New finding",
-       "rationale": "His speech was described as clear on admission but his experience of it was never assessed."
+       "rationale": "He had not expressed this before, and it points to a new problem to address."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch17-case1",
      "caseTitle": "Identifying problems after a stroke",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Improved",
+      "r2": "Improved",
+      "r3": "Improved",
+      "r4": "No change",
+      "r5": "No change",
+      "r6": "New finding"
+     }
     },
     {
      "id": "ch17-cj1",
@@ -26941,44 +26989,52 @@
        "id": "r1",
        "text": "Assisting the patient to sit on the edge of the bed",
        "answer": "Direct care",
-       "rationale": "Performed with the patient present."
+       "rationale": "Performed with the patient present, hands on."
       },
       {
        "id": "r2",
        "text": "Taking her lying and standing blood pressure",
        "answer": "Direct care",
-       "rationale": "Measured at the bedside."
+       "rationale": "An assessment carried out on the patient herself."
       },
       {
        "id": "r3",
        "text": "Telephoning the provider about the orthostatic findings",
        "answer": "Indirect care",
-       "rationale": "Performed on her behalf away from her."
+       "rationale": "Done on her behalf and away from her, which is what makes it indirect."
       },
       {
        "id": "r4",
        "text": "Documenting the episode in the record",
        "answer": "Indirect care",
-       "rationale": "Performed away from the patient."
+       "rationale": "Necessary for her care and not performed in her presence."
       },
       {
        "id": "r5",
        "text": "Explaining to her why the attempt was stopped",
        "answer": "Direct care",
-       "rationale": "A conversation with the patient."
+       "rationale": "Communication with the patient is direct care."
       },
       {
        "id": "r6",
        "text": "Arranging a physical therapy referral",
        "answer": "Indirect care",
-       "rationale": "Coordination performed on her behalf."
+       "rationale": "Arranged on her behalf without her being present."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch19-case1",
      "caseTitle": "Implementation during a changing situation",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Direct care",
+      "r2": "Direct care",
+      "r3": "Indirect care",
+      "r4": "Indirect care",
+      "r5": "Direct care",
+      "r6": "Indirect care"
+     }
     },
     {
      "id": "ch19-cj1",
@@ -30770,44 +30826,52 @@
        "id": "r1",
        "text": "Bed 9 with a falling pressure and increasing drowsiness",
        "answer": "This hour",
-       "rationale": "A trend plus altered mentation signals decompensation."
+       "rationale": "A falling pressure with increasing drowsiness is deterioration and cannot wait."
       },
       {
        "id": "r2",
        "text": "Bed 4 admitted at 0300 with no assessment completed",
        "answer": "This hour",
-       "rationale": "The baseline everyone else judges against is six hours overdue."
+       "rationale": "An admission four hours old with no assessment means nobody knows what is wrong with him."
       },
       {
        "id": "r3",
        "text": "Bed 12 dressing change due per protocol, afebrile",
        "answer": "Later this shift",
-       "rationale": "Routine, protocol-driven, and predictable."
+       "rationale": "Due per protocol with no fever. It matters and it is not urgent."
       },
       {
        "id": "r4",
        "text": "Bed 17 on contact precautions requesting help to shower",
        "answer": "Later this shift",
-       "rationale": "Isolation status changes the PPE, not the urgency."
+       "rationale": "A reasonable request that can be scheduled once the unstable patients are seen."
       },
       {
        "id": "r5",
        "text": "Bed 21 discharge teaching due this afternoon",
        "answer": "Later this shift",
-       "rationale": "Scheduled for later and it belongs to the RN."
+       "rationale": "Due this afternoon, so there is time to plan it properly."
       },
       {
        "id": "r6",
        "text": "A visitor asking where the cafeteria is",
        "answer": "Not a nursing priority",
-       "rationale": "A courtesy that any staff member can handle."
+       "rationale": "Answer it in passing or direct them, and it does not belong on the clinical list."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch21-case1",
      "caseTitle": "Charge nurse assigning a medical unit",
      "caseStep": 5,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "This hour",
+      "r2": "This hour",
+      "r3": "Later this shift",
+      "r4": "Later this shift",
+      "r5": "Later this shift",
+      "r6": "Not a nursing priority"
+     }
     },
     {
      "id": "ch21-c6",
@@ -30847,44 +30911,52 @@
        "id": "r1",
        "text": "Bed 9 blood pressure 112/68 and alert",
        "answer": "Improved",
-       "rationale": "Escalation produced a response and treatment worked."
+       "rationale": "The pressure has come up and she is alert, where she was falling and drowsy."
       },
       {
        "id": "r2",
        "text": "Provider attended within ten minutes of the CUS escalation",
        "answer": "Improved",
-       "rationale": "The pathway that had failed twice now worked."
+       "rationale": "At handover the concern had not been escalated at all."
       },
       {
        "id": "r3",
        "text": "Bed 4 admission assessment completed and documented",
        "answer": "Improved",
-       "rationale": "The missing baseline is in place."
+       "rationale": "The assessment was outstanding at handover and is now complete."
       },
       {
        "id": "r4",
        "text": "The AP reports she was not told what to report back on bed 12",
        "answer": "New finding",
-       "rationale": "Right directions and communication includes the reporting threshold, and it was never assessed at handover."
+       "rationale": "A delegation gap that had not been identified earlier, and it needs correcting now."
       },
       {
        "id": "r5",
        "text": "The LPN asks whether she may initiate discharge teaching for bed 21",
        "answer": "New finding",
-       "rationale": "Scope understanding within the team was not assessed at handover."
+       "rationale": "A scope question that has arisen since handover."
       },
       {
        "id": "r6",
        "text": "Staffing remains two RNs, one LPN, and one AP for sixteen patients",
        "answer": "No change",
-       "rationale": "The structural constraint that shaped the whole shift is unchanged."
+       "rationale": "The staffing is the same as it was, and it remains the constraint underneath everything."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch21-case1",
      "caseTitle": "Charge nurse assigning a medical unit",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Improved",
+      "r2": "Improved",
+      "r3": "Improved",
+      "r4": "New finding",
+      "r5": "New finding",
+      "r6": "No change"
+     }
     },
     {
      "id": "ch21-cj1",
@@ -32862,44 +32934,52 @@
        "id": "r1",
        "text": "The family understands the directive and has withdrawn the objection",
        "answer": "Improved",
-       "rationale": "The misinformation has been corrected and the conflict has resolved."
+       "rationale": "The objection was the central conflict two days ago."
       },
       {
        "id": "r2",
        "text": "The colleague's misinformation has been addressed directly and privately",
        "answer": "Improved",
-       "rationale": "The source of the escalation has been removed."
+       "rationale": "The misinformation was circulating unchallenged before."
       },
       {
        "id": "r3",
        "text": "Charting now records what was said and done without characterization",
        "answer": "Improved",
-       "rationale": "The documentation meets the standard."
+       "rationale": "The earlier charting had characterized the family rather than recording facts."
       },
       {
        "id": "r4",
        "text": "Comfort measures continue as the directive and orders specify",
        "answer": "No change",
-       "rationale": "Unchanged throughout, and correctly so. The plan was right from the start."
+       "rationale": "Comfort measures were in place before and continue, which is the intended state."
       },
       {
        "id": "r5",
        "text": "One family member has asked to speak with the chaplain",
        "answer": "New finding",
-       "rationale": "Spiritual support was not assessed originally and is now being requested."
+       "rationale": "A spiritual care need that had not been raised previously."
       },
       {
        "id": "r6",
        "text": "The nurse reports she felt unsupported during the confrontation",
        "answer": "New finding",
-       "rationale": "Her own experience was never assessed, and moral distress in staff is its own outcome."
+       "rationale": "The nurse's own distress had not been identified, and moral distress accumulates when unaddressed."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch22-case1",
      "caseTitle": "Conflict at the end of life",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Improved",
+      "r2": "Improved",
+      "r3": "Improved",
+      "r4": "No change",
+      "r5": "New finding",
+      "r6": "New finding"
+     }
     },
     {
      "id": "ch22-cj1",
@@ -34827,44 +34907,52 @@
        "id": "r1",
        "text": "The nurse's duty to report reasonable suspicion",
        "answer": "Mandated reporting",
-       "rationale": "A duty rather than a choice, and it is not waived by the patient's preference."
+       "rationale": "Nurses must report reasonable suspicion, and suspicion is the threshold rather than proof."
       },
       {
        "id": "r2",
        "text": "Harm arising from care the caregiver knew or should have known was inadequate",
        "answer": "Unintentional tort",
-       "rationale": "Harm where the person inflicting it knew, or should have known, that the care fell below standard."
+       "rationale": "Harm from conduct the person knew or should have known fell below the standard."
       },
       {
        "id": "r3",
        "text": "Discussing the patient by name in the lift where a neighbor overheard",
        "answer": "Quasi-intentional tort",
-       "rationale": "No intent to harm, and harm occurs through the nature of the act itself."
+       "rationale": "No intent to harm, and a breach of confidentiality nonetheless."
       },
       {
        "id": "r4",
        "text": "Immunity for a report made honestly and in good faith",
        "answer": "Mandated reporting",
-       "rationale": "The protection attached to the duty."
+       "rationale": "Good faith immunity is part of the reporting statute and protects the reporter."
       },
       {
        "id": "r5",
        "text": "The patient's daughter visiting less often since moving away",
        "answer": "Not a legal issue",
-       "rationale": "A family circumstance rather than a legal concept."
+       "rationale": "A change in family circumstances rather than a legal concept."
       },
       {
        "id": "r6",
        "text": "The son answering every question directed at his mother",
        "answer": "Not a legal issue",
-       "rationale": "A red flag for mistreatment and an assessment barrier, and not itself a legal concept."
+       "rationale": "A red flag worth assessing and not in itself a legal category."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch23-case1",
      "caseTitle": "Suspected elder mistreatment on a home visit",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Mandated reporting",
+      "r2": "Unintentional tort",
+      "r3": "Quasi-intentional tort",
+      "r4": "Mandated reporting",
+      "r5": "Not a legal issue",
+      "r6": "Not a legal issue"
+     }
     },
     {
      "id": "ch23-cj1",
@@ -38609,44 +38697,52 @@
        "id": "r1",
        "text": "Patient will self-administer the injection correctly",
        "answer": "Return demonstration",
-       "rationale": "A psychomotor outcome cannot be evaluated by asking about it."
+       "rationale": "A physical skill has to be watched being performed."
       },
       {
        "id": "r2",
        "text": "Patient will name three signs of bleeding he would report",
        "answer": "Teach-back",
-       "rationale": "A cognitive outcome evaluated by what he can state."
+       "rationale": "Knowledge he states in his own words, which shows understanding rather than recall."
       },
       {
        "id": "r3",
        "text": "Patient will maintain an INR within the target range",
        "answer": "Direct measurement",
-       "rationale": "A physiological value read from a result."
+       "rationale": "A laboratory value, measured rather than reported."
       },
       {
        "id": "r4",
        "text": "Patient will describe what to do if he misses a dose",
        "answer": "Teach-back",
-       "rationale": "Applies the teaching to a realistic situation."
+       "rationale": "He describes the plan back to you."
       },
       {
        "id": "r5",
        "text": "Patient will demonstrate safe disposal of the used needle",
        "answer": "Return demonstration",
-       "rationale": "Observed performance of a skill."
+       "rationale": "Another physical skill, and a safety-critical one."
       },
       {
        "id": "r6",
        "text": "Patient attended the discharge teaching session",
        "answer": "Documentation only",
-       "rationale": "Records attendance, which is participation rather than an outcome."
+       "rationale": "Attendance records that teaching happened. It says nothing about learning."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch25-case1",
      "caseTitle": "Discharge teaching with limited health literacy",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Return demonstration",
+      "r2": "Teach-back",
+      "r3": "Direct measurement",
+      "r4": "Teach-back",
+      "r5": "Return demonstration",
+      "r6": "Documentation only"
+     }
     },
     {
      "id": "ch25-cj1",
@@ -42670,44 +42766,52 @@
        "id": "r1",
        "text": "Heart rate 104 with trembling hands",
        "answer": "Alarm stage",
-       "rationale": "Sympathetic activation in response to an acute stressor."
+       "rationale": "Sympathetic activation: the immediate fight-or-flight physiology."
       },
       {
        "id": "r2",
        "text": "\"Nothing I do works anymore\"",
        "answer": "Failed coping",
-       "rationale": "The defining feature of a crisis is that previous coping has stopped working."
+       "rationale": "Her usual methods have stopped working, which is what defines a crisis."
       },
       {
        "id": "r3",
        "text": "Tearful when describing the loss of her home",
        "answer": "Expected grief response",
-       "rationale": "An appropriate response to a catastrophic loss."
+       "rationale": "Tearfulness about a real loss is expected and needs no intervention beyond presence."
       },
       {
        "id": "r4",
        "text": "Declining contact with her sister and closest friend",
        "answer": "Failed coping",
-       "rationale": "Withdrawal removes a factor in coping capacity."
+       "rationale": "Withdrawal from support removes the thing that would help her recover."
       },
       {
        "id": "r5",
        "text": "Blood pressure 138/86 and respirations 20",
        "answer": "Alarm stage",
-       "rationale": "Correct alarm findings alongside the raised heart rate."
+       "rationale": "Raised pressure and respirations, again the acute physiologic response."
       },
       {
        "id": "r6",
        "text": "Describing what she has lost in detail without prompting",
        "answer": "Expected grief response",
-       "rationale": "Talking about a loss is part of processing it."
+       "rationale": "Telling the story of a loss is how people process it."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch37-case1",
      "caseTitle": "Adult in crisis after catastrophic loss",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Alarm stage",
+      "r2": "Failed coping",
+      "r3": "Expected grief response",
+      "r4": "Failed coping",
+      "r5": "Alarm stage",
+      "r6": "Expected grief response"
+     }
     },
     {
      "id": "ch37-cj1",
@@ -42993,25 +43097,25 @@
        "id": "A",
        "text": "Nocturnal angina",
        "correct": true,
-       "rationale": "Chest pain from the heart occurring at night, and it occurs alongside heart failure-related apnea as a cardiac cause of disrupted sleep."
+       "rationale": "Angina occurring at night, relieved by sitting up, in a patient with heart failure. Lying flat increases venous return and cardiac workload, which is what brings it on."
       },
       {
        "id": "B",
        "text": "A parasomnia",
        "correct": false,
-       "rationale": "Undesirable physical events during sleep such as sleepwalking."
+       "rationale": "Parasomnias are abnormal behaviors during sleep, such as sleepwalking or night terrors. Chest pain is not a behavior."
       },
       {
        "id": "C",
-       "text": "Sleep latency",
+       "text": "Gastroesophageal reflux",
        "correct": false,
-       "rationale": "The time it takes to fall asleep."
+       "rationale": "Reflux does wake people at night and is worse lying flat, which fits his assumption of indigestion. It does not usually present as pain rated 6 of 10 that eases specifically on sitting up in a patient with heart failure."
       },
       {
        "id": "D",
        "text": "Obstructive sleep apnea",
        "correct": false,
-       "rationale": "Airway obstruction producing snoring and apneic episodes, which is a different mechanism."
+       "rationale": "Sleep apnea wakes people through obstruction, not pain, and the partner would describe snoring and pauses rather than chest discomfort."
       }
      ],
      "answer": "A",
@@ -43170,36 +43274,36 @@
     },
     {
      "id": "ch43-q5",
-     "stem": "A 76-year-old takes a diuretic each morning and reports waking three or four times each night to void, then struggling to fall back asleep. He is becoming drowsy during the day and has stumbled twice on the way to the bathroom. Which nursing action is most appropriate?",
+     "stem": "A 76-year-old takes his furosemide at 6 pm because that is when he remembers it with his evening meal. He wakes three or four times each night to void and struggles to fall back asleep. He is drowsy during the day and has stumbled twice on the way to the bathroom. Which nursing action is most appropriate?",
      "options": [
       {
        "id": "A",
        "text": "Restrict his fluid intake after the early evening",
        "correct": false,
-       "rationale": "Commonly suggested and it risks dehydration in an older adult without addressing the diuretic."
+       "rationale": "Commonly suggested, and it risks dehydration in an older adult while leaving the 6 pm dose doing exactly what a diuretic does. The fluid he is passing at night is being mobilized by the drug, not by what he drank."
       },
       {
        "id": "B",
        "text": "Review his sleep hygiene and evening routine",
        "correct": false,
-       "rationale": "Appropriate where sleep habits are the issue. His awakenings have a pharmacological cause."
+       "rationale": "The right approach when habits are the problem. His awakenings have a pharmacological cause, and no bedtime routine will outlast a diuretic taken at 6 pm."
       },
       {
        "id": "C",
        "text": "Discuss moving the diuretic earlier in the day with the provider",
        "correct": true,
-       "rationale": "The nocturia is drug-timed, and changing the timing removes the cause. He is now falling on the way to the bathroom."
+       "rationale": "A diuretic peaks about two to six hours after the dose. Taken at 6 pm that peak lands in the middle of the night; moved to the morning it finishes before bedtime. Changing the timing removes the cause rather than managing the consequence."
       },
       {
        "id": "D",
        "text": "Provide a bedside commode to shorten the walk",
        "correct": false,
-       "rationale": "Reduces the fall risk and accepts three or four awakenings as unchangeable."
+       "rationale": "Shortens the walk and reduces the immediate fall risk, and it accepts three or four awakenings as unchangeable when they are not. Worth doing alongside the timing change, not instead of it."
       }
      ],
      "answer": "C",
-     "takeaway": "When a drug is causing the symptom, change the drug timing rather than working around it.",
-     "strategy": "Three options manage the consequence. Ask what is producing the awakenings.",
+     "takeaway": "A diuretic peaks two to six hours after the dose. Give it in the morning so the peak is over before the patient goes to bed.",
+     "strategy": "Three options manage the consequences of the awakenings. Ask what is producing them, and check the time the drug is given.",
      "type": "multiple_choice",
      "elimination": {
       "strategies": [
@@ -43207,19 +43311,19 @@
       ],
       "steps": [
        {
-        "action": "Trace the cause",
-        "detail": "A morning diuretic still working at night."
+        "action": "Find the cause",
+        "detail": "A diuretic at 6 pm peaks overnight."
        },
        {
         "action": "Cut fluid restriction",
-        "detail": "Dehydration risk without touching the cause."
+        "detail": "The fluid is drug-driven, and restriction risks dehydration."
        },
        {
-        "action": "Cut commode and sleep hygiene",
-        "detail": "Both accept the awakenings."
+        "action": "Cut sleep hygiene and the commode",
+        "detail": "Both work around a cause that can be removed."
        }
       ],
-      "verdict": "That leaves discussing the timing with the provider."
+      "verdict": "That leaves C: move the dose to the morning."
      },
      "concept": "CUS escalates a concern with graded language: I am Concerned, I am Uncomfortable, this is a Safety issue. SBAR reports; CUS escalates when reporting has failed."
     },
@@ -43227,7 +43331,7 @@
      "id": "ch43-h1",
      "type": "highlight",
      "format": "passage",
-     "stem": "A 69-year-old on a medical unit reports he has not slept since admission four nights ago. The nurse reviews his medications, pain, the ward environment, his intake, and his age and medical history. Highlight the findings that represent modifiable causes the nurse can address.",
+     "stem": "A 68-year-old on a medical unit reports he has not slept since admission four nights ago. The nurse reviews his medications, pain, the ward environment, his intake, and his age and medical history. Highlight the findings that represent modifiable causes the nurse can address.",
      "segments": [
       {
        "id": "s1",
@@ -43414,36 +43518,36 @@
     },
     {
      "id": "ch43-q13",
-     "stem": "A 59-year-old admitted for elective surgery has a bed partner who reports loud snoring with pauses in breathing most nights. He falls asleep during meetings and once while stopped in traffic, though he believes he sleeps enough. Which action does the nurse take?",
+     "stem": "A 59-year-old admitted for elective surgery is accompanied by his wife, who reports that he snores loudly and that she has watched him stop breathing for several seconds at a time most nights. He falls asleep during meetings and once while stopped in traffic, though he believes he sleeps enough. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
        "text": "Advise the patient to sleep alone so the partner is not disturbed",
        "correct": false,
-       "rationale": "Addresses the partner's sleep and ignores the patient's airway."
+       "rationale": "Solves the partner's problem, not his. It also removes the only person who has witnessed the pauses, so the finding stops being reported at all."
       },
       {
        "id": "B",
        "text": "Report the findings and discuss evaluation for obstructive sleep apnea",
        "correct": true,
-       "rationale": "Snoring with apneic episodes plus daytime sleepiness is the described pattern, and it warrants evaluation rather than hygiene teaching alone."
+       "rationale": "Snoring with witnessed pauses plus daytime sleepiness is the classic picture of obstructive sleep apnea. It matters most right now because anesthesia and opioids relax the airway further, so an undiagnosed patient obstructs worse during and after surgery."
       },
       {
        "id": "C",
        "text": "Reassure the patient that snoring is common and not concerning",
        "correct": false,
-       "rationale": "Snoring with witnessed apnea and daytime sleepiness is not a benign finding."
+       "rationale": "Snoring alone is common. Snoring with witnessed apnea and falling asleep in traffic is not, and reassurance here sends him to theatre with an unassessed airway."
       },
       {
        "id": "D",
        "text": "Teach sleep hygiene and reassess in one month",
        "correct": false,
-       "rationale": "Hygiene will not resolve airway obstruction, and delay allows the cardiovascular consequences to continue."
+       "rationale": "Hygiene does not open an obstructed airway, and a month's delay means his surgery happens first. The perioperative risk is what makes the timing wrong."
       }
      ],
      "answer": "B",
-     "takeaway": "Snoring plus witnessed apnea plus daytime sleepiness is a pattern to report, not a hygiene problem. Obstructive sleep apnea is repeated airway obstruction during sleep, producing snoring, witnessed apneic episodes, and daytime sleepiness.",
-     "strategy": "The bed partner's report is valuable here precisely because the patient cannot observe their own breathing during sleep.",
+     "takeaway": "Snoring with witnessed pauses and daytime sleepiness points to obstructive sleep apnea. Before surgery it is urgent, because anesthesia and opioids worsen airway collapse.",
+     "strategy": "The surgery in the stem is doing work. Ask what changes about the risk once he is anesthetized.",
      "type": "multiple_choice",
      "elimination": {
       "strategies": [
@@ -43451,23 +43555,19 @@
       ],
       "steps": [
        {
-        "action": "Read the stem",
-        "detail": "Snoring, apneic pauses, daytime sleepiness."
+        "action": "Name the pattern",
+        "detail": "Snoring, witnessed pauses, falling asleep in traffic."
        },
        {
-        "action": "Cut D",
-        "detail": "Hygiene does not address obstruction."
+        "action": "Read why it is urgent",
+        "detail": "He has surgery booked, and sedation worsens obstruction."
        },
        {
-        "action": "Cut A",
-        "detail": "Addresses the wrong person."
-       },
-       {
-        "action": "Cut C",
-        "detail": "Dismisses a significant pattern."
+        "action": "Cut reassurance and delay",
+        "detail": "Both send him to theatre unassessed."
        }
       ],
-      "verdict": "That leaves B: snoring with apneic episodes plus daytime sleepiness is the described pattern, and it warrants evaluation rather than hygiene teaching alone."
+      "verdict": "That leaves B: report it and get him evaluated before surgery."
      },
      "concept": "CUS escalates a concern with graded language: I am Concerned, I am Uncomfortable, this is a Safety issue. SBAR reports; CUS escalates when reporting has failed. Obstructive sleep apnea is repeated airway obstruction during sleep, producing snoring, witnessed apneic episodes, and daytime sleepiness."
     },
@@ -43484,9 +43584,9 @@
       },
       {
        "id": "B",
-       "text": "Take a warm bath immediately before getting into bed",
+       "text": "Have a warm bath just before getting into bed",
        "correct": false,
-       "rationale": "A warm bath raises core temperature; it helps only if taken well before bed."
+       "rationale": "A warm bath is a recommended relaxation measure, and the timing matters: falling asleep needs core temperature to drop, so leave an hour or so between the bath and bed rather than getting straight in."
       },
       {
        "id": "C",
@@ -43544,32 +43644,32 @@
      "options": [
       {
        "id": "A",
-       "text": "No effect on sleep architecture at all",
-       "correct": false,
-       "rationale": "Benzodiazepines reduce deep and REM sleep."
+       "text": "Falls and confusion, so short-term use only",
+       "correct": true,
+       "rationale": "Benzodiazepines cause drowsiness, unsteadiness, and confusion, and she is already unsteady with a fall this year. Short-term use is the standard because the risk compounds with time."
       },
       {
        "id": "B",
-       "text": "Falls and confusion risk, and short-term use only",
-       "correct": true,
-       "rationale": "Both cautions are, and they matter more in this population than in younger adults."
+       "text": "Interaction with her five other medications",
+       "correct": false,
+       "rationale": "A genuine concern worth checking, and it is secondary here. The immediate problem is what the drug does to an already unsteady 75-year-old."
       },
       {
        "id": "C",
-       "text": "Need to take it with caffeine to avoid drowsiness",
+       "text": "Reduced effectiveness after several weeks of use",
        "correct": false,
-       "rationale": "Caffeine is a sleep disruptor and would work against the goal."
+       "rationale": "Tolerance is real and it is a reason the drug stops working, not a reason it is dangerous tonight."
       },
       {
        "id": "D",
-       "text": "Permanent suppression of REM sleep",
+       "text": "Suppression of REM sleep affecting memory",
        "correct": false,
-       "rationale": "REM suppression is associated with antidepressants, opiates, and anticonvulsants, and no effect is permanent."
+       "rationale": "Benzodiazepines do alter sleep architecture. It matters less than the fall she is likely to have getting up in the night."
       }
      ],
-     "answer": "B",
+     "answer": "A",
      "takeaway": "Benzodiazepines are short-term only, with falls and confusion the specific risk in older adults.",
-     "strategy": "Sedatives are a fall-risk class.",
+     "strategy": "All four are true of benzodiazepines. Ask which one this particular patient is most likely to be harmed by.",
      "type": "multiple_choice",
      "elimination": {
       "strategies": [
@@ -43577,20 +43677,16 @@
       ],
       "steps": [
        {
-        "action": "Read the stem",
-        "detail": "A benzodiazepine considered for a 75-year-old."
+        "action": "Read her risk factors",
+        "detail": "Unsteady, five medications, one fall already."
        },
        {
-        "action": "Cut D",
-        "detail": "REM suppression is associated with antidepressants, opiates, and anticonvulsants, and no effect is permanent."
+        "action": "Rank the true concerns",
+        "detail": "Interactions, tolerance, and REM changes all matter less than a fracture."
        },
        {
-        "action": "Cut A",
-        "detail": "Benzodiazepines reduce deep and REM sleep."
-       },
-       {
-        "action": "Cut C",
-        "detail": "Caffeine is a sleep disruptor and would work against the goal."
+        "action": "Cut the three",
+        "detail": "Each is real and none is what will hurt her tonight."
        }
       ],
       "verdict": "That leaves B: both cautions are, and they matter more in this population than in younger adults."
@@ -43657,54 +43753,54 @@
     {
      "id": "ch43-x2",
      "type": "multiple_choice",
-     "stem": "A patient on a medical unit reports he has not slept more than two hours at a stretch since admission. Observations are due at 0200 and 0600, his roommate's television is on until late, and the corridor light falls directly across his bed. Which action should the nurse take first?",
-     "takeaway": "Address what nursing controls first: clustering care, light, and noise. Medication is not the first answer to an environmental cause.",
-     "strategy": "Sort the causes by who can change them. Anything nursing controls comes before anything requiring an order.",
+     "stem": "A 72-year-old has been waking at 0300 each night since admission and cannot get back to sleep. At home she went to bed at 2300 and woke at 0700. On the unit she is settled at 2030 because that is when the evening round finishes. Which action addresses the cause?",
+     "takeaway": "Match the hospital routine to the patient's usual sleep times rather than the unit's convenience.",
+     "strategy": "Do the arithmetic: bed at 2030, awake at 0300, is six and a half hours. She is not waking early, she is finishing early.",
      "elimination": {
       "strategies": [
        "Treat each option as true or false"
       ],
       "steps": [
        {
-        "action": "List the causes",
-        "detail": "Observation timing, television, corridor light."
+        "action": "Count the hours",
+        "detail": "2030 to 0300 is a full short night."
        },
        {
-        "action": "Ask who controls them",
-        "detail": "All three are nursing."
+        "action": "Cut the sedative",
+        "detail": "She has no trouble falling asleep."
        },
        {
-        "action": "Cut D and C",
-        "detail": "One medicates, one normalizes."
+        "action": "Cut the nap and the reassurance",
+        "detail": "One worsens it, one explains it away."
        }
       ],
-      "verdict": "That leaves B: fix what you control tonight."
+      "verdict": "That leaves A: settle her at her usual bedtime."
      },
-     "answer": "B",
+     "answer": "A",
      "options": [
       {
        "id": "A",
-       "text": "Reassure him that disrupted sleep is expected in hospital",
-       "correct": false,
-       "rationale": "Normalizes a problem that is slowing his recovery and can be changed."
+       "text": "Let her stay up until her usual bedtime and settle her then",
+       "correct": true,
+       "rationale": "Being put to bed two and a half hours early means she has had her sleep by 0300. Matching her usual time is what moves the waking."
       },
       {
        "id": "B",
-       "text": "Cluster the night-time care and address the light and noise",
-       "correct": true,
-       "rationale": "The causes described are environmental and within nursing control, so they are addressed before anything is requested from a prescriber."
+       "text": "Offer a sedative at 2030 so she stays asleep longer",
+       "correct": false,
+       "rationale": "Medicates a schedule problem. She is not failing to fall asleep; she is falling asleep too early."
       },
       {
        "id": "C",
-       "text": "Move him to a single room as the first step",
+       "text": "Encourage a daytime nap to make up the lost hours",
        "correct": false,
-       "rationale": "May help and it depends on bed availability. The modifiable causes can be addressed tonight."
+       "rationale": "Daytime sleep reduces the drive to sleep at night and would push her waking earlier still."
       },
       {
        "id": "D",
-       "text": "Request an order for a sedative to help him sleep",
+       "text": "Reassure her that waking early is normal with age",
        "correct": false,
-       "rationale": "Medicates around a problem that has an identified and modifiable cause."
+       "rationale": "Older adults do wake more easily, and that is not why she wakes at 0300. The unit's routine explains it."
       }
      ]
     },
@@ -43886,36 +43982,36 @@
     },
     {
      "id": "ch43-q8",
-     "stem": "A 66-year-old with chronic obstructive pulmonary disease reports he cannot sleep in hospital. He explains that lying flat leaves him breathless, and he has been sitting upright in the chair for most of the night. Which factor most likely contributes to his difficulty sleeping?",
+     "stem": "A 66-year-old with chronic obstructive pulmonary disease has slept upright in the chair for three nights because lying flat leaves him breathless. He asks the nurse to order him something to help him sleep. Which action is most appropriate?",
      "options": [
       {
        "id": "A",
-       "text": "Increased REM sleep in respiratory disease",
-       "correct": false,
-       "rationale": "Describes ordinary tiredness rather than the specific pattern this disorder produces, and tiredness alone would not prompt a sleep study."
+       "text": "Raise the head of the bed and support him with pillows so he can sleep in bed",
+       "correct": true,
+       "rationale": "His problem is position, not sedation. Sleeping upright in bed lets him breathe and sleep at the same time, and a chair gives him neither properly."
       },
       {
        "id": "B",
-       "text": "Elevated melatonin production",
+       "text": "Request an order for a sedative so he can settle",
        "correct": false,
-       "rationale": "Not a described feature of respiratory disease."
+       "rationale": "Sedatives depress respiration, which is the opposite of what someone breathless on lying flat can afford. Non-drug measures come first."
       },
       {
        "id": "C",
-       "text": "Positioning needs and breathlessness disrupt sleep",
-       "correct": true,
-       "rationale": "Breathlessness worsens lying flat, so the position that allows sleep and the position that allows breathing work against each other."
+       "text": "Teach sleep hygiene and a consistent bedtime routine",
+       "correct": false,
+       "rationale": "Good advice for someone whose habits are the problem. His difficulty is mechanical, and no routine will let him lie flat comfortably."
       },
       {
        "id": "D",
-       "text": "Reduced need for sleep with chronic illness",
+       "text": "Reassure him that sleeping in a chair is adequate rest",
        "correct": false,
-       "rationale": "Illness increases the need for sleep while making it harder to get."
+       "rationale": "A chair rarely allows the deep sleep that repairs tissue, and three nights of it will show in his fatigue and his recovery."
       }
      ],
-     "answer": "C",
-     "takeaway": "Illness increases the need for sleep and often makes it harder to get.",
-     "strategy": "Each disease group disrupts sleep by a specific mechanism. Respiratory is positioning and breathlessness; cardiac is nocturnal angina and apnea; gastrointestinal is nocturnal symptoms.",
+     "answer": "A",
+     "takeaway": "Respiratory disease disrupts sleep through positioning and breathlessness. Fix the position before reaching for a drug.",
+     "strategy": "He asked for a sedative, and the question is whether that is what he needs. Ask what is actually keeping him awake.",
      "type": "multiple_choice",
      "elimination": {
       "strategies": [
@@ -43923,19 +44019,19 @@
       ],
       "steps": [
        {
-        "action": "Read the stem",
-        "detail": "COPD and difficulty sleeping."
+        "action": "Name the cause",
+        "detail": "Lying flat makes him breathless."
        },
        {
-        "action": "Cut A and D",
-        "detail": "Neither is described."
+        "action": "Cut the sedative",
+        "detail": "It depresses respiration in a patient who cannot spare it."
        },
        {
-        "action": "Cut D",
-        "detail": "Reverses the relationship between illness and sleep need."
+        "action": "Cut hygiene and reassurance",
+        "detail": "One treats habits, one accepts three nights in a chair."
        }
       ],
-      "verdict": "That leaves C: specified directly for respiratory disease including COPD and asthma."
+      "verdict": "That leaves A: raise the head of the bed so he can sleep lying supported."
      }
     },
     {
@@ -44694,8 +44790,8 @@
      "id": "ch43-c6",
      "type": "matrix",
      "stem": "For each finding, determine whether it is a MODIFIABLE cause, a NON-MODIFIABLE factor, or requires MEDICAL REVIEW.",
-     "takeaway": "Sort what you can change, what the prescriber changes, and what is simply context.",
-     "strategy": "Two causes are modifiable and two need an order. Knowing which is which decides whether you act or ask.",
+     "takeaway": "Sort causes by who can act. Nursing owns the environment and the routine; timing of a prescribed drug and new analgesia need the provider; age and stable history need neither.",
+     "strategy": "Ask who has the authority to change each one. That splits the list three ways.",
      "elimination": {
       "strategies": [
        "Treat each option as true or false"
@@ -44727,44 +44823,52 @@
        "id": "r1",
        "text": "Staff entering separately for vital signs, medications, and blood draws",
        "answer": "Modifiable by nursing",
-       "rationale": "Clustering care is within nursing control."
+       "rationale": "Grouping the entries is entirely within nursing control and needs nobody's permission."
       },
       {
        "id": "r2",
        "text": "The overhead light switched on at each entry",
        "answer": "Modifiable by nursing",
-       "rationale": "Dimming lights during evening hours is an intervention."
+       "rationale": "Using a task light instead of the overhead is a nursing decision."
       },
       {
        "id": "r3",
        "text": "Furosemide scheduled at 2000",
        "answer": "Requires medical review",
-       "rationale": "Changing the timing of a prescribed medication requires the prescriber."
+       "rationale": "The nurse cannot change a prescribed administration time. She raises it with the provider."
       },
       {
        "id": "r4",
        "text": "Chest discomfort rated 6 out of 10 at night",
        "answer": "Requires medical review",
-       "rationale": "Unrelieved pain needs an analgesia review."
+       "rationale": "Pain at 6 of 10 overnight needs an analgesia order or a change to the existing one."
       },
       {
        "id": "r5",
        "text": "Age 68",
        "answer": "Non-modifiable",
-       "rationale": "Older adults sleep less and more fragmented, which is expected."
+       "rationale": "Age cannot be changed, and it is not the cause of his disrupted sleep."
       },
       {
        "id": "r6",
        "text": "History of hypertension managed with medication",
        "answer": "Non-modifiable",
-       "rationale": "A stable existing condition rather than a sleep cause."
+       "rationale": "A stable managed condition that is not contributing to the awakenings."
       }
      ],
      "scoring": "0/1",
      "caseId": "ch43-case1",
      "caseTitle": "Older adult with disrupted sleep in hospital",
      "caseStep": 6,
-     "caseSteps": 6
+     "caseSteps": 6,
+     "answer": {
+      "r1": "Modifiable by nursing",
+      "r2": "Modifiable by nursing",
+      "r3": "Requires medical review",
+      "r4": "Requires medical review",
+      "r5": "Non-modifiable",
+      "r6": "Non-modifiable"
+     }
     },
     {
      "id": "ch43-cj1",
