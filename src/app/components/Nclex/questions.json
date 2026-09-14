@@ -55748,6 +55748,705 @@
           "concept": "The apical pulse is taken at the fifth intercostal space at the midclavicular line and is used for infants, irregular rhythms, and before certain cardiac medications. Pulse character includes rate, rhythm, strength on a 0 to 4+ scale, and equality."
         }
       ]
+    },
+    {
+      "id": 12,
+      "title": "Oxygen Administration",
+      "questions": [
+        {
+          "id": "sk12-q1",
+          "type": "multiple_choice",
+          "stem": "A patient is prescribed oxygen at 3 L/min by nasal cannula. A student asks what percentage of oxygen the patient is receiving. Which response is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The delivered concentration varies with the breathing pattern and airway",
+              "correct": true,
+              "rationale": "Flow rate is not the same as FiO2. On a low-flow device the patient draws room air around the prongs, so how fast and how deeply the patient breathes changes what the patient actually receives."
+            },
+            {
+              "id": "B",
+              "text": "Exactly 32%, calculated at 4% for each litre above room air",
+              "correct": false,
+              "rationale": "The rule of thumb gives an estimate, not a delivered concentration. Her slide states directly that oxygen flow does not equal FiO2."
+            },
+            {
+              "id": "C",
+              "text": "It cannot be estimated without an arterial blood gas",
+              "correct": false,
+              "rationale": "An approximate range is known for each device. A blood gas measures what reached the blood, not what the device delivered."
+            },
+            {
+              "id": "D",
+              "text": "The same concentration as any device set to 3 L/min",
+              "correct": false,
+              "rationale": "Different devices deliver very different concentrations at the same flow, which is why the device is prescribed alongside the rate."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Oxygen flow does not equal FiO2. On low-flow devices the delivered concentration depends on the patient's respiratory pattern, airway, and device fit.",
+          "strategy": "Two options treat flow and concentration as the same thing. Ask what else is entering the airway besides the prescribed oxygen.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the device type",
+                "detail": "Nasal cannula is low flow."
+              },
+              {
+                "action": "Ask what else is inhaled",
+                "detail": "Room air around the prongs."
+              },
+              {
+                "action": "Cut the fixed-percentage options",
+                "detail": "Both assume flow sets concentration."
+              }
+            ],
+            "verdict": "That leaves A: the delivered concentration varies with the patient."
+          }
+        },
+        {
+          "id": "sk12-q2",
+          "type": "multiple_choice",
+          "stem": "A nurse applies a simple face mask and sets the flow at 3 L/min so the patient feels less overwhelmed by the airflow. Which problem does this create?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The mask seal is lost at low flow rates",
+              "correct": false,
+              "rationale": "The seal depends on fit and strap tension rather than flow rate."
+            },
+            {
+              "id": "B",
+              "text": "The oxygen concentration falls below room air",
+              "correct": false,
+              "rationale": "Supplemental oxygen does not deliver less than the 21% already in the room. The hazard is the carbon dioxide, not a lack of oxygen."
+            },
+            {
+              "id": "C",
+              "text": "The reservoir bag fails to inflate",
+              "correct": false,
+              "rationale": "A simple face mask has no reservoir bag. That belongs to the non-rebreather."
+            },
+            {
+              "id": "D",
+              "text": "Exhaled carbon dioxide collects in the mask and is rebreathed",
+              "correct": true,
+              "rationale": "The mask holds a volume of exhaled gas. It takes at least 5 L/min to flush that volume out between breaths, and below that the patient breathes the own carbon dioxide back in."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "A simple face mask runs at 5 L/min minimum. Below that, exhaled carbon dioxide is not flushed from the mask and gets rebreathed.",
+          "strategy": "The instinct that lower flow is gentler is what this question punishes. Ask what has to be cleared from the mask between breaths.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the minimum",
+                "detail": "5 L/min on a simple mask."
+              },
+              {
+                "action": "Ask what the flow is clearing",
+                "detail": "Exhaled carbon dioxide sitting in the mask."
+              },
+              {
+                "action": "Cut the reservoir option",
+                "detail": "A simple mask has no bag."
+              }
+            ],
+            "verdict": "That leaves D: carbon dioxide rebreathing."
+          }
+        },
+        {
+          "id": "sk12-q3",
+          "type": "multiple_choice",
+          "stem": "A nurse prepares to place a non-rebreather mask on a patient with a saturation of 84%. Which action does she take before putting the mask on the face?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Inflate the reservoir bag",
+              "correct": true,
+              "rationale": "The bag is the oxygen supply for the next breath. Placing the mask on an empty bag means the first breaths draw against nothing."
+            },
+            {
+              "id": "B",
+              "text": "Set the flow to 5 L/min and increase it once the mask is on",
+              "correct": false,
+              "rationale": "A non-rebreather runs at 10 to 15 L/min. Starting low leaves the bag unable to fill."
+            },
+            {
+              "id": "C",
+              "text": "Remove the one-way valves to allow easier exhalation",
+              "correct": false,
+              "rationale": "The valves are what keep room air out and make the high concentration possible. Removing them defeats the device."
+            },
+            {
+              "id": "D",
+              "text": "Attach a humidifier to the oxygen source",
+              "correct": false,
+              "rationale": "Humidification belongs with high-flow nasal cannula. It is not a step before applying a non-rebreather."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Inflate the reservoir before the mask goes on the face. The bag holds the oxygen for the next breath.",
+          "strategy": "Three options interfere with the thing that makes a non-rebreather work. Ask what the bag is for.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Ask what the bag does",
+                "detail": "Holds the oxygen the patient is about to inhale."
+              },
+              {
+                "action": "Cut the low-flow start",
+                "detail": "The bag cannot fill at 5 L/min."
+              },
+              {
+                "action": "Cut humidification and valve removal",
+                "detail": "One belongs to HFNC, one disables the device."
+              }
+            ],
+            "verdict": "That leaves A: inflate the reservoir first."
+          }
+        },
+        {
+          "id": "sk12-q4",
+          "type": "multiple_choice",
+          "stem": "A patient on 6 L/min by nasal cannula has a saturation of 87% and is using accessory muscles. The provider asks the nurse to anticipate the next device. Which is most appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A simple face mask at 5 L/min",
+              "correct": false,
+              "rationale": "A step sideways rather than up. At 5 L/min a simple mask delivers around 40%, which is close to what is already being delivered."
+            },
+            {
+              "id": "B",
+              "text": "A nasal cannula increased to 8 L/min",
+              "correct": false,
+              "rationale": "Above 6 L/min the cannula dries and irritates the nares without adding useful concentration. The device has run out of range."
+            },
+            {
+              "id": "C",
+              "text": "A non-rebreather mask at 10 to 15 L/min",
+              "correct": true,
+              "rationale": "The patient is already at the ceiling of what a nasal cannula can safely deliver and still failing. A non-rebreather gives roughly 60 to 90%."
+            },
+            {
+              "id": "D",
+              "text": "Room air with upright positioning and coached breathing",
+              "correct": false,
+              "rationale": "Removes the oxygen from a patient who is hypoxemic on 6 L/min."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "A nasal cannula tops out at 6 L/min and 44%. When that is not enough, the next step up is a device with a reservoir.",
+          "strategy": "One option increases a device past its range, one moves sideways, one removes oxygen entirely.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read where the patient already is",
+                "detail": "6 L/min, the top of the cannula range, and still hypoxemic."
+              },
+              {
+                "action": "Cut the increase to 8",
+                "detail": "Beyond what the device can usefully deliver."
+              },
+              {
+                "action": "Cut the simple mask and room air",
+                "detail": "One is a sideways move, one takes oxygen away."
+              }
+            ],
+            "verdict": "That leaves C: a non-rebreather."
+          }
+        },
+        {
+          "id": "sk12-q5",
+          "type": "multiple_choice",
+          "stem": "A patient is placed on high-flow nasal cannula. Which feature distinguishes it from a standard nasal cannula?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The gas is heated and humidified and the FiO2 can be set precisely",
+              "correct": true,
+              "rationale": "Heating and humidifying is what makes flows up to 60 L/min tolerable, and the high flow is what allows the delivered concentration to be set rather than estimated."
+            },
+            {
+              "id": "B",
+              "text": "It delivers oxygen only during inspiration to conserve supply",
+              "correct": false,
+              "rationale": "That describes the oxymizer, which uses a reservoir to deliver a bolus on inspiration."
+            },
+            {
+              "id": "C",
+              "text": "It seals against the face to prevent room air entering",
+              "correct": false,
+              "rationale": "It uses prongs in the nares, not a seal. The high flow rate is what limits room air dilution."
+            },
+            {
+              "id": "D",
+              "text": "It requires no humidification because the flow is warmed",
+              "correct": false,
+              "rationale": "Both heating and humidification are part of it. Dry gas at those flows would damage the airway."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "High-flow nasal cannula: heated, humidified, precisely set FiO2, up to about 60 L/min, and it can provide some positive airway pressure.",
+          "strategy": "One distractor describes the oxymizer. Ask what makes 60 L/min through the nose bearable.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Ask what limits ordinary high flow",
+                "detail": "Cold dry gas injures the airway."
+              },
+              {
+                "action": "Cut the oxymizer description",
+                "detail": "That is a reservoir cannula."
+              },
+              {
+                "action": "Cut the seal and no-humidification options",
+                "detail": "It uses prongs, and humidification is essential."
+              }
+            ],
+            "verdict": "That leaves A: heated, humidified, and precisely set."
+          }
+        },
+        {
+          "id": "sk12-q6",
+          "type": "multiple_choice",
+          "stem": "A patient needs more oxygen than a standard nasal cannula provides, but the team wants to avoid a mask so eating and speaking can continue. Which device fits?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A non-rebreather at 10 L/min",
+              "correct": false,
+              "rationale": "Also a mask, and a higher concentration than the situation calls for."
+            },
+            {
+              "id": "B",
+              "text": "An oxymizer reservoir cannula",
+              "correct": true,
+              "rationale": "It stores oxygen between breaths and delivers a bolus on inspiration, which makes it more efficient than a standard cannula while staying out of the way of the mouth."
+            },
+            {
+              "id": "C",
+              "text": "A simple face mask at 5 L/min",
+              "correct": false,
+              "rationale": "Covers the mouth, which is exactly what the team wants to avoid, and her slide lists interference with eating and drinking as a consideration."
+            },
+            {
+              "id": "D",
+              "text": "A second nasal cannula at a higher flow",
+              "correct": false,
+              "rationale": "Not a device. A cannula above 6 L/min dries the nares without adding useful concentration."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "An oxymizer is a reservoir cannula. It conserves oxygen and delivers more than a standard cannula without a mask.",
+          "strategy": "The constraint in the stem is that the mouth must stay free. Two options put a mask on the patient.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the constraint",
+                "detail": "Eating and speaking must continue."
+              },
+              {
+                "action": "Cut both masks",
+                "detail": "Each covers the mouth."
+              },
+              {
+                "action": "Cut the higher flow",
+                "detail": "Beyond the cannula's useful range."
+              }
+            ],
+            "verdict": "That leaves B: the oxymizer."
+          }
+        },
+        {
+          "id": "sk12-s1",
+          "type": "sata",
+          "stem": "A nurse is about to apply oxygen to a newly admitted patient. Which actions belong to the assessment before the device goes on? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Compare the new saturation with the baseline",
+              "correct": false,
+              "rationale": "There is no new saturation yet. This belongs to the reassessment."
+            },
+            {
+              "id": "B",
+              "text": "Verify the prescribed device and setting",
+              "correct": true,
+              "rationale": "Oxygen is a medication. The device and the flow are both part of the order."
+            },
+            {
+              "id": "C",
+              "text": "Check the oxygen saturation",
+              "correct": true,
+              "rationale": "The number the prescribed target is written against."
+            },
+            {
+              "id": "D",
+              "text": "Assess respiratory rate, depth, and effort",
+              "correct": true,
+              "rationale": "The baseline you will compare against afterwards. Without it you cannot tell whether the oxygen helped."
+            },
+            {
+              "id": "E",
+              "text": "Listen to the lung sounds",
+              "correct": true,
+              "rationale": "Part of the respiratory assessment and it may change which device is appropriate."
+            },
+            {
+              "id": "F",
+              "text": "Document the patient's response to the oxygen",
+              "correct": false,
+              "rationale": "That comes after the device is applied and the patient has been reassessed."
+            }
+          ],
+          "answer": [
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "takeaway": "Assess, apply, reassess. The assessment is rate, depth, effort, lung sounds, saturation, and the order itself.",
+          "strategy": "Two options describe things that can only happen after the oxygen is on.",
+          "elimination": {
+            "strategies": [
+              "Test each option on its own"
+            ],
+            "steps": [
+              {
+                "action": "Place yourself in time",
+                "detail": "The device is not on yet."
+              },
+              {
+                "action": "Cut documentation of response",
+                "detail": "Nothing has happened to respond to."
+              },
+              {
+                "action": "Cut the comparison",
+                "detail": "There is only a baseline so far."
+              }
+            ],
+            "verdict": "B, C, D, and E are selected."
+          }
+        },
+        {
+          "id": "sk12-s2",
+          "type": "sata",
+          "stem": "A patient has been on a simple face mask for six hours. Which findings require nursing attention? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The patient says the mask makes the patient feel closed in",
+              "correct": true,
+              "rationale": "Anxiety and claustrophobia are listed considerations, and a patient who pulls the mask off receives nothing."
+            },
+            {
+              "id": "B",
+              "text": "The flow meter reads 7 L/min",
+              "correct": false,
+              "rationale": "Within the 5 to 10 L/min range for a simple mask."
+            },
+            {
+              "id": "C",
+              "text": "The patient has eaten almost nothing from the lunch tray",
+              "correct": true,
+              "rationale": "The mask interferes with eating and drinking, so intake needs addressing rather than being recorded and left."
+            },
+            {
+              "id": "D",
+              "text": "Redness over the bridge of the nose",
+              "correct": true,
+              "rationale": "A pressure point under the mask, and her slide names skin around the nose, mouth, and ears as an assessment area."
+            },
+            {
+              "id": "E",
+              "text": "The patient is sitting upright in bed",
+              "correct": false,
+              "rationale": "The position you want the patient in."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "D"
+          ],
+          "takeaway": "Simple mask considerations: skin over nose, mouth and ears, claustrophobia, and interference with eating and drinking.",
+          "strategy": "Two options describe things that are correct as they stand. Check the flow against the device range before assuming it is wrong.",
+          "elimination": {
+            "strategies": [
+              "Test each option on its own"
+            ],
+            "steps": [
+              {
+                "action": "Check the flow against the range",
+                "detail": "7 L/min sits inside 5 to 10."
+              },
+              {
+                "action": "Cut the upright position",
+                "detail": "That is what you want."
+              },
+              {
+                "action": "Keep the rest",
+                "detail": "Skin, anxiety, and intake are all named considerations."
+              }
+            ],
+            "verdict": "A, C, and D are selected."
+          }
+        },
+        {
+          "id": "sk12-q7",
+          "type": "multiple_choice",
+          "stem": "A nurse applies oxygen at the prescribed rate and leaves the room to chart. Which step has she omitted?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Obtaining a repeat provider order for the device",
+              "correct": false,
+              "rationale": "The order already exists. Applying it does not require a second one."
+            },
+            {
+              "id": "B",
+              "text": "Waiting thirty minutes before documenting",
+              "correct": false,
+              "rationale": "No such waiting period. Reassessment happens when the patient can be expected to have responded."
+            },
+            {
+              "id": "C",
+              "text": "Placing a humidifier on the flow meter",
+              "correct": false,
+              "rationale": "Humidification is not required at low flows and is not a step in the sequence."
+            },
+            {
+              "id": "D",
+              "text": "Reassessing the patient's response to the oxygen",
+              "correct": true,
+              "rationale": "The sequence is assess, apply, reassess. Without the third step nobody knows whether the device worked."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Assess, apply, reassess. The last step is what closes the loop and it is the one most often dropped.",
+          "strategy": "Ask what the third step of her own sequence is. Two distractors invent a requirement that does not exist.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the sequence",
+                "detail": "Assess, apply, reassess."
+              },
+              {
+                "action": "Find the missing step",
+                "detail": "She left before reassessing."
+              },
+              {
+                "action": "Cut the invented requirements",
+                "detail": "No repeat order, no waiting period."
+              }
+            ],
+            "verdict": "That leaves D: she did not reassess."
+          }
+        },
+        {
+          "id": "sk12-q8",
+          "type": "multiple_choice",
+          "stem": "A student says that a patient on 15 L/min must be receiving more oxygen than a patient on 6 L/min. Which response is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "No, because all devices deliver the same concentration above 10 L/min",
+              "correct": false,
+              "rationale": "Concentrations differ widely at every flow rate."
+            },
+            {
+              "id": "B",
+              "text": "The device matters as much as the number, so the two cannot be compared directly",
+              "correct": true,
+              "rationale": "15 L/min through a non-rebreather gives roughly 60 to 90%, while 6 L/min by nasal cannula gives about 44%. But 15 L/min on a high-flow cannula could be set anywhere from 21 to 100%."
+            },
+            {
+              "id": "C",
+              "text": "Only an arterial blood gas can answer the question",
+              "correct": false,
+              "rationale": "A blood gas measures the patient's oxygenation, not what the device is delivering."
+            },
+            {
+              "id": "D",
+              "text": "Yes, because flow rate and delivered concentration rise together",
+              "correct": false,
+              "rationale": "They rise together within one device. Across devices the relationship breaks down entirely."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Compare flow rates only within the same device. Across devices, the device sets the range and the flow positions you inside it.",
+          "strategy": "The student's error is comparing numbers without naming the devices. Ask what is missing from her question.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Notice what is missing",
+                "detail": "Neither device was named."
+              },
+              {
+                "action": "Cut the direct comparison",
+                "detail": "The relationship holds only within one device."
+              },
+              {
+                "action": "Cut the blood gas",
+                "detail": "It measures the patient, not the device."
+              }
+            ],
+            "verdict": "That leaves B: the device matters as much as the number."
+          }
+        },
+        {
+          "id": "sk12-s3",
+          "type": "sata",
+          "stem": "A nurse documents after applying oxygen. Which elements belong in the entry? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The saturation compared with the baseline",
+              "correct": true,
+              "rationale": "A single value means little. The comparison is what shows the direction."
+            },
+            {
+              "id": "B",
+              "text": "The name of the nurse who verified the order",
+              "correct": false,
+              "rationale": "Verification is expected practice and does not need naming in the entry."
+            },
+            {
+              "id": "C",
+              "text": "The flow rate or FiO2 setting",
+              "correct": true,
+              "rationale": "The setting is part of the order and part of the record."
+            },
+            {
+              "id": "D",
+              "text": "The patient's response",
+              "correct": true,
+              "rationale": "Whether the intervention worked is the point of recording it."
+            },
+            {
+              "id": "E",
+              "text": "The device used",
+              "correct": true,
+              "rationale": "Anyone reading later needs to know what was on the face, not just a flow rate."
+            },
+            {
+              "id": "F",
+              "text": "The brand of the flow meter",
+              "correct": false,
+              "rationale": "Equipment detail with no bearing on the care."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "D",
+            "E"
+          ],
+          "takeaway": "Document the device, the flow or FiO2, and the patient's response measured against the baseline.",
+          "strategy": "Two options record equipment or process detail rather than anything about the patient.",
+          "elimination": {
+            "strategies": [
+              "Test each option on its own"
+            ],
+            "steps": [
+              {
+                "action": "Ask what the next nurse needs",
+                "detail": "Device, setting, and how the patient responded."
+              },
+              {
+                "action": "Cut the equipment detail",
+                "detail": "The brand changes nothing."
+              },
+              {
+                "action": "Cut the verification name",
+                "detail": "Expected practice rather than a finding."
+              }
+            ],
+            "verdict": "A, C, D, and E are selected."
+          },
+          "note": "Exactly four selections are requested."
+        },
+        {
+          "id": "sk12-q9",
+          "type": "multiple_choice",
+          "stem": "A patient on a non-rebreather has a reservoir bag that collapses completely each time the patient breathes in. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Remove the mask and reassess on room air",
+              "correct": false,
+              "rationale": "Takes oxygen from a patient who is on the highest-concentration mask available."
+            },
+            {
+              "id": "B",
+              "text": "Change the patient to a simple face mask",
+              "correct": false,
+              "rationale": "Steps the patient down to a lower concentration when the finding suggests more is needed, not less."
+            },
+            {
+              "id": "C",
+              "text": "Increase the flow rate so the bag stays partially inflated",
+              "correct": true,
+              "rationale": "A bag that empties means the patient is drawing more volume than the flow is supplying, so the next breaths pull room air through the valves and the concentration falls."
+            },
+            {
+              "id": "D",
+              "text": "Reassure the patient that full collapse on inspiration is expected",
+              "correct": false,
+              "rationale": "Partial deflation is expected. Complete collapse means the supply is not keeping up."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "The reservoir should stay partially inflated through inspiration. Full collapse means the flow is too low for the demand.",
+          "strategy": "Ask what an empty bag tells you about supply against demand. Two options reduce the oxygen.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the finding",
+                "detail": "The bag empties completely on each breath."
+              },
+              {
+                "action": "Cut the reassurance",
+                "detail": "Partial deflation is normal; total collapse is not."
+              },
+              {
+                "action": "Cut the step-down and removal",
+                "detail": "Both reduce a concentration the patient evidently needs."
+              }
+            ],
+            "verdict": "That leaves C: increase the flow."
+          }
+        }
+      ]
     }
   ]
 }
