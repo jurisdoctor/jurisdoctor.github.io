@@ -415,7 +415,7 @@ const ChapterSet = ({
                   title={`Question ${index + 1}`}
                   aria-current={here}
                   onClick={() => onStart(shown.id, index)}
-                  className={`h-9 rounded-lg text-xs font-bold duration-300 ${
+                  className={`relative h-9 rounded-lg text-xs font-bold duration-300 ${
                     here ? "ring-2 ring-[var(--title-color)]" : ""
                   } ${
                     state === "solved"
@@ -426,6 +426,15 @@ const ChapterSet = ({
                   }`}
                 >
                   {question.ordinal ?? index + 1}
+                  {(question.new || question.dailySet) && (
+                    <span
+                      aria-label="New question"
+                      title="New question"
+                      className="pointer-events-none absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[hsl(38,100%,60%)] text-[9px] leading-none text-white shadow"
+                    >
+                      ✨
+                    </span>
+                  )}
                 </button>
               );
             })}

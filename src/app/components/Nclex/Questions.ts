@@ -1,6 +1,3 @@
-import data from "./questions.json";
-import extra from "./teaching.json";
-
 export interface OptionType {
   id: string;
   text: string;
@@ -73,6 +70,8 @@ export interface QuestionType {
   id: string;
   ordinal?: number;
   type?: string;
+  new?: boolean;
+  dailySet?: string;
   scenario?: string;
   stem: string;
   options: OptionType[];
@@ -306,95 +305,127 @@ interface ExtraType extends QuestionType {
   chapter: string;
 }
 
-const added = (extra.items as unknown as ExtraType[]).reduce((map, item) => {
-  const bucket = map.get(item.chapter) ?? [];
-  bucket.push(item);
-  map.set(item.chapter, bucket);
-  return map;
-}, new Map<string, QuestionType[]>());
+interface RawBankFile {
+  meta: { course: string; textbook: string };
+  chapters: BankType[];
+  skills?: BankType[];
+}
 
-const group = (entries: BankType[], graft: boolean): ChapterType[] =>
-  entries.map((entry) => {
-    const id = String(entry.id);
-    const own = entry.questions.filter(renderable).map(clean);
-    const join = graft
-      ? (added.get(id) ?? []).filter(renderable).map(clean)
-      : [];
-    return {
-      id,
-      title: entry.title,
-      subtitle: entry.subtitle,
-      questions: [...own, ...join].map((question, index) => ({
-        ...question,
-        ordinal: index + 1,
-      })),
-    };
-  });
+interface ExtraFile {
+  items: ExtraType[];
+}
 
-const banked = group(data.chapters as unknown as BankType[], true);
+export interface DerivedBank {
+  Chapters: ChapterType[];
+  Skills: ChapterType[];
+  Cases: ChapterType[];
+  Judgment: ChapterType[];
+  Ready: ChapterType[];
+  AllQuestions: QuestionType[];
+  AllSkillQuestions: QuestionType[];
+  AllCaseQuestions: QuestionType[];
+  AllJudgmentQuestions: QuestionType[];
+  Course: string;
+  Textbook: string;
+}
 
 const isJudgment = (question: QuestionType) => /-cj\d+$/.test(question.id);
-
-export const Chapters: ChapterType[] = banked.map((chapter) => ({
-  ...chapter,
-  questions: chapter.questions
-    .filter((question) => !question.caseId && !isJudgment(question))
-    .map((question, index) => ({ ...question, ordinal: index + 1 })),
-}));
-
-// Grouped by chapter rather than by clinical-judgment step: the step is the
-// answer, so a step-named group would hand over every answer inside it.
-export const Judgment: ChapterType[] = banked
-  .map((chapter) => ({
-    ...chapter,
-    questions: chapter.questions
-      .filter(isJudgment)
-      .map((question, index) => ({ ...question, ordinal: index + 1 })),
-  }))
-  .filter((chapter) => chapter.questions.length > 0);
-
-export const Skills: ChapterType[] = group(
-  ((data as { skills?: unknown }).skills ?? []) as BankType[],
-  false,
-);
 
 const caseKey = (question: QuestionType) =>
   /^ch(\d+)-/.exec(question.caseId ?? "")?.[1] ?? question.caseId ?? "";
 
-export const Cases: ChapterType[] = (() => {
-  const held = new Map<string, QuestionType[]>();
-  banked.forEach((chapter) =>
-    chapter.questions.forEach((question) => {
-      if (!question.caseId) return;
-      const bucket = held.get(question.caseId) ?? [];
-      bucket.push(question);
-      held.set(question.caseId, bucket);
-    }),
-  );
+// Builds every derived view (chapters, skills, case studies, clinical
+// judgment) from one raw bank file. `extra` grafts supplementary
+// further-teaching questions into their chapter by id; omit it for a bank
+// that doesn't have (or need) that treatment.
+export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => {
+  const added = (extra?.items ?? []).reduce((map, item) => {
+    const bucket = map.get(item.chapter) ?? [];
+    bucket.push(item);
+    map.set(item.chapter, bucket);
+    return map;
+  }, new Map<string, QuestionType[]>());
 
-  return Array.from(held.entries())
-    .map(([id, steps]) => {
-      const order = [...steps].sort(
-        (a, b) => (a.caseStep ?? 0) - (b.caseStep ?? 0),
-      );
+  const group = (entries: BankType[], graft: boolean): ChapterType[] =>
+    entries.map((entry) => {
+      const id = String(entry.id);
+      const own = entry.questions.filter(renderable).map(clean);
+      const join = graft
+        ? (added.get(id) ?? []).filter(renderable).map(clean)
+        : [];
       return {
-        id: caseKey(order[0]),
-        title: order[0].caseTitle ?? "Case study",
-        subtitle: id,
-        questions: order.map((question, index) => ({
+        id,
+        title: entry.title,
+        subtitle: entry.subtitle,
+        questions: [...own, ...join].map((question, index) => ({
           ...question,
-          ordinal: question.caseStep ?? index + 1,
+          ordinal: index + 1,
         })),
       };
-    })
-    .sort((a, b) => Number(a.id) - Number(b.id));
-})();
+    });
 
-export const AllCaseQuestions = Cases.flatMap((entry) => entry.questions);
-export const AllJudgmentQuestions = Judgment.flatMap((step) => step.questions);
+  const banked = group(data.chapters, !!extra);
 
-export const Ready = Chapters.filter((chapter) => chapter.questions.length > 0);
-export const AllQuestions = Chapters.flatMap((chapter) => chapter.questions);
-export const AllSkillQuestions = Skills.flatMap((skill) => skill.questions);
-export const Course = data.meta.course;
-export const Textbook = data.meta.textbook;
+  const Chapters: ChapterType[] = banked.map((chapter) => ({
+    ...chapter,
+    questions: chapter.questions
+      .filter((question) => !question.caseId && !isJudgment(question))
+      .map((question, index) => ({ ...question, ordinal: index + 1 })),
+  }));
+
+  // Grouped by chapter rather than by clinical-judgment step: the step is
+  // the answer, so a step-named group would hand over every answer inside it.
+  const Judgment: ChapterType[] = banked
+    .map((chapter) => ({
+      ...chapter,
+      questions: chapter.questions
+        .filter(isJudgment)
+        .map((question, index) => ({ ...question, ordinal: index + 1 })),
+    }))
+    .filter((chapter) => chapter.questions.length > 0);
+
+  const Skills: ChapterType[] = group(data.skills ?? [], false);
+
+  const Cases: ChapterType[] = (() => {
+    const held = new Map<string, QuestionType[]>();
+    banked.forEach((chapter) =>
+      chapter.questions.forEach((question) => {
+        if (!question.caseId) return;
+        const bucket = held.get(question.caseId) ?? [];
+        bucket.push(question);
+        held.set(question.caseId, bucket);
+      }),
+    );
+
+    return Array.from(held.entries())
+      .map(([id, steps]) => {
+        const order = [...steps].sort(
+          (a, b) => (a.caseStep ?? 0) - (b.caseStep ?? 0),
+        );
+        return {
+          id: caseKey(order[0]),
+          title: order[0].caseTitle ?? "Case study",
+          subtitle: id,
+          questions: order.map((question, index) => ({
+            ...question,
+            ordinal: question.caseStep ?? index + 1,
+          })),
+        };
+      })
+      .sort((a, b) => Number(a.id) - Number(b.id));
+  })();
+
+  return {
+    Chapters,
+    Skills,
+    Cases,
+    Judgment,
+    Ready: Chapters.filter((chapter) => chapter.questions.length > 0),
+    AllQuestions: Chapters.flatMap((chapter) => chapter.questions),
+    AllSkillQuestions: Skills.flatMap((skill) => skill.questions),
+    AllCaseQuestions: Cases.flatMap((entry) => entry.questions),
+    AllJudgmentQuestions: Judgment.flatMap((step) => step.questions),
+    Course: data.meta.course,
+    Textbook: data.meta.textbook,
+  };
+};

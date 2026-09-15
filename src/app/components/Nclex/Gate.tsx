@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { ReactNode, useEffect, useRef, useState } from "react";
+import { EXAM_KEY, EXAMS, EXAM_TITLES, ExamId, isExamId } from "./Bank";
 
 const KEY = "nclex:unlocked";
 const DIGEST =
@@ -29,15 +30,27 @@ const Gate = ({ children }: { children: ReactNode }) => {
   const [ready, setReady] = useState(false);
   const [word, setWord] = useState("");
   const [wrong, setWrong] = useState(0);
+  const [exam, setExam] = useState<ExamId>("exam1");
   const cardRef = useRef<HTMLFormElement>(null);
   const router = useRouter();
 
   useEffect(() => {
     try {
       if (window.localStorage.getItem(KEY) === DIGEST) setOpen(true);
+      const saved = window.localStorage.getItem(EXAM_KEY);
+      if (saved && isExamId(JSON.parse(saved))) {
+        setExam(JSON.parse(saved));
+      }
     } catch {}
     setReady(true);
   }, []);
+
+  const pick = (next: ExamId) => {
+    setExam(next);
+    try {
+      window.localStorage.setItem(EXAM_KEY, JSON.stringify(next));
+    } catch {}
+  };
 
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -85,6 +98,24 @@ const Gate = ({ children }: { children: ReactNode }) => {
         <p className="mb-6 text-sm text-[#8b88b1]">
           Enter the password to open the question bank.
         </p>
+
+        <div className="mb-4 inline-flex gap-x-1 rounded-[1.875rem] bg-[var(--body-color)] p-1">
+          {EXAMS.map((entry) => (
+            <button
+              key={entry}
+              type="button"
+              onClick={() => pick(entry)}
+              aria-pressed={exam === entry}
+              className={`rounded-[1.5rem] px-5 py-2 text-sm font-bold duration-300 ${
+                exam === entry
+                  ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
+                  : "text-[#8b88b1] hover:text-[var(--title-color)]"
+              }`}
+            >
+              {EXAM_TITLES[entry]}
+            </button>
+          ))}
+        </div>
 
         <input
           type="password"
