@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
-import { ChapterType } from "./Questions";
+import { ChapterType, displayNumberOf } from "./Questions";
 
 export type PickType = string;
 export type LensType = "all" | "incomplete";
@@ -376,7 +376,7 @@ const ChapterSet = ({
               }`}
             >
               <Fill {...progress} />
-              <span className="relative">{chapter.id}</span>
+              <span className="relative">{displayNumberOf(chapter)}</span>
               {count > 0 && (
                 <span className="pointer-events-none absolute -right-1 -top-1 rounded-full bg-[hsl(219,100%,91%)] px-1 text-[9px] leading-[14px] text-[var(--title-color)]">
                   {count}

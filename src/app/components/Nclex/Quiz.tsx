@@ -503,7 +503,9 @@ const Quiz = ({
 
           <div className="mb-6 grid gap-y-4 rounded-2xl bg-[var(--body-color)] p-5">
             <Aside label="Takeaway" body={question.takeaway} />
-            <Aside label="Strategy" body={question.strategy} italic />
+            {question.strategy && (
+              <Aside label="Strategy" body={question.strategy} italic />
+            )}
           </div>
 
           <div className="flex flex-wrap items-center gap-4">

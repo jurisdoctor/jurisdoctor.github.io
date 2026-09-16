@@ -95,7 +95,7 @@ export interface QuestionType {
   note?: string;
   answer: string | string[];
   takeaway: string;
-  strategy: string;
+  strategy?: string;
 }
 
 export const isHighlight = (question: QuestionType) =>
@@ -210,6 +210,7 @@ export const isMulti = (question: QuestionType) =>
   keysOf(question).length > 1;
 export interface ChapterType {
   id: string;
+  chapterNumber?: number;
   title: string;
   subtitle?: string;
   questions: QuestionType[];
@@ -217,14 +218,22 @@ export interface ChapterType {
 
 interface BankType {
   id: string | number;
+  chapterNumber?: number;
   title: string;
   subtitle?: string;
   questions: QuestionType[];
 }
 
+// Two chapters in this course are both numbered 56, so the data disambiguates
+// them with a synthetic id (e.g. "1056") while `chapterNumber` carries the
+// number to actually display; fall back to the id for chapters that don't
+// need the split.
+export const displayNumberOf = (chapter: ChapterType) =>
+  chapter.chapterNumber ?? chapter.id;
+
 export const labelOf = (chapter: ChapterType) =>
   /^\d+$/.test(chapter.id)
-    ? `Chapter ${chapter.id} · ${chapter.title}`
+    ? `Chapter ${displayNumberOf(chapter)} · ${chapter.title}`
     : chapter.title;
 
 const strip = (text: string) =>
@@ -271,7 +280,7 @@ const clean = (question: QuestionType): QuestionType => ({
   scenario: question.scenario ? strip(question.scenario) : undefined,
   stem: strip(question.stem),
   takeaway: strip(question.takeaway),
-  strategy: strip(question.strategy),
+  strategy: question.strategy ? strip(question.strategy) : undefined,
   options: Array.isArray(question.options)
     ? question.options.map(tidy)
     : question.options,
@@ -355,6 +364,7 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
         : [];
       return {
         id,
+        chapterNumber: entry.chapterNumber,
         title: entry.title,
         subtitle: entry.subtitle,
         questions: [...own, ...join].map((question, index) => ({
