@@ -93,7 +93,7 @@ const Cloze = ({
               onChange={(event) =>
                 setPicks((prev) => ({ ...prev, [id]: event.target.value }))
               }
-              className={`mx-1 rounded-lg border-2 border-solid px-2 py-1 text-sm text-[var(--text-color)] outline-none duration-300 disabled:opacity-90 ${tone}`}
+              className={`mx-1 w-56 max-w-full truncate rounded-lg border-2 border-solid px-2 py-1 align-middle text-sm text-[var(--text-color)] outline-none duration-300 disabled:opacity-90 ${tone}`}
             >
               <option value="">Select</option>
               {blank.options.map((option) => (
