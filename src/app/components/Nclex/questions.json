@@ -3,7 +3,7 @@
     "course": "N55 Fundamentals of Nursing",
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
-    "questionCount": 585,
+    "questionCount": 615,
     "chaptersIncluded": [
       1,
       2,
@@ -184,7 +184,7 @@
         "note": "Work each option independently. Partial credit means a wrong selection costs you, so only select what the scenario supports."
       }
     ],
-    "chapterQuestionCount": 423,
+    "chapterQuestionCount": 453,
     "exams": [
       {
         "id": "exam1",
@@ -241,11 +241,11 @@
           1041
         ],
         "skills": [],
-        "questionCount": 80
+        "questionCount": 110
       }
     ],
     "currentDailySet": {
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "chapters": [
         27,
         38,
@@ -253,36 +253,36 @@
         1041
       ],
       "questionIds": [
-        "ch27-d1",
-        "ch27-d2",
-        "ch27-d3",
-        "ch27-d4",
-        "ch27-d5",
-        "ch27-d6",
-        "ch27-d7",
-        "ch38-d1",
-        "ch38-d2",
-        "ch38-d3",
-        "ch38-d4",
-        "ch38-d5",
-        "ch38-d6",
-        "ch38-d7",
-        "ig15-d1",
-        "ig15-d2",
-        "ig15-d3",
-        "ig15-d4",
-        "ig15-d5",
-        "ig15-d6",
-        "ig15-d7",
-        "ig15-d8",
-        "ig41-d1",
-        "ig41-d2",
-        "ig41-d3",
-        "ig41-d4",
-        "ig41-d5",
-        "ig41-d6",
-        "ig41-d7",
-        "ig41-d8"
+        "ch27-e1",
+        "ch27-e2",
+        "ch27-e3",
+        "ch27-e4",
+        "ch27-e5",
+        "ch27-e6",
+        "ch27-e7",
+        "ch38-e1",
+        "ch38-e2",
+        "ch38-e3",
+        "ch38-e4",
+        "ch38-e5",
+        "ch38-e6",
+        "ch38-e7",
+        "ig15-e1",
+        "ig15-e2",
+        "ig15-e3",
+        "ig15-e4",
+        "ig15-e5",
+        "ig15-e6",
+        "ig15-e7",
+        "ig15-e8",
+        "ig41-e1",
+        "ig41-e2",
+        "ig41-e3",
+        "ig41-e4",
+        "ig41-e5",
+        "ig41-e6",
+        "ig41-e7",
+        "ig41-e8"
       ],
       "count": 30
     }

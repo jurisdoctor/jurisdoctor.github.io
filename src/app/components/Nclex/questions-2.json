@@ -3,7 +3,7 @@
     "course": "N55 Fundamentals of Nursing",
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
-    "questionCount": 585,
+    "questionCount": 615,
     "chaptersIncluded": [
       1,
       2,
@@ -184,7 +184,7 @@
         "note": "Work each option independently. Partial credit means a wrong selection costs you, so only select what the scenario supports."
       }
     ],
-    "chapterQuestionCount": 423,
+    "chapterQuestionCount": 453,
     "exams": [
       {
         "id": "exam1",
@@ -241,11 +241,11 @@
           1041
         ],
         "skills": [],
-        "questionCount": 80
+        "questionCount": 110
       }
     ],
     "currentDailySet": {
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "chapters": [
         27,
         38,
@@ -253,36 +253,36 @@
         1041
       ],
       "questionIds": [
-        "ch27-d1",
-        "ch27-d2",
-        "ch27-d3",
-        "ch27-d4",
-        "ch27-d5",
-        "ch27-d6",
-        "ch27-d7",
-        "ch38-d1",
-        "ch38-d2",
-        "ch38-d3",
-        "ch38-d4",
-        "ch38-d5",
-        "ch38-d6",
-        "ch38-d7",
-        "ig15-d1",
-        "ig15-d2",
-        "ig15-d3",
-        "ig15-d4",
-        "ig15-d5",
-        "ig15-d6",
-        "ig15-d7",
-        "ig15-d8",
-        "ig41-d1",
-        "ig41-d2",
-        "ig41-d3",
-        "ig41-d4",
-        "ig41-d5",
-        "ig41-d6",
-        "ig41-d7",
-        "ig41-d8"
+        "ch27-e1",
+        "ch27-e2",
+        "ch27-e3",
+        "ch27-e4",
+        "ch27-e5",
+        "ch27-e6",
+        "ch27-e7",
+        "ch38-e1",
+        "ch38-e2",
+        "ch38-e3",
+        "ch38-e4",
+        "ch38-e5",
+        "ch38-e6",
+        "ch38-e7",
+        "ig15-e1",
+        "ig15-e2",
+        "ig15-e3",
+        "ig15-e4",
+        "ig15-e5",
+        "ig15-e6",
+        "ig15-e7",
+        "ig15-e8",
+        "ig41-e1",
+        "ig41-e2",
+        "ig41-e3",
+        "ig41-e4",
+        "ig41-e5",
+        "ig41-e6",
+        "ig41-e7",
+        "ig41-e8"
       ],
       "count": 30
     }
@@ -804,27 +804,26 @@
         },
         {
           "id": "ch27-d1",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A nurse is admitting a patient who uses a cane at home. Which question best identifies what is new about this patient's mobility?",
           "options": [
             {
               "id": "A",
-              "text": "What could you do a month ago that you cannot do today?",
-              "correct": true,
-              "rationale": "Directly compares baseline with current ability. New deficits are the ones the patient has not yet adapted to."
-            },
-            {
-              "id": "B",
               "text": "Do you feel safe walking at home?",
               "correct": false,
               "rationale": "Asks about perception, not about change. Useful, but it does not compare before with now."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "How long have you used the cane?",
               "correct": false,
               "rationale": "Establishes duration of a long-standing device. Long use means practiced skill, not new risk."
+            },
+            {
+              "id": "C",
+              "text": "What could you do a month ago that you cannot do today?",
+              "correct": true,
+              "rationale": "Directly compares baseline with current ability. New deficits are the ones the patient has not yet adapted to."
             },
             {
               "id": "D",
@@ -833,12 +832,11 @@
               "rationale": "Asks what someone else concluded. It does not assess this patient's current function."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Separate baseline from new. The new deficit is the dangerous one."
         },
         {
           "id": "ch27-d2",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A nurse finds an unlabeled syringe left on a medication cart. No patient was harmed. Which action best supports a culture of safety?",
           "options": [
@@ -850,49 +848,48 @@
             },
             {
               "id": "B",
-              "text": "Report it so the labeling process can be reviewed",
-              "correct": true,
-              "rationale": "A near miss is free information about a hazard. Reporting sends it to people who can change the system."
-            },
-            {
-              "id": "C",
               "text": "Ask coworkers who left it so they can be corrected",
               "correct": false,
               "rationale": "Focuses on the person. Blame suppresses future reporting, which is what a culture of safety depends on."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Mention it in the end-of-shift handoff",
               "correct": false,
               "rationale": "Passes information to a few people. It never reaches anyone who can change the process."
+            },
+            {
+              "id": "D",
+              "text": "Report it so the labeling process can be reviewed",
+              "correct": true,
+              "rationale": "A near miss is free information about a hazard. Reporting sends it to people who can change the system."
             }
           ],
-          "answer": "B",
+          "answer": "D",
           "takeaway": "Near misses are the cheapest safety data a unit gets. Report the hazard, not the person."
         },
         {
           "id": "ch27-d3",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A unit has had four missed hourly rounding checks this month. Which change best reduces reliance on memory?",
           "options": [
             {
               "id": "A",
+              "text": "Add an automated prompt at each rounding interval",
+              "correct": true,
+              "rationale": "Puts the reminder in the workflow at the moment of action instead of in a person's head."
+            },
+            {
+              "id": "B",
               "text": "Post a reminder sign in the break room",
               "correct": false,
               "rationale": "Depends on someone reading it and then remembering hours later."
             },
             {
-              "id": "B",
+              "id": "C",
               "text": "Ask nurses to set alarms on their personal phones",
               "correct": false,
               "rationale": "An individual workaround. It fails silently and nobody can see whose alarm was never set."
-            },
-            {
-              "id": "C",
-              "text": "Add an automated prompt at each rounding interval",
-              "correct": true,
-              "rationale": "Puts the reminder in the workflow at the moment of action instead of in a person's head."
             },
             {
               "id": "D",
@@ -901,12 +898,11 @@
               "rationale": "Addresses the individual after the fact and changes none of the conditions that produced the miss."
             }
           ],
-          "answer": "C",
+          "answer": "A",
           "takeaway": "Design the system for a tired nurse, not an ideal one."
         },
         {
           "id": "ch27-d4",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "During a post-fall huddle the team finds the patient was wearing smooth-soled slippers brought from home and the floor had been recently mopped. Which conclusion does this support?",
           "options": [
@@ -918,29 +914,28 @@
             },
             {
               "id": "B",
+              "text": "Extrinsic factors contributed and the environment needs to change",
+              "correct": true,
+              "rationale": "Footwear and wet floors belong to the room and the routine. Both are correctable for every patient."
+            },
+            {
+              "id": "C",
               "text": "The fall risk score was inaccurate",
               "correct": false,
               "rationale": "The score describes the patient. Nothing here suggests the patient's own risks were misjudged."
             },
             {
-              "id": "C",
+              "id": "D",
               "text": "The fall could not have been prevented",
               "correct": false,
               "rationale": "Nonslip footwear and a dry floor are universal precautions. Both were available and neither was in place."
-            },
-            {
-              "id": "D",
-              "text": "Extrinsic factors contributed and the environment needs to change",
-              "correct": true,
-              "rationale": "Footwear and wet floors belong to the room and the routine. Both are correctable for every patient."
             }
           ],
-          "answer": "D",
+          "answer": "B",
           "takeaway": "The huddle asks what contributed and what changes, not who was careless."
         },
         {
           "id": "ch27-d5",
-          "dailySet": "2026-09-15",
           "type": "sata",
           "stem": "Which actions are part of universal fall precautions applied to every patient? Select all that apply.",
           "options": [
@@ -992,27 +987,26 @@
         },
         {
           "id": "ch27-d6",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A confused patient keeps trying to climb out of bed. Which action does the nurse take before considering restraints?",
           "options": [
             {
               "id": "A",
-              "text": "Assess for pain, a full bladder, hunger, or thirst",
-              "correct": true,
-              "rationale": "Behavior is communication. Most nighttime agitation has a fixable cause, and restraint leaves that cause in place."
-            },
-            {
-              "id": "B",
               "text": "Raise all four side rails",
               "correct": false,
               "rationale": "Full rails restrict free movement, so this is itself a restraint."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Obtain a restraint order so it is ready if needed",
               "correct": false,
               "rationale": "An available order is not an indication, and it skips the assessment that should come first."
+            },
+            {
+              "id": "C",
+              "text": "Assess for pain, a full bladder, hunger, or thirst",
+              "correct": true,
+              "rationale": "Behavior is communication. Most nighttime agitation has a fixable cause, and restraint leaves that cause in place."
             },
             {
               "id": "D",
@@ -1021,12 +1015,11 @@
               "rationale": "Reduces observation of a patient who is actively unsafe."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Ask why before you restrict. Pain, toileting, hunger, thirst, delirium, medication, fear, overstimulation."
         },
         {
           "id": "ch27-d7",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient in soft wrist restraints has been calm and oriented for the past two hours and is asking to have them removed. Which action does the nurse take?",
           "options": [
@@ -1038,25 +1031,281 @@
             },
             {
               "id": "B",
-              "text": "Remove the restraints and continue to monitor",
-              "correct": true,
-              "rationale": "The criterion for continuing is that the dangerous behavior is still present. It is not, so the restraint comes off at the earliest point."
-            },
-            {
-              "id": "C",
               "text": "Loosen one restraint and leave the other in place",
               "correct": false,
               "rationale": "A partial restraint is still a restraint and still requires an indication that no longer exists."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Explain that the restraints must stay on for the full ordered time",
               "correct": false,
               "rationale": "An order sets a maximum, not a minimum. Restraints are removed as early as possible."
+            },
+            {
+              "id": "D",
+              "text": "Remove the restraints and continue to monitor",
+              "correct": true,
+              "rationale": "The criterion for continuing is that the dangerous behavior is still present. It is not, so the restraint comes off at the earliest point."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Reassess the need continuously and remove at the earliest point."
+        },
+        {
+          "id": "ch27-e1",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "Four patients were admitted last night. All four were independent at home. Which patient is most likely to be injured by the hospitalization itself rather than by the illness?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A patient with a urinary tract infection started on a sedating antihistamine for sleep, with the bathroom on the far side of the room",
+              "correct": true,
+              "rationale": "Hospitalization raises risk through changed routine, new medications, sleep disruption, and unfamiliar surroundings. This patient has a new sedating drug plus an unfamiliar path to the toilet at night, and neither existed at home."
+            },
+            {
+              "id": "B",
+              "text": "A patient with pneumonia and an oxygen saturation of 91 percent on room air",
+              "correct": false,
+              "rationale": "Acute illness is its own risk, and the finding describes disease severity rather than something the hospital introduced."
+            },
+            {
+              "id": "C",
+              "text": "A patient admitted for observation after a syncopal episode, now on continuous telemetry",
+              "correct": false,
+              "rationale": "Monitoring is a tether and this patient is also being watched closely. Syncope is the illness, not a hospital-created hazard."
+            },
+            {
+              "id": "D",
+              "text": "A patient with cellulitis receiving intravenous antibiotics every eight hours",
+              "correct": false,
+              "rationale": "A line is a tether, and intermittent antibiotics in an otherwise well patient add little beyond the illness itself."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Ask what the building added. New medication plus unfamiliar layout plus disrupted sleep is the combination that injures a previously independent patient."
+        },
+        {
+          "id": "ch27-e2",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A nurse has taught the family of a patient at high risk for falls. Which statement by a family member indicates that the teaching needs to be reinforced?",
+          "options": [
+            {
+              "id": "A",
+              "text": "I will put the water and the glasses on the table by the bed before I leave",
+              "correct": false,
+              "rationale": "Keeping possessions within reach removes the unplanned trip across the room. Correct understanding."
+            },
+            {
+              "id": "B",
+              "text": "If nobody answers the call light right away, I will help walk to the bathroom myself",
+              "correct": true,
+              "rationale": "The plan specifies who assists and how. A family member substituting for trained assistance is the well-intentioned version of an unassisted transfer, and it is the statement that needs correction."
+            },
+            {
+              "id": "C",
+              "text": "I will tell the nurse if the confusion seems worse in the evening",
+              "correct": false,
+              "rationale": "Reporting concerning behavior is exactly what families are asked to do."
+            },
+            {
+              "id": "D",
+              "text": "I brought the shoes with the rubber soles instead of the slippers",
+              "correct": false,
+              "rationale": "Nonslip, well-fitting footwear is a universal precaution, and footwear is the thing families can fix in a day."
             }
           ],
           "answer": "B",
-          "takeaway": "Reassess the need continuously and remove at the earliest point."
+          "takeaway": "Family education specifies the assistance needed. Willingness to help is not the same as being the assistance the plan calls for."
+        },
+        {
+          "id": "ch27-e3",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A nurse is supervising assistive personnel caring for four patients on a fall prevention protocol. Which observed action requires the nurse to intervene?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Assistive personnel lower a bed and confirm the brakes are locked after a bath",
+              "correct": false,
+              "rationale": "Maintaining a safe environment is delegable and this is the task carried out correctly."
+            },
+            {
+              "id": "B",
+              "text": "Assistive personnel take a patient to the bathroom at the scheduled time and stay in the room",
+              "correct": false,
+              "rationale": "Assisting with toileting on a set schedule is delegable and the assistance level was already determined."
+            },
+            {
+              "id": "C",
+              "text": "Assistive personnel tell a patient who is asking to walk that the patient seems steady enough to go alone today",
+              "correct": true,
+              "rationale": "Judging whether a patient may ambulate unassisted is an assessment. Assistive personnel may assist with mobility according to the plan; they may not decide what the plan should be."
+            },
+            {
+              "id": "D",
+              "text": "Assistive personnel report that a patient has been picking at the intravenous dressing",
+              "correct": false,
+              "rationale": "Reporting concerning behavior is delegable. Observation travels; interpretation does not."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Delegation moves the doing. The moment an option has assistive personnel judging readiness, it is wrong."
+        },
+        {
+          "id": "ch27-e4",
+          "dailySet": "2026-09-16",
+          "type": "sata",
+          "stem": "A patient who is confused becomes increasingly restless at 2100 and repeatedly tries to get out of bed. Which nursing actions are appropriate before restraint is considered? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Offer toileting and assess for bladder distention",
+              "correct": true,
+              "rationale": "Toileting need is one of the first causes to assess. A full bladder is a common and fixable driver of nighttime restlessness."
+            },
+            {
+              "id": "B",
+              "text": "Ask a family member to stay at the bedside",
+              "correct": true,
+              "rationale": "Family presence is a listed alternative and works directly on confusion and fear."
+            },
+            {
+              "id": "C",
+              "text": "Dim the overhead lighting and turn off the television",
+              "correct": true,
+              "rationale": "Environmental modification addresses excess stimulation, which is a named cause of the behavior."
+            },
+            {
+              "id": "D",
+              "text": "Administer the ordered antipsychotic to settle the patient for the night",
+              "correct": false,
+              "rationale": "A medication given to control behavior rather than to treat a condition is a chemical restraint, not an alternative to one."
+            },
+            {
+              "id": "E",
+              "text": "Activate a bed exit alarm and reposition the patient closer to the nurses' station",
+              "correct": true,
+              "rationale": "Alarms and observation are listed alternatives. They notify without restricting movement."
+            },
+            {
+              "id": "F",
+              "text": "Tuck the sheets tightly across the chest to discourage rising",
+              "correct": false,
+              "rationale": "Anything that restricts free movement is a restraint by definition, regardless of what it is made of."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Assess the cause, then reorient, involve family, modify the environment, meet the need, and use alarms."
+        },
+        {
+          "id": "ch27-e5",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient has been in a vest restraint for six hours for pulling at a chest tube. At 0300 the nurse finds the patient partly over the side rail with the vest twisted across the upper chest, breathing rapidly, and unable to speak in full sentences. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Call for assistance and stay with the patient",
+              "correct": false,
+              "rationale": "Help is needed and will be summoned, and the compression continues while it arrives. This is the right instinct in the wrong order."
+            },
+            {
+              "id": "B",
+              "text": "Assess circulation and skin integrity under the restraint",
+              "correct": false,
+              "rationale": "Both are monitored during restraint use. Neither addresses a patient who cannot complete a sentence."
+            },
+            {
+              "id": "C",
+              "text": "Notify the provider that the restraint is no longer effective",
+              "correct": false,
+              "rationale": "Escalation follows the intervention. Reporting first leaves the chest compressed while the call is placed."
+            },
+            {
+              "id": "D",
+              "text": "Release the restraint and reposition the patient",
+              "correct": true,
+              "rationale": "A twisted vest across the chest of a patient who has climbed partway out is an active airway and breathing threat. Releasing it removes the compression, and it is the one thing that cannot wait."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "The most serious restraint injuries happen to patients trying to escape one. Airway and breathing outrank every monitoring parameter."
+        },
+        {
+          "id": "ch27-e6",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A unit's fall rate has not changed in six months despite an updated fall protocol. Reviewing the data, the manager finds that most falls were unwitnessed, occurred between 0200 and 0500, and involved patients whose documented plans included scheduled toileting. Which conclusion does this best support?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The scheduled toileting is not reaching the patients overnight",
+              "correct": true,
+              "rationale": "Documented plans that fail at one specific time of day point to execution rather than design. The plan exists on paper and the overnight round is not happening."
+            },
+            {
+              "id": "B",
+              "text": "The protocol itself is clinically incorrect and needs rewriting",
+              "correct": false,
+              "rationale": "The plans named an appropriate intervention. Nothing in the pattern suggests the wrong intervention was chosen."
+            },
+            {
+              "id": "C",
+              "text": "These patients were assessed at too low a risk level",
+              "correct": false,
+              "rationale": "They were assessed as needing scheduled toileting, so the assessment identified the risk correctly."
+            },
+            {
+              "id": "D",
+              "text": "Falls at night are unavoidable on a unit with reduced overnight staffing",
+              "correct": false,
+              "rationale": "Staffing as an explanation ends the inquiry. A time-specific pattern is a process finding, not an inevitability."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Falls cost injury, confidence, length of stay, and reimbursement. Ask whether the plan reached the bedside before asking whether the plan was right."
+        },
+        {
+          "id": "ch27-e7",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient admitted after a stroke has expressive aphasia and new right-sided weakness. The patient understands what is said but cannot produce words reliably, and has twice been found sitting at the edge of the bed alone. Which addition to the fall prevention plan is most important?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Place the call light on the unaffected side and establish a signal the patient can use without speaking",
+              "correct": true,
+              "rationale": "Communication impairment means the usual way of summoning help has failed, and weakness means the patient cannot compensate physically. Restoring a usable way to call is what stops the unassisted attempts."
+            },
+            {
+              "id": "B",
+              "text": "Ask the patient to verbally confirm understanding of the safety instructions each shift",
+              "correct": false,
+              "rationale": "Expressive aphasia is exactly the inability to produce reliable speech. Requiring a verbal response tests the deficit rather than working around it."
+            },
+            {
+              "id": "C",
+              "text": "Post a fall risk sign above the bed and document the risk level each shift",
+              "correct": false,
+              "rationale": "Signage and documentation record the risk. Neither gives the patient a way to ask for help at the moment of getting up."
+            },
+            {
+              "id": "D",
+              "text": "Raise all four side rails while the patient is in bed",
+              "correct": false,
+              "rationale": "Full rails restrict free movement, which makes them a restraint, and restraints are never used for routine fall prevention."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Sensory, cognitive, and communication impairments raise risk because the patient cannot call for help. Restore the signal before adding anything else."
         }
       ]
     },
@@ -1525,55 +1774,53 @@
         },
         {
           "id": "ch38-d1",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A nurse positions a patient in supported Fowler's position. Which finding indicates the position is correct?",
           "options": [
             {
               "id": "A",
-              "text": "The hips and knees are flexed with the normal spinal curves maintained",
-              "correct": true,
-              "rationale": "Support must permit flexion of the hips and knees and preserve the cervical, thoracic, and lumbar curves."
-            },
-            {
-              "id": "B",
               "text": "The legs are fully extended and flat against the mattress",
               "correct": false,
               "rationale": "Extension with no hip or knee flexion causes the patient to slide and shear."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "The head is flexed forward onto the chest",
               "correct": false,
               "rationale": "Loses the normal cervical curve and restricts the airway."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "The arms hang unsupported over the sides of the bed",
               "correct": false,
               "rationale": "Unsupported limbs pull on the shoulders and disturb alignment."
+            },
+            {
+              "id": "D",
+              "text": "The hips and knees are flexed with the normal spinal curves maintained",
+              "correct": true,
+              "rationale": "Support must permit flexion of the hips and knees and preserve the cervical, thoracic, and lumbar curves."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Supported means the body is held in alignment, not merely propped up."
         },
         {
           "id": "ch38-d2",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient on prolonged bed rest says the days feel pointless and has stopped asking to sit in the chair. Which nursing response best addresses this finding?",
           "options": [
             {
               "id": "A",
-              "text": "Explain that the rest is medically necessary and will end soon",
-              "correct": false,
-              "rationale": "Reassurance that closes the conversation and leaves the isolation unaddressed."
-            },
-            {
-              "id": "B",
               "text": "Arrange activities the patient values and involve family in the daily routine",
               "correct": true,
               "rationale": "Boredom, isolation, and loss of independence are listed psychosocial effects. They matter because a patient who disengages stops doing the activity that reverses the physical decline."
+            },
+            {
+              "id": "B",
+              "text": "Explain that the rest is medically necessary and will end soon",
+              "correct": false,
+              "rationale": "Reassurance that closes the conversation and leaves the isolation unaddressed."
             },
             {
               "id": "C",
@@ -1588,12 +1835,11 @@
               "rationale": "Increases isolation, which is the problem rather than the treatment."
             }
           ],
-          "answer": "B",
+          "answer": "A",
           "takeaway": "Psychosocial effects are not the soft part of the list. They become physical decline."
         },
         {
           "id": "ch38-d3",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient has been on bed rest for five days and has not had a bowel movement. Which mechanism explains this?",
           "options": [
@@ -1605,15 +1851,15 @@
             },
             {
               "id": "B",
-              "text": "Negative nitrogen balance reducing stool bulk",
-              "correct": false,
-              "rationale": "Negative nitrogen balance describes protein breakdown and loss of lean mass, not bowel transit."
-            },
-            {
-              "id": "C",
               "text": "Decreased gastrointestinal motility from immobility",
               "correct": true,
               "rationale": "Immobility slows peristalsis, so stool moves less and water is reabsorbed from it."
+            },
+            {
+              "id": "C",
+              "text": "Negative nitrogen balance reducing stool bulk",
+              "correct": false,
+              "rationale": "Negative nitrogen balance describes protein breakdown and loss of lean mass, not bowel transit."
             },
             {
               "id": "D",
@@ -1622,12 +1868,11 @@
               "rationale": "Demineralization releases calcium from bone. It does not slow the gut."
             }
           ],
-          "answer": "C",
+          "answer": "B",
           "takeaway": "Stasis: the gut needs movement to keep moving."
         },
         {
           "id": "ch38-d4",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "Which finding in a patient immobilized for three weeks suggests urinary stasis?",
           "options": [
@@ -1645,57 +1890,55 @@
             },
             {
               "id": "C",
-              "text": "A specific gravity of 1.015",
-              "correct": false,
-              "rationale": "Within the normal range and not a sign of stasis."
-            },
-            {
-              "id": "D",
               "text": "Flank pain with cloudy, foul-smelling urine",
               "correct": true,
               "rationale": "Urine sitting still allows infection and stone formation, which is how stasis presents."
+            },
+            {
+              "id": "D",
+              "text": "A specific gravity of 1.015",
+              "correct": false,
+              "rationale": "Within the normal range and not a sign of stasis."
             }
           ],
-          "answer": "D",
+          "answer": "C",
           "takeaway": "Urinary stasis raises infection risk and allows stones to form."
         },
         {
           "id": "ch38-d5",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient in traction cannot move the affected leg but is able to exercise the other limbs. Which exercise maintains strength in the immobilized leg?",
           "options": [
             {
               "id": "A",
-              "text": "Isometric exercise, contracting the muscle without moving the joint",
-              "correct": true,
-              "rationale": "Builds static strength and joint stability and is safe around painful or healing tissue."
-            },
-            {
-              "id": "B",
               "text": "Isotonic exercise, contracting the muscle while the joint moves",
               "correct": false,
               "rationale": "Requires joint movement, which traction prevents."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Passive range of motion performed by the nurse",
               "correct": false,
               "rationale": "Maintains flexibility. The patient's muscle does no work, so no strength is built."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Resistance training with ankle weights",
               "correct": false,
               "rationale": "Adds load through a moving joint, which is not possible or safe here."
+            },
+            {
+              "id": "D",
+              "text": "Isometric exercise, contracting the muscle without moving the joint",
+              "correct": true,
+              "rationale": "Builds static strength and joint stability and is safe around painful or healing tissue."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Isotonic moves the joint. Isometric does not, which is why it works in a limb that must stay still."
         },
         {
           "id": "ch38-d6",
-          "dailySet": "2026-09-15",
           "type": "sata",
           "stem": "Which factors influence a patient's level of activity? Select all that apply.",
           "options": [
@@ -1741,21 +1984,20 @@
         },
         {
           "id": "ch38-d7",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient recovering from pneumonia has been in bed for four days. Which action best prevents respiratory complications of immobility?",
           "options": [
             {
               "id": "A",
-              "text": "Apply sequential compression devices to both legs",
-              "correct": false,
-              "rationale": "Prevents venous stasis and thrombus. It does nothing for the lungs."
-            },
-            {
-              "id": "B",
               "text": "Assist the patient to sit upright and cough and deep breathe",
               "correct": true,
               "rationale": "Sitting upright increases lung expansion and coughing clears retained secretions, which are the two failures behind atelectasis."
+            },
+            {
+              "id": "B",
+              "text": "Apply sequential compression devices to both legs",
+              "correct": false,
+              "rationale": "Prevents venous stasis and thrombus. It does nothing for the lungs."
             },
             {
               "id": "C",
@@ -1770,8 +2012,264 @@
               "rationale": "Addresses negative nitrogen balance, not lung expansion."
             }
           ],
-          "answer": "B",
+          "answer": "A",
           "takeaway": "Match the intervention to the mechanism. Secretions pooling needs expansion and coughing."
+        },
+        {
+          "id": "ch38-e1",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient on bed rest for four days is preparing to ambulate. Supine blood pressure is 128/76 with a pulse of 78. After sitting at the edge of the bed for one minute, blood pressure is 102/58 with a pulse of 104 and the patient reports the room is spinning. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Assist the patient to stand so the episode resolves with movement",
+              "correct": false,
+              "rationale": "Standing raises the head further above the heart and deepens the drop in cerebral perfusion. This is the moment a fall happens."
+            },
+            {
+              "id": "B",
+              "text": "Keep the patient sitting and supported, then recheck before standing",
+              "correct": true,
+              "rationale": "A drop in pressure with a compensating rise in rate on sitting is orthostatic hypotension. Staying seated lets the circulation catch up without abandoning the activity, and the recheck is the checkpoint before the riskiest part."
+            },
+            {
+              "id": "C",
+              "text": "Return the patient to supine and cancel activity for the day",
+              "correct": false,
+              "rationale": "Abandoning the activity treats the symptom by deepening the deconditioning that caused it."
+            },
+            {
+              "id": "D",
+              "text": "Administer the ordered analgesic and reattempt in one hour",
+              "correct": false,
+              "rationale": "Nothing in the findings describes pain, and an hour of additional rest does not improve orthostatic tolerance."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Read the pair together: falling pressure with a rising rate on position change is orthostatic hypotension. Stage the change, do not cancel it."
+        },
+        {
+          "id": "ch38-e2",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient has been immobile for five days after a pelvic fracture. The nurse notes that the left calf is 3 cm larger than the right and is warm and tender. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Apply the sequential compression devices to both legs",
+              "correct": false,
+              "rationale": "Compression prevents venous stasis in a limb without a clot. Applying it now treats prevention as if it were treatment."
+            },
+            {
+              "id": "B",
+              "text": "Encourage active ankle pumping in both legs every hour",
+              "correct": false,
+              "rationale": "Leg exercises are correct prevention and are not the response to a limb that already shows the complication."
+            },
+            {
+              "id": "C",
+              "text": "Hold the sequential compression devices and notify the provider",
+              "correct": true,
+              "rationale": "Unilateral calf swelling with warmth and tenderness suggests a thrombus has already formed. Compression on a limb with a suspected clot is applied only after evaluation, so the device is held and the finding is reported."
+            },
+            {
+              "id": "D",
+              "text": "Measure both calves again in four hours to establish a trend",
+              "correct": false,
+              "rationale": "The difference is already measured and symptomatic. Waiting adds risk without adding information."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Prevention and treatment are different. Once one limb shows swelling, warmth, and tenderness, stop preventing and start reporting."
+        },
+        {
+          "id": "ch38-e3",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient who slides down in bed several times a day has an area of reddened, partially denuded skin over the sacrum. The bed is routinely kept at 45 degrees. Which change most directly addresses the mechanism causing this injury?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Apply a moisture barrier ointment to the sacrum twice daily",
+              "correct": false,
+              "rationale": "Moisture management is appropriate skin care and does nothing about the sliding that is tearing tissue."
+            },
+            {
+              "id": "B",
+              "text": "Turn the patient every two hours without changing the bed angle",
+              "correct": false,
+              "rationale": "Turning limits time under pressure. The injury here is produced by sliding, which continues at 45 degrees."
+            },
+            {
+              "id": "C",
+              "text": "Place a pillow under the knees to improve comfort",
+              "correct": false,
+              "rationale": "Knee flexion does help resist sliding, and alone it does not address either the bed angle or how the patient is moved."
+            },
+            {
+              "id": "D",
+              "text": "Lower the head of the bed when clinically possible and use a lift sheet to reposition",
+              "correct": true,
+              "rationale": "Elevation lets the skeleton slide while the skin stays fixed, which is shear, and dragging adds friction. Lowering the angle removes the driving force and lifting removes the surface drag."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Pressure pushes down, friction rubs, shear slides the tissue under fixed skin. A head-up bed plus dragging produces the last two."
+        },
+        {
+          "id": "ch38-e4",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient immobile for two weeks has a footboard in place. The nurse finds the feet resting with the toes pointed and a gap of several inches between the soles and the board. Which conclusion does the nurse draw?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The device is not in contact with the feet, so it is not preventing plantar flexion",
+              "correct": true,
+              "rationale": "A footboard works only when the soles rest against it at a neutral angle. A gap means the ankles are free to settle into plantar flexion, which is how foot drop develops."
+            },
+            {
+              "id": "B",
+              "text": "The findings are expected and the device is working as intended",
+              "correct": false,
+              "rationale": "Toes pointed is the position the device exists to prevent, so the finding is evidence it is not working."
+            },
+            {
+              "id": "C",
+              "text": "The patient has developed a permanent contracture that the device can now correct",
+              "correct": false,
+              "rationale": "Contractures are permanent shortening. Positioning prevents them and does not reverse them, and nothing here establishes one has formed yet."
+            },
+            {
+              "id": "D",
+              "text": "The gap indicates the patient has been performing active ankle exercises",
+              "correct": false,
+              "rationale": "Active movement would show the ankles in varied positions, not both settled in plantar flexion."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "A supportive device only works in contact. Check that the intervention is actually happening, not just present."
+        },
+        {
+          "id": "ch38-e5",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient immobile for three weeks eats about a third of each meal. Serum albumin has fallen from 3.8 to 2.9 g/dL, weight is down 4 kg, and the arms and legs appear visibly thinner. Which process best explains this pattern?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Fluid volume deficit producing the weight loss",
+              "correct": false,
+              "rationale": "Dehydration would raise albumin through hemoconcentration rather than lower it, and it does not thin the extremities."
+            },
+            {
+              "id": "B",
+              "text": "Negative nitrogen balance from immobility compounded by reduced intake",
+              "correct": true,
+              "rationale": "Immobility drives protein breakdown beyond intake, and decreased appetite is itself a listed metabolic effect. Falling albumin with visible loss of lean mass is that process made measurable."
+            },
+            {
+              "id": "C",
+              "text": "Increased metabolic demand from prolonged bed rest",
+              "correct": false,
+              "rationale": "Immobility lowers metabolic demand. The direction is reversed."
+            },
+            {
+              "id": "D",
+              "text": "Altered calcium metabolism causing muscle wasting",
+              "correct": false,
+              "rationale": "Altered calcium metabolism produces bone demineralization and a rising serum calcium, not loss of muscle protein."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Immobility takes protein apart while appetite falls. Albumin down, weight down, limbs thinner is one process, not three."
+        },
+        {
+          "id": "ch38-e6",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient two days after knee arthroplasty is on a weight-bearing restriction and reports the knee is too painful to bend beyond a few degrees. Which exercise best maintains quadriceps strength now?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Perform straight leg raises through the full range",
+              "correct": false,
+              "rationale": "Isotonic work through a full arc. The hip moves and the load on a painful healing knee exceeds what this patient tolerates."
+            },
+            {
+              "id": "B",
+              "text": "Have the nurse move the knee through its full range twice daily",
+              "correct": false,
+              "rationale": "Passive range maintains flexibility and the patient's muscle does no work, so no strength is built."
+            },
+            {
+              "id": "C",
+              "text": "Tighten the quadriceps and hold without moving the knee",
+              "correct": true,
+              "rationale": "Isometric contraction loads the muscle with no joint movement, which is why it is used around painful or healing joints. Strength and joint stability are preserved during the period the knee cannot move."
+            },
+            {
+              "id": "D",
+              "text": "Walk short distances with a walker several times daily",
+              "correct": false,
+              "rationale": "Isotonic and appropriate later. It conflicts with the weight-bearing restriction stated in the stem."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Isotonic moves the joint, isometric does not. When the joint cannot move, isometric is the only way to keep the muscle."
+        },
+        {
+          "id": "ch38-e7",
+          "dailySet": "2026-09-16",
+          "type": "sata",
+          "stem": "A nurse repositions an immobile patient from supine to a 30-degree side-lying position with pillows supporting the back, between the knees, and under the upper arm. Which outcomes does this positioning achieve? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Maintains body alignment",
+              "correct": true,
+              "rationale": "Support at the back, knees, and arm holds the trunk and limbs in alignment instead of letting them collapse into the mattress."
+            },
+            {
+              "id": "B",
+              "text": "Reduces pressure over the sacrum",
+              "correct": true,
+              "rationale": "Turning shifts weight off the tissue that was bearing it, which limits time under load."
+            },
+            {
+              "id": "C",
+              "text": "Prevents hip and knee contracture by holding the joints out of fixed flexion",
+              "correct": true,
+              "rationale": "A pillow between the knees keeps the upper leg from adducting and the hips from settling into a fixed position."
+            },
+            {
+              "id": "D",
+              "text": "Supports lung expansion compared with a flat supine position",
+              "correct": true,
+              "rationale": "Position determines how far the lungs can expand, and a supported side-lying position relieves pressure on the dependent lung compared with lying flat."
+            },
+            {
+              "id": "E",
+              "text": "Eliminates the need for scheduled range-of-motion exercises",
+              "correct": false,
+              "rationale": "Position and movement do different jobs. Holding a joint correctly does not carry it through its arc."
+            },
+            {
+              "id": "F",
+              "text": "Restores muscle strength lost during the period of bed rest",
+              "correct": false,
+              "rationale": "Strength returns with loading and activity. No position rebuilds muscle."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Positioning maintains alignment, supports breathing, protects skin, promotes comfort, prevents contractures, supports function. It does not replace movement."
         }
       ]
     },
@@ -2682,55 +3180,53 @@
         },
         {
           "id": "ig15-d1",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient is receiving 3% sodium chloride. Which assessments does the nurse prioritize?",
           "options": [
             {
               "id": "A",
-              "text": "Serum sodium, neurological status, and fluid balance",
-              "correct": true,
-              "rationale": "Hypertonic saline pulls water out of cells and raises sodium. Those three are the stated monitoring priorities."
-            },
-            {
-              "id": "B",
               "text": "Serum glucose and urine ketones",
               "correct": false,
               "rationale": "Relevant to dextrose-containing fluids and ketoacidosis, not to hypertonic saline."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Platelet count and coagulation studies",
               "correct": false,
               "rationale": "Not affected by sodium concentration."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Liver enzymes and serum albumin",
               "correct": false,
               "rationale": "Not the parameters altered by hypertonic saline."
+            },
+            {
+              "id": "D",
+              "text": "Serum sodium, neurological status, and fluid balance",
+              "correct": true,
+              "rationale": "Hypertonic saline pulls water out of cells and raises sodium. Those three are the stated monitoring priorities."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Hypertonic solutions risk cell dehydration, hypernatremia, and circulatory overload."
         },
         {
           "id": "ig15-d2",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient becomes flushed and reports a pounding headache and chest tightness moments after an intravenous medication is given. Which complication does the nurse suspect?",
           "options": [
             {
               "id": "A",
-              "text": "Air embolism",
-              "correct": false,
-              "rationale": "Produces sudden dyspnea, chest pain, a mill-wheel murmur, and hypotension, usually during line manipulation."
-            },
-            {
-              "id": "B",
               "text": "Speed shock",
               "correct": true,
               "rationale": "A drug reaching a toxic concentration because it entered too quickly. Flushing, headache, chest tightness, and shock are the picture."
+            },
+            {
+              "id": "B",
+              "text": "Air embolism",
+              "correct": false,
+              "rationale": "Produces sudden dyspnea, chest pain, a mill-wheel murmur, and hypotension, usually during line manipulation."
             },
             {
               "id": "C",
@@ -2745,12 +3241,11 @@
               "rationale": "Inflammation of the vein wall producing redness, warmth, and a palpable cord over time."
             }
           ],
-          "answer": "B",
+          "answer": "A",
           "takeaway": "Prevent speed shock with an infusion pump, verified rates, and never bolusing concentrated drugs."
         },
         {
           "id": "ig15-d3",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "Which nursing action most directly reduces the risk of a central line infection over time?",
           "options": [
@@ -2762,15 +3257,15 @@
             },
             {
               "id": "B",
-              "text": "Flushing each lumen after every medication",
-              "correct": false,
-              "rationale": "Maintains patency rather than preventing infection."
-            },
-            {
-              "id": "C",
               "text": "Reviewing daily whether the catheter is still necessary and removing it promptly",
               "correct": true,
               "rationale": "Dwell time is a primary risk factor. Every extra day raises risk, so removal is the strongest lever."
+            },
+            {
+              "id": "C",
+              "text": "Flushing each lumen after every medication",
+              "correct": false,
+              "rationale": "Maintains patency rather than preventing infection."
             },
             {
               "id": "D",
@@ -2779,12 +3274,11 @@
               "rationale": "Supports timely tubing changes but does not address dwell time."
             }
           ],
-          "answer": "C",
+          "answer": "B",
           "takeaway": "The line that is no longer needed is the one that infects the patient."
         },
         {
           "id": "ig15-d4",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "Before accessing a needleless connector on a central line, the nurse scrubs the hub. Which technique is correct?",
           "options": [
@@ -2802,71 +3296,69 @@
             },
             {
               "id": "C",
-              "text": "Scrubbing only when the connector appears soiled",
-              "correct": false,
-              "rationale": "A clean-looking hub is still colonized. The scrub is unconditional."
-            },
-            {
-              "id": "D",
               "text": "Alcohol pad with friction for at least 15 seconds, every time",
               "correct": true,
               "rationale": "Fifteen seconds of friction is the stated standard and it applies to every access, not just the first."
+            },
+            {
+              "id": "D",
+              "text": "Scrubbing only when the connector appears soiled",
+              "correct": false,
+              "rationale": "A clean-looking hub is still colonized. The scrub is unconditional."
             }
           ],
-          "answer": "D",
+          "answer": "C",
           "takeaway": "Scrub the hub at least 15 seconds, every access."
         },
         {
           "id": "ig15-d5",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A nurse is preparing to access an implanted port. Which equipment is required?",
           "options": [
             {
               "id": "A",
-              "text": "A non-coring Huber needle and a mask using aseptic technique",
-              "correct": true,
-              "rationale": "The deflected tip slices the septum instead of coring it out, preserving the septum for repeated access."
-            },
-            {
-              "id": "B",
               "text": "A standard hypodermic needle and clean gloves",
               "correct": false,
               "rationale": "A standard bevel cuts a plug out of the septum and destroys it over time."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "A butterfly needle with a transparent dressing",
               "correct": false,
               "rationale": "Winged needles are for single-dose injections and blood draws, not port access."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "A blunt cannula through the needleless connector",
               "correct": false,
               "rationale": "There is no external connector on a port. The skin and septum must be punctured."
+            },
+            {
+              "id": "D",
+              "text": "A non-coring Huber needle and a mask using aseptic technique",
+              "correct": true,
+              "rationale": "The deflected tip slices the septum instead of coring it out, preserving the septum for repeated access."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Ports are accessed only by trained staff, with a non-coring needle, a mask, and aseptic technique."
         },
         {
           "id": "ig15-d6",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient with a tunneled hemodialysis catheter needs intravenous antibiotics. The peripheral veins are difficult. Which action does the nurse take?",
           "options": [
             {
               "id": "A",
-              "text": "Use the dialysis catheter since it is already in place",
-              "correct": false,
-              "rationale": "It is dedicated to dialysis and is not used for routine infusion or blood draws."
-            },
-            {
-              "id": "B",
               "text": "Request an order for alternate vascular access",
               "correct": true,
               "rationale": "The dialysis catheter is critical to managing kidney failure and is reserved. Another device is obtained for the antibiotics."
+            },
+            {
+              "id": "B",
+              "text": "Use the dialysis catheter since it is already in place",
+              "correct": false,
+              "rationale": "It is dedicated to dialysis and is not used for routine infusion or blood draws."
             },
             {
               "id": "C",
@@ -2881,12 +3373,11 @@
               "rationale": "Also uses the reserved catheter, and it discards the heparin lock that maintains it."
             }
           ],
-          "answer": "B",
+          "answer": "A",
           "takeaway": "Hemodialysis catheters are dialysis only, managed by dialysis-trained staff, except in an emergency."
         },
         {
           "id": "ig15-d7",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "Which patient is the best candidate for hypodermoclysis?",
           "options": [
@@ -2898,15 +3389,15 @@
             },
             {
               "id": "B",
-              "text": "A patient needing rapid transfusion of packed red blood cells",
-              "correct": false,
-              "rationale": "Blood products require vascular access, not subcutaneous tissue."
-            },
-            {
-              "id": "C",
               "text": "An older patient with mild dehydration receiving palliative care",
               "correct": true,
               "rationale": "Slow, steady, short-term rehydration in an elderly or palliative patient is the stated indication."
+            },
+            {
+              "id": "C",
+              "text": "A patient needing rapid transfusion of packed red blood cells",
+              "correct": false,
+              "rationale": "Blood products require vascular access, not subcutaneous tissue."
             },
             {
               "id": "D",
@@ -2915,12 +3406,11 @@
               "rationale": "Vasopressors are vesicants requiring central venous access."
             }
           ],
-          "answer": "C",
+          "answer": "B",
           "takeaway": "Hypodermoclysis is slow rehydration, roughly 1 mL per minute, never resuscitation."
         },
         {
           "id": "ig15-d8",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "An intraosseous needle was placed in a patient's proximal tibia during a cardiac arrest. The patient now has return of circulation and a peripheral intravenous line has been established. Which action does the nurse take?",
           "options": [
@@ -2938,19 +3428,309 @@
             },
             {
               "id": "C",
-              "text": "Flush the intraosseous needle every 8 hours to keep it patent",
-              "correct": false,
-              "rationale": "Maintains a device that should be removed."
-            },
-            {
-              "id": "D",
               "text": "Remove the intraosseous needle now that vascular access is available",
               "correct": true,
               "rationale": "Intraosseous access is for the immediate resuscitation period only, and it is discontinued as soon as it is no longer needed."
+            },
+            {
+              "id": "D",
+              "text": "Flush the intraosseous needle every 8 hours to keep it patent",
+              "correct": false,
+              "rationale": "Maintains a device that should be removed."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Intraosseous access is limited to 24 hours and removed as soon as it is no longer needed."
+        },
+        {
+          "id": "ig15-e1",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient has a serum potassium of 2.9 mEq/L. Urine output has been 15 mL per hour for the past four hours and the creatinine is rising. The provider orders potassium chloride 20 mEq in 100 mL over one hour. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Administer the dose on a pump as ordered, since the potassium is low",
+              "correct": false,
+              "rationale": "The rate and the pump are correct, and the kidney data make the order itself unsafe. A low value does not override the route out."
+            },
+            {
+              "id": "B",
+              "text": "Give half the ordered dose and recheck the potassium in two hours",
+              "correct": false,
+              "rationale": "Changing a dose independently is outside nursing scope, and half a dose still has no way to leave the body."
+            },
+            {
+              "id": "C",
+              "text": "Administer the dose more slowly over two hours",
+              "correct": false,
+              "rationale": "Slowing reduces the peak and does nothing about accumulation in a patient who is not excreting."
+            },
+            {
+              "id": "D",
+              "text": "Hold the dose and contact the provider about the urine output",
+              "correct": true,
+              "rationale": "Potassium is excreted by the kidney. Output of 15 mL per hour with a rising creatinine means the patient cannot clear it, and giving potassium to failing kidneys converts a low value into a dangerous one."
             }
           ],
           "answer": "D",
-          "takeaway": "Intraosseous access is limited to 24 hours and removed as soon as it is no longer needed."
+          "takeaway": "Never push, never undiluted, never into a hanging bag, always on a pump, and confirm urine output first."
+        },
+        {
+          "id": "ig15-e2",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient with kidney failure has a potassium of 6.9 mEq/L. The monitor shows tall peaked T waves and a QRS that has widened since the previous strip. The patient is alert with a blood pressure of 104/62. Which order does the nurse anticipate first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Intravenous calcium gluconate",
+              "correct": true,
+              "rationale": "Calcium stabilizes the myocardium so the widening QRS does not progress to arrest. It does not lower the potassium, and that is the point: it buys time while the measures that actually remove potassium take effect."
+            },
+            {
+              "id": "B",
+              "text": "Intravenous insulin with dextrose",
+              "correct": false,
+              "rationale": "Shifts potassium into cells and lowers the serum value within about 15 to 30 minutes. It is part of the treatment and it does not protect the heart in the interval before it works."
+            },
+            {
+              "id": "C",
+              "text": "Oral potassium-binding agent",
+              "correct": false,
+              "rationale": "Removes potassium from the body through the gut, which is the slowest of the three actions. Correct and not first when the QRS is already widening."
+            },
+            {
+              "id": "D",
+              "text": "Arrangement for urgent hemodialysis",
+              "correct": false,
+              "rationale": "Definitively removes potassium and takes time to arrange and initiate. The heart needs protecting before then."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Hyperkalemia treatment runs in three moves: stabilize the heart, shift potassium into cells, then remove it from the body."
+        },
+        {
+          "id": "ig15-e3",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "Ten hours after a total thyroidectomy a patient reports tingling of the fingers and around the mouth. The voice sounds hoarse and the patient has begun clearing the throat repeatedly. Chvostek sign is positive. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Test for Trousseau sign with a blood pressure cuff",
+              "correct": false,
+              "rationale": "It would confirm the same hyperexcitability already demonstrated by Chvostek, and inflating a cuff for three minutes spends time while airway symptoms are developing."
+            },
+            {
+              "id": "B",
+              "text": "Ensure emergency airway equipment is at the bedside and notify the provider",
+              "correct": true,
+              "rationale": "A positive Chvostek sign with perioral tingling after thyroid surgery indicates hypocalcemia, and hoarseness with throat clearing raises the concern for laryngospasm. Airway comes before the calcium."
+            },
+            {
+              "id": "C",
+              "text": "Draw a serum calcium and await the result",
+              "correct": false,
+              "rationale": "The laboratory value will confirm what the findings already say. Waiting on it delays the airway preparation."
+            },
+            {
+              "id": "D",
+              "text": "Offer oral calcium with vitamin D from the medication record",
+              "correct": false,
+              "rationale": "Replacement is the treatment and takes time to act. Nothing is given by mouth to a patient whose airway may be about to close."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Cheek for Chvostek, cuff for Trousseau. Both mean low calcium or magnesium, and laryngospasm is what turns a lab value into an emergency."
+        },
+        {
+          "id": "ig15-e4",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient is receiving a continuous magnesium sulfate infusion. Over the past hour the patellar reflexes have become difficult to elicit, respirations have fallen from 18 to 11 per minute, and urine output was 20 mL in the last hour. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Administer calcium gluconate",
+              "correct": false,
+              "rationale": "Calcium gluconate is the antidote and will be given. It is the second action, because magnesium continues to enter while it is drawn up."
+            },
+            {
+              "id": "B",
+              "text": "Notify the provider of the reflex and respiratory changes",
+              "correct": false,
+              "rationale": "Essential and immediately after stopping the drug. Reporting while the infusion runs lets the level keep climbing."
+            },
+            {
+              "id": "C",
+              "text": "Stop the infusion",
+              "correct": true,
+              "rationale": "Loss of reflexes followed by respiratory depression is magnesium excess, and the falling urine output means the patient is not clearing it. Stopping ends the source, and it is the one action that takes seconds."
+            },
+            {
+              "id": "D",
+              "text": "Increase the intravenous fluid rate to promote excretion",
+              "correct": false,
+              "rationale": "Does not address the source and adds volume to a patient whose output has fallen to 20 mL per hour."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Reflexes disappear before breathing does, which is the warning. Stop the drug, then give calcium gluconate."
+        },
+        {
+          "id": "ig15-e5",
+          "dailySet": "2026-09-16",
+          "type": "sata",
+          "stem": "A patient who has had vomiting and diarrhea for three days is admitted. Which findings support fluid volume deficit? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Blood pressure falls from 124/78 supine to 98/60 on sitting",
+              "correct": true,
+              "rationale": "There is not enough circulating volume to maintain pressure against a position change, which is orthostatic hypotension."
+            },
+            {
+              "id": "B",
+              "text": "Urine output of 18 mL per hour with a specific gravity of 1.032",
+              "correct": true,
+              "rationale": "Low output with highly concentrated urine. The kidney is holding on to every available drop of water."
+            },
+            {
+              "id": "C",
+              "text": "Hematocrit of 54 percent",
+              "correct": true,
+              "rationale": "Hemoconcentration. Losing plasma water without losing red cells raises the proportion that red cells occupy."
+            },
+            {
+              "id": "D",
+              "text": "Weight down 2.5 kg since admission three days ago",
+              "correct": true,
+              "rationale": "About 2.5 liters. Daily weight is the most sensitive fluid measure available."
+            },
+            {
+              "id": "E",
+              "text": "Jugular veins visible at 45 degrees with a bounding radial pulse",
+              "correct": false,
+              "rationale": "Distended neck veins and a bounding pulse are signs of excess volume, not deficit."
+            },
+            {
+              "id": "F",
+              "text": "Crackles audible at both lung bases",
+              "correct": false,
+              "rationale": "Fluid in the alveoli indicates overload. A patient who is dry does not develop crackles from the deficit."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Deficit is dry, flat, and concentrated. Excess is wet, distended, and dilute. Read the labs with the exam."
+        },
+        {
+          "id": "ig15-e6",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient with heart failure has a recorded 24-hour intake of 1400 mL and output of 1500 mL, which the nurse notes as a slightly negative balance. The morning weight is up 1.6 kg from yesterday. Which conclusion does the nurse draw?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The intake and output record is accurate and the scale should be recalibrated",
+              "correct": false,
+              "rationale": "A 1.6 kg overnight change is well outside scale error, and the records are the less reliable of the two."
+            },
+            {
+              "id": "B",
+              "text": "The gain represents improved nutritional status",
+              "correct": false,
+              "rationale": "Nutritional gain accrues over weeks. It does not appear overnight in a patient with heart failure."
+            },
+            {
+              "id": "C",
+              "text": "Both measures are normal daily variation and need no action",
+              "correct": false,
+              "rationale": "In a patient with heart failure, 1.6 kg overnight is a finding to act on regardless of what the balance sheet says."
+            },
+            {
+              "id": "D",
+              "text": "The weight is more reliable, and the patient has retained roughly 1.6 liters",
+              "correct": true,
+              "rationale": "One kilogram is about one liter. Intake and output records miss insensible losses, unmeasured intake, and inconsistent charting, so a weight that disagrees with them is the measure to trust."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "When the flowsheet and the scale disagree, believe the scale. Same time, same scale, same clothing."
+        },
+        {
+          "id": "ig15-e7",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A nurse is observing a new graduate prepare to transfuse platelets. Which action requires the nurse to intervene?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The graduate retrieves the platelets and places them in the unit refrigerator while gathering supplies",
+              "correct": true,
+              "rationale": "Platelets are stored at room temperature with agitation, and refrigeration destroys platelet function. Cold storage preserves red cells and ruins this product."
+            },
+            {
+              "id": "B",
+              "text": "The graduate primes the administration set with 0.9% sodium chloride",
+              "correct": false,
+              "rationale": "Normal saline is the only solution permitted to contact any blood product."
+            },
+            {
+              "id": "C",
+              "text": "The graduate asks a second licensed nurse to verify the unit independently",
+              "correct": false,
+              "rationale": "Two-nurse verification is required for every blood component, not only for red cells."
+            },
+            {
+              "id": "D",
+              "text": "The graduate records a full set of vital signs before starting the infusion",
+              "correct": false,
+              "rationale": "Baseline vital signs are recorded before any transfusion begins and are the comparison for every later reading."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Storage tells you what a product is made of. Cold for red cells, room temperature with agitation for platelets, frozen for plasma."
+        },
+        {
+          "id": "ig15-e8",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient will receive chemotherapy every three weeks for the next year, swims twice weekly, and has had two peripheral lines infiltrate during the first cycle. Which device does the nurse anticipate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A peripherally inserted central catheter",
+              "correct": false,
+              "rationale": "Provides the central access chemotherapy requires and has an external catheter with a dressing that must stay dry, which rules out swimming."
+            },
+            {
+              "id": "B",
+              "text": "An implanted port",
+              "correct": true,
+              "rationale": "Nothing sits outside the skin, which gives it the lowest infection risk and allows swimming. It suits intermittent therapy over more than a year and is accessed with a non-coring needle when needed."
+            },
+            {
+              "id": "C",
+              "text": "A tunneled central venous catheter",
+              "correct": false,
+              "rationale": "Appropriate for frequent long-term therapy and has an external catheter needing daily care. Some patients choose it over a port specifically to avoid needlesticks, and this patient's schedule is intermittent."
+            },
+            {
+              "id": "D",
+              "text": "A midline catheter",
+              "correct": false,
+              "rationale": "Peripheral, with the tip below the axilla. Vesicant chemotherapy is excluded from midline use."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Match the device to duration, solution, and the patient's life. Intermittent therapy over a year with water exposure points to a port."
         }
       ]
     },
@@ -3407,55 +4187,53 @@
         },
         {
           "id": "ig41-d1",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient has 5 of 5 muscle strength in both legs but sways and grabs the bedrail when standing with eyes closed. Which system is most likely impaired?",
           "options": [
             {
               "id": "A",
-              "text": "Proprioception and balance",
-              "correct": true,
-              "rationale": "Proprioception is awareness of body position without looking. Losing vision removes the backup, so the sway appears."
-            },
-            {
-              "id": "B",
               "text": "Skeletal muscle strength",
               "correct": false,
               "rationale": "Already measured as full. Strength is not the failing component."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Joint range of motion",
               "correct": false,
               "rationale": "Limits how far a joint moves. It does not produce instability at rest in standing."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Bone density",
               "correct": false,
               "rationale": "Affects fracture risk, not postural control."
+            },
+            {
+              "id": "D",
+              "text": "Proprioception and balance",
+              "correct": true,
+              "rationale": "Proprioception is awareness of body position without looking. Losing vision removes the backup, so the sway appears."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Strength and balance fail separately. A strong patient can still be unsafe to walk."
         },
         {
           "id": "ig41-d2",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "Which outcome does proper body alignment produce?",
           "options": [
             {
               "id": "A",
-              "text": "Increased muscle bulk",
-              "correct": false,
-              "rationale": "Bulk comes from loading the muscle, not from posture."
-            },
-            {
-              "id": "B",
               "text": "Reduced stress on joints and less fatigue",
               "correct": true,
               "rationale": "Alignment lets bone carry weight through bone. Poor alignment makes muscle hold the load, and muscle tires."
+            },
+            {
+              "id": "B",
+              "text": "Increased muscle bulk",
+              "correct": false,
+              "rationale": "Bulk comes from loading the muscle, not from posture."
             },
             {
               "id": "C",
@@ -3470,12 +4248,11 @@
               "rationale": "Not among the outcomes of alignment."
             }
           ],
-          "answer": "B",
+          "answer": "A",
           "takeaway": "Alignment promotes efficient movement, minimizes joint stress, reduces fatigue, and improves balance."
         },
         {
           "id": "ig41-d3",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "During the Bedside Mobility Assessment Tool, a patient cannot sit at the side of the bed unassisted and is unable to reach across midline. Which level applies?",
           "options": [
@@ -3487,15 +4264,15 @@
             },
             {
               "id": "B",
-              "text": "Level 3, moderate assist",
-              "correct": false,
-              "rationale": "Assigned when a patient cannot lift the buttocks off the bed. This patient never reached that test."
-            },
-            {
-              "id": "C",
               "text": "Level 1, total assist",
               "correct": true,
               "rationale": "Failing the sit and shake test means trunk strength and seated balance are inadequate. The assessment stops here."
+            },
+            {
+              "id": "C",
+              "text": "Level 3, moderate assist",
+              "correct": false,
+              "rationale": "Assigned when a patient cannot lift the buttocks off the bed. This patient never reached that test."
             },
             {
               "id": "D",
@@ -3504,12 +4281,11 @@
               "rationale": "Requires advancing a step, which is three tests away."
             }
           ],
-          "answer": "C",
+          "answer": "B",
           "takeaway": "You stop at the first test the patient cannot complete, and that failure names the level."
         },
         {
           "id": "ig41-d4",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient is unconscious after a traumatic brain injury and cannot initiate any movement. Which exercise maintains joint flexibility?",
           "options": [
@@ -3527,23 +4303,22 @@
             },
             {
               "id": "C",
-              "text": "Isometric exercise",
-              "correct": false,
-              "rationale": "Requires voluntary muscle contraction."
-            },
-            {
-              "id": "D",
               "text": "Passive range of motion",
               "correct": true,
               "rationale": "The nurse moves the joint entirely. It maintains flexibility and prevents contractures when the patient can contribute nothing."
+            },
+            {
+              "id": "D",
+              "text": "Isometric exercise",
+              "correct": false,
+              "rationale": "Requires voluntary muscle contraction."
             }
           ],
-          "answer": "D",
+          "answer": "C",
           "takeaway": "Passive is correct only when the patient cannot contribute. It maintains flexibility and builds no strength."
         },
         {
           "id": "ig41-d5",
-          "dailySet": "2026-09-15",
           "type": "sata",
           "stem": "Which musculoskeletal changes are expected with aging? Select all that apply.",
           "options": [
@@ -3589,55 +4364,53 @@
         },
         {
           "id": "ig41-d6",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A nurse assesses a casted arm and cannot palpate the radial pulse. Which action does the nurse take next?",
           "options": [
             {
               "id": "A",
-              "text": "Use a Doppler to check for flow, then compare with the other arm",
-              "correct": true,
-              "rationale": "A Doppler detects flow that cannot be felt. Comparing sides turns an uncertain finding into a clear one."
-            },
-            {
-              "id": "B",
               "text": "Document the finding and recheck in one hour",
               "correct": false,
               "rationale": "Delays confirmation of whether blood is reaching the hand."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Elevate the arm above the level of the heart",
               "correct": false,
               "rationale": "Raising a limb that may already be underperfused reduces arterial inflow further."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Apply warm compresses to improve circulation",
               "correct": false,
               "rationale": "Does not address a possible obstruction and delays the assessment."
+            },
+            {
+              "id": "D",
+              "text": "Use a Doppler to check for flow, then compare with the other arm",
+              "correct": true,
+              "rationale": "A Doppler detects flow that cannot be felt. Comparing sides turns an uncertain finding into a clear one."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Absent or diminished pulses is a red flag. Confirm with Doppler and always compare sides."
         },
         {
           "id": "ig41-d7",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "A patient with chronic obstructive pulmonary disease wants to begin an exercise program. Which modification does the nurse anticipate?",
           "options": [
             {
               "id": "A",
-              "text": "Avoid all physical activity to conserve oxygen",
-              "correct": false,
-              "rationale": "Inactivity worsens deconditioning and breathlessness over time."
-            },
-            {
-              "id": "B",
               "text": "Shorter sessions paced to the patient's tolerance with rest periods",
               "correct": true,
               "rationale": "Activity plans are modified rather than cancelled in chronic illness, and tolerance sets the pace."
+            },
+            {
+              "id": "B",
+              "text": "Avoid all physical activity to conserve oxygen",
+              "correct": false,
+              "rationale": "Inactivity worsens deconditioning and breathlessness over time."
             },
             {
               "id": "C",
@@ -3652,12 +4425,11 @@
               "rationale": "Not a standard modification and unnecessarily restricts when the patient can move."
             }
           ],
-          "answer": "B",
+          "answer": "A",
           "takeaway": "Activity plans are modified in coronary artery disease, hypertension, COPD, diabetes, and immobility."
         },
         {
           "id": "ig41-d8",
-          "dailySet": "2026-09-15",
           "type": "multiple_choice",
           "stem": "Which question best establishes a patient's mobility baseline on admission?",
           "options": [
@@ -3669,15 +4441,15 @@
             },
             {
               "id": "B",
-              "text": "Would you like help getting up?",
-              "correct": false,
-              "rationale": "Offers assistance before any assessment has been done."
-            },
-            {
-              "id": "C",
               "text": "Do you use any assistive devices at home?",
               "correct": true,
               "rationale": "Identifies what the patient normally relies on, which defines the starting point for the plan."
+            },
+            {
+              "id": "C",
+              "text": "Would you like help getting up?",
+              "correct": false,
+              "rationale": "Offers assistance before any assessment has been done."
             },
             {
               "id": "D",
@@ -3686,8 +4458,298 @@
               "rationale": "Family history contributes nothing to this patient's current function."
             }
           ],
-          "answer": "C",
+          "answer": "B",
           "takeaway": "Start every mobility assessment at baseline, then look for what is new."
+        },
+        {
+          "id": "ig41-e1",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient three days past abdominal surgery tolerates sitting upright at the edge of the mattress for several minutes and shakes hands firmly. With both feet flat on the floor and the knees below hip level, the patient cannot extend either leg or flex the ankles. The patient insists on standing. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Allow a standing attempt with one person assisting, since sitting balance is intact",
+              "correct": false,
+              "rationale": "Sitting balance was demonstrated and leg strength was not. Standing is the next test, and this patient did not clear the one before it."
+            },
+            {
+              "id": "B",
+              "text": "Document moderate assist and attempt a stand with a gait belt",
+              "correct": false,
+              "rationale": "Moderate assist is assigned when a patient cannot lift the buttocks off the bed. The assessment stopped before that test, so this level was never demonstrated."
+            },
+            {
+              "id": "C",
+              "text": "Document maximum assist and use a device or additional staff for any transfer",
+              "correct": true,
+              "rationale": "Failing the stretch and point test means lower-extremity strength is inadequate to progress toward standing. The patient's willingness does not change the finding, and the level determines the equipment used."
+            },
+            {
+              "id": "D",
+              "text": "Repeat the sitting portion of the assessment before proceeding",
+              "correct": false,
+              "rationale": "Sitting was already passed. Repeating a cleared test delays the transfer without adding information."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "The tool stops at the first failure, and that failure sets the equipment. A patient's readiness to try is not a level."
+        },
+        {
+          "id": "ig41-e2",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "During a mobility assessment a patient stands, holds the position, marches in place, and advances each foot forward and back. While doing so the patient repeatedly lets go of the walker to gesture and states there is no need for it. Which nursing action follows?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Document the patient as independent and remove the walker from the room",
+              "correct": false,
+              "rationale": "Physical performance was adequate and safety awareness was not. Removing the device acts on half the assessment."
+            },
+            {
+              "id": "B",
+              "text": "Assign a lower mobility level because the walker was released",
+              "correct": false,
+              "rationale": "The level is set by what the patient can physically do. Letting go of the device is a safety finding to address, not a downgrade of demonstrated strength."
+            },
+            {
+              "id": "C",
+              "text": "Restrict the patient to bed until a physical therapy evaluation is completed",
+              "correct": false,
+              "rationale": "Restriction produces the weakness the assessment exists to prevent, and the patient has just demonstrated the ability to step."
+            },
+            {
+              "id": "D",
+              "text": "Ambulate with standby assistance and address the safety awareness before independence",
+              "correct": true,
+              "rationale": "Advancing a step meets the criterion for the highest level, and that level is assessed together with balance, stability, gait, and safety awareness. Strength is demonstrated and judgment is not, so supervision continues."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "The walk test scores balance, stability, gait, and safety awareness. A strong patient with poor judgment is not independent."
+        },
+        {
+          "id": "ig41-e3",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A nurse tests upper extremity strength. The right arm lifts off the bed and holds against moderate downward pressure before giving way. The left arm lifts off the bed but drops as soon as any pressure is applied. How does the nurse document this?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Right 4 of 5, left 3 of 5",
+              "correct": true,
+              "rationale": "Movement against some resistance is grade 4, and movement against gravity alone with no resistance tolerated is grade 3. Both cleared gravity, which puts both above grade 2."
+            },
+            {
+              "id": "B",
+              "text": "Right 5 of 5, left 4 of 5",
+              "correct": false,
+              "rationale": "Full strength holds against firm resistance without giving way, and the right arm gave way under moderate pressure."
+            },
+            {
+              "id": "C",
+              "text": "Right 4 of 5, left 2 of 5",
+              "correct": false,
+              "rationale": "Grade 2 is movement only when gravity is removed. The left arm lifted off the bed, so it cleared gravity."
+            },
+            {
+              "id": "D",
+              "text": "Right 3 of 5, left 2 of 5",
+              "correct": false,
+              "rationale": "Understates both. Tolerating moderate resistance is above grade 3, and lifting against gravity is above grade 2."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Grade 3 is the gravity hinge. Below it the limb only moves in a supported plane, above it you are adding resistance."
+        },
+        {
+          "id": "ig41-e4",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "Six hours after a below-knee cast was applied for a fibular fracture, a patient has pain rated 9 of 10 that increased after the last analgesic dose. The toes are swollen and cool, capillary refill is 5 seconds, and the patient reports the foot feels numb. The opposite foot is warm with refill under 2 seconds. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Elevate the extremity above heart level to reduce the swelling",
+              "correct": false,
+              "rationale": "Elevation reduces swelling in a limb with intact perfusion. Raising a limb that is already underperfused lowers arterial inflow further."
+            },
+            {
+              "id": "B",
+              "text": "Notify the provider immediately and keep the limb at heart level",
+              "correct": true,
+              "rationale": "Pain disproportionate to the injury and unrelieved by analgesia, with delayed refill, coolness, and new numbness on one side, is compromised perfusion. Keeping the limb level preserves arterial inflow while help is summoned."
+            },
+            {
+              "id": "C",
+              "text": "Administer the next dose of analgesia and reassess in 30 minutes",
+              "correct": false,
+              "rationale": "Analgesia has already failed, which is data rather than a reason to repeat it. Thirty minutes is time the limb does not have."
+            },
+            {
+              "id": "D",
+              "text": "Apply ice over the cast and document the neurovascular findings",
+              "correct": false,
+              "rationale": "Cold causes vasoconstriction in a limb with failing circulation, and documenting is not an intervention."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Pain out of proportion and unrelieved by opioids in a casted limb is a circulation problem until proven otherwise. Always compare sides."
+        },
+        {
+          "id": "ig41-e5",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient in the clinic has lost 5 cm of height over eight years, fractured a wrist catching a fall from standing, and reports mid-back pain that began without injury. Which diagnostic study does the nurse anticipate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Magnetic resonance imaging of the thoracic spine",
+              "correct": false,
+              "rationale": "Best for soft tissue such as ligaments, cartilage, cord, and marrow. It will not answer whether bone density is low."
+            },
+            {
+              "id": "B",
+              "text": "Computed tomography of the wrist",
+              "correct": false,
+              "rationale": "Gives detailed bone images for mapping a complex fracture. The fracture is already known and is not the underlying question."
+            },
+            {
+              "id": "C",
+              "text": "Dual-energy x-ray absorptiometry",
+              "correct": true,
+              "rationale": "Height loss, a fracture from a low-energy fall, and atraumatic back pain together point to reduced bone density. This scan measures bone mineral density and is the study used to assess osteoporosis."
+            },
+            {
+              "id": "D",
+              "text": "A bone scan",
+              "correct": false,
+              "rationale": "Detects increased bone activity such as an occult fracture, infection, or tumor. It does not measure how dense the bone is."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Read the findings as a group. Height loss plus a fragility fracture plus atraumatic pain is a density question, not an imaging-the-injury question."
+        },
+        {
+          "id": "ig41-e6",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "A patient with several weeks of progressive proximal muscle weakness has a creatine kinase of 4200 units/L, an elevated aldolase, and an elevated aspartate aminotransferase. The alkaline phosphatase and bilirubin are normal. What do these results support?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hepatic injury",
+              "correct": false,
+              "rationale": "Aspartate aminotransferase is found in both liver and muscle, which is why the stem includes the other liver studies. Normal alkaline phosphatase and bilirubin make a liver source unlikely."
+            },
+            {
+              "id": "B",
+              "text": "Reduced bone mineral density",
+              "correct": false,
+              "rationale": "Measured by a density scan. These are muscle enzymes and say nothing about bone."
+            },
+            {
+              "id": "C",
+              "text": "An inflammatory joint process",
+              "correct": false,
+              "rationale": "Assessed by imaging and joint fluid analysis. Weakness described as proximal and enzymes from muscle point away from the joints."
+            },
+            {
+              "id": "D",
+              "text": "Muscle tissue damage",
+              "correct": true,
+              "rationale": "These enzymes are released from injured muscle cells. Normal alkaline phosphatase and bilirubin argue against a liver source for the elevated aminotransferase, which leaves muscle."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Creatine kinase, aldolase, lactate dehydrogenase, and aspartate aminotransferase rise with muscle damage. The other liver values are what separate muscle from liver."
+        },
+        {
+          "id": "ig41-e7",
+          "dailySet": "2026-09-16",
+          "type": "sata",
+          "stem": "A patient of 62 with a family history of osteoporosis asks how to protect bone and muscle over the coming years. Which recommendations does the nurse include? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Weight-bearing activity such as walking on most days",
+              "correct": true,
+              "rationale": "Loading bone is what keeps mineral in it, and loading muscle is what maintains strength. Both are named among the measures that promote musculoskeletal health."
+            },
+            {
+              "id": "B",
+              "text": "Adequate calcium and vitamin D intake",
+              "correct": true,
+              "rationale": "Appropriate intake is listed among the measures that maintain bone over time."
+            },
+            {
+              "id": "C",
+              "text": "Stopping tobacco use",
+              "correct": true,
+              "rationale": "Avoiding tobacco is named directly among the measures that promote musculoskeletal health."
+            },
+            {
+              "id": "D",
+              "text": "Limiting alcohol intake",
+              "correct": true,
+              "rationale": "Excessive alcohol is to be limited, and it also contributes to falls and to poor nutrition."
+            },
+            {
+              "id": "E",
+              "text": "Switching from walking to swimming to spare the joints",
+              "correct": false,
+              "rationale": "Swimming is good conditioning and removes the weight bearing that maintains bone density. It supplements rather than replaces."
+            },
+            {
+              "id": "F",
+              "text": "Adding a daily calcium supplement regardless of dietary intake",
+              "correct": false,
+              "rationale": "The recommendation is appropriate intake, which accounts for what the diet already supplies rather than adding a supplement automatically."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Activity, weight bearing, nutrition, calcium and vitamin D, no tobacco, limited alcohol. Non-weight-bearing exercise does not protect bone."
+        },
+        {
+          "id": "ig41-e8",
+          "dailySet": "2026-09-16",
+          "type": "multiple_choice",
+          "stem": "Two patients are assessed on the same morning. Patient one has 5 of 5 strength in all extremities and full range of motion but cannot rise from a chair without using both armrests and stops twice crossing the room. Patient two has 4 of 5 strength and mildly reduced shoulder range but dresses, transfers, and walks the hallway without stopping. Which statement about their functional ability is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Patient two has the higher functional ability, because functional ability is measured by tasks accomplished",
+              "correct": true,
+              "rationale": "Functional ability is what the patient can do: turn, sit unsupported, stand, transfer, walk, and perform activities of daily living. Strength and range are components, and neither predicts performance on its own."
+            },
+            {
+              "id": "B",
+              "text": "Patient one has the higher functional ability, because strength and range of motion are normal",
+              "correct": false,
+              "rationale": "Those are two measurements taken at rest. This patient cannot rise unaided or cross a room without stopping, which is what function measures."
+            },
+            {
+              "id": "C",
+              "text": "The two patients have equivalent functional ability",
+              "correct": false,
+              "rationale": "One completes daily tasks without stopping and the other cannot. The difference is exactly what a functional assessment captures."
+            },
+            {
+              "id": "D",
+              "text": "Functional ability cannot be compared without a formal strength grade for both",
+              "correct": false,
+              "rationale": "Both strength grades are given, and function is assessed by observing tasks rather than by grading muscles."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Strength is a number at rest. Function is what the patient accomplishes, and the two come apart in real patients."
         }
       ]
     }

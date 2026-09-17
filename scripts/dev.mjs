@@ -40,7 +40,6 @@ process.on("exit", release);
 
 const child = spawn("next", ["dev", ...process.argv.slice(2)], {
   stdio: "inherit",
-  shell: true,
 });
 
 for (const signal of ["SIGINT", "SIGTERM", "SIGHUP"]) {
