@@ -24,6 +24,10 @@ const Swap = ({
     const node = ref.current;
     if (!node || calm()) return;
 
+    // Options are real tap targets mid-flight during this slide-in. A fast
+    // touch near an edge can hit-test against the in-between transform and
+    // land on the wrong one, so block input until they're settled.
+    node.style.pointerEvents = "none";
     const animation = node.animate(
       [
         { opacity: 0, transform: "translateY(10px)" },
@@ -31,8 +35,16 @@ const Swap = ({
       ],
       { duration: 600, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
     );
+    animation.finished
+      .catch(() => {})
+      .finally(() => {
+        node.style.pointerEvents = "";
+      });
 
-    return () => animation.cancel();
+    return () => {
+      animation.cancel();
+      node.style.pointerEvents = "";
+    };
   }, [token]);
 
   return (

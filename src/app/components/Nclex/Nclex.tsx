@@ -255,7 +255,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
 
       <Swap
         token={section}
-        className="relative mb-4 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center"
+        className="relative mb-1 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center"
       >
         <h2>{TITLES[section]}</h2>
       </Swap>
@@ -305,6 +305,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
           left={left}
           onStart={(next, index) => open(next, index, shown)}
           onReset={reset}
+          picker={section === "skills" ? "select" : "grid"}
         />
       )}
 

@@ -211,6 +211,7 @@ export const isMulti = (question: QuestionType) =>
 export interface ChapterType {
   id: string;
   chapterNumber?: number;
+  source?: string;
   title: string;
   subtitle?: string;
   questions: QuestionType[];
@@ -219,22 +220,26 @@ export interface ChapterType {
 interface BankType {
   id: string | number;
   chapterNumber?: number;
+  source?: string;
   title: string;
   subtitle?: string;
   questions: QuestionType[];
 }
 
-// Two chapters in this course are both numbered 56, so the data disambiguates
-// them with a synthetic id (e.g. "1056") while `chapterNumber` carries the
-// number to actually display; fall back to the id for chapters that don't
-// need the split.
+// Chapter numbers repeat across the two source textbooks (Potter and Iggy),
+// so `id` disambiguates (Iggy chapters use id = 1000 + chapterNumber) while
+// `chapterNumber` carries the number to actually display; fall back to the
+// id for chapters that don't need the split.
 export const displayNumberOf = (chapter: ChapterType) =>
   chapter.chapterNumber ?? chapter.id;
 
 export const labelOf = (chapter: ChapterType) =>
   /^\d+$/.test(chapter.id)
-    ? `Chapter ${displayNumberOf(chapter)} · ${chapter.title}`
+    ? `Chapter ${displayNumberOf(chapter)} · ${chapter.title}${
+        chapter.source === "Iggy" ? " (Iggy)" : ""
+      }`
     : chapter.title;
+
 
 const strip = (text: string) =>
   text
@@ -365,6 +370,7 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
       return {
         id,
         chapterNumber: entry.chapterNumber,
+        source: entry.source,
         title: entry.title,
         subtitle: entry.subtitle,
         questions: [...own, ...join].map((question, index) => ({

@@ -1,5 +1,6 @@
 "use client";
 import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import { LuChevronDown } from "react-icons/lu";
 import { ChapterType, displayNumberOf } from "./Questions";
 
 export type PickType = string;
@@ -238,6 +239,7 @@ const ChapterSet = ({
   onRun,
   noun,
   labelFor,
+  picker = "grid",
   progressOf,
   total,
   left,
@@ -252,6 +254,7 @@ const ChapterSet = ({
   onRun: (next: LensType) => void;
   noun: string;
   labelFor: (chapter: ChapterType) => string;
+  picker?: "grid" | "select";
   progressOf: (id: string) => { solved: number; missed: number; total: number };
   total: number;
   left: number;
@@ -299,8 +302,8 @@ const ChapterSet = ({
   const shown = chapters.find((chapter) => chapter.id === open);
 
   return (
-    <div className="mb-8 rounded-2xl bg-[var(--body-color)] p-5">
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-5 gap-y-2 text-xs text-[#8b88b1]">
+    <div className="mb-1 rounded-2xl bg-[var(--body-color)] p-5">
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-x-5 gap-y-2 text-xs text-[#8b88b1]">
         <span className="flex flex-wrap items-center gap-x-2 gap-y-2">
           <Chip
             on={lens === "all"}
@@ -326,6 +329,34 @@ const ChapterSet = ({
             Incomplete
             {lens === "incomplete" && <Count>{left} left</Count>}
           </Chip>
+
+          {picker === "select" && (
+            <span className="relative">
+              <select
+                value={open ?? ""}
+                onChange={(event) => setOpen(event.target.value || null)}
+                className="w-44 cursor-pointer appearance-none truncate rounded-full bg-[var(--container-color)] py-1.5 pl-3 pr-8 text-xs font-bold text-[var(--title-color)] outline-none duration-300 focus:ring-2 focus:ring-[var(--primary-color)]"
+              >
+                <option value="">Choose a skill…</option>
+                {chapters.map((chapter) => (
+                  <option
+                    key={chapter.id}
+                    value={chapter.id}
+                    disabled={chapter.questions.length === 0}
+                  >
+                    {chapter.title}
+                    {chapter.questions.length
+                      ? ` (${chapter.questions.length})`
+                      : " — no questions yet"}
+                  </option>
+                ))}
+              </select>
+              <LuChevronDown
+                aria-hidden
+                className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[#8b88b1]"
+              />
+            </span>
+          )}
         </span>
 
         <span className="flex flex-wrap items-center gap-x-4 gap-y-2">
@@ -338,62 +369,71 @@ const ChapterSet = ({
         </span>
       </div>
 
-      <div
-        ref={gridRef}
-        className="grid grid-cols-[repeat(auto-fill,minmax(2.75rem,1fr))] gap-2 p-1"
-      >
-        {chapters.map((chapter) => {
-          const count = chapter.questions.length;
-          const here = open === chapter.id;
-          const progress = progressOf(chapter.id);
-          const wet = progress.solved + progress.missed > 0;
-          return (
-            <button
-              key={chapter.id}
-              ref={(node) => {
-                if (node) tiles.current.set(chapter.id, node);
-                else tiles.current.delete(chapter.id);
-              }}
-              type="button"
-              disabled={!count}
-              onClick={() => toggle(chapter)}
-              aria-expanded={here}
-              title={
-                count
-                  ? `${labelFor(chapter)} · ${count} questions`
-                  : `${labelFor(chapter)} · no questions yet`
-              }
-              className={`relative h-10 rounded-lg border-2 border-solid bg-[var(--container-color)] text-xs font-bold duration-300 ${
-                !count
-                  ? "cursor-not-allowed border-transparent text-[#d3d0e4]"
-                  : here
-                    ? "border-[var(--primary-color)] text-[var(--title-color)]"
-                    : active === chapter.id
-                      ? "border-[hsl(219,100%,72%)] text-[var(--title-color)]"
-                      : wet
-                        ? "border-transparent text-[var(--title-color)] hover:border-[hsl(219,100%,80%)]"
-                        : "border-transparent text-[#8b88b1] hover:border-[hsl(219,100%,80%)] hover:text-[var(--title-color)]"
-              }`}
-            >
-              <Fill {...progress} />
-              <span className="relative">{displayNumberOf(chapter)}</span>
-              {count > 0 && (
-                <span className="pointer-events-none absolute -right-1 -top-1 rounded-full bg-[hsl(219,100%,91%)] px-1 text-[9px] leading-[14px] text-[var(--title-color)]">
-                  {count}
+      {picker === "select" ? null : (
+        <div
+          ref={gridRef}
+          className="grid grid-cols-[repeat(auto-fill,minmax(2.75rem,1fr))] gap-2 p-1"
+        >
+          {chapters.map((chapter) => {
+            const count = chapter.questions.length;
+            const here = open === chapter.id;
+            const progress = progressOf(chapter.id);
+            const wet = progress.solved + progress.missed > 0;
+            return (
+              <button
+                key={chapter.id}
+                ref={(node) => {
+                  if (node) tiles.current.set(chapter.id, node);
+                  else tiles.current.delete(chapter.id);
+                }}
+                type="button"
+                disabled={!count}
+                onClick={() => toggle(chapter)}
+                aria-expanded={here}
+                title={
+                  count
+                    ? `${labelFor(chapter)} · ${count} questions`
+                    : `${labelFor(chapter)} · no questions yet`
+                }
+                className={`relative h-10 rounded-lg border-2 border-solid bg-[var(--container-color)] text-xs font-bold duration-300 ${
+                  !count
+                    ? "cursor-not-allowed border-transparent text-[#d3d0e4]"
+                    : here
+                      ? "border-[var(--primary-color)] text-[var(--title-color)]"
+                      : active === chapter.id
+                        ? "border-[hsl(219,100%,72%)] text-[var(--title-color)]"
+                        : wet
+                          ? "border-transparent text-[var(--title-color)] hover:border-[hsl(219,100%,80%)]"
+                          : "border-transparent text-[#8b88b1] hover:border-[hsl(219,100%,80%)] hover:text-[var(--title-color)]"
+                }`}
+              >
+                <Fill {...progress} />
+                <span className="relative">
+                  {displayNumberOf(chapter)}
+                  {chapter.source === "Iggy" && (
+                    <sup className="ml-px text-[8px]">I</sup>
+                  )}
                 </span>
-              )}
-            </button>
-          );
-        })}
-      </div>
+                {count > 0 && (
+                  <span className="pointer-events-none absolute -right-1 -top-1 rounded-full bg-[hsl(219,100%,91%)] px-1 text-[9px] leading-[14px] text-[var(--title-color)]">
+                    {count}
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       {shown && (
-        <div className="relative mt-4 animate-fadeIn rounded-2xl bg-[var(--container-color)] p-5 shadow-lg">
-          <span
-            aria-hidden
-            style={{ left: `${arrow}px` }}
-            className="absolute -top-1.5 h-3.5 w-3.5 -translate-x-1/2 rotate-45 rounded-[3px] bg-[var(--container-color)]"
-          />
+        <div className="relative mt-6 animate-fadeIn rounded-2xl bg-[var(--container-color)] p-5 shadow-lg">
+          {picker === "grid" && (
+            <span
+              aria-hidden
+              style={{ left: `${arrow}px` }}
+              className="absolute -top-1.5 h-3.5 w-3.5 -translate-x-1/2 rotate-45 rounded-[3px] bg-[var(--container-color)]"
+            />
+          )}
 
           <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <span className="font-bold text-[var(--title-color)]">
