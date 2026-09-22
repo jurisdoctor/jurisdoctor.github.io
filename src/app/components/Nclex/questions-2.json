@@ -40,7 +40,7 @@
       1056
     ],
     "chaptersPending": [],
-    "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time ,  generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id.",
+    "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time. Generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id.",
     "questionTypes": {
       "multiple_choice": "one correct option; answer is a string",
       "sata": "select all that apply; answer is an array and is scored all or nothing"
@@ -276,15 +276,7 @@
           27,
           38,
           1015,
-          1041
-        ],
-        "skills": [],
-        "questionCount": 120
-      },
-      {
-        "id": "exam3",
-        "label": "Exam 3",
-        "chapters": [
+          1041,
           42,
           1013,
           49,
@@ -292,7 +284,7 @@
           1040
         ],
         "skills": [],
-        "questionCount": 50
+        "questionCount": 170
       }
     ],
     "currentDailySet": {
@@ -2726,6 +2718,1928 @@
       ]
     },
     {
+      "id": 42,
+      "chapterNumber": 42,
+      "source": "Potter",
+      "title": "Fluid, Electrolyte, and Acid-Base Balance",
+      "exam": "Exam 2",
+      "questions": [
+        {
+          "id": "ch42-e1",
+          "type": "multiple_choice",
+          "stem": "A patient with chronic obstructive pulmonary disease has an arterial blood gas showing pH 7.36, PaCO2 58 mm Hg, and HCO3 32 mEq/L. How does the nurse interpret this result?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Normal blood gas, no action needed",
+              "correct": false,
+              "rationale": "The pH is normal and nothing else is. Two abnormal values with a normal pH is the signature of compensation, not health."
+            },
+            {
+              "id": "B",
+              "text": "Fully compensated respiratory acidosis",
+              "correct": true,
+              "rationale": "The CO2 is high, which acidifies. The bicarbonate is high, which is the kidney buffering it. The pH has been pulled back inside the range, so compensation is complete."
+            },
+            {
+              "id": "C",
+              "text": "Partially compensated metabolic alkalosis",
+              "correct": false,
+              "rationale": "A metabolic alkalosis would start with a raised bicarbonate and a raised pH. The pH is not alkalotic and the CO2 elevation is the primary problem, not the compensation."
+            },
+            {
+              "id": "D",
+              "text": "Uncompensated respiratory acidosis",
+              "correct": false,
+              "rationale": "Uncompensated means the pH is still abnormal and the metabolic value is still normal. Here the bicarbonate has already moved and the pH has come back."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "A pH inside the normal range with an abnormal CO2 and an abnormal bicarbonate is full compensation, and it means a chronic problem underneath.",
+          "strategy": "The normal pH is bait. Read the other two numbers before you decide the patient is fine.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check the pH first",
+                "detail": "It is 7.36, normal but sitting on the acidic side of 7.40."
+              },
+              {
+                "action": "Check the CO2",
+                "detail": "58 is high, so the lung is the problem and the direction is acidosis."
+              },
+              {
+                "action": "Check the bicarbonate",
+                "detail": "32 is high, moving opposite the pH, which makes it compensation."
+              }
+            ],
+            "verdict": "Respiratory acidosis, fully compensated. A normal pH does not mean a normal patient."
+          }
+        },
+        {
+          "id": "ch42-e2",
+          "type": "multiple_choice",
+          "stem": "A patient has been vomiting for three days. Which acid-base disturbance does the nurse anticipate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Metabolic acidosis",
+              "correct": false,
+              "rationale": "Metabolic acidosis comes from losing bicarbonate below the stomach, which is diarrhea, or from gaining acid, which is ketoacidosis or renal failure."
+            },
+            {
+              "id": "B",
+              "text": "Metabolic alkalosis",
+              "correct": true,
+              "rationale": "Gastric contents are hydrochloric acid. Vomiting removes acid from the body, so what is left is relatively alkaline."
+            },
+            {
+              "id": "C",
+              "text": "Respiratory acidosis",
+              "correct": false,
+              "rationale": "Respiratory problems change the CO2. Vomiting does not affect ventilation directly."
+            },
+            {
+              "id": "D",
+              "text": "Respiratory alkalosis",
+              "correct": false,
+              "rationale": "Respiratory alkalosis comes from blowing off CO2, which is hyperventilation, not vomiting."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Vomiting loses acid and causes alkalosis. Diarrhea loses bicarbonate and causes acidosis. They are opposites and they are tested as a pair.",
+          "strategy": "Two options are metabolic and two are respiratory. The stem gives you a gastrointestinal loss, so the metabolic pair is where the answer lives.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Split the options",
+                "detail": "Metabolic versus respiratory. Vomiting is not a breathing problem."
+              },
+              {
+                "action": "Ask what was lost",
+                "detail": "Stomach contents are acid."
+              },
+              {
+                "action": "Follow the loss",
+                "detail": "Lose acid, become alkalotic."
+              }
+            ],
+            "verdict": "Metabolic alkalosis. The mirror item gives you diarrhea and the answer flips to acidosis."
+          }
+        },
+        {
+          "id": "ch42-e3",
+          "type": "multiple_choice",
+          "stem": "Which assessment gives the nurse the most reliable early evidence that a patient with heart failure is retaining fluid?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Daily weight taken at the same time on the same scale",
+              "correct": true,
+              "rationale": "A liter of fluid weighs about one kilogram, or 2.2 pounds. The scale registers the gain before edema is visible and before crackles appear."
+            },
+            {
+              "id": "B",
+              "text": "Presence of pitting edema in the ankles",
+              "correct": false,
+              "rationale": "Edema is real but late. Several liters can accumulate before the tissue shows it, and dependent edema also varies with position and time of day."
+            },
+            {
+              "id": "C",
+              "text": "Crackles heard in the lung bases",
+              "correct": false,
+              "rationale": "Crackles mean fluid has already reached the lungs. That is a finding you act on, not an early warning."
+            },
+            {
+              "id": "D",
+              "text": "Patient report of thirst and dry mouth",
+              "correct": false,
+              "rationale": "Thirst points toward deficit rather than excess, and thirst is unreliable in older adults because the thirst mechanism blunts with age."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Weight is the honest number. One kilogram equals one liter, and the scale changes before edema or crackles do. Same time, same scale, same clothing.",
+          "strategy": "Three options are findings that appear after the fluid has already collected. Only one of them catches it on the way in.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Sort by timing",
+                "detail": "Ask which finding appears first."
+              },
+              {
+                "action": "Cut edema and crackles",
+                "detail": "Both are late and both require a volume that has already accumulated."
+              },
+              {
+                "action": "Cut thirst",
+                "detail": "It points the wrong direction and it is unreliable in older adults."
+              }
+            ],
+            "verdict": "Daily weight. It is the earliest and the most reproducible."
+          }
+        },
+        {
+          "id": "ch42-e4",
+          "type": "sata",
+          "stem": "An 82-year-old is admitted from home after two days of poor oral intake in a heat wave. Which findings support a diagnosis of fluid volume deficit? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Heart rate 112 and blood pressure 96/58",
+              "correct": true,
+              "rationale": "The earliest compensation for a falling volume is tachycardia, and the blood pressure drops once compensation is exhausted."
+            },
+            {
+              "id": "B",
+              "text": "Urine output 15 mL/hr, dark and concentrated",
+              "correct": true,
+              "rationale": "Below 30 mL/hr is oliguria. The kidney is conserving everything it can, and concentrating the urine is how it does that."
+            },
+            {
+              "id": "C",
+              "text": "New confusion since yesterday",
+              "correct": true,
+              "rationale": "New confusion in an older adult is a laboratory and perfusion question before it is a cognitive one. It is frequently the first thing a family notices."
+            },
+            {
+              "id": "D",
+              "text": "Tenting of the skin on the back of the hand",
+              "correct": false,
+              "rationale": "Aging skin tents on the hand and forearm whether or not the patient is dry. Assess turgor over the sternum or the forehead instead."
+            },
+            {
+              "id": "E",
+              "text": "Jugular venous distention while sitting upright",
+              "correct": false,
+              "rationale": "That is a sign of excess, not deficit. Flat neck veins would fit this patient."
+            },
+            {
+              "id": "F",
+              "text": "Weight loss of 3 kg since last week",
+              "correct": true,
+              "rationale": "Three kilograms is about three liters. Acute weight change is fluid, not tissue."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "F"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Deficit shows up as tachycardia first, then hypotension, with concentrated low-volume urine, acute weight loss and new confusion. Hand turgor and thirst are both unreliable in older adults.",
+          "strategy": "Two options are written to look like assessment skill. One tests turgor at the wrong site and one describes the opposite problem.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Take the vital signs and the urine",
+                "detail": "Both fit a falling circulating volume."
+              },
+              {
+                "action": "Keep the weight",
+                "detail": "Acute change of this size is water."
+              },
+              {
+                "action": "Cut the hand turgor",
+                "detail": "Wrong site for an 82-year-old."
+              },
+              {
+                "action": "Cut the jugular distention",
+                "detail": "That belongs to overload."
+              }
+            ],
+            "verdict": "A, B, C and F. The two rejected options are the ones that feel most like assessment."
+          }
+        },
+        {
+          "id": "ch42-e5",
+          "type": "matrix",
+          "scenario": "A nurse reviews the intravenous fluids prescribed for four patients on a medical unit.",
+          "stem": "For each fluid, indicate its tonicity relative to plasma.",
+          "columns": [
+            "Isotonic",
+            "Hypotonic",
+            "Hypertonic"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "0.9% sodium chloride, prescribed after several hours of vomiting",
+              "answer": "Isotonic",
+              "rationale": "Same osmolality as plasma, so it produces no net shift and stays in the space you infuse it into. That is what a patient who lost extracellular fluid needs."
+            },
+            {
+              "id": "r2",
+              "text": "0.45% sodium chloride, prescribed for cellular dehydration",
+              "answer": "Hypotonic",
+              "rationale": "Lower osmolality than plasma, so water moves into the cells. Useful for rehydrating cells and dangerous in anyone at risk of cerebral edema."
+            },
+            {
+              "id": "r3",
+              "text": "3% sodium chloride, prescribed for symptomatic hyponatremia with seizures",
+              "answer": "Hypertonic",
+              "rationale": "Higher osmolality than plasma, so it pulls water out of the cells. Given slowly and with close monitoring, because correcting sodium quickly causes osmotic demyelination."
+            },
+            {
+              "id": "r4",
+              "text": "Lactated Ringer solution, prescribed for a patient with burns",
+              "answer": "Isotonic",
+              "rationale": "An isotonic balanced crystalloid. It expands the circulating volume without shifting fluid across the cell membrane."
+            }
+          ],
+          "answer": {
+            "r1": "Isotonic",
+            "r2": "Hypotonic",
+            "r3": "Hypertonic",
+            "r4": "Isotonic"
+          },
+          "scoring": "0/1",
+          "takeaway": "Isotonic stays put and expands the vascular space. Hypotonic moves water into cells. Hypertonic pulls water out of them.",
+          "strategy": "Sort by the percentage against 0.9%, which is the isotonic reference. Below it moves water in, above it pulls water out.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Anchor on 0.9%",
+                "detail": "That is isotonic, and so is lactated Ringer."
+              },
+              {
+                "action": "Read the number",
+                "detail": "Less than 0.9% is hypotonic, more than 0.9% is hypertonic."
+              },
+              {
+                "action": "Check it against the indication",
+                "detail": "Cellular dehydration needs water in; cerebral edema needs water out."
+              }
+            ],
+            "verdict": "Two isotonic, one hypotonic, one hypertonic."
+          }
+        },
+        {
+          "id": "ch42-e6",
+          "type": "multiple_choice",
+          "stem": "A nurse receives an order reading: potassium chloride 20 mEq IV push now for a serum potassium of 2.9 mEq/L. What is the nurse's best action?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Administer it slowly over five minutes with the patient on a monitor",
+              "correct": false,
+              "rationale": "The trap. Administering a lethal route more carefully does not make it safe. There is no safe rate for IV push potassium."
+            },
+            {
+              "id": "B",
+              "text": "Dilute it and infuse it over one hour through a peripheral line",
+              "correct": false,
+              "rationale": "Wrong twice. Diluting is the right idea and 20 mEq over one hour is 20 mEq/hr, double the peripheral maximum of 10 mEq/hr. Rewriting an unsafe order is also prescribing, which is not the nurse's to do."
+            },
+            {
+              "id": "C",
+              "text": "Hold the dose and contact the prescriber to clarify the order",
+              "correct": true,
+              "rationale": "Potassium is never given IV push. The nurse who recognizes an unsafe order stops and questions it, and carrying out an unsafe order does not transfer the responsibility."
+            },
+            {
+              "id": "D",
+              "text": "Give it orally instead, since the patient can swallow",
+              "correct": false,
+              "rationale": "Changing the route is prescribing. The recognition is correct and the action exceeds the nurse's scope."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "IV push potassium is fatal. The correct response to an unsafe order is to question it, never to carry it out more carefully or to substitute your own version.",
+          "strategy": "Three options all find a way to give the drug. Only one of them stops.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recognize the danger",
+                "detail": "Potassium is never pushed."
+              },
+              {
+                "action": "Cut the two safer-looking versions",
+                "detail": "A slower push and a nurse-chosen dilution are both still acting on an unsafe order."
+              },
+              {
+                "action": "Cut the route change",
+                "detail": "That is prescribing."
+              }
+            ],
+            "verdict": "Hold and clarify. Reject the rate, not the technique."
+          }
+        },
+        {
+          "id": "ch42-e7",
+          "type": "multiple_choice",
+          "stem": "Fifteen minutes into a unit of packed red blood cells, a patient develops chills, a temperature rise from 37.0 C to 38.6 C, and low back pain. What does the nurse do first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Slow the infusion and continue to monitor",
+              "correct": false,
+              "rationale": "Slowing keeps incompatible blood going in. Every minute of continued infusion adds to the hemolysis."
+            },
+            {
+              "id": "B",
+              "text": "Stop the transfusion and keep the line open with normal saline using new tubing",
+              "correct": true,
+              "rationale": "Stop first. Then maintain access with saline through fresh tubing, because running saline through the existing set would push the blood remaining in the line into the patient."
+            },
+            {
+              "id": "C",
+              "text": "Administer the prescribed acetaminophen for the fever",
+              "correct": false,
+              "rationale": "Treats a symptom of a reaction that is still running. The drug never comes before stopping the cause."
+            },
+            {
+              "id": "D",
+              "text": "Obtain a urine specimen to check for hemoglobinuria",
+              "correct": false,
+              "rationale": "It will be needed, and it is not first. Collecting a specimen while the transfusion continues is assessment at the expense of the patient."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "When something goes wrong during an infusion or a transfusion, the first action is always to stop it. Assess, notify and document all come after.",
+          "strategy": "All four options are things that happen during this event. The question is only about order.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Apply the rule",
+                "detail": "Stop before you call."
+              },
+              {
+                "action": "Cut slowing down",
+                "detail": "Reducing an exposure is not removing it."
+              },
+              {
+                "action": "Cut the drug and the specimen",
+                "detail": "Both are correct later and neither is first."
+              }
+            ],
+            "verdict": "Stop the transfusion, then saline through new tubing to the hub."
+          }
+        },
+        {
+          "id": "ch42-e8",
+          "type": "multiple_choice",
+          "stem": "A patient in the emergency department is breathing 36 times a minute after a panic attack and reports tingling around the mouth and in both hands. Which explanation does the nurse give?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The calcium level has dropped and needs replacement",
+              "correct": false,
+              "rationale": "The total calcium has not changed. Alkalosis increases calcium binding to albumin, which lowers the ionized fraction without lowering the number on the lab report."
+            },
+            {
+              "id": "B",
+              "text": "Rapid breathing has lowered the carbon dioxide and raised the blood pH",
+              "correct": true,
+              "rationale": "Hyperventilation blows off CO2, which produces respiratory alkalosis. Alkalosis shifts calcium onto albumin, and less free calcium means irritable nerves."
+            },
+            {
+              "id": "C",
+              "text": "Oxygen levels have fallen and the tissues are hypoxic",
+              "correct": false,
+              "rationale": "Hyperventilation raises oxygen, it does not lower it. Nothing here suggests hypoxia."
+            },
+            {
+              "id": "D",
+              "text": "Potassium has shifted out of the cells in response to stress",
+              "correct": false,
+              "rationale": "Alkalosis drives potassium into cells, not out. The direction is wrong and potassium does not cause perioral tingling."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Perioral and fingertip tingling appears in hypocalcemia, hypomagnesemia and respiratory alkalosis. A hyperventilating patient with tingling lips has a breathing problem.",
+          "strategy": "Tingling is a strong cue for calcium, which is exactly why the question offers it. Read the respiratory rate before you reach for the electrolyte.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the rate",
+                "detail": "36 a minute is the finding the stem is built on."
+              },
+              {
+                "action": "Cut hypoxia",
+                "detail": "Fast breathing raises oxygen."
+              },
+              {
+                "action": "Cut the potassium shift",
+                "detail": "Alkalosis moves potassium in, not out."
+              },
+              {
+                "action": "Separate total from ionized calcium",
+                "detail": "The number has not changed, the binding has."
+              }
+            ],
+            "verdict": "Respiratory alkalosis. The calcium option is the trap and it is the one most students pick."
+          }
+        },
+        {
+          "id": "ch42-e9",
+          "type": "sata",
+          "stem": "Which conditions would the nurse expect to produce metabolic acidosis? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Diabetic ketoacidosis",
+              "correct": true,
+              "rationale": "Ketoacids are added to the blood faster than they can be buffered or excreted."
+            },
+            {
+              "id": "B",
+              "text": "Prolonged severe diarrhea",
+              "correct": true,
+              "rationale": "Intestinal contents below the stomach are alkaline. Losing them loses bicarbonate."
+            },
+            {
+              "id": "C",
+              "text": "Acute kidney injury with a rising creatinine",
+              "correct": true,
+              "rationale": "The kidney is the organ that excretes fixed acid and regenerates bicarbonate. When it fails, acid accumulates."
+            },
+            {
+              "id": "D",
+              "text": "Continuous nasogastric suction",
+              "correct": false,
+              "rationale": "Suction removes gastric acid, the same as vomiting. That produces alkalosis."
+            },
+            {
+              "id": "E",
+              "text": "Prolonged hyperventilation from anxiety",
+              "correct": false,
+              "rationale": "That is a respiratory cause, and it produces alkalosis by removing CO2."
+            },
+            {
+              "id": "F",
+              "text": "Shock with poor tissue perfusion",
+              "correct": true,
+              "rationale": "Cells without oxygen switch to anaerobic metabolism and produce lactic acid."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "F"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Metabolic acidosis comes from gaining fixed acid or losing bicarbonate. Ketones, lactate and retained renal acid are gains; diarrhea is the loss.",
+          "strategy": "Two of the six are alkalosis in disguise, and one of them is respiratory rather than metabolic.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Sort metabolic from respiratory",
+                "detail": "Hyperventilation is a lung mechanism and comes out immediately."
+              },
+              {
+                "action": "Ask gained acid or lost base",
+                "detail": "Ketoacidosis, kidney injury and shock all gain acid."
+              },
+              {
+                "action": "Watch the gastrointestinal pair",
+                "detail": "Diarrhea loses base. Suction, like vomiting, loses acid."
+              }
+            ],
+            "verdict": "A, B, C and F. Nasogastric suction is the mirror image and produces alkalosis."
+          }
+        },
+        {
+          "id": "ch42-e10",
+          "type": "cloze",
+          "stem": "Complete each interpretation by selecting from the choices below.",
+          "sentence": "A patient with sepsis has pH 7.28, PaCO2 32 mm Hg, HCO3 15 mEq/L. This is [[1]].\n\nA postoperative patient who has been receiving opioids has pH 7.30, PaCO2 54 mm Hg, HCO3 25 mEq/L. This is [[2]].\n\nA patient with three days of nasogastric suction has pH 7.50, PaCO2 42 mm Hg, HCO3 32 mEq/L. This is [[3]].\n\nFor the septic patient, the respiratory rate of 30 is best understood as [[4]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "metabolic acidosis with respiratory compensation",
+                  "correct": true,
+                  "rationale": "The bicarbonate is low, which is the primary problem, and the pH is acidotic. The low CO2 is the lung blowing off acid to help."
+                },
+                {
+                  "id": "B",
+                  "text": "respiratory acidosis",
+                  "correct": false,
+                  "rationale": "The CO2 is low, not high. A respiratory acidosis requires retained CO2."
+                },
+                {
+                  "id": "C",
+                  "text": "metabolic alkalosis",
+                  "correct": false,
+                  "rationale": "The pH is 7.28, which is acidotic."
+                },
+                {
+                  "id": "D",
+                  "text": "a fully compensated disturbance",
+                  "correct": false,
+                  "rationale": "Full compensation would have returned the pH to normal. It has not."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "respiratory acidosis",
+                  "correct": true,
+                  "rationale": "The CO2 is high and the pH is low, moving opposite each other, which makes it respiratory. The normal bicarbonate means the kidney has not compensated yet."
+                },
+                {
+                  "id": "B",
+                  "text": "metabolic acidosis",
+                  "correct": false,
+                  "rationale": "The bicarbonate is normal, so the metabolic side is not the problem."
+                },
+                {
+                  "id": "C",
+                  "text": "respiratory alkalosis",
+                  "correct": false,
+                  "rationale": "That would show a low CO2 and a high pH."
+                },
+                {
+                  "id": "D",
+                  "text": "a normal blood gas",
+                  "correct": false,
+                  "rationale": "A pH of 7.30 is below the range."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "metabolic alkalosis",
+                  "correct": true,
+                  "rationale": "Suction removes gastric acid. The bicarbonate is high and the pH is high, and the CO2 is normal, so the metabolic side is the problem."
+                },
+                {
+                  "id": "B",
+                  "text": "respiratory alkalosis",
+                  "correct": false,
+                  "rationale": "The CO2 is 42, which is normal. A respiratory alkalosis requires a low CO2."
+                },
+                {
+                  "id": "C",
+                  "text": "metabolic acidosis",
+                  "correct": false,
+                  "rationale": "The pH is 7.50, which is alkalotic."
+                },
+                {
+                  "id": "D",
+                  "text": "compensated respiratory acidosis",
+                  "correct": false,
+                  "rationale": "Nothing here is acidotic and the CO2 is normal."
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "compensation that should not be slowed",
+                  "correct": true,
+                  "rationale": "The fast breathing is how the body is offloading acid. Sedating it or slowing it removes the only compensation the patient has."
+                },
+                {
+                  "id": "B",
+                  "text": "a primary respiratory problem needing sedation",
+                  "correct": false,
+                  "rationale": "The lung is helping, not failing. Slowing it would drive the pH lower."
+                },
+                {
+                  "id": "C",
+                  "text": "anxiety requiring reassurance and rebreathing",
+                  "correct": false,
+                  "rationale": "That applies to respiratory alkalosis from panic. This patient is acidotic."
+                },
+                {
+                  "id": "D",
+                  "text": "an indication for immediate intubation",
+                  "correct": false,
+                  "rationale": "Nothing in the values shows a failing airway or failing ventilation."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "A",
+            "3": "A",
+            "4": "A"
+          },
+          "scoring": "0/1",
+          "takeaway": "Read the pH, then the CO2, then the bicarbonate. The value moving opposite the pH is the cause; the value moving with it is compensation.",
+          "strategy": "The last blank is the one that matters clinically. Fast breathing is a cause in respiratory alkalosis and a rescue in metabolic acidosis.",
+          "elimination": {
+            "strategies": [
+              "Match each part to what the stem gives"
+            ],
+            "steps": [
+              {
+                "action": "Start with the pH",
+                "detail": "Acidotic or alkalotic decides half the answer before you read anything else."
+              },
+              {
+                "action": "Find the value moving opposite the pH",
+                "detail": "That one is the cause."
+              },
+              {
+                "action": "Ask what the other value is doing",
+                "detail": "Moving with the pH means it is compensating."
+              }
+            ],
+            "verdict": "Metabolic acidosis, respiratory acidosis, metabolic alkalosis, and the fast breathing is compensation you protect rather than treat."
+          }
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "chapterNumber": 49,
+      "source": "Potter",
+      "title": "Sensory Alterations",
+      "exam": "Exam 2",
+      "questions": [
+        {
+          "id": "ch49-e1",
+          "type": "multiple_choice",
+          "stem": "A patient with intact vision and hearing consistently misinterprets what she sees and hears after a stroke. At which stage of sensory experience is her deficit?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Reception",
+              "correct": false,
+              "rationale": "Reception is the stimulus reaching the receptor. Her eyes and ears are working, so the stimulus is arriving."
+            },
+            {
+              "id": "B",
+              "text": "Perception",
+              "correct": true,
+              "rationale": "Perception is the brain organizing and interpreting what arrived. Intact receptors with faulty interpretation places the problem here."
+            },
+            {
+              "id": "C",
+              "text": "Reaction",
+              "correct": false,
+              "rationale": "Reaction is what the person does about the stimulus. She is responding, just to a misread signal."
+            },
+            {
+              "id": "D",
+              "text": "Adaptation",
+              "correct": false,
+              "rationale": "Adaptation is the normal process of ceasing to notice a constant stimulus, such as no longer feeling your watch."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Reception, perception, reaction. A deficit can sit at any of the three, which is why intact eyes do not guarantee accurate sight.",
+          "strategy": "The stem hands you normal receptors on purpose. That single detail eliminates the first stage.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Note what is intact",
+                "detail": "Vision and hearing both work."
+              },
+              {
+                "action": "Cut reception",
+                "detail": "The stimulus is arriving."
+              },
+              {
+                "action": "Ask what is failing",
+                "detail": "Interpretation, which is perception."
+              }
+            ],
+            "verdict": "Perception. The stroke damaged the interpreting, not the sensing."
+          }
+        },
+        {
+          "id": "ch49-e2",
+          "type": "multiple_choice",
+          "stem": "A patient in intensive care on day three is agitated, cannot follow a sentence, and keeps pulling at the telemetry leads. There is no delirium screening tool result and the neurologic exam is unchanged. Which nursing action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Obtain an order for soft wrist restraints",
+              "correct": false,
+              "rationale": "The trap, and it looks like safety. Restraints treat the behavior and leave the cause running, and every alternative comes first."
+            },
+            {
+              "id": "B",
+              "text": "Cluster care and provide an uninterrupted quiet period",
+              "correct": true,
+              "rationale": "The picture is sensory overload: three days of alarms, lights, multiple caregivers and no protected sleep. Reducing input is the intervention that addresses the cause."
+            },
+            {
+              "id": "C",
+              "text": "Request a psychiatric consultation for the agitation",
+              "correct": false,
+              "rationale": "Escalates a problem the nurse can address, and it leaves the environment unchanged in the meantime."
+            },
+            {
+              "id": "D",
+              "text": "Increase orientation by explaining each piece of equipment in detail",
+              "correct": false,
+              "rationale": "Orientation helps deprivation. This patient is receiving too much input already, so more talking adds to the load."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "A client pulling at lines because of sensory overload does not need restraints, needs the overload reduced. Least restrictive intervention first, and cluster care is that intervention.",
+          "strategy": "Two options add something and one removes freedom. Only one option reduces what is actually driving the behavior.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the cause",
+                "detail": "Three days of unrelieved stimulation."
+              },
+              {
+                "action": "Cut restraints",
+                "detail": "Never before alternatives, and it does not address the cause."
+              },
+              {
+                "action": "Cut more orientation",
+                "detail": "Right for deprivation, wrong for overload."
+              },
+              {
+                "action": "Cut the consult",
+                "detail": "Escalates before acting."
+              }
+            ],
+            "verdict": "Cluster care and protect sleep. Any item pairing restraints with a less restrictive option is testing least restrictive first."
+          }
+        },
+        {
+          "id": "ch49-e3",
+          "type": "sata",
+          "stem": "An 84-year-old nursing home resident is described by staff as \"becoming demented.\" He has been withdrawn, answers questions incorrectly and has stopped joining meals. Which assessments does the nurse perform before accepting that description? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Inspect the ear canals for cerumen impaction",
+              "correct": true,
+              "rationale": "Impacted wax is the most common cause of canal obstruction and the most commonly correctable hearing loss in older adults."
+            },
+            {
+              "id": "B",
+              "text": "Confirm he has his glasses and that the prescription is current",
+              "correct": true,
+              "rationale": "An uncorrected visual deficit produces withdrawal and misunderstanding that look exactly like cognitive decline."
+            },
+            {
+              "id": "C",
+              "text": "Review the medication list for ototoxic and anticholinergic drugs",
+              "correct": true,
+              "rationale": "Drugs are the first hypothesis for a new symptom in an older adult, not the last."
+            },
+            {
+              "id": "D",
+              "text": "Assess for recent changes in his room, routine or roommate",
+              "correct": true,
+              "rationale": "An unstimulating or unfamiliar environment produces sensory deprivation, and deprivation produces withdrawal and disordered thinking."
+            },
+            {
+              "id": "E",
+              "text": "Document the behavior change and reassess in one week",
+              "correct": false,
+              "rationale": "Documenting instead of acting. A week of untreated reversible deficit is a week of avoidable disability."
+            },
+            {
+              "id": "F",
+              "text": "Explain to the family that this is an expected part of aging",
+              "correct": false,
+              "rationale": "A new change is never assumed to be age-related, and reassurance delivered before assessment is the most reliable wrong answer in this material."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Uncorrected sensory deficit imitates dementia and is reversible. Check the glasses, the hearing aid, the ear canal and the medication list before anyone writes the word confusion.",
+          "strategy": "Two options are comfortable and passive. Both of them accept the description instead of testing it.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Keep the four assessments",
+                "detail": "Ears, eyes, drugs, environment."
+              },
+              {
+                "action": "Cut watchful waiting",
+                "detail": "Documentation follows the intervention, it does not replace it."
+              },
+              {
+                "action": "Cut the aging explanation",
+                "detail": "New is never normal aging."
+              }
+            ],
+            "verdict": "A, B, C and D."
+          }
+        },
+        {
+          "id": "ch49-e4",
+          "type": "multiple_choice",
+          "stem": "A nurse is preparing a hospital room for a patient who is newly blind. Which action best promotes safety?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rearrange the furniture so the path to the bathroom is shortest",
+              "correct": false,
+              "rationale": "Well intentioned and dangerous. A blind patient navigates by a memorized layout, and moving furniture removes the map."
+            },
+            {
+              "id": "B",
+              "text": "Orient the patient to the room and then leave everything where it is",
+              "correct": true,
+              "rationale": "Predictability is the safety intervention. Once the layout is learned, it has to stay constant, and anything moved gets announced."
+            },
+            {
+              "id": "C",
+              "text": "Keep the room dimly lit to reduce glare and confusion",
+              "correct": false,
+              "rationale": "Light level is irrelevant to a patient with no usable vision and creates a hazard for everyone else in the room."
+            },
+            {
+              "id": "D",
+              "text": "Use the call light to summon the patient rather than entering unannounced",
+              "correct": false,
+              "rationale": "The call light summons the nurse, not the patient. What matters is that staff identify themselves on entering and say when they leave."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "For a visual deficit, safety is built out of consistency: a predictable layout, announced entries and exits, and nothing moved without telling the patient.",
+          "strategy": "Three options change something about the environment. The correct one is the only one that keeps it still.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Ask what a blind patient navigates by",
+                "detail": "Memory of a fixed layout."
+              },
+              {
+                "action": "Cut rearranging",
+                "detail": "It erases the map."
+              },
+              {
+                "action": "Cut the lighting",
+                "detail": "Irrelevant to no usable vision."
+              },
+              {
+                "action": "Cut the call light",
+                "detail": "It runs the wrong direction."
+              }
+            ],
+            "verdict": "Orient once, then keep the room constant."
+          }
+        },
+        {
+          "id": "ch49-e5",
+          "type": "multiple_choice",
+          "stem": "A patient who reads lips is admitted to a unit where staff wear masks. Which adaptation best preserves effective communication?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Speak more loudly through the mask so the words carry",
+              "correct": false,
+              "rationale": "Volume is not the problem. A mask removes the visual half of the message, and raising the pitch makes a high-frequency loss worse."
+            },
+            {
+              "id": "B",
+              "text": "Use a clear-window mask or written communication, and confirm with teach-back",
+              "correct": true,
+              "rationale": "Restores the visual channel or replaces it, and teach-back is how you verify the message actually arrived rather than assuming a nod means understanding."
+            },
+            {
+              "id": "C",
+              "text": "Ask a family member to relay all instructions by phone",
+              "correct": false,
+              "rationale": "Offloads the nurse's legal duty onto a third party and introduces a second chance for the message to be lost."
+            },
+            {
+              "id": "D",
+              "text": "Shorten conversations to reduce the patient's frustration",
+              "correct": false,
+              "rationale": "Reduces the burden on the nurse and the information reaching the patient. Frustration is not the safety risk; missed information is."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Effective communication is a legal and ethical requirement. When the visual channel is removed, you restore it or replace it, and you verify with teach-back.",
+          "strategy": "One option is louder, one is shorter, one delegates. None of those puts the information back.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name what the mask took",
+                "detail": "The lips and the expression."
+              },
+              {
+                "action": "Cut volume",
+                "detail": "Shouting raises pitch into the lost range."
+              },
+              {
+                "action": "Cut delegation and shortening",
+                "detail": "Both reduce the information the patient receives."
+              }
+            ],
+            "verdict": "Restore the visual channel and confirm with teach-back. Nodding is not comprehension."
+          }
+        },
+        {
+          "id": "ch49-e6",
+          "type": "matrix",
+          "scenario": "A nurse rounds on four patients in different areas of the hospital.",
+          "stem": "For each patient, indicate whether the environment places them at risk for sensory deprivation or sensory overload.",
+          "columns": [
+            "Deprivation",
+            "Overload"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "In protective isolation in a windowless room with no clock, television or visitors",
+              "answer": "Deprivation",
+              "rationale": "Isolation, no natural light, no time cues and nothing meaningful coming in. Every element of deprivation at once."
+            },
+            {
+              "id": "r2",
+              "text": "Day three in intensive care with continuous alarms, hourly assessments and no protected sleep",
+              "answer": "Overload",
+              "rationale": "More input than the patient can sort, with no recovery period. This is the picture that produces agitation and pulling at lines."
+            },
+            {
+              "id": "r3",
+              "text": "An older adult whose glasses and hearing aid were left at home on admission",
+              "answer": "Deprivation",
+              "rationale": "The stimulus is present and cannot reach the patient. An uncorrected deficit produces withdrawal and misunderstanding that imitate dementia."
+            },
+            {
+              "id": "r4",
+              "text": "In the emergency department during a busy shift with bright lights and multiple caregivers asking questions",
+              "answer": "Overload",
+              "rationale": "Noise, light and several people competing for attention. Too much arriving at once to process."
+            }
+          ],
+          "answer": {
+            "r1": "Deprivation",
+            "r2": "Overload",
+            "r3": "Deprivation",
+            "r4": "Overload"
+          },
+          "scoring": "0/1",
+          "takeaway": "Deprivation is too little meaningful input, or input the person cannot interpret. Overload is more than they can process. Both produce confusion, and both are reversible.",
+          "strategy": "The missing glasses row is the one students miss, because the environment is busy. Ask what is reaching the patient, not what is happening in the room.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Ask how much is arriving",
+                "detail": "Quiet and empty is deprivation."
+              },
+              {
+                "action": "Ask how much can be processed",
+                "detail": "Alarms and interruptions with no rest is overload."
+              },
+              {
+                "action": "Watch the uncorrected deficit",
+                "detail": "A busy room the patient cannot see or hear is still deprivation."
+              }
+            ],
+            "verdict": "Two deprivation, two overload, and the deficit row is the trap."
+          }
+        },
+        {
+          "id": "ch49-e7",
+          "type": "multiple_choice",
+          "stem": "A patient with expressive aphasia after a stroke becomes visibly frustrated trying to answer a question. What is the nurse's best response?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Finish the sentence for the patient to reduce the effort",
+              "correct": false,
+              "rationale": "Feels kind and takes the communication away. It also risks putting words in the patient's mouth that are not what they meant."
+            },
+            {
+              "id": "B",
+              "text": "Allow time, ask questions that can be answered yes or no, and offer a communication board",
+              "correct": true,
+              "rationale": "Expressive aphasia means comprehension is intact and output is impaired. Time, closed questions and an alternative output channel all work with that."
+            },
+            {
+              "id": "C",
+              "text": "Speak more slowly and loudly so the patient can understand",
+              "correct": false,
+              "rationale": "Treats it as a comprehension or hearing problem. In expressive aphasia the patient understands you perfectly, and volume implies otherwise."
+            },
+            {
+              "id": "D",
+              "text": "Ask the family to interpret what the patient is trying to say",
+              "correct": false,
+              "rationale": "Bypasses the patient. Useful as a supplement, and not a substitute for communicating with the patient directly."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Expressive aphasia is an output problem with intact comprehension. Give time, use yes and no questions, and supply an alternative channel.",
+          "strategy": "Two options treat it as a hearing or comprehension problem. Two of them take the communication away from the patient.",
+          "elimination": {
+            "strategies": [
+              "Patient-centered option",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the deficit",
+                "detail": "Expressive: understanding intact, speech impaired."
+              },
+              {
+                "action": "Cut slow and loud",
+                "detail": "That addresses comprehension, which is not affected."
+              },
+              {
+                "action": "Cut finishing sentences and family interpreting",
+                "detail": "Both remove the patient from the exchange."
+              }
+            ],
+            "verdict": "Time, closed questions and a communication board."
+          }
+        },
+        {
+          "id": "ch49-e8",
+          "type": "sata",
+          "stem": "The nurse is teaching a community group about preventing sensory loss. Which statements are correct? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hearing and eye protection should be worn whenever there is occupational exposure",
+              "correct": true,
+              "rationale": "Noise-induced loss is the major preventable cause of sensory hearing loss, and protection before the exposure is the only thing that changes it."
+            },
+            {
+              "id": "B",
+              "text": "Take a break every 20 minutes from close work and look at something 20 feet away for 20 seconds",
+              "correct": true,
+              "rationale": "The 20-20-20 rule. The distance is the active ingredient, because it is what relaxes the ciliary muscle."
+            },
+            {
+              "id": "C",
+              "text": "Ultraviolet-blocking sunglasses reduce the risk of cataract",
+              "correct": true,
+              "rationale": "Chronic sun exposure is a named cataract risk, and blocking it is a cheap preventive measure."
+            },
+            {
+              "id": "D",
+              "text": "Any hearing change after age 70 can reasonably be attributed to normal aging",
+              "correct": false,
+              "rationale": "Sudden or one-sided change is never aging. And while presbycusis is the most common age-related loss, impacted cerumen is the most common correctable cause, so a new change is assessed rather than attributed."
+            },
+            {
+              "id": "E",
+              "text": "Cotton swabs are a safe way to keep the ear canal clear of wax",
+              "correct": false,
+              "rationale": "Swabs push wax deeper and are a named cause of canal trauma and external otitis."
+            },
+            {
+              "id": "F",
+              "text": "Regular vision and hearing screening should continue at age-appropriate intervals through life",
+              "correct": true,
+              "rationale": "Screening frequency rises with age and with risk factors, and the nurse role is detection and referral."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "F"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Prevention is protection before exposure, screening at intervals, and never accepting a new change as age-related.",
+          "strategy": "The two wrong options are both things people believe. One reassures, one is a household habit.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Keep the protective and screening statements",
+                "detail": "Protection, 20-20-20, sunglasses, screening."
+              },
+              {
+                "action": "Cut the aging attribution",
+                "detail": "Sudden or one-sided is never aging."
+              },
+              {
+                "action": "Cut the cotton swabs",
+                "detail": "They impact the wax and injure the canal."
+              }
+            ],
+            "verdict": "A, B, C and F."
+          }
+        },
+        {
+          "id": "ch49-e9",
+          "type": "multiple_choice",
+          "stem": "A home health nurse visits a patient with moderate hearing loss and macular degeneration who lives alone. Which finding does the nurse address as the highest safety priority?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The patient has stopped attending a weekly social group",
+              "correct": false,
+              "rationale": "Social withdrawal is a real consequence of sensory loss and a quality of life concern. It is not what kills someone tonight."
+            },
+            {
+              "id": "B",
+              "text": "The smoke alarm is a standard audible model with no visual alert",
+              "correct": true,
+              "rationale": "A patient who cannot hear the alarm has no warning of a fire. A flashing alert system is a safety intervention, not an accessory."
+            },
+            {
+              "id": "C",
+              "text": "Medication bottles are labeled in standard-size print",
+              "correct": false,
+              "rationale": "A genuine problem with a straightforward fix, and it does not carry the same immediate lethality."
+            },
+            {
+              "id": "D",
+              "text": "The patient reports the television is turned up very loud",
+              "correct": false,
+              "rationale": "A finding that confirms the hearing loss rather than a hazard in itself."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Hearing loss is a safety problem before it is a communication problem. A client who cannot hear the alarm is in danger in a way that has nothing to do with conversation.",
+          "strategy": "Every option is a real finding. Rank them by what happens if nothing is done.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Ask what is lethal",
+                "detail": "Only one option involves a fire."
+              },
+              {
+                "action": "Cut the withdrawal and the television",
+                "detail": "Both are consequences, not hazards."
+              },
+              {
+                "action": "Cut the print size",
+                "detail": "Important, fixable, and not immediately dangerous."
+              }
+            ],
+            "verdict": "The smoke alarm. Visual alerting devices belong in discharge teaching."
+          }
+        },
+        {
+          "id": "ch49-e10",
+          "type": "multiple_choice",
+          "stem": "Which statement by a nursing student about sensory alterations requires correction?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Sensory deprivation and sensory overload can both cause disorientation.\"",
+              "correct": false,
+              "rationale": "Accurate. Both ends of the spectrum produce confusion, which is why the environment has to be assessed in either direction."
+            },
+            {
+              "id": "B",
+              "text": "\"An older adult who seems confused should be screened for a correctable sensory deficit.\"",
+              "correct": false,
+              "rationale": "Accurate, and it is the most commonly missed assessment in this material."
+            },
+            {
+              "id": "C",
+              "text": "\"Once a patient has adapted to a constant stimulus, they stop noticing it.\"",
+              "correct": false,
+              "rationale": "Accurate. That is sensory adaptation, and it is why a patient stops hearing a monitor that still alarms."
+            },
+            {
+              "id": "D",
+              "text": "\"A patient who has hallucinations in the hospital is showing early dementia.\"",
+              "correct": true,
+              "rationale": "This is the statement to correct. Hallucinations are a documented finding in sensory deprivation and in delirium, both of which are reversible, and assuming dementia closes off the assessment that would find the cause."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Hallucinations and disordered thinking appear in sensory deprivation and delirium long before they mean dementia. The reversible explanation is ruled out first.",
+          "strategy": "Negative polarity: you are hunting the false statement, so read each option asking whether it is true rather than whether it sounds good.",
+          "elimination": {
+            "strategies": [
+              "Negative polarity",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Flip the question",
+                "detail": "Find the one that is wrong."
+              },
+              {
+                "action": "Verify the first three",
+                "detail": "Both extremes confuse, deficits imitate dementia, adaptation is real."
+              },
+              {
+                "action": "Test the fourth",
+                "detail": "Hallucinations belong to deprivation and delirium first."
+              }
+            ],
+            "verdict": "The dementia statement. It skips the reversible causes."
+          }
+        }
+      ]
+    },
+    {
+      "id": 1013,
+      "chapterNumber": 13,
+      "source": "Iggy",
+      "title": "Fluid and Electrolyte Imbalances",
+      "exam": "Exam 2",
+      "questions": [
+        {
+          "id": "ig13-e1",
+          "type": "multiple_choice",
+          "stem": "A patient receiving furosemide has a serum potassium of 2.8 mEq/L. Which assessment finding does the nurse report immediately?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Constipation and abdominal distention",
+              "correct": false,
+              "rationale": "A real finding in hypokalemia and not the one that kills. Smooth muscle slows along with everything else."
+            },
+            {
+              "id": "B",
+              "text": "Shallow respirations with a weak cough",
+              "correct": true,
+              "rationale": "Hypokalemia weakens every muscle including the diaphragm and the intercostals. Respiratory muscle weakness is the finding that turns a laboratory value into an emergency."
+            },
+            {
+              "id": "C",
+              "text": "Generalized fatigue and leg weakness",
+              "correct": false,
+              "rationale": "Expected and important, and it is the background against which you look for the breathing."
+            },
+            {
+              "id": "D",
+              "text": "Prominent U waves on the cardiac monitor",
+              "correct": false,
+              "rationale": "The classic electrocardiogram change in hypokalemia, and it belongs in the report. It is still not the finding that takes priority over ventilation."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Weakness is a respiratory finding until you rule it out. Hypokalemia, hypermagnesemia and hyponatremia all weaken the muscles that breathe.",
+          "strategy": "Every option is a genuine finding in hypokalemia. The question is which one threatens the airway and breathing.",
+          "elimination": {
+            "strategies": [
+              "Apply the ABCs",
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Apply the ABCs",
+                "detail": "Only one option is about breathing."
+              },
+              {
+                "action": "Note that U waves are tempting",
+                "detail": "They are the textbook sign, which is exactly why they are offered."
+              },
+              {
+                "action": "Cut the gut and the fatigue",
+                "detail": "Both are expected and neither is immediately dangerous."
+              }
+            ],
+            "verdict": "Shallow respirations. Assess the breathing, not just the grip."
+          }
+        },
+        {
+          "id": "ig13-e2",
+          "type": "multiple_choice",
+          "stem": "A patient with chronic kidney disease has a serum potassium of 7.1 mEq/L with peaked T waves. The prescriber orders IV calcium gluconate. The patient asks what it will do. What is the nurse's best response?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It will lower your potassium level quickly",
+              "correct": false,
+              "rationale": "The single most reliable near-miss distractor in this chapter. Calcium does not change the potassium at all."
+            },
+            {
+              "id": "B",
+              "text": "It will protect your heart while we work on lowering the potassium",
+              "correct": true,
+              "rationale": "Calcium raises the threshold potential of cardiac cells, which stabilizes the membrane against the arrhythmia. It buys time and treats nothing."
+            },
+            {
+              "id": "C",
+              "text": "It will help your kidneys excrete the extra potassium",
+              "correct": false,
+              "rationale": "Excretion is what a cation exchange resin or dialysis does. Calcium has no role in elimination."
+            },
+            {
+              "id": "D",
+              "text": "It will move the potassium into your cells for storage",
+              "correct": false,
+              "rationale": "That is insulin with dextrose, or a beta agonist. Those shift potassium; calcium does not."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "IV calcium in hyperkalemia protects the heart and changes the level not at all. Shifting is insulin and dextrose; removing is a resin or dialysis.",
+          "strategy": "Three options describe real hyperkalemia treatments. Only one of them is what calcium actually does.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Sort the treatments",
+                "detail": "Stabilize, shift, remove. Three different jobs."
+              },
+              {
+                "action": "Place calcium",
+                "detail": "It stabilizes."
+              },
+              {
+                "action": "Cut the other three",
+                "detail": "Lowering, excreting and shifting all belong to other drugs."
+              }
+            ],
+            "verdict": "Cardiac protection while another drug does the lowering."
+          }
+        },
+        {
+          "id": "ig13-e3",
+          "type": "multiple_choice",
+          "stem": "A patient has been receiving potassium replacement for two days and the serum potassium remains 3.0 mEq/L. Which laboratory value does the nurse check next?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Serum magnesium",
+              "correct": true,
+              "rationale": "Low magnesium makes the kidney waste potassium and blocks it from staying in the cell. Potassium will not come up while the magnesium is low, no matter how much you give."
+            },
+            {
+              "id": "B",
+              "text": "Serum albumin",
+              "correct": false,
+              "rationale": "Albumin matters for interpreting a calcium level, not a potassium one."
+            },
+            {
+              "id": "C",
+              "text": "Serum phosphorus",
+              "correct": false,
+              "rationale": "Phosphorus moves inversely with calcium. It has no direct role in potassium replacement failing."
+            },
+            {
+              "id": "D",
+              "text": "Serum chloride",
+              "correct": false,
+              "rationale": "Chloride tracks sodium and acid-base status. It does not explain refractory hypokalemia."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "When a level will not respond to correction, the first question is which related electrolyte nobody checked. Potassium will not correct while magnesium is low.",
+          "strategy": "The stem is not asking about hypokalemia. It is asking why a correct treatment is not working.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read what failed",
+                "detail": "Two days of replacement with no movement."
+              },
+              {
+                "action": "Ask what blocks potassium",
+                "detail": "Magnesium, every time."
+              },
+              {
+                "action": "Cut the calcium partners",
+                "detail": "Albumin and phosphorus belong to a different pairing."
+              }
+            ],
+            "verdict": "Magnesium. Read labs as a set, not one line at a time."
+          }
+        },
+        {
+          "id": "ig13-e4",
+          "type": "sata",
+          "stem": "A patient with hypocalcemia has a total calcium of 7.6 mg/dL. Which findings does the nurse expect? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Positive Trousseau sign when the blood pressure cuff is inflated",
+              "correct": true,
+              "rationale": "Carpal spasm with cuff inflation. Low calcium lowers the threshold at which nerves fire, so ischemia provokes a spasm."
+            },
+            {
+              "id": "B",
+              "text": "Tingling and numbness around the mouth and in the fingertips",
+              "correct": true,
+              "rationale": "Paresthesia is usually the earliest complaint and it is the one patients report themselves."
+            },
+            {
+              "id": "C",
+              "text": "Hyperactive deep tendon reflexes",
+              "correct": true,
+              "rationale": "Nerve and muscle are overexcitable, so reflexes are brisk."
+            },
+            {
+              "id": "D",
+              "text": "Prolonged QT interval on the electrocardiogram",
+              "correct": true,
+              "rationale": "Low calcium lengthens the plateau phase of repolarization, which shows as a long QT and carries a risk of torsades de pointes."
+            },
+            {
+              "id": "E",
+              "text": "Deep bone pain with kidney stones",
+              "correct": false,
+              "rationale": "That is hypercalcemia. Calcium coming out of bone into urine is a high-calcium picture."
+            },
+            {
+              "id": "F",
+              "text": "Constipation and decreased bowel sounds",
+              "correct": false,
+              "rationale": "Also hypercalcemia. Low calcium makes smooth muscle overactive, giving cramping and diarrhea instead."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Low calcium excites nerve and muscle: tetany, tingling, brisk reflexes, positive Trousseau and Chvostek, and a prolonged QT. High calcium sedates them.",
+          "strategy": "Two options belong to the opposite imbalance. Ask of each one whether it sounds excitable or sluggish.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Set the rule",
+                "detail": "Low calcium excites, high calcium sedates."
+              },
+              {
+                "action": "Keep everything excitable",
+                "detail": "Spasm, tingling, brisk reflexes, long QT."
+              },
+              {
+                "action": "Cut stones, bone pain and constipation",
+                "detail": "All three are the sluggish, high-calcium picture."
+              }
+            ],
+            "verdict": "A, B, C and D."
+          }
+        },
+        {
+          "id": "ig13-e5",
+          "type": "multiple_choice",
+          "stem": "A patient with cirrhosis has a serum sodium of 124 mEq/L, ascites, 3+ pitting edema and a weight gain of 4 kg this week. Which intervention does the nurse anticipate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Infusion of 0.9% sodium chloride at 150 mL/hr",
+              "correct": false,
+              "rationale": "Saline into a fluid-overloaded hyponatremic patient makes both problems worse. The sodium is low because there is too much water, not too little salt."
+            },
+            {
+              "id": "B",
+              "text": "Fluid restriction with daily weights",
+              "correct": true,
+              "rationale": "This is dilutional hyponatremia. The sodium is diluted by retained water, so removing water is what raises the number."
+            },
+            {
+              "id": "C",
+              "text": "Encouraging salty broths and adding salt to meals",
+              "correct": false,
+              "rationale": "Adds sodium to a patient who is already retaining water and will retain more with it."
+            },
+            {
+              "id": "D",
+              "text": "Rapid infusion of 3% sodium chloride over two hours",
+              "correct": false,
+              "rationale": "Hypertonic saline is reserved for severe symptomatic hyponatremia with seizures or coma, given slowly and with close monitoring. Correcting fast causes osmotic demyelination."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Find the volume status before you treat the sodium. A low sodium with edema and weight gain is too much water, and the treatment is restriction rather than replacement.",
+          "strategy": "Two options add sodium and one adds volume. The edema and the weight gain tell you which direction the patient needs to move.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the volume clues",
+                "detail": "Ascites, 3+ edema and 4 kg of gain."
+              },
+              {
+                "action": "Cut both saline options",
+                "detail": "Adding fluid to an overloaded patient."
+              },
+              {
+                "action": "Cut the dietary salt",
+                "detail": "Sodium follows water in, and there is already too much water."
+              }
+            ],
+            "verdict": "Fluid restriction. Hyponatremia is not automatically a sodium deficiency."
+          }
+        },
+        {
+          "id": "ig13-e6",
+          "type": "multiple_choice",
+          "stem": "A patient receiving magnesium sulfate for preeclampsia becomes drowsy, and the nurse finds absent patellar reflexes with a respiratory rate of 10. What does the nurse do first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Stop the magnesium infusion",
+              "correct": true,
+              "rationale": "Reflexes go first, then respirations, then rhythm. The progression has already reached breathing, and the first action is to stop what is causing it."
+            },
+            {
+              "id": "B",
+              "text": "Administer calcium gluconate as the antidote",
+              "correct": false,
+              "rationale": "Calcium is the antidote and it comes after stopping the infusion. Giving the antidote while the drug keeps running is treating around the cause."
+            },
+            {
+              "id": "C",
+              "text": "Notify the prescriber of the assessment findings",
+              "correct": false,
+              "rationale": "Necessary and not first. Notification follows the action that stops the harm."
+            },
+            {
+              "id": "D",
+              "text": "Place the patient on continuous pulse oximetry",
+              "correct": false,
+              "rationale": "Monitoring a patient who is being poisoned does not stop the poisoning."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Hypermagnesemia progresses reflexes, then respirations, then rhythm. Checking the patellar reflex before each hour of infusion is how you catch it before the breathing.",
+          "strategy": "Three of the four options are correct actions and only one of them removes the cause.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Apply the rule",
+                "detail": "Stop before you call."
+              },
+              {
+                "action": "Note that the antidote is tempting",
+                "detail": "It is right and it is second."
+              },
+              {
+                "action": "Cut notification and monitoring",
+                "detail": "Both follow the intervention."
+              }
+            ],
+            "verdict": "Stop the infusion, then calcium gluconate, then notify."
+          }
+        },
+        {
+          "id": "ig13-e7",
+          "type": "multiple_choice",
+          "stem": "A patient has a total calcium of 7.8 mg/dL with a serum albumin of 2.1 g/dL. The patient has no tingling, no spasm and a normal QT interval. How does the nurse interpret this?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The patient has significant hypocalcemia and needs replacement now",
+              "correct": false,
+              "rationale": "Treating the number instead of the patient. Nothing in the assessment supports a functional deficit."
+            },
+            {
+              "id": "B",
+              "text": "The low albumin has lowered the total calcium without lowering the active calcium",
+              "correct": true,
+              "rationale": "Roughly half of serum calcium travels bound to albumin. Less albumin means less bound calcium and a lower total, while the ionized fraction that actually does the work is unchanged."
+            },
+            {
+              "id": "C",
+              "text": "The result is a laboratory error and should be redrawn",
+              "correct": false,
+              "rationale": "The two values are consistent with each other, which is the opposite of an error."
+            },
+            {
+              "id": "D",
+              "text": "The patient is developing hyperparathyroidism",
+              "correct": false,
+              "rationale": "That raises calcium rather than lowering it."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Low albumin lowers the total calcium without lowering the calcium that is working. Check the albumin, or ask for the ionized calcium, before treating a number.",
+          "strategy": "The absence of symptoms is the finding the question is built on. A truly low ionized calcium would show itself.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Notice the pairing",
+                "detail": "Calcium is reported with albumin for a reason."
+              },
+              {
+                "action": "Read the assessment",
+                "detail": "No tingling, no spasm, normal QT."
+              },
+              {
+                "action": "Cut the treat-now option",
+                "detail": "Nothing functional is wrong."
+              }
+            ],
+            "verdict": "A dilutional artifact of low albumin. Ask for an ionized calcium."
+          }
+        },
+        {
+          "id": "ig13-e8",
+          "type": "sata",
+          "stem": "A nurse is caring for a patient with a serum sodium of 158 mEq/L after prolonged fever and poor intake. Which nursing actions are appropriate? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Monitor level of consciousness at least every four hours",
+              "correct": true,
+              "rationale": "Hypernatremia pulls water out of brain cells. Neurologic change is the earliest and most important finding."
+            },
+            {
+              "id": "B",
+              "text": "Anticipate a hypotonic intravenous solution prescribed to run slowly",
+              "correct": true,
+              "rationale": "The water deficit is replaced gradually. Correcting a high sodium too quickly pulls water into brain cells and causes cerebral edema."
+            },
+            {
+              "id": "C",
+              "text": "Institute seizure precautions",
+              "correct": true,
+              "rationale": "Both extremes of sodium change brain cell volume and both can produce seizures."
+            },
+            {
+              "id": "D",
+              "text": "Offer oral fluids on a schedule rather than waiting for the patient to ask",
+              "correct": true,
+              "rationale": "Thirst is blunted in older adults and unreliable as a guide. A schedule works where waiting does not."
+            },
+            {
+              "id": "E",
+              "text": "Correct the sodium to normal within the first eight hours",
+              "correct": false,
+              "rationale": "Rapid correction in either direction causes harm. Down too fast swells the brain; up too fast damages myelin."
+            },
+            {
+              "id": "F",
+              "text": "Restrict free water until the sodium normalizes",
+              "correct": false,
+              "rationale": "This patient is short of water, not carrying too much. Restriction would worsen it."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Both sodium extremes are brain problems, and both are corrected slowly. Fast down causes cerebral edema; fast up causes osmotic demyelination.",
+          "strategy": "Two options are written to sound decisive. Speed is the trap in every sodium question.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the problem",
+                "detail": "A high sodium here means a water deficit."
+              },
+              {
+                "action": "Keep the neurologic actions",
+                "detail": "Monitoring, seizure precautions, scheduled fluids."
+              },
+              {
+                "action": "Cut the eight-hour target",
+                "detail": "Rapid correction is never the right option."
+              },
+              {
+                "action": "Cut the restriction",
+                "detail": "Wrong direction for a water deficit."
+              }
+            ],
+            "verdict": "A, B, C and D."
+          }
+        },
+        {
+          "id": "ig13-e9",
+          "type": "multiple_choice",
+          "stem": "Two hours after an intravenous infusion was started, a patient reports that the site feels tight. The nurse finds the area around the catheter cool, pale and swollen, with the swelling spreading outward from the insertion point. What does the nurse do?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Apply warm compresses and continue the infusion at a slower rate",
+              "correct": false,
+              "rationale": "Warmth is for phlebitis. Continuing any rate keeps pushing solution into tissue."
+            },
+            {
+              "id": "B",
+              "text": "Stop the infusion, remove the catheter and elevate the extremity",
+              "correct": true,
+              "rationale": "Cool, pale, swollen and spreading is infiltration. Stop, remove, elevate, and do not compress."
+            },
+            {
+              "id": "C",
+              "text": "Massage the area to disperse the fluid and reduce the swelling",
+              "correct": false,
+              "rationale": "Massage forces more solution into the tissue and can worsen the injury."
+            },
+            {
+              "id": "D",
+              "text": "Aspirate from the catheter and flush with 10 mL of normal saline to confirm patency",
+              "correct": false,
+              "rationale": "A flush adds volume to tissue that already has too much, and patency is not the question. A catheter can flush perfectly while it sits outside the vein."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Infiltration runs cool and spreads around the site. Phlebitis runs warm and follows the vein. A streak or a palpable cord is always phlebitis.",
+          "strategy": "The temperature and the direction of spread are the two cues that separate the two complications, and the stem gives you both.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read cool and pale",
+                "detail": "That rules out phlebitis and infection."
+              },
+              {
+                "action": "Read spreading outward",
+                "detail": "Not along the vein, so not a cord."
+              },
+              {
+                "action": "Cut warmth and massage",
+                "detail": "Both belong to the other diagnosis or make this one worse."
+              },
+              {
+                "action": "Cut the flush",
+                "detail": "Patency is not safety."
+              }
+            ],
+            "verdict": "Infiltration. Stop, remove, elevate, and do not compress."
+          }
+        },
+        {
+          "id": "ig13-e10",
+          "type": "matrix",
+          "scenario": "A nurse reviews four patients on a medical unit, each with one abnormal electrolyte.",
+          "stem": "For each finding, indicate whether it reflects an overexcitable state or a slowed state.",
+          "columns": [
+            "Overexcitable",
+            "Slowed"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Serum calcium 7.4 mg/dL with carpal spasm and a prolonged QT",
+              "answer": "Overexcitable",
+              "rationale": "Hypocalcemia. Less calcium at the membrane means nerves fire more easily, so you get tetany."
+            },
+            {
+              "id": "r2",
+              "text": "Serum magnesium 4.8 mEq/L with facial flushing and absent deep tendon reflexes",
+              "answer": "Slowed",
+              "rationale": "Hypermagnesemia. Magnesium blocks neuromuscular transmission, so reflexes go first, then respirations, then rhythm."
+            },
+            {
+              "id": "r3",
+              "text": "Serum potassium 6.4 mEq/L with tall peaked T waves and abdominal cramping",
+              "answer": "Overexcitable",
+              "rationale": "Hyperkalemia. The resting membrane sits closer to threshold, so cardiac and smooth muscle are irritable."
+            },
+            {
+              "id": "r4",
+              "text": "Serum calcium 12.6 mg/dL with lethargy, constipation and diminished reflexes",
+              "answer": "Slowed",
+              "rationale": "Hypercalcemia. Extra calcium at the membrane raises the threshold, so everything is harder to fire."
+            }
+          ],
+          "answer": {
+            "r1": "Overexcitable",
+            "r2": "Slowed",
+            "r3": "Overexcitable",
+            "r4": "Slowed"
+          },
+          "scoring": "0/1",
+          "takeaway": "Calcium and magnesium sedate the membrane, so low means excitable and high means slowed. Potassium is the opposite: high means excitable.",
+          "strategy": "Potassium inverts the pattern, which is why it is placed third. Sort calcium and magnesium by the rule, then handle potassium separately.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Apply the calcium and magnesium rule",
+                "detail": "Low excites, high sedates."
+              },
+              {
+                "action": "Invert for potassium",
+                "detail": "High potassium excites, low potassium weakens."
+              },
+              {
+                "action": "Check the findings against the label",
+                "detail": "Spasm and peaked T waves are excitement. Absent reflexes, lethargy and constipation are slowing."
+              }
+            ],
+            "verdict": "Two overexcitable, two slowed, and potassium is the one that breaks the pattern."
+          }
+        }
+      ]
+    },
+    {
       "id": 1015,
       "chapterNumber": 15,
       "source": "Iggy",
@@ -4183,6 +6097,1324 @@
           ],
           "answer": "B",
           "takeaway": "Match the device to duration, solution, and the patient's life. Intermittent therapy over a year with water exposure points to a port."
+        }
+      ]
+    },
+    {
+      "id": 1039,
+      "chapterNumber": 39,
+      "source": "Iggy",
+      "title": "Eye and Vision Conditions",
+      "exam": "Exam 2",
+      "questions": [
+        {
+          "id": "ig39-e1",
+          "type": "multiple_choice",
+          "stem": "A 68-year-old reports that headlight glare has made night driving impossible and that colors look faded. She denies pain and says it came on over about two years. Which condition do these findings suggest?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Open-angle glaucoma",
+              "correct": false,
+              "rationale": "Glaucoma takes peripheral vision first and is painless, which is why the two get confused. Halos and peripheral loss point at the nerve; glare and faded color point at the lens, and plenty of clients have both conditions at once."
+            },
+            {
+              "id": "B",
+              "text": "Cataract",
+              "correct": true,
+              "rationale": "Painless, gradual, bilateral, with glare, poor night vision and faded color. The clouding lens scatters light and filters out color."
+            },
+            {
+              "id": "C",
+              "text": "Retinal detachment",
+              "correct": false,
+              "rationale": "Sudden, with flashes, floaters and a curtain across part of the field. Nothing here is sudden."
+            },
+            {
+              "id": "D",
+              "text": "Angle-closure glaucoma",
+              "correct": false,
+              "rationale": "Sudden, painful, with a red eye and a cloudy cornea. Halos appear here too, but the pain, the redness and the abrupt onset are what make it an emergency, and none of that fits a two-year history."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Cataract is painless, gradual, with glare, poor night driving and faded color. The lens is the problem, so the whole field is hazy rather than a piece of it missing.",
+          "strategy": "Two options are glaucoma and they are there to be separated. Sort by speed first, then by which part of the field is affected.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Sort by onset",
+                "detail": "Two years is gradual, which cuts detachment and angle-closure."
+              },
+              {
+                "action": "Ask which part of the field",
+                "detail": "Everything is hazy, not the edges."
+              },
+              {
+                "action": "Match the complaint",
+                "detail": "Glare and faded color are lens complaints."
+              }
+            ],
+            "verdict": "Cataract. Halos and peripheral loss would have pointed at the nerve instead."
+          }
+        },
+        {
+          "id": "ig39-e2",
+          "type": "multiple_choice",
+          "stem": "A patient with open-angle glaucoma says he stopped his latanoprost because \"it wasn't doing anything and my eyes feel fine.\" What is the nurse's best response?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Let me arrange for a different drop that will work better for you.\"",
+              "correct": false,
+              "rationale": "Accepts a false premise. The drop was working; the disease has no symptoms to relieve."
+            },
+            {
+              "id": "B",
+              "text": "\"Open-angle glaucoma has no symptoms until it is late. The drops protect the vision you still have.\"",
+              "correct": true,
+              "rationale": "Names the reason adherence failed. In a silent disease, feeling no different is the drug working, and lost vision never returns."
+            },
+            {
+              "id": "C",
+              "text": "\"You should restart it right away or you could go blind by next month.\"",
+              "correct": false,
+              "rationale": "Frightening and inaccurate about the timeline. Fear-based teaching tends to reduce adherence rather than improve it."
+            },
+            {
+              "id": "D",
+              "text": "\"Many people find these drops uncomfortable. Would you like something for that?\"",
+              "correct": false,
+              "rationale": "Answers a complaint he did not make. He said the drop was ineffective, not that it bothered him."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "When a client says a drug was not doing anything, ask what they expected it to do. For a preventive drug in a silent disease, feeling no different is the drug working.",
+          "strategy": "One option agrees with him, one frightens him, one answers a different complaint. Only one corrects the belief that caused the behavior.",
+          "elimination": {
+            "strategies": [
+              "Patient-centered option",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the belief",
+                "detail": "He thinks no symptom means no benefit."
+              },
+              {
+                "action": "Cut the agreement and the scare",
+                "detail": "Neither changes the belief."
+              },
+              {
+                "action": "Cut the comfort question",
+                "detail": "He never mentioned discomfort."
+              }
+            ],
+            "verdict": "Explain the silent disease. That conversation is the intervention."
+          }
+        },
+        {
+          "id": "ig39-e3",
+          "type": "multiple_choice",
+          "stem": "A patient arrives reporting sudden severe eye pain, nausea, blurred vision and halos. The eye is red and the cornea looks cloudy. What does the nurse do first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Apply a cool compress and place the patient in a darkened room",
+              "correct": false,
+              "rationale": "Comfort measures for an emergency. The pressure keeps rising while you do them."
+            },
+            {
+              "id": "B",
+              "text": "Notify the provider immediately and prepare for urgent pressure-lowering treatment",
+              "correct": true,
+              "rationale": "Acute angle-closure glaucoma. The optic nerve is being damaged by the hour, and permanent vision loss follows within hours without treatment."
+            },
+            {
+              "id": "C",
+              "text": "Instill the patient's usual glaucoma drops and reassess in 30 minutes",
+              "correct": false,
+              "rationale": "Routine maintenance drops will not lower a pressure of this magnitude, and waiting 30 minutes costs vision."
+            },
+            {
+              "id": "D",
+              "text": "Administer an antiemetic and reassess the pain",
+              "correct": false,
+              "rationale": "Treats a symptom of the emergency. The nausea is caused by the intraocular pressure."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Sudden, painful, red, with a cloudy cornea and halos is angle-closure glaucoma, and it is an emergency. Laser peripheral iridotomy is the definitive first-line treatment.",
+          "strategy": "Three options are comfort measures. The word sudden in an eye question almost always means emergency.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the word sudden",
+                "detail": "Pain plus sudden in an eye is an emergency until proven otherwise."
+              },
+              {
+                "action": "Cut the compress and the antiemetic",
+                "detail": "Symptom relief for a pressure problem."
+              },
+              {
+                "action": "Cut the usual drops",
+                "detail": "Maintenance therapy will not touch this."
+              }
+            ],
+            "verdict": "Notify now. Vision is lost in hours, not days."
+          }
+        },
+        {
+          "id": "ig39-e4",
+          "type": "sata",
+          "stem": "A patient calls the clinic reporting that a shower of new floaters appeared this morning, with flashes of light at the edge of vision and a shadow across part of the field. Which nursing actions are appropriate? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tell the patient to be seen today as an emergency",
+              "correct": true,
+              "rationale": "Flashes, floaters and a curtain are retinal detachment until proven otherwise, and time to treatment determines how much vision is saved."
+            },
+            {
+              "id": "B",
+              "text": "Instruct the patient to avoid activities that jar the head while arranging transport",
+              "correct": true,
+              "rationale": "Reducing further traction on the retina is reasonable while arrangements are made."
+            },
+            {
+              "id": "C",
+              "text": "Reassure the patient that floaters are common with age and to watch for changes",
+              "correct": false,
+              "rationale": "Floaters alone can be benign. Floaters with flashes and a field defect are not, and this is the reassurance trap."
+            },
+            {
+              "id": "D",
+              "text": "Ask whether the vision loss is painful",
+              "correct": true,
+              "rationale": "Useful discrimination. Detachment is painless, and pain would point toward a different emergency such as angle-closure."
+            },
+            {
+              "id": "E",
+              "text": "Advise the patient to use over-the-counter lubricating drops and call back in a week",
+              "correct": false,
+              "rationale": "Treats it as dryness and delays care by a week, by which time central vision may be involved."
+            },
+            {
+              "id": "F",
+              "text": "Ask about recent eye trauma, eye surgery or high myopia",
+              "correct": true,
+              "rationale": "All three are named risk factors for detachment and help establish how likely this is."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D",
+            "F"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Flashes, floaters and a curtain equal retinal detachment. It is sudden, painless, and still an emergency.",
+          "strategy": "The two wrong options are both calm and both delay. Any option that sends a sudden visual change home to watch and wait is wrong.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the triad",
+                "detail": "Flashes, floaters, curtain."
+              },
+              {
+                "action": "Keep the urgent and diagnostic actions",
+                "detail": "Same-day care, limited jarring, pain question, risk factors."
+              },
+              {
+                "action": "Cut both delays",
+                "detail": "Reassurance and lubricating drops."
+              }
+            ],
+            "verdict": "A, B, D and F."
+          }
+        },
+        {
+          "id": "ig39-e5",
+          "type": "multiple_choice",
+          "stem": "A patient is discharged after cataract extraction with an intraocular lens. Which instruction is most important for the nurse to reinforce?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Expect your best vision by tomorrow morning.\"",
+              "correct": false,
+              "rationale": "Vision improves gradually and stabilizes at about four to six weeks. Promising overnight results sets the patient up to think something has gone wrong."
+            },
+            {
+              "id": "B",
+              "text": "\"Avoid bending at the waist, straining and lifting more than 10 pounds.\"",
+              "correct": true,
+              "rationale": "All three raise intraocular pressure, and a pressure spike in a freshly operated eye risks the wound and the lens position."
+            },
+            {
+              "id": "C",
+              "text": "\"Wear the eye patch continuously for the first two weeks.\"",
+              "correct": false,
+              "rationale": "Shielding is typically at night and during naps, per the surgeon. Continuous patching is not the standard instruction."
+            },
+            {
+              "id": "D",
+              "text": "\"Stop the antibiotic drops once the redness resolves.\"",
+              "correct": false,
+              "rationale": "Drops are completed as prescribed. Stopping when it looks better is the same error as stopping an antibiotic course early."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "After any eye surgery the governing principle is never raise the intraocular pressure. Bending, straining, lifting, coughing and vomiting are all on the list.",
+          "strategy": "One option promises a timeline, one shortens a treatment, one overstates a precaution. Only one names the mechanism that causes the complication.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the mechanism",
+                "detail": "Pressure is what damages a fresh eye."
+              },
+              {
+                "action": "Cut the overnight promise",
+                "detail": "Best vision comes at four to six weeks."
+              },
+              {
+                "action": "Cut stopping the drops",
+                "detail": "Courses are finished."
+              },
+              {
+                "action": "Cut continuous patching",
+                "detail": "Not the standard."
+              }
+            ],
+            "verdict": "Avoid anything that raises pressure."
+          }
+        },
+        {
+          "id": "ig39-e6",
+          "type": "multiple_choice",
+          "stem": "When documenting a pupil assessment, which finding tells the nurse that the accommodation portion of PERRLA was actually tested?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Both pupils constricted briskly when light was shone in the right eye",
+              "correct": false,
+              "rationale": "That is the direct and consensual light response. It is the L, not the A."
+            },
+            {
+              "id": "B",
+              "text": "Pupils constricted and converged as the patient focused on an approaching finger",
+              "correct": true,
+              "rationale": "Accommodation is the lens and pupil adjusting for near vision. Constriction plus convergence as the target comes toward the nose is the observation that proves it was tested."
+            },
+            {
+              "id": "C",
+              "text": "Pupils were equal at 3 mm bilaterally in ambient light",
+              "correct": false,
+              "rationale": "That is equality and size, the E of the acronym."
+            },
+            {
+              "id": "D",
+              "text": "Pupils were round with smooth regular borders",
+              "correct": false,
+              "rationale": "That is the R for round, an inspection finding."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Accommodation is the letter everybody drops. Have the client look far away, then at your finger as you bring it toward the nose, and watch the pupils constrict and converge.",
+          "strategy": "Each option is one letter of PERRLA. The question is only asking which letter is the A.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Expand the acronym",
+                "detail": "Equal, round, reactive to light, accommodation."
+              },
+              {
+                "action": "Assign each option a letter",
+                "detail": "Light, accommodation, equal, round."
+              },
+              {
+                "action": "Pick the A",
+                "detail": "Near focus with convergence."
+              }
+            ],
+            "verdict": "Constriction with convergence on a near target. Charting PERRLA without testing the A is charting something you did not do."
+          }
+        },
+        {
+          "id": "ig39-e7",
+          "type": "multiple_choice",
+          "stem": "A patient with asthma is newly prescribed timolol eye drops. Which teaching point is most important?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Shake the bottle vigorously before each dose.\"",
+              "correct": false,
+              "rationale": "Applies to suspensions and is not the safety issue here."
+            },
+            {
+              "id": "B",
+              "text": "\"Press on the inner corner of your eye for a minute after the drop goes in.\"",
+              "correct": true,
+              "rationale": "Punctal occlusion blocks the tear duct so the drug stays in the eye rather than draining into the nose and being absorbed systemically. Timolol is a beta blocker and can cause bronchospasm."
+            },
+            {
+              "id": "C",
+              "text": "\"Store the drops in the refrigerator between doses.\"",
+              "correct": false,
+              "rationale": "A storage detail rather than a safety one, and it is not universally required."
+            },
+            {
+              "id": "D",
+              "text": "\"Stop the drops if your vision becomes blurred right after instillation.\"",
+              "correct": false,
+              "rationale": "Brief blurring after a drop is expected and not a reason to stop a sight-preserving medication."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Glaucoma drops are systemic drugs. The eye holds one drop and the rest is absorbed through the nasal mucosa, skipping the liver. Beta blockers can cause bradycardia, hypotension and bronchospasm.",
+          "strategy": "The patient's asthma is in the stem for a reason. Ask which option protects the lungs.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Notice the asthma",
+                "detail": "It is the only comorbidity given."
+              },
+              {
+                "action": "Identify the drug class",
+                "detail": "Timolol is a beta blocker."
+              },
+              {
+                "action": "Cut the storage and shaking options",
+                "detail": "Neither touches systemic absorption."
+              },
+              {
+                "action": "Cut stopping for blurring",
+                "detail": "Expected and transient."
+              }
+            ],
+            "verdict": "Punctal occlusion, and the drop belongs on the medication reconciliation."
+          }
+        },
+        {
+          "id": "ig39-e8",
+          "type": "multiple_choice",
+          "stem": "A construction worker arrives with a metal fragment protruding from the right eye after a grinding injury. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Gently remove the fragment and irrigate the eye with sterile saline",
+              "correct": false,
+              "rationale": "Never remove a protruding object. Removing it can extrude intraocular contents and blind the eye."
+            },
+            {
+              "id": "B",
+              "text": "Stabilize the object, shield both eyes, and arrange urgent ophthalmology evaluation",
+              "correct": true,
+              "rationale": "The object stays where it is, the eye is shielded rather than patched, and both eyes are covered because the uninjured eye tracking causes the injured one to move."
+            },
+            {
+              "id": "C",
+              "text": "Apply a pressure patch to the injured eye to control bleeding",
+              "correct": false,
+              "rationale": "Pressure on a penetrated globe forces contents out. Shielding is not patching."
+            },
+            {
+              "id": "D",
+              "text": "Send the patient for an MRI to determine the depth of the fragment",
+              "correct": false,
+              "rationale": "MRI is contraindicated when a metal fragment is suspected, because the magnet can move it. X-ray or CT is used instead."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Never remove a protruding object, never apply pressure, shield both eyes, and no MRI when metal is suspected. Imaging is X-ray or CT.",
+          "strategy": "Three options involve doing something to the eye. In penetrating eye trauma, the correct action is almost always to protect and refer.",
+          "elimination": {
+            "strategies": [
+              "Eliminate absolutes",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Apply the rule",
+                "detail": "The object is not the nurse's to remove."
+              },
+              {
+                "action": "Cut the pressure patch",
+                "detail": "Pressure extrudes contents."
+              },
+              {
+                "action": "Cut the MRI",
+                "detail": "Contraindicated with metal."
+              },
+              {
+                "action": "Note both eyes",
+                "detail": "Covering only one leaves the injured eye tracking."
+              }
+            ],
+            "verdict": "Stabilize, shield both eyes, refer urgently."
+          }
+        },
+        {
+          "id": "ig39-e9",
+          "type": "sata",
+          "stem": "Which patients does the nurse identify as needing earlier or more frequent glaucoma screening based on the risk factors named in class? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A 42-year-old African American man",
+              "correct": true,
+              "rationale": "Screening begins at age 40 for African American clients because the disease starts earlier in this population."
+            },
+            {
+              "id": "B",
+              "text": "A 62-year-old Hispanic woman",
+              "correct": true,
+              "rationale": "Screening begins at age 60 for Hispanic and Latino clients."
+            },
+            {
+              "id": "C",
+              "text": "A 55-year-old whose mother and sister both have open-angle glaucoma",
+              "correct": true,
+              "rationale": "Family history is an independent risk factor regardless of age or background."
+            },
+            {
+              "id": "D",
+              "text": "A 30-year-old with well-controlled type 1 diabetes",
+              "correct": true,
+              "rationale": "Diabetes is one of the two modifiable risks running through this entire chapter, along with blood pressure."
+            },
+            {
+              "id": "E",
+              "text": "A 25-year-old with no medical history who wears contact lenses",
+              "correct": false,
+              "rationale": "Contact lens wear is a corneal infection risk, not a glaucoma risk."
+            },
+            {
+              "id": "F",
+              "text": "A 45-year-old with seasonal allergies taking antihistamines",
+              "correct": false,
+              "rationale": "Anticholinergic drugs can precipitate angle closure in someone with anatomically narrow angles, which is a different mechanism and not a reason for earlier open-angle screening."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "scoring": "0/1",
+          "takeaway": "The ages differ by population on purpose: screening starts earlier where the disease starts earlier. Diabetes and blood pressure are the two modifiable risks across the whole chapter.",
+          "strategy": "Two options describe real eye concerns that belong to different diagnoses. Read what each risk actually predicts.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Keep the population and family-history items",
+                "detail": "Age 40, age 60, family history."
+              },
+              {
+                "action": "Keep diabetes",
+                "detail": "Modifiable and named on the slide."
+              },
+              {
+                "action": "Cut contact lenses",
+                "detail": "A cornea risk, not a nerve risk."
+              },
+              {
+                "action": "Cut the antihistamine",
+                "detail": "A precipitant of angle closure, not a screening indication."
+              }
+            ],
+            "verdict": "A, B, C and D."
+          }
+        },
+        {
+          "id": "ig39-e10",
+          "type": "bowtie",
+          "scenario": "A 71-year-old man is seen in clinic for diabetes follow-up. He mentions he has stopped driving at night because of glare, and that he has started seeing rings around streetlights. He has filled his prescribed eye drops once in six months. Last recorded intraocular pressures were 26 mm Hg right and 24 mm Hg left. On confrontation testing he does not see your fingers until they are well inside his peripheral field bilaterally. His A1c is 9.1% and his blood pressure is 158/92.",
+          "stem": "Select 2 actions the nurse takes, the 1 condition they address, and 2 parameters to evaluate.",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Have him demonstrate instilling a drop, and teach punctal occlusion",
+                  "correct": true,
+                  "rationale": "Adherence is the problem in front of you, and technique is the part a nurse can fix in the room. Punctal occlusion also reduces systemic absorption."
+                },
+                {
+                  "id": "B",
+                  "text": "Explain that the drops protect remaining vision in a disease with no symptoms",
+                  "correct": true,
+                  "rationale": "Names the belief that caused him to stop. Without this, better technique on a drug he does not believe in changes nothing."
+                },
+                {
+                  "id": "C",
+                  "text": "Refer him for cataract evaluation for the glare and night driving",
+                  "correct": false,
+                  "rationale": "Reasonable on the surface and it misses the thing destroying his optic nerve. He may well have a cataract too, and it is not the priority today."
+                },
+                {
+                  "id": "D",
+                  "text": "Document the missed doses and address adherence at the next visit",
+                  "correct": false,
+                  "rationale": "Documenting instead of acting. Every month of nonadherence costs visual field that does not come back."
+                }
+              ]
+            },
+            "condition": {
+              "label": "The condition",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Uncontrolled open-angle glaucoma with nonadherence to therapy",
+                  "correct": true,
+                  "rationale": "Painless, gradual, halos, raised pressures and peripheral field loss. The nonadherence is why it is uncontrolled."
+                },
+                {
+                  "id": "B",
+                  "text": "Acute angle-closure glaucoma",
+                  "correct": false,
+                  "rationale": "That is sudden, painful, with a red eye and a cloudy cornea. Nothing here is acute."
+                },
+                {
+                  "id": "C",
+                  "text": "Diabetic retinopathy",
+                  "correct": false,
+                  "rationale": "A real risk with an A1c of 9.1% and it does not explain a pressure of 26 or the pattern of peripheral loss."
+                },
+                {
+                  "id": "D",
+                  "text": "Age-related macular degeneration",
+                  "correct": false,
+                  "rationale": "Macular disease takes central vision first. His loss is peripheral."
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to evaluate",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Intraocular pressure at follow-up",
+                  "correct": true,
+                  "rationale": "The direct measure of whether therapy is working. Target is at or below about 21 mm Hg."
+                },
+                {
+                  "id": "B",
+                  "text": "Visual field testing results over time",
+                  "correct": true,
+                  "rationale": "Field loss is what the treatment exists to stop. Stability is success; further loss means the plan is failing."
+                },
+                {
+                  "id": "C",
+                  "text": "Snellen visual acuity in each eye",
+                  "correct": false,
+                  "rationale": "Central acuity stays normal in open-angle glaucoma until very late, so it will look reassuring while the disease progresses."
+                },
+                {
+                  "id": "D",
+                  "text": "Absence of eye pain at follow-up",
+                  "correct": false,
+                  "rationale": "Open-angle glaucoma is painless throughout. Comfort tells you nothing, and believing it is exactly why he stopped the drops."
+                }
+              ]
+            }
+          },
+          "answer": {
+            "actions": [
+              "A",
+              "B"
+            ],
+            "condition": [
+              "A"
+            ],
+            "parameters": [
+              "A",
+              "B"
+            ]
+          },
+          "scoring": "0/1",
+          "takeaway": "Open-angle glaucoma is silent, takes peripheral vision first, and lost vision never returns. Evaluate it with pressure and visual fields, never with acuity or comfort.",
+          "strategy": "Two of the parameters will look normal while the disease progresses. Ask which measurement would actually change if the treatment failed.",
+          "elimination": {
+            "strategies": [
+              "Match each part to what the stem gives"
+            ],
+            "steps": [
+              {
+                "action": "Read the field finding",
+                "detail": "Peripheral loss with raised pressure names the condition."
+              },
+              {
+                "action": "Ask what caused the uncontrol",
+                "detail": "One filled prescription in six months."
+              },
+              {
+                "action": "Cut acuity and comfort",
+                "detail": "Both stay normal until the disease is advanced."
+              }
+            ],
+            "verdict": "Fix the adherence and the belief behind it, and follow pressure and fields."
+          }
+        }
+      ]
+    },
+    {
+      "id": 1040,
+      "chapterNumber": 40,
+      "source": "Iggy",
+      "title": "Ear and Hearing Conditions",
+      "exam": "Exam 2",
+      "questions": [
+        {
+          "id": "ig40-e1",
+          "type": "multiple_choice",
+          "stem": "During a Weber test the patient reports the sound is louder in the left ear. A Rinne test on the left shows bone conduction lasting longer than air conduction. How does the nurse interpret these results?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Normal hearing bilaterally",
+              "correct": false,
+              "rationale": "Normal is equal on Weber and air conduction outlasting bone on Rinne. Neither is present."
+            },
+            {
+              "id": "B",
+              "text": "Conductive hearing loss in the left ear",
+              "correct": true,
+              "rationale": "Weber lateralizes toward a conductive loss, and bone beating air means sound cannot get in through the usual route. Both tests point at the same ear for the same reason."
+            },
+            {
+              "id": "C",
+              "text": "Sensorineural hearing loss in the left ear",
+              "correct": false,
+              "rationale": "A sensorineural loss makes Weber lateralize away, to the good ear, and air would still beat bone."
+            },
+            {
+              "id": "D",
+              "text": "Sensorineural hearing loss in the right ear",
+              "correct": false,
+              "rationale": "That would make Weber lateralize to the left, which fits, and the Rinne would show air beating bone on the left. It does not."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Weber lateralizes toward a conductive loss because the blocked ear hears less competing room noise, so the bone-conducted tone sounds louder there. It lateralizes away from a sensorineural loss because that ear cannot process sound however it arrives. Bone beating air means a conductive block.",
+          "strategy": "The Weber result alone is ambiguous, because it fits a conductive loss on the left or a sensorineural loss on the right. The Rinne is what settles it.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the Weber",
+                "detail": "Louder on the left. Two explanations fit."
+              },
+              {
+                "action": "Read the Rinne",
+                "detail": "Bone beats air on the left, which is a block."
+              },
+              {
+                "action": "Combine them",
+                "detail": "Both tests name the left ear and name conduction."
+              }
+            ],
+            "verdict": "Conductive loss on the left. Cerumen, fluid, perforation or otosclerosis."
+          }
+        },
+        {
+          "id": "ig40-e2",
+          "type": "multiple_choice",
+          "stem": "A patient on day three of gentamicin and furosemide reports new ringing in both ears. The creatinine has risen from 0.9 to 1.6 mg/dL. What is the nurse's priority action?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Document the tinnitus and reassess at the end of the shift",
+              "correct": false,
+              "rationale": "Documenting instead of acting. By the time hearing loss is measurable, aminoglycoside damage is often permanent."
+            },
+            {
+              "id": "B",
+              "text": "Notify the prescriber of the tinnitus together with the rising creatinine",
+              "correct": true,
+              "rationale": "Both drugs are ototoxic and nephrotoxic. Tinnitus is the early warning of ototoxicity, and the rising creatinine is the same injury in a second organ."
+            },
+            {
+              "id": "C",
+              "text": "Reassure the patient that ringing is a common and harmless side effect",
+              "correct": false,
+              "rationale": "It is common and it is not harmless. Reassurance here delays the only action that can prevent permanent loss."
+            },
+            {
+              "id": "D",
+              "text": "Hold the next dose of gentamicin and continue the furosemide",
+              "correct": false,
+              "rationale": "The recognition is right and holding a drug is a prescriber decision. It also leaves the second ototoxic drug running."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Tinnitus is the early warning of ototoxicity, not the injury. An aminoglycoside plus a loop diuretic is worse than either alone, and the ear and the kidney go down together.",
+          "strategy": "One option waits, one reassures and one exceeds scope. Only one reports the two findings as a single problem.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Connect the two findings",
+                "detail": "Ear and kidney, same two drugs."
+              },
+              {
+                "action": "Cut documenting and reassuring",
+                "detail": "Both delay."
+              },
+              {
+                "action": "Cut holding the dose",
+                "detail": "A prescriber decision, and it misses the diuretic."
+              }
+            ],
+            "verdict": "Notify now, with the creatinine, and ask about trough levels."
+          }
+        },
+        {
+          "id": "ig40-e3",
+          "type": "multiple_choice",
+          "stem": "A child with acute otitis media has been crying with ear pain for two days. This morning the parent reports the pain stopped suddenly and there is yellow drainage on the pillow. What does the nurse conclude?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The antibiotic has taken effect and the infection is resolving",
+              "correct": false,
+              "rationale": "The emotionally compelling answer, and the family will have already reached it. Nothing about the infection was treated by what happened."
+            },
+            {
+              "id": "B",
+              "text": "The tympanic membrane has perforated and the finding must be reported",
+              "correct": true,
+              "rationale": "Pressure built until the drum gave way. The pain stops because the pressure is released, and the drainage is the contents of the middle ear."
+            },
+            {
+              "id": "C",
+              "text": "The child has developed external otitis in addition to the middle ear infection",
+              "correct": false,
+              "rationale": "External otitis produces pain with movement of the pinna, not sudden relief with purulent drainage from behind the drum."
+            },
+            {
+              "id": "D",
+              "text": "The drainage is normal cerumen loosened by the fever",
+              "correct": false,
+              "rationale": "Cerumen is waxy and brown, and a fever does not liquefy it into purulent drainage."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Otitis media progresses retracted, red, bulging, perforated, and the pain stops when it ruptures. Sudden relief with drainage is perforation, not recovery.",
+          "strategy": "The relief is real and the family will present it as good news. Ask what changed physically.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Track the pressure",
+                "detail": "It built for two days and then stopped abruptly."
+              },
+              {
+                "action": "Ask what releases pressure",
+                "detail": "A rupture."
+              },
+              {
+                "action": "Cut resolution",
+                "detail": "Antibiotics do not produce sudden relief with new purulent drainage."
+              }
+            ],
+            "verdict": "Perforation. Document the drainage, notify, and the antibiotic course still finishes."
+          }
+        },
+        {
+          "id": "ig40-e4",
+          "type": "multiple_choice",
+          "stem": "A patient with impacted cerumen and a suspected tympanic membrane perforation asks the nurse to flush the wax out. What is the nurse's response?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Irrigate gently with body-temperature water to avoid dizziness",
+              "correct": false,
+              "rationale": "Temperature control is a real technique point and it does not make irrigation safe here."
+            },
+            {
+              "id": "B",
+              "text": "Explain that irrigation is not done when a perforation is suspected, and notify the provider",
+              "correct": true,
+              "rationale": "Irrigating past a perforated drum drives contaminated fluid into the middle ear and spreads the infection."
+            },
+            {
+              "id": "C",
+              "text": "Instill a ceruminolytic and then irrigate after 15 minutes of softening",
+              "correct": false,
+              "rationale": "The softening step is correct in general, and it does not remove the contraindication."
+            },
+            {
+              "id": "D",
+              "text": "Use a cotton-tipped applicator to remove the visible wax first",
+              "correct": false,
+              "rationale": "Swabs push wax deeper and risk injuring an already compromised drum."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Never irrigate with a suspected perforation or active otitis media, never with vegetable matter, and never a live insect. Ceruminolytic first, then removal by the provider.",
+          "strategy": "Three options are safer versions of the same forbidden action. A contraindication is not cancelled by good technique.",
+          "elimination": {
+            "strategies": [
+              "Eliminate absolutes",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the contraindication",
+                "detail": "Suspected perforation."
+              },
+              {
+                "action": "Cut all three irrigation variants",
+                "detail": "Warm water, softening first and swabs are still going in."
+              },
+              {
+                "action": "Notice the pattern",
+                "detail": "Doing an unsafe thing more carefully is the recurring distractor."
+              }
+            ],
+            "verdict": "Do not irrigate. Notify."
+          }
+        },
+        {
+          "id": "ig40-e5",
+          "type": "sata",
+          "stem": "A nurse is caring for an 80-year-old with presbycusis. Which communication techniques are appropriate? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Face the patient directly at eye level with the light on your own face",
+              "correct": true,
+              "rationale": "A large part of what a hearing-impaired person understands is read from lips and expression. Standing in front of a window makes your face a silhouette."
+            },
+            {
+              "id": "B",
+              "text": "Lower the pitch of your voice and speak at a moderate pace",
+              "correct": true,
+              "rationale": "Presbycusis takes the high frequencies first. Lowering pitch moves your voice into the range still intact."
+            },
+            {
+              "id": "C",
+              "text": "Raise your voice to a near shout so the words carry",
+              "correct": false,
+              "rationale": "Shouting raises pitch into exactly the range that has been lost, and distorts it."
+            },
+            {
+              "id": "D",
+              "text": "Turn off the television and close the door before speaking",
+              "correct": true,
+              "rationale": "For a high-frequency loss, competing background noise is more disabling than low volume."
+            },
+            {
+              "id": "E",
+              "text": "Rephrase a sentence that was not understood rather than repeating it",
+              "correct": true,
+              "rationale": "Different words carry different frequencies. Repeating the same words louder rarely works."
+            },
+            {
+              "id": "F",
+              "text": "Confirm understanding by asking the patient to repeat the plan in their own words",
+              "correct": true,
+              "rationale": "Teach-back. Nodding is not comprehension, and a nod is what you get when someone did not catch it."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D",
+            "E",
+            "F"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Face them, lower your pitch, slow down, cut the background noise, rephrase, and verify with teach-back. Never shout.",
+          "strategy": "Five of the six are correct, which makes this a hunt for the single wrong one. Shouting is the reflex everyone has and the thing that makes it worse.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check each against the mechanism",
+                "detail": "High frequencies are gone."
+              },
+              {
+                "action": "Cut shouting",
+                "detail": "It raises pitch and distorts."
+              },
+              {
+                "action": "Keep the rest",
+                "detail": "All five work with a high-frequency loss."
+              }
+            ],
+            "verdict": "A, B, D, E and F."
+          }
+        },
+        {
+          "id": "ig40-e6",
+          "type": "multiple_choice",
+          "stem": "A patient is being discharged on the first day after a stapedectomy. Which instruction does the nurse emphasize?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Your hearing should be back to normal by the time you get home.\"",
+              "correct": false,
+              "rationale": "Hearing improves over about four to six weeks. Promising an immediate result makes a normal recovery look like a failure."
+            },
+            {
+              "id": "B",
+              "text": "\"Ask for help when you get up, and avoid straining, nose-blowing and air travel.\"",
+              "correct": true,
+              "rationale": "Vertigo risk is high right after surgery, and every one of those activities raises middle ear pressure against a fresh prosthesis."
+            },
+            {
+              "id": "C",
+              "text": "\"Irrigate the ear canal daily to prevent a wax buildup.\"",
+              "correct": false,
+              "rationale": "Nothing goes into a postoperative ear canal, and irrigation after middle ear surgery is contraindicated."
+            },
+            {
+              "id": "D",
+              "text": "\"A drooping mouth on the operative side is expected for a few days.\"",
+              "correct": false,
+              "rationale": "Facial asymmetry means facial nerve injury, because CN VII runs right past the surgical field. That is reported, never normalized."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "After a stapedectomy: assist ambulation because vertigo risk is high, avoid anything that raises middle ear pressure, watch CN VII, and expect hearing to improve over four to six weeks.",
+          "strategy": "One option normalizes a complication, one promises a timeline, one puts fluid in a fresh surgical field. The correct one is the only one about safety.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Ask what is dangerous today",
+                "detail": "Falling from vertigo."
+              },
+              {
+                "action": "Cut the facial droop",
+                "detail": "That is CN VII injury and gets reported."
+              },
+              {
+                "action": "Cut irrigation",
+                "detail": "Never in a postoperative canal."
+              },
+              {
+                "action": "Cut the timeline",
+                "detail": "Four to six weeks, not immediately."
+              }
+            ],
+            "verdict": "Assist ambulation and avoid pressure-raising activities."
+          }
+        },
+        {
+          "id": "ig40-e7",
+          "type": "multiple_choice",
+          "stem": "A patient with Meniere disease is admitted during an acute attack with severe vertigo, vomiting and nystagmus. Which nursing action takes priority?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Encourage oral fluids to replace losses from vomiting",
+              "correct": false,
+              "rationale": "Fluid is not the intervention here, and sodium restriction is the dietary principle in this disease."
+            },
+            {
+              "id": "B",
+              "text": "Keep the side rails up, the call light in reach, and instruct the patient to lie still",
+              "correct": true,
+              "rationale": "The priority is preventing injury. Movement worsens the vertigo, and a fall during an attack is the realistic harm."
+            },
+            {
+              "id": "C",
+              "text": "Ambulate the patient in the hall to prevent deconditioning",
+              "correct": false,
+              "rationale": "Movement during an acute attack is what causes the injury. Vestibular rehabilitation happens between attacks, not during one."
+            },
+            {
+              "id": "D",
+              "text": "Place the patient in a brightly lit room for orientation",
+              "correct": false,
+              "rationale": "Light and visual stimulation worsen vertigo. A darkened quiet room is what helps."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Meniere is a safety diagnosis. The classic triad is vertigo, tinnitus and hearing loss, and the fall is the emergency, not the vital sign changes.",
+          "strategy": "Nothing here threatens the airway, so the ABCs do not decide it. Safety and risk reduction does.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Pick the framework",
+                "detail": "Safety, not ABCs."
+              },
+              {
+                "action": "Cut ambulation and bright light",
+                "detail": "Both make vertigo worse."
+              },
+              {
+                "action": "Cut the fluids",
+                "detail": "Sodium restriction is the dietary rule."
+              }
+            ],
+            "verdict": "Injury prevention: rails, call light, lie still, darkened room."
+          }
+        },
+        {
+          "id": "ig40-e8",
+          "type": "sata",
+          "stem": "A patient newly diagnosed with Meniere disease asks what she should change at home. Which instructions does the nurse include? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Follow a low-sodium diet",
+              "correct": true,
+              "rationale": "Sodium drives fluid retention, and the disease is excess endolymph. Sodium restriction is the first lifestyle intervention."
+            },
+            {
+              "id": "B",
+              "text": "Limit caffeine, and manage stress and fatigue as attack triggers",
+              "correct": true,
+              "rationale": "All three are named triggers on the slide."
+            },
+            {
+              "id": "C",
+              "text": "Do not drive or climb ladders when an attack could occur",
+              "correct": true,
+              "rationale": "Tumarkin drop attacks come without warning, so the environment has to be safe in advance rather than relying on the patient to notice symptoms."
+            },
+            {
+              "id": "D",
+              "text": "Expect the diuretic to reduce the volume of inner ear fluid",
+              "correct": true,
+              "rationale": "Diuretics lower endolymph volume, which is the mechanism of the disease."
+            },
+            {
+              "id": "E",
+              "text": "Increase fluid intake to dilute the inner ear fluid",
+              "correct": false,
+              "rationale": "The problem is too much fluid, not fluid that is too concentrated. Adding volume works against the treatment."
+            },
+            {
+              "id": "F",
+              "text": "Plan for surgery, since it is the standard treatment at diagnosis",
+              "correct": false,
+              "rationale": "Surgery is a last resort. Labyrinthectomy stops the vertigo and destroys hearing on that side permanently."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Low sodium, avoid triggers, fall precautions, diuretics. Surgery is last resort and labyrinthectomy costs the hearing on that side.",
+          "strategy": "One wrong option sounds like sensible hydration advice. Ask whether more fluid helps a disease of too much fluid.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the mechanism",
+                "detail": "Excess endolymph distending the labyrinth."
+              },
+              {
+                "action": "Keep everything that removes fluid or prevents falls",
+                "detail": "Low sodium, triggers, diuretic, safety."
+              },
+              {
+                "action": "Cut increased fluids",
+                "detail": "Wrong direction."
+              },
+              {
+                "action": "Cut early surgery",
+                "detail": "Last resort, and it can cost the hearing."
+              }
+            ],
+            "verdict": "A, B, C and D."
+          }
+        },
+        {
+          "id": "ig40-e9",
+          "type": "multiple_choice",
+          "stem": "A patient with a sensorineural hearing loss asks why a hearing aid did not help much and whether a cochlear implant would be different. What is the nurse's best explanation?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"A hearing aid only works if it is fitted by an audiologist, and yours may not be.\"",
+              "correct": false,
+              "rationale": "Fit matters and it is not the mechanism. A perfectly fitted aid still only amplifies."
+            },
+            {
+              "id": "B",
+              "text": "\"A hearing aid makes sound louder. An implant bypasses the damaged cochlea and stimulates the nerve directly.\"",
+              "correct": true,
+              "rationale": "Amplification helps when the problem is getting sound in. When the cochlea itself cannot convert the sound, louder does not help, and the implant skips that step."
+            },
+            {
+              "id": "C",
+              "text": "\"An implant is a stronger hearing aid, so it will make everything louder still.\"",
+              "correct": false,
+              "rationale": "Inaccurate and it sets up a false expectation. Sound through an implant is different, not simply louder."
+            },
+            {
+              "id": "D",
+              "text": "\"Hearing aids work better for nerve damage and implants work better for blockages.\"",
+              "correct": false,
+              "rationale": "Exactly backwards. Aids help conductive loss more; implants are for sensorineural loss."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Hearing aids amplify and help conductive loss more than sensorineural. Cochlear implants bypass the damaged cochlea and stimulate CN VIII directly, and the sound is different rather than louder.",
+          "strategy": "Two options confuse the devices and one blames the fitting. The correct answer is the only one that names what each device does.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Ask what amplification fixes",
+                "detail": "A problem getting sound in."
+              },
+              {
+                "action": "Ask what is broken here",
+                "detail": "The conversion, not the conduction."
+              },
+              {
+                "action": "Cut the reversed option",
+                "detail": "Aids for nerve damage is backwards."
+              },
+              {
+                "action": "Cut the stronger-aid option",
+                "detail": "An implant is a different mechanism."
+              }
+            ],
+            "verdict": "Amplify versus bypass. That distinction is the whole answer."
+          }
+        },
+        {
+          "id": "ig40-e10",
+          "type": "highlight",
+          "nursesNote": "0830: Patient is 74, admitted yesterday with pyelonephritis, receiving IV gentamicin and furosemide. Reports new bilateral ringing in the ears that began overnight. Asks the nurse to repeat questions twice and turns the left ear toward the speaker. No prior history of hearing difficulty and wears no hearing aids. Nursing assistant reports the patient was unsteady walking to the bathroom this morning. Creatinine 1.6 mg/dL, up from 0.9 on admission. Temperature 37.2 C. Blood pressure 124/72. Lungs clear. Reports flank pain improved from 7 to 3 out of 10.",
+          "stem": "Highlight the findings that indicate a developing drug toxicity.",
+          "segments": [
+            {
+              "id": "s1",
+              "text": "Receiving IV gentamicin and furosemide",
+              "correct": true,
+              "rationale": "An aminoglycoside plus a loop diuretic. Both are ototoxic and both are nephrotoxic, and together they are worse than either alone."
+            },
+            {
+              "id": "s2",
+              "text": "New bilateral ringing in the ears that began overnight",
+              "correct": true,
+              "rationale": "Tinnitus is the earliest sign of ototoxicity and precedes measurable hearing loss."
+            },
+            {
+              "id": "s3",
+              "text": "Asks the nurse to repeat questions twice and turns the left ear toward the speaker",
+              "correct": true,
+              "rationale": "Behavioral cues of hearing loss, and they are new. Behavior is assessment data."
+            },
+            {
+              "id": "s5",
+              "text": "Unsteady walking to the bathroom this morning",
+              "correct": true,
+              "rationale": "CN VIII carries hearing and balance together, so vestibular symptoms belong in the same picture rather than being filed as deconditioning."
+            },
+            {
+              "id": "s6",
+              "text": "Creatinine 1.6 mg/dL, up from 0.9 on admission",
+              "correct": true,
+              "rationale": "The same drugs damaging the same two organs. A rising creatinine in this patient is also an ear warning."
+            },
+            {
+              "id": "s7",
+              "text": "Temperature 37.2 C",
+              "correct": false,
+              "rationale": "Normal, and evidence the infection is responding."
+            },
+            {
+              "id": "s8",
+              "text": "Blood pressure 124/72",
+              "correct": false,
+              "rationale": "Normal and unrelated."
+            },
+            {
+              "id": "s9",
+              "text": "Flank pain improved from 7 to 3 out of 10",
+              "correct": false,
+              "rationale": "The pyelonephritis is improving. A reassuring finding that has nothing to do with the toxicity."
+            }
+          ],
+          "answer": [
+            "s1",
+            "s2",
+            "s3",
+            "s5",
+            "s6"
+          ],
+          "scoring": "0/1",
+          "takeaway": "When a new symptom appears in a patient on a known toxic drug, the drug is your first hypothesis, not your last. Aging, deconditioning and anxiety are the three explanations that get older adults hurt.",
+          "strategy": "Three findings are normal or improving and are there to reward you for reading the whole note. Everything else converges on two drugs.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the drugs",
+                "detail": "Gentamicin and furosemide."
+              },
+              {
+                "action": "Collect everything new",
+                "detail": "Ringing, repeating, unsteadiness, and a creatinine that nearly doubled."
+              },
+              {
+                "action": "Cut the reassuring findings",
+                "detail": "Temperature, blood pressure and improving flank pain."
+              }
+            ],
+            "verdict": "Five findings, all pointing at ototoxicity and nephrotoxicity from the same two drugs. The negative hearing history is context that makes the change new, not a manifestation you highlight."
+          }
         }
       ]
     },
