@@ -3,7 +3,7 @@
     "course": "N55 Fundamentals of Nursing",
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
-    "questionCount": 666,
+    "questionCount": 675,
     "chaptersIncluded": [
       1,
       2,
@@ -29,15 +29,18 @@
       38,
       42,
       43,
+      49,
       1005,
       1013,
       1015,
       1024,
+      1039,
+      1040,
       1041,
       1056
     ],
     "chaptersPending": [],
-    "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time — generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id.",
+    "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time ,  generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id.",
     "questionTypes": {
       "multiple_choice": "one correct option; answer is a string",
       "sata": "select all that apply; answer is an array and is scored all or nothing"
@@ -65,27 +68,26 @@
       27,
       37,
       38,
+      42,
       43,
+      49,
       1005,
+      1013,
       1015,
       1024,
+      1039,
+      1040,
       1041,
       1056
     ],
     "itemTypes": [
       "bowtie",
       "cloze",
-      "extended_response",
       "highlight",
-      "matching",
       "matrix",
-      "matrix_multiple_response",
       "multiple_choice",
       "ordered_response",
-      "sata",
-      "select_n",
-      "trend",
-      "trend_matrix"
+      "sata"
     ],
     "sections": [
       "chapters",
@@ -186,7 +188,41 @@
         "note": "Work each option independently. Partial credit means a wrong selection costs you, so only select what the scenario supports."
       }
     ],
-    "chapterQuestionCount": 463,
+    "chapterQuestionCount": {
+      "1": 11,
+      "2": 9,
+      "6": 20,
+      "7": 20,
+      "8": 20,
+      "9": 20,
+      "14": 20,
+      "15": 5,
+      "16": 5,
+      "17": 5,
+      "18": 5,
+      "19": 5,
+      "20": 5,
+      "21": 20,
+      "22": 11,
+      "23": 11,
+      "24": 20,
+      "25": 20,
+      "26": 11,
+      "27": 34,
+      "37": 20,
+      "38": 24,
+      "42": 10,
+      "43": 20,
+      "49": 10,
+      "1005": 20,
+      "1013": 10,
+      "1015": 36,
+      "1024": 20,
+      "1039": 10,
+      "1040": 10,
+      "1041": 26,
+      "1056": 20
+    },
     "exams": [
       {
         "id": "exam1",
@@ -244,6 +280,19 @@
         ],
         "skills": [],
         "questionCount": 120
+      },
+      {
+        "id": "exam3",
+        "label": "Exam 3",
+        "chapters": [
+          42,
+          1013,
+          49,
+          1039,
+          1040
+        ],
+        "skills": [],
+        "questionCount": 50
       }
     ],
     "currentDailySet": {
@@ -24435,6 +24484,1847 @@
             "verdict": "That leaves A: change the form, not the technique."
           },
           "concept": "Enteric coating protects the stomach lining from irritation by the medication, so an enteric-coated tablet is never crushed or split. Liquids are absorbed faster than tablets or capsules and are usually absorbed in the stomach."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Blood Glucose Monitoring and Subcutaneous Insulin",
+      "exam": "Exam 1",
+      "subtitle": "Interpreting the value, recognizing hypoglycemia, insulin types and timing, and injection technique",
+      "questions": [
+        {
+          "id": "sk2-q12",
+          "stem": "A 72-year-old receives 18 units of Humulin N subcutaneously at 0800. He eats breakfast at 0830 and lunch at 1230. The nurse plans when to monitor most closely for hypoglycemia from this dose. Which window is correct?",
+          "options": [
+            {
+              "id": "A",
+              "text": "0815 to 0900",
+              "correct": false,
+              "rationale": "NPH has an onset of 1 to 2 hours and is barely acting in the first hour."
+            },
+            {
+              "id": "B",
+              "text": "1200 to 2000",
+              "correct": true,
+              "rationale": "NPH peaks 4 to 12 hours after the dose, so a 0800 dose carries risk across the afternoon into the evening."
+            },
+            {
+              "id": "C",
+              "text": "0300 to 0500",
+              "correct": false,
+              "rationale": "Beyond the 14 to 24 hour duration of a morning dose and outside the peak."
+            },
+            {
+              "id": "D",
+              "text": "0930 to 1030",
+              "correct": false,
+              "rationale": "Within the onset period rather than the peak, and this window fits regular insulin."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "NPH (Humulin N, Novolin N): onset 1 to 2 hours, peak 4 to 12 hours, duration 14 to 24 hours. That wide peak is why NPH catches people off guard. The wide peak spreads the hypoglycemia risk across a whole shift.",
+          "strategy": "The NPH peak is broad rather than sharp, so the risk is spread across a whole shift rather than concentrated in an hour.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "NPH peaks 4 to 12 hours out."
+              },
+              {
+                "action": "Cut A",
+                "detail": "NPH has an onset of 1 to 2 hours and is barely acting in the first hour."
+              },
+              {
+                "action": "Cut D",
+                "detail": "Within the onset period rather than the peak, and this window fits regular insulin."
+              },
+              {
+                "action": "Cut C",
+                "detail": "Beyond the 14 to 24 hour duration of a morning dose and outside the peak."
+              }
+            ],
+            "verdict": "That leaves B: NPH peaks 4 to 12 hours after the dose, so a 0800 dose carries risk across the afternoon into the evening."
+          },
+          "concept": "NPH (Humulin N, Novolin N): onset 1 to 2 hours, peak 4 to 12 hours, duration 14 to 24 hours. The wide peak spreads the hypoglycemia risk across a whole shift."
+        },
+        {
+          "id": "sk2-s5",
+          "type": "sata",
+          "stem": "A nurse is orienting a student who will be checking insulin doses with her. She asks the student to identify each vial by appearance before reading the label, as a first check rather than a substitute for one. Which insulins are clear? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Humalog",
+              "correct": true,
+              "rationale": "Lispro is rapid-acting and comes as a clear solution, so cloudiness in this vial would mean something is wrong."
+            },
+            {
+              "id": "B",
+              "text": "NovoLog",
+              "correct": true,
+              "rationale": "Aspart is rapid-acting and clear. Clear insulins do not need resuspending before you draw them up."
+            },
+            {
+              "id": "C",
+              "text": "Humulin R",
+              "correct": true,
+              "rationale": "Regular insulin, short-acting and clear."
+            },
+            {
+              "id": "D",
+              "text": "Novolin R",
+              "correct": true,
+              "rationale": "Regular insulin, short-acting and clear."
+            },
+            {
+              "id": "E",
+              "text": "Humulin N",
+              "correct": false,
+              "rationale": "NPH is a suspension, so it is cloudy by design and has to be rolled to mix it evenly before drawing."
+            },
+            {
+              "id": "F",
+              "text": "Novolin N",
+              "correct": false,
+              "rationale": "Also NPH, and also cloudy. The cloudiness is the suspension, not spoilage."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "takeaway": "Rapid-acting and regular insulins are clear. NPH is the cloudy one. Rapid-acting insulins (Humalog, NovoLog) and regular insulin (Humulin R, Novolin R) are clear. NPH (Humulin N, Novolin N) is cloudy. Long-acting insulins are clear and are never mixed.",
+          "strategy": "Appearance narrows the field and never replaces reading the label. Two different insulins can look identical and act over completely different time courses.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the N products",
+                "detail": "Humulin N and Novolin N are NPH."
+              },
+              {
+                "action": "Everything else here is clear",
+                "detail": "Rapid-acting and regular."
+              }
+            ],
+            "verdict": "A, B, C, and D are selected."
+          },
+          "concept": "Rapid-acting insulins (Humalog, NovoLog) and regular insulin (Humulin R, Novolin R) are clear. NPH (Humulin N, Novolin N) is cloudy. Long-acting insulins are clear and are never mixed."
+        },
+        {
+          "id": "sk2-t1",
+          "stem": "A 61-year-old newly started on insulin is preparing for discharge and demonstrates his technique to the nurse while explaining what he plans to do at home. Which patient statement indicates a need for further teaching?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"I will not inject into my thigh right before I go for a walk.\"",
+              "correct": false,
+              "rationale": "Accurate. Exercise speeds absorption from the injected limb."
+            },
+            {
+              "id": "B",
+              "text": "\"I will roll the cloudy vial gently rather than shaking it.\"",
+              "correct": false,
+              "rationale": "Accurate. NPH is a suspension and shaking froths it."
+            },
+            {
+              "id": "C",
+              "text": "\"I will rotate between my abdomen, arm, and thigh so I never use the same area twice.\"",
+              "correct": true,
+              "rationale": "Anatomical site rotation is no longer recommended, because absorption differs by site and rotating between regions makes each dose absorb at a different rate. One anatomical site is selected and rotation occurs within that region."
+            },
+            {
+              "id": "D",
+              "text": "\"If my glucose is under 70 and I can swallow, I take 15 to 20 grams of fast-acting carbohydrate.\"",
+              "correct": false,
+              "rationale": "Accurate, and the glucose is rechecked in 15 minutes."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "One anatomical site, rotate within that region. Between-region rotation varies absorption dose to dose.",
+          "strategy": "This guidance changed, so the wrong statement is what patients were taught for years.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Negative polarity",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the polarity",
+                "detail": "Find the outdated practice."
+              },
+              {
+                "action": "Recall the current guidance",
+                "detail": "One site, rotate within it."
+              },
+              {
+                "action": "Confirm the rest",
+                "detail": "Rolling, rule of 15, and exercise are correct."
+              }
+            ],
+            "verdict": "A is the statement needing correction: rotate within one region, not between regions."
+          }
+        },
+        {
+          "id": "sk2-s6",
+          "type": "sata",
+          "stem": "A nurse reviews a patient's insulin orders before the morning round and must identify which doses are timed to meals and which are not. The patient is prescribed four different insulin products. Which insulins are given in relation to a meal? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Humalog, just before or with the meal",
+              "correct": true,
+              "rationale": "Rapid-acting, onset 10 to 30 minutes."
+            },
+            {
+              "id": "B",
+              "text": "NovoLog, just before or with the meal",
+              "correct": true,
+              "rationale": "Rapid-acting, onset 10 to 30 minutes."
+            },
+            {
+              "id": "C",
+              "text": "Humulin R, about 30 minutes before the meal",
+              "correct": true,
+              "rationale": "Short-acting, onset 30 to 60 minutes."
+            },
+            {
+              "id": "D",
+              "text": "Novolin R, about 30 minutes before the meal",
+              "correct": true,
+              "rationale": "Short-acting, onset 30 to 60 minutes."
+            },
+            {
+              "id": "E",
+              "text": "Lantus, 30 minutes before the evening meal",
+              "correct": false,
+              "rationale": "Long-acting basal insulin with no pronounced peak. Its timing is not tied to food."
+            },
+            {
+              "id": "F",
+              "text": "Levemir, with the largest meal of the day",
+              "correct": false,
+              "rationale": "Also long-acting basal, and it is not matched to carbohydrate intake."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "takeaway": "Rapid-acting goes with the meal. Regular goes 30 minutes before. Long-acting basal is not timed to food at all. Rapid-acting insulin is given just before or with the meal. Regular insulin is given about 30 minutes before. Long-acting basal insulin has no pronounced peak and is not timed to food.",
+          "strategy": "Sort by class first, then by timing. Every insulin here falls into one of four classes, and the class determines the timing.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Group the mealtime insulins",
+                "detail": "Rapid-acting and regular."
+              },
+              {
+                "action": "Cut E and F",
+                "detail": "Lantus and Levemir are basal."
+              }
+            ],
+            "verdict": "A, B, C, and D are selected."
+          },
+          "concept": "Rapid-acting insulin is given just before or with the meal. Regular insulin is given about 30 minutes before. Long-acting basal insulin has no pronounced peak and is not timed to food."
+        },
+        {
+          "id": "sk2-q9",
+          "stem": "A nurse withdraws a dose from a vial labeled Humulin N. The solution is uniformly cloudy. The vial is within date and has been refrigerated. Which action is correct?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Return the vial to the pharmacy",
+              "correct": false,
+              "rationale": "Cloudiness is the normal appearance of this product."
+            },
+            {
+              "id": "B",
+              "text": "Draw the dose without mixing",
+              "correct": false,
+              "rationale": "An unmixed suspension delivers an unpredictable dose."
+            },
+            {
+              "id": "C",
+              "text": "Roll the vial gently between the palms",
+              "correct": true,
+              "rationale": "NPH is an intermediate-acting suspension and is expected to be cloudy. Rolling redistributes it before the dose is drawn."
+            },
+            {
+              "id": "D",
+              "text": "Shake the vial until the particles dissolve",
+              "correct": false,
+              "rationale": "Shaking froths the suspension and makes an accurate dose difficult to draw."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "The N in Humulin N and Novolin N stands for NPH. Intermediate-acting, cloudy, gently rolled before use. Humulin N and Novolin N are NPH, intermediate-acting insulin. Onset 1 to 2 hours, peak 4 to 12 hours, duration 14 to 24 hours. Cloudy in appearance and gently rolled before use.",
+          "strategy": "Cloudy identifies exactly one class. If a vial is cloudy it is NPH, and any other insulin here is clear.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "N is NPH, intermediate-acting."
+              },
+              {
+                "action": "Cut A",
+                "detail": "Cloudiness is the normal appearance of this product."
+              },
+              {
+                "action": "Cut D",
+                "detail": "Shaking froths the suspension and makes an accurate dose difficult to draw."
+              },
+              {
+                "action": "Cut B",
+                "detail": "An unmixed suspension delivers an unpredictable dose."
+              }
+            ],
+            "verdict": "That leaves C: NPH is an intermediate-acting suspension and is expected to be cloudy."
+          },
+          "concept": "Humulin N and Novolin N are NPH, intermediate-acting insulin. Onset 1 to 2 hours, peak 4 to 12 hours, duration 14 to 24 hours. Cloudy in appearance and gently rolled before use. The N stands for NPH."
+        },
+        {
+          "id": "sk2-q13",
+          "stem": "An order reads Humulin R 8 units subcutaneously before meals. The nurse removes a vial labeled Humulin N from the cabinet and notices the discrepancy before drawing up the dose. Which action is correct?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give half the Humulin N dose",
+              "correct": false,
+              "rationale": "Improvises a dose of the wrong insulin."
+            },
+            {
+              "id": "B",
+              "text": "Give the Humulin N as drawn",
+              "correct": false,
+              "rationale": "The brand is shared and the class is not."
+            },
+            {
+              "id": "C",
+              "text": "Return it and obtain Humulin R",
+              "correct": true,
+              "rationale": "The two differ in onset, peak, and duration. NPH given in place of regular would peak hours after the meal it was meant to cover."
+            },
+            {
+              "id": "D",
+              "text": "Give both at the next meal",
+              "correct": false,
+              "rationale": "Administers an insulin that was never ordered."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Humulin R is regular and short-acting. Humulin R is regular and short-acting; Humulin N is NPH and intermediate-acting. The shared brand name is the trap. A shared brand name does not mean a shared class, and look-alike insulin names are a recognized cause of medication error.",
+          "strategy": "Look-alike names are a causes of insulin error. The brand tells you the manufacturer; the letter after it tells you what the drug does.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "Same brand family, different class."
+              },
+              {
+                "action": "Cut B",
+                "detail": "The brand is shared and the class is not."
+              },
+              {
+                "action": "Cut A",
+                "detail": "Improvises a dose of the wrong insulin."
+              },
+              {
+                "action": "Cut D",
+                "detail": "Administers an insulin that was never ordered."
+              }
+            ],
+            "verdict": "That leaves C: the two differ in onset, peak, and duration."
+          },
+          "concept": "Humulin R is regular and short-acting; Humulin N is NPH and intermediate-acting. A shared brand name does not mean a shared class, and look-alike insulin names are a recognized cause of medication error."
+        },
+        {
+          "id": "sk2-s1",
+          "type": "sata",
+          "stem": "A nurse is called to a patient who seems unwell an hour after receiving mealtime insulin. She considers whether the presentation fits a falling blood glucose before checking. Which findings are consistent with hypoglycemia? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Shakiness and diaphoresis",
+              "correct": true,
+              "rationale": "Sympathetic responses, and they are usually the earliest warning."
+            },
+            {
+              "id": "B",
+              "text": "Tachycardia",
+              "correct": true,
+              "rationale": "Part of the same adrenergic response."
+            },
+            {
+              "id": "C",
+              "text": "Polyuria developing over the past two days",
+              "correct": false,
+              "rationale": "The picture of hyperglycemia, driven by osmotic diuresis, meaning sugar in the urine drags water out with it. It builds over days rather than minutes."
+            },
+            {
+              "id": "D",
+              "text": "Irritability or anxiety",
+              "correct": true,
+              "rationale": "Correct, and it is often mistaken for a behavioral issue."
+            },
+            {
+              "id": "E",
+              "text": "Deep, rapid respirations with a fruity odor",
+              "correct": false,
+              "rationale": "Kussmaul respirations, meaning deep rapid breathing that blows off acid, and ketotic breath indicate ketoacidosis."
+            },
+            {
+              "id": "F",
+              "text": "Warm, dry, flushed skin",
+              "correct": false,
+              "rationale": "Points to hyperglycemia. Hypoglycemia produces cool, clammy skin from the adrenergic response."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D"
+          ],
+          "takeaway": "Shaky, sweaty, tachycardic, hungry, irritable, confused. Hypoglycemia comes on fast; hyperglycemia builds over days. Hypoglycemia presents as shakiness, diaphoresis, tachycardia, hunger, irritability or anxiety, confusion, and altered level of consciousness.",
+          "strategy": "Onset separates them as reliably as the symptoms do. Anything developing over minutes after insulin points at a low.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the timing",
+                "detail": "One hour after mealtime insulin."
+              },
+              {
+                "action": "Group the adrenergic signs",
+                "detail": "Shaky, sweaty, tachycardic, hungry, anxious."
+              },
+              {
+                "action": "Cut F",
+                "detail": "Polyuria and polydipsia are hyperglycemia over days."
+              }
+            ],
+            "verdict": "A, B and D are selected."
+          },
+          "concept": "Hypoglycemia presents as shakiness, diaphoresis, tachycardia, hunger, irritability or anxiety, confusion, and altered level of consciousness."
+        },
+        {
+          "id": "sk2-q8",
+          "stem": "An order reads Novolin R 8 units subcutaneously before lunch. Meal trays arrive on the unit at 1200. The patient is eating normally and his 0700 glucose was 142 mg/dL. At what time should the dose be given?",
+          "options": [
+            {
+              "id": "A",
+              "text": "1230",
+              "correct": false,
+              "rationale": "Leaves the insulin acting after the food has been absorbed."
+            },
+            {
+              "id": "B",
+              "text": "1200",
+              "correct": false,
+              "rationale": "That timing belongs to rapid-acting insulin."
+            },
+            {
+              "id": "C",
+              "text": "1130",
+              "correct": true,
+              "rationale": "Regular insulin has an onset of 30 to 60 minutes, so a dose half an hour ahead matches its action to the meal."
+            },
+            {
+              "id": "D",
+              "text": "1000",
+              "correct": false,
+              "rationale": "Two hours ahead brings the insulin to its peak well before any carbohydrate arrives."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "The R in Humulin R and Novolin R stands for Regular. Short-acting, given about 30 minutes before meals. Humulin R and Novolin R are regular, short-acting insulin. Onset 30 to 60 minutes, peak 2 to 4 hours, duration 5 to 8 hours.",
+          "strategy": "R for Regular and N for NPH is the most useful pair of letters to learn. Once you have that, the timing follows from the class.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "R is Regular, short-acting."
+              },
+              {
+                "action": "Cut D",
+                "detail": "Two hours ahead brings the insulin to its peak well before any carbohydrate arrives."
+              },
+              {
+                "action": "Cut B",
+                "detail": "That timing belongs to rapid-acting insulin."
+              },
+              {
+                "action": "Cut A",
+                "detail": "Leaves the insulin acting after the food has been absorbed."
+              }
+            ],
+            "verdict": "That leaves C: regular insulin has an onset of 30 to 60 minutes, so a dose half an hour ahead matches its action to the meal."
+          },
+          "concept": "Humulin R and Novolin R are regular, short-acting insulin. Onset 30 to 60 minutes, peak 2 to 4 hours, duration 5 to 8 hours. Given about 30 minutes before meals. The R stands for Regular."
+        },
+        {
+          "id": "sk2-s4",
+          "type": "sata",
+          "stem": "A nurse is about to give a scheduled dose of insulin to a patient admitted two days ago. Insulin is a high-alert medication and she works through her checks before drawing it up. Which checks does she complete before administering? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Confirm the expiry date on the vial",
+              "correct": false,
+              "rationale": "Checking expiry applies to any medication and is not one of the specific checks before an insulin dose."
+            },
+            {
+              "id": "B",
+              "text": "Establish the current blood glucose and whether it is safe to give insulin now",
+              "correct": true,
+              "rationale": "The value determines whether the dose goes ahead at all."
+            },
+            {
+              "id": "C",
+              "text": "Review the insulin ordered, the dose, and any hold or notify parameters",
+              "correct": true,
+              "rationale": "Parameters exist precisely so the dose is not given automatically."
+            },
+            {
+              "id": "D",
+              "text": "Determine whether the patient is eating and whether the timing fits the meal",
+              "correct": true,
+              "rationale": "A dose that was correct for a normal meal becomes too much when the meal is skipped or delayed, and that is a frequent cause of inpatient lows."
+            },
+            {
+              "id": "E",
+              "text": "Confirm the patient has a working intravenous line",
+              "correct": false,
+              "rationale": "Insulin here is subcutaneous. An intravenous line is irrelevant to this administration."
+            },
+            {
+              "id": "F",
+              "text": "Administer the dose before checking the glucose so the timing is not delayed",
+              "correct": false,
+              "rationale": "Reverses the order and removes the check that decides whether the dose is safe."
+            }
+          ],
+          "answer": [
+            "B",
+            "C",
+            "D"
+          ],
+          "takeaway": "Patient, glucose, order, food, safety, then reassess. Incorrect type, dose, timing, and reduced intake are the key causes of inpatient hypoglycemia. Before insulin, check patient, glucose, order, food, safety, and reassessment plan.",
+          "strategy": "Every one of the four causes of inpatient hypoglycemia is caught by one of these checks, which is why the list exists in this order.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Walk the checks",
+                "detail": "Patient, glucose, order, food, safety."
+              },
+              {
+                "action": "Cut F",
+                "detail": "Giving before checking removes the deciding check."
+              }
+            ],
+            "verdict": "B, C and D are selected."
+          },
+          "concept": "Before insulin, check patient, glucose, order, food, safety, and reassessment plan. Incorrect type, dose, timing, and reduced intake are the key causes of inpatient hypoglycemia."
+        },
+        {
+          "id": "sk2-q11",
+          "stem": "A patient receives 10 units of Humulin R subcutaneously at 0730 and eats breakfast at 0800. At which time is he at greatest risk of hypoglycemia from this dose?",
+          "options": [
+            {
+              "id": "A",
+              "text": "1330 to 1530",
+              "correct": false,
+              "rationale": "Beyond the peak, and approaching the end of the 5 to 8 hour duration."
+            },
+            {
+              "id": "B",
+              "text": "0745",
+              "correct": false,
+              "rationale": "Regular insulin has an onset of 30 to 60 minutes and is barely working."
+            },
+            {
+              "id": "C",
+              "text": "0930 to 1130",
+              "correct": true,
+              "rationale": "Regular insulin peaks 2 to 4 hours after the dose, which places the risk window mid-morning."
+            },
+            {
+              "id": "D",
+              "text": "2000",
+              "correct": false,
+              "rationale": "Twelve hours out, well past the duration of this dose."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Regular insulin (Humulin R, Novolin R): onset 30 to 60 minutes, peak 2 to 4 hours, duration 5 to 8 hours. The peak is when you watch. The peak is the window for hypoglycemia.",
+          "strategy": "Peak is the single most useful number in the table. Onset tells you when to give it; peak tells you when a low is most likely.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "Regular insulin peaks at 2 to 4 hours."
+              },
+              {
+                "action": "Cut B",
+                "detail": "Regular insulin has an onset of 30 to 60 minutes and is barely working."
+              },
+              {
+                "action": "Cut A",
+                "detail": "Beyond the peak, and approaching the end of the 5 to 8 hour duration."
+              },
+              {
+                "action": "Cut D",
+                "detail": "Twelve hours out, well past the duration of this dose."
+              }
+            ],
+            "verdict": "That leaves C: regular insulin peaks 2 to 4 hours after the dose, which places the risk window mid-morning."
+          },
+          "concept": "Regular insulin (Humulin R, Novolin R): onset 30 to 60 minutes, peak 2 to 4 hours, duration 5 to 8 hours. The peak is the window for hypoglycemia."
+        },
+        {
+          "id": "sk2-q7",
+          "stem": "A patient with type 1 diabetes is prescribed Humalog 6 units subcutaneously three times daily. His breakfast tray has just been placed in front of him. His fingerstick glucose is 138 mg/dL. Which action is correct?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the dose now",
+              "correct": true,
+              "rationale": "Humalog is lispro, with an onset of 10 to 30 minutes, so it is timed to food already in front of him."
+            },
+            {
+              "id": "B",
+              "text": "Give the dose after he finishes eating",
+              "correct": false,
+              "rationale": "Leaves the insulin peaking after the carbohydrate has been absorbed."
+            },
+            {
+              "id": "C",
+              "text": "Hold the dose and recheck the glucose",
+              "correct": false,
+              "rationale": "A glucose of 138 does not meet any hold parameter."
+            },
+            {
+              "id": "D",
+              "text": "Give the dose in 30 minutes",
+              "correct": false,
+              "rationale": "That timing belongs to regular insulin, which has a slower onset."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Humalog is lispro and NovoLog is aspart. Both are rapid-acting, given just before or with the meal.",
+          "strategy": "Learn the brand and generic as a pair. Humalog and NovoLog both end in -log and both act fast, which is a usable hook.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "Humalog is lispro, rapid-acting."
+              },
+              {
+                "action": "Cut D",
+                "detail": "That timing belongs to regular insulin, which has a slower onset."
+              },
+              {
+                "action": "Cut B",
+                "detail": "Leaves the insulin peaking after the carbohydrate has been absorbed."
+              },
+              {
+                "action": "Cut C",
+                "detail": "A glucose of 138 does not meet any hold parameter."
+              }
+            ],
+            "verdict": "That leaves A: humalog is lispro, with an onset of 10 to 30 minutes, so it is timed to food already in front of him."
+          },
+          "concept": "Humalog is lispro and NovoLog is aspart. Both are rapid-acting, with an onset of 10 to 30 minutes, a peak at 30 to 90 minutes, and a duration of 3 to 5 hours. Given just before or with meals."
+        },
+        {
+          "id": "sk2-s7",
+          "type": "sata",
+          "stem": "A nurse asks a student to sort the unit's insulin supply into classes before the morning medication round, since several products share a brand name and differ only by a letter. Which statements pair the product with its class correctly? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Humalog and NovoLog are rapid-acting",
+              "correct": true,
+              "rationale": "Lispro and aspart both start working within about 15 minutes, which is why they are given with food in front of the patient."
+            },
+            {
+              "id": "B",
+              "text": "Humulin R and Novolin R are short-acting regular insulin",
+              "correct": true,
+              "rationale": "The R stands for Regular."
+            },
+            {
+              "id": "C",
+              "text": "Humulin N and Novolin N are intermediate-acting NPH",
+              "correct": true,
+              "rationale": "The N stands for NPH."
+            },
+            {
+              "id": "D",
+              "text": "Lantus and Levemir are long-acting basal insulin",
+              "correct": true,
+              "rationale": "Glargine and detemir release steadily over roughly 24 hours with no pronounced peak, which is what makes them basal insulin."
+            },
+            {
+              "id": "E",
+              "text": "Humulin R and Humulin N are the same class because they share a brand name",
+              "correct": false,
+              "rationale": "The brand identifies the manufacturer's family. The letter after it identifies the class, and R and N behave completely differently."
+            },
+            {
+              "id": "F",
+              "text": "Lantus is rapid-acting because it is clear",
+              "correct": false,
+              "rationale": "Appearance does not determine class. Lantus is clear and long-acting."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "takeaway": "Four classes: Humalog and NovoLog rapid, Humulin R and Novolin R short, Humulin N and Novolin N intermediate, Lantus and Levemir long. Four classes by name: Humalog and NovoLog are rapid-acting; Humulin R and Novolin R are short-acting regular; Humulin N and Novolin N are intermediate-acting NPH; Lantus and Levemir are long-acting basal.",
+          "strategy": "Two wrong options use a shortcut that fails: the brand name and the appearance. The letter after the brand carries the class, and clear covers three of the four.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Pair brand with class",
+                "detail": "Four correct pairings."
+              },
+              {
+                "action": "Cut E",
+                "detail": "Same brand, different letter, different class."
+              },
+              {
+                "action": "Cut F",
+                "detail": "Clear does not mean rapid-acting."
+              }
+            ],
+            "verdict": "A, B, C, and D are selected."
+          },
+          "concept": "Four classes by name: Humalog and NovoLog are rapid-acting; Humulin R and Novolin R are short-acting regular; Humulin N and Novolin N are intermediate-acting NPH; Lantus and Levemir are long-acting basal."
+        },
+        {
+          "id": "sk2-q1",
+          "stem": "A nurse obtains fasting glucose results on four patients at 0630: 48 mg/dL, 96 mg/dL, 164 mg/dL, and 212 mg/dL. All four are alert and oriented. Which result requires action first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "212 mg/dL",
+              "correct": false,
+              "rationale": "Hyperglycemia requiring assessment and orders, and not the immediate emergency a low is."
+            },
+            {
+              "id": "B",
+              "text": "164 mg/dL",
+              "correct": false,
+              "rationale": "Within the target range."
+            },
+            {
+              "id": "C",
+              "text": "96 mg/dL",
+              "correct": false,
+              "rationale": "Within the common inpatient target range of 70 to 180."
+            },
+            {
+              "id": "D",
+              "text": "48 mg/dL",
+              "correct": true,
+              "rationale": "Below 70, and within ADA level 2 hypoglycemia at under 54. It is an immediate safety concern."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Under 70 mg/dL is hypoglycemia and an immediate safety concern. 70 to 180 mg/dL is the common inpatient target range. Above 180 mg/dL is hyperglycemia requiring assessment and review of orders. ADA levels: level 1 is 54 to 69 mg/dL, level 2 is under 54 mg/dL.",
+          "strategy": "A high glucose needs attention and a low glucose needs it now. When a stem offers both, the low wins on urgency every time.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "One below 70, two in range, one above 180."
+              },
+              {
+                "action": "Cut C",
+                "detail": "Within the common inpatient target range of 70 to 180."
+              },
+              {
+                "action": "Cut B",
+                "detail": "Within the target range."
+              },
+              {
+                "action": "Cut A",
+                "detail": "Hyperglycemia requiring assessment and orders, and not the immediate emergency a low is."
+              }
+            ],
+            "verdict": "That leaves D: below 70, and within ADA level 2 hypoglycemia at under 54."
+          },
+          "concept": "Under 70 mg/dL is hypoglycemia and an immediate safety concern. 70 to 180 mg/dL is the common inpatient target range. Above 180 mg/dL is hyperglycemia requiring assessment and review of orders. ADA levels: level 1 is 54 to 69 mg/dL, level 2 is under 54 mg/dL."
+        },
+        {
+          "id": "sk2-q10",
+          "stem": "A patient is prescribed Lantus 20 units at bedtime and NovoLog 5 units with meals. He asks why the bedtime dose does not have to be timed to food. Which response is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "It is used only when he is fasting",
+              "correct": false,
+              "rationale": "Basal insulin continues regardless of intake."
+            },
+            {
+              "id": "B",
+              "text": "It has no pronounced peak",
+              "correct": true,
+              "rationale": "Glargine provides background coverage over 20 to 24 hours or more, which is why its timing is not tied to carbohydrate."
+            },
+            {
+              "id": "C",
+              "text": "It acts the same way but lasts longer",
+              "correct": false,
+              "rationale": "NovoLog is rapid-acting with a defined peak. The two classes differ in more than duration."
+            },
+            {
+              "id": "D",
+              "text": "It peaks overnight while he sleeps",
+              "correct": false,
+              "rationale": "There is no pronounced peak, which is precisely why it is used for basal coverage."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Lantus is glargine and Levemir is detemir. Both are long-acting basal insulin with no pronounced peak, lasting 20 to 24 hours or more.",
+          "strategy": "No pronounced peak is the defining feature. It explains why basal insulin is not timed to meals and why it is not the insulin that causes a mealtime low.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "Lantus is glargine, long-acting basal."
+              },
+              {
+                "action": "Cut D",
+                "detail": "There is no pronounced peak, which is precisely why it is used for basal coverage."
+              },
+              {
+                "action": "Cut A",
+                "detail": "Basal insulin continues regardless of intake."
+              },
+              {
+                "action": "Cut C",
+                "detail": "NovoLog is rapid-acting with a defined peak."
+              }
+            ],
+            "verdict": "That leaves B: glargine provides background coverage over 20 to 24 hours or more, which is why its timing is not tied to carbohydrate."
+          },
+          "concept": "Lantus is glargine and Levemir is detemir. Both are long-acting basal insulin with an onset of 1 to 2 hours, no pronounced peak, and a duration of 20 to 24 hours or more. Never mixed with other insulin types."
+        },
+        {
+          "id": "sk2-s2",
+          "type": "sata",
+          "stem": "A point-of-care glucose is due on a patient whose hands are cold and who has been resting under a blanket. The meter and strips are at the bedside and the patient has just woken. Which actions reflect correct technique? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Verify the patient's identity before testing",
+              "correct": true,
+              "rationale": "The first of the checks, as with any procedure."
+            },
+            {
+              "id": "B",
+              "text": "Wash and dry hands thoroughly before testing",
+              "correct": true,
+              "rationale": "CDC guidance, and drying matters because residual water dilutes the sample."
+            },
+            {
+              "id": "C",
+              "text": "Warm the finger under hot running water to improve flow",
+              "correct": false,
+              "rationale": "Hot water is unnecessary and risks a burn. Warming gently or lowering the hand is sufficient."
+            },
+            {
+              "id": "D",
+              "text": "Puncture the side of the fingertip",
+              "correct": true,
+              "rationale": "Less painful and yields a better sample than the pad, which has more nerve endings."
+            },
+            {
+              "id": "E",
+              "text": "Squeeze the finger firmly to obtain an adequate sample quickly",
+              "correct": false,
+              "rationale": "Excessive squeezing dilutes the sample with tissue fluid and produces an inaccurate result."
+            },
+            {
+              "id": "F",
+              "text": "Wipe away the first drop and use the second",
+              "correct": false,
+              "rationale": "Applies to some devices by manufacturer instruction rather than as a universal rule."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D"
+          ],
+          "takeaway": "Identify, wash and dry, check the meter and strips, use the side of the fingertip, and never squeeze hard. Before a fingerstick: verify identity, wash and dry hands, check glucometer function, strip compatibility and expiration, and assess the site. Puncture the side of the fingertip and avoid excessive squeezing, which dilutes the sample.",
+          "strategy": "The wrong option is the shortcut everyone takes when blood is slow to come. It changes the number you are about to act on.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Work the sequence",
+                "detail": "Identity, hands, equipment, site, puncture."
+              },
+              {
+                "action": "Cut E",
+                "detail": "Squeezing dilutes the sample with tissue fluid."
+              }
+            ],
+            "verdict": "A, B and D are selected."
+          },
+          "concept": "Before a fingerstick: verify identity, wash and dry hands, check glucometer function, strip compatibility and expiration, and assess the site. Puncture the side of the fingertip and avoid excessive squeezing, which dilutes the sample."
+        },
+        {
+          "id": "sk2-q6",
+          "stem": "A patient injects his insulin into his thigh at 0700 and goes for a brisk 30-minute walk at 0730. His glucose has dropped during the walk on three consecutive mornings. Which response is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The thigh absorbs faster than the abdomen",
+              "correct": false,
+              "rationale": "Reverses the two."
+            },
+            {
+              "id": "B",
+              "text": "Absorption differs by site",
+              "correct": true,
+              "rationale": "The abdomen is fastest and the thigh slower, and exercise speeds absorption from the injected limb."
+            },
+            {
+              "id": "C",
+              "text": "Site choice affects comfort only",
+              "correct": false,
+              "rationale": "Comfort matters and absorption is the clinical reason."
+            },
+            {
+              "id": "D",
+              "text": "Absorption is the same at every site",
+              "correct": false,
+              "rationale": "It differs by site, which is why the site is chosen deliberately."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Abdomen is fastest, then upper arm, then thigh, then buttock. Avoid bruised, scarred, inflamed, or damaged areas and rotate sites per policy. Subcutaneous insulin absorption differs by site: abdomen is fastest, then upper arm, then thigh, then buttock or hip.",
+          "strategy": "Site choice interacts with activity. Exercise speeds absorption from the limb injected, which is why a thigh injection before a walk behaves differently from one before sitting.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "Abdomen fastest, thigh slower."
+              },
+              {
+                "action": "Cut D",
+                "detail": "It differs by site, which is why the site is chosen deliberately."
+              },
+              {
+                "action": "Cut A",
+                "detail": "Reverses the two."
+              },
+              {
+                "action": "Cut C",
+                "detail": "Comfort matters and absorption is the clinical reason."
+              }
+            ],
+            "verdict": "That leaves B: the abdomen is fastest and the thigh slower, and exercise speeds absorption from the injected limb."
+          },
+          "concept": "Subcutaneous insulin absorption differs by site: abdomen is fastest, then upper arm, then thigh, then buttock or hip. Avoid bruised, scarred, inflamed, or damaged areas and rotate sites per policy."
+        },
+        {
+          "id": "sk2-s3",
+          "type": "sata",
+          "stem": "A student is preparing to give her first subcutaneous insulin injection and describes her plan to the nurse before approaching the patient. She has practiced in the skills laboratory and wants her technique checked. Which elements of her description are correct? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pinch the skin and subcutaneous fat as appropriate for the site and needle length",
+              "correct": true,
+              "rationale": "Ensures the dose reaches subcutaneous tissue rather than muscle."
+            },
+            {
+              "id": "B",
+              "text": "Insert the needle at a 90 degree angle",
+              "correct": true,
+              "rationale": "The typical angle for subcutaneous insulin, adjusted for the site and needle length."
+            },
+            {
+              "id": "C",
+              "text": "Aspirate before injecting to check for blood return",
+              "correct": false,
+              "rationale": "Aspiration is not required for subcutaneous insulin administration."
+            },
+            {
+              "id": "D",
+              "text": "Aspirate before injecting to confirm placement",
+              "correct": false,
+              "rationale": "Aspiration is not required for subcutaneous insulin administration."
+            },
+            {
+              "id": "E",
+              "text": "Withdraw the needle at the same angle used for insertion",
+              "correct": true,
+              "rationale": "Pulling straight back out along the track you made avoids dragging the needle sideways through tissue."
+            },
+            {
+              "id": "F",
+              "text": "Massage the site after withdrawing the needle",
+              "correct": false,
+              "rationale": "Massage alters absorption and is avoided after insulin injection."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "E"
+          ],
+          "takeaway": "Pinch, insert at 90 degrees, do not aspirate, inject slowly, hold briefly, withdraw at the same angle, dispose immediately. Subcutaneous insulin technique: pinch the skin and subcutaneous fat, insert at a 90 degree angle, do not aspirate, inject slowly, hold the needle briefly before withdrawing, withdraw at the same angle, and dispose in a sharps container immediately.",
+          "strategy": "Aspiration is the step students import from intramuscular technique. It is not part of subcutaneous insulin administration.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Walk the sequence",
+                "detail": "Pinch, insert, inject, hold, withdraw, dispose."
+              },
+              {
+                "action": "Cut C",
+                "detail": "Aspiration belongs to a different route."
+              }
+            ],
+            "verdict": "A, B and E are selected."
+          },
+          "concept": "Subcutaneous insulin technique: pinch the skin and subcutaneous fat, insert at a 90 degree angle, do not aspirate, inject slowly, hold the needle briefly before withdrawing, withdraw at the same angle, and dispose in a sharps container immediately."
+        },
+        {
+          "id": "sk2-q3",
+          "stem": "An order reads regular insulin 6 units subcutaneously before breakfast. The tray is expected in 30 minutes. The patient is alert, eating normally, and his fingerstick glucose is 156 mg/dL. Which action is correct?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the dose now",
+              "correct": true,
+              "rationale": "Regular insulin has an onset of 30 to 60 minutes, so giving it half an hour before the tray matches its action to the food."
+            },
+            {
+              "id": "B",
+              "text": "Hold the dose until bedtime",
+              "correct": false,
+              "rationale": "Separates a mealtime insulin from the meal it covers."
+            },
+            {
+              "id": "C",
+              "text": "Give the dose when the tray arrives",
+              "correct": false,
+              "rationale": "That timing belongs to rapid-acting insulin."
+            },
+            {
+              "id": "D",
+              "text": "Give the dose after he has eaten half the meal",
+              "correct": false,
+              "rationale": "Leaves the insulin peaking after the carbohydrate has been absorbed."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Rapid-acting goes just before or with the meal. Regular goes about 30 minutes before, because its onset is slower. Rapid-acting insulin such as lispro or aspart has an onset of 10 to 30 minutes and is given just before or with meals. Regular insulin has an onset of 30 to 60 minutes and is given about 30 minutes before meals.",
+          "strategy": "Match the onset to the food. The number to remember is not the duration but when the insulin starts working relative to when carbohydrate arrives.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "Regular, which is short-acting."
+              },
+              {
+                "action": "Cut C",
+                "detail": "That timing belongs to rapid-acting insulin."
+              },
+              {
+                "action": "Cut D",
+                "detail": "Leaves the insulin peaking after the carbohydrate has been absorbed."
+              },
+              {
+                "action": "Cut B",
+                "detail": "Separates a mealtime insulin from the meal it covers."
+              }
+            ],
+            "verdict": "That leaves A: regular insulin has an onset of 30 to 60 minutes, so giving it half an hour before the tray matches its action to the food."
+          },
+          "concept": "Rapid-acting insulin such as lispro or aspart has an onset of 10 to 30 minutes and is given just before or with meals. Regular insulin has an onset of 30 to 60 minutes and is given about 30 minutes before meals."
+        },
+        {
+          "id": "sk2-q2",
+          "stem": "A patient is alert and swallowing safely. His fingerstick glucose is 58 mg/dL. His rapid-acting insulin is due now and his breakfast tray has not arrived. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the scheduled insulin",
+              "correct": false,
+              "rationale": "Never give insulin to a hypoglycemic patient. It would drive the glucose lower."
+            },
+            {
+              "id": "B",
+              "text": "Give 15 to 20 g of fast-acting carbohydrate",
+              "correct": true,
+              "rationale": "A glucose under 70 is treated before anything else, and he is conscious and able to swallow."
+            },
+            {
+              "id": "C",
+              "text": "Recheck the glucose in 15 minutes",
+              "correct": false,
+              "rationale": "The recheck follows treatment rather than replacing it."
+            },
+            {
+              "id": "D",
+              "text": "Wait for the breakfast tray",
+              "correct": false,
+              "rationale": "Delays treatment while the glucose continues to fall."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Treat first, recheck in 15 minutes, repeat if still low, then work out why it happened. Never give insulin to a hypoglycemic patient. For a blood glucose under 70 mg/dL: assess the patient, follow the hypoglycemia protocol, give fast-acting glucose if conscious, recheck in 15 minutes, and repeat treatment if still low.",
+          "strategy": "The scheduled insulin and the missing tray are both deliberate pressure. Neither changes the rule that a glucose under 70 is treated now.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Read the stem",
+                "detail": "58, which is under 70."
+              },
+              {
+                "action": "Cut A",
+                "detail": "Never give insulin to a hypoglycemic patient."
+              },
+              {
+                "action": "Cut C",
+                "detail": "The recheck follows treatment rather than replacing it."
+              },
+              {
+                "action": "Cut D",
+                "detail": "Delays treatment while the glucose continues to fall."
+              }
+            ],
+            "verdict": "That leaves B: a glucose under 70 is treated before anything else, and he is conscious and able to swallow."
+          },
+          "concept": "For a blood glucose under 70 mg/dL: assess the patient, follow the hypoglycemia protocol, give fast-acting glucose if conscious, recheck in 15 minutes, and repeat treatment if still low. Never give insulin to a hypoglycemic patient."
+        },
+        {
+          "id": "sk2-s8",
+          "type": "sata",
+          "stem": "During her morning insulin round a nurse is told the breakfast trays are delayed by an hour. Two of her patients are due rapid-acting insulin and one is due long-acting basal insulin. Which actions are appropriate? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hold the rapid-acting Humalog until the tray is actually in front of the patient",
+              "correct": true,
+              "rationale": "Rapid-acting insulin begins working in 10 to 30 minutes, so giving it an hour before food creates a low."
+            },
+            {
+              "id": "B",
+              "text": "Recheck the blood glucose if there is any further delay",
+              "correct": true,
+              "rationale": "Reduced or delayed intake is a cause of inpatient hypoglycemia."
+            },
+            {
+              "id": "C",
+              "text": "Notify the provider if the delay affects the prescribed regimen",
+              "correct": true,
+              "rationale": "The regimen was written around a meal schedule that has changed."
+            },
+            {
+              "id": "D",
+              "text": "Give the Humalog now so the round stays on time",
+              "correct": false,
+              "rationale": "Prioritizes the schedule over the patient and produces the exact mismatch that causes hypoglycemia."
+            },
+            {
+              "id": "E",
+              "text": "Give the patient's Lantus as scheduled",
+              "correct": true,
+              "rationale": "Long-acting basal insulin has no pronounced peak and is not timed to food, so a delayed tray does not change it."
+            },
+            {
+              "id": "F",
+              "text": "Give a double dose of Humalog once the tray arrives to make up the delay",
+              "correct": false,
+              "rationale": "Doubling a mealtime dose has no basis and creates a serious hypoglycemia risk."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          "takeaway": "Mealtime insulin waits for the meal. Basal insulin does not, because it is not matched to food. Incorrect insulin type, dose, timing, and reduced intake are the key causes of inpatient hypoglycemia. Mealtime insulin is held until food is present; basal insulin is not timed to food.",
+          "strategy": "This single scenario separates the two classes. If a delayed tray changes whether you give it, it is a mealtime insulin.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Sort by class",
+                "detail": "Humalog is mealtime; Lantus is basal."
+              },
+              {
+                "action": "Cut D",
+                "detail": "Convenience over the patient."
+              },
+              {
+                "action": "Cut F",
+                "detail": "Doubling has no basis."
+              }
+            ],
+            "verdict": "A, B, C, and E are selected."
+          },
+          "concept": "Incorrect insulin type, dose, timing, and reduced intake are the key causes of inpatient hypoglycemia. Mealtime insulin is held until food is present; basal insulin is not timed to food."
+        },
+        {
+          "id": "sk2-q4",
+          "stem": "A nurse is to give 6 units of regular insulin and 14 units of NPH in one syringe. She has rolled the NPH vial and drawn up air. Which action comes next?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Inject air into the NPH vial without withdrawing insulin",
+              "correct": true,
+              "rationale": "Air is injected into the cloudy vial first, without drawing any insulin, so the clear vial is never contaminated with suspension."
+            },
+            {
+              "id": "B",
+              "text": "Inject air into the regular vial and withdraw the regular insulin",
+              "correct": false,
+              "rationale": "The regular insulin is drawn later. Injecting air into the cloudy vial comes first."
+            },
+            {
+              "id": "C",
+              "text": "Withdraw the NPH first since it is the larger dose",
+              "correct": false,
+              "rationale": "Dose size does not set the order. Clear is always drawn before cloudy."
+            },
+            {
+              "id": "D",
+              "text": "Withdraw both doses into separate syringes and combine them",
+              "correct": false,
+              "rationale": "Transferring between syringes introduces error and an unnecessary break in the system."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Air into cloudy, air into clear, draw clear, draw cloudy. The clear vial must stay uncontaminated.",
+          "strategy": "The order protects the clear vial. If suspension enters it, every later dose drawn from that vial is altered.",
+          "type": "multiple_choice",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the sequence",
+                "detail": "Air into cloudy first, without drawing."
+              },
+              {
+                "action": "Cut B",
+                "detail": "Regular is drawn after the air step is complete."
+              },
+              {
+                "action": "Cut C and D",
+                "detail": "Dose size is irrelevant, and combining syringes adds error."
+              }
+            ],
+            "verdict": "That leaves A: air into the NPH vial first."
+          },
+          "concept": "NPH is intermediate-acting with an onset of 1 to 2 hours, a peak at 4 to 12 hours, and a duration of 14 to 24 hours. It is cloudy and is gently rolled before use. Rapid-acting and regular insulins are clear."
+        },
+        {
+          "id": "sk2-p1",
+          "type": "multiple_choice",
+          "stem": "A patient taking glyburide is also prescribed metoprolol for hypertension. Which concern does the nurse identify?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The beta blocker will raise the blood glucose",
+              "correct": false,
+              "rationale": "Beta blockers have a modest and unpredictable effect on glucose. Losing the warning signs is the danger."
+            },
+            {
+              "id": "B",
+              "text": "The beta blocker reduces absorption of the glyburide",
+              "correct": false,
+              "rationale": "No clinically meaningful absorption interaction between them."
+            },
+            {
+              "id": "C",
+              "text": "The combination increases the risk of lactic acidosis",
+              "correct": false,
+              "rationale": "Lactic acidosis is a metformin concern, not a sulfonylurea one."
+            },
+            {
+              "id": "D",
+              "text": "The beta blocker may mask the early warning signs of hypoglycemia",
+              "correct": true,
+              "rationale": "The shakiness, sweating, and racing heart that warn of a low are adrenergic. A beta blocker blunts them, so the first sign may be confusion instead."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Beta blockers mask the adrenergic warning signs of hypoglycemia. Sweating usually persists; shakiness and palpitations do not.",
+          "strategy": "Ask what the patient would normally feel first during a low, and what a beta blocker does to that.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the warning signs",
+                "detail": "Shaky, sweaty, palpitations. All adrenergic."
+              },
+              {
+                "action": "Ask what a beta blocker blocks",
+                "detail": "The adrenergic response."
+              },
+              {
+                "action": "Cut lactic acidosis",
+                "detail": "That belongs to metformin."
+              }
+            ],
+            "verdict": "That leaves D: the warning signs are masked."
+          }
+        },
+        {
+          "id": "sk2-p2",
+          "type": "multiple_choice",
+          "stem": "A patient who takes acarbose with each meal becomes hypoglycemic. Which does the nurse administer?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Table sugar dissolved in water",
+              "correct": false,
+              "rationale": "Sucrose has to be split into glucose and fructose first, and acarbose is blocking exactly that step. This is the trap."
+            },
+            {
+              "id": "B",
+              "text": "A slice of bread",
+              "correct": false,
+              "rationale": "A complex carbohydrate needing digestion, and slower still."
+            },
+            {
+              "id": "C",
+              "text": "A glass of milk",
+              "correct": false,
+              "rationale": "Lactose also requires breakdown, and milk raises glucose too slowly for an acute low."
+            },
+            {
+              "id": "D",
+              "text": "Glucose tablets",
+              "correct": true,
+              "rationale": "Acarbose blocks the enzyme that breaks table sugar into absorbable glucose, so sucrose will not work. Glucose tablets need no digestion."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "On acarbose or miglitol, treat hypoglycemia with glucose specifically. Sucrose and starch will not be absorbed.",
+          "strategy": "This is the one hypoglycemia scenario where the usual juice-or-sugar answer is wrong. The drug name in the stem is the signal.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read what the drug blocks",
+                "detail": "Breakdown of complex sugars in the gut."
+              },
+              {
+                "action": "Cut sucrose and starch",
+                "detail": "Both need the blocked enzyme."
+              },
+              {
+                "action": "Cut milk",
+                "detail": "Lactose also needs breakdown."
+              }
+            ],
+            "verdict": "That leaves D: glucose tablets."
+          }
+        },
+        {
+          "id": "sk2-p3",
+          "type": "multiple_choice",
+          "stem": "A patient is starting empagliflozin. Which teaching does the nurse include?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Expect increased urination, and report burning or genital itching",
+              "correct": true,
+              "rationale": "SGLT-2 inhibitors work by dumping glucose into the urine. Sugar in the urine raises the risk of urinary and genital yeast infections."
+            },
+            {
+              "id": "B",
+              "text": "This is a form of insulin taken by mouth",
+              "correct": false,
+              "rationale": "There is no oral insulin. Insulin is destroyed in the stomach."
+            },
+            {
+              "id": "C",
+              "text": "Your urine should stay free of glucose on this medication",
+              "correct": false,
+              "rationale": "The opposite. Glucose in the urine is the mechanism, not a complication."
+            },
+            {
+              "id": "D",
+              "text": "Take it only when the glucose reads above 200",
+              "correct": false,
+              "rationale": "It is taken on a schedule, not in response to a reading."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "SGLT-2 inhibitors lower glucose by excreting it in the urine, which brings polyuria and a risk of urinary and yeast infections.",
+          "strategy": "Work out the mechanism from the drug class and the side effects follow from it.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the mechanism",
+                "detail": "Glucose is excreted in the urine."
+              },
+              {
+                "action": "Predict the consequence",
+                "detail": "More urine, and sugar feeding organisms."
+              },
+              {
+                "action": "Cut the oral insulin option",
+                "detail": "No such thing."
+              }
+            ],
+            "verdict": "That leaves A: more urination, and report infection signs."
+          }
+        },
+        {
+          "id": "sk2-p4",
+          "type": "multiple_choice",
+          "stem": "A patient on metformin is scheduled for a computed tomography scan with iodinated contrast. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give half the usual dose",
+              "correct": false,
+              "rationale": "Not a recognized approach. The decision is to hold or not, and it is the provider's."
+            },
+            {
+              "id": "B",
+              "text": "Confirm with the provider that the metformin is held around the study",
+              "correct": true,
+              "rationale": "Contrast can impair kidney function, and metformin cleared by the kidneys accumulates. The build-up risks lactic acidosis."
+            },
+            {
+              "id": "C",
+              "text": "Give the metformin with a full glass of water before the scan",
+              "correct": false,
+              "rationale": "Water does not protect the kidneys from the contrast or clear the drug faster."
+            },
+            {
+              "id": "D",
+              "text": "No action, since metformin does not interact with contrast",
+              "correct": false,
+              "rationale": "It does, and this is one of the most tested medication-procedure interactions."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Metformin is held around iodinated contrast because contrast-related kidney impairment lets it accumulate and cause lactic acidosis.",
+          "strategy": "Ask what clears the drug and what the contrast does to that organ.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Ask how metformin is cleared",
+                "detail": "By the kidneys."
+              },
+              {
+                "action": "Ask what contrast can do",
+                "detail": "Impair kidney function."
+              },
+              {
+                "action": "Cut the no-action option",
+                "detail": "A well-known interaction."
+              }
+            ],
+            "verdict": "That leaves B: confirm the hold with the provider."
+          }
+        },
+        {
+          "id": "sk2-p5",
+          "type": "sata",
+          "stem": "Which oral antidiabetic agents carry a meaningful risk of hypoglycemia when taken alone? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Glipizide",
+              "correct": true,
+              "rationale": "A sulfonylurea. It pushes the pancreas to release insulin whether or not glucose is high, so a low can follow."
+            },
+            {
+              "id": "B",
+              "text": "Glyburide",
+              "correct": true,
+              "rationale": "Also a sulfonylurea, and the same mechanism."
+            },
+            {
+              "id": "C",
+              "text": "Glimepiride",
+              "correct": true,
+              "rationale": "The third of the commonly used sulfonylureas."
+            },
+            {
+              "id": "D",
+              "text": "Metformin",
+              "correct": false,
+              "rationale": "Reduces liver glucose output and improves sensitivity. It does not force insulin release, so alone it rarely causes a low."
+            },
+            {
+              "id": "E",
+              "text": "Sitagliptin",
+              "correct": false,
+              "rationale": "A DPP-4 inhibitor. It acts through incretins, which work only when glucose is rising, so the risk is low."
+            },
+            {
+              "id": "F",
+              "text": "Acarbose",
+              "correct": false,
+              "rationale": "Slows carbohydrate absorption rather than adding insulin. Low risk alone, though it changes how a low must be treated."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C"
+          ],
+          "takeaway": "Sulfonylureas cause hypoglycemia because they force insulin release regardless of the glucose level. Metformin, DPP-4 inhibitors and acarbose do not.",
+          "strategy": "Sort by mechanism. Anything that pushes insulin out regardless of glucose can cause a low; anything that is glucose-dependent cannot.",
+          "elimination": {
+            "strategies": [
+              "Test each option on its own"
+            ],
+            "steps": [
+              {
+                "action": "Ask what each drug does",
+                "detail": "Force insulin, or work only when glucose rises."
+              },
+              {
+                "action": "Group the sulfonylureas",
+                "detail": "Glipizide, glyburide, glimepiride."
+              },
+              {
+                "action": "Cut the glucose-dependent agents",
+                "detail": "Metformin, sitagliptin, acarbose."
+              }
+            ],
+            "verdict": "A, B, and C are selected."
+          },
+          "note": "Exactly three selections are requested."
+        },
+        {
+          "id": "sk2-p6",
+          "type": "multiple_choice",
+          "stem": "A nurse reviews a patient's insulin supply. Which observation requires follow-up?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The regular insulin appears clear",
+              "correct": false,
+              "rationale": "Regular insulin is a clear solution. This is normal."
+            },
+            {
+              "id": "B",
+              "text": "The NPH insulin appears cloudy",
+              "correct": false,
+              "rationale": "NPH is a suspension and is cloudy by design. It is rolled to mix it before drawing."
+            },
+            {
+              "id": "C",
+              "text": "The insulin lispro appears clear",
+              "correct": false,
+              "rationale": "Rapid-acting insulin is also clear. Normal."
+            },
+            {
+              "id": "D",
+              "text": "The insulin glargine appears cloudy",
+              "correct": true,
+              "rationale": "Glargine is a clear solution. Cloudiness means contamination or degradation, and the vial must not be used."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Only NPH should look cloudy. Every other insulin is clear, and cloudiness in a clear insulin means discard it.",
+          "strategy": "One insulin is meant to be cloudy. Any other cloudy vial is the finding.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall which is a suspension",
+                "detail": "NPH, and only NPH."
+              },
+              {
+                "action": "Cut the three normal findings",
+                "detail": "NPH cloudy, regular and lispro clear."
+              },
+              {
+                "action": "Name what is left",
+                "detail": "A cloudy glargine."
+              }
+            ],
+            "verdict": "That leaves D: cloudy glargine."
+          }
+        },
+        {
+          "id": "sk2-p7",
+          "type": "multiple_choice",
+          "stem": "A patient wakes with a glucose of 240 mg/dL. Overnight readings show a fall to 48 mg/dL at 0300 followed by a rise. Which does the nurse suspect?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Somogyi phenomenon",
+              "correct": true,
+              "rationale": "An overnight low triggers counter-regulatory hormones, which drive the glucose up by morning. The high reading is the rebound from the low."
+            },
+            {
+              "id": "B",
+              "text": "Insufficient evening basal insulin",
+              "correct": false,
+              "rationale": "That would produce a steady overnight rise, not a fall to 48 first."
+            },
+            {
+              "id": "C",
+              "text": "An inaccurate morning meter reading",
+              "correct": false,
+              "rationale": "The overnight trend explains the morning value. Dismissing it as error loses the pattern."
+            },
+            {
+              "id": "D",
+              "text": "Dawn phenomenon",
+              "correct": false,
+              "rationale": "Dawn is a morning rise from overnight growth hormone and cortisol, with no preceding low. The 0300 reading of 48 is what separates them."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Somogyi has an overnight low that rebounds. Dawn rises without a low. The 0200 to 0300 check is what distinguishes them.",
+          "strategy": "Both produce a high morning glucose, and the overnight reading is the only thing that separates them.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the overnight value",
+                "detail": "48 mg/dL at 0300."
+              },
+              {
+                "action": "Cut dawn phenomenon",
+                "detail": "Dawn has no preceding low."
+              },
+              {
+                "action": "Cut the other two",
+                "detail": "One predicts a steady rise, one dismisses real data."
+              }
+            ],
+            "verdict": "That leaves A: Somogyi phenomenon."
+          }
+        },
+        {
+          "id": "sk2-p8",
+          "type": "sata",
+          "stem": "A patient with type 1 diabetes has influenza and is vomiting. Which sick-day instructions are correct? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Keep taking the insulin, even when not eating normally",
+              "correct": true,
+              "rationale": "Illness raises glucose through stress hormones. Stopping insulin during illness is how patients arrive in ketoacidosis."
+            },
+            {
+              "id": "B",
+              "text": "Check the glucose every three to four hours",
+              "correct": true,
+              "rationale": "More often than usual, because illness makes the glucose unpredictable."
+            },
+            {
+              "id": "C",
+              "text": "Test for ketones when the glucose stays above 240",
+              "correct": true,
+              "rationale": "Ketones signal that fat is being broken down for fuel and that ketoacidosis may be developing."
+            },
+            {
+              "id": "D",
+              "text": "Take small sips of fluid frequently",
+              "correct": true,
+              "rationale": "Vomiting plus a rising glucose dehydrates quickly, and dehydration accelerates the whole process."
+            },
+            {
+              "id": "E",
+              "text": "Stop the insulin until eating normally again",
+              "correct": false,
+              "rationale": "The single most dangerous sick-day error. Insulin need usually rises during illness."
+            },
+            {
+              "id": "F",
+              "text": "Wait until the fever settles before contacting the provider",
+              "correct": false,
+              "rationale": "Persistent vomiting, ketones, or a glucose that will not come down need reporting rather than waiting."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "takeaway": "Sick days: never stop insulin, check glucose every three to four hours, test ketones above 240, and keep fluids going.",
+          "strategy": "Two options tell the patient to wait or to stop. Ask what illness does to the insulin requirement.",
+          "elimination": {
+            "strategies": [
+              "Test each option on its own"
+            ],
+            "steps": [
+              {
+                "action": "Ask what illness does",
+                "detail": "Stress hormones raise the glucose."
+              },
+              {
+                "action": "Cut stopping the insulin",
+                "detail": "The need goes up, not down."
+              },
+              {
+                "action": "Cut waiting to call",
+                "detail": "Vomiting with ketones is what needs reporting."
+              }
+            ],
+            "verdict": "A, B, C, and D are selected."
+          }
+        },
+        {
+          "id": "sk2-p9",
+          "type": "multiple_choice",
+          "stem": "A patient using an insulin pump reports the glucose has risen from 140 to 310 mg/dL over four hours and ketones are now present. Which does the nurse suspect first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A faulty glucose meter",
+              "correct": false,
+              "rationale": "The ketones corroborate the reading. Two findings agreeing is not a meter fault."
+            },
+            {
+              "id": "B",
+              "text": "The pump is delivering too much basal insulin",
+              "correct": false,
+              "rationale": "Too much would lower the glucose, not raise it, and would not produce ketones."
+            },
+            {
+              "id": "C",
+              "text": "An expected rise after a high-carbohydrate meal",
+              "correct": false,
+              "rationale": "A meal does not produce ketones, and the rise would not continue over four hours."
+            },
+            {
+              "id": "D",
+              "text": "An interruption in insulin delivery at the site or in the tubing",
+              "correct": true,
+              "rationale": "A pump delivers only rapid-acting insulin, with no long-acting reserve. An occlusion or dislodged cannula leaves the patient with no insulin at all within hours."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Pump patients have no long-acting insulin on board. An interruption produces hyperglycemia and ketones within hours.",
+          "strategy": "Ask what a pump does and does not deliver. The ketones are the finding that rules out a simple meal-related rise.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall what a pump holds",
+                "detail": "Rapid-acting only, no basal reserve."
+              },
+              {
+                "action": "Read the ketones",
+                "detail": "They indicate no insulin is reaching the patient."
+              },
+              {
+                "action": "Cut the meal and meter options",
+                "detail": "Neither explains ketones."
+              }
+            ],
+            "verdict": "That leaves D: an interruption in delivery."
+          }
         }
       ]
     },

@@ -1,0 +1,4821 @@
+{
+ "meta": {
+  "title": "Fluid and Electrolyte Lab Trainer",
+  "course": "N55 Fundamentals of Nursing",
+  "format": "two-stage: identify the imbalance from the value, then select its findings",
+  "rules": {
+   "stage2UnlockedOnlyOnCorrectStage1": true,
+   "stage1Type": "multiple_choice",
+   "stage2Type": "sata",
+   "sataScoring": "All correct options and no incorrect options."
+  },
+  "unitNote": "mmHg is a pressure unit and is used only for PaCO2 and PaO2. Electrolytes are reported in mEq/L or mg/dL.",
+  "sectionCount": 9,
+  "itemCount": 49,
+  "order": "shuffled; no two consecutive items from the same analyte"
+ },
+ "items": [
+  {
+   "section": "phosphorus",
+   "sectionName": "Phosphorus",
+   "unit": "mg/dL",
+   "note": "Phosphorus moves opposite calcium. When one is high the other tends to be low, which is why they are read as a pair.",
+   "normalRange": {
+    "low": 3.0,
+    "high": 4.5
+   },
+   "id": "phosphorus-02",
+   "critical": false,
+   "state": "hypophosphatemia",
+   "stage1": {
+    "prompt": "The serum phosphorus is 2.4 mg/dL.",
+    "value": 2.4,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. The value you were given is serum phosphorus."
+     },
+     {
+      "id": "B",
+      "text": "Hypophosphatemia",
+      "correct": true,
+      "rationale": "Hypophosphatemia is a low serum phosphorus, under 3.0 mg/dL. At 2.4 mg/dL, this one is below the range of 3.0 to 4.5 mg/dL."
+     },
+     {
+      "id": "C",
+      "text": "Hyperphosphatemia",
+      "correct": false,
+      "rationale": "Hyperphosphatemia is a high serum phosphorus, over 4.5 mg/dL. This value is below the range, not above it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum phosphorus is 3.0 to 4.5 mg/dL. At 2.4 mg/dL, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Rhabdomyolysis in severe depletion",
+      "correct": true,
+      "rationale": "Muscle cells lyse when they cannot maintain themselves."
+     },
+     {
+      "id": "B",
+      "text": "A serum calcium that is high or rising",
+      "correct": true,
+      "rationale": "Phosphorus and calcium move in opposite directions."
+     },
+     {
+      "id": "C",
+      "text": "Refeeding risk after starvation",
+      "correct": true,
+      "rationale": "Reintroducing glucose drives phosphorus into cells and drops the serum level sharply."
+     },
+     {
+      "id": "D",
+      "text": "Muscle cramps and tetany",
+      "correct": false,
+      "rationale": "That belongs to hyperphosphatemia. Nerve membranes destabilized by the accompanying low calcium."
+     },
+     {
+      "id": "E",
+      "text": "Itching and calcium-phosphate deposits in soft tissue",
+      "correct": false,
+      "rationale": "That belongs to hyperphosphatemia. Excess phosphorus precipitates with calcium outside the bone."
+     },
+     {
+      "id": "F",
+      "text": "Bone pain and an increased fracture risk",
+      "correct": true,
+      "rationale": "Chronic depletion pulls mineral from bone."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Phosphorus is required to make ATP, so losing it takes energy from every cell that needs to contract."
+  },
+  {
+   "section": "fluidvolume",
+   "sectionName": "Urine specific gravity",
+   "unit": "",
+   "note": "Specific gravity is read together with volume status. Concentrated urine in a dry patient is the kidney working correctly; concentrated urine in an overloaded patient points to inappropriate ADH.",
+   "normalRange": {
+    "low": 1.005,
+    "high": 1.03
+   },
+   "id": "fluidvolume-05",
+   "critical": false,
+   "state": "dilute",
+   "stage1": {
+    "prompt": "The urine specific gravity is 1.004.",
+    "value": 1.004,
+    "unit": "",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Consistent with dehydration",
+      "correct": false,
+      "rationale": "A dehydrated kidney conserves water and produces concentrated urine with a HIGH specific gravity. This value is dilute."
+     },
+     {
+      "id": "B",
+      "text": "Dilute urine, suggesting fluid volume excess",
+      "correct": true,
+      "rationale": "A specific gravity under 1.005 is dilute urine: the kidney is dumping water, which points to a fluid volume excess. At 1.004, this one is below the range of 1.005 to 1.030."
+     },
+     {
+      "id": "C",
+      "text": "Concentrated urine, suggesting fluid volume deficit",
+      "correct": false,
+      "rationale": "A specific gravity over 1.030 is concentrated urine: the kidney is holding water, which points to a fluid volume deficit. This value is below the range, not above it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal urine specific gravity is 1.005 to 1.030. At 1.004, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Distended neck veins",
+      "correct": true,
+      "rationale": "The classic sign of a full vascular compartment."
+     },
+     {
+      "id": "B",
+      "text": "Crackles in both lung bases with dyspnea",
+      "correct": true,
+      "rationale": "Fluid crossing into the alveoli. A late sign, and the one that makes it an emergency."
+     },
+     {
+      "id": "C",
+      "text": "Dependent pitting edema",
+      "correct": true,
+      "rationale": "Ankles in someone walking, sacrum in someone in bed."
+     },
+     {
+      "id": "D",
+      "text": "Flat neck veins when the patient is supine",
+      "correct": false,
+      "rationale": "That belongs to concentrated urine, suggesting fluid volume deficit. An empty vascular space does not distend the jugular veins."
+     },
+     {
+      "id": "E",
+      "text": "Dry mucous membranes and poor turgor at the sternum",
+      "correct": false,
+      "rationale": "That belongs to concentrated urine, suggesting fluid volume deficit. Assess turgor at the sternum or forehead in an older adult, not the hand."
+     },
+     {
+      "id": "F",
+      "text": "Bounding pulse with a rising blood pressure",
+      "correct": true,
+      "rationale": "A full vascular space transmits a strong pulse."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "There is more water than the body needs, so it is excreted with less solute per volume."
+  },
+  {
+   "section": "phosphorus",
+   "sectionName": "Phosphorus",
+   "unit": "mg/dL",
+   "note": "Phosphorus moves opposite calcium. When one is high the other tends to be low, which is why they are read as a pair.",
+   "normalRange": {
+    "low": 3.0,
+    "high": 4.5
+   },
+   "id": "phosphorus-05",
+   "critical": false,
+   "state": "hyperphosphatemia",
+   "stage1": {
+    "prompt": "The serum phosphorus is 7.2 mg/dL.",
+    "value": 7.2,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperphosphatemia",
+      "correct": true,
+      "rationale": "Hyperphosphatemia is a high serum phosphorus, over 4.5 mg/dL. At 7.2 mg/dL, this one is above the range of 3.0 to 4.5 mg/dL."
+     },
+     {
+      "id": "B",
+      "text": "Hypophosphatemia",
+      "correct": false,
+      "rationale": "Hypophosphatemia is a low serum phosphorus, under 3.0 mg/dL. This value is above the range, not below it."
+     },
+     {
+      "id": "C",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum phosphorus is 3.0 to 4.5 mg/dL. At 7.2 mg/dL, this one falls outside that."
+     },
+     {
+      "id": "D",
+      "text": "Hypercalcemia",
+      "correct": false,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. The value you were given is serum phosphorus."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Positive Trousseau and Chvostek signs",
+      "correct": true,
+      "rationale": "Again, the low calcium rather than the phosphorus itself."
+     },
+     {
+      "id": "B",
+      "text": "Muscle cramps and tetany",
+      "correct": true,
+      "rationale": "Nerve membranes destabilized by the accompanying low calcium."
+     },
+     {
+      "id": "C",
+      "text": "Itching and calcium-phosphate deposits in soft tissue",
+      "correct": true,
+      "rationale": "Excess phosphorus precipitates with calcium outside the bone."
+     },
+     {
+      "id": "D",
+      "text": "Decreased cardiac output and a weak pulse",
+      "correct": false,
+      "rationale": "That belongs to hypophosphatemia. Cardiac muscle needs ATP to contract effectively."
+     },
+     {
+      "id": "E",
+      "text": "Irritability, confusion, and in severe cases seizures",
+      "correct": false,
+      "rationale": "That belongs to hypophosphatemia. Central nervous system cells are energy hungry and fail early."
+     },
+     {
+      "id": "F",
+      "text": "Tingling around the mouth and in the fingertips",
+      "correct": true,
+      "rationale": "The hypocalcemia the excess phosphorus produced."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The symptoms are mostly the hypocalcemia it produces, because phosphorus binds calcium."
+  },
+  {
+   "section": "osmolality",
+   "sectionName": "Serum osmolality",
+   "unit": "mOsm/L",
+   "note": "Potter prints 285 to 295 mOsm/kg. Osmolarity is per liter of solution and osmolality is per kilogram of water; in human physiology the two are treated as the same thing.",
+   "normalRange": {
+    "low": 270,
+    "high": 300
+   },
+   "id": "osmolality-03",
+   "critical": false,
+   "state": "normal",
+   "stage1": {
+    "prompt": "The serum osmolality is 285 mOsm/L.",
+    "value": 285,
+    "unit": "mOsm/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": true,
+      "rationale": "A normal serum osmolality is 270 to 300 mOsm/L. At 285 mOsm/L, this one sits inside it."
+     },
+     {
+      "id": "B",
+      "text": "Hypo-osmolality (dilution)",
+      "correct": false,
+      "rationale": "Hypo-osmolality means the blood is dilute: a serum osmolality under 270 mOsm/L. This value is inside the range."
+     },
+     {
+      "id": "C",
+      "text": "Hyperosmolality (concentration)",
+      "correct": false,
+      "rationale": "Hyperosmolality means the blood is concentrated: a serum osmolality over 300 mOsm/L. This value is inside the range."
+     },
+     {
+      "id": "D",
+      "text": "Hyponatremia",
+      "correct": false,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. The value you were given is serum osmolality."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which statements about this result are true? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "The normal range is 270 to 300 mOsm/L",
+      "correct": true,
+      "rationale": "The range worth memorizing for this test."
+     },
+     {
+      "id": "B",
+      "text": "A value below 270 mOsm/L would be hypo-osmolality (dilution)",
+      "correct": true,
+      "rationale": "The blood is dilute, so water moves into cells and they swell. It travels with hyponatremia."
+     },
+     {
+      "id": "C",
+      "text": "A value above 300 mOsm/L would be hyperosmolality (concentration)",
+      "correct": true,
+      "rationale": "The blood is concentrated, so water is pulled out of cells and they shrink."
+     },
+     {
+      "id": "D",
+      "text": "A normal value here rules out every problem with this electrolyte",
+      "correct": false,
+      "rationale": "It does not. A value can be normal while the patient is compensating, while a related value is abnormal, or while the level is falling rapidly toward trouble."
+     },
+     {
+      "id": "E",
+      "text": "This result still has to be read alongside the related values",
+      "correct": true,
+      "rationale": "Potassium is read with magnesium, calcium with phosphorus and albumin, and any of them with the pH."
+     },
+     {
+      "id": "F",
+      "text": "A single normal result means no further monitoring is needed",
+      "correct": false,
+      "rationale": "Trend matters more than a single point, especially in a patient receiving fluids, diuretics, or replacement."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "E"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Know the range cold: 270 to 300 mOsm/L. A value inside it still has to be read with the related values and with the trend."
+  },
+  {
+   "section": "magnesium",
+   "sectionName": "Magnesium",
+   "unit": "mEq/L",
+   "note": "Some texts report magnesium in mg/dL, where the range is about 1.5 to 2.5. The direction is what is tested, not the boundary.",
+   "normalRange": {
+    "low": 1.3,
+    "high": 2.1
+   },
+   "id": "magnesium-03",
+   "critical": false,
+   "state": "normal",
+   "stage1": {
+    "prompt": "The serum magnesium is 1.7 mEq/L.",
+    "value": 1.7,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. The value you were given is serum magnesium."
+     },
+     {
+      "id": "B",
+      "text": "Within the normal range",
+      "correct": true,
+      "rationale": "A normal serum magnesium is 1.3 to 2.1 mEq/L. At 1.7 mEq/L, this one sits inside it."
+     },
+     {
+      "id": "C",
+      "text": "Hypomagnesemia",
+      "correct": false,
+      "rationale": "Hypomagnesemia is a low serum magnesium, under 1.3 mEq/L. This value is inside the range."
+     },
+     {
+      "id": "D",
+      "text": "Hypermagnesemia",
+      "correct": false,
+      "rationale": "Hypermagnesemia is a high serum magnesium, over 2.1 mEq/L. This value is inside the range."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which statements about this result are true? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "The normal range is 1.3 to 2.1 mEq/L",
+      "correct": true,
+      "rationale": "The range worth memorizing for this test."
+     },
+     {
+      "id": "B",
+      "text": "A value below 1.3 mEq/L would be hypomagnesemia",
+      "correct": true,
+      "rationale": "Magnesium stabilizes the same membrane calcium does, and it also runs the sodium-potassium pump."
+     },
+     {
+      "id": "C",
+      "text": "A value above 2.1 mEq/L would be hypermagnesemia",
+      "correct": true,
+      "rationale": "Everything is suppressed, and it shuts down in a predictable order: reflexes, then pressure and rate, then consciousness, then breathing."
+     },
+     {
+      "id": "D",
+      "text": "A normal value here rules out every problem with this electrolyte",
+      "correct": false,
+      "rationale": "It does not. A value can be normal while the patient is compensating, while a related value is abnormal, or while the level is falling rapidly toward trouble."
+     },
+     {
+      "id": "E",
+      "text": "This result still has to be read alongside the related values",
+      "correct": true,
+      "rationale": "Potassium is read with magnesium, calcium with phosphorus and albumin, and any of them with the pH."
+     },
+     {
+      "id": "F",
+      "text": "A single normal result means no further monitoring is needed",
+      "correct": false,
+      "rationale": "Trend matters more than a single point, especially in a patient receiving fluids, diuretics, or replacement."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "E"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Know the range cold: 1.3 to 2.1 mEq/L. A value inside it still has to be read with the related values and with the trend."
+  },
+  {
+   "section": "sodium",
+   "sectionName": "Sodium",
+   "unit": "mEq/L",
+   "note": "Potter prints 135 to 145. Either boundary is fine, because a tested value is unmistakably high or low.",
+   "normalRange": {
+    "low": 136,
+    "high": 145
+   },
+   "id": "sodium-05",
+   "critical": false,
+   "state": "hypernatremia",
+   "stage1": {
+    "prompt": "The serum sodium is 152 mEq/L.",
+    "value": 152,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperkalemia",
+      "correct": false,
+      "rationale": "Hyperkalemia is a high serum potassium, over 5.0 mEq/L. The value you were given is serum sodium."
+     },
+     {
+      "id": "B",
+      "text": "Hypernatremia",
+      "correct": true,
+      "rationale": "Hypernatremia is a high serum sodium, over 145 mEq/L. At 152 mEq/L, this one is above the range of 136 to 145 mEq/L."
+     },
+     {
+      "id": "C",
+      "text": "Hyponatremia",
+      "correct": false,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. This value is above the range, not below it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum sodium is 136 to 145 mEq/L. At 152 mEq/L, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Seizures in severe or rapid cases",
+      "correct": true,
+      "rationale": "Severe cell shrinkage can tear bridging veins in the brain."
+     },
+     {
+      "id": "B",
+      "text": "Intense thirst",
+      "correct": true,
+      "rationale": "The intact response to a concentrated extracellular space. Its absence in an older adult is the more worrying finding."
+     },
+     {
+      "id": "C",
+      "text": "Dry, sticky mucous membranes",
+      "correct": true,
+      "rationale": "The classic finding, with a dry, swollen, rough tongue."
+     },
+     {
+      "id": "D",
+      "text": "Seizures",
+      "correct": false,
+      "rationale": "That belongs to hyponatremia. Continued cerebral swelling. The rate of the fall matters more than the number."
+     },
+     {
+      "id": "E",
+      "text": "Muscle cramps and weakness",
+      "correct": false,
+      "rationale": "That belongs to hyponatremia. Muscle cells swell too, and the membrane potential is disturbed."
+     },
+     {
+      "id": "F",
+      "text": "Oliguria with a high urine specific gravity",
+      "correct": true,
+      "rationale": "The kidney concentrates urine to hold on to water."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The outside of the cell is concentrated, so water is pulled out and cells shrink."
+  },
+  {
+   "section": "magnesium",
+   "sectionName": "Magnesium",
+   "unit": "mEq/L",
+   "note": "Some texts report magnesium in mg/dL, where the range is about 1.5 to 2.5. The direction is what is tested, not the boundary.",
+   "normalRange": {
+    "low": 1.3,
+    "high": 2.1
+   },
+   "id": "magnesium-02",
+   "critical": false,
+   "state": "hypomagnesemia",
+   "stage1": {
+    "prompt": "The serum magnesium is 1.1 mEq/L.",
+    "value": 1.1,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypomagnesemia",
+      "correct": true,
+      "rationale": "Hypomagnesemia is a low serum magnesium, under 1.3 mEq/L. At 1.1 mEq/L, this one is below the range of 1.3 to 2.1 mEq/L."
+     },
+     {
+      "id": "B",
+      "text": "Hypermagnesemia",
+      "correct": false,
+      "rationale": "Hypermagnesemia is a high serum magnesium, over 2.1 mEq/L. This value is below the range, not above it."
+     },
+     {
+      "id": "C",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum magnesium is 1.3 to 2.1 mEq/L. At 1.1 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "D",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. The value you were given is serum magnesium."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Confusion, irritability, or hallucinations",
+      "correct": true,
+      "rationale": "Frequently attributed to alcohol withdrawal when the magnesium is the cause."
+     },
+     {
+      "id": "B",
+      "text": "Difficulty swallowing",
+      "correct": true,
+      "rationale": "Smooth muscle involvement, and a reason to assess before oral intake."
+     },
+     {
+      "id": "C",
+      "text": "Tetany and seizures",
+      "correct": true,
+      "rationale": "The end point of the same spontaneous firing seen in low calcium."
+     },
+     {
+      "id": "D",
+      "text": "Bradycardia and hypotension",
+      "correct": false,
+      "rationale": "That belongs to hypermagnesemia. Conduction and vascular tone are both suppressed."
+     },
+     {
+      "id": "E",
+      "text": "Prolonged PR interval with a widened QRS",
+      "correct": false,
+      "rationale": "That belongs to hypermagnesemia. Conduction slows throughout, progressing toward heart block."
+     },
+     {
+      "id": "F",
+      "text": "A serum potassium that will not correct despite replacement",
+      "correct": true,
+      "rationale": "The pump that holds potassium inside the cell requires magnesium. This is the giveaway finding."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Magnesium stabilizes the same membrane calcium does, and it also runs the sodium-potassium pump."
+  },
+  {
+   "section": "osmolality",
+   "sectionName": "Serum osmolality",
+   "unit": "mOsm/L",
+   "note": "Potter prints 285 to 295 mOsm/kg. Osmolarity is per liter of solution and osmolality is per kilogram of water; in human physiology the two are treated as the same thing.",
+   "normalRange": {
+    "low": 270,
+    "high": 300
+   },
+   "id": "osmolality-02",
+   "critical": false,
+   "state": "hypoosmolar",
+   "stage1": {
+    "prompt": "The serum osmolality is 265 mOsm/L.",
+    "value": 265,
+    "unit": "mOsm/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperosmolality (concentration)",
+      "correct": false,
+      "rationale": "Hyperosmolality means the blood is concentrated: a serum osmolality over 300 mOsm/L. This value is below the range, not above it."
+     },
+     {
+      "id": "B",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum osmolality is 270 to 300 mOsm/L. At 265 mOsm/L, this one falls outside that."
+     },
+     {
+      "id": "C",
+      "text": "Hyponatremia",
+      "correct": false,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. The value you were given is serum osmolality."
+     },
+     {
+      "id": "D",
+      "text": "Hypo-osmolality (dilution)",
+      "correct": true,
+      "rationale": "Hypo-osmolality means the blood is dilute: a serum osmolality under 270 mOsm/L. At 265 mOsm/L, this one is below the range of 270 to 300 mOsm/L."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "A low urine specific gravity when the cause is water gain",
+      "correct": true,
+      "rationale": "Dilute blood with dilute urine points to excess free water rather than sodium loss."
+     },
+     {
+      "id": "B",
+      "text": "Headache, confusion, and lethargy",
+      "correct": true,
+      "rationale": "Swelling brain cells, the same picture as hyponatremia."
+     },
+     {
+      "id": "C",
+      "text": "Seizures in severe or rapid dilution",
+      "correct": true,
+      "rationale": "Continued cerebral swelling inside a fixed skull."
+     },
+     {
+      "id": "D",
+      "text": "Restlessness and agitation, then lethargy",
+      "correct": false,
+      "rationale": "That belongs to hyperosmolality (concentration). Shrinking brain cells irritate first, then depress."
+     },
+     {
+      "id": "E",
+      "text": "A high urine specific gravity",
+      "correct": false,
+      "rationale": "That belongs to hyperosmolality (concentration). The kidney concentrates urine to conserve water."
+     },
+     {
+      "id": "F",
+      "text": "A serum sodium below 136 mEq/L",
+      "correct": true,
+      "rationale": "Sodium is the main determinant of serum osmolality, so the two fall together."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The blood is dilute, so water moves into cells and they swell. It travels with hyponatremia."
+  },
+  {
+   "section": "acidbase",
+   "sectionName": "Arterial blood gas",
+   "unit": "mixed",
+   "note": "This is the one section where mmHg belongs: it is the unit for the partial pressure of carbon dioxide and oxygen, not for electrolytes.",
+   "id": "acidbase-01",
+   "critical": false,
+   "state": "resp_acidosis",
+   "stage1": {
+    "prompt": "pH 7.28, PaCO2 55 mmHg, HCO3 24 mEq/L.",
+    "values": {
+     "pH": 7.28,
+     "PaCO2": 55,
+     "HCO3": 24
+    },
+    "unit": "pH / mmHg / mEq/L",
+    "question": "Which does this blood gas indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Respiratory alkalosis",
+      "correct": false,
+      "rationale": "Respiratory alkalosis is a high pH with a LOW carbon dioxide: the patient is blowing off too much. pH and carbon dioxide move in opposite directions. That is not the pattern here."
+     },
+     {
+      "id": "B",
+      "text": "Metabolic acidosis",
+      "correct": false,
+      "rationale": "Metabolic acidosis is a low pH with a LOW bicarbonate: acid gained or base lost. pH and bicarbonate move in the same direction. That is not the pattern here."
+     },
+     {
+      "id": "C",
+      "text": "Metabolic alkalosis",
+      "correct": false,
+      "rationale": "Metabolic alkalosis is a high pH with a HIGH bicarbonate: base gained or acid lost. pH and bicarbonate move in the same direction. That is not the pattern here."
+     },
+     {
+      "id": "D",
+      "text": "Respiratory acidosis",
+      "correct": true,
+      "rationale": "The pH is low and the carbon dioxide is high, moving in opposite directions. Respiratory Opposite. The bicarbonate is still normal, so this is uncompensated."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Drowsiness, confusion, and a declining level of consciousness",
+      "correct": true,
+      "rationale": "Retained carbon dioxide is a central nervous system depressant."
+     },
+     {
+      "id": "B",
+      "text": "Headache",
+      "correct": true,
+      "rationale": "Carbon dioxide dilates cerebral vessels."
+     },
+     {
+      "id": "C",
+      "text": "Slow, shallow, or ineffective respirations",
+      "correct": true,
+      "rationale": "Hypoventilation is the cause, not the compensation."
+     },
+     {
+      "id": "D",
+      "text": "A rising serum potassium",
+      "correct": true,
+      "rationale": "Acidosis drives potassium out of cells, so the serum level climbs without the body gaining any."
+     },
+     {
+      "id": "E",
+      "text": "Tingling around the mouth and in the fingertips",
+      "correct": false,
+      "rationale": "That belongs to respiratory alkalosis. Alkalosis binds more calcium to albumin, so the free calcium falls and nerves become irritable."
+     },
+     {
+      "id": "F",
+      "text": "Carpal spasm without a low serum calcium",
+      "correct": false,
+      "rationale": "That belongs to respiratory alkalosis. The ionized calcium fell even though the total is normal. The treatment is the breathing."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "ROME: Respiratory Opposite, Metabolic Equal. Read the pH, then the carbon dioxide, then the bicarbonate, then decide the compensation."
+  },
+  {
+   "section": "sodium",
+   "sectionName": "Sodium",
+   "unit": "mEq/L",
+   "note": "Potter prints 135 to 145. Either boundary is fine, because a tested value is unmistakably high or low.",
+   "normalRange": {
+    "low": 136,
+    "high": 145
+   },
+   "id": "sodium-01",
+   "critical": true,
+   "state": "hyponatremia",
+   "stage1": {
+    "prompt": "The serum sodium is 118 mEq/L.",
+    "value": 118,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypokalemia",
+      "correct": false,
+      "rationale": "Hypokalemia is a low serum potassium, under 3.5 mEq/L. The value you were given is serum sodium."
+     },
+     {
+      "id": "B",
+      "text": "Hyponatremia",
+      "correct": true,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. At 118 mEq/L, this one is below the range of 136 to 145 mEq/L."
+     },
+     {
+      "id": "C",
+      "text": "Hypernatremia",
+      "correct": false,
+      "rationale": "Hypernatremia is a high serum sodium, over 145 mEq/L. This value is below the range, not above it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum sodium is 136 to 145 mEq/L. At 118 mEq/L, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Headache, confusion, and lethargy",
+      "correct": true,
+      "rationale": "Brain cells swell inside a skull that cannot expand. Neurologic change is the first and most important finding."
+     },
+     {
+      "id": "B",
+      "text": "Seizures",
+      "correct": true,
+      "rationale": "Continued cerebral swelling. The rate of the fall matters more than the number."
+     },
+     {
+      "id": "C",
+      "text": "Muscle cramps and weakness",
+      "correct": true,
+      "rationale": "Muscle cells swell too, and the membrane potential is disturbed."
+     },
+     {
+      "id": "D",
+      "text": "Diminished deep tendon reflexes",
+      "correct": true,
+      "rationale": "Generalized neuromuscular depression as the cells take on water."
+     },
+     {
+      "id": "E",
+      "text": "Intense thirst",
+      "correct": false,
+      "rationale": "That belongs to hypernatremia. The intact response to a concentrated extracellular space. Its absence in an older adult is the more worrying finding."
+     },
+     {
+      "id": "F",
+      "text": "Dry, sticky mucous membranes",
+      "correct": false,
+      "rationale": "That belongs to hypernatremia. The classic finding, with a dry, swollen, rough tongue."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The outside of the cell is dilute, so water moves in and cells swell. In the skull that is the whole problem."
+  },
+  {
+   "section": "magnesium",
+   "sectionName": "Magnesium",
+   "unit": "mEq/L",
+   "note": "Some texts report magnesium in mg/dL, where the range is about 1.5 to 2.5. The direction is what is tested, not the boundary.",
+   "normalRange": {
+    "low": 1.3,
+    "high": 2.1
+   },
+   "id": "magnesium-04",
+   "critical": false,
+   "state": "hypermagnesemia",
+   "stage1": {
+    "prompt": "The serum magnesium is 3.2 mEq/L.",
+    "value": 3.2,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum magnesium is 1.3 to 2.1 mEq/L. At 3.2 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "B",
+      "text": "Hypercalcemia",
+      "correct": false,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. The value you were given is serum magnesium."
+     },
+     {
+      "id": "C",
+      "text": "Hypermagnesemia",
+      "correct": true,
+      "rationale": "Hypermagnesemia is a high serum magnesium, over 2.1 mEq/L. At 3.2 mEq/L, this one is above the range of 1.3 to 2.1 mEq/L."
+     },
+     {
+      "id": "D",
+      "text": "Hypomagnesemia",
+      "correct": false,
+      "rationale": "Hypomagnesemia is a low serum magnesium, under 1.3 mEq/L. This value is above the range, not below it."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Bradycardia and hypotension",
+      "correct": true,
+      "rationale": "Conduction and vascular tone are both suppressed."
+     },
+     {
+      "id": "B",
+      "text": "Prolonged PR interval with a widened QRS",
+      "correct": true,
+      "rationale": "Conduction slows throughout, progressing toward heart block."
+     },
+     {
+      "id": "C",
+      "text": "Flushing and a sensation of warmth",
+      "correct": true,
+      "rationale": "An early and distinctive finding, easy to dismiss as anxiety or comfort."
+     },
+     {
+      "id": "D",
+      "text": "Drowsiness progressing to lethargy and coma",
+      "correct": true,
+      "rationale": "Generalized central nervous system depression."
+     },
+     {
+      "id": "E",
+      "text": "Tetany and seizures",
+      "correct": false,
+      "rationale": "That belongs to hypomagnesemia. The end point of the same spontaneous firing seen in low calcium."
+     },
+     {
+      "id": "F",
+      "text": "Hyperactive deep tendon reflexes with tremor",
+      "correct": false,
+      "rationale": "That belongs to hypomagnesemia. The overexcitable picture, indistinguishable from low calcium at the bedside."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Everything is suppressed, and it shuts down in a predictable order: reflexes, then pressure and rate, then consciousness, then breathing."
+  },
+  {
+   "section": "potassium",
+   "sectionName": "Potassium",
+   "unit": "mEq/L",
+   "note": "The range is narrow because 98 percent of body potassium is inside cells. A small serum change is a large change in the gradient.",
+   "normalRange": {
+    "low": 3.5,
+    "high": 5.0
+   },
+   "id": "potassium-04",
+   "critical": false,
+   "state": "normal",
+   "stage1": {
+    "prompt": "The serum potassium is 4.2 mEq/L.",
+    "value": 4.2,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperkalemia",
+      "correct": false,
+      "rationale": "Hyperkalemia is a high serum potassium, over 5.0 mEq/L. This value is inside the range."
+     },
+     {
+      "id": "B",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. The value you were given is serum potassium."
+     },
+     {
+      "id": "C",
+      "text": "Within the normal range",
+      "correct": true,
+      "rationale": "A normal serum potassium is 3.5 to 5.0 mEq/L. At 4.2 mEq/L, this one sits inside it."
+     },
+     {
+      "id": "D",
+      "text": "Hypokalemia",
+      "correct": false,
+      "rationale": "Hypokalemia is a low serum potassium, under 3.5 mEq/L. This value is inside the range."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which statements about this result are true? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "The normal range is 3.5 to 5.0 mEq/L",
+      "correct": true,
+      "rationale": "The range worth memorizing for this test."
+     },
+     {
+      "id": "B",
+      "text": "A value below 3.5 mEq/L would be hypokalemia",
+      "correct": true,
+      "rationale": "Cells are harder to depolarize, so everything slows and weakens. This is the opposite of what a deficiency usually does."
+     },
+     {
+      "id": "C",
+      "text": "A value above 5 mEq/L would be hyperkalemia",
+      "correct": true,
+      "rationale": "Cells sit closer to threshold and fire too easily, then stay depolarized and cannot reset."
+     },
+     {
+      "id": "D",
+      "text": "A normal value here rules out every problem with this electrolyte",
+      "correct": false,
+      "rationale": "It does not. A value can be normal while the patient is compensating, while a related value is abnormal, or while the level is falling rapidly toward trouble."
+     },
+     {
+      "id": "E",
+      "text": "This result still has to be read alongside the related values",
+      "correct": true,
+      "rationale": "Potassium is read with magnesium, calcium with phosphorus and albumin, and any of them with the pH."
+     },
+     {
+      "id": "F",
+      "text": "A single normal result means no further monitoring is needed",
+      "correct": false,
+      "rationale": "Trend matters more than a single point, especially in a patient receiving fluids, diuretics, or replacement."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "E"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Know the range cold: 3.5 to 5.0 mEq/L. A value inside it still has to be read with the related values and with the trend."
+  },
+  {
+   "section": "chloride",
+   "sectionName": "Chloride",
+   "unit": "mEq/L",
+   "note": "Chloride follows sodium and moves opposite bicarbonate, so it is read as an acid-base clue more than as a problem of its own.",
+   "normalRange": {
+    "low": 98,
+    "high": 106
+   },
+   "id": "chloride-02",
+   "critical": false,
+   "state": "hypochloremia",
+   "stage1": {
+    "prompt": "The serum chloride is 94 mEq/L.",
+    "value": 94,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum chloride is 98 to 106 mEq/L. At 94 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "B",
+      "text": "Hyponatremia",
+      "correct": false,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. The value you were given is serum chloride."
+     },
+     {
+      "id": "C",
+      "text": "Hypochloremia",
+      "correct": true,
+      "rationale": "Hypochloremia is a low serum chloride, under 98 mEq/L. At 94 mEq/L, this one is below the range of 98 to 106 mEq/L."
+     },
+     {
+      "id": "D",
+      "text": "Hyperchloremia",
+      "correct": false,
+      "rationale": "Hyperchloremia is a high serum chloride, over 106 mEq/L. This value is below the range, not above it."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "A rising serum bicarbonate",
+      "correct": true,
+      "rationale": "Bicarbonate increases as chloride falls, which is the definition of the accompanying alkalosis."
+     },
+     {
+      "id": "B",
+      "text": "Muscle twitching, tremor, and hyperexcitability",
+      "correct": true,
+      "rationale": "The accompanying alkalosis lowers ionized calcium and makes nerves irritable."
+     },
+     {
+      "id": "C",
+      "text": "Tetany and hyperactive reflexes",
+      "correct": true,
+      "rationale": "The same alkalosis-driven drop in free calcium."
+     },
+     {
+      "id": "D",
+      "text": "Declining level of consciousness",
+      "correct": false,
+      "rationale": "That belongs to hyperchloremia. Acidosis depresses the central nervous system as it worsens."
+     },
+     {
+      "id": "E",
+      "text": "A falling serum bicarbonate",
+      "correct": false,
+      "rationale": "That belongs to hyperchloremia. Bicarbonate decreases as chloride rises."
+     },
+     {
+      "id": "F",
+      "text": "A history of vomiting or nasogastric suction",
+      "correct": true,
+      "rationale": "Gastric fluid is rich in chloride, and losing it is the commonest cause."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Chloride is usually lost with gastric acid, and bicarbonate rises to take its place, producing a metabolic alkalosis."
+  },
+  {
+   "section": "acidbase",
+   "sectionName": "Arterial blood gas",
+   "unit": "mixed",
+   "note": "This is the one section where mmHg belongs: it is the unit for the partial pressure of carbon dioxide and oxygen, not for electrolytes.",
+   "id": "acidbase-02",
+   "critical": false,
+   "state": "resp_alkalosis",
+   "stage1": {
+    "prompt": "pH 7.50, PaCO2 28 mmHg, HCO3 23 mEq/L.",
+    "values": {
+     "pH": 7.5,
+     "PaCO2": 28,
+     "HCO3": 23
+    },
+    "unit": "pH / mmHg / mEq/L",
+    "question": "Which does this blood gas indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Respiratory alkalosis",
+      "correct": true,
+      "rationale": "The pH is high and the carbon dioxide is low, again moving opposite one another. The bicarbonate has not yet changed."
+     },
+     {
+      "id": "B",
+      "text": "Respiratory acidosis",
+      "correct": false,
+      "rationale": "Respiratory acidosis is a low pH with a HIGH carbon dioxide: the lungs are not blowing it off. pH and carbon dioxide move in opposite directions. That is not the pattern here."
+     },
+     {
+      "id": "C",
+      "text": "Metabolic acidosis",
+      "correct": false,
+      "rationale": "Metabolic acidosis is a low pH with a LOW bicarbonate: acid gained or base lost. pH and bicarbonate move in the same direction. That is not the pattern here."
+     },
+     {
+      "id": "D",
+      "text": "Metabolic alkalosis",
+      "correct": false,
+      "rationale": "Metabolic alkalosis is a high pH with a HIGH bicarbonate: base gained or acid lost. pH and bicarbonate move in the same direction. That is not the pattern here."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Light-headedness and anxiety",
+      "correct": true,
+      "rationale": "Cerebral vasoconstriction from the low carbon dioxide."
+     },
+     {
+      "id": "B",
+      "text": "A falling serum potassium",
+      "correct": true,
+      "rationale": "Alkalosis drives potassium into cells."
+     },
+     {
+      "id": "C",
+      "text": "Blurred vision",
+      "correct": true,
+      "rationale": "Reduced cerebral blood flow from vasoconstriction."
+     },
+     {
+      "id": "D",
+      "text": "Headache",
+      "correct": false,
+      "rationale": "That belongs to respiratory acidosis. Carbon dioxide dilates cerebral vessels."
+     },
+     {
+      "id": "E",
+      "text": "Slow, shallow, or ineffective respirations",
+      "correct": false,
+      "rationale": "That belongs to respiratory acidosis. Hypoventilation is the cause, not the compensation."
+     },
+     {
+      "id": "F",
+      "text": "Rapid, deep breathing",
+      "correct": true,
+      "rationale": "Hyperventilation is the cause of this imbalance."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "ROME: Respiratory Opposite, Metabolic Equal. Read the pH, then the carbon dioxide, then the bicarbonate, then decide the compensation."
+  },
+  {
+   "section": "sodium",
+   "sectionName": "Sodium",
+   "unit": "mEq/L",
+   "note": "Potter prints 135 to 145. Either boundary is fine, because a tested value is unmistakably high or low.",
+   "normalRange": {
+    "low": 136,
+    "high": 145
+   },
+   "id": "sodium-04",
+   "critical": false,
+   "state": "normal",
+   "stage1": {
+    "prompt": "The serum sodium is 140 mEq/L.",
+    "value": 140,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": true,
+      "rationale": "A normal serum sodium is 136 to 145 mEq/L. At 140 mEq/L, this one sits inside it."
+     },
+     {
+      "id": "B",
+      "text": "Hyponatremia",
+      "correct": false,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. This value is inside the range."
+     },
+     {
+      "id": "C",
+      "text": "Hypernatremia",
+      "correct": false,
+      "rationale": "Hypernatremia is a high serum sodium, over 145 mEq/L. This value is inside the range."
+     },
+     {
+      "id": "D",
+      "text": "Hypokalemia",
+      "correct": false,
+      "rationale": "Hypokalemia is a low serum potassium, under 3.5 mEq/L. The value you were given is serum sodium."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which statements about this result are true? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "The normal range is 136 to 145 mEq/L",
+      "correct": true,
+      "rationale": "The range worth memorizing for this test."
+     },
+     {
+      "id": "B",
+      "text": "A value below 136 mEq/L would be hyponatremia",
+      "correct": true,
+      "rationale": "The outside of the cell is dilute, so water moves in and cells swell. In the skull that is the whole problem."
+     },
+     {
+      "id": "C",
+      "text": "A value above 145 mEq/L would be hypernatremia",
+      "correct": true,
+      "rationale": "The outside of the cell is concentrated, so water is pulled out and cells shrink."
+     },
+     {
+      "id": "D",
+      "text": "A normal value here rules out every problem with this electrolyte",
+      "correct": false,
+      "rationale": "It does not. A value can be normal while the patient is compensating, while a related value is abnormal, or while the level is falling rapidly toward trouble."
+     },
+     {
+      "id": "E",
+      "text": "This result still has to be read alongside the related values",
+      "correct": true,
+      "rationale": "Potassium is read with magnesium, calcium with phosphorus and albumin, and any of them with the pH."
+     },
+     {
+      "id": "F",
+      "text": "A single normal result means no further monitoring is needed",
+      "correct": false,
+      "rationale": "Trend matters more than a single point, especially in a patient receiving fluids, diuretics, or replacement."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "E"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Know the range cold: 136 to 145 mEq/L. A value inside it still has to be read with the related values and with the trend."
+  },
+  {
+   "section": "calcium",
+   "sectionName": "Calcium, total serum",
+   "unit": "mg/dL",
+   "note": "Roughly half of serum calcium is bound to albumin, so a low albumin lowers the total without lowering the ionized calcium that is actually working. Ionized calcium runs 4.5 to 5.6 mg/dL.",
+   "normalRange": {
+    "low": 9.0,
+    "high": 10.5
+   },
+   "id": "calcium-03",
+   "critical": false,
+   "state": "hypocalcemia",
+   "stage1": {
+    "prompt": "The total serum calcium is 8.4 mg/dL.",
+    "value": 8.4,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypercalcemia",
+      "correct": false,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. This value is below the range, not above it."
+     },
+     {
+      "id": "B",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal total serum calcium is 9.0 to 10.5 mg/dL. At 8.4 mg/dL, this one falls outside that."
+     },
+     {
+      "id": "C",
+      "text": "Hypomagnesemia",
+      "correct": false,
+      "rationale": "Hypomagnesemia is a low serum magnesium, under 1.3 mEq/L. The value you were given is total serum calcium."
+     },
+     {
+      "id": "D",
+      "text": "Hypocalcemia",
+      "correct": true,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. At 8.4 mg/dL, this one is below the range of 9.0 to 10.5 mg/dL."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Tingling around the mouth and in the fingertips",
+      "correct": true,
+      "rationale": "Perioral and fingertip paresthesia is the earliest symptom."
+     },
+     {
+      "id": "B",
+      "text": "Carpal spasm when a blood pressure cuff is inflated above systolic",
+      "correct": true,
+      "rationale": "A positive Trousseau sign, and the more specific of the two bedside signs."
+     },
+     {
+      "id": "C",
+      "text": "Anorexia, nausea, and vomiting",
+      "correct": false,
+      "rationale": "That belongs to hypercalcemia. Gastrointestinal slowing with the classic \"groans\" of the mnemonic."
+     },
+     {
+      "id": "D",
+      "text": "Kidney stones with flank pain",
+      "correct": false,
+      "rationale": "That belongs to hypercalcemia. Excess calcium precipitates in the renal tract. Strain all urine."
+     },
+     {
+      "id": "E",
+      "text": "Hyperactive bowel sounds with diarrhea and cramping",
+      "correct": true,
+      "rationale": "Smooth muscle becomes overexcitable along with everything else."
+     },
+     {
+      "id": "F",
+      "text": "Tetany and, at the extreme, seizures",
+      "correct": true,
+      "rationale": "The end point of uncontrolled spontaneous firing."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "E",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Calcium blocks sodium channels on the nerve membrane. Take it away and nerves fire on their own."
+  },
+  {
+   "section": "potassium",
+   "sectionName": "Potassium",
+   "unit": "mEq/L",
+   "note": "The range is narrow because 98 percent of body potassium is inside cells. A small serum change is a large change in the gradient.",
+   "normalRange": {
+    "low": 3.5,
+    "high": 5.0
+   },
+   "id": "potassium-06",
+   "critical": true,
+   "state": "hyperkalemia",
+   "stage1": {
+    "prompt": "The serum potassium is 6.7 mEq/L.",
+    "value": 6.7,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperkalemia",
+      "correct": true,
+      "rationale": "Hyperkalemia is a high serum potassium, over 5.0 mEq/L. At 6.7 mEq/L, this one is above the range of 3.5 to 5.0 mEq/L."
+     },
+     {
+      "id": "B",
+      "text": "Hypokalemia",
+      "correct": false,
+      "rationale": "Hypokalemia is a low serum potassium, under 3.5 mEq/L. This value is above the range, not below it."
+     },
+     {
+      "id": "C",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum potassium is 3.5 to 5.0 mEq/L. At 6.7 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "D",
+      "text": "Hypercalcemia",
+      "correct": false,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. The value you were given is serum potassium."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Ascending flaccid paralysis",
+      "correct": true,
+      "rationale": "The late neuromuscular picture, once the membrane stays depolarized."
+     },
+     {
+      "id": "B",
+      "text": "Hyperactive bowel sounds with diarrhea",
+      "correct": true,
+      "rationale": "The gut speeds up, which is the mirror image of hypokalemia and a useful bedside discriminator."
+     },
+     {
+      "id": "C",
+      "text": "ST depression with a flattened or inverted T wave",
+      "correct": false,
+      "rationale": "That belongs to hypokalemia. Low potassium flattens the T wave, the opposite of what high potassium does."
+     },
+     {
+      "id": "D",
+      "text": "Hypoactive bowel sounds and constipation",
+      "correct": false,
+      "rationale": "That belongs to hypokalemia. Smooth muscle slows with everything else, and at the extreme this becomes a paralytic ileus."
+     },
+     {
+      "id": "E",
+      "text": "Widened QRS with a prolonged PR interval",
+      "correct": true,
+      "rationale": "Conduction slows as the membrane fails to repolarize, progressing toward a sine wave."
+     },
+     {
+      "id": "F",
+      "text": "Early tingling and muscle twitching",
+      "correct": true,
+      "rationale": "Cells near threshold fire spontaneously before they fail."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "E",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Cells sit closer to threshold and fire too easily, then stay depolarized and cannot reset."
+  },
+  {
+   "section": "osmolality",
+   "sectionName": "Serum osmolality",
+   "unit": "mOsm/L",
+   "note": "Potter prints 285 to 295 mOsm/kg. Osmolarity is per liter of solution and osmolality is per kilogram of water; in human physiology the two are treated as the same thing.",
+   "normalRange": {
+    "low": 270,
+    "high": 300
+   },
+   "id": "osmolality-01",
+   "critical": false,
+   "state": "hypoosmolar",
+   "stage1": {
+    "prompt": "The serum osmolality is 255 mOsm/L.",
+    "value": 255,
+    "unit": "mOsm/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum osmolality is 270 to 300 mOsm/L. At 255 mOsm/L, this one falls outside that."
+     },
+     {
+      "id": "B",
+      "text": "Hyponatremia",
+      "correct": false,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. The value you were given is serum osmolality."
+     },
+     {
+      "id": "C",
+      "text": "Hypo-osmolality (dilution)",
+      "correct": true,
+      "rationale": "Hypo-osmolality means the blood is dilute: a serum osmolality under 270 mOsm/L. At 255 mOsm/L, this one is below the range of 270 to 300 mOsm/L."
+     },
+     {
+      "id": "D",
+      "text": "Hyperosmolality (concentration)",
+      "correct": false,
+      "rationale": "Hyperosmolality means the blood is concentrated: a serum osmolality over 300 mOsm/L. This value is below the range, not above it."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Headache, confusion, and lethargy",
+      "correct": true,
+      "rationale": "Swelling brain cells, the same picture as hyponatremia."
+     },
+     {
+      "id": "B",
+      "text": "Seizures in severe or rapid dilution",
+      "correct": true,
+      "rationale": "Continued cerebral swelling inside a fixed skull."
+     },
+     {
+      "id": "C",
+      "text": "Muscle cramps and weakness",
+      "correct": true,
+      "rationale": "Muscle cells swell as well."
+     },
+     {
+      "id": "D",
+      "text": "A serum sodium below 136 mEq/L",
+      "correct": true,
+      "rationale": "Sodium is the main determinant of serum osmolality, so the two fall together."
+     },
+     {
+      "id": "E",
+      "text": "Intense thirst",
+      "correct": false,
+      "rationale": "That belongs to hyperosmolality (concentration). The intact response to concentrated blood."
+     },
+     {
+      "id": "F",
+      "text": "Dry, sticky mucous membranes",
+      "correct": false,
+      "rationale": "That belongs to hyperosmolality (concentration). Water has been drawn out of the tissues."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The blood is dilute, so water moves into cells and they swell. It travels with hyponatremia."
+  },
+  {
+   "section": "calcium",
+   "sectionName": "Calcium, total serum",
+   "unit": "mg/dL",
+   "note": "Roughly half of serum calcium is bound to albumin, so a low albumin lowers the total without lowering the ionized calcium that is actually working. Ionized calcium runs 4.5 to 5.6 mg/dL.",
+   "normalRange": {
+    "low": 9.0,
+    "high": 10.5
+   },
+   "id": "calcium-05",
+   "critical": false,
+   "state": "hypercalcemia",
+   "stage1": {
+    "prompt": "The total serum calcium is 11.8 mg/dL.",
+    "value": 11.8,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperkalemia",
+      "correct": false,
+      "rationale": "Hyperkalemia is a high serum potassium, over 5.0 mEq/L. The value you were given is total serum calcium."
+     },
+     {
+      "id": "B",
+      "text": "Hypercalcemia",
+      "correct": true,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. At 11.8 mg/dL, this one is above the range of 9.0 to 10.5 mg/dL."
+     },
+     {
+      "id": "C",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. This value is above the range, not below it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal total serum calcium is 9.0 to 10.5 mg/dL. At 11.8 mg/dL, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Kidney stones with flank pain",
+      "correct": true,
+      "rationale": "Excess calcium precipitates in the renal tract. Strain all urine."
+     },
+     {
+      "id": "B",
+      "text": "Lethargy and confusion",
+      "correct": true,
+      "rationale": "Often mistaken for dementia in an older adult."
+     },
+     {
+      "id": "C",
+      "text": "Polyuria leading to dehydration",
+      "correct": true,
+      "rationale": "The kidney loses concentrating ability, which concentrates the calcium further."
+     },
+     {
+      "id": "D",
+      "text": "Tingling around the mouth and in the fingertips",
+      "correct": false,
+      "rationale": "That belongs to hypocalcemia. Perioral and fingertip paresthesia is the earliest symptom."
+     },
+     {
+      "id": "E",
+      "text": "Carpal spasm when a blood pressure cuff is inflated above systolic",
+      "correct": false,
+      "rationale": "That belongs to hypocalcemia. A positive Trousseau sign, and the more specific of the two bedside signs."
+     },
+     {
+      "id": "F",
+      "text": "Anorexia, nausea, and vomiting",
+      "correct": true,
+      "rationale": "Gastrointestinal slowing with the classic \"groans\" of the mnemonic."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Extra calcium seals the membrane shut. Sodium cannot get through and cells will not depolarize."
+  },
+  {
+   "section": "potassium",
+   "sectionName": "Potassium",
+   "unit": "mEq/L",
+   "note": "The range is narrow because 98 percent of body potassium is inside cells. A small serum change is a large change in the gradient.",
+   "normalRange": {
+    "low": 3.5,
+    "high": 5.0
+   },
+   "id": "potassium-05",
+   "critical": false,
+   "state": "hyperkalemia",
+   "stage1": {
+    "prompt": "The serum potassium is 5.8 mEq/L.",
+    "value": 5.8,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypokalemia",
+      "correct": false,
+      "rationale": "Hypokalemia is a low serum potassium, under 3.5 mEq/L. This value is above the range, not below it."
+     },
+     {
+      "id": "B",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum potassium is 3.5 to 5.0 mEq/L. At 5.8 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "C",
+      "text": "Hypercalcemia",
+      "correct": false,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. The value you were given is serum potassium."
+     },
+     {
+      "id": "D",
+      "text": "Hyperkalemia",
+      "correct": true,
+      "rationale": "Hyperkalemia is a high serum potassium, over 5.0 mEq/L. At 5.8 mEq/L, this one is above the range of 3.5 to 5.0 mEq/L."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Flattened or absent P waves",
+      "correct": true,
+      "rationale": "Atrial conduction fails before ventricular conduction does."
+     },
+     {
+      "id": "B",
+      "text": "Tall, peaked T waves",
+      "correct": true,
+      "rationale": "The earliest and most important cardiac change, and the reason this imbalance kills fastest."
+     },
+     {
+      "id": "C",
+      "text": "Widened QRS with a prolonged PR interval",
+      "correct": true,
+      "rationale": "Conduction slows as the membrane fails to repolarize, progressing toward a sine wave."
+     },
+     {
+      "id": "D",
+      "text": "Weakness beginning in the legs and ascending",
+      "correct": false,
+      "rationale": "That belongs to hypokalemia. Hypokalemic weakness is ascending, and the muscles of respiration are last in line."
+     },
+     {
+      "id": "E",
+      "text": "A prominent U wave on the monitor",
+      "correct": false,
+      "rationale": "That belongs to hypokalemia. The signature of hypokalemia: a wave appearing where there should be nothing."
+     },
+     {
+      "id": "F",
+      "text": "Bradycardia with a weak, irregular pulse",
+      "correct": true,
+      "rationale": "Conduction failure slows and destabilizes the rate."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Cells sit closer to threshold and fire too easily, then stay depolarized and cannot reset."
+  },
+  {
+   "section": "chloride",
+   "sectionName": "Chloride",
+   "unit": "mEq/L",
+   "note": "Chloride follows sodium and moves opposite bicarbonate, so it is read as an acid-base clue more than as a problem of its own.",
+   "normalRange": {
+    "low": 98,
+    "high": 106
+   },
+   "id": "chloride-04",
+   "critical": false,
+   "state": "hyperchloremia",
+   "stage1": {
+    "prompt": "The serum chloride is 112 mEq/L.",
+    "value": 112,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperchloremia",
+      "correct": true,
+      "rationale": "Hyperchloremia is a high serum chloride, over 106 mEq/L. At 112 mEq/L, this one is above the range of 98 to 106 mEq/L."
+     },
+     {
+      "id": "B",
+      "text": "Hypochloremia",
+      "correct": false,
+      "rationale": "Hypochloremia is a low serum chloride, under 98 mEq/L. This value is above the range, not below it."
+     },
+     {
+      "id": "C",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum chloride is 98 to 106 mEq/L. At 112 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "D",
+      "text": "Hypernatremia",
+      "correct": false,
+      "rationale": "Hypernatremia is a high serum sodium, over 145 mEq/L. The value you were given is serum chloride."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "A history of large-volume normal saline infusion",
+      "correct": true,
+      "rationale": "0.9 percent saline delivers chloride in excess of plasma and can produce this."
+     },
+     {
+      "id": "B",
+      "text": "Deep, rapid Kussmaul respirations",
+      "correct": true,
+      "rationale": "The lungs blow off carbon dioxide to compensate for the metabolic acidosis."
+     },
+     {
+      "id": "C",
+      "text": "Weakness and lethargy",
+      "correct": true,
+      "rationale": "Generalized effects of acidosis on cellular function."
+     },
+     {
+      "id": "D",
+      "text": "Declining level of consciousness",
+      "correct": true,
+      "rationale": "Acidosis depresses the central nervous system as it worsens."
+     },
+     {
+      "id": "E",
+      "text": "Tetany and hyperactive reflexes",
+      "correct": false,
+      "rationale": "That belongs to hypochloremia. The same alkalosis-driven drop in free calcium."
+     },
+     {
+      "id": "F",
+      "text": "Slow, shallow respirations",
+      "correct": false,
+      "rationale": "That belongs to hypochloremia. The lungs retain carbon dioxide to compensate for the metabolic alkalosis."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Chloride rises as bicarbonate falls, so it usually travels with a metabolic acidosis."
+  },
+  {
+   "section": "fluidvolume",
+   "sectionName": "Urine specific gravity",
+   "unit": "",
+   "note": "Specific gravity is read together with volume status. Concentrated urine in a dry patient is the kidney working correctly; concentrated urine in an overloaded patient points to inappropriate ADH.",
+   "normalRange": {
+    "low": 1.005,
+    "high": 1.03
+   },
+   "id": "fluidvolume-03",
+   "critical": false,
+   "state": "normal",
+   "stage1": {
+    "prompt": "The urine specific gravity is 1.018.",
+    "value": 1.018,
+    "unit": "",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Dilute urine, suggesting fluid volume excess",
+      "correct": false,
+      "rationale": "A specific gravity under 1.005 is dilute urine: the kidney is dumping water, which points to a fluid volume excess. This value is inside the range."
+     },
+     {
+      "id": "B",
+      "text": "Concentrated urine, suggesting fluid volume deficit",
+      "correct": false,
+      "rationale": "A specific gravity over 1.030 is concentrated urine: the kidney is holding water, which points to a fluid volume deficit. This value is inside the range."
+     },
+     {
+      "id": "C",
+      "text": "Consistent with dehydration",
+      "correct": false,
+      "rationale": "Dehydration concentrates the urine, pushing the specific gravity above 1.030. This value is inside the normal range."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": true,
+      "rationale": "A normal urine specific gravity is 1.005 to 1.030. At 1.018, this one sits inside it."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which statements about this result are true? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "The normal range is 1.005 to 1.030",
+      "correct": true,
+      "rationale": "The range worth memorizing for this test."
+     },
+     {
+      "id": "B",
+      "text": "A value below 1.005  would be dilute urine, suggesting fluid volume excess",
+      "correct": true,
+      "rationale": "There is more water than the body needs, so it is excreted with less solute per volume."
+     },
+     {
+      "id": "C",
+      "text": "A value above 1.03  would be concentrated urine, suggesting fluid volume deficit",
+      "correct": true,
+      "rationale": "The kidney is holding on to water, so the urine carries more solute per volume."
+     },
+     {
+      "id": "D",
+      "text": "A normal value here rules out every problem with this electrolyte",
+      "correct": false,
+      "rationale": "It does not. A value can be normal while the patient is compensating, while a related value is abnormal, or while the level is falling rapidly toward trouble."
+     },
+     {
+      "id": "E",
+      "text": "This result still has to be read alongside the related values",
+      "correct": true,
+      "rationale": "Potassium is read with magnesium, calcium with phosphorus and albumin, and any of them with the pH."
+     },
+     {
+      "id": "F",
+      "text": "A single normal result means no further monitoring is needed",
+      "correct": false,
+      "rationale": "Trend matters more than a single point, especially in a patient receiving fluids, diuretics, or replacement."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "E"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Know the range cold: 1.005 to 1.030. A value inside it still has to be read with the related values and with the trend."
+  },
+  {
+   "section": "phosphorus",
+   "sectionName": "Phosphorus",
+   "unit": "mg/dL",
+   "note": "Phosphorus moves opposite calcium. When one is high the other tends to be low, which is why they are read as a pair.",
+   "normalRange": {
+    "low": 3.0,
+    "high": 4.5
+   },
+   "id": "phosphorus-01",
+   "critical": true,
+   "state": "hypophosphatemia",
+   "stage1": {
+    "prompt": "The serum phosphorus is 1.6 mg/dL.",
+    "value": 1.6,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypophosphatemia",
+      "correct": true,
+      "rationale": "Hypophosphatemia is a low serum phosphorus, under 3.0 mg/dL. At 1.6 mg/dL, this one is below the range of 3.0 to 4.5 mg/dL."
+     },
+     {
+      "id": "B",
+      "text": "Hyperphosphatemia",
+      "correct": false,
+      "rationale": "Hyperphosphatemia is a high serum phosphorus, over 4.5 mg/dL. This value is below the range, not above it."
+     },
+     {
+      "id": "C",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum phosphorus is 3.0 to 4.5 mg/dL. At 1.6 mg/dL, this one falls outside that."
+     },
+     {
+      "id": "D",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. The value you were given is serum phosphorus."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Muscle weakness, including the muscles of respiration",
+      "correct": true,
+      "rationale": "Without ATP the muscle cannot contract, and the diaphragm is affected like any other muscle."
+     },
+     {
+      "id": "B",
+      "text": "Decreased cardiac output and a weak pulse",
+      "correct": true,
+      "rationale": "Cardiac muscle needs ATP to contract effectively."
+     },
+     {
+      "id": "C",
+      "text": "Irritability, confusion, and in severe cases seizures",
+      "correct": true,
+      "rationale": "Central nervous system cells are energy hungry and fail early."
+     },
+     {
+      "id": "D",
+      "text": "Bone pain and an increased fracture risk",
+      "correct": true,
+      "rationale": "Chronic depletion pulls mineral from bone."
+     },
+     {
+      "id": "E",
+      "text": "Tingling around the mouth and in the fingertips",
+      "correct": false,
+      "rationale": "That belongs to hyperphosphatemia. The hypocalcemia the excess phosphorus produced."
+     },
+     {
+      "id": "F",
+      "text": "Positive Trousseau and Chvostek signs",
+      "correct": false,
+      "rationale": "That belongs to hyperphosphatemia. Again, the low calcium rather than the phosphorus itself."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Phosphorus is required to make ATP, so losing it takes energy from every cell that needs to contract."
+  },
+  {
+   "section": "fluidvolume",
+   "sectionName": "Urine specific gravity",
+   "unit": "",
+   "note": "Specific gravity is read together with volume status. Concentrated urine in a dry patient is the kidney working correctly; concentrated urine in an overloaded patient points to inappropriate ADH.",
+   "normalRange": {
+    "low": 1.005,
+    "high": 1.03
+   },
+   "id": "fluidvolume-04",
+   "critical": false,
+   "state": "dilute",
+   "stage1": {
+    "prompt": "The urine specific gravity is 1.002.",
+    "value": 1.002,
+    "unit": "",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Dilute urine, suggesting fluid volume excess",
+      "correct": true,
+      "rationale": "A specific gravity under 1.005 is dilute urine: the kidney is dumping water, which points to a fluid volume excess. At 1.002, this one is below the range of 1.005 to 1.030."
+     },
+     {
+      "id": "B",
+      "text": "Concentrated urine, suggesting fluid volume deficit",
+      "correct": false,
+      "rationale": "A specific gravity over 1.030 is concentrated urine: the kidney is holding water, which points to a fluid volume deficit. This value is below the range, not above it."
+     },
+     {
+      "id": "C",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal urine specific gravity is 1.005 to 1.030. At 1.002, this one falls outside that."
+     },
+     {
+      "id": "D",
+      "text": "Consistent with dehydration",
+      "correct": false,
+      "rationale": "A dehydrated kidney conserves water and produces concentrated urine with a HIGH specific gravity. This value is dilute."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Dependent pitting edema",
+      "correct": true,
+      "rationale": "Ankles in someone walking, sacrum in someone in bed."
+     },
+     {
+      "id": "B",
+      "text": "Weight gain of one kilogram for every liter retained",
+      "correct": true,
+      "rationale": "The scale is the most sensitive measure, and it changes before the lungs do."
+     },
+     {
+      "id": "C",
+      "text": "Falling hematocrit, hemoglobin, and BUN",
+      "correct": true,
+      "rationale": "Hemodilution, the mirror of what a deficit does."
+     },
+     {
+      "id": "D",
+      "text": "Bounding pulse with a rising blood pressure",
+      "correct": true,
+      "rationale": "A full vascular space transmits a strong pulse."
+     },
+     {
+      "id": "E",
+      "text": "Urine output under 30 mL per hour",
+      "correct": false,
+      "rationale": "That belongs to concentrated urine, suggesting fluid volume deficit. The number that triggers action. The kidney conserves before anything else shows."
+     },
+     {
+      "id": "F",
+      "text": "Tachycardia with a thready, weak pulse",
+      "correct": false,
+      "rationale": "That belongs to concentrated urine, suggesting fluid volume deficit. The heart speeds up before the pressure falls, which is why a normal blood pressure does not rule out a deficit."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "There is more water than the body needs, so it is excreted with less solute per volume."
+  },
+  {
+   "section": "calcium",
+   "sectionName": "Calcium, total serum",
+   "unit": "mg/dL",
+   "note": "Roughly half of serum calcium is bound to albumin, so a low albumin lowers the total without lowering the ionized calcium that is actually working. Ionized calcium runs 4.5 to 5.6 mg/dL.",
+   "normalRange": {
+    "low": 9.0,
+    "high": 10.5
+   },
+   "id": "calcium-01",
+   "critical": true,
+   "state": "hypocalcemia",
+   "stage1": {
+    "prompt": "The total serum calcium is 6.8 mg/dL.",
+    "value": 6.8,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypomagnesemia",
+      "correct": false,
+      "rationale": "Hypomagnesemia is a low serum magnesium, under 1.3 mEq/L. The value you were given is total serum calcium."
+     },
+     {
+      "id": "B",
+      "text": "Hypocalcemia",
+      "correct": true,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. At 6.8 mg/dL, this one is below the range of 9.0 to 10.5 mg/dL."
+     },
+     {
+      "id": "C",
+      "text": "Hypercalcemia",
+      "correct": false,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. This value is below the range, not above it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal total serum calcium is 9.0 to 10.5 mg/dL. At 6.8 mg/dL, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Tingling around the mouth and in the fingertips",
+      "correct": true,
+      "rationale": "Perioral and fingertip paresthesia is the earliest symptom."
+     },
+     {
+      "id": "B",
+      "text": "Carpal spasm when a blood pressure cuff is inflated above systolic",
+      "correct": true,
+      "rationale": "A positive Trousseau sign, and the more specific of the two bedside signs."
+     },
+     {
+      "id": "C",
+      "text": "Twitching of the lip and eye when the facial nerve is tapped",
+      "correct": true,
+      "rationale": "A positive Chvostek sign, produced by the same nerve irritability."
+     },
+     {
+      "id": "D",
+      "text": "Hyperactive deep tendon reflexes",
+      "correct": true,
+      "rationale": "The membrane is destabilized, so reflex arcs fire too easily."
+     },
+     {
+      "id": "E",
+      "text": "Profound muscle weakness",
+      "correct": false,
+      "rationale": "That belongs to hypercalcemia. The finding that gets a fall precaution ordered, and the one most often mistaken for deconditioning."
+     },
+     {
+      "id": "F",
+      "text": "Diminished or absent deep tendon reflexes",
+      "correct": false,
+      "rationale": "That belongs to hypercalcemia. Cells will not depolarize, so the reflex arc is damped."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Calcium blocks sodium channels on the nerve membrane. Take it away and nerves fire on their own."
+  },
+  {
+   "section": "sodium",
+   "sectionName": "Sodium",
+   "unit": "mEq/L",
+   "note": "Potter prints 135 to 145. Either boundary is fine, because a tested value is unmistakably high or low.",
+   "normalRange": {
+    "low": 136,
+    "high": 145
+   },
+   "id": "sodium-06",
+   "critical": true,
+   "state": "hypernatremia",
+   "stage1": {
+    "prompt": "The serum sodium is 163 mEq/L.",
+    "value": 163,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum sodium is 136 to 145 mEq/L. At 163 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "B",
+      "text": "Hyperkalemia",
+      "correct": false,
+      "rationale": "Hyperkalemia is a high serum potassium, over 5.0 mEq/L. The value you were given is serum sodium."
+     },
+     {
+      "id": "C",
+      "text": "Hypernatremia",
+      "correct": true,
+      "rationale": "Hypernatremia is a high serum sodium, over 145 mEq/L. At 163 mEq/L, this one is above the range of 136 to 145 mEq/L."
+     },
+     {
+      "id": "D",
+      "text": "Hyponatremia",
+      "correct": false,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. This value is above the range, not below it."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Flushed, dry skin with a rising temperature",
+      "correct": true,
+      "rationale": "Water loss affects the skin and the ability to dissipate heat."
+     },
+     {
+      "id": "B",
+      "text": "Muscle twitching and hyperactive reflexes early, then weakness",
+      "correct": true,
+      "rationale": "Cells are irritable while they shrink, then fail."
+     },
+     {
+      "id": "C",
+      "text": "Diminished deep tendon reflexes",
+      "correct": false,
+      "rationale": "That belongs to hyponatremia. Generalized neuromuscular depression as the cells take on water."
+     },
+     {
+      "id": "D",
+      "text": "Hyperactive bowel sounds with abdominal cramping",
+      "correct": false,
+      "rationale": "That belongs to hyponatremia. The gut is one of the few systems that becomes more active in hyponatremia."
+     },
+     {
+      "id": "E",
+      "text": "Dry, sticky mucous membranes",
+      "correct": true,
+      "rationale": "The classic finding, with a dry, swollen, rough tongue."
+     },
+     {
+      "id": "F",
+      "text": "Restlessness and agitation progressing to lethargy",
+      "correct": true,
+      "rationale": "Shrinking brain cells irritate first, then depress. The sequence is the reverse of what students expect."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "E",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The outside of the cell is concentrated, so water is pulled out and cells shrink."
+  },
+  {
+   "section": "acidbase",
+   "sectionName": "Arterial blood gas",
+   "unit": "mixed",
+   "note": "This is the one section where mmHg belongs: it is the unit for the partial pressure of carbon dioxide and oxygen, not for electrolytes.",
+   "id": "acidbase-05",
+   "critical": false,
+   "state": "compensated",
+   "stage1": {
+    "prompt": "pH 7.38, PaCO2 58 mmHg, HCO3 34 mEq/L.",
+    "values": {
+     "pH": 7.38,
+     "PaCO2": 58,
+     "HCO3": 34
+    },
+    "unit": "pH / mmHg / mEq/L",
+    "question": "Which does this blood gas indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Respiratory acidosis",
+      "correct": false,
+      "rationale": "Respiratory acidosis is a low pH with a HIGH carbon dioxide: the lungs are not blowing it off. pH and carbon dioxide move in opposite directions. That is not the pattern here."
+     },
+     {
+      "id": "B",
+      "text": "Metabolic acidosis",
+      "correct": false,
+      "rationale": "Metabolic acidosis is a low pH with a LOW bicarbonate: acid gained or base lost. pH and bicarbonate move in the same direction. That is not the pattern here."
+     },
+     {
+      "id": "C",
+      "text": "Respiratory alkalosis",
+      "correct": false,
+      "rationale": "Respiratory alkalosis is a high pH with a LOW carbon dioxide: the patient is blowing off too much. pH and carbon dioxide move in opposite directions. That is not the pattern here."
+     },
+     {
+      "id": "D",
+      "text": "Fully compensated respiratory acidosis",
+      "correct": true,
+      "rationale": "The pH is back inside the range while both the carbon dioxide and the bicarbonate are abnormal. That is full compensation, and it points to a chronic respiratory problem."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "A rising serum potassium",
+      "correct": true,
+      "rationale": "Acidosis drives potassium out of cells, so the serum level climbs without the body gaining any."
+     },
+     {
+      "id": "B",
+      "text": "Dysrhythmias",
+      "correct": true,
+      "rationale": "Both the acidosis and the potassium shift destabilize conduction."
+     },
+     {
+      "id": "C",
+      "text": "Warm, flushed skin",
+      "correct": true,
+      "rationale": "Carbon dioxide is a vasodilator."
+     },
+     {
+      "id": "D",
+      "text": "A falling serum potassium",
+      "correct": false,
+      "rationale": "That belongs to respiratory alkalosis. Alkalosis drives potassium into cells."
+     },
+     {
+      "id": "E",
+      "text": "Blurred vision",
+      "correct": false,
+      "rationale": "That belongs to respiratory alkalosis. Reduced cerebral blood flow from vasoconstriction."
+     },
+     {
+      "id": "F",
+      "text": "Slow, shallow, or ineffective respirations",
+      "correct": true,
+      "rationale": "Hypoventilation is the cause, not the compensation."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "ROME: Respiratory Opposite, Metabolic Equal. Read the pH, then the carbon dioxide, then the bicarbonate, then decide the compensation."
+  },
+  {
+   "section": "calcium",
+   "sectionName": "Calcium, total serum",
+   "unit": "mg/dL",
+   "note": "Roughly half of serum calcium is bound to albumin, so a low albumin lowers the total without lowering the ionized calcium that is actually working. Ionized calcium runs 4.5 to 5.6 mg/dL.",
+   "normalRange": {
+    "low": 9.0,
+    "high": 10.5
+   },
+   "id": "calcium-02",
+   "critical": false,
+   "state": "hypocalcemia",
+   "stage1": {
+    "prompt": "The total serum calcium is 7.6 mg/dL.",
+    "value": 7.6,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal total serum calcium is 9.0 to 10.5 mg/dL. At 7.6 mg/dL, this one falls outside that."
+     },
+     {
+      "id": "B",
+      "text": "Hypomagnesemia",
+      "correct": false,
+      "rationale": "Hypomagnesemia is a low serum magnesium, under 1.3 mEq/L. The value you were given is total serum calcium."
+     },
+     {
+      "id": "C",
+      "text": "Hypocalcemia",
+      "correct": true,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. At 7.6 mg/dL, this one is below the range of 9.0 to 10.5 mg/dL."
+     },
+     {
+      "id": "D",
+      "text": "Hypercalcemia",
+      "correct": false,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. This value is below the range, not above it."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Prolonged ST segment and prolonged QT interval",
+      "correct": true,
+      "rationale": "The cardiac signature, which can deteriorate into torsades de pointes."
+     },
+     {
+      "id": "B",
+      "text": "Laryngospasm and stridor",
+      "correct": true,
+      "rationale": "Tetany of the larynx. It closes the airway without warning and is the emergency in this imbalance."
+     },
+     {
+      "id": "C",
+      "text": "Hyperactive bowel sounds with diarrhea and cramping",
+      "correct": true,
+      "rationale": "Smooth muscle becomes overexcitable along with everything else."
+     },
+     {
+      "id": "D",
+      "text": "Shortened ST segment and shortened QT interval",
+      "correct": false,
+      "rationale": "That belongs to hypercalcemia. The exact mirror of hypocalcemia on the tracing."
+     },
+     {
+      "id": "E",
+      "text": "Constipation with hypoactive bowel sounds",
+      "correct": false,
+      "rationale": "That belongs to hypercalcemia. The gut slows to a stop, and at the extreme distends."
+     },
+     {
+      "id": "F",
+      "text": "Hyperactive deep tendon reflexes",
+      "correct": true,
+      "rationale": "The membrane is destabilized, so reflex arcs fire too easily."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Calcium blocks sodium channels on the nerve membrane. Take it away and nerves fire on their own."
+  },
+  {
+   "section": "osmolality",
+   "sectionName": "Serum osmolality",
+   "unit": "mOsm/L",
+   "note": "Potter prints 285 to 295 mOsm/kg. Osmolarity is per liter of solution and osmolality is per kilogram of water; in human physiology the two are treated as the same thing.",
+   "normalRange": {
+    "low": 270,
+    "high": 300
+   },
+   "id": "osmolality-04",
+   "critical": false,
+   "state": "hyperosmolar",
+   "stage1": {
+    "prompt": "The serum osmolality is 312 mOsm/L.",
+    "value": 312,
+    "unit": "mOsm/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypernatremia",
+      "correct": false,
+      "rationale": "Hypernatremia is a high serum sodium, over 145 mEq/L. The value you were given is serum osmolality."
+     },
+     {
+      "id": "B",
+      "text": "Hyperosmolality (concentration)",
+      "correct": true,
+      "rationale": "Hyperosmolality means the blood is concentrated: a serum osmolality over 300 mOsm/L. At 312 mOsm/L, this one is above the range of 270 to 300 mOsm/L."
+     },
+     {
+      "id": "C",
+      "text": "Hypo-osmolality (dilution)",
+      "correct": false,
+      "rationale": "Hypo-osmolality means the blood is dilute: a serum osmolality under 270 mOsm/L. This value is above the range, not below it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum osmolality is 270 to 300 mOsm/L. At 312 mOsm/L, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "A markedly elevated blood glucose in some patients",
+      "correct": true,
+      "rationale": "Glucose contributes to measured osmolality, which is why hyperglycemia can drive it up without hypernatremia."
+     },
+     {
+      "id": "B",
+      "text": "Intense thirst",
+      "correct": true,
+      "rationale": "The intact response to concentrated blood."
+     },
+     {
+      "id": "C",
+      "text": "Dry, sticky mucous membranes",
+      "correct": true,
+      "rationale": "Water has been drawn out of the tissues."
+     },
+     {
+      "id": "D",
+      "text": "Restlessness and agitation, then lethargy",
+      "correct": true,
+      "rationale": "Shrinking brain cells irritate first, then depress."
+     },
+     {
+      "id": "E",
+      "text": "Seizures in severe or rapid dilution",
+      "correct": false,
+      "rationale": "That belongs to hypo-osmolality (dilution). Continued cerebral swelling inside a fixed skull."
+     },
+     {
+      "id": "F",
+      "text": "Muscle cramps and weakness",
+      "correct": false,
+      "rationale": "That belongs to hypo-osmolality (dilution). Muscle cells swell as well."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The blood is concentrated, so water is pulled out of cells and they shrink."
+  },
+  {
+   "section": "potassium",
+   "sectionName": "Potassium",
+   "unit": "mEq/L",
+   "note": "The range is narrow because 98 percent of body potassium is inside cells. A small serum change is a large change in the gradient.",
+   "normalRange": {
+    "low": 3.5,
+    "high": 5.0
+   },
+   "id": "potassium-01",
+   "critical": true,
+   "state": "hypokalemia",
+   "stage1": {
+    "prompt": "The serum potassium is 2.4 mEq/L.",
+    "value": 2.4,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperkalemia",
+      "correct": false,
+      "rationale": "Hyperkalemia is a high serum potassium, over 5.0 mEq/L. This value is below the range, not above it."
+     },
+     {
+      "id": "B",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum potassium is 3.5 to 5.0 mEq/L. At 2.4 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "C",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. The value you were given is serum potassium."
+     },
+     {
+      "id": "D",
+      "text": "Hypokalemia",
+      "correct": true,
+      "rationale": "Hypokalemia is a low serum potassium, under 3.5 mEq/L. At 2.4 mEq/L, this one is below the range of 3.5 to 5.0 mEq/L."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Weakness beginning in the legs and ascending",
+      "correct": true,
+      "rationale": "Hypokalemic weakness is ascending, and the muscles of respiration are last in line."
+     },
+     {
+      "id": "B",
+      "text": "A prominent U wave on the monitor",
+      "correct": true,
+      "rationale": "The signature of hypokalemia: a wave appearing where there should be nothing."
+     },
+     {
+      "id": "C",
+      "text": "ST depression with a flattened or inverted T wave",
+      "correct": true,
+      "rationale": "Low potassium flattens the T wave, the opposite of what high potassium does."
+     },
+     {
+      "id": "D",
+      "text": "Hypoactive bowel sounds and constipation",
+      "correct": true,
+      "rationale": "Smooth muscle slows with everything else, and at the extreme this becomes a paralytic ileus."
+     },
+     {
+      "id": "E",
+      "text": "Tall, peaked T waves",
+      "correct": false,
+      "rationale": "That belongs to hyperkalemia. The earliest and most important cardiac change, and the reason this imbalance kills fastest."
+     },
+     {
+      "id": "F",
+      "text": "Widened QRS with a prolonged PR interval",
+      "correct": false,
+      "rationale": "That belongs to hyperkalemia. Conduction slows as the membrane fails to repolarize, progressing toward a sine wave."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Cells are harder to depolarize, so everything slows and weakens. This is the opposite of what a deficiency usually does."
+  },
+  {
+   "section": "sodium",
+   "sectionName": "Sodium",
+   "unit": "mEq/L",
+   "note": "Potter prints 135 to 145. Either boundary is fine, because a tested value is unmistakably high or low.",
+   "normalRange": {
+    "low": 136,
+    "high": 145
+   },
+   "id": "sodium-03",
+   "critical": false,
+   "state": "hyponatremia",
+   "stage1": {
+    "prompt": "The serum sodium is 131 mEq/L.",
+    "value": 131,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypernatremia",
+      "correct": false,
+      "rationale": "Hypernatremia is a high serum sodium, over 145 mEq/L. This value is below the range, not above it."
+     },
+     {
+      "id": "B",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum sodium is 136 to 145 mEq/L. At 131 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "C",
+      "text": "Hypokalemia",
+      "correct": false,
+      "rationale": "Hypokalemia is a low serum potassium, under 3.5 mEq/L. The value you were given is serum sodium."
+     },
+     {
+      "id": "D",
+      "text": "Hyponatremia",
+      "correct": true,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. At 131 mEq/L, this one is below the range of 136 to 145 mEq/L."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Seizures",
+      "correct": true,
+      "rationale": "Continued cerebral swelling. The rate of the fall matters more than the number."
+     },
+     {
+      "id": "B",
+      "text": "Muscle cramps and weakness",
+      "correct": true,
+      "rationale": "Muscle cells swell too, and the membrane potential is disturbed."
+     },
+     {
+      "id": "C",
+      "text": "Muscle twitching and hyperactive reflexes early, then weakness",
+      "correct": false,
+      "rationale": "That belongs to hypernatremia. Cells are irritable while they shrink, then fail."
+     },
+     {
+      "id": "D",
+      "text": "Oliguria with a high urine specific gravity",
+      "correct": false,
+      "rationale": "That belongs to hypernatremia. The kidney concentrates urine to hold on to water."
+     },
+     {
+      "id": "E",
+      "text": "Personality change or irritability",
+      "correct": true,
+      "rationale": "A subtle early neurologic sign, often dismissed before the confusion appears."
+     },
+     {
+      "id": "F",
+      "text": "Headache, confusion, and lethargy",
+      "correct": true,
+      "rationale": "Brain cells swell inside a skull that cannot expand. Neurologic change is the first and most important finding."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "E",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The outside of the cell is dilute, so water moves in and cells swell. In the skull that is the whole problem."
+  },
+  {
+   "section": "potassium",
+   "sectionName": "Potassium",
+   "unit": "mEq/L",
+   "note": "The range is narrow because 98 percent of body potassium is inside cells. A small serum change is a large change in the gradient.",
+   "normalRange": {
+    "low": 3.5,
+    "high": 5.0
+   },
+   "id": "potassium-02",
+   "critical": false,
+   "state": "hypokalemia",
+   "stage1": {
+    "prompt": "The serum potassium is 2.9 mEq/L.",
+    "value": 2.9,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypokalemia",
+      "correct": true,
+      "rationale": "Hypokalemia is a low serum potassium, under 3.5 mEq/L. At 2.9 mEq/L, this one is below the range of 3.5 to 5.0 mEq/L."
+     },
+     {
+      "id": "B",
+      "text": "Hyperkalemia",
+      "correct": false,
+      "rationale": "Hyperkalemia is a high serum potassium, over 5.0 mEq/L. This value is below the range, not above it."
+     },
+     {
+      "id": "C",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum potassium is 3.5 to 5.0 mEq/L. At 2.9 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "D",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. The value you were given is serum potassium."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Abdominal distention",
+      "correct": true,
+      "rationale": "Slowed peristalsis allows gas and contents to accumulate."
+     },
+     {
+      "id": "B",
+      "text": "Increased risk of digoxin toxicity",
+      "correct": true,
+      "rationale": "Low potassium potentiates digoxin even at a therapeutic drug level."
+     },
+     {
+      "id": "C",
+      "text": "Polyuria with dilute urine",
+      "correct": true,
+      "rationale": "The kidney loses its ability to concentrate, which drives thirst."
+     },
+     {
+      "id": "D",
+      "text": "Early tingling and muscle twitching",
+      "correct": false,
+      "rationale": "That belongs to hyperkalemia. Cells near threshold fire spontaneously before they fail."
+     },
+     {
+      "id": "E",
+      "text": "Ascending flaccid paralysis",
+      "correct": false,
+      "rationale": "That belongs to hyperkalemia. The late neuromuscular picture, once the membrane stays depolarized."
+     },
+     {
+      "id": "F",
+      "text": "Hypoactive bowel sounds and constipation",
+      "correct": true,
+      "rationale": "Smooth muscle slows with everything else, and at the extreme this becomes a paralytic ileus."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Cells are harder to depolarize, so everything slows and weakens. This is the opposite of what a deficiency usually does."
+  },
+  {
+   "section": "phosphorus",
+   "sectionName": "Phosphorus",
+   "unit": "mg/dL",
+   "note": "Phosphorus moves opposite calcium. When one is high the other tends to be low, which is why they are read as a pair.",
+   "normalRange": {
+    "low": 3.0,
+    "high": 4.5
+   },
+   "id": "phosphorus-03",
+   "critical": false,
+   "state": "normal",
+   "stage1": {
+    "prompt": "The serum phosphorus is 3.8 mg/dL.",
+    "value": 3.8,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperphosphatemia",
+      "correct": false,
+      "rationale": "Hyperphosphatemia is a high serum phosphorus, over 4.5 mg/dL. This value is inside the range."
+     },
+     {
+      "id": "B",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. The value you were given is serum phosphorus."
+     },
+     {
+      "id": "C",
+      "text": "Within the normal range",
+      "correct": true,
+      "rationale": "A normal serum phosphorus is 3.0 to 4.5 mg/dL. At 3.8 mg/dL, this one sits inside it."
+     },
+     {
+      "id": "D",
+      "text": "Hypophosphatemia",
+      "correct": false,
+      "rationale": "Hypophosphatemia is a low serum phosphorus, under 3.0 mg/dL. This value is inside the range."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which statements about this result are true? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "The normal range is 3.0 to 4.5 mg/dL",
+      "correct": true,
+      "rationale": "The range worth memorizing for this test."
+     },
+     {
+      "id": "B",
+      "text": "A value below 3 mg/dL would be hypophosphatemia",
+      "correct": true,
+      "rationale": "Phosphorus is required to make ATP, so losing it takes energy from every cell that needs to contract."
+     },
+     {
+      "id": "C",
+      "text": "A value above 4.5 mg/dL would be hyperphosphatemia",
+      "correct": true,
+      "rationale": "The symptoms are mostly the hypocalcemia it produces, because phosphorus binds calcium."
+     },
+     {
+      "id": "D",
+      "text": "A normal value here rules out every problem with this electrolyte",
+      "correct": false,
+      "rationale": "It does not. A value can be normal while the patient is compensating, while a related value is abnormal, or while the level is falling rapidly toward trouble."
+     },
+     {
+      "id": "E",
+      "text": "This result still has to be read alongside the related values",
+      "correct": true,
+      "rationale": "Potassium is read with magnesium, calcium with phosphorus and albumin, and any of them with the pH."
+     },
+     {
+      "id": "F",
+      "text": "A single normal result means no further monitoring is needed",
+      "correct": false,
+      "rationale": "Trend matters more than a single point, especially in a patient receiving fluids, diuretics, or replacement."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "E"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Know the range cold: 3.0 to 4.5 mg/dL. A value inside it still has to be read with the related values and with the trend."
+  },
+  {
+   "section": "chloride",
+   "sectionName": "Chloride",
+   "unit": "mEq/L",
+   "note": "Chloride follows sodium and moves opposite bicarbonate, so it is read as an acid-base clue more than as a problem of its own.",
+   "normalRange": {
+    "low": 98,
+    "high": 106
+   },
+   "id": "chloride-03",
+   "critical": false,
+   "state": "normal",
+   "stage1": {
+    "prompt": "The serum chloride is 102 mEq/L.",
+    "value": 102,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypochloremia",
+      "correct": false,
+      "rationale": "Hypochloremia is a low serum chloride, under 98 mEq/L. This value is inside the range."
+     },
+     {
+      "id": "B",
+      "text": "Hyperchloremia",
+      "correct": false,
+      "rationale": "Hyperchloremia is a high serum chloride, over 106 mEq/L. This value is inside the range."
+     },
+     {
+      "id": "C",
+      "text": "Hyponatremia",
+      "correct": false,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. The value you were given is serum chloride."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": true,
+      "rationale": "A normal serum chloride is 98 to 106 mEq/L. At 102 mEq/L, this one sits inside it."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which statements about this result are true? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "The normal range is 98 to 106 mEq/L",
+      "correct": true,
+      "rationale": "The range worth memorizing for this test."
+     },
+     {
+      "id": "B",
+      "text": "A value below 98 mEq/L would be hypochloremia",
+      "correct": true,
+      "rationale": "Chloride is usually lost with gastric acid, and bicarbonate rises to take its place, producing a metabolic alkalosis."
+     },
+     {
+      "id": "C",
+      "text": "A value above 106 mEq/L would be hyperchloremia",
+      "correct": true,
+      "rationale": "Chloride rises as bicarbonate falls, so it usually travels with a metabolic acidosis."
+     },
+     {
+      "id": "D",
+      "text": "A normal value here rules out every problem with this electrolyte",
+      "correct": false,
+      "rationale": "It does not. A value can be normal while the patient is compensating, while a related value is abnormal, or while the level is falling rapidly toward trouble."
+     },
+     {
+      "id": "E",
+      "text": "This result still has to be read alongside the related values",
+      "correct": true,
+      "rationale": "Potassium is read with magnesium, calcium with phosphorus and albumin, and any of them with the pH."
+     },
+     {
+      "id": "F",
+      "text": "A single normal result means no further monitoring is needed",
+      "correct": false,
+      "rationale": "Trend matters more than a single point, especially in a patient receiving fluids, diuretics, or replacement."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "E"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Know the range cold: 98 to 106 mEq/L. A value inside it still has to be read with the related values and with the trend."
+  },
+  {
+   "section": "acidbase",
+   "sectionName": "Arterial blood gas",
+   "unit": "mixed",
+   "note": "This is the one section where mmHg belongs: it is the unit for the partial pressure of carbon dioxide and oxygen, not for electrolytes.",
+   "id": "acidbase-06",
+   "critical": false,
+   "state": "normal",
+   "stage1": {
+    "prompt": "pH 7.41, PaCO2 40 mmHg, HCO3 24 mEq/L.",
+    "values": {
+     "pH": 7.41,
+     "PaCO2": 40,
+     "HCO3": 24
+    },
+    "unit": "pH / mmHg / mEq/L",
+    "question": "Which does this blood gas indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Normal values",
+      "correct": true,
+      "rationale": "All three values sit inside their ranges."
+     },
+     {
+      "id": "B",
+      "text": "Respiratory acidosis",
+      "correct": false,
+      "rationale": "Respiratory acidosis is a low pH with a HIGH carbon dioxide: the lungs are not blowing it off. pH and carbon dioxide move in opposite directions. That is not the pattern here."
+     },
+     {
+      "id": "C",
+      "text": "Metabolic acidosis",
+      "correct": false,
+      "rationale": "Metabolic acidosis is a low pH with a LOW bicarbonate: acid gained or base lost. pH and bicarbonate move in the same direction. That is not the pattern here."
+     },
+     {
+      "id": "D",
+      "text": "Respiratory alkalosis",
+      "correct": false,
+      "rationale": "Respiratory alkalosis is a high pH with a LOW carbon dioxide: the patient is blowing off too much. pH and carbon dioxide move in opposite directions. That is not the pattern here."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which statements about this result are true? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "The pH, the carbon dioxide, and the bicarbonate are all inside their ranges",
+      "correct": true,
+      "rationale": "pH 7.35 to 7.45, PaCO2 35 to 45 mmHg, bicarbonate 21 to 28 mEq/L."
+     },
+     {
+      "id": "B",
+      "text": "A normal pH always means the patient has no acid-base problem",
+      "correct": false,
+      "rationale": "It does not. A normal pH with two abnormal values is full compensation and points to a chronic problem underneath."
+     },
+     {
+      "id": "C",
+      "text": "Step four is to decide the compensation, not to stop at naming the imbalance",
+      "correct": true,
+      "rationale": "Naming the imbalance and stopping is the step students most often drop."
+     },
+     {
+      "id": "D",
+      "text": "mmHg is the unit for the partial pressure of carbon dioxide",
+      "correct": true,
+      "rationale": "It is a pressure unit, which is why it applies here and not to electrolytes."
+     },
+     {
+      "id": "E",
+      "text": "Bicarbonate is reported in mmHg",
+      "correct": false,
+      "rationale": "Bicarbonate is reported in mEq/L. Only the gas partial pressures use mmHg."
+     },
+     {
+      "id": "F",
+      "text": "ROME stands for Respiratory Opposite, Metabolic Equal",
+      "correct": true,
+      "rationale": "The pH and carbon dioxide move opposite in a respiratory problem; the pH and bicarbonate move together in a metabolic one."
+     }
+    ],
+    "scoring": "All correct options and no incorrect options.",
+    "answer": [
+     "A",
+     "C",
+     "D",
+     "F"
+    ]
+   },
+   "takeaway": "ROME: Respiratory Opposite, Metabolic Equal. Read the pH, then the carbon dioxide, then the bicarbonate, then decide the compensation."
+  },
+  {
+   "section": "magnesium",
+   "sectionName": "Magnesium",
+   "unit": "mEq/L",
+   "note": "Some texts report magnesium in mg/dL, where the range is about 1.5 to 2.5. The direction is what is tested, not the boundary.",
+   "normalRange": {
+    "low": 1.3,
+    "high": 2.1
+   },
+   "id": "magnesium-01",
+   "critical": true,
+   "state": "hypomagnesemia",
+   "stage1": {
+    "prompt": "The serum magnesium is 0.9 mEq/L.",
+    "value": 0.9,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypermagnesemia",
+      "correct": false,
+      "rationale": "Hypermagnesemia is a high serum magnesium, over 2.1 mEq/L. This value is below the range, not above it."
+     },
+     {
+      "id": "B",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum magnesium is 1.3 to 2.1 mEq/L. At 0.9 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "C",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. The value you were given is serum magnesium."
+     },
+     {
+      "id": "D",
+      "text": "Hypomagnesemia",
+      "correct": true,
+      "rationale": "Hypomagnesemia is a low serum magnesium, under 1.3 mEq/L. At 0.9 mEq/L, this one is below the range of 1.3 to 2.1 mEq/L."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperactive deep tendon reflexes with tremor",
+      "correct": true,
+      "rationale": "The overexcitable picture, indistinguishable from low calcium at the bedside."
+     },
+     {
+      "id": "B",
+      "text": "Positive Trousseau and Chvostek signs",
+      "correct": true,
+      "rationale": "Both signs are positive in low magnesium as well as low calcium. The history separates them."
+     },
+     {
+      "id": "C",
+      "text": "Prolonged QT with torsades de pointes",
+      "correct": true,
+      "rationale": "The rhythm magnesium is famous for, and the reason magnesium is the treatment for it."
+     },
+     {
+      "id": "D",
+      "text": "A serum potassium that will not correct despite replacement",
+      "correct": true,
+      "rationale": "The pump that holds potassium inside the cell requires magnesium. This is the giveaway finding."
+     },
+     {
+      "id": "E",
+      "text": "Diminished and then absent deep tendon reflexes",
+      "correct": false,
+      "rationale": "That belongs to hypermagnesemia. The earliest reliable warning, and the reason reflexes are checked on a schedule during any magnesium infusion."
+     },
+     {
+      "id": "F",
+      "text": "Respiratory depression with slow, shallow breathing",
+      "correct": false,
+      "rationale": "That belongs to hypermagnesemia. The finding that kills. Hold the infusion for a rate under 12."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Magnesium stabilizes the same membrane calcium does, and it also runs the sodium-potassium pump."
+  },
+  {
+   "section": "fluidvolume",
+   "sectionName": "Urine specific gravity",
+   "unit": "",
+   "note": "Specific gravity is read together with volume status. Concentrated urine in a dry patient is the kidney working correctly; concentrated urine in an overloaded patient points to inappropriate ADH.",
+   "normalRange": {
+    "low": 1.005,
+    "high": 1.03
+   },
+   "id": "fluidvolume-01",
+   "critical": false,
+   "state": "concentrated",
+   "stage1": {
+    "prompt": "The urine specific gravity is 1.038.",
+    "value": 1.038,
+    "unit": "",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Consistent with diabetes insipidus",
+      "correct": false,
+      "rationale": "Diabetes insipidus produces large volumes of very dilute urine with a LOW specific gravity. This value is concentrated, which is the opposite."
+     },
+     {
+      "id": "B",
+      "text": "Concentrated urine, suggesting fluid volume deficit",
+      "correct": true,
+      "rationale": "A specific gravity over 1.030 is concentrated urine: the kidney is holding water, which points to a fluid volume deficit. At 1.038, this one is above the range of 1.005 to 1.030."
+     },
+     {
+      "id": "C",
+      "text": "Dilute urine, suggesting fluid volume excess",
+      "correct": false,
+      "rationale": "A specific gravity under 1.005 is dilute urine: the kidney is dumping water, which points to a fluid volume excess. This value is above the range, not below it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal urine specific gravity is 1.005 to 1.030. At 1.038, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Urine output under 30 mL per hour",
+      "correct": true,
+      "rationale": "The number that triggers action. The kidney conserves before anything else shows."
+     },
+     {
+      "id": "B",
+      "text": "Tachycardia with a thready, weak pulse",
+      "correct": true,
+      "rationale": "The heart speeds up before the pressure falls, which is why a normal blood pressure does not rule out a deficit."
+     },
+     {
+      "id": "C",
+      "text": "Flat neck veins when the patient is supine",
+      "correct": true,
+      "rationale": "An empty vascular space does not distend the jugular veins."
+     },
+     {
+      "id": "D",
+      "text": "Dry mucous membranes and poor turgor at the sternum",
+      "correct": true,
+      "rationale": "Assess turgor at the sternum or forehead in an older adult, not the hand."
+     },
+     {
+      "id": "E",
+      "text": "Bounding pulse with a rising blood pressure",
+      "correct": false,
+      "rationale": "That belongs to dilute urine, suggesting fluid volume excess. A full vascular space transmits a strong pulse."
+     },
+     {
+      "id": "F",
+      "text": "Distended neck veins",
+      "correct": false,
+      "rationale": "That belongs to dilute urine, suggesting fluid volume excess. The classic sign of a full vascular compartment."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The kidney is holding on to water, so the urine carries more solute per volume."
+  },
+  {
+   "section": "sodium",
+   "sectionName": "Sodium",
+   "unit": "mEq/L",
+   "note": "Potter prints 135 to 145. Either boundary is fine, because a tested value is unmistakably high or low.",
+   "normalRange": {
+    "low": 136,
+    "high": 145
+   },
+   "id": "sodium-02",
+   "critical": false,
+   "state": "hyponatremia",
+   "stage1": {
+    "prompt": "The serum sodium is 126 mEq/L.",
+    "value": 126,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum sodium is 136 to 145 mEq/L. At 126 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "B",
+      "text": "Hypokalemia",
+      "correct": false,
+      "rationale": "Hypokalemia is a low serum potassium, under 3.5 mEq/L. The value you were given is serum sodium."
+     },
+     {
+      "id": "C",
+      "text": "Hyponatremia",
+      "correct": true,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. At 126 mEq/L, this one is below the range of 136 to 145 mEq/L."
+     },
+     {
+      "id": "D",
+      "text": "Hypernatremia",
+      "correct": false,
+      "rationale": "Hypernatremia is a high serum sodium, over 145 mEq/L. This value is below the range, not above it."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyperactive bowel sounds with abdominal cramping",
+      "correct": true,
+      "rationale": "The gut is one of the few systems that becomes more active in hyponatremia."
+     },
+     {
+      "id": "B",
+      "text": "Nausea and vomiting",
+      "correct": true,
+      "rationale": "An early gastrointestinal finding, and one that can worsen the sodium loss that caused it."
+     },
+     {
+      "id": "C",
+      "text": "Personality change or irritability",
+      "correct": true,
+      "rationale": "A subtle early neurologic sign, often dismissed before the confusion appears."
+     },
+     {
+      "id": "D",
+      "text": "Restlessness and agitation progressing to lethargy",
+      "correct": false,
+      "rationale": "That belongs to hypernatremia. Shrinking brain cells irritate first, then depress. The sequence is the reverse of what students expect."
+     },
+     {
+      "id": "E",
+      "text": "Flushed, dry skin with a rising temperature",
+      "correct": false,
+      "rationale": "That belongs to hypernatremia. Water loss affects the skin and the ability to dissipate heat."
+     },
+     {
+      "id": "F",
+      "text": "Diminished deep tendon reflexes",
+      "correct": true,
+      "rationale": "Generalized neuromuscular depression as the cells take on water."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The outside of the cell is dilute, so water moves in and cells swell. In the skull that is the whole problem."
+  },
+  {
+   "section": "acidbase",
+   "sectionName": "Arterial blood gas",
+   "unit": "mixed",
+   "note": "This is the one section where mmHg belongs: it is the unit for the partial pressure of carbon dioxide and oxygen, not for electrolytes.",
+   "id": "acidbase-04",
+   "critical": false,
+   "state": "met_alkalosis",
+   "stage1": {
+    "prompt": "pH 7.52, PaCO2 44 mmHg, HCO3 34 mEq/L.",
+    "values": {
+     "pH": 7.52,
+     "PaCO2": 44,
+     "HCO3": 34
+    },
+    "unit": "pH / mmHg / mEq/L",
+    "question": "Which does this blood gas indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Respiratory alkalosis",
+      "correct": false,
+      "rationale": "Respiratory alkalosis is a high pH with a LOW carbon dioxide: the patient is blowing off too much. pH and carbon dioxide move in opposite directions. That is not the pattern here."
+     },
+     {
+      "id": "B",
+      "text": "Metabolic acidosis",
+      "correct": false,
+      "rationale": "Metabolic acidosis is a low pH with a LOW bicarbonate: acid gained or base lost. pH and bicarbonate move in the same direction. That is not the pattern here."
+     },
+     {
+      "id": "C",
+      "text": "Metabolic alkalosis",
+      "correct": true,
+      "rationale": "The pH and the bicarbonate are both high, moving together, which makes it metabolic."
+     },
+     {
+      "id": "D",
+      "text": "Respiratory acidosis",
+      "correct": false,
+      "rationale": "Respiratory acidosis is a low pH with a HIGH carbon dioxide: the lungs are not blowing it off. pH and carbon dioxide move in opposite directions. That is not the pattern here."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Muscle twitching, cramps, and tetany",
+      "correct": true,
+      "rationale": "Alkalosis lowers ionized calcium and makes nerves fire spontaneously."
+     },
+     {
+      "id": "B",
+      "text": "Tingling in the fingers and toes",
+      "correct": true,
+      "rationale": "The same fall in free calcium."
+     },
+     {
+      "id": "C",
+      "text": "Slow, shallow respirations",
+      "correct": true,
+      "rationale": "The lungs retain carbon dioxide to compensate."
+     },
+     {
+      "id": "D",
+      "text": "A falling serum potassium",
+      "correct": true,
+      "rationale": "Alkalosis drives potassium into cells, and the usual causes waste it as well."
+     },
+     {
+      "id": "E",
+      "text": "Warm, flushed skin",
+      "correct": false,
+      "rationale": "That belongs to metabolic acidosis. Peripheral vasodilation from the acidosis."
+     },
+     {
+      "id": "F",
+      "text": "Nausea, vomiting, and abdominal pain",
+      "correct": false,
+      "rationale": "That belongs to metabolic acidosis. Common in ketoacidosis and in severe acidosis generally."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "ROME: Respiratory Opposite, Metabolic Equal. Read the pH, then the carbon dioxide, then the bicarbonate, then decide the compensation."
+  },
+  {
+   "section": "chloride",
+   "sectionName": "Chloride",
+   "unit": "mEq/L",
+   "note": "Chloride follows sodium and moves opposite bicarbonate, so it is read as an acid-base clue more than as a problem of its own.",
+   "normalRange": {
+    "low": 98,
+    "high": 106
+   },
+   "id": "chloride-05",
+   "critical": false,
+   "state": "hyperchloremia",
+   "stage1": {
+    "prompt": "The serum chloride is 118 mEq/L.",
+    "value": 118,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypernatremia",
+      "correct": false,
+      "rationale": "Hypernatremia is a high serum sodium, over 145 mEq/L. The value you were given is serum chloride."
+     },
+     {
+      "id": "B",
+      "text": "Hyperchloremia",
+      "correct": true,
+      "rationale": "Hyperchloremia is a high serum chloride, over 106 mEq/L. At 118 mEq/L, this one is above the range of 98 to 106 mEq/L."
+     },
+     {
+      "id": "C",
+      "text": "Hypochloremia",
+      "correct": false,
+      "rationale": "Hypochloremia is a low serum chloride, under 98 mEq/L. This value is above the range, not below it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum chloride is 98 to 106 mEq/L. At 118 mEq/L, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "A falling serum bicarbonate",
+      "correct": true,
+      "rationale": "Bicarbonate decreases as chloride rises."
+     },
+     {
+      "id": "B",
+      "text": "A history of large-volume normal saline infusion",
+      "correct": true,
+      "rationale": "0.9 percent saline delivers chloride in excess of plasma and can produce this."
+     },
+     {
+      "id": "C",
+      "text": "Deep, rapid Kussmaul respirations",
+      "correct": true,
+      "rationale": "The lungs blow off carbon dioxide to compensate for the metabolic acidosis."
+     },
+     {
+      "id": "D",
+      "text": "A history of vomiting or nasogastric suction",
+      "correct": false,
+      "rationale": "That belongs to hypochloremia. Gastric fluid is rich in chloride, and losing it is the commonest cause."
+     },
+     {
+      "id": "E",
+      "text": "A rising serum bicarbonate",
+      "correct": false,
+      "rationale": "That belongs to hypochloremia. Bicarbonate increases as chloride falls, which is the definition of the accompanying alkalosis."
+     },
+     {
+      "id": "F",
+      "text": "Declining level of consciousness",
+      "correct": true,
+      "rationale": "Acidosis depresses the central nervous system as it worsens."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Chloride rises as bicarbonate falls, so it usually travels with a metabolic acidosis."
+  },
+  {
+   "section": "calcium",
+   "sectionName": "Calcium, total serum",
+   "unit": "mg/dL",
+   "note": "Roughly half of serum calcium is bound to albumin, so a low albumin lowers the total without lowering the ionized calcium that is actually working. Ionized calcium runs 4.5 to 5.6 mg/dL.",
+   "normalRange": {
+    "low": 9.0,
+    "high": 10.5
+   },
+   "id": "calcium-04",
+   "critical": false,
+   "state": "normal",
+   "stage1": {
+    "prompt": "The total serum calcium is 9.6 mg/dL.",
+    "value": 9.6,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": true,
+      "rationale": "A normal total serum calcium is 9.0 to 10.5 mg/dL. At 9.6 mg/dL, this one sits inside it."
+     },
+     {
+      "id": "B",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. This value is inside the range."
+     },
+     {
+      "id": "C",
+      "text": "Hypercalcemia",
+      "correct": false,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. This value is inside the range."
+     },
+     {
+      "id": "D",
+      "text": "Hypomagnesemia",
+      "correct": false,
+      "rationale": "Hypomagnesemia is a low serum magnesium, under 1.3 mEq/L. The value you were given is total serum calcium."
+     }
+    ],
+    "answer": "A"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which statements about this result are true? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "The normal range is 9.0 to 10.5 mg/dL",
+      "correct": true,
+      "rationale": "The range worth memorizing for this test."
+     },
+     {
+      "id": "B",
+      "text": "A value below 9 mg/dL would be hypocalcemia",
+      "correct": true,
+      "rationale": "Calcium blocks sodium channels on the nerve membrane. Take it away and nerves fire on their own."
+     },
+     {
+      "id": "C",
+      "text": "A value above 10.5 mg/dL would be hypercalcemia",
+      "correct": true,
+      "rationale": "Extra calcium seals the membrane shut. Sodium cannot get through and cells will not depolarize."
+     },
+     {
+      "id": "D",
+      "text": "A normal value here rules out every problem with this electrolyte",
+      "correct": false,
+      "rationale": "It does not. A value can be normal while the patient is compensating, while a related value is abnormal, or while the level is falling rapidly toward trouble."
+     },
+     {
+      "id": "E",
+      "text": "This result still has to be read alongside the related values",
+      "correct": true,
+      "rationale": "Potassium is read with magnesium, calcium with phosphorus and albumin, and any of them with the pH."
+     },
+     {
+      "id": "F",
+      "text": "A single normal result means no further monitoring is needed",
+      "correct": false,
+      "rationale": "Trend matters more than a single point, especially in a patient receiving fluids, diuretics, or replacement."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "E"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Know the range cold: 9.0 to 10.5 mg/dL. A value inside it still has to be read with the related values and with the trend."
+  },
+  {
+   "section": "magnesium",
+   "sectionName": "Magnesium",
+   "unit": "mEq/L",
+   "note": "Some texts report magnesium in mg/dL, where the range is about 1.5 to 2.5. The direction is what is tested, not the boundary.",
+   "normalRange": {
+    "low": 1.3,
+    "high": 2.1
+   },
+   "id": "magnesium-05",
+   "critical": true,
+   "state": "hypermagnesemia",
+   "stage1": {
+    "prompt": "The serum magnesium is 4.8 mEq/L.",
+    "value": 4.8,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypomagnesemia",
+      "correct": false,
+      "rationale": "Hypomagnesemia is a low serum magnesium, under 1.3 mEq/L. This value is above the range, not below it."
+     },
+     {
+      "id": "B",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum magnesium is 1.3 to 2.1 mEq/L. At 4.8 mEq/L, this one falls outside that."
+     },
+     {
+      "id": "C",
+      "text": "Hypercalcemia",
+      "correct": false,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. The value you were given is serum magnesium."
+     },
+     {
+      "id": "D",
+      "text": "Hypermagnesemia",
+      "correct": true,
+      "rationale": "Hypermagnesemia is a high serum magnesium, over 2.1 mEq/L. At 4.8 mEq/L, this one is above the range of 1.3 to 2.1 mEq/L."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Generalized weakness",
+      "correct": true,
+      "rationale": "Neuromuscular transmission is blocked."
+     },
+     {
+      "id": "B",
+      "text": "Diminished and then absent deep tendon reflexes",
+      "correct": true,
+      "rationale": "The earliest reliable warning, and the reason reflexes are checked on a schedule during any magnesium infusion."
+     },
+     {
+      "id": "C",
+      "text": "Respiratory depression with slow, shallow breathing",
+      "correct": true,
+      "rationale": "The finding that kills. Hold the infusion for a rate under 12."
+     },
+     {
+      "id": "D",
+      "text": "Positive Trousseau and Chvostek signs",
+      "correct": false,
+      "rationale": "That belongs to hypomagnesemia. Both signs are positive in low magnesium as well as low calcium. The history separates them."
+     },
+     {
+      "id": "E",
+      "text": "Prolonged QT with torsades de pointes",
+      "correct": false,
+      "rationale": "That belongs to hypomagnesemia. The rhythm magnesium is famous for, and the reason magnesium is the treatment for it."
+     },
+     {
+      "id": "F",
+      "text": "Drowsiness progressing to lethargy and coma",
+      "correct": true,
+      "rationale": "Generalized central nervous system depression."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Everything is suppressed, and it shuts down in a predictable order: reflexes, then pressure and rate, then consciousness, then breathing."
+  },
+  {
+   "section": "phosphorus",
+   "sectionName": "Phosphorus",
+   "unit": "mg/dL",
+   "note": "Phosphorus moves opposite calcium. When one is high the other tends to be low, which is why they are read as a pair.",
+   "normalRange": {
+    "low": 3.0,
+    "high": 4.5
+   },
+   "id": "phosphorus-04",
+   "critical": false,
+   "state": "hyperphosphatemia",
+   "stage1": {
+    "prompt": "The serum phosphorus is 5.9 mg/dL.",
+    "value": 5.9,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypophosphatemia",
+      "correct": false,
+      "rationale": "Hypophosphatemia is a low serum phosphorus, under 3.0 mg/dL. This value is above the range, not below it."
+     },
+     {
+      "id": "B",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum phosphorus is 3.0 to 4.5 mg/dL. At 5.9 mg/dL, this one falls outside that."
+     },
+     {
+      "id": "C",
+      "text": "Hypercalcemia",
+      "correct": false,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. The value you were given is serum phosphorus."
+     },
+     {
+      "id": "D",
+      "text": "Hyperphosphatemia",
+      "correct": true,
+      "rationale": "Hyperphosphatemia is a high serum phosphorus, over 4.5 mg/dL. At 5.9 mg/dL, this one is above the range of 3.0 to 4.5 mg/dL."
+     }
+    ],
+    "answer": "D"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Itching and calcium-phosphate deposits in soft tissue",
+      "correct": true,
+      "rationale": "Excess phosphorus precipitates with calcium outside the bone."
+     },
+     {
+      "id": "B",
+      "text": "A serum calcium that is low or falling",
+      "correct": true,
+      "rationale": "The pair moves in opposite directions, and this is what causes the symptoms."
+     },
+     {
+      "id": "C",
+      "text": "A history of kidney disease",
+      "correct": true,
+      "rationale": "The kidney is the route out, so failure is the usual cause."
+     },
+     {
+      "id": "D",
+      "text": "Tingling around the mouth and in the fingertips",
+      "correct": true,
+      "rationale": "The hypocalcemia the excess phosphorus produced."
+     },
+     {
+      "id": "E",
+      "text": "Refeeding risk after starvation",
+      "correct": false,
+      "rationale": "That belongs to hypophosphatemia. Reintroducing glucose drives phosphorus into cells and drops the serum level sharply."
+     },
+     {
+      "id": "F",
+      "text": "Muscle weakness, including the muscles of respiration",
+      "correct": false,
+      "rationale": "That belongs to hypophosphatemia. Without ATP the muscle cannot contract, and the diaphragm is affected like any other muscle."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The symptoms are mostly the hypocalcemia it produces, because phosphorus binds calcium."
+  },
+  {
+   "section": "chloride",
+   "sectionName": "Chloride",
+   "unit": "mEq/L",
+   "note": "Chloride follows sodium and moves opposite bicarbonate, so it is read as an acid-base clue more than as a problem of its own.",
+   "normalRange": {
+    "low": 98,
+    "high": 106
+   },
+   "id": "chloride-01",
+   "critical": false,
+   "state": "hypochloremia",
+   "stage1": {
+    "prompt": "The serum chloride is 88 mEq/L.",
+    "value": 88,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hyponatremia",
+      "correct": false,
+      "rationale": "Hyponatremia is a low serum sodium, under 136 mEq/L. The value you were given is serum chloride."
+     },
+     {
+      "id": "B",
+      "text": "Hypochloremia",
+      "correct": true,
+      "rationale": "Hypochloremia is a low serum chloride, under 98 mEq/L. At 88 mEq/L, this one is below the range of 98 to 106 mEq/L."
+     },
+     {
+      "id": "C",
+      "text": "Hyperchloremia",
+      "correct": false,
+      "rationale": "Hyperchloremia is a high serum chloride, over 106 mEq/L. This value is below the range, not above it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum chloride is 98 to 106 mEq/L. At 88 mEq/L, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Muscle twitching, tremor, and hyperexcitability",
+      "correct": true,
+      "rationale": "The accompanying alkalosis lowers ionized calcium and makes nerves irritable."
+     },
+     {
+      "id": "B",
+      "text": "Tetany and hyperactive reflexes",
+      "correct": true,
+      "rationale": "The same alkalosis-driven drop in free calcium."
+     },
+     {
+      "id": "C",
+      "text": "Slow, shallow respirations",
+      "correct": true,
+      "rationale": "The lungs retain carbon dioxide to compensate for the metabolic alkalosis."
+     },
+     {
+      "id": "D",
+      "text": "A history of vomiting or nasogastric suction",
+      "correct": true,
+      "rationale": "Gastric fluid is rich in chloride, and losing it is the commonest cause."
+     },
+     {
+      "id": "E",
+      "text": "Deep, rapid Kussmaul respirations",
+      "correct": false,
+      "rationale": "That belongs to hyperchloremia. The lungs blow off carbon dioxide to compensate for the metabolic acidosis."
+     },
+     {
+      "id": "F",
+      "text": "Weakness and lethargy",
+      "correct": false,
+      "rationale": "That belongs to hyperchloremia. Generalized effects of acidosis on cellular function."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Chloride is usually lost with gastric acid, and bicarbonate rises to take its place, producing a metabolic alkalosis."
+  },
+  {
+   "section": "potassium",
+   "sectionName": "Potassium",
+   "unit": "mEq/L",
+   "note": "The range is narrow because 98 percent of body potassium is inside cells. A small serum change is a large change in the gradient.",
+   "normalRange": {
+    "low": 3.5,
+    "high": 5.0
+   },
+   "id": "potassium-03",
+   "critical": false,
+   "state": "hypokalemia",
+   "stage1": {
+    "prompt": "The serum potassium is 3.2 mEq/L.",
+    "value": 3.2,
+    "unit": "mEq/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. The value you were given is serum potassium."
+     },
+     {
+      "id": "B",
+      "text": "Hypokalemia",
+      "correct": true,
+      "rationale": "Hypokalemia is a low serum potassium, under 3.5 mEq/L. At 3.2 mEq/L, this one is below the range of 3.5 to 5.0 mEq/L."
+     },
+     {
+      "id": "C",
+      "text": "Hyperkalemia",
+      "correct": false,
+      "rationale": "Hyperkalemia is a high serum potassium, over 5.0 mEq/L. This value is below the range, not above it."
+     },
+     {
+      "id": "D",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum potassium is 3.5 to 5.0 mEq/L. At 3.2 mEq/L, this one falls outside that."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Weakness beginning in the legs and ascending",
+      "correct": true,
+      "rationale": "Hypokalemic weakness is ascending, and the muscles of respiration are last in line."
+     },
+     {
+      "id": "B",
+      "text": "A prominent U wave on the monitor",
+      "correct": true,
+      "rationale": "The signature of hypokalemia: a wave appearing where there should be nothing."
+     },
+     {
+      "id": "C",
+      "text": "Hyperactive bowel sounds with diarrhea",
+      "correct": false,
+      "rationale": "That belongs to hyperkalemia. The gut speeds up, which is the mirror image of hypokalemia and a useful bedside discriminator."
+     },
+     {
+      "id": "D",
+      "text": "Bradycardia with a weak, irregular pulse",
+      "correct": false,
+      "rationale": "That belongs to hyperkalemia. Conduction failure slows and destabilizes the rate."
+     },
+     {
+      "id": "E",
+      "text": "Polyuria with dilute urine",
+      "correct": true,
+      "rationale": "The kidney loses its ability to concentrate, which drives thirst."
+     },
+     {
+      "id": "F",
+      "text": "Lethargy and a flat affect",
+      "correct": true,
+      "rationale": "The patient is depressed and quiet rather than agitated."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "E",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Cells are harder to depolarize, so everything slows and weakens. This is the opposite of what a deficiency usually does."
+  },
+  {
+   "section": "calcium",
+   "sectionName": "Calcium, total serum",
+   "unit": "mg/dL",
+   "note": "Roughly half of serum calcium is bound to albumin, so a low albumin lowers the total without lowering the ionized calcium that is actually working. Ionized calcium runs 4.5 to 5.6 mg/dL.",
+   "normalRange": {
+    "low": 9.0,
+    "high": 10.5
+   },
+   "id": "calcium-06",
+   "critical": true,
+   "state": "hypercalcemia",
+   "stage1": {
+    "prompt": "The total serum calcium is 13.4 mg/dL.",
+    "value": 13.4,
+    "unit": "mg/dL",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal total serum calcium is 9.0 to 10.5 mg/dL. At 13.4 mg/dL, this one falls outside that."
+     },
+     {
+      "id": "B",
+      "text": "Hyperkalemia",
+      "correct": false,
+      "rationale": "Hyperkalemia is a high serum potassium, over 5.0 mEq/L. The value you were given is total serum calcium."
+     },
+     {
+      "id": "C",
+      "text": "Hypercalcemia",
+      "correct": true,
+      "rationale": "Hypercalcemia is a high total serum calcium, over 10.5 mg/dL. At 13.4 mg/dL, this one is above the range of 9.0 to 10.5 mg/dL."
+     },
+     {
+      "id": "D",
+      "text": "Hypocalcemia",
+      "correct": false,
+      "rationale": "Hypocalcemia is a low total serum calcium, under 9.0 mg/dL. This value is above the range, not below it."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Diminished or absent deep tendon reflexes",
+      "correct": true,
+      "rationale": "Cells will not depolarize, so the reflex arc is damped."
+     },
+     {
+      "id": "B",
+      "text": "Shortened ST segment and shortened QT interval",
+      "correct": true,
+      "rationale": "The exact mirror of hypocalcemia on the tracing."
+     },
+     {
+      "id": "C",
+      "text": "Twitching of the lip and eye when the facial nerve is tapped",
+      "correct": false,
+      "rationale": "That belongs to hypocalcemia. A positive Chvostek sign, produced by the same nerve irritability."
+     },
+     {
+      "id": "D",
+      "text": "Hyperactive deep tendon reflexes",
+      "correct": false,
+      "rationale": "That belongs to hypocalcemia. The membrane is destabilized, so reflex arcs fire too easily."
+     },
+     {
+      "id": "E",
+      "text": "Polyuria leading to dehydration",
+      "correct": true,
+      "rationale": "The kidney loses concentrating ability, which concentrates the calcium further."
+     },
+     {
+      "id": "F",
+      "text": "Profound muscle weakness",
+      "correct": true,
+      "rationale": "The finding that gets a fall precaution ordered, and the one most often mistaken for deconditioning."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "E",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "Extra calcium seals the membrane shut. Sodium cannot get through and cells will not depolarize."
+  },
+  {
+   "section": "fluidvolume",
+   "sectionName": "Urine specific gravity",
+   "unit": "",
+   "note": "Specific gravity is read together with volume status. Concentrated urine in a dry patient is the kidney working correctly; concentrated urine in an overloaded patient points to inappropriate ADH.",
+   "normalRange": {
+    "low": 1.005,
+    "high": 1.03
+   },
+   "id": "fluidvolume-02",
+   "critical": false,
+   "state": "concentrated",
+   "stage1": {
+    "prompt": "The urine specific gravity is 1.034.",
+    "value": 1.034,
+    "unit": "",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal urine specific gravity is 1.005 to 1.030. At 1.034, this one falls outside that."
+     },
+     {
+      "id": "B",
+      "text": "Consistent with diabetes insipidus",
+      "correct": false,
+      "rationale": "Diabetes insipidus produces large volumes of very dilute urine with a LOW specific gravity. This value is concentrated, which is the opposite."
+     },
+     {
+      "id": "C",
+      "text": "Concentrated urine, suggesting fluid volume deficit",
+      "correct": true,
+      "rationale": "A specific gravity over 1.030 is concentrated urine: the kidney is holding water, which points to a fluid volume deficit. At 1.034, this one is above the range of 1.005 to 1.030."
+     },
+     {
+      "id": "D",
+      "text": "Dilute urine, suggesting fluid volume excess",
+      "correct": false,
+      "rationale": "A specific gravity under 1.005 is dilute urine: the kidney is dumping water, which points to a fluid volume excess. This value is above the range, not below it."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Rising hematocrit, hemoglobin, and BUN",
+      "correct": true,
+      "rationale": "Hemoconcentration. The solutes stayed and the water left."
+     },
+     {
+      "id": "B",
+      "text": "An orthostatic drop of 20 mmHg systolic on standing",
+      "correct": true,
+      "rationale": "Lost volume cannot maintain pressure against gravity, and this is why these patients fall."
+     },
+     {
+      "id": "C",
+      "text": "Urine output under 30 mL per hour",
+      "correct": true,
+      "rationale": "The number that triggers action. The kidney conserves before anything else shows."
+     },
+     {
+      "id": "D",
+      "text": "Crackles in both lung bases with dyspnea",
+      "correct": false,
+      "rationale": "That belongs to dilute urine, suggesting fluid volume excess. Fluid crossing into the alveoli. A late sign, and the one that makes it an emergency."
+     },
+     {
+      "id": "E",
+      "text": "Dependent pitting edema",
+      "correct": false,
+      "rationale": "That belongs to dilute urine, suggesting fluid volume excess. Ankles in someone walking, sacrum in someone in bed."
+     },
+     {
+      "id": "F",
+      "text": "Dry mucous membranes and poor turgor at the sternum",
+      "correct": true,
+      "rationale": "Assess turgor at the sternum or forehead in an older adult, not the hand."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The kidney is holding on to water, so the urine carries more solute per volume."
+  },
+  {
+   "section": "acidbase",
+   "sectionName": "Arterial blood gas",
+   "unit": "mixed",
+   "note": "This is the one section where mmHg belongs: it is the unit for the partial pressure of carbon dioxide and oxygen, not for electrolytes.",
+   "id": "acidbase-03",
+   "critical": true,
+   "state": "met_acidosis",
+   "stage1": {
+    "prompt": "pH 7.26, PaCO2 34 mmHg, HCO3 15 mEq/L.",
+    "values": {
+     "pH": 7.26,
+     "PaCO2": 34,
+     "HCO3": 15
+    },
+    "unit": "pH / mmHg / mEq/L",
+    "question": "Which does this blood gas indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Metabolic alkalosis",
+      "correct": false,
+      "rationale": "Metabolic alkalosis is a high pH with a HIGH bicarbonate: base gained or acid lost. pH and bicarbonate move in the same direction. That is not the pattern here."
+     },
+     {
+      "id": "B",
+      "text": "Metabolic acidosis",
+      "correct": true,
+      "rationale": "The pH and the bicarbonate are both low, moving in the same direction. Metabolic Equal. The carbon dioxide is low because the lungs are already compensating."
+     },
+     {
+      "id": "C",
+      "text": "Respiratory acidosis",
+      "correct": false,
+      "rationale": "Respiratory acidosis is a low pH with a HIGH carbon dioxide: the lungs are not blowing it off. pH and carbon dioxide move in opposite directions. That is not the pattern here."
+     },
+     {
+      "id": "D",
+      "text": "Respiratory alkalosis",
+      "correct": false,
+      "rationale": "Respiratory alkalosis is a high pH with a LOW carbon dioxide: the patient is blowing off too much. pH and carbon dioxide move in opposite directions. That is not the pattern here."
+     }
+    ],
+    "answer": "B"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "Deep, rapid Kussmaul respirations",
+      "correct": true,
+      "rationale": "The lungs blow off carbon dioxide to compensate. This is the compensation, not the problem."
+     },
+     {
+      "id": "B",
+      "text": "Lethargy progressing to stupor",
+      "correct": true,
+      "rationale": "Acidosis depresses the central nervous system."
+     },
+     {
+      "id": "C",
+      "text": "Slow, shallow respirations",
+      "correct": false,
+      "rationale": "That belongs to metabolic alkalosis. The lungs retain carbon dioxide to compensate."
+     },
+     {
+      "id": "D",
+      "text": "A falling serum potassium",
+      "correct": false,
+      "rationale": "That belongs to metabolic alkalosis. Alkalosis drives potassium into cells, and the usual causes waste it as well."
+     },
+     {
+      "id": "E",
+      "text": "Nausea, vomiting, and abdominal pain",
+      "correct": true,
+      "rationale": "Common in ketoacidosis and in severe acidosis generally."
+     },
+     {
+      "id": "F",
+      "text": "Dysrhythmias and a falling blood pressure",
+      "correct": true,
+      "rationale": "Acidosis reduces cardiac contractility and vascular responsiveness."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "E",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "ROME: Respiratory Opposite, Metabolic Equal. Read the pH, then the carbon dioxide, then the bicarbonate, then decide the compensation."
+  },
+  {
+   "section": "osmolality",
+   "sectionName": "Serum osmolality",
+   "unit": "mOsm/L",
+   "note": "Potter prints 285 to 295 mOsm/kg. Osmolarity is per liter of solution and osmolality is per kilogram of water; in human physiology the two are treated as the same thing.",
+   "normalRange": {
+    "low": 270,
+    "high": 300
+   },
+   "id": "osmolality-05",
+   "critical": true,
+   "state": "hyperosmolar",
+   "stage1": {
+    "prompt": "The serum osmolality is 330 mOsm/L.",
+    "value": 330,
+    "unit": "mOsm/L",
+    "question": "Which does this value indicate?",
+    "type": "multiple_choice",
+    "options": [
+     {
+      "id": "A",
+      "text": "Within the normal range",
+      "correct": false,
+      "rationale": "A normal serum osmolality is 270 to 300 mOsm/L. At 330 mOsm/L, this one falls outside that."
+     },
+     {
+      "id": "B",
+      "text": "Hypernatremia",
+      "correct": false,
+      "rationale": "Hypernatremia is a high serum sodium, over 145 mEq/L. The value you were given is serum osmolality."
+     },
+     {
+      "id": "C",
+      "text": "Hyperosmolality (concentration)",
+      "correct": true,
+      "rationale": "Hyperosmolality means the blood is concentrated: a serum osmolality over 300 mOsm/L. At 330 mOsm/L, this one is above the range of 270 to 300 mOsm/L."
+     },
+     {
+      "id": "D",
+      "text": "Hypo-osmolality (dilution)",
+      "correct": false,
+      "rationale": "Hypo-osmolality means the blood is dilute: a serum osmolality under 270 mOsm/L. This value is above the range, not below it."
+     }
+    ],
+    "answer": "C"
+   },
+   "stage2": {
+    "unlockedBy": "stage1",
+    "question": "Which findings do you expect? Select all that apply.",
+    "type": "sata",
+    "options": [
+     {
+      "id": "A",
+      "text": "A high urine specific gravity",
+      "correct": true,
+      "rationale": "The kidney concentrates urine to conserve water."
+     },
+     {
+      "id": "B",
+      "text": "A markedly elevated blood glucose in some patients",
+      "correct": true,
+      "rationale": "Glucose contributes to measured osmolality, which is why hyperglycemia can drive it up without hypernatremia."
+     },
+     {
+      "id": "C",
+      "text": "Intense thirst",
+      "correct": true,
+      "rationale": "The intact response to concentrated blood."
+     },
+     {
+      "id": "D",
+      "text": "A serum sodium below 136 mEq/L",
+      "correct": false,
+      "rationale": "That belongs to hypo-osmolality (dilution). Sodium is the main determinant of serum osmolality, so the two fall together."
+     },
+     {
+      "id": "E",
+      "text": "A low urine specific gravity when the cause is water gain",
+      "correct": false,
+      "rationale": "That belongs to hypo-osmolality (dilution). Dilute blood with dilute urine points to excess free water rather than sodium loss."
+     },
+     {
+      "id": "F",
+      "text": "Restlessness and agitation, then lethargy",
+      "correct": true,
+      "rationale": "Shrinking brain cells irritate first, then depress."
+     }
+    ],
+    "answer": [
+     "A",
+     "B",
+     "C",
+     "F"
+    ],
+    "scoring": "All correct options and no incorrect options."
+   },
+   "takeaway": "The blood is concentrated, so water is pulled out of cells and they shrink."
+  }
+ ]
+}

@@ -1,18 +1,19 @@
 import { buildBank, DerivedBank } from "./Questions";
 
-export type ExamId = "exam1" | "exam2";
+export type ExamId = "exam1" | "exam2" | "exam3";
 
 export const EXAM_KEY = "nclex:exam:v1";
 
 export const EXAM_TITLES: Record<ExamId, string> = {
   exam1: "Exam 1",
   exam2: "Exam 2",
+  exam3: "Exam 3",
 };
 
-export const EXAMS: ExamId[] = ["exam1", "exam2"];
+export const EXAMS: ExamId[] = ["exam1", "exam2", "exam3"];
 
 export const isExamId = (value: unknown): value is ExamId =>
-  value === "exam1" || value === "exam2";
+  value === "exam1" || value === "exam2" || value === "exam3";
 
 const cache = new Map<ExamId, Promise<DerivedBank>>();
 
@@ -27,13 +28,17 @@ export const loadBank = (exam: ExamId): Promise<DerivedBank> => {
       ? import("./questions-2.json").then((mod) =>
           buildBank(mod.default as unknown as Parameters<typeof buildBank>[0]),
         )
-      : Promise.all([import("./questions.json"), import("./teaching.json")]).then(
-          ([data, extra]) =>
-            buildBank(
-              data.default as unknown as Parameters<typeof buildBank>[0],
-              extra.default as unknown as Parameters<typeof buildBank>[1],
-            ),
-        );
+      : exam === "exam3"
+        ? import("./questions-3.json").then((mod) =>
+            buildBank(mod.default as unknown as Parameters<typeof buildBank>[0]),
+          )
+        : Promise.all([import("./questions.json"), import("./teaching.json")]).then(
+            ([data, extra]) =>
+              buildBank(
+                data.default as unknown as Parameters<typeof buildBank>[0],
+                extra.default as unknown as Parameters<typeof buildBank>[1],
+              ),
+          );
 
   cache.set(exam, promise);
   return promise;
