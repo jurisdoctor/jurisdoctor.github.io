@@ -3,7 +3,7 @@
     "course": "N55 Fundamentals of Nursing",
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
-    "questionCount": 675,
+    "questionCount": 719,
     "chaptersIncluded": [
       1,
       2,
@@ -37,7 +37,9 @@
       1039,
       1040,
       1041,
-      1056
+      1056,
+      1035,
+      1038
     ],
     "chaptersPending": [],
     "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time. Generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id.",
@@ -78,7 +80,9 @@
       1039,
       1040,
       1041,
-      1056
+      1056,
+      1035,
+      1038
     ],
     "itemTypes": [
       "bowtie",
@@ -221,7 +225,9 @@
       "1039": 10,
       "1040": 10,
       "1041": 26,
-      "1056": 20
+      "1056": 20,
+      "1035": 22,
+      "1038": 22
     },
     "exams": [
       {
@@ -281,53 +287,67 @@
           1013,
           49,
           1039,
-          1040
+          1040,
+          1035,
+          1038
         ],
         "skills": [],
-        "questionCount": 170
+        "questionCount": 214
       }
     ],
     "currentDailySet": {
-      "date": "2026-09-16",
+      "date": "2026-09-25",
       "chapters": [
-        27,
-        38,
-        1015,
-        1041
+        1035,
+        1038
       ],
       "questionIds": [
-        "ch27-e1",
-        "ch27-e2",
-        "ch27-e3",
-        "ch27-e4",
-        "ch27-e5",
-        "ch27-e6",
-        "ch27-e7",
-        "ch38-e1",
-        "ch38-e2",
-        "ch38-e3",
-        "ch38-e4",
-        "ch38-e5",
-        "ch38-e6",
-        "ch38-e7",
-        "ig15-e1",
-        "ig15-e2",
-        "ig15-e3",
-        "ig15-e4",
-        "ig15-e5",
-        "ig15-e6",
-        "ig15-e7",
-        "ig15-e8",
-        "ig41-e1",
-        "ig41-e2",
-        "ig41-e3",
-        "ig41-e4",
-        "ig41-e5",
-        "ig41-e6",
-        "ig41-e7",
-        "ig41-e8"
+        "ig35-q01",
+        "ig35-q02",
+        "ig35-q03",
+        "ig35-q04",
+        "ig35-q05",
+        "ig35-q06",
+        "ig35-q07",
+        "ig35-q08",
+        "ig35-q09",
+        "ig35-q10",
+        "ig35-q11",
+        "ig35-q12",
+        "ig35-q13",
+        "ig35-q14",
+        "ig35-q15",
+        "ig35-s01",
+        "ig35-s02",
+        "ig35-x01",
+        "ig35-x02",
+        "ig35-x03",
+        "ig35-x04",
+        "ig35-t1",
+        "ig38-q01",
+        "ig38-q02",
+        "ig38-q03",
+        "ig38-q04",
+        "ig38-q05",
+        "ig38-q06",
+        "ig38-q07",
+        "ig38-q08",
+        "ig38-q09",
+        "ig38-q10",
+        "ig38-q11",
+        "ig38-q12",
+        "ig38-q13",
+        "ig38-q14",
+        "ig38-q15",
+        "ig38-s01",
+        "ig38-s02",
+        "ig38-x01",
+        "ig38-x02",
+        "ig38-x03",
+        "ig38-x04",
+        "ig38-t1"
       ],
-      "count": 30
+      "count": 44
     }
   },
   "chapters": [
@@ -1096,7 +1116,6 @@
         },
         {
           "id": "ch27-e1",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "Four patients were admitted last night. All four were independent at home. Which patient is most likely to be injured by the hospitalization itself rather than by the illness?",
           "options": [
@@ -1130,7 +1149,6 @@
         },
         {
           "id": "ch27-e2",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A nurse has taught the family of a patient at high risk for falls. Which statement by a family member indicates that the teaching needs to be reinforced?",
           "options": [
@@ -1164,7 +1182,6 @@
         },
         {
           "id": "ch27-e3",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A nurse is supervising assistive personnel caring for four patients on a fall prevention protocol. Which observed action requires the nurse to intervene?",
           "options": [
@@ -1198,7 +1215,6 @@
         },
         {
           "id": "ch27-e4",
-          "dailySet": "2026-09-16",
           "type": "sata",
           "stem": "A patient who is confused becomes increasingly restless at 2100 and repeatedly tries to get out of bed. Which nursing actions are appropriate before restraint is considered? Select all that apply.",
           "options": [
@@ -1250,7 +1266,6 @@
         },
         {
           "id": "ch27-e5",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient has been in a vest restraint for six hours for pulling at a chest tube. At 0300 the nurse finds the patient partly over the side rail with the vest twisted across the upper chest, breathing rapidly, and unable to speak in full sentences. Which action does the nurse take first?",
           "options": [
@@ -1284,7 +1299,6 @@
         },
         {
           "id": "ch27-e6",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A unit's fall rate has not changed in six months despite an updated fall protocol. Reviewing the data, the manager finds that most falls were unwitnessed, occurred between 0200 and 0500, and involved patients whose documented plans included scheduled toileting. Which conclusion does this best support?",
           "options": [
@@ -1318,7 +1332,6 @@
         },
         {
           "id": "ch27-e7",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient admitted after a stroke has expressive aphasia and new right-sided weakness. The patient understands what is said but cannot produce words reliably, and has twice been found sitting at the edge of the bed alone. Which addition to the fall prevention plan is most important?",
           "options": [
@@ -2461,7 +2474,6 @@
         },
         {
           "id": "ch38-e1",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient on bed rest for four days is preparing to ambulate. Supine blood pressure is 128/76 with a pulse of 78. After sitting at the edge of the bed for one minute, blood pressure is 102/58 with a pulse of 104 and the patient reports the room is spinning. Which action does the nurse take?",
           "options": [
@@ -2495,7 +2507,6 @@
         },
         {
           "id": "ch38-e2",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient has been immobile for five days after a pelvic fracture. The nurse notes that the left calf is 3 cm larger than the right and is warm and tender. Which action does the nurse take first?",
           "options": [
@@ -2529,7 +2540,6 @@
         },
         {
           "id": "ch38-e3",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient who slides down in bed several times a day has an area of reddened, partially denuded skin over the sacrum. The bed is routinely kept at 45 degrees. Which change most directly addresses the mechanism causing this injury?",
           "options": [
@@ -2563,7 +2573,6 @@
         },
         {
           "id": "ch38-e4",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient immobile for two weeks has a footboard in place. The nurse finds the feet resting with the toes pointed and a gap of several inches between the soles and the board. Which conclusion does the nurse draw?",
           "options": [
@@ -2597,7 +2606,6 @@
         },
         {
           "id": "ch38-e5",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient immobile for three weeks eats about a third of each meal. Serum albumin has fallen from 3.8 to 2.9 g/dL, weight is down 4 kg, and the arms and legs appear visibly thinner. Which process best explains this pattern?",
           "options": [
@@ -2631,7 +2639,6 @@
         },
         {
           "id": "ch38-e6",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient two days after knee arthroplasty is on a weight-bearing restriction and reports the knee is too painful to bend beyond a few degrees. Which exercise best maintains quadriceps strength now?",
           "options": [
@@ -2665,7 +2672,6 @@
         },
         {
           "id": "ch38-e7",
-          "dailySet": "2026-09-16",
           "type": "sata",
           "stem": "A nurse repositions an immobile patient from supine to a 30-degree side-lying position with pillows supporting the back, between the knees, and under the upper arm. Which outcomes does this positioning achieve? Select all that apply.",
           "options": [
@@ -5810,7 +5816,6 @@
         },
         {
           "id": "ig15-e1",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient has a serum potassium of 2.9 mEq/L. Urine output has been 15 mL per hour for the past four hours and the creatinine is rising. The provider orders potassium chloride 20 mEq in 100 mL over one hour. Which action does the nurse take?",
           "options": [
@@ -5844,7 +5849,6 @@
         },
         {
           "id": "ig15-e2",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient with kidney failure has a potassium of 6.9 mEq/L. The monitor shows tall peaked T waves and a QRS that has widened since the previous strip. The patient is alert with a blood pressure of 104/62. Which order does the nurse anticipate first?",
           "options": [
@@ -5878,7 +5882,6 @@
         },
         {
           "id": "ig15-e3",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "Ten hours after a total thyroidectomy a patient reports tingling of the fingers and around the mouth. The voice sounds hoarse and the patient has begun clearing the throat repeatedly. Chvostek sign is positive. Which action does the nurse take first?",
           "options": [
@@ -5912,7 +5915,6 @@
         },
         {
           "id": "ig15-e4",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient is receiving a continuous magnesium sulfate infusion. Over the past hour the patellar reflexes have become difficult to elicit, respirations have fallen from 18 to 11 per minute, and urine output was 20 mL in the last hour. Which action does the nurse take first?",
           "options": [
@@ -5946,7 +5948,6 @@
         },
         {
           "id": "ig15-e5",
-          "dailySet": "2026-09-16",
           "type": "sata",
           "stem": "A patient who has had vomiting and diarrhea for three days is admitted. Which findings support fluid volume deficit? Select all that apply.",
           "options": [
@@ -5998,7 +5999,6 @@
         },
         {
           "id": "ig15-e6",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient with heart failure has a recorded 24-hour intake of 1400 mL and output of 1500 mL, which the nurse notes as a slightly negative balance. The morning weight is up 1.6 kg from yesterday. Which conclusion does the nurse draw?",
           "options": [
@@ -6032,7 +6032,6 @@
         },
         {
           "id": "ig15-e7",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A nurse is observing a new graduate prepare to transfuse platelets. Which action requires the nurse to intervene?",
           "options": [
@@ -6066,7 +6065,6 @@
         },
         {
           "id": "ig15-e8",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient will receive chemotherapy every three weeks for the next year, swims twice weekly, and has had two peripheral lines infiltrate during the first cycle. Which device does the nurse anticipate?",
           "options": [
@@ -8147,7 +8145,6 @@
         },
         {
           "id": "ig41-e1",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient three days past abdominal surgery tolerates sitting upright at the edge of the mattress for several minutes and shakes hands firmly. With both feet flat on the floor and the knees below hip level, the patient cannot extend either leg or flex the ankles. The patient insists on standing. Which action does the nurse take?",
           "options": [
@@ -8181,7 +8178,6 @@
         },
         {
           "id": "ig41-e2",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "During a mobility assessment a patient stands, holds the position, marches in place, and advances each foot forward and back. While doing so the patient repeatedly lets go of the walker to gesture and states there is no need for it. Which nursing action follows?",
           "options": [
@@ -8215,7 +8211,6 @@
         },
         {
           "id": "ig41-e3",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A nurse tests upper extremity strength. The right arm lifts off the bed and holds against moderate downward pressure before giving way. The left arm lifts off the bed but drops as soon as any pressure is applied. How does the nurse document this?",
           "options": [
@@ -8249,7 +8244,6 @@
         },
         {
           "id": "ig41-e4",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "Six hours after a below-knee cast was applied for a fibular fracture, a patient has pain rated 9 of 10 that increased after the last analgesic dose. The toes are swollen and cool, capillary refill is 5 seconds, and the patient reports the foot feels numb. The opposite foot is warm with refill under 2 seconds. Which action does the nurse take first?",
           "options": [
@@ -8283,7 +8277,6 @@
         },
         {
           "id": "ig41-e5",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient in the clinic has lost 5 cm of height over eight years, fractured a wrist catching a fall from standing, and reports mid-back pain that began without injury. Which diagnostic study does the nurse anticipate?",
           "options": [
@@ -8317,7 +8310,6 @@
         },
         {
           "id": "ig41-e6",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "A patient with several weeks of progressive proximal muscle weakness has a creatine kinase of 4200 units/L, an elevated aldolase, and an elevated aspartate aminotransferase. The alkaline phosphatase and bilirubin are normal. What do these results support?",
           "options": [
@@ -8351,7 +8343,6 @@
         },
         {
           "id": "ig41-e7",
-          "dailySet": "2026-09-16",
           "type": "sata",
           "stem": "A patient of 62 with a family history of osteoporosis asks how to protect bone and muscle over the coming years. Which recommendations does the nurse include? Select all that apply.",
           "options": [
@@ -8403,7 +8394,6 @@
         },
         {
           "id": "ig41-e8",
-          "dailySet": "2026-09-16",
           "type": "multiple_choice",
           "stem": "Two patients are assessed on the same morning. Patient one has 5 of 5 strength in all extremities and full range of motion but cannot rise from a chair without using both armrests and stops twice crossing the room. Patient two has 4 of 5 strength and mildly reduced shoulder range but dresses, transfers, and walks the hallway without stopping. Which statement about their functional ability is accurate?",
           "options": [
@@ -8434,6 +8424,2765 @@
           ],
           "answer": "A",
           "takeaway": "Strength is a number at rest. Function is what the patient accomplishes, and the two come apart in real patients."
+        }
+      ]
+    },
+    {
+      "id": 1035,
+      "chapterNumber": 35,
+      "source": "Iggy",
+      "title": "Neurologic Assessment",
+      "exam": "Exam 2",
+      "questions": [
+        {
+          "id": "ig35-q01",
+          "type": "multiple_choice",
+          "stem": "Which assessment question best evaluates a patient's memory?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Count backward from 100 by 7s.",
+              "correct": false,
+              "rationale": "Serial 7s test attention and calculation, not memory."
+            },
+            {
+              "id": "B",
+              "text": "Explain the meaning of a common fable.",
+              "correct": false,
+              "rationale": "Interpreting a fable tests abstract thinking."
+            },
+            {
+              "id": "C",
+              "text": "Describe how you came to the hospital.",
+              "correct": true,
+              "rationale": "Recalling a recent event tests memory directly."
+            },
+            {
+              "id": "D",
+              "text": "Copy a word onto paper.",
+              "correct": false,
+              "rationale": "Copying tests motor function and following directions."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Memory is tested by asking the patient to recall something that happened. Serial 7s test attention; fables test abstract thinking.",
+          "strategy": "Match each option to the brain function it actually tests, then pick the one that matches the stem.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name what each option tests",
+                "detail": "A is attention, B is abstract reasoning, D is motor and following directions."
+              },
+              {
+                "action": "Find the recall task",
+                "detail": "Only C asks the patient to pull up a recent event from memory."
+              }
+            ],
+            "verdict": "C is the only option that makes the patient remember something."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q02",
+          "type": "multiple_choice",
+          "stem": "An older adult patient who was oriented this morning suddenly becomes confused. What should the nurse assess first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "SpO2",
+              "correct": true,
+              "rationale": "Hypoxia is a fast, reversible cause of acute confusion and falls under breathing in the ABCs."
+            },
+            {
+              "id": "B",
+              "text": "Temperature",
+              "correct": false,
+              "rationale": "Infection can cause confusion, but oxygenation is the more immediate threat."
+            },
+            {
+              "id": "C",
+              "text": "Medication reconciliation",
+              "correct": false,
+              "rationale": "Important later, but it takes time and does not address an immediate threat."
+            },
+            {
+              "id": "D",
+              "text": "Electrolytes",
+              "correct": false,
+              "rationale": "Needs a lab draw and results; check oxygenation first."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "A sudden change in mental status is a new cue that needs action now. Oxygenation is checked first because hypoxia is quick to find and quick to fix.",
+          "strategy": "When every option is a possible cause, use the ABCs to choose which one to check first.",
+          "elimination": {
+            "strategies": [
+              "Apply the ABCs",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Confirm all are plausible",
+                "detail": "Hypoxia, infection, medications, and electrolytes can all cause confusion."
+              },
+              {
+                "action": "Apply the ABCs",
+                "detail": "Oxygenation is breathing, so it comes before the other causes."
+              },
+              {
+                "action": "Consider speed",
+                "detail": "SpO2 takes seconds at the bedside. Labs and a medication review take longer."
+              }
+            ],
+            "verdict": "SpO2 is the priority because it is an ABC finding and the fastest to correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q03",
+          "type": "multiple_choice",
+          "stem": "A patient with a frontal lobe injury is admitted to the unit. Which intervention is most appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Enable the bed alarm.",
+              "correct": true,
+              "rationale": "The frontal lobe controls judgment and impulse control. Poor judgment raises fall risk, and a bed alarm protects the patient without relying on judgment."
+            },
+            {
+              "id": "B",
+              "text": "Use a picture board for communication.",
+              "correct": false,
+              "rationale": "Picture boards help with aphasia, which is more closely tied to language areas."
+            },
+            {
+              "id": "C",
+              "text": "Place all items directly in front of the patient.",
+              "correct": false,
+              "rationale": "This helps with visual field loss or neglect, not frontal lobe deficits."
+            },
+            {
+              "id": "D",
+              "text": "Teach the patient to use the call light before getting up.",
+              "correct": false,
+              "rationale": "This depends on judgment and memory, the very functions a frontal lobe injury impairs."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Frontal lobe damage impairs judgment and impulse control. Choose safety measures that do not depend on the patient remembering or deciding to follow them.",
+          "strategy": "Link the brain region to its function, then ask which intervention still works if that function is lost.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Recall the frontal lobe",
+                "detail": "It handles judgment, impulse control, personality, and planning."
+              },
+              {
+                "action": "Reject options for other deficits",
+                "detail": "B is for aphasia, C is for visual field loss or neglect."
+              },
+              {
+                "action": "Spot the trap",
+                "detail": "D sounds good, but it asks an impaired patient to use judgment."
+              }
+            ],
+            "verdict": "The bed alarm is correct because it keeps the patient safe without depending on judgment."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q04",
+          "type": "multiple_choice",
+          "stem": "A patient opens the eyes when spoken to, gives confused answers, and follows commands. What is the Glasgow Coma Scale score?",
+          "options": [
+            {
+              "id": "A",
+              "text": "11",
+              "correct": false,
+              "rationale": "This undercounts one of the components."
+            },
+            {
+              "id": "B",
+              "text": "12",
+              "correct": false,
+              "rationale": "This undercounts one of the components."
+            },
+            {
+              "id": "C",
+              "text": "13",
+              "correct": true,
+              "rationale": "Eyes to voice = 3, confused = 4, obeys commands = 6. Total 13."
+            },
+            {
+              "id": "D",
+              "text": "14",
+              "correct": false,
+              "rationale": "This would need spontaneous eye opening (4) or oriented speech (5)."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "GCS: eyes 4, verbal 5, motor 6. Score each part separately, then add. The range is 3 to 15.",
+          "strategy": "Write out E, V, and M before looking at the options so the distractors cannot anchor you.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Eyes",
+                "detail": "Opens to voice = 3."
+              },
+              {
+                "action": "Verbal",
+                "detail": "Confused = 4."
+              },
+              {
+                "action": "Motor",
+                "detail": "Obeys commands = 6."
+              },
+              {
+                "action": "Add",
+                "detail": "3 + 4 + 6 = 13."
+              }
+            ],
+            "verdict": "13 is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q05",
+          "type": "multiple_choice",
+          "stem": "A patient opens the eyes only to a painful stimulus, makes moaning sounds without words, and pulls the hand away from the painful stimulus. What is the GCS score?",
+          "options": [
+            {
+              "id": "A",
+              "text": "6",
+              "correct": false,
+              "rationale": "Too low. Recheck the motor score."
+            },
+            {
+              "id": "B",
+              "text": "7",
+              "correct": false,
+              "rationale": "Too low. Withdrawal is 4, not 3."
+            },
+            {
+              "id": "C",
+              "text": "8",
+              "correct": true,
+              "rationale": "Eyes to pain = 2, sounds = 2, withdraws = 4. Total 8."
+            },
+            {
+              "id": "D",
+              "text": "9",
+              "correct": false,
+              "rationale": "Too high. Moaning is sounds (2), not words (3)."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "A GCS of 8 or less signals severe impairment and a patient who may not protect the airway.",
+          "strategy": "Separate withdrawal (4, pulls away) from abnormal flexion (3, decorticate), and sounds (2) from words (3).",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Eyes",
+                "detail": "To pain = 2."
+              },
+              {
+                "action": "Verbal",
+                "detail": "Moaning with no words = sounds = 2."
+              },
+              {
+                "action": "Motor",
+                "detail": "Pulls away from pain = withdraws = 4."
+              },
+              {
+                "action": "Add",
+                "detail": "2 + 2 + 4 = 8."
+              }
+            ],
+            "verdict": "8 is correct. The traps are scoring moaning as words or withdrawal as flexion."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q06",
+          "type": "multiple_choice",
+          "stem": "The nurse finds a patient with arms extended at the sides, wrists turned outward, and feet pointed down. What does this finding indicate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Decorticate posturing from damage above the brainstem",
+              "correct": false,
+              "rationale": "Decorticate arms flex inward toward the core."
+            },
+            {
+              "id": "B",
+              "text": "Decerebrate posturing from brainstem involvement",
+              "correct": true,
+              "rationale": "Extension posturing points to the brainstem and is the more severe of the two."
+            },
+            {
+              "id": "C",
+              "text": "An expected response to pain in a sedated patient",
+              "correct": false,
+              "rationale": "Both postures are always abnormal."
+            },
+            {
+              "id": "D",
+              "text": "Localizing to pain, a purposeful movement",
+              "correct": false,
+              "rationale": "Localizing means reaching toward the stimulus."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Decorticate: flexion, arms toward the core, damage above the brainstem. Decerebrate: extension, arms away, brainstem, more severe. Both need immediate action.",
+          "strategy": "Use the memory hook: deCORticate = toward the CORe (flexion). Extension points to decerebrate.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Identify the posture",
+                "detail": "Extended arms and pointed feet are extension, so decerebrate."
+              },
+              {
+                "action": "Reject 'expected'",
+                "detail": "Posturing is never normal, even with sedation."
+              },
+              {
+                "action": "Reject localizing",
+                "detail": "Localizing is purposeful reaching, scored 5."
+              }
+            ],
+            "verdict": "Decerebrate posturing from the brainstem is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q07",
+          "type": "multiple_choice",
+          "stem": "A patient can name objects correctly and understands questions, but the words come out slurred. How should the nurse describe this problem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A language problem, which is a cognitive function",
+              "correct": false,
+              "rationale": "The patient understands and finds the right words, so language is intact."
+            },
+            {
+              "id": "B",
+              "text": "A speech problem, which is a motor function",
+              "correct": true,
+              "rationale": "Speech is the physical production of words. Right words, poor production = speech (motor) problem."
+            },
+            {
+              "id": "C",
+              "text": "A problem with orientation",
+              "correct": false,
+              "rationale": "Orientation is knowing person, place, time, and situation."
+            },
+            {
+              "id": "D",
+              "text": "A problem with level of consciousness",
+              "correct": false,
+              "rationale": "LOC is how awake the patient is."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Language is understanding and choosing words (cognitive). Speech is producing them (motor). New changes in either may signal neurologic dysfunction.",
+          "strategy": "Ask: are the words right? If yes and they sound wrong, it is speech.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check understanding",
+                "detail": "The patient understands, so receptive language is intact."
+              },
+              {
+                "action": "Check word choice",
+                "detail": "The patient names objects correctly, so expressive language is intact."
+              },
+              {
+                "action": "Check production",
+                "detail": "Slurring is a motor problem with making the sounds."
+              }
+            ],
+            "verdict": "Speech (motor) is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q08",
+          "type": "multiple_choice",
+          "stem": "An 84-year-old patient's daughter says, \"Mom has been a little forgetful for years, but today she can't find her words and her right hand is weak. I guess it's just her age.\" What is the nurse's best response?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Slower thinking and some memory changes are expected at her age.\"",
+              "correct": false,
+              "rationale": "True of gradual changes, but it dismisses a sudden new deficit."
+            },
+            {
+              "id": "B",
+              "text": "\"These are sudden changes, so I'm going to assess her right now.\"",
+              "correct": true,
+              "rationale": "Sudden or new neurologic changes are never assumed to be aging. Assess immediately."
+            },
+            {
+              "id": "C",
+              "text": "\"Let's watch her for a few hours and see if it gets better.\"",
+              "correct": false,
+              "rationale": "Waiting delays care for a possible stroke."
+            },
+            {
+              "id": "D",
+              "text": "\"I'll ask the provider to order a memory test tomorrow.\"",
+              "correct": false,
+              "rationale": "Delays assessment of an acute change."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Aging slows processing, reflexes, and pupil response gradually. Sudden or one-sided changes are never aging and need immediate assessment.",
+          "strategy": "Separate gradual from sudden. The word \"today\" and a one-sided finding make this acute.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Find the cue",
+                "detail": "Word-finding trouble and right hand weakness started today."
+              },
+              {
+                "action": "Reject reassurance",
+                "detail": "A is technically true about aging but ignores the new deficit."
+              },
+              {
+                "action": "Reject delay",
+                "detail": "C and D postpone assessment."
+              }
+            ],
+            "verdict": "B is correct because a new neurologic change means assess now."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q09",
+          "type": "multiple_choice",
+          "stem": "The nurse is performing a cranial nerve assessment on a patient who is NPO for surgery. Which action is appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give a sip of water to test swallowing.",
+              "correct": false,
+              "rationale": "Never test swallowing with fluids when the patient is NPO."
+            },
+            {
+              "id": "B",
+              "text": "Skip the swallow test and assess facial symmetry and pupils.",
+              "correct": true,
+              "rationale": "Swallowing is observed only if clinically appropriate. Other cranial nerve checks, including the gag reflex, still apply."
+            },
+            {
+              "id": "C",
+              "text": "Give ice chips instead of water to test swallowing.",
+              "correct": false,
+              "rationale": "Ice chips are still something by mouth."
+            },
+            {
+              "id": "D",
+              "text": "Postpone the entire neurologic assessment until after surgery.",
+              "correct": false,
+              "rationale": "Only the swallow part is deferred."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Do not test swallowing with fluids or ice chips if the patient is NPO. The gag reflex and the rest of the cranial nerves are still assessed as usual.",
+          "strategy": "Watch for options that quietly break an order, like ice chips for an NPO patient.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the rule",
+                "detail": "Give nothing by mouth when NPO. CN IX and X can still be checked with the gag reflex and uvula rise."
+              },
+              {
+                "action": "Reject workarounds",
+                "detail": "Ice chips still go by mouth."
+              },
+              {
+                "action": "Reject overcorrection",
+                "detail": "D skips the whole assessment when only one part is off limits."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q10",
+          "type": "multiple_choice",
+          "stem": "Which pupil documentation is most accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pupils normal.",
+              "correct": false,
+              "rationale": "Too vague to compare to later checks."
+            },
+            {
+              "id": "B",
+              "text": "Pupils 3 mm, equal, round, brisk reaction to light bilaterally.",
+              "correct": true,
+              "rationale": "Size in millimeters, equality, shape, and reaction can be trended."
+            },
+            {
+              "id": "C",
+              "text": "Pupils medium size and reactive.",
+              "correct": false,
+              "rationale": "Size must be measured in millimeters."
+            },
+            {
+              "id": "D",
+              "text": "PERRLA.",
+              "correct": false,
+              "rationale": "Acceptable shorthand in some settings, but gives no size to compare to baseline."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Document pupil size in millimeters (normal 2 to 6 mm), equality, shape, and speed of reaction. Change from baseline matters most.",
+          "strategy": "Pick the documentation someone else could use to spot a change.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the standard",
+                "detail": "Size in mm, equal, round, brisk, sluggish, or nonreactive."
+              },
+              {
+                "action": "Reject vague terms",
+                "detail": "\"Normal\" and \"medium\" can't be trended."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q11",
+          "type": "multiple_choice",
+          "stem": "A student asks how the body knows a hand touched a hot stove and pulls away. Which explanation is correct?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Efferent nerves carry the heat sensation to the brain, and afferent nerves move the hand.",
+              "correct": false,
+              "rationale": "The directions are reversed."
+            },
+            {
+              "id": "B",
+              "text": "Afferent nerves carry the sensation toward the CNS, and efferent nerves carry the signal to the muscles.",
+              "correct": true,
+              "rationale": "Afferent = arrives at the CNS. Efferent = exits to muscles and organs."
+            },
+            {
+              "id": "C",
+              "text": "The autonomic nervous system handles both the sensation and the movement.",
+              "correct": false,
+              "rationale": "Skeletal muscle movement is not autonomic."
+            },
+            {
+              "id": "D",
+              "text": "Cranial nerves carry the signal from the hand.",
+              "correct": false,
+              "rationale": "Spinal nerves serve the limbs."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Afferent pathways carry signals toward the CNS. Efferent pathways carry signals away from the CNS to muscles and organs.",
+          "strategy": "Afferent Arrives. Efferent Exits.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Apply the hook",
+                "detail": "Sensation arrives (afferent). Movement exits (efferent)."
+              },
+              {
+                "action": "Reject wrong systems",
+                "detail": "C is autonomic; D is cranial nerves, which serve the head."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q12",
+          "type": "multiple_choice",
+          "stem": "A frightened patient has a heart rate of 118 and dilated pupils. Which part of the nervous system is responsible?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Parasympathetic",
+              "correct": false,
+              "rationale": "Rest and digest slows the heart and constricts the pupils."
+            },
+            {
+              "id": "B",
+              "text": "Sympathetic",
+              "correct": true,
+              "rationale": "Fight or flight raises heart rate, dilates pupils, and mobilizes energy."
+            },
+            {
+              "id": "C",
+              "text": "Cerebellum",
+              "correct": false,
+              "rationale": "Controls balance and coordination."
+            },
+            {
+              "id": "D",
+              "text": "Somatic motor nerves",
+              "correct": false,
+              "rationale": "Control voluntary skeletal muscle."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Sympathetic = fight or flight: faster heart, dilated pupils. Parasympathetic = rest and digest: slower heart, digestion.",
+          "strategy": "Link the finding to fight or flight versus rest and digest.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the cues",
+                "detail": "Fear, tachycardia, dilated pupils."
+              },
+              {
+                "action": "Match",
+                "detail": "All three are fight or flight."
+              }
+            ],
+            "verdict": "Sympathetic is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q13",
+          "type": "multiple_choice",
+          "stem": "The provider orders a test to evaluate a patient's brain electrical activity after a possible seizure. Which test does the nurse expect?",
+          "options": [
+            {
+              "id": "A",
+              "text": "EMG",
+              "correct": false,
+              "rationale": "EMG evaluates nerve and muscle disorders."
+            },
+            {
+              "id": "B",
+              "text": "EEG",
+              "correct": true,
+              "rationale": "EEG records brain electrical activity."
+            },
+            {
+              "id": "C",
+              "text": "Lumbar puncture",
+              "correct": false,
+              "rationale": "Assesses cerebrospinal fluid."
+            },
+            {
+              "id": "D",
+              "text": "Transcranial Doppler",
+              "correct": false,
+              "rationale": "Measures cerebral blood flow."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "EEG = brain electrical activity. EMG = nerves and muscles. MRI = soft tissue. CT = structure. LP = CSF. Transcranial Doppler = blood flow.",
+          "strategy": "E for electrical, E for encephalo (brain): EEG. M for muscle: EMG.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Match the goal",
+                "detail": "Brain electrical activity."
+              },
+              {
+                "action": "Reject the look-alike",
+                "detail": "EMG looks similar but is muscle."
+              }
+            ],
+            "verdict": "EEG is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q14",
+          "type": "multiple_choice",
+          "stem": "A patient admitted for pneumonia had a normal neurologic exam on admission. Today the nurse notices a new tremor in the left hand. What type of assessment is appropriate now?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Comprehensive neurologic assessment",
+              "correct": false,
+              "rationale": "Used for new admissions or a broad baseline."
+            },
+            {
+              "id": "B",
+              "text": "Focused neurologic assessment",
+              "correct": true,
+              "rationale": "Targeted assessment is performed when a change from baseline is noted."
+            },
+            {
+              "id": "C",
+              "text": "No assessment; document the tremor only",
+              "correct": false,
+              "rationale": "A new finding needs assessment."
+            },
+            {
+              "id": "D",
+              "text": "Psychosocial assessment",
+              "correct": false,
+              "rationale": "Does not evaluate the new motor finding."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Comprehensive = broad baseline for new admissions or neurologic concerns. Focused = targeted when a change from baseline is noted or to monitor a known problem.",
+          "strategy": "Ask what triggered the assessment: a new admission or a new change.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Identify the trigger",
+                "detail": "A change from an established baseline."
+              },
+              {
+                "action": "Match",
+                "detail": "Changes from baseline call for a focused assessment."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-q15",
+          "type": "multiple_choice",
+          "stem": "To assess cranial nerve VII, the nurse asks the patient to do which of the following?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Follow a finger with the eyes.",
+              "correct": false,
+              "rationale": "Eye movements are CN III, IV, and VI."
+            },
+            {
+              "id": "B",
+              "text": "Smile, raise the eyebrows, and show the teeth.",
+              "correct": true,
+              "rationale": "CN VII (facial) controls facial movement. Look for drooping or asymmetry."
+            },
+            {
+              "id": "C",
+              "text": "Swallow a sip of water.",
+              "correct": false,
+              "rationale": "Swallowing is CN IX and X."
+            },
+            {
+              "id": "D",
+              "text": "Shrug the shoulders.",
+              "correct": false,
+              "rationale": "Shoulder shrug is CN XI."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "CN VII: smile, raise eyebrows, show teeth, compare both sides. CN IX and X: swallowing, only if appropriate.",
+          "strategy": "Picture what the nerve moves.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall CN VII",
+                "detail": "Facial nerve, facial expression."
+              },
+              {
+                "action": "Reject other nerves",
+                "detail": "Eyes (III, IV, VI), swallow (IX, X), shrug (XI)."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-s01",
+          "type": "sata",
+          "scoring": "0/1",
+          "stem": "A patient who was alert this morning is now suddenly confused. Which possible causes should the nurse consider? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Low oxygen level",
+              "correct": true,
+              "rationale": "Hypoxia is a fast, reversible cause."
+            },
+            {
+              "id": "B",
+              "text": "Low or high blood glucose",
+              "correct": true,
+              "rationale": "Glucose problems commonly cause acute confusion."
+            },
+            {
+              "id": "C",
+              "text": "Infection",
+              "correct": true,
+              "rationale": "Infection, including UTI or sepsis, can cause acute confusion, especially in older adults."
+            },
+            {
+              "id": "D",
+              "text": "A new medication",
+              "correct": true,
+              "rationale": "Sedatives, opioids, and anticholinergics are common causes."
+            },
+            {
+              "id": "E",
+              "text": "Electrolyte imbalance",
+              "correct": true,
+              "rationale": "Sodium imbalance in particular affects the brain."
+            },
+            {
+              "id": "F",
+              "text": "Normal aging",
+              "correct": false,
+              "rationale": "Aging is gradual. A sudden change is never assumed to be aging."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "takeaway": "For a sudden mental status change, think oxygenation, glucose, infection, medications, electrolytes, and other acute causes. Never blame aging.",
+          "strategy": "Every true acute cause is correct. Remove only the option that explains away the change.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the slide list",
+                "detail": "Oxygenation, glucose, infection, medications, electrolytes, acute causes."
+              },
+              {
+                "action": "Remove the trap",
+                "detail": "Aging is gradual. \"Sudden\" rules it out."
+              }
+            ],
+            "verdict": "A, B, C, D, and E are correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-s02",
+          "type": "sata",
+          "scoring": "0/1",
+          "stem": "Which findings in an 82-year-old patient are expected age-related neurologic changes? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Slower reaction time",
+              "correct": true,
+              "rationale": "Processing speed and reaction time slow with age."
+            },
+            {
+              "id": "B",
+              "text": "Diminished deep tendon reflexes",
+              "correct": true,
+              "rationale": "Expected with aging."
+            },
+            {
+              "id": "C",
+              "text": "Pupils react more slowly to light",
+              "correct": true,
+              "rationale": "Expected with aging."
+            },
+            {
+              "id": "D",
+              "text": "New weakness of the left arm",
+              "correct": false,
+              "rationale": "One-sided weakness is not aging. Assess immediately."
+            },
+            {
+              "id": "E",
+              "text": "Decreased sensitivity to touch and temperature",
+              "correct": true,
+              "rationale": "Expected, and a burn and injury risk to teach about."
+            },
+            {
+              "id": "F",
+              "text": "Sudden confusion since yesterday",
+              "correct": false,
+              "rationale": "Sudden change is never aging."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          "takeaway": "Aging slows things down evenly and gradually. New, sudden, or one-sided changes are not aging.",
+          "strategy": "Sort each finding by speed of onset and symmetry.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Keep gradual, bilateral changes",
+                "detail": "Reaction time, reflexes, pupil speed, sensation."
+              },
+              {
+                "action": "Remove sudden or one-sided findings",
+                "detail": "New arm weakness and sudden confusion need action."
+              }
+            ],
+            "verdict": "A, B, C, and E are correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-x01",
+          "type": "matrix",
+          "stem": "The nurse is assessing several older adult patients. For each finding, indicate whether it is an expected age-related change or requires immediate follow-up.",
+          "columns": [
+            "Expected age-related change",
+            "Requires immediate follow-up"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Takes longer to answer questions but answers correctly",
+              "answer": "Expected age-related change",
+              "rationale": "Slower processing with correct answers is expected."
+            },
+            {
+              "id": "r2",
+              "text": "Right facial droop noticed during lunch",
+              "answer": "Requires immediate follow-up",
+              "rationale": "New facial asymmetry suggests a stroke."
+            },
+            {
+              "id": "r3",
+              "text": "Wakes several times during the night",
+              "answer": "Expected age-related change",
+              "rationale": "Altered sleep and more nighttime waking are expected."
+            },
+            {
+              "id": "r4",
+              "text": "Left pupil 6 mm and sluggish; right pupil 3 mm and brisk",
+              "answer": "Requires immediate follow-up",
+              "rationale": "Unequal pupils with a sluggish reaction can signal rising ICP."
+            },
+            {
+              "id": "r5",
+              "text": "Diminished ankle reflexes on both sides",
+              "answer": "Expected age-related change",
+              "rationale": "Diminished reflexes on both sides are expected."
+            },
+            {
+              "id": "r6",
+              "text": "Garbled speech that started an hour ago",
+              "answer": "Requires immediate follow-up",
+              "rationale": "New speech changes may signal neurologic dysfunction."
+            }
+          ],
+          "answer": {
+            "r1": "Expected age-related change",
+            "r2": "Requires immediate follow-up",
+            "r3": "Expected age-related change",
+            "r4": "Requires immediate follow-up",
+            "r5": "Expected age-related change",
+            "r6": "Requires immediate follow-up"
+          },
+          "takeaway": "Expected aging changes are gradual and symmetric. New, sudden, or one-sided findings need immediate assessment.",
+          "strategy": "For each row, ask: is it new, sudden, or one-sided? If yes, it needs follow-up.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Look for 'new' and 'sudden'",
+                "detail": "Rows 2 and 6 describe a recent onset."
+              },
+              {
+                "action": "Look for asymmetry",
+                "detail": "Row 4 compares unequal pupils."
+              },
+              {
+                "action": "Keep bilateral, gradual changes as expected",
+                "detail": "Rows 1, 3, and 5."
+              }
+            ],
+            "verdict": "Expected: 1, 3, 5. Follow-up: 2, 4, 6."
+          },
+          "scoring": "0/1",
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-x02",
+          "type": "ordered_response",
+          "stem": "A patient was alert and oriented 30 minutes ago. The nurse now notices new confusion, slurred speech, and right-sided weakness. Place the nurse's actions in order.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Recognize the change from baseline",
+              "rationale": "Step 1: you cannot act on a change you have not recognized.",
+              "position": 1
+            },
+            {
+              "id": "B",
+              "text": "Assess the patient immediately",
+              "rationale": "Step 2.",
+              "position": 2
+            },
+            {
+              "id": "C",
+              "text": "Compare the findings to the prior baseline",
+              "rationale": "Step 3.",
+              "position": 3
+            },
+            {
+              "id": "D",
+              "text": "Assess ABCs and vital signs",
+              "rationale": "Step 4.",
+              "position": 4
+            },
+            {
+              "id": "E",
+              "text": "Notify the provider or activate the stroke alert",
+              "rationale": "Step 5: new confusion, slurred speech, and one-sided weakness within 30 minutes suggest a stroke.",
+              "position": 5
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "takeaway": "A new neurologic change means act now: recognize, assess, compare, ABCs and vitals, notify. This is the order on your class slide. On the NCLEX, if the patient looks unstable, the ABCs come first.",
+          "strategy": "Assessment comes before notification, so the call includes the data the team needs.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Start with recognition",
+                "detail": "Everything begins with noticing the change."
+              },
+              {
+                "action": "Gather data",
+                "detail": "Assess, compare to baseline, check ABCs and vitals."
+              },
+              {
+                "action": "Then escalate",
+                "detail": "Notify with complete information."
+              }
+            ],
+            "verdict": "Order: A, B, C, D, E."
+          },
+          "scoring": "0/1",
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-x03",
+          "type": "cloze",
+          "stem": "Complete the sentence about the Glasgow Coma Scale.",
+          "sentence": "The GCS measures level of consciousness using eye opening, verbal response, and [[1]] response. Scores range from [[2]] to 15, and the most important information comes from the [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "motor",
+                  "correct": true,
+                  "rationale": "Motor is the third GCS component, scored 1 to 6."
+                },
+                {
+                  "id": "B",
+                  "text": "pupil",
+                  "correct": false,
+                  "rationale": "Pupils are checked in every neuro assessment, and they are not part of the GCS score."
+                },
+                {
+                  "id": "C",
+                  "text": "sensory",
+                  "correct": false,
+                  "rationale": "Sensation is assessed separately and is not scored in the GCS."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "0",
+                  "correct": false,
+                  "rationale": "Each component scores at least 1, so the total can never be 0."
+                },
+                {
+                  "id": "B",
+                  "text": "3",
+                  "correct": true,
+                  "rationale": "1 plus 1 plus 1. The lowest possible score, deep coma."
+                },
+                {
+                  "id": "C",
+                  "text": "5",
+                  "correct": false,
+                  "rationale": "Too high for the floor. A patient with no response in any category scores 3."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "trend over time",
+                  "correct": true,
+                  "rationale": "A falling trend signals deterioration and needs action now."
+                },
+                {
+                  "id": "B",
+                  "text": "single highest score",
+                  "correct": false,
+                  "rationale": "One score is a snapshot and hides direction."
+                },
+                {
+                  "id": "C",
+                  "text": "verbal score alone",
+                  "correct": false,
+                  "rationale": "Verbal is one of three components, and intubated or aphasic patients cannot be scored on it fairly."
+                }
+              ]
+            }
+          ],
+          "takeaway": "GCS = eyes (4), verbal (5), motor (6). Range 3 to 15. Watch the trend; a falling score means act now.",
+          "strategy": "Remember the maximums 4, 5, 6 and the minimum of 1 each.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Components",
+                "detail": "Eyes, verbal, motor. Pupils are checked but are not part of the GCS."
+              },
+              {
+                "action": "Minimum",
+                "detail": "1 + 1 + 1 = 3, never 0."
+              }
+            ],
+            "verdict": "motor, 3, trend over time."
+          },
+          "answer": {
+            "1": "A",
+            "2": "B",
+            "3": "A"
+          },
+          "scoring": "0/1",
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-x04",
+          "type": "highlight",
+          "format": "+/-",
+          "scoring": "+/-",
+          "stem": "Click to highlight the findings in the nurse's note that require immediate follow-up.",
+          "takeaway": "Compare every finding to baseline. A decline in LOC, new confusion, or unequal pupils means assess and report now.",
+          "strategy": "Read the baseline first, then highlight only what changed for the worse.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Set the baseline",
+                "detail": "0800: fully alert and oriented."
+              },
+              {
+                "action": "Flag the declines",
+                "detail": "Eye opening, pupils, orientation."
+              },
+              {
+                "action": "Leave stable findings",
+                "detail": "Equal grips and hunger are not neurologic declines."
+              }
+            ],
+            "verdict": "Highlight p2, p4, and p6."
+          },
+          "nursesNote": "0800: alert and oriented to person, place, time, and situation. 1100: opens eyes only when name is called loudly. Hand grips equal and strong. Right pupil 5 mm, sluggish; left pupil 3 mm, brisk. Reports mild hunger. Answers are confused; unable to state the year.",
+          "segments": [
+            {
+              "id": "p1",
+              "text": "0800: alert and oriented to person, place, time, and situation",
+              "correct": false,
+              "rationale": "Not a finding that needs action here; it is context or a normal finding."
+            },
+            {
+              "id": "p2",
+              "text": "1100: opens eyes only when name is called loudly",
+              "correct": true,
+              "rationale": "LOC has dropped from alert to opening eyes only to a loud voice."
+            },
+            {
+              "id": "p3",
+              "text": "Hand grips equal and strong",
+              "correct": false,
+              "rationale": "Not a finding that needs action here; it is context or a normal finding."
+            },
+            {
+              "id": "p4",
+              "text": "Right pupil 5 mm, sluggish; left pupil 3 mm, brisk",
+              "correct": true,
+              "rationale": "Unequal pupils with a sluggish reaction are a change that needs action."
+            },
+            {
+              "id": "p5",
+              "text": "Reports mild hunger",
+              "correct": false,
+              "rationale": "Not a finding that needs action here; it is context or a normal finding."
+            },
+            {
+              "id": "p6",
+              "text": "Answers are confused; unable to state the year",
+              "correct": true,
+              "rationale": "New confusion is a change from the 0800 baseline."
+            }
+          ],
+          "answer": [
+            "p2",
+            "p4",
+            "p6"
+          ],
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig35-t1",
+          "type": "multiple_choice",
+          "stem": "The nurse is teaching a new graduate about the Glasgow Coma Scale. Which statement by the new graduate requires further teaching?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"A GCS of 15 means the patient is fully alert.\"",
+              "correct": false,
+              "rationale": "Correct."
+            },
+            {
+              "id": "B",
+              "text": "\"A drop from 14 to 11 needs immediate action.\"",
+              "correct": false,
+              "rationale": "Correct. A declining score signals deterioration."
+            },
+            {
+              "id": "C",
+              "text": "\"A single score tells me more than the trend.\"",
+              "correct": true,
+              "rationale": "Incorrect. The trend over time is what matters most."
+            },
+            {
+              "id": "D",
+              "text": "\"The lowest possible score is 3.\"",
+              "correct": false,
+              "rationale": "Correct."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "One GCS score is a snapshot. The trend shows whether the patient is getting better or worse.",
+          "strategy": "In \"requires further teaching\" items, look for the one false statement.",
+          "elimination": {
+            "strategies": [
+              "Negative polarity"
+            ],
+            "steps": [
+              {
+                "action": "Check each against the slide",
+                "detail": "15 = alert, decline = act, lowest = 3."
+              },
+              {
+                "action": "Find the contradiction",
+                "detail": "The slide says trend over time is critical."
+              }
+            ],
+            "verdict": "C requires further teaching."
+          },
+          "dailySet": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": 1038,
+      "chapterNumber": 38,
+      "source": "Iggy",
+      "title": "Neurologic Emergencies",
+      "exam": "Exam 2",
+      "questions": [
+        {
+          "id": "ig38-q01",
+          "type": "multiple_choice",
+          "stem": "A stroke alert is called for a patient with sudden left arm weakness. What information matters most to the stroke team right now?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The patient's favorite food",
+              "correct": false,
+              "rationale": "Not relevant to emergency care."
+            },
+            {
+              "id": "B",
+              "text": "The time the patient was last known well",
+              "correct": true,
+              "rationale": "Last known well starts the treatment clock and decides whether a clot buster is possible."
+            },
+            {
+              "id": "C",
+              "text": "The number of people in the family",
+              "correct": false,
+              "rationale": "Not relevant to emergency care."
+            },
+            {
+              "id": "D",
+              "text": "The patient's seasonal allergies",
+              "correct": false,
+              "rationale": "Allergies matter for drugs, but they do not decide treatment eligibility."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Time is brain. Last known well decides whether the patient can receive a fibrinolytic or clot removal.",
+          "strategy": "Ask which piece of history is time sensitive.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Remove irrelevant history",
+                "detail": "A and C have no bearing on stroke care."
+              },
+              {
+                "action": "Weigh what remains",
+                "detail": "Allergies matter, but LKW decides eligibility."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q02",
+          "type": "multiple_choice",
+          "stem": "A 59-year-old patient has trouble finding words, right-sided weakness, and has been incontinent of urine. What should the nurse do first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Provide perineal care.",
+              "correct": false,
+              "rationale": "Important for skin, but not the priority."
+            },
+            {
+              "id": "B",
+              "text": "Assess the gag reflex.",
+              "correct": true,
+              "rationale": "Any stroke can cause dysphagia. Aspiration threatens the airway."
+            },
+            {
+              "id": "C",
+              "text": "Elevate the head of the bed to 30 degrees.",
+              "correct": false,
+              "rationale": "A good supportive action, but it does not assess the threat."
+            },
+            {
+              "id": "D",
+              "text": "Change the bed linens.",
+              "correct": false,
+              "rationale": "Comfort and skin care come later."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Airway comes first. Check swallowing and gag before anything else; the visible problem is often a distractor.",
+          "strategy": "Ignore the most visible problem and look for the ABC threat.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Apply the ABCs",
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Spot the distractor",
+                "detail": "Incontinence is visible, but it is not life threatening."
+              },
+              {
+                "action": "Find the airway threat",
+                "detail": "Stroke can cause dysphagia and aspiration."
+              },
+              {
+                "action": "Assess before intervening",
+                "detail": "C is an intervention; B assesses the actual risk."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q03",
+          "type": "multiple_choice",
+          "stem": "A patient admitted yesterday with a stroke asks for breakfast. Which task can the RN delegate to assistive personnel?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Perform the bedside swallow screen.",
+              "correct": false,
+              "rationale": "Swallow assessment is an RN responsibility."
+            },
+            {
+              "id": "B",
+              "text": "Feed the patient after the RN confirms the swallow screen was passed.",
+              "correct": true,
+              "rationale": "Feeding can be delegated once swallowing is confirmed safe."
+            },
+            {
+              "id": "C",
+              "text": "Give the patient sips of water to see how well she swallows.",
+              "correct": false,
+              "rationale": "This is a swallow assessment."
+            },
+            {
+              "id": "D",
+              "text": "Feed the patient now because she is hungry.",
+              "correct": false,
+              "rationale": "Feeding before a swallow screen risks aspiration."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "The RN does the swallow screen. Assistive personnel can feed only after the screen is passed.",
+          "strategy": "Assessment stays with the RN. Look for the option that keeps it there.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Remove assessment tasks",
+                "detail": "A and C are both swallow assessments."
+              },
+              {
+                "action": "Remove unsafe timing",
+                "detail": "D skips the screen."
+              },
+              {
+                "action": "Keep the safe delegation",
+                "detail": "B has the RN confirming first."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q04",
+          "type": "multiple_choice",
+          "stem": "A patient is 24 hours after an ischemic stroke. Which finding is the earliest sign of increased intracranial pressure?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Fixed, dilated pupils",
+              "correct": false,
+              "rationale": "A late sign."
+            },
+            {
+              "id": "B",
+              "text": "Restlessness and new confusion",
+              "correct": true,
+              "rationale": "Declining LOC, including restlessness and confusion, is the earliest sign."
+            },
+            {
+              "id": "C",
+              "text": "Bradycardia with widened pulse pressure",
+              "correct": false,
+              "rationale": "Part of the Cushing triad, a late sign."
+            },
+            {
+              "id": "D",
+              "text": "Decerebrate posturing",
+              "correct": false,
+              "rationale": "A late sign."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "The earliest sign of increased ICP is a change in LOC. Fixed pupils, posturing, and the Cushing triad are late.",
+          "strategy": "\"Earliest\" means pick the subtlest change, not the most dramatic.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Sort early from late",
+                "detail": "Pupils, posturing, and Cushing triad are late."
+              },
+              {
+                "action": "Pick the subtle one",
+                "detail": "Restlessness and confusion show a change in LOC."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q05",
+          "type": "multiple_choice",
+          "stem": "A patient with increased ICP becomes less responsive. Which vital sign pattern should the nurse recognize as the Cushing triad?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hypotension, tachycardia, rapid shallow breathing",
+              "correct": false,
+              "rationale": "This pattern suggests shock."
+            },
+            {
+              "id": "B",
+              "text": "Hypertension with widened pulse pressure, bradycardia, irregular breathing",
+              "correct": true,
+              "rationale": "The brainstem's late response to high ICP."
+            },
+            {
+              "id": "C",
+              "text": "Hypertension, tachycardia, fever",
+              "correct": false,
+              "rationale": "Not the Cushing pattern."
+            },
+            {
+              "id": "D",
+              "text": "Hypotension, bradycardia, warm dry skin",
+              "correct": false,
+              "rationale": "Suggests neurogenic shock."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Cushing triad: rising BP with widening pulse pressure, falling heart rate, irregular breathing. A very late sign; act immediately.",
+          "strategy": "BP goes up while the heart rate goes down. That opposite movement is the clue.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Remove shock patterns",
+                "detail": "Hypotension points to shock, not ICP."
+              },
+              {
+                "action": "Match the triad",
+                "detail": "High BP, low HR, irregular breathing."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q06",
+          "type": "multiple_choice",
+          "stem": "The nurse is planning care for a patient with increased ICP who needs a bath, linen change, suctioning, and repositioning. What is the best plan?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Do all of the care at once so the patient can rest afterward.",
+              "correct": false,
+              "rationale": "Back-to-back care can spike ICP."
+            },
+            {
+              "id": "B",
+              "text": "Space the care out with rest periods between activities.",
+              "correct": true,
+              "rationale": "Clustering raises ICP. Spacing care keeps pressure down."
+            },
+            {
+              "id": "C",
+              "text": "Keep the head of the bed flat during care.",
+              "correct": false,
+              "rationale": "HOB up per protocol, often 30 degrees, helps venous drainage."
+            },
+            {
+              "id": "D",
+              "text": "Suction every hour to keep the airway clear.",
+              "correct": false,
+              "rationale": "Suction only when needed; suctioning raises ICP."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "With high ICP you space out care. This is the opposite of the usual rule to cluster care.",
+          "strategy": "Watch for a usually correct rule that flips for this patient.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recognize the trap",
+                "detail": "Clustering is usually right, but not with high ICP."
+              },
+              {
+                "action": "Remove harmful actions",
+                "detail": "Flat HOB and routine suctioning raise ICP."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q07",
+          "type": "multiple_choice",
+          "stem": "A patient with type 1 diabetes arrives with slurred speech and confusion. Blood glucose is 52 mg/dL. What should the nurse do first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Prepare the patient for a fibrinolytic.",
+              "correct": false,
+              "rationale": "Symptoms may be from hypoglycemia, not stroke."
+            },
+            {
+              "id": "B",
+              "text": "Treat the hypoglycemia per protocol, then reassess the neurologic status.",
+              "correct": true,
+              "rationale": "Hypoglycemia mimics stroke. Correct it and recheck."
+            },
+            {
+              "id": "C",
+              "text": "Complete the NIHSS before treating the glucose.",
+              "correct": false,
+              "rationale": "Delays a quick, reversible fix."
+            },
+            {
+              "id": "D",
+              "text": "Give a regular meal tray.",
+              "correct": false,
+              "rationale": "Swallowing is not confirmed, and the glucose needs faster treatment."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Low glucose looks exactly like a stroke. Check glucose promptly, treat hypoglycemia first, then reassess.",
+          "strategy": "Fix the reversible cause before starting treatment for the scary diagnosis.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Spot the mimic",
+                "detail": "Glucose of 52 explains the symptoms."
+              },
+              {
+                "action": "Remove premature treatment",
+                "detail": "A gives a clot buster before the mimic is ruled out."
+              },
+              {
+                "action": "Remove unsafe feeding",
+                "detail": "D ignores swallow safety."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q08",
+          "type": "multiple_choice",
+          "stem": "A patient's spouse says she went to bed feeling fine at 2300 and woke him at 0630 unable to lift her right arm. What is her last known well time?",
+          "options": [
+            {
+              "id": "A",
+              "text": "0630",
+              "correct": false,
+              "rationale": "That is when the symptoms were found."
+            },
+            {
+              "id": "B",
+              "text": "2300",
+              "correct": true,
+              "rationale": "The last time she was known to be normal."
+            },
+            {
+              "id": "C",
+              "text": "The time she arrived in the ED",
+              "correct": false,
+              "rationale": "Arrival time does not start the clock."
+            },
+            {
+              "id": "D",
+              "text": "Unknown, so she cannot be treated",
+              "correct": false,
+              "rationale": "LKW is known: 2300."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Last known well is the last moment the patient was known to be normal, not when symptoms were discovered.",
+          "strategy": "For wake-up strokes, LKW is bedtime.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Separate found from well",
+                "detail": "0630 is discovery; 2300 is last known normal."
+              },
+              {
+                "action": "Remove the extremes",
+                "detail": "Arrival time and 'unknown' are both wrong here."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q09",
+          "type": "multiple_choice",
+          "stem": "During an alteplase infusion, the patient reports a sudden severe headache and vomits. What is the nurse's priority action?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give an antiemetic and continue the infusion.",
+              "correct": false,
+              "rationale": "These symptoms suggest bleeding in the brain."
+            },
+            {
+              "id": "B",
+              "text": "Stop the infusion and notify the provider immediately.",
+              "correct": true,
+              "rationale": "Severe headache with nausea and vomiting may mean intracranial bleeding."
+            },
+            {
+              "id": "C",
+              "text": "Slow the infusion rate by half.",
+              "correct": false,
+              "rationale": "A partial dose still risks worsening a bleed."
+            },
+            {
+              "id": "D",
+              "text": "Recheck the vital signs in 15 minutes.",
+              "correct": false,
+              "rationale": "Waiting delays action on a possible bleed."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Bleeding is the main danger of a clot buster. Severe headache, acute hypertension, nausea, or vomiting: stop the infusion and call.",
+          "strategy": "When a drug could be causing harm, stop it first.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Link the symptom to the drug",
+                "detail": "Clot busters cause bleeding; headache and vomiting suggest brain bleed."
+              },
+              {
+                "action": "Remove partial fixes",
+                "detail": "A and C keep the drug running; D waits."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q10",
+          "type": "multiple_choice",
+          "stem": "A patient is a candidate for alteplase. The BP is 196/112 mmHg. What should the nurse anticipate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Start alteplase now because time is brain.",
+              "correct": false,
+              "rationale": "BP must be below 185/110 before the drug."
+            },
+            {
+              "id": "B",
+              "text": "Give an antihypertensive such as labetalol as ordered, then start alteplase once BP is below 185/110.",
+              "correct": true,
+              "rationale": "High BP raises bleeding risk with a clot buster."
+            },
+            {
+              "id": "C",
+              "text": "Cancel alteplase permanently because the BP is too high.",
+              "correct": false,
+              "rationale": "BP can be lowered first."
+            },
+            {
+              "id": "D",
+              "text": "Lower the BP to below 120 systolic quickly.",
+              "correct": false,
+              "rationale": "A sudden large drop reduces brain perfusion."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Before a clot buster, BP must be below 185/110. After it, keep BP below 180/105 for 24 hours.",
+          "strategy": "Look for the option that meets the threshold safely rather than skipping or abandoning treatment.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Compare to the threshold",
+                "detail": "196/112 is above 185/110."
+              },
+              {
+                "action": "Remove extremes",
+                "detail": "A ignores the limit; C gives up; D drops BP too far too fast."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q11",
+          "type": "multiple_choice",
+          "stem": "A patient with a right hemisphere stroke keeps trying to get out of bed without help and says, \"I'm fine, I can walk.\" What is the nurse's priority?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Teach the patient to use the call light.",
+              "correct": false,
+              "rationale": "The patient is impulsive and unaware of deficits."
+            },
+            {
+              "id": "B",
+              "text": "Turn on the bed alarm and provide close supervision.",
+              "correct": true,
+              "rationale": "Right hemisphere damage causes impulsivity, poor judgment, and unawareness of deficits: high fall risk."
+            },
+            {
+              "id": "C",
+              "text": "Use a communication board.",
+              "correct": false,
+              "rationale": "Language is usually intact with right hemisphere stroke."
+            },
+            {
+              "id": "D",
+              "text": "Apply wrist restraints.",
+              "correct": false,
+              "rationale": "Not the least restrictive option."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Right brain stroke: impulsive, poor judgment, unaware of deficits, left neglect. Safety measures must not rely on the patient's judgment.",
+          "strategy": "Match the hemisphere to its behavior, then choose the least restrictive safety measure.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false",
+              "Eliminate absolutes"
+            ],
+            "steps": [
+              {
+                "action": "Recall right brain behavior",
+                "detail": "Impulsive, unaware of deficits."
+              },
+              {
+                "action": "Remove options that rely on judgment",
+                "detail": "A relies on the patient remembering."
+              },
+              {
+                "action": "Remove restrictive options",
+                "detail": "Restraints are a last resort."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q12",
+          "type": "multiple_choice",
+          "stem": "A patient with a left hemisphere stroke looks at a cup and says, \"I want... the... thing... drink,\" and becomes frustrated. The patient follows commands correctly. How should the nurse describe this?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dysarthria",
+              "correct": false,
+              "rationale": "Dysarthria is slurred speech with the right words."
+            },
+            {
+              "id": "B",
+              "text": "Expressive aphasia",
+              "correct": true,
+              "rationale": "Understands but cannot get the words out; frustration is common."
+            },
+            {
+              "id": "C",
+              "text": "Receptive aphasia",
+              "correct": false,
+              "rationale": "The patient follows commands, so understanding is intact."
+            },
+            {
+              "id": "D",
+              "text": "Unilateral neglect",
+              "correct": false,
+              "rationale": "Neglect is ignoring one side."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Expressive (Broca) aphasia: understands, struggles to speak, often frustrated. Receptive (Wernicke): fluent speech that makes little sense, poor understanding.",
+          "strategy": "Ask two questions: does the patient understand, and are the words right?",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check understanding",
+                "detail": "Follows commands, so not receptive."
+              },
+              {
+                "action": "Check word choice",
+                "detail": "Missing words, so not dysarthria."
+              }
+            ],
+            "verdict": "Expressive aphasia is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q13",
+          "type": "multiple_choice",
+          "stem": "A patient has left homonymous hemianopsia after a stroke. Which intervention should the nurse include?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Place the meal tray on the patient's left side.",
+              "correct": false,
+              "rationale": "The left field is lost; the patient won't see it."
+            },
+            {
+              "id": "B",
+              "text": "Teach the patient to turn the head side to side to scan the environment.",
+              "correct": true,
+              "rationale": "Scanning makes up for the lost half of the visual field."
+            },
+            {
+              "id": "C",
+              "text": "Patch one eye, alternating every 2 to 4 hours.",
+              "correct": false,
+              "rationale": "That treats diplopia."
+            },
+            {
+              "id": "D",
+              "text": "Keep the room dark to reduce stimulation.",
+              "correct": false,
+              "rationale": "Does not help field loss and increases fall risk."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Homonymous hemianopsia: the same half of the visual field is lost in both eyes. Teach scanning and place items in the intact field.",
+          "strategy": "Match the intervention to the specific deficit.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the deficit",
+                "detail": "Left half of the view is gone in both eyes."
+              },
+              {
+                "action": "Remove wrong placement",
+                "detail": "A puts food in the blind field."
+              },
+              {
+                "action": "Remove wrong deficit",
+                "detail": "C is for double vision."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q14",
+          "type": "multiple_choice",
+          "stem": "A patient had 40 minutes of left arm numbness and slurred speech that fully resolved. He says, \"It's gone now, so I'll just go home.\" What is the nurse's best response?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"That's fine, since there's no permanent damage.\"",
+              "correct": false,
+              "rationale": "A TIA is a warning of a coming stroke."
+            },
+            {
+              "id": "B",
+              "text": "\"A TIA is a warning sign that a stroke may follow, so we need to evaluate the cause now.\"",
+              "correct": true,
+              "rationale": "TIA needs urgent evaluation and treatment of the cause."
+            },
+            {
+              "id": "C",
+              "text": "\"Take an aspirin at home and call if it happens again.\"",
+              "correct": false,
+              "rationale": "Delays evaluation."
+            },
+            {
+              "id": "D",
+              "text": "\"Your symptoms were probably from anxiety.\"",
+              "correct": false,
+              "rationale": "Dismisses a neurologic event."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "A TIA is temporary with no permanent damage, but it is an emergency warning of a coming stroke.",
+          "strategy": "Resolved symptoms are not a reason to relax.",
+          "elimination": {
+            "strategies": [
+              "Eliminate options that deny patient feelings"
+            ],
+            "steps": [
+              {
+                "action": "Define TIA",
+                "detail": "Temporary dysfunction, warning of stroke."
+              },
+              {
+                "action": "Remove reassurance",
+                "detail": "A, C, and D all minimize the risk."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-q15",
+          "type": "multiple_choice",
+          "stem": "A patient suddenly reports \"the worst headache of my life,\" vomits, has a stiff neck, and is becoming drowsy. Which condition does the nurse suspect?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thrombotic ischemic stroke",
+              "correct": false,
+              "rationale": "Usually gradual, with LOC preserved and no severe headache."
+            },
+            {
+              "id": "B",
+              "text": "Subarachnoid hemorrhage",
+              "correct": true,
+              "rationale": "Sudden severe headache, vomiting, stiff neck, and falling LOC are classic for SAH."
+            },
+            {
+              "id": "C",
+              "text": "Transient ischemic attack",
+              "correct": false,
+              "rationale": "TIA symptoms resolve and do not include this headache."
+            },
+            {
+              "id": "D",
+              "text": "Migraine",
+              "correct": false,
+              "rationale": "Does not explain a stiff neck and falling LOC."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Hemorrhagic stroke: sudden severe headache, vomiting, declining LOC, sometimes seizures. SAH adds a stiff neck and light sensitivity.",
+          "strategy": "A sudden severe headache plus declining LOC points to a bleed.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Spot the key cue",
+                "detail": "Worst headache of my life."
+              },
+              {
+                "action": "Add supporting cues",
+                "detail": "Stiff neck, vomiting, drowsiness."
+              },
+              {
+                "action": "Remove ischemic options",
+                "detail": "Ischemic strokes rarely cause this headache."
+              }
+            ],
+            "verdict": "B is correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-s01",
+          "type": "sata",
+          "scoring": "0/1",
+          "stem": "A patient received alteplase 2 hours ago. Which findings should the nurse report immediately? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "New severe headache",
+              "correct": true,
+              "rationale": "May signal bleeding in the brain."
+            },
+            {
+              "id": "B",
+              "text": "Blood in the urine",
+              "correct": true,
+              "rationale": "Sign of bleeding."
+            },
+            {
+              "id": "C",
+              "text": "Bleeding at the IV site that continues despite pressure",
+              "correct": true,
+              "rationale": "Uncontrolled bleeding. Minor oozing is first managed with direct pressure."
+            },
+            {
+              "id": "D",
+              "text": "BP 192/108 mmHg",
+              "correct": true,
+              "rationale": "Above the 180/105 limit after a clot buster."
+            },
+            {
+              "id": "E",
+              "text": "Worsening arm weakness",
+              "correct": true,
+              "rationale": "New or worse neuro deficit may signal bleeding."
+            },
+            {
+              "id": "F",
+              "text": "BP 164/92 mmHg",
+              "correct": false,
+              "rationale": "Within the post-treatment goal of below 180/105."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "takeaway": "After a clot buster, bleeding is the major concern. Report headache, neuro decline, BP above 180/105, and any bleeding.",
+          "strategy": "Sort each finding into bleeding, neuro decline, BP above limit, or within goal.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Flag bleeding signs",
+                "detail": "Headache, hematuria, IV site bleeding despite pressure, worsening weakness."
+              },
+              {
+                "action": "Check BP against 180/105",
+                "detail": "192/108 is above; 164/92 is within goal."
+              }
+            ],
+            "verdict": "A, B, C, D, and E are correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-s02",
+          "type": "sata",
+          "scoring": "0/1",
+          "stem": "Which actions help prevent increased ICP? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Keep the head midline and neutral.",
+              "correct": true,
+              "rationale": "Helps venous blood drain from the skull."
+            },
+            {
+              "id": "B",
+              "text": "Elevate the head of the bed per protocol, often 30 degrees.",
+              "correct": true,
+              "rationale": "Improves venous drainage."
+            },
+            {
+              "id": "C",
+              "text": "Flex the hips sharply when repositioning.",
+              "correct": false,
+              "rationale": "Raises intra-abdominal and chest pressure and blocks outflow."
+            },
+            {
+              "id": "D",
+              "text": "Give stool softeners as ordered.",
+              "correct": true,
+              "rationale": "Straining raises ICP."
+            },
+            {
+              "id": "E",
+              "text": "Suction every hour.",
+              "correct": false,
+              "rationale": "Suction only when needed; suctioning raises ICP."
+            },
+            {
+              "id": "F",
+              "text": "Keep the room quiet and dim.",
+              "correct": true,
+              "rationale": "Agitation raises ICP."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D",
+            "F"
+          ],
+          "takeaway": "Keep venous drainage open and avoid spikes: HOB up, head midline, no sharp flexion, no straining, space out care, calm room.",
+          "strategy": "For each option, ask whether it helps blood drain out or raises pressure.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Keep drainage helpers",
+                "detail": "Midline head, HOB up."
+              },
+              {
+                "action": "Keep spike preventers",
+                "detail": "Stool softeners, quiet room."
+              },
+              {
+                "action": "Remove spike causers",
+                "detail": "Hip flexion and routine suctioning."
+              }
+            ],
+            "verdict": "A, B, D, and F are correct."
+          },
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-x01",
+          "type": "matrix",
+          "stem": "For each finding, indicate whether it is more typical of a left hemisphere stroke or a right hemisphere stroke.",
+          "columns": [
+            "Left hemisphere",
+            "Right hemisphere"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Aphasia",
+              "answer": "Left hemisphere",
+              "rationale": "Language lives in the left hemisphere."
+            },
+            {
+              "id": "r2",
+              "text": "Ignores the left side of the body",
+              "answer": "Right hemisphere",
+              "rationale": "Left neglect follows right hemisphere damage."
+            },
+            {
+              "id": "r3",
+              "text": "Slow, cautious behavior",
+              "answer": "Left hemisphere",
+              "rationale": "Left hemisphere patients tend to be slow and cautious."
+            },
+            {
+              "id": "r4",
+              "text": "Impulsive and unaware of deficits",
+              "answer": "Right hemisphere",
+              "rationale": "Right hemisphere damage impairs judgment and awareness."
+            },
+            {
+              "id": "r5",
+              "text": "Right-sided weakness",
+              "answer": "Left hemisphere",
+              "rationale": "Each hemisphere controls the opposite side of the body."
+            },
+            {
+              "id": "r6",
+              "text": "Trouble with math and reading",
+              "answer": "Left hemisphere",
+              "rationale": "Reading, writing, and math are left hemisphere functions."
+            }
+          ],
+          "answer": {
+            "r1": "Left hemisphere",
+            "r2": "Right hemisphere",
+            "r3": "Left hemisphere",
+            "r4": "Right hemisphere",
+            "r5": "Left hemisphere",
+            "r6": "Left hemisphere"
+          },
+          "takeaway": "Left brain: language, logic, right-sided weakness, cautious. Right brain: spatial, judgment, left neglect, impulsive.",
+          "strategy": "Remember that motor and sensory findings are on the opposite side.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Language and logic",
+                "detail": "Left."
+              },
+              {
+                "action": "Spatial awareness and judgment",
+                "detail": "Right."
+              },
+              {
+                "action": "Weakness side",
+                "detail": "Opposite the damaged hemisphere."
+              }
+            ],
+            "verdict": "Left: 1, 3, 5, 6. Right: 2, 4."
+          },
+          "scoring": "0/1",
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-x02",
+          "type": "bowtie",
+          "stem": "Select 2 actions the nurse takes, the 1 condition they address, and 2 parameters to monitor.",
+          "answer": {
+            "actions": [
+              "A",
+              "B"
+            ],
+            "condition": [
+              "A"
+            ],
+            "parameters": [
+              "A",
+              "B"
+            ]
+          },
+          "takeaway": "Risk of increased ICP is highest in the first 72 hours after a stroke. Earliest sign is a drop in LOC. Prevent hypoxia and keep venous drainage open.",
+          "strategy": "Start with the condition, then pick actions that treat that condition and parameters that track it.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the condition",
+                "detail": "LOC decline, headache, vomiting after stroke = ICP."
+              },
+              {
+                "action": "Remove harmful actions",
+                "detail": "Clustering, flat position, and water before a swallow screen."
+              },
+              {
+                "action": "Pick neuro parameters",
+                "detail": "LOC and pupils track ICP; weight and bowel sounds do not."
+              }
+            ],
+            "verdict": "Increased ICP; HOB up with head midline and oxygen; monitor LOC and pupils."
+          },
+          "scenario": "A patient is 36 hours after a large ischemic stroke. At 0800 she was alert and oriented. At 1000 she is restless and confused, reports a worsening headache, and has vomited once. BP 168/88, HR 84, SpO2 93%.",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Keep the head of the bed elevated with the head midline",
+                  "correct": true,
+                  "rationale": "Head up and midline lets venous blood drain out of the skull."
+                },
+                {
+                  "id": "B",
+                  "text": "Apply oxygen to keep SpO2 at 95% or higher",
+                  "correct": true,
+                  "rationale": "SpO2 93% is below 95%, and hypoxia dilates brain vessels and raises ICP."
+                },
+                {
+                  "id": "C",
+                  "text": "Cluster all morning care to finish quickly",
+                  "correct": false,
+                  "rationale": "Clustering care raises ICP. With high ICP you space care out."
+                },
+                {
+                  "id": "D",
+                  "text": "Give water to settle the nausea",
+                  "correct": false,
+                  "rationale": "Nothing by mouth until a swallow screen, and vomiting raises aspiration risk."
+                },
+                {
+                  "id": "E",
+                  "text": "Place the patient flat for comfort",
+                  "correct": false,
+                  "rationale": "Flat positioning slows venous drainage and raises ICP."
+                }
+              ]
+            },
+            "condition": {
+              "label": "Condition most likely experiencing",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Increased intracranial pressure",
+                  "correct": true,
+                  "rationale": "Declining LOC, headache, and vomiting in the first 72 hours after stroke point to rising ICP."
+                },
+                {
+                  "id": "B",
+                  "text": "Hypoglycemia",
+                  "correct": false,
+                  "rationale": "Possible, and it would not explain a worsening headache; check glucose, but it is not the most likely picture."
+                },
+                {
+                  "id": "C",
+                  "text": "Transient ischemic attack",
+                  "correct": false,
+                  "rationale": "TIA symptoms resolve. She has had a completed stroke and is getting worse."
+                },
+                {
+                  "id": "D",
+                  "text": "Expected post-stroke fatigue",
+                  "correct": false,
+                  "rationale": "New confusion is never expected fatigue."
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to monitor",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Level of consciousness (GCS)",
+                  "correct": true,
+                  "rationale": "A drop in LOC is the earliest sign of rising ICP."
+                },
+                {
+                  "id": "B",
+                  "text": "Pupil size and reaction",
+                  "correct": true,
+                  "rationale": "Unequal or sluggish pupils show ICP is worsening."
+                },
+                {
+                  "id": "C",
+                  "text": "Daily weight",
+                  "correct": false,
+                  "rationale": "Daily weight tracks fluid balance, not ICP."
+                },
+                {
+                  "id": "D",
+                  "text": "Bowel sounds",
+                  "correct": false,
+                  "rationale": "Bowel sounds do not track brain pressure."
+                }
+              ]
+            }
+          },
+          "scoring": "0/1",
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-x03",
+          "type": "cloze",
+          "stem": "Complete the sentence about fibrinolytic therapy.",
+          "sentence": "A fibrinolytic is given only for [[1]] stroke, after a [[2]] rules out bleeding. It is usually given within [[3]] of last known well, and the BP must be below [[4]] before it starts.",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "ischemic",
+                  "correct": true,
+                  "rationale": "A clot buster dissolves a clot, which only helps a blocked vessel."
+                },
+                {
+                  "id": "B",
+                  "text": "hemorrhagic",
+                  "correct": false,
+                  "rationale": "A clot buster in a bleeding brain makes the bleed worse."
+                },
+                {
+                  "id": "C",
+                  "text": "any",
+                  "correct": false,
+                  "rationale": "Bleeding must be ruled out first, so it is never given to any stroke without imaging."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "noncontrast CT",
+                  "correct": true,
+                  "rationale": "Fast, and it shows blood clearly."
+                },
+                {
+                  "id": "B",
+                  "text": "lumbar puncture",
+                  "correct": false,
+                  "rationale": "Not the test to rule out bleeding here, and dangerous if ICP may be high."
+                },
+                {
+                  "id": "C",
+                  "text": "EEG",
+                  "correct": false,
+                  "rationale": "Measures electrical activity, not bleeding."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "4.5 hours",
+                  "correct": true,
+                  "rationale": "The standard window from last known well."
+                },
+                {
+                  "id": "B",
+                  "text": "12 hours",
+                  "correct": false,
+                  "rationale": "Far outside the standard window; later treatment needs advanced imaging."
+                },
+                {
+                  "id": "C",
+                  "text": "24 hours",
+                  "correct": false,
+                  "rationale": "Far outside the window for a fibrinolytic."
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "185/110",
+                  "correct": true,
+                  "rationale": "The BP must be below this before the drug starts."
+                },
+                {
+                  "id": "B",
+                  "text": "140/90",
+                  "correct": false,
+                  "rationale": "A general hypertension threshold, not the clot buster rule."
+                },
+                {
+                  "id": "C",
+                  "text": "220/120",
+                  "correct": false,
+                  "rationale": "Close to the permissive limit when no clot buster is given, not the pre-treatment limit."
+                }
+              ]
+            }
+          ],
+          "takeaway": "Clot buster: ischemic only, CT first, within 4.5 hours of LKW, BP below 185/110.",
+          "strategy": "Every blank protects against bleeding. Pick the answer that makes the drug safe.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Type",
+                "detail": "Never hemorrhagic."
+              },
+              {
+                "action": "Test",
+                "detail": "CT shows blood fast; LP is dangerous if ICP may be high."
+              },
+              {
+                "action": "Numbers",
+                "detail": "4.5 hours and 185/110."
+              }
+            ],
+            "verdict": "ischemic, noncontrast CT, 4.5 hours, 185/110."
+          },
+          "answer": {
+            "1": "A",
+            "2": "A",
+            "3": "A",
+            "4": "A"
+          },
+          "scoring": "0/1",
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-x04",
+          "type": "highlight",
+          "format": "+/-",
+          "scoring": "+/-",
+          "stem": "Click to highlight the findings the nurse must act on or report to the stroke team right away.",
+          "takeaway": "Stroke: treat mimics like low glucose, keep NPO until a swallow screen, and time the stroke from last known well (2230 here).",
+          "strategy": "Highlight what you would act on or say first in a stroke alert, not background history.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Action findings",
+                "detail": "New deficits, low glucose, the request for water."
+              },
+              {
+                "action": "Report now",
+                "detail": "Bedtime sets last known well at 2230, not 0900."
+              },
+              {
+                "action": "Background",
+                "detail": "Atrial fibrillation is context. It hints at an embolic stroke and prompts a question about anticoagulants, but the finding itself needs no action. Glasses and the husband are not urgent."
+              }
+            ],
+            "verdict": "Highlight p2, p3, p4, and p5."
+          },
+          "nursesNote": "71-year-old with atrial fibrillation. Found by husband at 0900 with right arm weakness and garbled words. Went to bed normal at 2230. Blood glucose 58 mg/dL. Asks repeatedly for a drink of water. Husband is at the bedside. Wears reading glasses.",
+          "segments": [
+            {
+              "id": "p1",
+              "text": "71-year-old with atrial fibrillation",
+              "correct": false,
+              "rationale": "Not a finding that needs action here; it is context or a normal finding."
+            },
+            {
+              "id": "p2",
+              "text": "Found by husband at 0900 with right arm weakness and garbled words",
+              "correct": true,
+              "rationale": "New one-sided weakness and speech change suggest stroke."
+            },
+            {
+              "id": "p3",
+              "text": "Went to bed normal at 2230",
+              "correct": true,
+              "rationale": "This is her last known well, which decides whether a clot buster or clot removal is possible."
+            },
+            {
+              "id": "p4",
+              "text": "Blood glucose 58 mg/dL",
+              "correct": true,
+              "rationale": "Hypoglycemia can mimic stroke and must be treated first."
+            },
+            {
+              "id": "p5",
+              "text": "Asks repeatedly for a drink of water",
+              "correct": true,
+              "rationale": "Nothing by mouth until a swallow screen; aspiration risk."
+            },
+            {
+              "id": "p6",
+              "text": "Husband is at the bedside",
+              "correct": false,
+              "rationale": "Not a finding that needs action here; it is context or a normal finding."
+            },
+            {
+              "id": "p7",
+              "text": "Wears reading glasses",
+              "correct": false,
+              "rationale": "Not a finding that needs action here; it is context or a normal finding."
+            }
+          ],
+          "answer": [
+            "p2",
+            "p3",
+            "p4",
+            "p5"
+          ],
+          "dailySet": "2026-09-25"
+        },
+        {
+          "id": "ig38-t1",
+          "type": "multiple_choice",
+          "stem": "The nurse teaches a family about stroke warning signs using BE FAST. Which statement by a family member requires further teaching?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"If one side of his face droops, I'll call 911.\"",
+              "correct": false,
+              "rationale": "Correct."
+            },
+            {
+              "id": "B",
+              "text": "\"If his symptoms go away, we can wait until morning to see the doctor.\"",
+              "correct": true,
+              "rationale": "Incorrect. Symptoms that go away may be a TIA, still an emergency."
+            },
+            {
+              "id": "C",
+              "text": "\"I should note the time he was last normal.\"",
+              "correct": false,
+              "rationale": "Correct. T is time."
+            },
+            {
+              "id": "D",
+              "text": "\"Sudden trouble with balance or vision is a warning sign.\"",
+              "correct": false,
+              "rationale": "Correct. B and E."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "BE FAST: Balance, Eyes, Face, Arm, Speech, Time. Symptoms that go away still need emergency care.",
+          "strategy": "Find the one statement that delays care.",
+          "elimination": {
+            "strategies": [
+              "Negative polarity"
+            ],
+            "steps": [
+              {
+                "action": "Check each letter",
+                "detail": "Face, time, balance, eyes are all correct."
+              },
+              {
+                "action": "Find the delay",
+                "detail": "Waiting until morning after resolved symptoms."
+              }
+            ],
+            "verdict": "B requires further teaching."
+          },
+          "dailySet": "2026-09-25"
         }
       ]
     }

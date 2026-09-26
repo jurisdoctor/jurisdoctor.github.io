@@ -3,7 +3,7 @@
     "course": "N55 Fundamentals of Nursing",
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
-    "questionCount": 675,
+    "questionCount": 719,
     "chaptersIncluded": [
       1,
       2,
@@ -37,7 +37,9 @@
       1039,
       1040,
       1041,
-      1056
+      1056,
+      1035,
+      1038
     ],
     "chaptersPending": [],
     "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time. Generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id.",
@@ -78,7 +80,9 @@
       1039,
       1040,
       1041,
-      1056
+      1056,
+      1035,
+      1038
     ],
     "itemTypes": [
       "bowtie",
@@ -221,7 +225,9 @@
       "1039": 10,
       "1040": 10,
       "1041": 26,
-      "1056": 20
+      "1056": 20,
+      "1035": 22,
+      "1038": 22
     },
     "exams": [
       {
@@ -281,53 +287,67 @@
           1013,
           49,
           1039,
-          1040
+          1040,
+          1035,
+          1038
         ],
         "skills": [],
-        "questionCount": 170
+        "questionCount": 214
       }
     ],
     "currentDailySet": {
-      "date": "2026-09-16",
+      "date": "2026-09-25",
       "chapters": [
-        27,
-        38,
-        1015,
-        1041
+        1035,
+        1038
       ],
       "questionIds": [
-        "ch27-e1",
-        "ch27-e2",
-        "ch27-e3",
-        "ch27-e4",
-        "ch27-e5",
-        "ch27-e6",
-        "ch27-e7",
-        "ch38-e1",
-        "ch38-e2",
-        "ch38-e3",
-        "ch38-e4",
-        "ch38-e5",
-        "ch38-e6",
-        "ch38-e7",
-        "ig15-e1",
-        "ig15-e2",
-        "ig15-e3",
-        "ig15-e4",
-        "ig15-e5",
-        "ig15-e6",
-        "ig15-e7",
-        "ig15-e8",
-        "ig41-e1",
-        "ig41-e2",
-        "ig41-e3",
-        "ig41-e4",
-        "ig41-e5",
-        "ig41-e6",
-        "ig41-e7",
-        "ig41-e8"
+        "ig35-q01",
+        "ig35-q02",
+        "ig35-q03",
+        "ig35-q04",
+        "ig35-q05",
+        "ig35-q06",
+        "ig35-q07",
+        "ig35-q08",
+        "ig35-q09",
+        "ig35-q10",
+        "ig35-q11",
+        "ig35-q12",
+        "ig35-q13",
+        "ig35-q14",
+        "ig35-q15",
+        "ig35-s01",
+        "ig35-s02",
+        "ig35-x01",
+        "ig35-x02",
+        "ig35-x03",
+        "ig35-x04",
+        "ig35-t1",
+        "ig38-q01",
+        "ig38-q02",
+        "ig38-q03",
+        "ig38-q04",
+        "ig38-q05",
+        "ig38-q06",
+        "ig38-q07",
+        "ig38-q08",
+        "ig38-q09",
+        "ig38-q10",
+        "ig38-q11",
+        "ig38-q12",
+        "ig38-q13",
+        "ig38-q14",
+        "ig38-q15",
+        "ig38-s01",
+        "ig38-s02",
+        "ig38-x01",
+        "ig38-x02",
+        "ig38-x03",
+        "ig38-x04",
+        "ig38-t1"
       ],
-      "count": 30
+      "count": 44
     }
   },
   "chapters": [
