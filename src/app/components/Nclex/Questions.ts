@@ -208,6 +208,12 @@ export const isMulti = (question: QuestionType) =>
   question.type === "sata" ||
   Array.isArray(question.answer) ||
   keysOf(question).length > 1;
+export interface ChapterMemberType {
+  chapterNumber?: number;
+  source?: string;
+  title: string;
+}
+
 export interface ChapterType {
   id: string;
   chapterNumber?: number;
@@ -215,6 +221,9 @@ export interface ChapterType {
   title: string;
   subtitle?: string;
   questions: QuestionType[];
+  // Present when this tile combines several source chapters into one deck
+  // (e.g. a PPT deck that covers Potter 42 and Iggy 13 together).
+  members?: ChapterMemberType[];
 }
 
 interface BankType {
@@ -224,6 +233,14 @@ interface BankType {
   title: string;
   subtitle?: string;
   questions: QuestionType[];
+  members?: ChapterMemberType[];
+}
+
+interface ChapterGroupType {
+  id: string;
+  title: string;
+  exam?: string;
+  chapters: (string | number)[];
 }
 
 // Chapter numbers repeat across the two source textbooks (Potter and Iggy),
@@ -231,14 +248,59 @@ interface BankType {
 // `chapterNumber` carries the number to actually display; fall back to the
 // id for chapters that don't need the split.
 export const displayNumberOf = (chapter: ChapterType) =>
-  chapter.chapterNumber ?? chapter.id;
+  chapter.members?.[0]?.chapterNumber ?? chapter.chapterNumber ?? chapter.id;
 
-export const labelOf = (chapter: ChapterType) =>
-  /^\d+$/.test(chapter.id)
-    ? `Chapter ${displayNumberOf(chapter)} · ${chapter.title}${
-        chapter.source === "Iggy" ? " (Iggy)" : ""
-      }`
+export const labelOf = (chapter: ChapterType) => {
+  if (chapter.members && chapter.members.length > 1) {
+    const numbers = chapter.members.map((member) => member.chapterNumber).join(" & ");
+    return `Chapters ${numbers} · ${chapter.title}`;
+  }
+  return /^\d+$/.test(chapter.id)
+    ? `Chapter ${displayNumberOf(chapter)} · ${chapter.title}`
     : chapter.title;
+};
+
+// A deck like "Fluid and Electrolytes" covers Potter 42 and Iggy 13 as one
+// unit in the real course, so their questions are combined into a single
+// tile named after the deck, in the order the group declares.
+const mergeGroups = (
+  chapters: BankType[],
+  groups: ChapterGroupType[] | undefined,
+): BankType[] => {
+  if (!groups?.length) return chapters;
+  const byId = new Map(chapters.map((chapter) => [String(chapter.id), chapter]));
+  const consumed = new Set<string>();
+
+  return chapters.reduce<BankType[]>((merged, chapter) => {
+    const id = String(chapter.id);
+    if (consumed.has(id)) return merged;
+
+    const group = groups.find((entry) =>
+      entry.chapters.some((member) => String(member) === id),
+    );
+    if (!group) {
+      merged.push(chapter);
+      return merged;
+    }
+
+    const members = group.chapters
+      .map((member) => byId.get(String(member)))
+      .filter((entry): entry is BankType => !!entry);
+    members.forEach((member) => consumed.add(String(member.id)));
+
+    merged.push({
+      id: group.id,
+      title: group.title,
+      questions: members.flatMap((member) => member.questions),
+      members: members.map((member) => ({
+        chapterNumber: member.chapterNumber,
+        source: member.source,
+        title: member.title,
+      })),
+    });
+    return merged;
+  }, []);
+};
 
 
 const strip = (text: string) =>
@@ -320,7 +382,7 @@ interface ExtraType extends QuestionType {
 }
 
 interface RawBankFile {
-  meta: { course: string; textbook: string };
+  meta: { course: string; textbook: string; chapterGroups?: ChapterGroupType[] };
   chapters: BankType[];
   skills?: BankType[];
 }
@@ -334,6 +396,11 @@ export interface DerivedBank {
   Skills: ChapterType[];
   Cases: ChapterType[];
   Judgment: ChapterType[];
+  // A synthetic tile bundling every question currently flagged new/dailySet,
+  // for quick review. It's a filtered view, not a move: once a question
+  // loses the flag in a later drop it just stops showing up here and is
+  // only found in its real chapter, same as it always was.
+  New: ChapterType | null;
   Ready: ChapterType[];
   AllQuestions: QuestionType[];
   AllSkillQuestions: QuestionType[];
@@ -371,6 +438,7 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
         id,
         chapterNumber: entry.chapterNumber,
         source: entry.source,
+        members: entry.members,
         title: entry.title,
         subtitle: entry.subtitle,
         questions: [...own, ...join].map((question, index) => ({
@@ -380,13 +448,18 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
       };
     });
 
-  const banked = group(data.chapters, !!extra);
+  const banked = group(
+    mergeGroups(data.chapters, data.meta.chapterGroups),
+    !!extra,
+  );
 
-  const Chapters: ChapterType[] = banked.map((chapter) => ({
+  const isFresh = (question: QuestionType) => !!(question.new || question.dailySet);
+
+  const readyForChapters: ChapterType[] = banked.map((chapter) => ({
     ...chapter,
-    questions: chapter.questions
-      .filter((question) => !question.caseId && !isJudgment(question))
-      .map((question, index) => ({ ...question, ordinal: index + 1 })),
+    questions: chapter.questions.filter(
+      (question) => !question.caseId && !isJudgment(question),
+    ),
   }));
 
   // Grouped by chapter rather than by clinical-judgment step: the step is
@@ -399,6 +472,29 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
         .map((question, index) => ({ ...question, ordinal: index + 1 })),
     }))
     .filter((chapter) => chapter.questions.length > 0);
+
+  const New: ChapterType | null = (() => {
+    const fresh = readyForChapters.flatMap((chapter) => chapter.questions).filter(isFresh);
+    if (!fresh.length) return null;
+    return {
+      id: "new",
+      title: "New",
+      questions: fresh.map((question, index) => ({
+        ...question,
+        ordinal: index + 1,
+      })),
+    };
+  })();
+
+  // Fresh questions live only in the New tile while they're flagged; once a
+  // later drop clears the flag they stop matching here and fall straight
+  // back into this filter's normal output — no separate "move" needed.
+  const Chapters: ChapterType[] = readyForChapters.map((chapter) => ({
+    ...chapter,
+    questions: chapter.questions
+      .filter((question) => !isFresh(question))
+      .map((question, index) => ({ ...question, ordinal: index + 1 })),
+  }));
 
   const Skills: ChapterType[] = group(data.skills ?? [], false);
 
@@ -436,6 +532,7 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
     Skills,
     Cases,
     Judgment,
+    New,
     Ready: Chapters.filter((chapter) => chapter.questions.length > 0),
     AllQuestions: Chapters.flatMap((chapter) => chapter.questions),
     AllSkillQuestions: Skills.flatMap((skill) => skill.questions),

@@ -10,7 +10,6 @@ import {
   LuCode,
   LuCalculator,
   LuBookOpen,
-  LuMessageCircle,
   LuMenu,
 } from "react-icons/lu";
 import { useState } from "react";
@@ -112,16 +111,6 @@ const Sidebar = () => {
                   className={`${navLink} ${path === "/nclex" ? "!text-[hsl(43,100%,68%)]" : ""}`}
                 >
                   <LuBookOpen />
-                </Link>
-              </li>
-
-              <li className="nav__item">
-                <Link
-                  href={sectionHref("contact")}
-                  onClick={(e) => scrollToSection(e, "contact")}
-                  className={navLink}
-                >
-                  <LuMessageCircle />
                 </Link>
               </li>
             </ul>

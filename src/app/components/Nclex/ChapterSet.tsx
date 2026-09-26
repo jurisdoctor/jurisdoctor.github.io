@@ -1,11 +1,139 @@
 "use client";
-import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import {
+  ReactNode,
+  useCallback,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from "react";
 import { LuChevronDown } from "react-icons/lu";
 import { ChapterType, displayNumberOf } from "./Questions";
 
 export type PickType = string;
 export type LensType = "all" | "incomplete";
 export type ResultType = "solved" | "missed";
+
+// Cycles through a few labels in place, crossfading, for tiles/headings that
+// stand in for more than one source chapter (a combined deck).
+export const Flash = ({
+  items,
+  className,
+}: {
+  items: ReactNode[];
+  className?: string;
+}) => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (items.length < 2) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = setInterval(() => {
+      setIndex((current) => (current + 1) % items.length);
+    }, 1600);
+    return () => clearInterval(id);
+  }, [items.length]);
+
+  if (items.length < 2) return <>{items[0]}</>;
+
+  return (
+    <span className={`relative inline-grid ${className ?? ""}`}>
+      {items.map((item, itemIndex) => (
+        <span
+          // eslint-disable-next-line react/no-array-index-key
+          key={itemIndex}
+          className={`col-start-1 row-start-1 transition duration-[900ms] ease-in-out ${
+            itemIndex === index
+              ? "translate-y-0 opacity-100"
+              : "translate-y-1 opacity-0"
+          }`}
+        >
+          {item}
+        </span>
+      ))}
+    </span>
+  );
+};
+
+// A ring of fire along the tile's own border, sling-ring style, for flagging
+// new questions. An SVG rect (not a rotating conic-gradient) so it hugs the
+// actual rounded-rectangle shape regardless of the tile's aspect ratio. The
+// stroke is solid (no dash pattern) — the fire instead comes from a
+// hot-to-ember gradient whose angle keeps rotating via <animateTransform>,
+// so the brightest point sweeps around the whole ring rather than sitting
+// fixed in one corner. Every instance gets its own filter/gradient ids —
+// with dozens of these on screen at once, a shared id meant only the first
+// tile ever resolved correctly and the rest looked flat, which read as
+// "inconsistent".
+const Glow = ({ label }: { label: string }) => {
+  const uid = useId();
+  const filterId = `${uid}-blur`;
+  const gradientId = `${uid}-flame`;
+  return (
+    <svg
+      aria-label={label}
+      className="pointer-events-none absolute -inset-1 h-[calc(100%+8px)] w-[calc(100%+8px)] overflow-visible"
+    >
+      <defs>
+        <filter id={filterId} x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.2" />
+        </filter>
+        <linearGradient
+          id={gradientId}
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+          gradientUnits="objectBoundingBox"
+        >
+          <animateTransform
+            attributeName="gradientTransform"
+            type="rotate"
+            from="0 0.5 0.5"
+            to="360 0.5 0.5"
+            dur="2.8s"
+            repeatCount="indefinite"
+          />
+          <stop offset="0%" stopColor="hsl(4, 90%, 38%)" />
+          <stop offset="22%" stopColor="hsl(14, 100%, 48%)" />
+          <stop offset="48%" stopColor="hsl(28, 100%, 58%)" />
+          <stop offset="70%" stopColor="hsl(38, 100%, 62%)" />
+          <stop offset="88%" stopColor="hsl(46, 100%, 74%)" />
+          <stop offset="100%" stopColor="hsl(52, 100%, 88%)" />
+        </linearGradient>
+      </defs>
+      <rect
+        x="5"
+        y="5"
+        width="calc(100% - 10px)"
+        height="calc(100% - 10px)"
+        rx="9"
+        fill="none"
+        stroke={`url(#${gradientId})`}
+        strokeWidth="4"
+        strokeLinecap="round"
+        pathLength={100}
+        className="glow-flicker"
+        filter={`url(#${filterId})`}
+        opacity={0.9}
+      />
+      <rect
+        x="5"
+        y="5"
+        width="calc(100% - 10px)"
+        height="calc(100% - 10px)"
+        rx="9"
+        fill="none"
+        stroke={`url(#${gradientId})`}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        pathLength={100}
+        className="glow-flicker"
+        style={{ animationDelay: "-0.35s" }}
+      />
+    </svg>
+  );
+};
 
 const Reset = ({ onReset }: { onReset: () => void }) => {
   const [confirming, setConfirming] = useState(false);
@@ -379,6 +507,12 @@ const ChapterSet = ({
             const here = open === chapter.id;
             const progress = progressOf(chapter.id);
             const wet = progress.solved + progress.missed > 0;
+            const isNew = chapter.id === "new";
+            const fresh =
+              isNew ||
+              chapter.questions.some(
+                (question) => question.new || question.dailySet,
+              );
             return (
               <button
                 key={chapter.id}
@@ -392,28 +526,38 @@ const ChapterSet = ({
                 aria-expanded={here}
                 title={
                   count
-                    ? `${labelFor(chapter)} · ${count} questions`
+                    ? `${labelFor(chapter)} · ${count} questions${fresh ? " · has new questions" : ""}`
                     : `${labelFor(chapter)} · no questions yet`
                 }
-                className={`relative h-10 rounded-lg border-2 border-solid bg-[var(--container-color)] text-xs font-bold duration-300 ${
-                  !count
-                    ? "cursor-not-allowed border-transparent text-[#d3d0e4]"
-                    : here
-                      ? "border-[var(--primary-color)] text-[var(--title-color)]"
-                      : active === chapter.id
-                        ? "border-[hsl(219,100%,72%)] text-[var(--title-color)]"
-                        : wet
-                          ? "border-transparent text-[var(--title-color)] hover:border-[hsl(219,100%,80%)]"
-                          : "border-transparent text-[#8b88b1] hover:border-[hsl(219,100%,80%)] hover:text-[var(--title-color)]"
+                className={`relative h-10 rounded-lg border-2 border-solid text-xs font-bold duration-300 ${
+                  isNew
+                    ? "motion-safe:animate-tileBounce border-transparent bg-[hsl(38,100%,55%)] text-white"
+                    : `bg-[var(--container-color)] ${
+                        !count
+                          ? "cursor-not-allowed border-transparent text-[#d3d0e4]"
+                          : here
+                            ? "border-[var(--primary-color)] text-[var(--title-color)]"
+                            : active === chapter.id
+                              ? "border-[hsl(219,100%,72%)] text-[var(--title-color)]"
+                              : wet
+                                ? "border-transparent text-[var(--title-color)] hover:border-[hsl(219,100%,80%)]"
+                                : "border-transparent text-[#8b88b1] hover:border-[hsl(219,100%,80%)] hover:text-[var(--title-color)]"
+                      }`
                 }`}
               >
+                {fresh && !isNew && <Glow label="Has new questions" />}
                 <Fill {...progress} />
-                <span className="relative">
-                  {displayNumberOf(chapter)}
-                  {chapter.source === "Iggy" && (
-                    <sup className="ml-px text-[8px]">I</sup>
-                  )}
-                </span>
+                {isNew ? (
+                  <span className="relative text-[9px] tracking-wide">NEW</span>
+                ) : chapter.members && chapter.members.length > 1 ? (
+                  <Flash
+                    items={chapter.members.map((member, memberIndex) => (
+                      <span key={memberIndex}>{member.chapterNumber}</span>
+                    ))}
+                  />
+                ) : (
+                  <span className="relative">{displayNumberOf(chapter)}</span>
+                )}
                 {count > 0 && (
                   <span className="pointer-events-none absolute -right-1 -top-1 rounded-full bg-[hsl(219,100%,91%)] px-1 text-[9px] leading-[14px] text-[var(--title-color)]">
                     {count}
@@ -465,16 +609,10 @@ const ChapterSet = ({
                         : "bg-[var(--body-color)] text-[#8b88b1] hover:bg-[hsl(219,100%,91%)] hover:text-[var(--title-color)]"
                   }`}
                 >
-                  {question.ordinal ?? index + 1}
-                  {(question.new || question.dailySet) && (
-                    <span
-                      aria-label="New question"
-                      title="New question"
-                      className="pointer-events-none absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[hsl(38,100%,60%)] text-[9px] leading-none text-white shadow"
-                    >
-                      ✨
-                    </span>
+                  {(question.new || question.dailySet) && !state && (
+                    <Glow label="New question" />
                   )}
+                  {question.ordinal ?? index + 1}
                 </button>
               );
             })}

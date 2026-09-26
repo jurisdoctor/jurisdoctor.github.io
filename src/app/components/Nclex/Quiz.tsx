@@ -194,6 +194,23 @@ const Quiz = ({
   const [answered, setAnswered] = useState(false);
   const [redo, setRedo] = useState(0);
   const [done, setDone] = useState(false);
+  const topRef = useRef<HTMLDivElement>(null);
+  const answerRef = useRef<HTMLDivElement>(null);
+
+  const calm = () =>
+    typeof window !== "undefined" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Answering reveals the takeaway/rationale below the fold on longer
+  // questions, so bring it into view; moving on or redoing pops back to the
+  // top so the next question is read from the start.
+  useEffect(() => {
+    if (!answered) return;
+    answerRef.current?.scrollIntoView({
+      behavior: calm() ? "auto" : "smooth",
+      block: "start",
+    });
+  }, [answered]);
 
   const right = questions.filter(
     (entry) => results[entry.id] === "solved",
@@ -251,6 +268,10 @@ const Quiz = ({
     setChosen([]);
     setAnswered(false);
     setRedo((prev) => prev + 1);
+    topRef.current?.scrollIntoView({
+      behavior: calm() ? "auto" : "smooth",
+      block: "start",
+    });
   };
 
   const next = () => {
@@ -288,7 +309,10 @@ const Quiz = ({
   }
 
   return (
-    <div className="animate-fadeIn rounded-xl bg-[var(--container-color)] p-7 shadow-xl">
+    <div
+      ref={topRef}
+      className="animate-fadeIn scroll-mt-4 rounded-xl bg-[var(--container-color)] p-7 shadow-xl"
+    >
       {question.caseId && (
         <div className="mb-4 rounded-2xl bg-[hsl(219,100%,96%)] p-4">
           <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
@@ -416,6 +440,7 @@ const Quiz = ({
 
       <p className="mb-6 text-lg sm:text-base">{question.stem}</p>
 
+      <div ref={answerRef} className="scroll-mt-4">
       {bowtie ? (
         <Bowtie
           key={`${question.id}-${redo}`}
@@ -478,6 +503,7 @@ const Quiz = ({
           ))}
         </div>
       )}
+      </div>
 
       {multi && !built && !answered && (
         <div className="flex flex-wrap items-center gap-4">

@@ -10,7 +10,7 @@ export interface CardType {
 
 const Card = ({ category, year, title, desc }: CardType) => {
   return (
-    <div className="relative pb-4 pl-12 before:absolute before:left-1 before:top-0 before:h-full before:w-px before:bg-[var(--primary-color)] before:content-[''] last:pb-0">
+    <div className="relative pb-4 pl-12 before:absolute before:left-1 before:top-0 before:h-full before:w-px before:bg-[var(--primary-color)] before:content-['']">
       {category === "education" ? (
         <LuGraduationCap className="absolute -left-[0.4375rem] top-0 bg-[var(--container-color)] py-[0.3rem] text-2xl text-[var(--primary-color)]" />
       ) : (

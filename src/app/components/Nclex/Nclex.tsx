@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import Shapes from "../Home/Shapes";
 import { useSaved } from "../DosageCalculations/Saved";
 import { EXAMS, EXAM_KEY, EXAM_TITLES, ExamId, isExamId, loadBank } from "./Bank";
-import ChapterSet, { LensType, PickType, ResultType } from "./ChapterSet";
+import ChapterSet, { Flash, LensType, PickType, ResultType } from "./ChapterSet";
 import Labs from "./Labs";
 import { ChapterType, DerivedBank, labelOf, QuestionType } from "./Questions";
 import Quiz from "./Quiz";
@@ -126,7 +126,9 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
         ? bank.Cases
         : section === "judgment"
           ? bank.Judgment
-          : bank.Chapters;
+          : bank.New
+            ? [bank.New, ...bank.Chapters]
+            : bank.Chapters;
   const noun =
     section === "skills" ? "skills" : section === "cases" ? "cases" : "chapters";
   const empty = groups.length === 0;
@@ -336,7 +338,19 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
             ) : (
               <>
                 <h3 className="mb-4 ml-3.5 text-xl lg:ml-0 lg:text-center">
-                  {label}
+                  {group?.members && group.members.length > 1 ? (
+                    <>
+                      Chapter{" "}
+                      <Flash
+                        items={group.members.map((member, memberIndex) => (
+                          <span key={memberIndex}>{member.chapterNumber}</span>
+                        ))}
+                      />{" "}
+                      · {group.title}
+                    </>
+                  ) : (
+                    label
+                  )}
                 </h3>
                 <Quiz
                   key={`${section}-${lens}-${String(pick)}-${started.at}-${pass}`}

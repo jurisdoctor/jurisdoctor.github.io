@@ -3,7 +3,7 @@
     "course": "N55 Fundamentals of Nursing",
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
-    "questionCount": 719,
+    "questionCount": 769,
     "chaptersIncluded": [
       1,
       2,
@@ -42,7 +42,7 @@
       1038
     ],
     "chaptersPending": [],
-    "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time. Generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id.",
+    "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time. Generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id. Chapter groups: chapters taught from the same PowerPoint share a 'group' id on the chapter, and meta.chapterGroups lists each group with its title, exam and member chapter ids in display order. Chapters without a 'group' field stand alone.",
     "questionTypes": {
       "multiple_choice": "one correct option; answer is a string",
       "sata": "select all that apply; answer is an array and is scored all or nothing"
@@ -214,20 +214,20 @@
       "26": 11,
       "27": 34,
       "37": 20,
-      "38": 24,
-      "42": 10,
+      "38": 29,
+      "42": 34,
       "43": 20,
-      "49": 10,
+      "49": 15,
       "1005": 20,
       "1013": 10,
-      "1015": 36,
+      "1015": 40,
       "1024": 20,
       "1039": 10,
       "1040": 10,
-      "1041": 26,
+      "1041": 30,
       "1056": 20,
-      "1035": 22,
-      "1038": 22
+      "1035": 26,
+      "1038": 26
     },
     "exams": [
       {
@@ -292,63 +292,103 @@
           1038
         ],
         "skills": [],
-        "questionCount": 214
+        "questionCount": 264
       }
     ],
     "currentDailySet": {
-      "date": "2026-09-25",
+      "date": "2026-09-26",
       "chapters": [
+        38,
+        42,
+        49,
+        1015,
         1035,
-        1038
+        1038,
+        1041
       ],
       "questionIds": [
-        "ig35-q01",
-        "ig35-q02",
-        "ig35-q03",
-        "ig35-q04",
-        "ig35-q05",
-        "ig35-q06",
-        "ig35-q07",
-        "ig35-q08",
-        "ig35-q09",
-        "ig35-q10",
-        "ig35-q11",
-        "ig35-q12",
-        "ig35-q13",
-        "ig35-q14",
-        "ig35-q15",
-        "ig35-s01",
-        "ig35-s02",
-        "ig35-x01",
-        "ig35-x02",
-        "ig35-x03",
-        "ig35-x04",
-        "ig35-t1",
-        "ig38-q01",
-        "ig38-q02",
-        "ig38-q03",
-        "ig38-q04",
-        "ig38-q05",
-        "ig38-q06",
-        "ig38-q07",
-        "ig38-q08",
-        "ig38-q09",
-        "ig38-q10",
-        "ig38-q11",
-        "ig38-q12",
-        "ig38-q13",
-        "ig38-q14",
-        "ig38-q15",
-        "ig38-s01",
-        "ig38-s02",
-        "ig38-x01",
-        "ig38-x02",
-        "ig38-x03",
-        "ig38-x04",
-        "ig38-t1"
-      ],
-      "count": 44
-    }
+        "ch38-h01",
+        "ch38-h03",
+        "ch38-h04",
+        "ch38-h05",
+        "ch38-h02",
+        "ch42-n12",
+        "ch42-n03",
+        "ch42-n19",
+        "ch42-n06",
+        "ch42-n16",
+        "ch42-n05",
+        "ch42-n20",
+        "ch42-n02",
+        "ch42-n17",
+        "ch42-n14",
+        "ch42-n07",
+        "ch42-n04",
+        "ch42-n15",
+        "ch42-n09",
+        "ch42-n11",
+        "ch42-n01",
+        "ch42-n10",
+        "ch42-n13",
+        "ch42-n18",
+        "ch42-n08",
+        "ch42-h03",
+        "ch42-h01",
+        "ch42-h02",
+        "ch42-h04",
+        "ch49-h02",
+        "ch49-h01",
+        "ch49-h05",
+        "ch49-h03",
+        "ch49-h04",
+        "ig15-h01",
+        "ig15-h04",
+        "ig15-h03",
+        "ig15-h02",
+        "ig41-h02",
+        "ig41-h04",
+        "ig41-h03",
+        "ig41-h01",
+        "ig35-h04",
+        "ig35-h01",
+        "ig35-h03",
+        "ig35-h02",
+        "ig38-h02",
+        "ig38-h01",
+        "ig38-h03",
+        "ig38-h04"
+      ]
+    },
+    "chapterGroups": [
+      {
+        "id": "fluid-electrolytes",
+        "title": "Fluid and Electrolyte Imbalances",
+        "exam": "Exam 2",
+        "chapters": [
+          1013,
+          42
+        ]
+      },
+      {
+        "id": "patient-safety",
+        "title": "Foundations of Patient Safety",
+        "exam": "Exam 2",
+        "chapters": [
+          27,
+          38
+        ]
+      },
+      {
+        "id": "sensory",
+        "title": "Sensory Alterations",
+        "exam": "Exam 2",
+        "chapters": [
+          1039,
+          1040,
+          49
+        ]
+      }
+    ]
   },
   "chapters": [
     {

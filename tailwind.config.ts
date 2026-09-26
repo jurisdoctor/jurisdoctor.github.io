@@ -47,6 +47,7 @@ const config: Config = {
         mark: "mark 2.6s ease-in-out infinite",
         indeterminate: "indeterminate 1.8s ease-in-out infinite",
         fadeIn: "fadeIn 0.6s ease-out both",
+        tileBounce: "tileBounce 1.6s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -179,6 +180,10 @@ const config: Config = {
         fadeIn: {
           "0%": { opacity: "0", transform: "translateY(8px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        tileBounce: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-3px)" },
         },
         // full orbital circle
         drift12: {
