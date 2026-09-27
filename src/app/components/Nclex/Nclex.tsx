@@ -4,7 +4,6 @@ import Shapes from "../Home/Shapes";
 import { useSaved } from "../DosageCalculations/Saved";
 import { EXAMS, EXAM_KEY, EXAM_TITLES, ExamId, isExamId, loadBank } from "./Bank";
 import ChapterSet, { Flash, LensType, PickType, ResultType } from "./ChapterSet";
-import Labs from "./Labs";
 import { ChapterType, DerivedBank, labelOf, QuestionType } from "./Questions";
 import Quiz from "./Quiz";
 import Swap from "./Swap";
@@ -18,7 +17,7 @@ const shuffle = (items: QuestionType[]) => {
   return order;
 };
 
-type SectionType = "chapters" | "skills" | "cases" | "judgment" | "labs";
+type SectionType = "chapters" | "skills" | "cases" | "judgment";
 
 interface StartType {
   pick: PickType;
@@ -44,20 +43,13 @@ const validMarks = (saved: Record<string, ResultType>) =>
     (entry) => entry === "solved" || entry === "missed",
   );
 
-const SECTIONS: SectionType[] = [
-  "chapters",
-  "skills",
-  "cases",
-  "judgment",
-  "labs",
-];
+const SECTIONS: SectionType[] = ["chapters", "skills", "cases", "judgment"];
 
 const TITLES: Record<SectionType, string> = {
   chapters: "Chapters",
   skills: "Skills",
   cases: "Case studies",
   judgment: "Clinical judgment",
-  labs: "Labs",
 };
 
 const validView = (saved: ViewType) =>
@@ -91,13 +83,12 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
   const available = useMemo(
     () =>
       SECTIONS.filter((entry) => {
-        if (entry === "labs") return exam === "exam2";
         if (entry === "skills") return bank.Skills.length > 0;
         if (entry === "cases") return bank.Cases.length > 0;
         if (entry === "judgment") return bank.Judgment.length > 0;
         return bank.Chapters.length > 0;
       }),
-    [bank, exam],
+    [bank],
   );
   const section = available.includes(view.section) ? view.section : available[0];
   useEffect(() => {
@@ -271,101 +262,95 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
         <h2>{TITLES[section]}</h2>
       </Swap>
 
-      {section === "labs" ? (
-        <Labs exam={exam} />
+      {shown.length === 0 ? (
+        <div className="mb-8 rounded-2xl bg-[var(--body-color)] p-7 text-center">
+          {empty ? (
+            <>
+              <p className="mb-1 text-lg font-bold text-[var(--title-color)]">
+                Not in {EXAM_TITLES[exam]}.
+              </p>
+              <p className="text-[#8b88b1]">
+                This exam doesn&apos;t include {noun}. Try another tab.
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="mb-4 text-lg font-bold text-[var(--title-color)]">
+                Nothing left here.
+              </p>
+              <p className="text-[#8b88b1]">
+                Every question in {noun} is answered correctly. Switch
+                back to All to run them again.
+              </p>
+              <button
+                type="button"
+                onClick={() => setLens("all")}
+                className="mt-5 inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse"
+              >
+                Show all
+              </button>
+            </>
+          )}
+        </div>
       ) : (
-        <>
-          {shown.length === 0 ? (
-            <div className="mb-8 rounded-2xl bg-[var(--body-color)] p-7 text-center">
-              {empty ? (
+        <ChapterSet
+          chapters={shown}
+          active={pick}
+          results={results}
+          current={deck[at]?.id ?? null}
+          lens={lens}
+          onRun={run}
+          noun={noun}
+          labelFor={labelFor}
+          progressOf={progressOf}
+          total={total}
+          left={left}
+          onStart={(next, index) => open(next, index, shown)}
+          onReset={reset}
+          picker={section === "skills" ? "select" : "grid"}
+        />
+      )}
+
+      <Swap token={`${section}-${lens}-${String(pick)}-${started?.at ?? -1}`}>
+        {started === null || deck.length === 0 ? (
+          <p className="ml-3.5 text-[#8b88b1] lg:ml-0 lg:text-center">
+            Pick{" "}
+            {section === "skills"
+              ? "a skill"
+              : section === "cases"
+                ? "a case"
+                : "a chapter"}{" "}
+            above to see its questions, or hit All to run the whole set.
+          </p>
+        ) : (
+          <>
+            <h3 className="mb-4 ml-3.5 text-xl lg:ml-0 lg:text-center">
+              {group?.members && group.members.length > 1 ? (
                 <>
-                  <p className="mb-1 text-lg font-bold text-[var(--title-color)]">
-                    Not in {EXAM_TITLES[exam]}.
-                  </p>
-                  <p className="text-[#8b88b1]">
-                    This exam doesn&apos;t include {noun}. Try another tab.
-                  </p>
+                  Chapter{" "}
+                  <Flash
+                    items={group.members.map((member, memberIndex) => (
+                      <span key={memberIndex}>{member.chapterNumber}</span>
+                    ))}
+                  />{" "}
+                  · {group.title}
                 </>
               ) : (
-                <>
-                  <p className="mb-4 text-lg font-bold text-[var(--title-color)]">
-                    Nothing left here.
-                  </p>
-                  <p className="text-[#8b88b1]">
-                    Every question in {noun} is answered correctly. Switch
-                    back to All to run them again.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => setLens("all")}
-                    className="mt-5 inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse"
-                  >
-                    Show all
-                  </button>
-                </>
+                label
               )}
-            </div>
-          ) : (
-            <ChapterSet
-              chapters={shown}
-              active={pick}
+            </h3>
+            <Quiz
+              key={`${section}-${lens}-${String(pick)}-${started.at}-${pass}`}
+              label={label}
+              questions={deck}
+              start={started.at}
               results={results}
-              current={deck[at]?.id ?? null}
-              lens={lens}
-              onRun={run}
-              noun={noun}
-              labelFor={labelFor}
-              progressOf={progressOf}
-              total={total}
-              left={left}
-              onStart={(next, index) => open(next, index, shown)}
-              onReset={reset}
-              picker={section === "skills" ? "select" : "grid"}
+              onResult={mark}
+              onMove={setAt}
             />
-          )}
-
-          <Swap token={`${section}-${lens}-${String(pick)}-${started?.at ?? -1}`}>
-            {started === null || deck.length === 0 ? (
-              <p className="ml-3.5 text-[#8b88b1] lg:ml-0 lg:text-center">
-                Pick{" "}
-                {section === "skills"
-                  ? "a skill"
-                  : section === "cases"
-                    ? "a case"
-                    : "a chapter"}{" "}
-                above to see its questions, or hit All to run the whole set.
-              </p>
-            ) : (
-              <>
-                <h3 className="mb-4 ml-3.5 text-xl lg:ml-0 lg:text-center">
-                  {group?.members && group.members.length > 1 ? (
-                    <>
-                      Chapter{" "}
-                      <Flash
-                        items={group.members.map((member, memberIndex) => (
-                          <span key={memberIndex}>{member.chapterNumber}</span>
-                        ))}
-                      />{" "}
-                      · {group.title}
-                    </>
-                  ) : (
-                    label
-                  )}
-                </h3>
-                <Quiz
-                  key={`${section}-${lens}-${String(pick)}-${started.at}-${pass}`}
-                  label={label}
-                  questions={deck}
-                  start={started.at}
-                  results={results}
-                  onResult={mark}
-                  onMove={setAt}
-                />
-              </>
-            )}
-          </Swap>
-        </>
-      )}
+          </>
+        )}
+      </Swap>
     </>
   );
 };
