@@ -3,7 +3,7 @@
     "course": "N55 Fundamentals of Nursing",
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
-    "questionCount": 789,
+    "questionCount": 809,
     "chaptersIncluded": [
       1,
       2,
@@ -39,7 +39,8 @@
       1041,
       1056,
       1035,
-      1038
+      1038,
+      1022
     ],
     "chaptersPending": [],
     "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time. Generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id. Chapter groups: chapters taught from the same PowerPoint share a 'group' id on the chapter, and meta.chapterGroups lists each group with its title, exam and member chapter ids in display order. Chapters without a 'group' field stand alone. Exam 2 skills (ids 13 to 18) are the Exam 2 check-off skills, kept separate from the Potter and Iggy chapters. Skill questions are written only from skills lab material; skill 14 holds the former Exam 1 skill 2 (Blood Glucose Monitoring and Subcutaneous Insulin) questions, moved to Exam 2, plus new items, and the other Exam 2 skills stay empty until their material is provided.",
@@ -82,7 +83,8 @@
       1041,
       1056,
       1035,
-      1038
+      1038,
+      1022
     ],
     "itemTypes": [
       "bowtie",
@@ -232,7 +234,8 @@
       "1041": 32,
       "1056": 20,
       "1035": 28,
-      "1038": 28
+      "1038": 28,
+      "1022": 20
     },
     "exams": [
       {
@@ -293,7 +296,8 @@
           1039,
           1040,
           1035,
-          1038
+          1038,
+          1022
         ],
         "skills": [
           13,
@@ -303,7 +307,7 @@
           17,
           18
         ],
-        "questionCount": 314
+        "questionCount": 334
       }
     ],
     "currentDailySet": {
@@ -313,6 +317,7 @@
         42,
         49,
         1015,
+        1022,
         1035,
         1038,
         1041
@@ -335,6 +340,26 @@
         "ig35-w02",
         "ig38-w01",
         "ig38-w02",
+        "ig22-q01",
+        "ig22-q02",
+        "ig22-q03",
+        "ig22-q04",
+        "ig22-q05",
+        "ig22-q06",
+        "ig22-q07",
+        "ig22-q08",
+        "ig22-q09",
+        "ig22-q10",
+        "ig22-q11",
+        "ig22-q12",
+        "ig22-q13",
+        "ig22-q14",
+        "ig22-q15",
+        "ig22-q16",
+        "ig22-q17",
+        "ig22-q18",
+        "ig22-q19",
+        "ig22-q20",
         "sk14-w01",
         "sk14-w02",
         "sk14-w03",
@@ -14796,6 +14821,1291 @@
               }
             ],
             "verdict": "Thrombotic, embolic, hemorrhagic, hemorrhagic, thrombotic, hemorrhagic."
+          },
+          "dailySet": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "id": 1022,
+      "chapterNumber": 22,
+      "source": "Iggy",
+      "title": "Assessment of the Respiratory System",
+      "exam": "Exam 2",
+      "questions": [
+        {
+          "id": "ig22-q01",
+          "type": "multiple_choice",
+          "stem": "A 68-year-old admitted with a GI bleed has a hemoglobin of 7.1 g/dL, down from 11.8 g/dL on admission. SpO2 is 99% on room air. Heart rate 118, respirations 24, blood pressure 102/64. She is pale, her capillary refill is 4 seconds. She feels dizzy when she sits up. A student says, \"Her oxygen is fine because her saturation is 99%.\" Which response by the nurse is most accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"The saturation is falsely high because pale skin interferes with the sensor.\"",
+              "correct": false,
+              "rationale": "Pallor is not on the list of pulse oximetry errors. Poor circulation, movement, cold fingers, nail polish and placement are. Blaming the device dismisses a real problem."
+            },
+            {
+              "id": "B",
+              "text": "\"Her hemoglobin is nearly full of oxygen, but she has too little hemoglobin to carry enough oxygen to her tissues.\"",
+              "correct": true,
+              "rationale": "Saturation is a percentage of the hemoglobin she has. With a hemoglobin of 7.1 each cell is full, yet the total oxygen delivered is low. Her fast heart rate and dizziness are the tissues asking for more. This is decreased oxygen carrying capacity."
+            },
+            {
+              "id": "C",
+              "text": "\"Her rapid breathing shows the problem is ventilation, so we should coach her to take slow deep breaths.\"",
+              "correct": false,
+              "rationale": "Her airway and ventilation are working. Her fast breathing is compensation for poor oxygen delivery. Slowing it would take away that compensation."
+            },
+            {
+              "id": "D",
+              "text": "\"A nonrebreather mask will correct the problem by raising the oxygen in her blood.\"",
+              "correct": false,
+              "rationale": "Her blood oxygen is already normal. Oxygen therapy treats hypoxemia. It does not fix hypoxia caused by missing hemoglobin. She needs the cause treated."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "An open airway and a normal SpO2 do not guarantee oxygenation. Ventilation, diffusion and perfusion all need enough hemoglobin to deliver oxygen to the tissues.",
+          "strategy": "Anchor on the hemoglobin trend first. Once you see it falling, the 99% becomes a percentage of too little.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Read the trend",
+                "detail": "Hemoglobin fell from 11.8 to 7.1 g/dL. That is lost carrying capacity."
+              },
+              {
+                "action": "Match the cues",
+                "detail": "Tachycardia, dizziness and slow capillary refill say tissues are short on oxygen."
+              },
+              {
+                "action": "Test each statement",
+                "detail": "Pallor does not fool the sensor. Her ventilation works. Oxygen does not replace hemoglobin."
+              }
+            ],
+            "verdict": "Too little hemoglobin to carry enough oxygen, even at 99%."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q02",
+          "type": "multiple_choice",
+          "stem": "A 64-year-old with pneumonia has a prescription for oxygen by simple face mask at 6 L/min. On rounds the nurse finds the flowmeter set at 3 L/min. The patient says the mask feels stuffy and hot. SpO2 is 93%, respirations 24, heart rate 96. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Switch to a nasal cannula at 3 L/min so the patient is more comfortable",
+              "correct": false,
+              "rationale": "Changing the device and the dose is outside the prescription. Comfort matters. Ask the provider before changing the device."
+            },
+            {
+              "id": "B",
+              "text": "Leave the flow at 3 L/min because the SpO2 is above 90%",
+              "correct": false,
+              "rationale": "A saturation that looks acceptable does not make an unsafe setting safe. At 3 L/min the mask keeps collecting exhaled air."
+            },
+            {
+              "id": "C",
+              "text": "Obtain an arterial blood gas to check for carbon dioxide retention",
+              "correct": false,
+              "rationale": "Getting a gas is not a nursing decision here and it delays the fix. Correct the setting first, then reassess."
+            },
+            {
+              "id": "D",
+              "text": "Increase the flow to the prescribed 6 L/min and reassess the patient",
+              "correct": true,
+              "rationale": "A simple mask needs at least the minimum prescribed flow to flush exhaled CO2 out of the mask. At low flow the patient rebreathes CO2, which also explains the stuffy feeling. Correcting the flow matches the order and fixes the hazard."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "A simple mask run below its minimum flow becomes a CO2 trap. Use the ordered device at the ordered setting, then watch the response.",
+          "strategy": "Two options sound kind or reassuring. Neither follows the order. The stuffy feeling is a clue to rebreathing, not a reason to lower the dose.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Compare the setting with the order",
+                "detail": "3 L/min is below the prescribed 6 L/min."
+              },
+              {
+                "action": "Name the hazard",
+                "detail": "A simple mask at low flow means rebreathing exhaled CO2."
+              },
+              {
+                "action": "Pick the action in scope that fixes it",
+                "detail": "Set the ordered flow, then reassess."
+              }
+            ],
+            "verdict": "Increase to the prescribed 6 L/min and reassess."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q03",
+          "type": "multiple_choice",
+          "stem": "A 62-year-old comes to the clinic for an annual visit. She smoked 1.5 packs a day for 30 years and quit 8 years ago. She worked 20 years in a shipyard before retiring. She says, \"I've coughed up a little white phlegm every morning for years. That's just my smoker's cough.\" She also says she now sits on a stool halfway through her shower to catch her breath. Last year she did not need to. Which finding does the nurse explore further first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Her 45 pack-year smoking history",
+              "correct": false,
+              "rationale": "1.5 packs a day for 30 years is 45 pack-years. It is an important risk factor to document. It describes her risk. It does not tell you her lungs changed this year."
+            },
+            {
+              "id": "B",
+              "text": "Her morning cough with a small amount of white sputum",
+              "correct": false,
+              "rationale": "Abnormal and long-standing. Nothing about it has changed, so it is her baseline."
+            },
+            {
+              "id": "C",
+              "text": "Needing to rest halfway through her shower",
+              "correct": true,
+              "rationale": "A new loss of activity tolerance in a daily task tells you the disease is progressing now. Ask when it started, what else she has stopped doing and how far she can walk."
+            },
+            {
+              "id": "D",
+              "text": "Her past employment in a shipyard",
+              "correct": false,
+              "rationale": "Past work matters because lung damage can show up decades later. It is a risk factor, like the pack-years. It is not a change in her status."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "In a respiratory history, a new change in sleep or daily activities is the finding that tells you the patient is getting worse.",
+          "strategy": "Three options are risk factors or baseline. Only one is new. When two answers feel important, ask which one is changing.",
+          "elimination": {
+            "strategies": [
+              "Odd man wins",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Sort each finding",
+                "detail": "Risk factor, baseline or new change."
+              },
+              {
+                "action": "Remove the risks",
+                "detail": "Pack-years and shipyard work are both history."
+              },
+              {
+                "action": "Remove the baseline",
+                "detail": "The cough has been the same for years."
+              }
+            ],
+            "verdict": "The new need to rest in the shower."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q04",
+          "type": "multiple_choice",
+          "stem": "The nurse receives report on four patients. Which patient does the nurse assess first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A 70-year-old with COPD whose SpO2 is 91% on 2 L/min by nasal cannula, unchanged all shift, who is speaking in full sentences",
+              "correct": false,
+              "rationale": "Abnormal numbers and stable. He is at his baseline and talking comfortably."
+            },
+            {
+              "id": "B",
+              "text": "A 45-year-old on postoperative day 1 with rhonchi over the large airways that clear after coughing",
+              "correct": false,
+              "rationale": "Secretions that respond to coughing. Encourage coughing and deep breathing. This can wait a few minutes."
+            },
+            {
+              "id": "C",
+              "text": "A 58-year-old who started an IV antibiotic 20 minutes ago and now has a hoarse voice and a high-pitched sound on inspiration heard without a stethoscope",
+              "correct": true,
+              "rationale": "Hoarseness plus a harsh inspiratory sound is stridor. It means the upper airway is narrowing, here most likely from an allergic reaction. This airway can close within minutes."
+            },
+            {
+              "id": "D",
+              "text": "An 80-year-old with pneumonia who has a temperature of 38.3 C and rust-colored sputum, with SpO2 of 93% on 2 L/min",
+              "correct": false,
+              "rationale": "Expected findings for his diagnosis. His oxygenation is acceptable. He needs care soon, after the airway threat."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Stridor is an upper airway emergency. Airway problems outrank abnormal but stable breathing and expected infection findings.",
+          "strategy": "Each patient has something abnormal. The tie breaker is expected versus unexpected, then stable versus unstable. Only one finding is new and threatens the airway.",
+          "elimination": {
+            "strategies": [
+              "Apply the ABCs",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Label each patient",
+                "detail": "Stable baseline, expected secretions, new airway sound, expected infection."
+              },
+              {
+                "action": "Apply airway first",
+                "detail": "Stridor is a narrowing upper airway."
+              },
+              {
+                "action": "Check the timing",
+                "detail": "It started 20 minutes after a new drug, so it may be getting worse."
+              }
+            ],
+            "verdict": "The patient with new stridor after the antibiotic."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q05",
+          "type": "highlight",
+          "nursesNote": "1000: 55-year-old, postoperative day 2 after abdominal surgery. Respirations 28, using neck muscles on inspiration. Speaks in 3 to 4 word phrases. Trachea midline. Bronchial breath sounds heard over the trachea. Vesicular breath sounds in the left base. Crackles in the right lower lobe that do not clear with coughing, new since 0800. Right side of the chest rises less than the left. Incision pain 3 out of 10 with coughing, relieved by splinting with a pillow. Skin warm and pink.",
+          "stem": "Highlight the findings that require follow-up.",
+          "segments": [
+            {
+              "id": "s1",
+              "text": "Respirations 28, using neck muscles on inspiration",
+              "correct": true,
+              "rationale": "A fast rate with accessory muscle use means her work of breathing is high. She is tiring."
+            },
+            {
+              "id": "s2",
+              "text": "Speaks in 3 to 4 word phrases",
+              "correct": true,
+              "rationale": "Ability to speak is part of the immediate assessment. Short phrases mean she does not have the breath for a full sentence."
+            },
+            {
+              "id": "s3",
+              "text": "Trachea midline",
+              "correct": false,
+              "rationale": "Normal. A shifted trachea would be the emergency."
+            },
+            {
+              "id": "s4",
+              "text": "Bronchial breath sounds heard over the trachea",
+              "correct": false,
+              "rationale": "Loud, high sounds are expected over the trachea. They sound harsh. That is where they belong."
+            },
+            {
+              "id": "s5",
+              "text": "Vesicular breath sounds in the left base",
+              "correct": false,
+              "rationale": "Soft, low sounds at the bases are normal."
+            },
+            {
+              "id": "s6",
+              "text": "Crackles in the right lower lobe that do not clear with coughing, new since 0800",
+              "correct": true,
+              "rationale": "Crackles mean fluid in the airways. They are new and do not clear, which after surgery points toward pneumonia or fluid."
+            },
+            {
+              "id": "s7",
+              "text": "Right side of the chest rises less than the left",
+              "correct": true,
+              "rationale": "Unequal expansion means the right lung is not filling well. It fits with the crackles on the same side."
+            },
+            {
+              "id": "s8",
+              "text": "Incision pain 3 out of 10 with coughing, relieved by splinting with a pillow",
+              "correct": false,
+              "rationale": "Expected after abdominal surgery and controlled. Splinting is the right technique."
+            },
+            {
+              "id": "s9",
+              "text": "Skin warm and pink",
+              "correct": false,
+              "rationale": "Normal color. Cyanosis is a late sign, so pink skin does not rule out a problem. The finding itself needs no follow-up."
+            }
+          ],
+          "answer": [
+            "s1",
+            "s2",
+            "s6",
+            "s7"
+          ],
+          "format": "+/-",
+          "scoring": "+/-",
+          "takeaway": "Work of breathing, speech, new adventitious sounds and asymmetry need follow-up. Bronchial sounds over the trachea and vesicular sounds at the bases are normal.",
+          "strategy": "The note mixes in normal findings that sound alarming. Bronchial sounds over the trachea are the classic over-highlight. Know your normals.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Apply the ABCs"
+            ],
+            "steps": [
+              {
+                "action": "Check work of breathing",
+                "detail": "Rate, accessory muscles and phrase length are all abnormal."
+              },
+              {
+                "action": "Match each sound to its location",
+                "detail": "Bronchial over the trachea and vesicular at the bases are expected."
+              },
+              {
+                "action": "Look for new and one-sided",
+                "detail": "New right crackles with less right expansion."
+              }
+            ],
+            "verdict": "Rate with neck muscles, short phrases, new right crackles and unequal expansion."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q06",
+          "type": "multiple_choice",
+          "stem": "A 79-year-old in an assisted living facility with a current influenza outbreak developed a severe headache, muscle aches, fatigue and loss of appetite about 20 hours ago. Temperature is 37.6 C. Heart rate 98, respirations 20, SpO2 95% on room air. She received her influenza vaccine two months ago. Which action by the nurse is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wait to report until her temperature reaches 38.3 C, since influenza usually causes a high fever",
+              "correct": false,
+              "rationale": "Older adults often do not mount a high fever. Waiting for one uses up the window when an antiviral helps."
+            },
+            {
+              "id": "B",
+              "text": "Notify the provider now about the symptoms and their onset time so an antiviral can be considered",
+              "correct": true,
+              "rationale": "Rapid onset of headache, muscle aches, fatigue and anorexia during an outbreak is influenza until proven otherwise. Antivirals may help if started within 24 to 48 hours of symptoms. She is at hour 20, so the clock matters."
+            },
+            {
+              "id": "C",
+              "text": "Explain that her recent vaccine means this cannot be influenza",
+              "correct": false,
+              "rationale": "Vaccination prevents influenza or reduces its severity. It does not make infection impossible."
+            },
+            {
+              "id": "D",
+              "text": "Give acetaminophen and reassess in 4 hours because her vital signs are stable",
+              "correct": false,
+              "rationale": "Comfort care is reasonable. Delaying the report still costs antiviral time. Stable vital signs do not change that."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "For influenza, the onset time is a clinical fact you report. Antivirals work best within 24 to 48 hours. Older adults may never spike a high fever.",
+          "strategy": "The low temperature and the recent vaccine are both there to talk you out of reporting. Neither rules out influenza.",
+          "elimination": {
+            "strategies": [
+              "Eliminate absolutes",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Recognize the pattern",
+                "detail": "Rapid onset of classic flu symptoms during an outbreak."
+              },
+              {
+                "action": "Note the clock",
+                "detail": "20 hours into a 24 to 48 hour window."
+              },
+              {
+                "action": "Reject the reassurances",
+                "detail": "Low fever and vaccination do not rule it out."
+              }
+            ],
+            "verdict": "Notify the provider now so an antiviral can be considered."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q07",
+          "type": "multiple_choice",
+          "stem": "A 38-year-old admitted with pneumonia smokes one pack a day. The nurse has asked about his tobacco use and advised him clearly to quit. He says, \"I know I should. I'm just not ready right now with everything going on at work.\" Which response by the nurse is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Let's set your quit date for the day you go home. I'll ask about starting a nicotine patch today.\"",
+              "correct": false,
+              "rationale": "This jumps to Assist before Assess. He just told you he is not willing. A plan he did not agree to rarely works."
+            },
+            {
+              "id": "B",
+              "text": "\"Smoking is the reason you are in the hospital. Next time it could be much worse.\"",
+              "correct": false,
+              "rationale": "A fear message that ignores what he said. It tends to make people defensive, not ready."
+            },
+            {
+              "id": "C",
+              "text": "\"It sounds like this isn't the right time. I can leave you some information. I'd also like to hear whether cutting back feels possible.\"",
+              "correct": true,
+              "rationale": "Assess found he is not ready. For a patient who is not ready, you give information, listen for any interest in cutting back, then Arrange follow-up. This keeps the door open."
+            },
+            {
+              "id": "D",
+              "text": "\"That's your decision. I'll document that you declined counseling.\"",
+              "correct": false,
+              "rationale": "Respects his choice, then ends the conversation. It skips Arrange, so no one follows up."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "The 5 As are Ask, Advise, Assess, Assist and Arrange. Assess readiness before you assist. If the patient is not ready, give information, listen and plan follow-up.",
+          "strategy": "Setting a quit date sounds like the most helpful answer. It is the right action at the wrong time.",
+          "elimination": {
+            "strategies": [
+              "Patient-centered option",
+              "Eliminate options that deny patient feelings"
+            ],
+            "steps": [
+              {
+                "action": "Find the step you are on",
+                "detail": "Ask and Advise are done. He has answered Assess: not ready."
+              },
+              {
+                "action": "Remove the pushy and the closed options",
+                "detail": "A quit date ignores his answer. Documenting a refusal ends the process."
+              },
+              {
+                "action": "Remove the fear message",
+                "detail": "It denies his feelings and does not build readiness."
+              }
+            ],
+            "verdict": "Acknowledge, give information and explore cutting back."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q08",
+          "type": "multiple_choice",
+          "stem": "A 72-year-old had a right thoracentesis 1 hour ago. 900 mL of fluid was removed. Heart rate was 88 before the procedure, 104 at 30 minutes and 122 now. Respirations went from 18 to 30 and shallow. He suddenly reports sharp right-sided chest pain and says he cannot get enough air. Breath sounds are diminished on the right. The dressing has a small spot of serous drainage. The site is sore. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Stay with him, raise the head of the bed, apply oxygen per protocol and call the provider or rapid response",
+              "correct": true,
+              "rationale": "Sudden dyspnea, rapid shallow breathing, rising heart rate and diminished breath sounds on the procedure side point to pneumothorax. Support breathing now and get help now."
+            },
+            {
+              "id": "B",
+              "text": "Reinforce the dressing and assess the puncture site for bleeding",
+              "correct": false,
+              "rationale": "A small serous spot and a sore site are expected. The site is not what is failing."
+            },
+            {
+              "id": "C",
+              "text": "Encourage him to cough and take deep breaths to help the lung expand",
+              "correct": false,
+              "rationale": "Useful in routine recovery. It does not address a collapsing lung and can worsen his distress."
+            },
+            {
+              "id": "D",
+              "text": "Give the prescribed PRN analgesic for pleuritic pain and reassess in 30 minutes",
+              "correct": false,
+              "rationale": "Treats the pain and waits 30 minutes while the likely cause gets worse."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "After a thoracentesis or lung biopsy, sudden dyspnea with rising heart rate and absent or diminished breath sounds on that side means pneumothorax. Stay, support breathing and escalate.",
+          "strategy": "The dressing and the pain are real findings placed there to pull you toward the site. Look at the trend in heart rate and breathing first.",
+          "elimination": {
+            "strategies": [
+              "Apply the ABCs",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Read the trend",
+                "detail": "Heart rate 88 to 104 to 122 and respirations 18 to 30."
+              },
+              {
+                "action": "Put the cues together",
+                "detail": "Sudden one-sided pain, air hunger and diminished sounds on the right."
+              },
+              {
+                "action": "Choose breathing over the site",
+                "detail": "Oxygen, upright position and help come before the dressing or pain relief."
+              }
+            ],
+            "verdict": "Stay, sit him up, apply oxygen and call for help."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q09",
+          "type": "multiple_choice",
+          "stem": "An 84-year-old is on day 2 after a hip repair. Her SpO2 was 96% at 0800, 94% at 1400 and 92% at 2000 on room air. Respirations rose from 16 to 22. At 2100 she is restless and keeps trying to get out of bed. Her daughter says, \"Mom always gets a little mixed up at night. It's just her age.\" Which action by the nurse is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dim the lights, reorient her and let her daughter stay at the bedside",
+              "correct": false,
+              "rationale": "Helpful for night-time confusion. It assumes the cause before checking her breathing."
+            },
+            {
+              "id": "B",
+              "text": "Perform a full respiratory assessment and report the falling SpO2 with the new restlessness",
+              "correct": true,
+              "rationale": "Older adults have a blunted response to low oxygen. Restlessness or confusion may be the first sign you see. Her SpO2 is still above 90%, yet it has fallen all day while her rate climbed. The trend plus the behavior change needs assessment and a report."
+            },
+            {
+              "id": "C",
+              "text": "Apply a bed alarm and recheck the SpO2 in 4 hours because it is still above 90%",
+              "correct": false,
+              "rationale": "A bed alarm addresses falls, not the cause. Waiting 4 hours ignores a steady decline."
+            },
+            {
+              "id": "D",
+              "text": "Ask the provider for a sedative so she can rest safely overnight",
+              "correct": false,
+              "rationale": "Sedating a patient who may be hypoxic can depress breathing further and hide the warning sign."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "In an older adult, new restlessness or confusion may be hypoxia. A value that is still normal but falling steadily needs action.",
+          "strategy": "The daughter's explanation is the trap. Any change from baseline is assessed first. It is never assumed to be aging.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention",
+              "Apply the ABCs"
+            ],
+            "steps": [
+              {
+                "action": "Read the trend",
+                "detail": "SpO2 96 to 94 to 92 and respirations 16 to 22 over 12 hours."
+              },
+              {
+                "action": "Link it to the behavior",
+                "detail": "New restlessness in a patient with a blunted hypoxia response."
+              },
+              {
+                "action": "Assess before you intervene",
+                "detail": "Reorienting, alarms and sedation all skip the cause."
+              }
+            ],
+            "verdict": "Assess her breathing and report the trend with the restlessness."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q10",
+          "type": "multiple_choice",
+          "stem": "A 67-year-old with peripheral vascular disease is in a cool procedure room. The pulse oximeter on her finger reads 84% with an irregular, flat waveform. She is alert and speaking in full sentences. Respirations are 16 and unlabored. Her lips and oral mucosa are pink. Her hands are cold. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Apply a nonrebreather mask at 15 L/min",
+              "correct": false,
+              "rationale": "This treats the number without checking the patient. Nothing about her breathing or color suggests an SpO2 of 84%."
+            },
+            {
+              "id": "B",
+              "text": "Call the rapid response team",
+              "correct": false,
+              "rationale": "Escalation is for a patient who looks unstable. This patient looks well, so verify first."
+            },
+            {
+              "id": "C",
+              "text": "Assess her breathing and color, then warm her hand or move the sensor to an earlobe and recheck",
+              "correct": true,
+              "rationale": "Poor circulation and cold extremities both cause inaccurate readings. The flat waveform confirms a poor signal. Correlate the reading with the patient before you act on it."
+            },
+            {
+              "id": "D",
+              "text": "Document the reading as artifact and continue routine monitoring",
+              "correct": false,
+              "rationale": "You cannot call a reading artifact until you have a good signal. Documenting it without rechecking could miss real hypoxemia."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Pulse oximetry is accurate only with a good signal. Correlate every reading with the patient. Fix the causes of error before you treat or dismiss the number.",
+          "strategy": "The two extreme options are opposite errors. One treats the monitor and one ignores it. The answer verifies.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention",
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Compare the monitor with the patient",
+                "detail": "Alert, full sentences, pink lips and a normal rate do not fit 84%."
+              },
+              {
+                "action": "Find the error source",
+                "detail": "Cold hands, vascular disease and a flat waveform."
+              },
+              {
+                "action": "Verify, then decide",
+                "detail": "Warm or move the sensor and recheck."
+              }
+            ],
+            "verdict": "Assess the patient and get a reliable reading first."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q11",
+          "type": "multiple_choice",
+          "stem": "A 60-year-old with severe pneumonia has received oxygen by nonrebreather mask at 15 L/min for 40 hours. SpO2 has stayed at 99% to 100%. She now reports a burning pain under her breastbone and a dry, hacking cough. The nurse hears new fine crackles. She says she feels more short of breath. Her prescribed SpO2 goal is 95% or higher. Which action is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Report the findings as possible oxygen toxicity and ask about titrating to the lowest concentration that meets the SpO2 goal",
+              "correct": true,
+              "rationale": "High oxygen concentrations for more than 24 to 48 hours can injure the lungs. Early signs are substernal pain, dry cough, dyspnea and crackles. Her saturation is well above the goal, so she can likely tolerate less."
+            },
+            {
+              "id": "B",
+              "text": "Increase the oxygen by switching to high-flow nasal cannula at a higher concentration",
+              "correct": false,
+              "rationale": "The dyspnea tempts you to give more. More oxygen is the likely cause of the new symptoms."
+            },
+            {
+              "id": "C",
+              "text": "Give a PRN antacid for the burning pain and continue the current oxygen",
+              "correct": false,
+              "rationale": "Treats the chest burning as indigestion and leaves the cause in place."
+            },
+            {
+              "id": "D",
+              "text": "Encourage incentive spirometry every hour and continue the current oxygen",
+              "correct": false,
+              "rationale": "Helpful for lung expansion. It does not address prolonged high oxygen."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Use the lowest oxygen concentration that meets the prescribed goal. Prolonged high concentration causes toxicity and absorption atelectasis.",
+          "strategy": "A saturation of 100% when the goal is 95% is a cue, not a comfort. It tells you there is room to come down.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Note the dose and time",
+                "detail": "Nonrebreather at 15 L/min for 40 hours."
+              },
+              {
+                "action": "Match the symptoms",
+                "detail": "Substernal burning, dry cough, crackles and dyspnea fit oxygen toxicity."
+              },
+              {
+                "action": "Compare with the goal",
+                "detail": "99% to 100% against a goal of 95% means she can be weaned."
+              }
+            ],
+            "verdict": "Report possible oxygen toxicity and titrate to the lowest effective concentration."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q12",
+          "type": "matrix",
+          "scenario": "A 52-year-old is admitted on day 4 of COVID 19. The nurse reviews findings from the past 12 hours. SpO2 on room air was 95% at 0600, 92% at 1200 and 89% at 1800.",
+          "stem": "For each finding, indicate whether it is expected with COVID 19 and can be monitored, or requires prompt escalation.",
+          "columns": [
+            "Expected, continue to monitor",
+            "Requires prompt escalation"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Loss of smell since day 2",
+              "answer": "Expected, continue to monitor",
+              "rationale": "A recognized symptom of COVID 19, though less common than other cues. It does not signal deterioration."
+            },
+            {
+              "id": "r2",
+              "text": "Two loose stools today",
+              "answer": "Expected, continue to monitor",
+              "rationale": "GI symptoms are common and may even come first. Watch hydration. This alone does not need escalation."
+            },
+            {
+              "id": "r3",
+              "text": "SpO2 trend on room air of 95%, 92% and 89%",
+              "answer": "Requires prompt escalation",
+              "rationale": "A steady fall to below 90% signals impaired gas exchange. The trend matters as much as the last number."
+            },
+            {
+              "id": "r4",
+              "text": "Respirations up from 20 to 28, speaking in short phrases",
+              "answer": "Requires prompt escalation",
+              "rationale": "Rising rate and effort mean the breathing pattern is failing to keep up."
+            },
+            {
+              "id": "r5",
+              "text": "Temperature 38.1 C with muscle aches",
+              "answer": "Expected, continue to monitor",
+              "rationale": "Fever and myalgia are typical cues of the illness."
+            },
+            {
+              "id": "r6",
+              "text": "Newly unsure of the date and slow to answer",
+              "answer": "Requires prompt escalation",
+              "rationale": "A change in mental status can mean poor oxygen delivery to the brain. It is a deterioration cue."
+            },
+            {
+              "id": "r7",
+              "text": "Fatigue and a reduced appetite",
+              "answer": "Expected, continue to monitor",
+              "rationale": "Common with viral illness. Encourage nutrition and rest."
+            }
+          ],
+          "answer": {
+            "r1": "Expected, continue to monitor",
+            "r2": "Expected, continue to monitor",
+            "r3": "Requires prompt escalation",
+            "r4": "Requires prompt escalation",
+            "r5": "Expected, continue to monitor",
+            "r6": "Requires prompt escalation",
+            "r7": "Expected, continue to monitor"
+          },
+          "scoring": "0/1",
+          "takeaway": "COVID 19 causes many uncomfortable symptoms that are expected. A falling SpO2 trend, rising work of breathing and a change in mental status are the cues you escalate.",
+          "strategy": "Sort by body system. Symptoms that make the patient miserable are expected. Findings that show oxygenation or the brain failing are escalated.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Apply the ABCs"
+            ],
+            "steps": [
+              {
+                "action": "Mark the typical symptoms",
+                "detail": "Smell loss, GI upset, fever, aches and fatigue."
+              },
+              {
+                "action": "Read the trends",
+                "detail": "SpO2 falling and respirations rising."
+              },
+              {
+                "action": "Check the brain",
+                "detail": "New confusion is a deterioration cue."
+              }
+            ],
+            "verdict": "Escalate the SpO2 trend, the rising work of breathing and the new confusion."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q13",
+          "type": "multiple_choice",
+          "stem": "A 26-year-old with asthma arrived 1 hour ago with loud wheezes in all fields. He has received two nebulizer treatments. Now his wheezes are barely audible and air movement is faint throughout. Respirations are 34, he answers only by nodding. He is becoming drowsy. SpO2 is 88%. A student says, \"His wheezing is much better.\" How does the nurse interpret these findings?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The treatments are working, since the wheezing has decreased",
+              "correct": false,
+              "rationale": "Quieter wheezes would be good news only if he were breathing easier. He is breathing faster, cannot speak and is getting drowsy."
+            },
+            {
+              "id": "B",
+              "text": "He is moving very little air and is tiring, which is an emergency",
+              "correct": true,
+              "rationale": "Wheezes need airflow. When they fade while effort, speech and alertness worsen, the airways are so tight that little air moves. Silent breath sounds are on the list of findings that need immediate intervention."
+            },
+            {
+              "id": "C",
+              "text": "He is drowsy from the nebulizer medication and should be allowed to rest",
+              "correct": false,
+              "rationale": "Nebulizer bronchodilators tend to cause jitteriness and a fast heart rate. Drowsiness with an SpO2 of 88% points to falling oxygen and rising CO2."
+            },
+            {
+              "id": "D",
+              "text": "His airways have narrowed less, so the fast rate is likely from anxiety",
+              "correct": false,
+              "rationale": "Anxiety does not explain drowsiness, faint air movement or an SpO2 of 88%."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "A silent chest is worse than a wheezing one. Fading wheezes with worsening effort, speech and alertness means almost no air is moving.",
+          "strategy": "The student's comment invites you to read one finding alone. Read the sound together with the patient.",
+          "elimination": {
+            "strategies": [
+              "Apply the ABCs",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Pair the sound with the patient",
+                "detail": "Quieter chest, faster rate, no speech, drowsy."
+              },
+              {
+                "action": "Explain the sound",
+                "detail": "Wheezes need air moving. Less air means less sound."
+              },
+              {
+                "action": "Check the oxygenation",
+                "detail": "SpO2 of 88% confirms he is failing."
+              }
+            ],
+            "verdict": "Little air movement and tiring. Emergency."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q14",
+          "type": "multiple_choice",
+          "stem": "A 22-year-old started bupropion 3 weeks ago to help him quit smoking. His mother calls the clinic. She says he has stayed in his room for several days and told her, \"What's the point of any of this?\" Which action by the nurse is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Explain that low mood is common during nicotine withdrawal and should pass in a few weeks",
+              "correct": false,
+              "rationale": "Withdrawal can cause irritability and low mood. That is true. It is exactly why this option is dangerous. Bupropion carries a warning for suicidal thoughts in young adults, so this must not be dismissed."
+            },
+            {
+              "id": "B",
+              "text": "Advise switching from bupropion to a nicotine patch",
+              "correct": false,
+              "rationale": "A reasonable later question for the provider. It does not address his safety today."
+            },
+            {
+              "id": "C",
+              "text": "Encourage him to join a smoking cessation support group next week",
+              "correct": false,
+              "rationale": "Counseling helps quitting. It does not respond to a possible suicide risk."
+            },
+            {
+              "id": "D",
+              "text": "Assess him directly for suicidal thoughts and notify the provider today",
+              "correct": true,
+              "rationale": "Bupropion has a black box warning for suicidal thinking, especially in young adults. Social withdrawal, a hopeless statement and a behavior change must be assessed and reported right away."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Families of patients on bupropion are taught to report mood or behavior changes right away. A hopeless statement is a safety issue first and a cessation issue second.",
+          "strategy": "The withdrawal option is technically true and not the priority. When safety and comfort compete, safety wins.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the drug risk",
+                "detail": "Bupropion carries a suicidality warning in young adults."
+              },
+              {
+                "action": "Read the cues",
+                "detail": "Withdrawal from family and a hopeless statement."
+              },
+              {
+                "action": "Pick safety first",
+                "detail": "Assess for suicidal thoughts and report today."
+              }
+            ],
+            "verdict": "Assess for suicidal thoughts and notify the provider."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q15",
+          "type": "multiple_choice",
+          "stem": "A 58-year-old is 6 hours after abdominal surgery with a morphine PCA. SpO2 is 97% on 2 L/min by nasal cannula. The nurse counts respirations at 8 per minute and shallow. He opens his eyes only to a firm shoulder shake, then drifts off. His wife says, \"He's finally sleeping comfortably.\" Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Increase the oxygen to 4 L/min to protect his saturation",
+              "correct": false,
+              "rationale": "His saturation is fine. The problem is ventilation. More oxygen can keep the SpO2 high while CO2 keeps rising."
+            },
+            {
+              "id": "B",
+              "text": "Stimulate him, keep him awake, stop the PCA per protocol and notify the provider",
+              "correct": true,
+              "rationale": "Slow, shallow breathing that he can barely be roused from is opioid-induced respiratory depression. Pulse oximetry does not measure ventilation or CO2, so the 97% is falsely reassuring. Keep him breathing and remove the cause."
+            },
+            {
+              "id": "C",
+              "text": "Recheck his SpO2 and respiratory rate in 30 minutes",
+              "correct": false,
+              "rationale": "Waiting 30 minutes with a rate of 8 lets CO2 continue to build."
+            },
+            {
+              "id": "D",
+              "text": "Let him sleep because his pain is finally controlled",
+              "correct": false,
+              "rationale": "This agrees with the family and ignores the rate and his level of consciousness."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Pulse oximetry measures saturation, not ventilation or CO2. A sedated patient can read 98% while CO2 climbs. Count the respirations and check how easily the patient wakes.",
+          "strategy": "The SpO2 of 97% is there to reassure you. The respiratory rate and the arousal decide the question.",
+          "elimination": {
+            "strategies": [
+              "Apply the ABCs",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Look past the number",
+                "detail": "SpO2 97% on oxygen does not show CO2."
+              },
+              {
+                "action": "Read the real cues",
+                "detail": "Rate of 8, shallow, rousable only to a shake."
+              },
+              {
+                "action": "Remove the cause",
+                "detail": "Stimulate, stop the opioid and get help."
+              }
+            ],
+            "verdict": "Stimulate him, stop the PCA and notify the provider."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q16",
+          "type": "multiple_choice",
+          "stem": "A 74-year-old with heart failure is being discharged after community-acquired pneumonia. His home plan includes a fluid restriction of 1.5 L per day. Which statement indicates the need for further teaching?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"I'll drink at least 3 liters of water every day to keep my mucus thin.\"",
+              "correct": true,
+              "rationale": "3 L a day is the pneumonia teaching unless fluids are restricted. He is restricted to 1.5 L, so 3 L could push him into heart failure. The exception decides this item."
+            },
+            {
+              "id": "B",
+              "text": "\"I'll get my pneumonia and flu vaccines when my provider says it's time.\"",
+              "correct": false,
+              "rationale": "Vaccination is a core prevention measure."
+            },
+            {
+              "id": "C",
+              "text": "\"I'll stay out of big crowds during flu season.\"",
+              "correct": false,
+              "rationale": "Correct prevention teaching."
+            },
+            {
+              "id": "D",
+              "text": "\"I'll do my deep breathing and coughing several times a day and walk around the house.\"",
+              "correct": false,
+              "rationale": "Coughing, turning, moving and deep breathing help prevent another pneumonia."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Standard pneumonia teaching includes 3 L of water daily. That advice applies only when the patient has no fluid restriction.",
+          "strategy": "Every option is standard teaching for pneumonia. Read the stem for the detail that makes one of them wrong for this patient.",
+          "elimination": {
+            "strategies": [
+              "Negative polarity",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Flip the question",
+                "detail": "You are looking for the wrong statement."
+              },
+              {
+                "action": "Find the patient detail",
+                "detail": "Heart failure with a 1.5 L restriction."
+              },
+              {
+                "action": "Test each statement against it",
+                "detail": "Only the 3 L statement conflicts with the restriction."
+              }
+            ],
+            "verdict": "The plan to drink 3 liters a day."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q17",
+          "type": "multiple_choice",
+          "stem": "A nurse makes a home visit to a 71-year-old who uses oxygen at 2 L/min by nasal cannula. Which observation requires the nurse to intervene?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The oxygen cylinder is stored upright in a wheeled stand",
+              "correct": false,
+              "rationale": "Securing cylinders prevents them from falling and damaging the valve. This is correct."
+            },
+            {
+              "id": "B",
+              "text": "A water-based gel is used on her dry nostrils",
+              "correct": false,
+              "rationale": "Water-based products are safe with oxygen and help with dryness."
+            },
+            {
+              "id": "C",
+              "text": "The patient rubs a petroleum-based vapor rub on her chest at bedtime",
+              "correct": true,
+              "rationale": "Petroleum products are flammable in an oxygen-rich environment and sit right under the oxygen flow. Easy to miss because it looks like an ordinary cold remedy."
+            },
+            {
+              "id": "D",
+              "text": "An \"Oxygen in use\" sign is posted on the front door",
+              "correct": false,
+              "rationale": "Correct fire safety practice."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Keep oxygen away from flames and smoking. Keep petroleum-based products away from the face and chest. Water-based lubricants are the safe choice.",
+          "strategy": "Look for the petroleum product hiding in something familiar. Vapor rub does not look like a fire hazard until you think about what it is made of.",
+          "elimination": {
+            "strategies": [
+              "Negative polarity",
+              "Odd man wins"
+            ],
+            "steps": [
+              {
+                "action": "Scan for a fire risk",
+                "detail": "Flame, smoking or petroleum near oxygen."
+              },
+              {
+                "action": "Check the ingredients",
+                "detail": "Vapor rub is petroleum-based."
+              },
+              {
+                "action": "Confirm the others are safe",
+                "detail": "Secured cylinder, water-based gel, posted sign."
+              }
+            ],
+            "verdict": "The petroleum-based vapor rub."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q18",
+          "type": "bowtie",
+          "scenario": "A 76-year-old with type 2 diabetes is on day 4 after a hip repair. At 0800 she was oriented x3 with BP 142/84. At 1400 she knows only her name. Temperature 37.9 C, heart rate 112, respirations 28, BP 98/58, SpO2 89% on room air. Coarse crackles in the right lower lobe. WBC 15,800/mm3. Lactate 3.1 mmol/L.",
+          "stem": "Complete the diagram by selecting 2 actions the nurse takes, the 1 condition the patient is most likely experiencing and 2 parameters the nurse monitors.",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Raise the head of the bed and apply oxygen as prescribed",
+                  "correct": true,
+                  "rationale": "Improving gas exchange is the first goal of the pneumonia plan. Upright positioning helps the lungs expand."
+                },
+                {
+                  "id": "B",
+                  "text": "Obtain blood and sputum cultures, then give the first antibiotic dose promptly as prescribed",
+                  "correct": true,
+                  "rationale": "Cultures before the first dose keep results accurate. Prompt antibiotics are how you prevent sepsis from progressing."
+                },
+                {
+                  "id": "C",
+                  "text": "Restrict oral fluids to prevent fluid overload",
+                  "correct": false,
+                  "rationale": "She is not on a restriction and her blood pressure is falling. Restricting fluids worsens perfusion."
+                },
+                {
+                  "id": "D",
+                  "text": "Hold the antibiotic until culture results return",
+                  "correct": false,
+                  "rationale": "Cultures take days. Waiting lets the infection spread."
+                },
+                {
+                  "id": "E",
+                  "text": "Keep her flat in bed to reduce oxygen demand",
+                  "correct": false,
+                  "rationale": "Lying flat makes breathing harder. Rest is good and it is done sitting up."
+                }
+              ]
+            },
+            "condition": {
+              "label": "The problem",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Hospital-acquired pneumonia with signs of early sepsis",
+                  "correct": true,
+                  "rationale": "Onset after 48 hours in hospital, crackles, low SpO2 and a high WBC point to pneumonia. Falling BP, fast heart rate, new confusion and a raised lactate are sepsis cues."
+                },
+                {
+                  "id": "B",
+                  "text": "Postoperative delirium from pain medication",
+                  "correct": false,
+                  "rationale": "Explains confusion only. It does not explain crackles, hypoxemia or a high lactate."
+                },
+                {
+                  "id": "C",
+                  "text": "Pulmonary edema from fluid overload",
+                  "correct": false,
+                  "rationale": "Overload raises the blood pressure. Hers is falling. The crackles are also on one side."
+                },
+                {
+                  "id": "D",
+                  "text": "Hypoglycemia",
+                  "correct": false,
+                  "rationale": "Diabetes makes it worth checking. It does not explain fever, crackles, high WBC or hypoxemia."
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to monitor",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "SpO2 trend with respiratory rate and work of breathing",
+                  "correct": true,
+                  "rationale": "Tells you whether gas exchange is improving."
+                },
+                {
+                  "id": "B",
+                  "text": "Blood pressure, mental status and lactate",
+                  "correct": true,
+                  "rationale": "Tell you whether sepsis is progressing or responding."
+                },
+                {
+                  "id": "C",
+                  "text": "Hemoglobin A1C",
+                  "correct": false,
+                  "rationale": "Reflects three months of glucose control. It will not change during this event."
+                },
+                {
+                  "id": "D",
+                  "text": "Incision appearance",
+                  "correct": false,
+                  "rationale": "Worth routine checks. It is not the source of this problem."
+                }
+              ]
+            }
+          },
+          "answer": {
+            "actions": [
+              "A",
+              "B"
+            ],
+            "condition": [
+              "A"
+            ],
+            "parameters": [
+              "A",
+              "B"
+            ]
+          },
+          "scoring": "0/1",
+          "takeaway": "The pneumonia plan is to improve gas exchange, prevent airflow obstruction and prevent sepsis. In an older adult, new confusion and a falling BP may be the loudest cues, even with a low fever.",
+          "strategy": "The low temperature and the diabetes are there to pull you toward delirium or hypoglycemia. Only one condition explains every cue.",
+          "elimination": {
+            "strategies": [
+              "Apply the ABCs",
+              "Global or umbrella option"
+            ],
+            "steps": [
+              {
+                "action": "Pick the condition that explains every cue",
+                "detail": "Lungs, blood pressure, brain and labs all fit pneumonia with early sepsis."
+              },
+              {
+                "action": "Choose actions for gas exchange and sepsis",
+                "detail": "Upright with oxygen. Cultures, then antibiotics."
+              },
+              {
+                "action": "Monitor what each action changes",
+                "detail": "Oxygenation for the lungs. Blood pressure, mental status and lactate for sepsis."
+              }
+            ],
+            "verdict": "HAP with early sepsis; oxygen upright, cultures then antibiotic; oxygenation trend and perfusion markers."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q19",
+          "type": "multiple_choice",
+          "stem": "A 66-year-old had a bronchoscopy with biopsy 2 hours ago. The nurse reviews the latest findings. Which finding requires immediate follow-up?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Coughing up about 30 mL of bright red blood in the last 15 minutes",
+              "correct": true,
+              "rationale": "Bleeding is a biopsy complication. Bright red blood in a measurable amount is active bleeding, not streaking. It can block the airway."
+            },
+            {
+              "id": "B",
+              "text": "Sputum streaked with small amounts of blood",
+              "correct": false,
+              "rationale": "Expected after a biopsy. Monitor it."
+            },
+            {
+              "id": "C",
+              "text": "A sore throat with a hoarse voice",
+              "correct": false,
+              "rationale": "Expected after a scope has passed through the throat."
+            },
+            {
+              "id": "D",
+              "text": "Gag reflex not yet returned, so she has not been given anything to drink",
+              "correct": false,
+              "rationale": "Correct care. She stays NPO until the gag reflex returns."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "After a bronchoscopy with biopsy, streaked sputum is expected and frank bleeding is not. Keep the patient NPO until the gag reflex returns.",
+          "strategy": "Two options mention blood. The amount and the color decide which one is expected.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Sort expected from unexpected",
+                "detail": "Streaks, sore throat and an absent gag reflex are expected early."
+              },
+              {
+                "action": "Compare the two bleeding options",
+                "detail": "Streaks versus 30 mL of bright red blood."
+              },
+              {
+                "action": "Think airway",
+                "detail": "Active bleeding can fill the airway."
+              }
+            ],
+            "verdict": "The 30 mL of bright red blood."
+          },
+          "dailySet": "2026-09-27"
+        },
+        {
+          "id": "ig22-q20",
+          "type": "multiple_choice",
+          "stem": "A 78-year-old with a history of heart failure has received IV fluid at 150 mL/hr for 2 days for dehydration. Her weight is up 1.8 kg since admission. The nurse auscultates her lungs. Which finding does the nurse report to the provider now?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Soft, low-pitched sounds heard over both lung bases",
+              "correct": false,
+              "rationale": "Vesicular sounds. Normal at the bases."
+            },
+            {
+              "id": "B",
+              "text": "Medium-pitched sounds heard near the sternum",
+              "correct": false,
+              "rationale": "Bronchovesicular sounds. Normal in that location."
+            },
+            {
+              "id": "C",
+              "text": "Coarse sounds over the trachea and large airways that clear after she coughs",
+              "correct": false,
+              "rationale": "Rhonchi from secretions. They cleared with coughing, so the nurse manages them with coughing and deep breathing."
+            },
+            {
+              "id": "D",
+              "text": "Fine crackles in both bases that remain after coughing, new since yesterday",
+              "correct": true,
+              "rationale": "Crackles mean fluid in the airways. They are new and they do not clear. They fit her weight gain on steady IV fluids. With her heart failure history, the fluid rate needs review now."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Crackles mean fluid, wheezes mean narrowed airways and rhonchi mean secretions. New crackles that do not clear in a patient receiving IV fluids are a report-now finding.",
+          "strategy": "The rhonchi are abnormal too. What tips it is that they cleared with coughing while the crackles did not. They also match the weight gain and the IV rate.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Remove the normal sounds",
+                "detail": "Vesicular at the bases and bronchovesicular near the sternum."
+              },
+              {
+                "action": "Compare the abnormal sounds",
+                "detail": "Rhonchi cleared. Crackles persisted."
+              },
+              {
+                "action": "Link to the data",
+                "detail": "Weight up 1.8 kg on IV fluids with heart failure."
+              }
+            ],
+            "verdict": "New crackles that persist after coughing."
           },
           "dailySet": "2026-09-27"
         }

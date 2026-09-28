@@ -3,7 +3,7 @@
     "course": "N55 Fundamentals of Nursing",
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
-    "questionCount": 789,
+    "questionCount": 809,
     "chaptersIncluded": [
       1,
       2,
@@ -39,7 +39,8 @@
       1041,
       1056,
       1035,
-      1038
+      1038,
+      1022
     ],
     "chaptersPending": [],
     "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time. Generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id. Chapter groups: chapters taught from the same PowerPoint share a 'group' id on the chapter, and meta.chapterGroups lists each group with its title, exam and member chapter ids in display order. Chapters without a 'group' field stand alone. Exam 2 skills (ids 13 to 18) are the Exam 2 check-off skills, kept separate from the Potter and Iggy chapters. Skill questions are written only from skills lab material; skill 14 holds the former Exam 1 skill 2 (Blood Glucose Monitoring and Subcutaneous Insulin) questions, moved to Exam 2, plus new items, and the other Exam 2 skills stay empty until their material is provided.",
@@ -82,7 +83,8 @@
       1041,
       1056,
       1035,
-      1038
+      1038,
+      1022
     ],
     "itemTypes": [
       "bowtie",
@@ -232,7 +234,8 @@
       "1041": 32,
       "1056": 20,
       "1035": 28,
-      "1038": 28
+      "1038": 28,
+      "1022": 20
     },
     "exams": [
       {
@@ -293,7 +296,8 @@
           1039,
           1040,
           1035,
-          1038
+          1038,
+          1022
         ],
         "skills": [
           13,
@@ -303,7 +307,7 @@
           17,
           18
         ],
-        "questionCount": 314
+        "questionCount": 334
       }
     ],
     "currentDailySet": {
@@ -313,6 +317,7 @@
         42,
         49,
         1015,
+        1022,
         1035,
         1038,
         1041
@@ -335,6 +340,26 @@
         "ig35-w02",
         "ig38-w01",
         "ig38-w02",
+        "ig22-q01",
+        "ig22-q02",
+        "ig22-q03",
+        "ig22-q04",
+        "ig22-q05",
+        "ig22-q06",
+        "ig22-q07",
+        "ig22-q08",
+        "ig22-q09",
+        "ig22-q10",
+        "ig22-q11",
+        "ig22-q12",
+        "ig22-q13",
+        "ig22-q14",
+        "ig22-q15",
+        "ig22-q16",
+        "ig22-q17",
+        "ig22-q18",
+        "ig22-q19",
+        "ig22-q20",
         "sk14-w01",
         "sk14-w02",
         "sk14-w03",
