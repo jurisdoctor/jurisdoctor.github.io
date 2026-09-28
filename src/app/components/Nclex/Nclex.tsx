@@ -43,6 +43,14 @@ const validMarks = (saved: Record<string, ResultType>) =>
     (entry) => entry === "solved" || entry === "missed",
   );
 
+const freshHashes = (): Record<string, string> => ({});
+
+const validHashes = (saved: Record<string, string>) =>
+  !!saved &&
+  typeof saved === "object" &&
+  !Array.isArray(saved) &&
+  Object.values(saved).every((entry) => typeof entry === "string");
+
 const SECTIONS: SectionType[] = ["chapters", "skills", "cases", "judgment"];
 
 const TITLES: Record<SectionType, string> = {
@@ -96,10 +104,13 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
   }, [section, view.section]);
 
   const [started, setStarted] = useState<StartType | null>(null);
-  const [results, setResults] = useSaved<Record<string, ResultType>>(
-    `nclex:results:v1:${exam}`,
-    freshMarks,
-    validMarks,
+  const [results, setResults, resultsReady] = useSaved<
+    Record<string, ResultType>
+  >(`nclex:results:v1:${exam}`, freshMarks, validMarks);
+  const [hashes, setHashes, hashesReady] = useSaved<Record<string, string>>(
+    `nclex:hashes:v1:${exam}`,
+    freshHashes,
+    validHashes,
   );
   const [deck, setDeck] = useState<QuestionType[]>([]);
   const [at, setAt] = useState(0);
@@ -109,6 +120,28 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
   const mark = useCallback((id: string, correct: boolean) => {
     setResults((prev) => ({ ...prev, [id]: correct ? "solved" : "missed" }));
   }, []);
+
+  // A question keeps its id across data drops even when its content is
+  // edited, so a saved result can go stale without ever looking invalid.
+  // Once both stores have loaded, drop the mark for any id whose content
+  // hash no longer matches what it was last time, then record the new
+  // baseline. First run ever (hashes still empty) sees nothing stale and
+  // just establishes the baseline, so no one's existing progress is wiped.
+  useEffect(() => {
+    if (!resultsReady || !hashesReady) return;
+    const current = bank.ContentHashes;
+    const stale = Object.keys(hashes).filter(
+      (id) => current[id] && current[id] !== hashes[id],
+    );
+    if (stale.length > 0) {
+      setResults((prev) => {
+        const next = { ...prev };
+        stale.forEach((id) => delete next[id]);
+        return next;
+      });
+    }
+    setHashes(current);
+  }, [bank, resultsReady, hashesReady]);
 
   const groups =
     section === "skills"

@@ -69,6 +69,10 @@ export const shuffled = <T>(items: T[], seed: string) => {
 export interface QuestionType {
   id: string;
   ordinal?: number;
+  // A hash of everything about the question except id/ordinal/new/dailySet,
+  // so a saved result can be told apart from one left over from a since-
+  // edited version of the same id. See contentHashOf.
+  contentHash?: string;
   type?: string;
   new?: boolean;
   dailySet?: string;
@@ -377,6 +381,18 @@ const clean = (question: QuestionType): QuestionType => ({
   })),
 });
 
+// id/ordinal are the lookup key and a rebuild artifact, not content; new/
+// dailySet are drop metadata that toggle on their own, not an edit. Sorting
+// keys keeps the hash stable regardless of property insertion order.
+const CONTENT_HASH_OMIT = new Set(["id", "ordinal", "contentHash", "new", "dailySet"]);
+
+const contentHashOf = (question: QuestionType) => {
+  const entries = Object.entries(question)
+    .filter(([key]) => !CONTENT_HASH_OMIT.has(key))
+    .sort(([a], [b]) => a.localeCompare(b));
+  return seedOf(JSON.stringify(entries)).toString(36);
+};
+
 interface ExtraType extends QuestionType {
   chapter: string;
 }
@@ -406,6 +422,11 @@ export interface DerivedBank {
   AllSkillQuestions: QuestionType[];
   AllCaseQuestions: QuestionType[];
   AllJudgmentQuestions: QuestionType[];
+  // Every question's contentHash, by id, across the whole exam (chapters —
+  // before the case/judgment/fresh splits carve them up — plus skills), so a
+  // saved result can be checked against the version of the question it was
+  // actually earned on.
+  ContentHashes: Record<string, string>;
   Course: string;
   Textbook: string;
 }
@@ -444,6 +465,7 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
         questions: [...own, ...join].map((question, index) => ({
           ...question,
           ordinal: index + 1,
+          contentHash: contentHashOf(question),
         })),
       };
     });
@@ -527,6 +549,13 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
       .sort((a, b) => Number(a.id) - Number(b.id));
   })();
 
+  const ContentHashes: Record<string, string> = {};
+  [...banked, ...Skills].forEach((entry) =>
+    entry.questions.forEach((question) => {
+      if (question.contentHash) ContentHashes[question.id] = question.contentHash;
+    }),
+  );
+
   return {
     Chapters,
     Skills,
@@ -538,6 +567,7 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
     AllSkillQuestions: Skills.flatMap((skill) => skill.questions),
     AllCaseQuestions: Cases.flatMap((entry) => entry.questions),
     AllJudgmentQuestions: Judgment.flatMap((step) => step.questions),
+    ContentHashes,
     Course: data.meta.course,
     Textbook: data.meta.textbook,
   };

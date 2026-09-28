@@ -36,5 +36,5 @@ export const useSaved = <T>(
     } catch {}
   }, [key, ready, value]);
 
-  return [value, setValue] as const;
+  return [value, setValue, ready] as const;
 };
