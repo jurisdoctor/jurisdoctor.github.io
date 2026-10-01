@@ -8,15 +8,6 @@ import { ChapterType, DerivedBank, labelOf, QuestionType } from "./Questions";
 import Quiz from "./Quiz";
 import Swap from "./Swap";
 
-const shuffle = (items: QuestionType[]) => {
-  const order = [...items];
-  for (let i = order.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [order[i], order[j]] = [order[j], order[i]];
-  }
-  return order;
-};
-
 type SectionType = "chapters" | "skills" | "cases" | "judgment";
 
 interface StartType {
@@ -229,7 +220,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     const group = view.find((entry) => entry.id === next);
     const pool = group
       ? group.questions
-      : shuffle(view.flatMap((entry) => entry.questions));
+      : view.flatMap((entry) => entry.questions);
 
     const target = pool[index];
     const story =
@@ -485,7 +476,7 @@ const Nclex = () => {
 
         <p className="mb-10 ml-3.5 lg:ml-0 lg:text-center">
           {bank
-            ? `${bank.Course}. Questions follow ${bank.Textbook}.`
+            ? bank.Course
             : ` `}
         </p>
 
