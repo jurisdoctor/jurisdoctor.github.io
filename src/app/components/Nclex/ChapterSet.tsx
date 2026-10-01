@@ -508,10 +508,16 @@ const ChapterSet = ({
             const progress = progressOf(chapter.id);
             const wet = progress.solved + progress.missed > 0;
             const isNew = chapter.id === "new";
+            // A graduated question (answered while it was in New, now
+            // living in its real chapter) still carries its new/dailySet
+            // flag from the data, so exclude anything already answered —
+            // otherwise a chapter would keep glowing for content that's
+            // actually done.
             const fresh =
               isNew ||
               chapter.questions.some(
-                (question) => question.new || question.dailySet,
+                (question) =>
+                  (question.new || question.dailySet) && !results[question.id],
               );
             return (
               <button

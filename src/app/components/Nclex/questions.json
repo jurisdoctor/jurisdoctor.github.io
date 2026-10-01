@@ -3,7 +3,7 @@
     "course": "N55 Fundamentals of Nursing",
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
-    "questionCount": 813,
+    "questionCount": 843,
     "chaptersIncluded": [
       1,
       2,
@@ -40,7 +40,9 @@
       1056,
       1035,
       1038,
-      1022
+      1022,
+      1020,
+      1021
     ],
     "chaptersPending": [],
     "notes": "Each question supports two views. The default view explains why the key is correct: 'takeaway' is the clinical rule and each option carries its own rationale. The strategy view uses 'elimination', which names the test-taking strategies in play, walks the options out one at a time, and ends with the verdict. Both views describe the same question, so a student who is short on content can still reason to the answer. All fields are plain text with no markup, so render 'strategy' in italic with CSS rather than expecting tags. Every chapter and skills section carries an 'exam' field naming the exam it belongs to; meta.exams lists the sections in each. Filter on 'exam' to build a single exam's bank. The top-level 'chapters' and 'skills' arrays stay flat and hold every exam, so anything reading them without filtering still sees the whole course. Chapters carry both 'id' (unique key) and 'chapterNumber' (the number to display); they match except for The Endocrine System and Diabetes Mellitus, which displays as 56 and uses id 1056 because two different chapters in this course are numbered 56. Daily sets: questions written for a given day carry a 'dailySet' field holding that date (YYYY-MM-DD). Only one daily set exists at a time. Generating a new one strips 'dailySet' from every question that has it, then applies it to the new batch. meta.currentDailySet mirrors the active date and ids. Filter on the presence of 'dailySet' to pull today's set; questions keep their chapter membership and stay in the bank permanently after the tag is removed. 'source' is Potter or Iggy. Chapter numbers repeat across the two books, so 'id' is the unique key: Potter chapters use id = chapter number, Iggy chapters use id = 1000 + chapter number. Question ids are prefixed ch<n>- for Potter and ig<n>- for Iggy. Display chapterNumber with source, never id. Chapter groups: chapters taught from the same PowerPoint share a 'group' id on the chapter, and meta.chapterGroups lists each group with its title, exam and member chapter ids in display order. Chapters without a 'group' field stand alone. Exam 2 skills (ids 13 to 18) are the Exam 2 check-off skills, kept separate from the Potter and Iggy chapters. Skill questions are written only from skills lab material; skill 14 holds the former Exam 1 skill 2 (Blood Glucose Monitoring and Subcutaneous Insulin) questions, moved to Exam 2, plus new items, and the other Exam 2 skills stay empty until their material is provided. Unfolding case studies: a chapter or skill may carry a 'caseStudies' array, kept separate from 'questions' so the standalone NGN share stays at 15% or less. Each case study has id, type 'case_study', title, intro, tabs (a list of {name, entries: [{time, text}]}) and items. Each item has step (recognize_cues, analyze_cues, prioritize_hypotheses, generate_solutions, take_action, evaluate_outcomes, in that order), chartUpdate (null, or {tab, entries} to append to that tab before the item is shown) and question (a normal question object in the usual schema). Show the chart tabs beside each item and apply chartUpdate entries as the case unfolds. Case study items are not counted in questionCount; see caseStudyCount and caseStudyItemCount.",
@@ -84,7 +86,9 @@
       1056,
       1035,
       1038,
-      1022
+      1022,
+      1020,
+      1021
     ],
     "itemTypes": [
       "bowtie",
@@ -236,7 +240,9 @@
       "1056": 20,
       "1035": 33,
       "1038": 33,
-      "1022": 27
+      "1022": 27,
+      "1020": 15,
+      "1021": 15
     },
     "exams": [
       {
@@ -298,7 +304,9 @@
           1040,
           1035,
           1038,
-          1022
+          1022,
+          1020,
+          1021
         ],
         "skills": [
           13,
@@ -308,44 +316,52 @@
           17,
           18
         ],
-        "questionCount": 338
+        "questionCount": 368
       }
     ],
     "currentDailySet": {
-      "date": "2026-09-29",
+      "date": "2026-09-30",
       "chapters": [
-        49,
-        1022,
-        1035,
-        1038,
-        1041
+        1020,
+        1021
       ],
-      "skills": [
-        14
-      ],
+      "skills": [],
       "questionIds": [
-        "ch49-m03",
-        "ch49-m02",
-        "ch49-m01",
-        "ig41-m01",
-        "ig41-m03",
-        "ig41-m02",
-        "ig35-m01",
-        "ig35-m02",
-        "ig35-m03",
-        "ig38-m01",
-        "ig38-m02",
-        "ig38-m03",
-        "ig22-m03",
-        "ig22-m04",
-        "ig22-m05",
-        "ig22-m01",
-        "ig22-m02",
-        "sk14-m03",
-        "sk14-m02",
-        "sk14-m01"
+        "ig20-n01",
+        "ig20-n02",
+        "ig20-n03",
+        "ig20-n04",
+        "ig20-n05",
+        "ig20-n06",
+        "ig20-n07",
+        "ig20-n08",
+        "ig20-n09",
+        "ig20-n10",
+        "ig20-n11",
+        "ig20-n12",
+        "ig20-n13",
+        "ig20-n14",
+        "ig20-n15",
+        "ig21-n01",
+        "ig21-n02",
+        "ig21-n03",
+        "ig21-n04",
+        "ig21-n05",
+        "ig21-n06",
+        "ig21-n07",
+        "ig21-n08",
+        "ig21-n09",
+        "ig21-n10",
+        "ig21-n11",
+        "ig21-n12",
+        "ig21-n13",
+        "ig21-n14",
+        "ig21-n15"
       ],
-      "caseStudyIds": []
+      "caseStudyIds": [
+        "ig20-cs1",
+        "ig21-cs1"
+      ]
     },
     "chapterGroups": [
       {
@@ -377,21 +393,23 @@
         ]
       }
     ],
-    "caseStudyCount": 13,
-    "caseStudyItemCount": 78,
+    "caseStudyCount": 15,
+    "caseStudyItemCount": 90,
     "caseStudiesIncluded": [
       "ch27-cs1",
       "ch38-cs1",
       "ch42-cs1",
-      "ig13-cs1",
       "ch49-cs1",
+      "ig13-cs1",
+      "ig15-cs1",
       "ig39-cs1",
       "ig40-cs1",
-      "ig15-cs1",
       "ig41-cs1",
       "ig35-cs1",
       "ig38-cs1",
       "ig22-cs1",
+      "ig20-cs1",
+      "ig21-cs1",
       "sk14-cs1"
     ]
   },

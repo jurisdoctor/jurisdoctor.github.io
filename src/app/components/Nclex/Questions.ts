@@ -73,6 +73,11 @@ export interface QuestionType {
   // so a saved result can be told apart from one left over from a since-
   // edited version of the same id. See contentHashOf.
   contentHash?: string;
+  // Set only on questions surfaced in the New bucket: the id of the chapter
+  // they actually belong to, so the client can graduate an answered one
+  // back into its own chapter immediately instead of waiting for a future
+  // drop to clear the new/dailySet flag.
+  homeChapterId?: string;
   type?: string;
   new?: boolean;
   dailySet?: string;
@@ -384,7 +389,14 @@ const clean = (question: QuestionType): QuestionType => ({
 // id/ordinal are the lookup key and a rebuild artifact, not content; new/
 // dailySet are drop metadata that toggle on their own, not an edit. Sorting
 // keys keeps the hash stable regardless of property insertion order.
-const CONTENT_HASH_OMIT = new Set(["id", "ordinal", "contentHash", "new", "dailySet"]);
+const CONTENT_HASH_OMIT = new Set([
+  "id",
+  "ordinal",
+  "contentHash",
+  "new",
+  "dailySet",
+  "homeChapterId",
+]);
 
 const contentHashOf = (question: QuestionType) => {
   const entries = Object.entries(question)
@@ -496,21 +508,33 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
     .filter((chapter) => chapter.questions.length > 0);
 
   const New: ChapterType | null = (() => {
-    const fresh = readyForChapters.flatMap((chapter) => chapter.questions).filter(isFresh);
+    const fresh = readyForChapters.flatMap((chapter) =>
+      chapter.questions
+        .filter(isFresh)
+        .map((question) => ({ ...question, homeChapterId: chapter.id })),
+    );
     if (!fresh.length) return null;
+    // Chapters are concatenated in order above, so without shuffling a
+    // chapter with many fresh questions would run as one long unbroken
+    // block (e.g. 15 skin questions, then 15 of the next chapter). A fixed
+    // seed keeps the mix stable across reloads of the same drop rather than
+    // reshuffling, and reordering, on every render.
     return {
       id: "new",
       title: "New",
-      questions: fresh.map((question, index) => ({
+      questions: shuffled(fresh, "new-tile").map((question, index) => ({
         ...question,
         ordinal: index + 1,
       })),
     };
   })();
 
-  // Fresh questions live only in the New tile while they're flagged; once a
-  // later drop clears the flag they stop matching here and fall straight
-  // back into this filter's normal output — no separate "move" needed.
+  // Fresh-and-unanswered questions live only in the New tile; once a later
+  // drop clears the flag they stop matching here and fall straight back
+  // into this filter's normal output, no separate "move" needed. A fresh
+  // question the learner has already answered graduates into this same
+  // list sooner than that, client-side in Nclex.tsx (see effectiveChapters)
+  // — this static split is the "hasn't been touched yet" baseline.
   const Chapters: ChapterType[] = readyForChapters.map((chapter) => ({
     ...chapter,
     questions: chapter.questions

@@ -143,6 +143,51 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     setHashes(current);
   }, [bank, resultsReady, hashesReady]);
 
+  // bank.New/bank.Chapters is the static "untouched" split: a fresh
+  // question stays out of its chapter there until a later drop clears its
+  // new/dailySet flag. Once the learner has actually answered it, though,
+  // it should show up in its real chapter right away rather than waiting
+  // on that — so graduate any answered New question into the chapter
+  // bank.New.homeChapterId says it belongs to, and drop it out of New.
+  const { effectiveChapters, effectiveNew } = useMemo(() => {
+    if (!bank.New) return { effectiveChapters: bank.Chapters, effectiveNew: null };
+
+    const stillNew: QuestionType[] = [];
+    const graduates = new Map<string, QuestionType[]>();
+    bank.New.questions.forEach((question) => {
+      if (!results[question.id]) {
+        stillNew.push(question);
+        return;
+      }
+      const home = question.homeChapterId ?? "";
+      graduates.set(home, [...(graduates.get(home) ?? []), question]);
+    });
+
+    const chapters = bank.Chapters.map((chapter) => {
+      const extra = graduates.get(chapter.id);
+      if (!extra?.length) return chapter;
+      return {
+        ...chapter,
+        questions: [...chapter.questions, ...extra].map((question, index) => ({
+          ...question,
+          ordinal: index + 1,
+        })),
+      };
+    });
+
+    const newGroup: ChapterType | null = stillNew.length
+      ? {
+          ...bank.New,
+          questions: stillNew.map((question, index) => ({
+            ...question,
+            ordinal: index + 1,
+          })),
+        }
+      : null;
+
+    return { effectiveChapters: chapters, effectiveNew: newGroup };
+  }, [bank, results]);
+
   const groups =
     section === "skills"
       ? bank.Skills
@@ -150,9 +195,9 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
         ? bank.Cases
         : section === "judgment"
           ? bank.Judgment
-          : bank.New
-            ? [bank.New, ...bank.Chapters]
-            : bank.Chapters;
+          : effectiveNew
+            ? [effectiveNew, ...effectiveChapters]
+            : effectiveChapters;
   const noun =
     section === "skills" ? "skills" : section === "cases" ? "cases" : "chapters";
   const empty = groups.length === 0;
@@ -344,7 +389,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
         />
       )}
 
-      <Swap token={`${section}-${lens}-${String(pick)}-${started?.at ?? -1}`}>
+      <Swap token={`${section}-${lens}-${String(pick)}-${deck[started?.at ?? -1]?.id ?? "none"}`}>
         {started === null || deck.length === 0 ? (
           <p className="ml-3.5 text-[#8b88b1] lg:ml-0 lg:text-center">
             Pick{" "}
@@ -372,8 +417,14 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
                 label
               )}
             </h3>
+            {/* Keyed by the actual question id, not started.at: under the
+                Incomplete lens the pool shrinks as items are solved, so
+                "the next question" often lands back at index 0. Keying on
+                that raw index let two different questions share a key,
+                which kept Quiz mounted and leaked its answered/chosen state
+                from the old question onto the new one. */}
             <Quiz
-              key={`${section}-${lens}-${String(pick)}-${started.at}-${pass}`}
+              key={`${section}-${lens}-${String(pick)}-${deck[started.at]?.id}-${pass}`}
               label={label}
               questions={deck}
               start={started.at}

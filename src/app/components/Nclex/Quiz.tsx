@@ -348,7 +348,11 @@ const Quiz = ({
       <div className="mb-3 flex items-start justify-between gap-x-4">
         <span className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2">
           <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
-            {at + 1} of {questions.length}
+            {/* Under the Incomplete lens, at+1 is a position in a pool that
+                shrinks as items are solved, so it drifts from the number on
+                the tile the learner actually clicked. ordinal is the
+                question's own stable number, so show that instead. */}
+            {question.ordinal ?? at + 1} of {questions.length}
           </span>
           {multi && (
             <span className="rounded-full bg-[hsl(219,100%,91%)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
