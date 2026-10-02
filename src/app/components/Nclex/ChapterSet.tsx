@@ -430,9 +430,13 @@ const ChapterSet = ({
   const shown = chapters.find((chapter) => chapter.id === open);
 
   return (
-    <div data-shapes-safe className="mb-1 rounded-2xl bg-[var(--body-color)] p-5">
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-x-5 gap-y-2 text-xs text-[var(--muted-color)]">
-        <span className="flex flex-wrap items-center gap-x-2 gap-y-2">
+    <div data-shapes-safe className="mb-6 rounded-2xl bg-[var(--body-color)] px-5 pb-6 pt-5">
+      <div
+        className={`flex flex-wrap items-center gap-x-2 gap-y-3 text-xs text-[var(--muted-color)] ${
+          picker === "select" ? "" : "mb-6"
+        }`}
+      >
+        <span className="contents">
           <Chip
             on={lens === "all"}
             tone="bg-[var(--chip-blue)] text-[var(--title-color)]"
@@ -459,7 +463,7 @@ const ChapterSet = ({
           </Chip>
 
           {picker === "select" && (
-            <span className="relative">
+            <span className="relative sm:order-last">
               <select
                 value={open ?? ""}
                 onChange={(event) => setOpen(event.target.value || null)}
@@ -487,12 +491,7 @@ const ChapterSet = ({
           )}
         </span>
 
-        <span className="flex flex-wrap items-center gap-x-4 gap-y-2">
-          <span>
-            {lens === "incomplete"
-              ? `${chapters.length} ${noun} with questions left`
-              : `${ready.length} of ${chapters.length} ${noun} ready`}
-          </span>
+        <span className="ml-auto pl-3">
           <Reset onReset={onReset} />
         </span>
       </div>

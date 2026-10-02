@@ -35,11 +35,11 @@ const Sidebar = () => {
     // taller than what's actually visible while it's showing — the
     // justify-between pushed the theme toggle below the real fold, behind
     // the browser chrome, so it was there but unreachable. dvh tracks the
-    // viewport that's actually visible. The aside is also noticeably
-    // narrower below lg (mobile/tablet): on desktop it's a slim icon rail,
-    // but at 110px wide with p-10 padding, as a full-height mobile drawer
-    // it read as oversized for what's just a handful of icons.
-    "l-0 t-0 fixed z-10 flex min-h-[100dvh] w-[110px] flex-col justify-between border-r border-solid border-[var(--border-color)] bg-[var(--body-color)] p-10 lg:left-[-110px] lg:w-20 lg:p-6 duration-300";
+    // viewport that's actually visible. It's also a slim 80px icon rail at
+    // every width — the old 110px with p-10 padding read as oversized for
+    // what's just a handful of icons. Page screens offset their <main> by the
+    // same 80px (ml-20), as do the floating-shapes layers (left-20).
+    "l-0 t-0 fixed z-10 flex min-h-[100dvh] w-20 flex-col justify-between border-r border-solid border-[var(--border-color)] bg-[var(--body-color)] p-6 lg:left-[-80px] duration-300";
   return (
     <>
       {toggle && (

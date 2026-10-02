@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { LuChevronDown } from "react-icons/lu";
 import Shapes from "../Home/Shapes";
 import { useSaved } from "../DosageCalculations/Saved";
 import { EXAMS, EXAM_KEY, EXAM_TITLES, ExamId, isExamId, loadBank } from "./Bank";
@@ -336,22 +337,24 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
   return (
     <>
       {available.length > 1 && (
-        <div className="mb-6 ml-3.5 inline-flex gap-x-1 rounded-[1.875rem] bg-[var(--body-color)] p-1 lg:ml-0 lg:flex lg:justify-center">
-          {available.map((entry) => (
-            <button
-              key={entry}
-              type="button"
-              onClick={() => swap(entry)}
-              aria-pressed={section === entry}
-              className={`${tab} ${
-                section === entry
-                  ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
-                  : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
-              }`}
-            >
-              {TITLES[entry]}
-            </button>
-          ))}
+        <div className="mb-6 lg:flex lg:justify-center">
+          <div className="ml-3.5 inline-flex gap-x-1 rounded-[1.875rem] bg-[var(--body-color)] p-1 lg:ml-0">
+            {available.map((entry) => (
+              <button
+                key={entry}
+                type="button"
+                onClick={() => swap(entry)}
+                aria-pressed={section === entry}
+                className={`${tab} ${
+                  section === entry
+                    ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
+                    : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
+                }`}
+              >
+                {TITLES[entry]}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 
@@ -424,7 +427,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
           </p>
         ) : (
           <>
-            <h3 className="mb-4 ml-3.5 text-xl lg:ml-0 lg:text-center">
+            <h3 className="mb-6 ml-3.5 text-xl lg:ml-0 lg:text-center">
               {group?.members && group.members.length > 1 ? (
                 <>
                   Chapter{" "}
@@ -479,10 +482,10 @@ const Nclex = () => {
 
   return (
     <section className="relative mx-auto max-w-[1080px] animate-fadeIn px-10 pb-24 pt-28 lg:pt-12 md:px-6">
-      {/* left-[110px] matches the sidebar's own width (see Sidebar.tsx's
-          "ml-[110px] lg:ml-0" convention) so shapes get the full visible
+      {/* left-20 matches the sidebar's own width (see Sidebar.tsx's
+          "ml-20 lg:ml-0" convention) so shapes get the full visible
           area right up to its edge, instead of wandering partly behind it. */}
-      <div className="pointer-events-none fixed inset-y-0 left-[110px] right-0 z-0 overflow-hidden lg:left-0">
+      <div className="pointer-events-none fixed inset-y-0 left-20 right-0 z-0 overflow-hidden lg:left-0">
         <Shapes />
       </div>
 
@@ -492,21 +495,27 @@ const Nclex = () => {
             NCLEX-<em>style</em> Questions
           </h1>
 
-          <select
-            value={exam}
-            onChange={(event) => {
-              const next = event.target.value;
-              if (isExamId(next)) setExam(next);
-            }}
-            aria-label="Exam"
-            className="h-10 shrink-0 rounded-[1.875rem] border-none bg-[var(--body-color)] px-5 text-sm font-bold text-[var(--title-color)] shadow-inner outline-none"
-          >
-            {EXAMS.map((id) => (
-              <option key={id} value={id}>
-                {EXAM_TITLES[id]}
-              </option>
-            ))}
-          </select>
+          <div className="relative shrink-0">
+            <select
+              value={exam}
+              onChange={(event) => {
+                const next = event.target.value;
+                if (isExamId(next)) setExam(next);
+              }}
+              aria-label="Exam"
+              className="h-10 cursor-pointer appearance-none rounded-[1.875rem] border-none bg-[var(--body-color)] pl-5 pr-11 text-sm font-bold text-[var(--title-color)] shadow-inner outline-none"
+            >
+              {EXAMS.map((id) => (
+                <option key={id} value={id}>
+                  {EXAM_TITLES[id]}
+                </option>
+              ))}
+            </select>
+            <LuChevronDown
+              aria-hidden
+              className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
+            />
+          </div>
         </div>
 
         <p className="mb-10 ml-3.5 lg:ml-0 lg:text-center">

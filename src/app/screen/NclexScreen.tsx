@@ -9,7 +9,7 @@ const NclexScreen = () => {
       <ScrollReset />
       <Sidebar />
 
-      <main className="ml-[110px] lg:ml-0">
+      <main className="ml-20 lg:ml-0">
         <Gate>
           <Nclex />
         </Gate>

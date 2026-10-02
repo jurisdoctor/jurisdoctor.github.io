@@ -572,7 +572,7 @@ const Pharm = () => {
             </div>
           </nav>
 
-          <div className="min-w-0 flex-1 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] p-7 shadow-xl backdrop-blur-xl sm:p-4">
+          <div className="min-w-0 flex-1 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] p-7 shadow-xl backdrop-blur-xl xl:w-full sm:p-4">
             {step.final ? (
               <Finale state={state} onReview={() => go(1)} />
             ) : (

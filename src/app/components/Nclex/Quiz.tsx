@@ -510,7 +510,11 @@ const Quiz = ({
           onClear={() => setAnswered(false)}
         />
       ) : (
-        <div className={`mb-6 grid ${answered ? "gap-y-6" : "gap-y-3"}`}>
+        <div
+          className={`grid ${answered ? "gap-y-6" : "gap-y-3"} ${
+            answered || multi ? "mb-6" : ""
+          }`}
+        >
           {question.options.map((option) => (
             <Option
               key={option.id}
