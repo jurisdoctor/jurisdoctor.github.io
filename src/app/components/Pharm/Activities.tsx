@@ -223,7 +223,7 @@ export const FlipCards = ({
 
   return (
     <ActivityShell label="Flip them all" done={seen.length === items.length}>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3">
         {items.map((item, index) => {
           const isFlipped = flipped.has(index);
           return (

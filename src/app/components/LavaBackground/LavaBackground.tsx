@@ -97,14 +97,25 @@ const BLOBS: Blob[] = [
 // App Router's shared layout keeps it mounted across client-side navigation.
 const LavaBackground = () => (
   <div
-    className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+    className="pointer-events-none fixed inset-0 -z-10 overflow-hidden [transform:translateZ(0)]"
     aria-hidden
   >
     {/* feColorMatrix alpha row (18 -8): opaque where blurred alpha is already
         high, transparent below the threshold, which is what turns a soft
-        blurred overlap into one fused blob instead of a hazy double-blur. */}
+        blurred overlap into one fused blob instead of a hazy double-blur.
+        The filter region (x/y/width/height) is set explicitly and generously
+        — mobile WebKit clips an SVG filter to its default, much tighter
+        region (-10%/120%), cutting the blur off before it reaches a
+        neighboring blob, so nothing ever merges there even though the exact
+        same markup goo's together fine on desktop. */}
     <svg className="absolute h-0 w-0">
-      <filter id="lava-goo-filter">
+      <filter
+        id="lava-goo-filter"
+        x="-50%"
+        y="-50%"
+        width="200%"
+        height="200%"
+      >
         <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="blur" />
         <feColorMatrix
           in="blur"
@@ -114,39 +125,52 @@ const LavaBackground = () => (
       </filter>
     </svg>
 
-    {/* Opacity sits on this wrapper, after the goo filter composites the
-        blobs into fused shapes — putting it on each blob instead would feed
-        low-alpha color into the filter's threshold math and break the merge.
-        It's a theme-aware CSS var (see globals.css): a light background
-        needs noticeably more pigment than a dark one for the same blobs to
-        read at all, so this can't be one fixed value for both themes. */}
-    <div
-      className="lava-goo absolute inset-0 [mix-blend-mode:var(--lava-blend)]"
-      style={{ opacity: "var(--lava-opacity)" }}
-    >
-      {BLOBS.map((blob, index) => (
-        <span
-          key={index}
-          className="lava-blob absolute rounded-full"
-          style={
-            {
-              width: blob.size,
-              height: blob.size,
-              top: blob.top,
-              left: blob.left,
-              backgroundColor: blob.color,
-              animationDuration: blob.duration,
-              animationDelay: blob.delay,
-              "--x1": blob.x1,
-              "--y1": blob.y1,
-              "--x2": blob.x2,
-              "--y2": blob.y2,
-              "--x3": blob.x3,
-              "--y3": blob.y3,
-            } as CSSProperties
-          }
-        />
-      ))}
+    {/* The merge filter and the blend mode are kept on two separate nested
+        layers rather than one element — Safari's handling of `filter` and
+        `mix-blend-mode` together on the same box is inconsistent (one of
+        the two silently stops applying on some versions), but each on its
+        own box composites reliably everywhere. Opacity sits on the inner
+        (filtered) layer, after the goo filter composites the blobs into
+        fused shapes — putting it on each blob instead would feed low-alpha
+        color into the filter's threshold math and break the merge. It's a
+        theme-aware CSS var (see globals.css): a light background needs
+        noticeably more pigment than a dark one for the same blobs to read
+        at all, so this can't be one fixed value for both themes.
+        translateZ(0) forces this onto its own single GPU layer — without
+        it, Safari can split a full-viewport `fixed` element with a blend
+        mode into separate render tiles, and the blend doesn't composite
+        identically across the seam between them, showing up as a visible
+        hard line (most often right at the fold where the browser's own
+        viewport-height tile boundary falls). */}
+    <div className="absolute inset-0 [mix-blend-mode:var(--lava-blend)] [transform:translateZ(0)]">
+      <div
+        className="lava-goo absolute inset-0"
+        style={{ opacity: "var(--lava-opacity)" }}
+      >
+        {BLOBS.map((blob, index) => (
+          <span
+            key={index}
+            className="lava-blob absolute rounded-full"
+            style={
+              {
+                width: blob.size,
+                height: blob.size,
+                top: blob.top,
+                left: blob.left,
+                backgroundColor: blob.color,
+                animationDuration: blob.duration,
+                animationDelay: blob.delay,
+                "--x1": blob.x1,
+                "--y1": blob.y1,
+                "--x2": blob.x2,
+                "--y2": blob.y2,
+                "--x3": blob.x3,
+                "--y3": blob.y3,
+              } as CSSProperties
+            }
+          />
+        ))}
+      </div>
     </div>
   </div>
 );

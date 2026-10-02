@@ -1,6 +1,6 @@
 "use client";
-import { ReactNode, useRef } from "react";
-import { LuCheck, LuLock } from "react-icons/lu";
+import { ReactNode, useRef, useState } from "react";
+import { LuChevronDown, LuCheck, LuLock } from "react-icons/lu";
 import { useSaved } from "../DosageCalculations/Saved";
 import { ResultType } from "../Nclex/ChapterSet";
 import Quiz from "../Nclex/Quiz";
@@ -146,6 +146,7 @@ const Finale = ({
 const Pharm = () => {
   const [state, setState, ready] = useSaved(KEY, fresh, valid);
   const rootRef = useRef<HTMLDivElement>(null);
+  const [navOpen, setNavOpen] = useState(false);
 
   const setData = (id: string, value: any) => {
     setState((prev) => {
@@ -188,6 +189,7 @@ const Pharm = () => {
   const go = (index: number) => {
     if (index < 0 || index > state.max) return;
     patch({ cur: index });
+    setNavOpen(false);
     scrollTop();
   };
 
@@ -463,7 +465,10 @@ const Pharm = () => {
   let lastSection = "";
 
   return (
-    <section className="min-h-screen px-6 py-16 lg:px-10" ref={rootRef}>
+    <section
+      className="min-h-screen px-6 py-16 lg:px-10 sm:px-4 sm:py-10"
+      ref={rootRef}
+    >
       <div className="mx-auto max-w-5xl">
         <RevealBox>
           <h1 className="text-3xl font-bold text-[var(--title-color)]">
@@ -489,6 +494,30 @@ const Pharm = () => {
 
         <RevealBox delay={140} className="flex items-start gap-8 xl:flex-col xl:gap-6">
           <nav className="sticky top-8 w-72 shrink-0 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] p-4 shadow-xl backdrop-blur-xl xl:static xl:w-full">
+            {/* Only shown once the layout has stacked (xl: and below) —
+                side-by-side on desktop there's room for the full step list
+                always open, but stacked on top of the content on tablet and
+                phone, 24 steps of outline is a lot to scroll past just to
+                reach the lesson. Collapsed by default there, tap to open. */}
+            <button
+              type="button"
+              onClick={() => setNavOpen((open) => !open)}
+              className="hidden w-full items-center justify-between gap-x-3 rounded-lg px-3 py-2.5 text-left text-sm duration-150 xl:flex"
+            >
+              <span className="flex min-w-0 items-center gap-x-3">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--chip-blue)] text-[11px] font-bold text-[var(--title-color)]">
+                  {i + 1}
+                </span>
+                <span className="truncate font-bold text-[var(--title-color)]">
+                  {step.title}
+                </span>
+              </span>
+              <LuChevronDown
+                className={`shrink-0 text-[var(--muted-color)] duration-150 ${navOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            <div className={navOpen ? "mt-2" : "xl:hidden"}>
             {STEPS.map((entry, index) => {
               const sectionHeading =
                 entry.section !== lastSection ? entry.section : null;
@@ -540,9 +569,10 @@ const Pharm = () => {
             >
               Reset progress
             </button>
+            </div>
           </nav>
 
-          <div className="min-w-0 flex-1 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] p-7 shadow-xl backdrop-blur-xl">
+          <div className="min-w-0 flex-1 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] p-7 shadow-xl backdrop-blur-xl sm:p-4">
             {step.final ? (
               <Finale state={state} onReview={() => go(1)} />
             ) : (
@@ -564,28 +594,40 @@ const Pharm = () => {
                   {step.blocks.map((block, index) => renderBlock(block, index))}
                 </div>
 
-                <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-[var(--border-color)] pt-6">
+                <div className="mt-8 flex items-center justify-between gap-2 border-t border-[var(--border-color)] pt-6 sm:gap-1">
                   <button
                     type="button"
                     disabled={i === 0}
                     onClick={() => go(i - 1)}
-                    className={ghost}
+                    className={`${ghost} min-w-0 shrink px-5 sm:px-3`}
                   >
                     ← Back
                   </button>
 
-                  <span className="text-sm text-[var(--muted-color)]">
-                    {tasks.length > 0 &&
-                      (canContinue
-                        ? "✓ All activities complete"
-                        : `🔒 ${left} ${left === 1 ? "activity" : "activities"} left to unlock the next step`)}
-                  </span>
+                  {tasks.length > 0 && (
+                    <span
+                      title={
+                        canContinue
+                          ? "All activities complete"
+                          : `${left} ${left === 1 ? "activity" : "activities"} left to unlock the next step`
+                      }
+                      className={`shrink-0 whitespace-nowrap rounded-full px-2.5 py-1 text-xs font-bold ${
+                        canContinue
+                          ? "text-[rgb(68,215,182)]"
+                          : "text-[var(--muted-color)]"
+                      }`}
+                    >
+                      {canContinue
+                        ? "✓"
+                        : `🔒 ${tasks.length - left}/${tasks.length}`}
+                    </span>
+                  )}
 
                   <button
                     type="button"
                     disabled={!canContinue}
                     onClick={next}
-                    className={button}
+                    className={`${button} min-w-0 shrink px-5 sm:px-3`}
                   >
                     {i === 0
                       ? "Start course →"

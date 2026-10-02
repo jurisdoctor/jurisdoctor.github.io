@@ -123,8 +123,8 @@ export const TherapeuticWindow = () => {
         : "🟢 In the window: working safely";
 
   return (
-    <div className="grid gap-4 rounded-xl bg-[var(--container-color)] p-4 sm:grid-cols-[7rem_1fr]">
-      <div className="relative h-40 w-full overflow-hidden rounded-xl sm:w-28">
+    <div className="grid gap-4 rounded-xl bg-[var(--container-color)] p-4">
+      <div className="relative h-40 w-full overflow-hidden rounded-xl">
         <div className="absolute inset-x-0 top-0 h-1/3 bg-[hsla(353,100%,65%,0.25)]" />
         <div className="absolute inset-x-0 top-1/3 h-1/3 bg-[rgba(68,215,182,0.22)]" />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[var(--chip-blue)]" />
@@ -218,7 +218,7 @@ export const PatientChart = ({
 );
 
 export const Objectives = ({ items }: { items: [string, string][] }) => (
-  <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
+  <div className="grid grid-cols-2 gap-x-8 gap-y-4 sm:grid-cols-1">
     {items.map(([, text]) => (
       <div key={text} className="flex items-start gap-x-3">
         <span className="mt-1 shrink-0 text-sm font-light leading-none text-[var(--chip-blue-border)]">

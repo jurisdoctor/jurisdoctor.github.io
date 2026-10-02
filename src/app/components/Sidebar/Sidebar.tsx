@@ -30,7 +30,16 @@ const Sidebar = () => {
   const navToggle =
     "fixed left-[1.875rem] top-5 z-10 hidden h-[40px] w-[45px] cursor-pointer items-center justify-center border-[1px] border-solid border-[var(--border-color)] bg-[var(--body-color)] lg:flex rounded-lg duration-300 shadow-md";
   const aside =
-    "l-0 t-0 fixed z-10 flex min-h-screen w-[110px] flex-col justify-between border-r border-solid border-[var(--border-color)] bg-[var(--body-color)] p-10 lg:left-[-110px] duration-300";
+    // min-h-[100dvh], not min-h-screen (100vh): on mobile, 100vh is the
+    // viewport height with the browser's address bar hidden, which is
+    // taller than what's actually visible while it's showing — the
+    // justify-between pushed the theme toggle below the real fold, behind
+    // the browser chrome, so it was there but unreachable. dvh tracks the
+    // viewport that's actually visible. The aside is also noticeably
+    // narrower below lg (mobile/tablet): on desktop it's a slim icon rail,
+    // but at 110px wide with p-10 padding, as a full-height mobile drawer
+    // it read as oversized for what's just a handful of icons.
+    "l-0 t-0 fixed z-10 flex min-h-[100dvh] w-[110px] flex-col justify-between border-r border-solid border-[var(--border-color)] bg-[var(--body-color)] p-10 lg:left-[-110px] lg:w-20 lg:p-6 duration-300";
   return (
     <>
       {toggle && (
@@ -108,7 +117,7 @@ const Sidebar = () => {
       </aside>
 
       <div
-        className={toggle ? `${navToggle} lg:left-[140px]` : `${navToggle}`}
+        className={toggle ? `${navToggle} lg:left-[110px]` : `${navToggle}`}
         onClick={() => setToggle(!toggle)}
       >
         <LuMenu />
