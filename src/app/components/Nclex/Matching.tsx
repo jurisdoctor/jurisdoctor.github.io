@@ -78,7 +78,7 @@ const Matching = ({
   return (
     <div className="mb-6">
       {!answered && question.note && (
-        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[#8b88b1]">
+        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}
@@ -92,7 +92,7 @@ const Matching = ({
               ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
               : "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
             : chosen
-              ? "border-[hsl(219,100%,72%)] bg-[hsl(219,100%,97%)]"
+              ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
               : "border-transparent bg-[var(--body-color)]";
 
           return (
@@ -124,7 +124,7 @@ const Matching = ({
                       Correct term: {termOf(key[item.id])?.text}
                     </p>
                   )}
-                  <p className="mt-1 text-[#8b88b1]">{item.rationale}</p>
+                  <p className="mt-1 text-[var(--muted-color)]">{item.rationale}</p>
                 </div>
               )}
             </div>
@@ -152,11 +152,11 @@ const Matching = ({
           <button
             type="button"
             onClick={reset}
-            className="text-xs font-bold uppercase tracking-wide text-[#8b88b1] duration-300 hover:text-[var(--primary-color)]"
+            className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)] duration-300 hover:text-[var(--primary-color)]"
           >
             Clear
           </button>
-          <span className="text-sm text-[#8b88b1]">
+          <span className="text-sm text-[var(--muted-color)]">
             {Object.keys(picks).length} of {items.length} matched
           </span>
         </div>

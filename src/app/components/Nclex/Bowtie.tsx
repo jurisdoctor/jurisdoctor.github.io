@@ -73,9 +73,9 @@ const Slot = ({
       ? "border-solid border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
       : "border-solid border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
     : option
-      ? "border-solid border-[hsl(219,100%,72%)] bg-[hsl(219,100%,97%)]"
+      ? "border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
       : over
-        ? "border-dashed border-[hsl(219,100%,72%)] bg-[hsl(219,100%,97%)]"
+        ? "border-dashed border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
         : active
           ? "border-dashed border-[hsl(219,100%,80%)] bg-[var(--body-color)]"
           : "border-dashed border-[#d3d0e4] bg-[var(--body-color)]";
@@ -204,7 +204,7 @@ const Bowtie = ({
     const here = placed[key] ?? [];
     return (
       <div className="flex flex-col gap-y-3">
-        <span className="text-center text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+        <span className="text-center text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
           {pool.label}
         </span>
         {Array.from({ length: pool.select }).map((_, index) => {
@@ -248,7 +248,7 @@ const Bowtie = ({
           <Fragment key={key}>
             {slot > 0 && <span aria-hidden className="lg:hidden" />}
             <div>
-              <span className="block text-center text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+              <span className="block text-center text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
                 {pool.label}
                 <span className="ml-2 font-normal normal-case">
                   choose {pool.select}
@@ -265,7 +265,7 @@ const Bowtie = ({
                         ? "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
                         : "border-transparent bg-[var(--body-color)] opacity-60"
                     : taken
-                      ? "border-[hsl(219,100%,72%)] bg-[hsl(219,100%,97%)]"
+                      ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
                       : "border-transparent bg-[var(--body-color)] hover:border-[hsl(219,100%,88%)]";
 
                   return (
@@ -290,7 +290,7 @@ const Bowtie = ({
                       </button>
 
                       {answered && (
-                        <p className="mt-1.5 animate-fadeIn px-[14px] text-sm leading-6 text-[#8b88b1]">
+                        <p className="mt-1.5 animate-fadeIn px-[14px] text-sm leading-6 text-[var(--muted-color)]">
                           {option.rationale}
                         </p>
                       )}
@@ -326,11 +326,11 @@ const Bowtie = ({
           <button
             type="button"
             onClick={reset}
-            className="text-xs font-bold uppercase tracking-wide text-[#8b88b1] duration-300 hover:text-[var(--primary-color)]"
+            className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)] duration-300 hover:text-[var(--primary-color)]"
           >
             Clear
           </button>
-          <span className="text-sm text-[#8b88b1]">
+          <span className="text-sm text-[var(--muted-color)]">
             {pools.reduce((sum, [key]) => sum + (placed[key]?.length ?? 0), 0)}{" "}
             of {total} placed
           </span>

@@ -238,7 +238,7 @@ const Nested = ({
     <span className="inline-flex flex-col text-center leading-tight">
       <span className="px-3 pb-1">
         <span className="inline-flex flex-col text-center leading-tight">
-          <span className="px-2 pb-1 text-[#8b88b1]">{amount}</span>
+          <span className="px-2 pb-1 text-[var(--muted-color)]">{amount}</span>
           <span className={`${line} px-2 pt-1`}>
             <span ref={firstRef} className="inline-block">
               {first}
@@ -293,17 +293,17 @@ const Rearrange = ({
   second: string;
 }) => (
   <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
-    <span className="text-[#8b88b1]">
+    <span className="text-[var(--muted-color)]">
       {amount}/{first}/{second}
     </span>
-    <span className="text-[#8b88b1]">=</span>
+    <span className="text-[var(--muted-color)]">=</span>
     <span className="inline-flex flex-col text-center leading-tight">
       <span className="px-3 pb-1">{amount}</span>
       <span className={`${line} px-3 pt-1`}>
         <Swap first={first} second={second} />
       </span>
     </span>
-    <span className="text-[#8b88b1]">=</span>
+    <span className="text-[var(--muted-color)]">=</span>
     <Nested amount={amount} first={first} second={second} />
   </div>
 );
@@ -315,19 +315,19 @@ const Step = ({ step, firstTip }: { step: StepType; firstTip: number }) => {
   const rearrange = rearrangeOf(step.chain);
   return (
     <div className="mb-7 last:mb-0">
-      <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+      <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
         {step.label}
       </span>
 
       <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-2 sm:text-sm">
         {step.chain.map((term, id) => (
           <span key={id} className="flex items-center gap-x-3">
-            {id > 0 && <span className="text-[#8b88b1]">×</span>}
+            {id > 0 && <span className="text-[var(--muted-color)]">×</span>}
             <Term term={term} cancel={cancel} />
           </span>
         ))}
 
-        <span className="text-[#8b88b1]">=</span>
+        <span className="text-[var(--muted-color)]">=</span>
         <span className="font-bold text-[var(--title-color)]">
           {step.result}
         </span>
@@ -342,7 +342,7 @@ const Step = ({ step, firstTip }: { step: StepType; firstTip: number }) => {
                 Step {firstTip + id}
               </span>
               <div className="min-w-0 flex-1">
-                <p className="max-w-[70ch] text-sm text-[#8b88b1]">{tip}</p>
+                <p className="max-w-[70ch] text-sm text-[var(--muted-color)]">{tip}</p>
                 {rearrange && tip.includes(SWAP_TIP) && (
                   <Rearrange {...rearrange} />
                 )}
@@ -376,7 +376,7 @@ const Round = ({
   const after = at < 0 ? "" : rounding.exact.slice(at + 1);
   return (
     <div className="mb-7 last:mb-0">
-      <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+      <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
         Round
       </span>
 
@@ -395,7 +395,7 @@ const Round = ({
           {after}
         </span>
 
-        <span className="text-[#8b88b1]">=</span>
+        <span className="text-[var(--muted-color)]">=</span>
         <span className="font-bold text-[var(--title-color)]">
           {rounding.rounded}
         </span>
@@ -405,7 +405,7 @@ const Round = ({
         <span className="-mt-0.5 shrink-0 self-start rounded-full bg-[hsla(43,100%,68%,0.25)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
           Step {step}
         </span>
-        <p className="max-w-[70ch] text-sm text-[#8b88b1]">
+        <p className="max-w-[70ch] text-sm text-[var(--muted-color)]">
           Remember, the question asks you to round to the nearest{" "}
           {rounding.place}. The marked digit is the one you keep.
         </p>
@@ -415,7 +415,7 @@ const Round = ({
 };
 const Formula = ({ formula }: { formula: FormulaType }) => (
   <div className="mb-7">
-    <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+    <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
       Formula
     </span>
     <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-2 sm:text-sm">
@@ -597,7 +597,7 @@ const ScenarioPractice = () => {
         <form method="dialog" onSubmit={onSubmit}>
           <div className="mb-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
             <span className="flex flex-wrap items-center gap-x-3 gap-y-2">
-              <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+              <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
                 {saved.position + 1} of {Scenarios.length}
                 {scenario.mark && (
                   <span className={`ml-1.5 ${MARKS[scenario.mark].tone}`}>
@@ -613,7 +613,7 @@ const ScenarioPractice = () => {
                 className={`flex items-center gap-x-1.5 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide duration-300 ${
                   open
                     ? "bg-[var(--primary-color)] text-white"
-                    : "bg-[var(--body-color)] text-[#8b88b1] hover:text-[var(--title-color)]"
+                    : "bg-[var(--body-color)] text-[var(--muted-color)] hover:text-[var(--title-color)]"
                 }`}
               >
                 Problem set
@@ -623,7 +623,7 @@ const ScenarioPractice = () => {
               </button>
             </span>
 
-            <span className="text-sm text-[#8b88b1]">
+            <span className="text-sm text-[var(--muted-color)]">
               {right} / {asked}
             </span>
           </div>
@@ -687,7 +687,7 @@ const ScenarioPractice = () => {
               {saved.status === "missed" && <Solution scenario={scenario} />}
 
               {scenario.note && (
-                <p className="mt-4 text-sm text-[#8b88b1]">{scenario.note}</p>
+                <p className="mt-4 text-sm text-[var(--muted-color)]">{scenario.note}</p>
               )}
             </div>
           )}

@@ -40,8 +40,8 @@ const Cell = ({
           ? "border-dashed border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)] text-[rgb(68,215,182)]"
           : "border-[#d3d0e4] bg-[var(--container-color)] text-transparent"
     : on
-      ? "border-[hsl(219,100%,72%)] bg-[hsl(219,100%,72%)] text-white"
-      : "border-[#d3d0e4] bg-[var(--container-color)] text-transparent hover:border-[hsl(219,100%,72%)]";
+      ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-border)] text-white"
+      : "border-[#d3d0e4] bg-[var(--container-color)] text-transparent hover:border-[var(--chip-blue-border)]";
 
   return (
     <td className="p-2 text-center">
@@ -140,7 +140,7 @@ const Matrix = ({
   return (
     <div className="mb-6">
       {!answered && question.note && (
-        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[#8b88b1]">
+        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}
@@ -149,7 +149,7 @@ const Matrix = ({
         <table className="w-full min-w-[34rem] border-collapse text-sm">
           <thead>
             <tr>
-              <th className="w-2/5 p-2 text-left text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+              <th className="w-2/5 p-2 text-left text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
                 Finding
               </th>
               {columns.map((column) => (
@@ -206,10 +206,10 @@ const Matrix = ({
               <span className="font-bold text-[var(--title-color)]">
                 {row.text}
               </span>
-              <span className="ml-2 text-xs uppercase tracking-wide text-[#8b88b1]">
+              <span className="ml-2 text-xs uppercase tracking-wide text-[var(--muted-color)]">
                 {rowKeys(row).join(", ") || "none"}
               </span>
-              <p className="mt-1 text-[#8b88b1]">{row.rationale}</p>
+              <p className="mt-1 text-[var(--muted-color)]">{row.rationale}</p>
             </div>
           ))}
         </div>
@@ -235,11 +235,11 @@ const Matrix = ({
           <button
             type="button"
             onClick={reset}
-            className="text-xs font-bold uppercase tracking-wide text-[#8b88b1] duration-300 hover:text-[var(--primary-color)]"
+            className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)] duration-300 hover:text-[var(--primary-color)]"
           >
             Clear
           </button>
-          <span className="text-sm text-[#8b88b1]">
+          <span className="text-sm text-[var(--muted-color)]">
             {!everyRowAnswered
               ? `${rows.filter((row) => (marks[row.id] ?? []).length).length} of ${rows.length} rows answered`
               : !columnsCovered

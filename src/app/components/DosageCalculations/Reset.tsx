@@ -9,7 +9,7 @@ const Reset = ({ onReset }: { onReset: () => void }) => {
       <button
         type="button"
         onClick={() => setConfirming(true)}
-        className="text-xs font-bold uppercase tracking-wide text-[#8b88b1] duration-300 hover:text-[var(--primary-color)]"
+        className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)] duration-300 hover:text-[var(--primary-color)]"
       >
         Reset all
       </button>
@@ -36,7 +36,7 @@ const Reset = ({ onReset }: { onReset: () => void }) => {
       <button
         type="button"
         onClick={() => setConfirming(false)}
-        className="font-bold uppercase tracking-wide text-[#8b88b1] duration-300 hover:text-[var(--title-color)]"
+        className="font-bold uppercase tracking-wide text-[var(--muted-color)] duration-300 hover:text-[var(--title-color)]"
       >
         Cancel
       </button>

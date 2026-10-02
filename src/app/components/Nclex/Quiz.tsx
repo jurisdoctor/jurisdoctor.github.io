@@ -75,7 +75,7 @@ const Option = ({
           ? "border-dashed border-[rgb(68,215,182)] bg-[var(--body-color)]"
           : "border-transparent bg-[var(--body-color)] opacity-60"
     : chosen
-      ? "border-[hsl(219,100%,72%)] bg-[hsl(219,100%,97%)]"
+      ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
       : "border-transparent bg-[var(--body-color)] hover:border-[hsl(219,100%,88%)]";
 
   const badge = answered
@@ -83,10 +83,10 @@ const Option = ({
       ? "bg-[rgb(68,215,182)] text-white"
       : wrongPick
         ? "bg-[var(--primary-color)] text-white"
-        : "border-2 border-solid border-[var(--primary-color)] text-[var(--primary-color)]"
+        : "border-2 border-solid border-[var(--chip-blue-border)] text-[var(--chip-blue-border)]"
     : chosen
-      ? "bg-[hsl(219,100%,72%)] text-white"
-      : "border-2 border-solid border-[var(--primary-color)] text-[var(--primary-color)]";
+      ? "bg-[var(--chip-blue-border)] text-white"
+      : "border-2 border-solid border-[var(--chip-blue-border)] text-[var(--chip-blue-border)]";
 
   return (
     <div>
@@ -120,7 +120,7 @@ const Option = ({
       </button>
 
       {answered && (
-        <p className="mt-1.5 animate-fadeIn px-[18px] text-sm leading-6 text-[#8b88b1]">
+        <p className="mt-1.5 animate-fadeIn px-[18px] text-sm leading-6 text-[var(--muted-color)]">
           {option.rationale}
         </p>
       )}
@@ -162,7 +162,7 @@ const Aside = ({
   italic?: boolean;
 }) => (
   <div>
-    <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+    <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
       {label}
     </span>
     <p className={`mt-1 max-w-[80ch] ${italic ? "italic" : ""}`}>{body}</p>
@@ -181,6 +181,7 @@ const Quiz = ({
   results,
   onResult,
   onMove,
+  onRedo,
 }: {
   label: string;
   questions: QuestionType[];
@@ -188,6 +189,14 @@ const Quiz = ({
   results: Record<string, ResultType>;
   onResult: (id: string, correct: boolean) => void;
   onMove: (at: number) => void;
+  // Fired only by the explicit Redo actions (the per-question Redo button,
+  // and the completed-run Redo), not by Next's own internal clear() —
+  // Next's move is already covered by onMove, and re-running this check at
+  // the moment Next fires would see the question being left, not the one
+  // being entered, and could yank it out from under its own just-submitted
+  // feedback. Passed the index being redone, since "again" resets to
+  // `start` rather than the current position.
+  onRedo?: (at: number) => void;
 }) => {
   const [at, setAt] = useState(start);
   const [chosen, setChosen] = useState<string[]>([]);
@@ -283,10 +292,16 @@ const Quiz = ({
     clear();
   };
 
+  const redoQuestion = () => {
+    clear();
+    onRedo?.(at);
+  };
+
   const again = () => {
     setAt(start);
     clear();
     setDone(false);
+    onRedo?.(start);
   };
 
   if (done) {
@@ -311,15 +326,16 @@ const Quiz = ({
   return (
     <div
       ref={topRef}
+      data-shapes-safe
       className="animate-fadeIn scroll-mt-4 rounded-xl bg-[var(--container-color)] p-7 shadow-xl"
     >
       {question.caseId && (
-        <div className="mb-4 rounded-2xl bg-[hsl(219,100%,96%)] p-4">
+        <div className="mb-4 rounded-2xl bg-[var(--chip-blue-soft)] p-4">
           <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-            <span className="text-xs font-bold uppercase tracking-wide text-[hsl(219,60%,45%)]">
+            <span className="text-xs font-bold uppercase tracking-wide text-[var(--case-label-color)]">
               Case study
             </span>
-            <span className="text-xs font-bold uppercase tracking-wide text-[hsl(219,60%,45%)]">
+            <span className="text-xs font-bold uppercase tracking-wide text-[var(--case-label-color)]">
               Step {question.caseStep} of {question.caseSteps}
             </span>
           </div>
@@ -335,8 +351,8 @@ const Quiz = ({
                   key={index}
                   className={`h-1.5 flex-1 rounded-full duration-300 ${
                     index < (question.caseStep ?? 0)
-                      ? "bg-[hsl(219,100%,72%)]"
-                      : "bg-[hsl(219,100%,89%)]"
+                      ? "bg-[var(--chip-blue-border)]"
+                      : "bg-[var(--chip-blue-track)]"
                   }`}
                 />
               ))}
@@ -347,7 +363,7 @@ const Quiz = ({
 
       <div className="mb-3 flex items-start justify-between gap-x-4">
         <span className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2">
-          <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+          <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             {/* Under the Incomplete lens, at+1 is a position in a pool that
                 shrinks as items are solved, so it drifts from the number on
                 the tile the learner actually clicked. ordinal is the
@@ -355,7 +371,7 @@ const Quiz = ({
             {question.ordinal ?? at + 1} of {questions.length}
           </span>
           {multi && (
-            <span className="rounded-full bg-[hsl(219,100%,91%)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
+            <span className="rounded-full bg-[var(--chip-blue)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
               {bowtie
                 ? "Bow tie"
                 : marker
@@ -375,23 +391,23 @@ const Quiz = ({
           )}
         </span>
 
-        <span className="flex h-6 shrink-0 items-center whitespace-nowrap text-sm text-[#8b88b1]">
+        <span className="flex h-6 shrink-0 items-center whitespace-nowrap text-sm text-[var(--muted-color)]">
           {right} / {asked}
         </span>
       </div>
 
       {question.scenario && (
-        <p className="mb-4 rounded-2xl bg-[var(--body-color)] p-5 text-[#8b88b1]">
+        <p className="mb-4 rounded-2xl bg-[var(--body-color)] p-5 text-[var(--muted-color)]">
           {question.scenario}
         </p>
       )}
 
       {question.nursesNote && (
         <div className="mb-4 rounded-2xl border-2 border-solid border-[#e6e4f0] p-5">
-          <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+          <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             Nurses note
           </span>
-          <p className="mt-1 whitespace-pre-line text-[#8b88b1]">
+          <p className="mt-1 whitespace-pre-line text-[var(--muted-color)]">
             {question.nursesNote}
           </p>
         </div>
@@ -399,10 +415,10 @@ const Quiz = ({
 
       {question.baseline && (
         <div className="mb-4 rounded-2xl bg-[var(--body-color)] p-5">
-          <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+          <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             Baseline
           </span>
-          <p className="mt-1 text-[#8b88b1]">{question.baseline}</p>
+          <p className="mt-1 text-[var(--muted-color)]">{question.baseline}</p>
         </div>
       )}
 
@@ -430,7 +446,7 @@ const Quiz = ({
                   {row.map((cell, index) => (
                     <td
                       key={`${row[0]}-${index}`}
-                      className={`p-2 ${index === 0 ? "font-bold text-[var(--title-color)]" : "text-[#8b88b1]"}`}
+                      className={`p-2 ${index === 0 ? "font-bold text-[var(--title-color)]" : "text-[var(--muted-color)]"}`}
                     >
                       {cell}
                     </td>
@@ -519,7 +535,7 @@ const Quiz = ({
           >
             Check answer
           </button>
-          <span className="text-sm text-[#8b88b1]">
+          <span className="text-sm text-[var(--muted-color)]">
             {counted
               ? `${chosen.length} of ${need} selected`
               : `${chosen.length} selected`}
@@ -547,12 +563,12 @@ const Quiz = ({
             >
               {at + 1 >= questions.length ? "See score" : "Next question"}
             </button>
-            <button type="button" onClick={clear} className={ghost}>
+            <button type="button" onClick={redoQuestion} className={ghost}>
               Redo
             </button>
 
             {staged && !correct && (
-              <span className="text-sm text-[#8b88b1]">
+              <span className="text-sm text-[var(--muted-color)]">
                 Each step feeds the next, so get this one right before moving
                 on.
               </span>

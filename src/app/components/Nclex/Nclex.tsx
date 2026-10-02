@@ -58,7 +58,7 @@ const validView = (saved: ViewType) =>
 
 const Loading = () => (
   <div className="mb-8 rounded-2xl bg-[var(--body-color)] p-7 text-center">
-    <p className="text-[#8b88b1]">Loading questions…</p>
+    <p className="text-[var(--muted-color)]">Loading questions…</p>
   </div>
 );
 
@@ -166,14 +166,13 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
       };
     });
 
+    // Keep each question's own ordinal rather than renumbering 1..N here —
+    // bank.New already assigned those once, and reassigning them on every
+    // graduation would shift every later question's number down each time
+    // one answered question leaves, making the list look like it reshuffled
+    // instead of just losing the one you finished.
     const newGroup: ChapterType | null = stillNew.length
-      ? {
-          ...bank.New,
-          questions: stillNew.map((question, index) => ({
-            ...question,
-            ordinal: index + 1,
-          })),
-        }
+      ? { ...bank.New, questions: stillNew }
       : null;
 
     return { effectiveChapters: chapters, effectiveNew: newGroup };
@@ -246,6 +245,38 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     open("all", 0, viewFor(which));
   };
 
+  // A "New" run freezes its deck like any other pick, so answering a
+  // question mid-run doesn't yank the feedback you're reading out from
+  // under you. But New is specifically meant to shrink as you go — each
+  // answer graduates that question into its real chapter — so once you
+  // land back on a question that's since graduated (by stepping onto it
+  // with Next, or by redoing one you already finished), resync to what's
+  // actually still new instead of continuing to show a stale snapshot.
+  const resyncNew = useCallback(
+    (targetAt: number) => {
+      if (pick !== "new" || !started) return;
+      const currentId = deck[targetAt]?.id;
+      if (currentId && effectiveNew?.questions.some((q) => q.id === currentId)) {
+        return;
+      }
+      if (effectiveNew?.questions.length) {
+        open("new", 0, [effectiveNew, ...effectiveChapters]);
+      } else {
+        setStarted(null);
+        setDeck([]);
+      }
+    },
+    [pick, started, deck, effectiveNew, effectiveChapters],
+  );
+
+  // Keyed only on `at`/`pick`, not on results/effectiveNew directly, so
+  // answering the question currently on screen never triggers this — only
+  // actually moving on (Next) does.
+  useEffect(() => {
+    resyncNew(at);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [at, pick]);
+
   const progressOf = useCallback(
     (id: string) => {
       const group = groups.find((entry) => entry.id === id);
@@ -295,7 +326,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
   if (!section) {
     return (
       <div className="mb-8 rounded-2xl bg-[var(--body-color)] p-7 text-center">
-        <p className="text-[#8b88b1]">
+        <p className="text-[var(--muted-color)]">
           {EXAM_TITLES[exam]} doesn&apos;t have any questions yet.
         </p>
       </div>
@@ -315,7 +346,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
               className={`${tab} ${
                 section === entry
                   ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
-                  : "text-[#8b88b1] hover:text-[var(--title-color)]"
+                  : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
               }`}
             >
               {TITLES[entry]}
@@ -338,7 +369,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
               <p className="mb-1 text-lg font-bold text-[var(--title-color)]">
                 Not in {EXAM_TITLES[exam]}.
               </p>
-              <p className="text-[#8b88b1]">
+              <p className="text-[var(--muted-color)]">
                 This exam doesn&apos;t include {noun}. Try another tab.
               </p>
             </>
@@ -347,7 +378,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
               <p className="mb-4 text-lg font-bold text-[var(--title-color)]">
                 Nothing left here.
               </p>
-              <p className="text-[#8b88b1]">
+              <p className="text-[var(--muted-color)]">
                 Every question in {noun} is answered correctly. Switch
                 back to All to run them again.
               </p>
@@ -382,7 +413,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
 
       <Swap token={`${section}-${lens}-${String(pick)}-${deck[started?.at ?? -1]?.id ?? "none"}`}>
         {started === null || deck.length === 0 ? (
-          <p className="ml-3.5 text-[#8b88b1] lg:ml-0 lg:text-center">
+          <p className="ml-3.5 text-[var(--muted-color)] lg:ml-0 lg:text-center">
             Pick{" "}
             {section === "skills"
               ? "a skill"
@@ -422,6 +453,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
               results={results}
               onResult={mark}
               onMove={setAt}
+              onRedo={resyncNew}
             />
           </>
         )}
@@ -447,7 +479,10 @@ const Nclex = () => {
 
   return (
     <section className="relative mx-auto max-w-[1080px] animate-fadeIn px-10 pb-24 pt-28 lg:pt-12 md:px-6">
-      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+      {/* left-[110px] matches the sidebar's own width (see Sidebar.tsx's
+          "ml-[110px] lg:ml-0" convention) so shapes get the full visible
+          area right up to its edge, instead of wandering partly behind it. */}
+      <div className="pointer-events-none fixed inset-y-0 left-[110px] right-0 z-0 overflow-hidden lg:left-0">
         <Shapes />
       </div>
 

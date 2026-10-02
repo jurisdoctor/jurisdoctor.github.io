@@ -95,7 +95,7 @@ const Gate = ({ children }: { children: ReactNode }) => {
         className="w-full max-w-[420px] animate-fadeIn rounded-xl bg-[var(--container-color)] p-7 text-center shadow-xl"
       >
         <h1 className="mb-2 text-2xl font-bold">This page is private</h1>
-        <p className="mb-6 text-sm text-[#8b88b1]">
+        <p className="mb-6 text-sm text-[var(--muted-color)]">
           Enter the password to open the question bank.
         </p>
 
@@ -109,7 +109,7 @@ const Gate = ({ children }: { children: ReactNode }) => {
               className={`rounded-[1.5rem] px-5 py-2 text-sm font-bold duration-300 ${
                 exam === entry
                   ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
-                  : "text-[#8b88b1] hover:text-[var(--title-color)]"
+                  : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
               }`}
             >
               {EXAM_TITLES[entry]}

@@ -28,7 +28,7 @@ const SkillBar = ({ name, percent, color }: SkillBarProps) => {
         </span>
       </div>
 
-      <div className="h-[7px] rounded bg-[#f1f1f1]">
+      <div className="h-[7px] rounded bg-[var(--track-color)]">
         <div
           className="block h-[7px] origin-left animate-fillBar rounded"
           style={{ width: `${percent}%`, backgroundColor: color }}

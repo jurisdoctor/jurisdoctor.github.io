@@ -81,6 +81,7 @@ export interface QuestionType {
   type?: string;
   new?: boolean;
   dailySet?: string;
+  difficulty?: string;
   scenario?: string;
   stem: string;
   options: OptionType[];
@@ -387,14 +388,16 @@ const clean = (question: QuestionType): QuestionType => ({
 });
 
 // id/ordinal are the lookup key and a rebuild artifact, not content; new/
-// dailySet are drop metadata that toggle on their own, not an edit. Sorting
-// keys keeps the hash stable regardless of property insertion order.
+// dailySet/difficulty are drop metadata that toggle on their own, not an
+// edit to the question itself. Sorting keys keeps the hash stable
+// regardless of property insertion order.
 const CONTENT_HASH_OMIT = new Set([
   "id",
   "ordinal",
   "contentHash",
   "new",
   "dailySet",
+  "difficulty",
   "homeChapterId",
 ]);
 

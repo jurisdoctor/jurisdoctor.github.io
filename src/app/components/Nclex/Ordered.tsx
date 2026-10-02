@@ -82,7 +82,7 @@ const Ordered = ({
   return (
     <div className="mb-6">
       {!answered && question.note && (
-        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[#8b88b1]">
+        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}
@@ -97,7 +97,7 @@ const Ordered = ({
               ? "border-solid border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
               : "border-solid border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
             : option
-              ? "border-solid border-[hsl(219,100%,72%)] bg-[hsl(219,100%,97%)]"
+              ? "border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
               : held
                 ? "border-dashed border-[hsl(219,100%,80%)] bg-[var(--body-color)]"
                 : "border-dashed border-[#d3d0e4] bg-[var(--body-color)]";
@@ -110,7 +110,7 @@ const Ordered = ({
                     ? right
                       ? "bg-[rgb(68,215,182)] text-white"
                       : "bg-[var(--primary-color)] text-white"
-                    : "bg-[var(--body-color)] text-[#8b88b1]"
+                    : "bg-[var(--body-color)] text-[var(--muted-color)]"
                 }`}
               >
                 {index + 1}
@@ -153,7 +153,7 @@ const Ordered = ({
 
       {!answered && pool.length > 0 && (
         <div className="mb-6 grid gap-y-2">
-          <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+          <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             Remaining actions
           </span>
           {pool.map((option) => (
@@ -185,7 +185,7 @@ const Ordered = ({
                 <span className="font-bold text-[var(--title-color)]">
                   {index + 1}. {option.text}
                 </span>
-                <p className="mt-1 text-[#8b88b1]">{option.rationale}</p>
+                <p className="mt-1 text-[var(--muted-color)]">{option.rationale}</p>
               </div>
             );
           })}
@@ -212,11 +212,11 @@ const Ordered = ({
           <button
             type="button"
             onClick={reset}
-            className="text-xs font-bold uppercase tracking-wide text-[#8b88b1] duration-300 hover:text-[var(--primary-color)]"
+            className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)] duration-300 hover:text-[var(--primary-color)]"
           >
             Clear
           </button>
-          <span className="text-sm text-[#8b88b1]">
+          <span className="text-sm text-[var(--muted-color)]">
             {placed.length} of {order.length} placed
           </span>
         </div>

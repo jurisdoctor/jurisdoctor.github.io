@@ -37,7 +37,7 @@ const Segment = ({
           : "bg-transparent"
     : picked
       ? "bg-[#fdf06a]"
-      : "bg-transparent hover:bg-[hsl(219,100%,93%)]";
+      : "bg-transparent hover:bg-[var(--chip-blue)]";
 
   return (
     <button
@@ -107,7 +107,7 @@ const Highlight = ({
   return (
     <div className="mb-6">
       {!answered && question.note && (
-        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[#8b88b1]">
+        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}
@@ -154,7 +154,7 @@ const Highlight = ({
                   {label}
                 </span>
                 <p className="mt-1 text-sm">{segment.text}</p>
-                <p className="mt-1 text-sm text-[#8b88b1]">
+                <p className="mt-1 text-sm text-[var(--muted-color)]">
                   {segment.rationale}
                 </p>
               </div>
@@ -194,11 +194,11 @@ const Highlight = ({
           <button
             type="button"
             onClick={reset}
-            className="text-xs font-bold uppercase tracking-wide text-[#8b88b1] duration-300 hover:text-[var(--primary-color)]"
+            className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)] duration-300 hover:text-[var(--primary-color)]"
           >
             Clear
           </button>
-          <span className="text-sm text-[#8b88b1]">
+          <span className="text-sm text-[var(--muted-color)]">
             {picked.length} highlighted
             {cap ? ` of ${cap} requested` : ""}
           </span>

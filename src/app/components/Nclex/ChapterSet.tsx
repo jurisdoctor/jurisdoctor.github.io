@@ -143,7 +143,7 @@ const Reset = ({ onReset }: { onReset: () => void }) => {
       <button
         type="button"
         onClick={() => setConfirming(true)}
-        className="text-xs font-bold uppercase tracking-wide text-[#8b88b1] duration-300 hover:text-[var(--primary-color)]"
+        className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)] duration-300 hover:text-[var(--primary-color)]"
       >
         Reset
       </button>
@@ -170,7 +170,7 @@ const Reset = ({ onReset }: { onReset: () => void }) => {
       <button
         type="button"
         onClick={() => setConfirming(false)}
-        className="font-bold uppercase tracking-wide text-[#8b88b1] duration-300 hover:text-[var(--title-color)]"
+        className="font-bold uppercase tracking-wide text-[var(--muted-color)] duration-300 hover:text-[var(--title-color)]"
       >
         Cancel
       </button>
@@ -430,12 +430,12 @@ const ChapterSet = ({
   const shown = chapters.find((chapter) => chapter.id === open);
 
   return (
-    <div className="mb-1 rounded-2xl bg-[var(--body-color)] p-5">
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-x-5 gap-y-2 text-xs text-[#8b88b1]">
+    <div data-shapes-safe className="mb-1 rounded-2xl bg-[var(--body-color)] p-5">
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-x-5 gap-y-2 text-xs text-[var(--muted-color)]">
         <span className="flex flex-wrap items-center gap-x-2 gap-y-2">
           <Chip
             on={lens === "all"}
-            tone="bg-[hsl(219,100%,91%)] text-[var(--title-color)]"
+            tone="bg-[var(--chip-blue)] text-[var(--title-color)]"
             onPick={() => {
               setOpen(null);
               onRun("all");
@@ -448,7 +448,7 @@ const ChapterSet = ({
           <Chip
             on={lens === "incomplete"}
             disabled={left === 0}
-            tone="bg-[hsl(38,100%,85%)] text-[var(--title-color)]"
+            tone="bg-[var(--chip-amber)] text-[var(--title-color)]"
             onPick={() => {
               setOpen(null);
               onRun("incomplete");
@@ -481,7 +481,7 @@ const ChapterSet = ({
               </select>
               <LuChevronDown
                 aria-hidden
-                className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[#8b88b1]"
+                className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
               />
             </span>
           )}
@@ -544,10 +544,10 @@ const ChapterSet = ({
                           : here
                             ? "border-[var(--primary-color)] text-[var(--title-color)]"
                             : active === chapter.id
-                              ? "border-[hsl(219,100%,72%)] text-[var(--title-color)]"
+                              ? "border-[var(--chip-blue-border)] text-[var(--title-color)]"
                               : wet
                                 ? "border-transparent text-[var(--title-color)] hover:border-[hsl(219,100%,80%)]"
-                                : "border-transparent text-[#8b88b1] hover:border-[hsl(219,100%,80%)] hover:text-[var(--title-color)]"
+                                : "border-transparent text-[var(--muted-color)] hover:border-[hsl(219,100%,80%)] hover:text-[var(--title-color)]"
                       }`
                 }`}
               >
@@ -565,7 +565,7 @@ const ChapterSet = ({
                   <span className="relative">{displayNumberOf(chapter)}</span>
                 )}
                 {count > 0 && (
-                  <span className="pointer-events-none absolute -right-1 -top-1 rounded-full bg-[hsl(219,100%,91%)] px-1 text-[9px] leading-[14px] text-[var(--title-color)]">
+                  <span className="pointer-events-none absolute -right-1 -top-1 rounded-full bg-[var(--chip-blue)] px-1 text-[9px] leading-[14px] text-[var(--title-color)]">
                     {count}
                   </span>
                 )}
@@ -587,9 +587,21 @@ const ChapterSet = ({
 
           <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <span className="font-bold text-[var(--title-color)]">
-              {labelFor(shown)}
+              {shown.members && shown.members.length > 1 ? (
+                <>
+                  Chapter{" "}
+                  <Flash
+                    items={shown.members.map((member, memberIndex) => (
+                      <span key={memberIndex}>{member.chapterNumber}</span>
+                    ))}
+                  />{" "}
+                  · {shown.title}
+                </>
+              ) : (
+                labelFor(shown)
+              )}
             </span>
-            <span className="text-xs text-[#8b88b1]">
+            <span className="text-xs text-[var(--muted-color)]">
               {shown.questions.length} questions
             </span>
           </div>
@@ -612,11 +624,20 @@ const ChapterSet = ({
                       ? "bg-[rgb(68,215,182)] text-white"
                       : state === "missed"
                         ? "bg-[var(--primary-color)] text-white"
-                        : "bg-[var(--body-color)] text-[#8b88b1] hover:bg-[hsl(219,100%,91%)] hover:text-[var(--title-color)]"
+                        : "bg-[var(--body-color)] text-[var(--muted-color)] hover:bg-[var(--chip-blue)] hover:text-[var(--title-color)]"
                   }`}
                 >
                   {(question.new || question.dailySet) && !state && (
                     <Glow label="New question" />
+                  )}
+                  {question.difficulty === "difficult" && (
+                    <span
+                      aria-label="Difficult question"
+                      title="Difficult question"
+                      className="pointer-events-none absolute -right-1 -top-1 text-[11px] leading-none"
+                    >
+                      🧱
+                    </span>
                   )}
                   {question.ordinal ?? index + 1}
                 </button>

@@ -90,7 +90,7 @@ const ProblemSet = ({
 
   return (
     <div className="mb-6 animate-fadeIn rounded-2xl bg-[var(--body-color)] p-5">
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-5 gap-y-2 text-xs text-[#8b88b1]">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-5 gap-y-2 text-xs text-[var(--muted-color)]">
         <span className="flex flex-wrap items-center gap-x-1 gap-y-2">
           {offered.map((entry) => {
             const on = entry.key === "all" ? !filter : filter === entry.key;
@@ -104,7 +104,7 @@ const ProblemSet = ({
                 aria-pressed={on}
                 className={`flex items-center gap-x-2 rounded-full px-3 py-1 duration-300 ${
                   on
-                    ? "bg-[hsl(219,100%,91%)] font-bold text-[var(--title-color)]"
+                    ? "bg-[var(--chip-blue)] font-bold text-[var(--title-color)]"
                     : "hover:text-[var(--title-color)]"
                 }`}
               >
@@ -125,7 +125,7 @@ const ProblemSet = ({
       </div>
 
       <div
-        className={`mb-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[#8b88b1] ${
+        className={`mb-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[var(--muted-color)] ${
           filter ? "justify-between" : "justify-start"
         }`}
       >
@@ -157,7 +157,7 @@ const ProblemSet = ({
                   ? "bg-[rgb(68,215,182)] text-white"
                   : state === "missed"
                     ? "bg-[var(--primary-color)] text-white"
-                    : "bg-[var(--container-color)] text-[#8b88b1] hover:text-[var(--title-color)]"
+                    : "bg-[var(--container-color)] text-[var(--muted-color)] hover:text-[var(--title-color)]"
               }`}
             >
               {index + 1}
@@ -174,7 +174,7 @@ const ProblemSet = ({
       </div>
 
       {shown.length === 0 && (
-        <p className="mt-3 text-sm text-[#8b88b1]">
+        <p className="mt-3 text-sm text-[var(--muted-color)]">
           Nothing in that group yet.
         </p>
       )}

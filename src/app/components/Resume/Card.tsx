@@ -16,7 +16,7 @@ const Card = ({ category, year, title, desc }: CardType) => {
       ) : (
         <BsSuitcaseLg className="absolute -left-[0.4375rem] top-0 bg-[var(--container-color)] py-[0.3rem] text-2xl text-[var(--primary-color)]" />
       )}
-      <span className="text-sm text-[#8b88b1]">{year}</span>
+      <span className="text-sm text-[var(--muted-color)]">{year}</span>
       <h3 className="my-1 text-xl">{title}</h3>
       <p className="text-xs">{desc}</p>
     </div>

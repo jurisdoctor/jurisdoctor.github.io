@@ -168,7 +168,7 @@ const Help = ({
   if (!keys.length && !chain) return null;
   return (
     <div className="mt-5 rounded-2xl bg-[var(--body-color)] p-5">
-      <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+      <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
         {chain ? `${ladder.title} ladder` : `${ladder.title} equalities`}
       </span>
 
@@ -217,13 +217,13 @@ const Parts = ({
   <div className="mt-3 grid gap-y-2 text-lg sm:text-base">
     {parts.map((part) => (
       <span key={part.text} className="flex flex-wrap items-center gap-x-3">
-        <span className="text-[#8b88b1]">{part.text}</span>
+        <span className="text-[var(--muted-color)]">{part.text}</span>
         <span className="font-bold text-[var(--primary-color)]">=</span>
         <span>{format(part.value)} mL</span>
       </span>
     ))}
 
-    <span className="flex flex-wrap items-center gap-x-3 border-t border-solid border-[#f1f1f1] pt-2 font-bold text-[var(--title-color)]">
+    <span className="flex flex-wrap items-center gap-x-3 border-t border-solid border-[var(--track-color)] pt-2 font-bold text-[var(--title-color)]">
       Total
       <span className="font-bold text-[var(--primary-color)]">=</span>
       {format(total)} {unit}
@@ -236,7 +236,7 @@ const Work = ({ work }: { work: WorkType }) => (
       {work.givenValue} <Cancelled unit={work.givenUnit} />
     </span>
 
-    <span className="text-[#8b88b1]">×</span>
+    <span className="text-[var(--muted-color)]">×</span>
 
     <span className="inline-flex flex-col text-center leading-tight">
       <span className="px-3 pb-1">
@@ -247,7 +247,7 @@ const Work = ({ work }: { work: WorkType }) => (
       </span>
     </span>
 
-    <span className="text-[#8b88b1]">=</span>
+    <span className="text-[var(--muted-color)]">=</span>
 
     <span className="font-bold text-[var(--title-color)]">
       {work.answerValue} {work.answerUnit}
@@ -334,7 +334,7 @@ const Practice = () => {
         <form method="dialog" onSubmit={onSubmit}>
           <div className="mb-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
             <span className="flex flex-wrap items-center gap-x-3 gap-y-2">
-              <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+              <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
                 {saved.position + 1} of {Questions.length}
               </span>
 
@@ -345,7 +345,7 @@ const Practice = () => {
                 className={`flex items-center gap-x-1.5 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide duration-300 ${
                   open
                     ? "bg-[var(--primary-color)] text-white"
-                    : "bg-[var(--body-color)] text-[#8b88b1] hover:text-[var(--title-color)]"
+                    : "bg-[var(--body-color)] text-[var(--muted-color)] hover:text-[var(--title-color)]"
                 }`}
               >
                 Problem set
@@ -355,7 +355,7 @@ const Practice = () => {
               </button>
             </span>
 
-            <span className="text-sm text-[#8b88b1]">
+            <span className="text-sm text-[var(--muted-color)]">
               {right} / {asked}
             </span>
           </div>
@@ -370,7 +370,7 @@ const Practice = () => {
             />
           )}
 
-          <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+          <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             {question.group}
           </span>
 

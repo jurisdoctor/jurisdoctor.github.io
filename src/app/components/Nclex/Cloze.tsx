@@ -81,7 +81,7 @@ const Cloze = ({
               ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.18)]"
               : "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.14)]"
             : chosen
-              ? "border-[hsl(219,100%,72%)] bg-[hsl(219,100%,97%)]"
+              ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
               : "border-[#d3d0e4] bg-[var(--container-color)]";
 
           return (
@@ -120,7 +120,7 @@ const Cloze = ({
                     : "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
                 }`}
               >
-                <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+                <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
                   Blank {blank.id}
                 </span>
                 {blank.options.map((option) => {
@@ -131,7 +131,7 @@ const Cloze = ({
                         {option.text}
                         {option.correct ? " ✅" : " ❌"}
                       </span>
-                      <span className="ml-2 text-[#8b88b1]">
+                      <span className="ml-2 text-[var(--muted-color)]">
                         {option.rationale}
                       </span>
                     </p>
@@ -163,11 +163,11 @@ const Cloze = ({
           <button
             type="button"
             onClick={reset}
-            className="text-xs font-bold uppercase tracking-wide text-[#8b88b1] duration-300 hover:text-[var(--primary-color)]"
+            className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)] duration-300 hover:text-[var(--primary-color)]"
           >
             Clear
           </button>
-          <span className="text-sm text-[#8b88b1]">
+          <span className="text-sm text-[var(--muted-color)]">
             {Object.values(picks).filter(Boolean).length} of {blanks.length}{" "}
             filled
           </span>

@@ -11,7 +11,7 @@ import {
 const card =
   "rounded-xl bg-[var(--container-color)] p-7 lg:p-5 sm:p-7 shadow-xl animate-fadeIn mb-7 md:mb-4 break-inside-avoid";
 const rowClass =
-  "grid grid-cols-[1fr_auto_1fr] items-center gap-x-4 border-b border-solid border-[#f1f1f1] py-2 last:border-none lg:gap-x-2 lg:text-sm md:gap-x-1 md:text-xs sm:grid-cols-1 sm:gap-y-1 sm:text-center sm:text-base";
+  "grid grid-cols-[1fr_auto_1fr] items-center gap-x-4 border-b border-solid border-[var(--track-color)] py-2 last:border-none lg:gap-x-2 lg:text-sm md:gap-x-1 md:text-xs sm:grid-cols-1 sm:gap-y-1 sm:text-center sm:text-base";
 const tableCard =
   "rounded-xl bg-[var(--container-color)] shadow-xl animate-fadeIn p-7 md:p-4 sm:p-7";
 const Table = ({
@@ -29,11 +29,11 @@ const Table = ({
     <div className={tableCard}>
       {headers && (
         <div className="mb-2 grid grid-cols-[1fr_auto_1fr] items-center gap-x-4 sm:hidden">
-          <span className="text-right text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+          <span className="text-right text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             {headers[0]}
           </span>
           <span className="w-4" />
-          <span className="text-xs font-bold uppercase tracking-wide text-[#8b88b1]">
+          <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             {headers[1]}
           </span>
         </div>
@@ -68,7 +68,7 @@ const Conversions = () => {
         {Prefixes.map((prefix) => (
           <div key={prefix.name} className={card}>
             <h3 className="text-xl">{prefix.name}</h3>
-            <span className="text-sm text-[#8b88b1]">{prefix.meaning}</span>
+            <span className="text-sm text-[var(--muted-color)]">{prefix.meaning}</span>
 
             <div className="mx-auto mt-3 grid w-fit grid-cols-[auto_auto_auto] items-center gap-x-2 gap-y-2 text-sm lg:gap-x-1.5 lg:text-xs sm:gap-x-2 sm:text-sm">
               {prefix.lines.map((line) => (
@@ -111,7 +111,7 @@ const Conversions = () => {
         ))}
       </Reflow>
 
-      <p className="mb-14 ml-3.5 text-xs italic text-[#8b88b1] lg:ml-0 lg:text-center">
+      <p className="mb-14 ml-3.5 text-xs italic text-[var(--muted-color)] lg:ml-0 lg:text-center">
         *Use abbreviation &quot;mcg&quot; for medical documentation.
       </p>
 

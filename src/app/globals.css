@@ -4,11 +4,66 @@
 
 :root {
   /* ======== Colors ======== */
+  /* Dark is the default palette — a first-time visitor sees dark mode
+     regardless of their OS setting; light is the opt-in override below. */
+  --primary-color: hsl(353, 100%, 68%);
+  --title-color: hsl(244, 30%, 92%);
+  --text-color: hsl(244, 16%, 75%);
+  --body-color: hsl(244, 28%, 9%);
+  --container-color: hsl(244, 24%, 14%);
+  --muted-color: hsl(244, 14%, 62%);
+  --track-color: hsl(244, 16%, 22%);
+  --icon-muted-color: hsl(244, 14%, 45%);
+  --border-color: hsl(244, 16%, 24%);
+  --scroll-icon-color: hsl(244, 20%, 68%);
+  /* Blue "chip" surfaces: badges, pills, selected/chosen states, case-study
+     banners — all paired with var(--title-color) text, which already
+     flips light/dark, so only the surface itself needs redefining here. */
+  --chip-blue: hsl(219, 45%, 24%);
+  --chip-blue-soft: hsl(219, 40%, 18%);
+  --chip-blue-border: hsl(219, 90%, 62%);
+  --chip-blue-track: hsl(219, 30%, 26%);
+  --case-label-color: hsl(219, 90%, 75%);
+  --chip-amber: hsl(38, 55%, 22%);
+  /* Frosted-glass surfaces: translucent panels meant to sit over the
+     blurred lava-lamp background blobs (see Pharm/LavaBackground.tsx). */
+  --glass-bg: hsla(244, 26%, 14%, 0.55);
+  --glass-bg-soft: hsla(244, 26%, 14%, 0.35);
+  --glass-border: hsla(0, 0%, 100%, 0.08);
+  /* A light background needs more pigment than a dark one for the same
+     blobs to read at all, so this isn't just the dark value reused. */
+  --lava-opacity: 0.4;
+  /* Normal alpha blending over a near-black body just dilutes every color
+     toward black no matter how high the opacity goes — "screen" instead
+     adds light, so a saturated blob reads as a bright glow, the way a lava
+     lamp actually looks. Over a near-white body (light theme, below)
+     screen barely does anything beyond normal blending, so that theme
+     keeps "normal". */
+  --lava-blend: screen;
+}
+
+:root[data-theme="light"] {
   --primary-color: hsl(353, 100%, 65%);
   --title-color: hsl(244, 24%, 26%);
   --text-color: hsl(244, 16%, 43%);
   --body-color: hsl(258, 60%, 98%);
   --container-color: #FFF;
+  --muted-color: #8b88b1;
+  --track-color: #f1f1f1;
+  --icon-muted-color: #dedeea;
+  --border-color: #e8dfec;
+  --chip-blue: hsl(219, 100%, 91%);
+  --chip-blue-soft: hsl(219, 100%, 96%);
+  --chip-blue-border: hsl(219, 100%, 72%);
+  --chip-blue-track: hsl(219, 100%, 89%);
+  --case-label-color: hsl(219, 60%, 45%);
+  --chip-amber: hsl(38, 100%, 85%);
+  --scroll-icon-color: #454360;
+  --glass-bg: hsla(0, 0%, 100%, 0.55);
+  --glass-bg-soft: hsla(0, 0%, 100%, 0.35);
+  --glass-border: hsla(244, 24%, 26%, 0.08);
+  --lava-opacity: 0.22;
+  --lava-blend: normal;
 }
 
 * {
@@ -19,12 +74,25 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
 }
 
 body {
   background-color: var(--body-color);
   color: var(--text-color);
   line-height: 1.7;
+  font-family:
+    "Google Sans",
+    Roboto,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3 {
@@ -72,4 +140,40 @@ button {
   .glow-flicker {
     animation: glowFlicker 1.1s ease-in-out infinite;
   }
+}
+
+/* Slow drifting blur blobs, like a lava lamp — see LavaBackground.tsx. Each
+   blob sets its own --x1..--x3/--y1..--y3 waypoints (in vw/vh, so the
+   travel is page-scale, not relative to the blob's own small box) and
+   shares this one keyframe definition instead of each needing its own. */
+@keyframes lavaDrift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(var(--x1), var(--y1)) scale(1.15);
+  }
+  50% {
+    transform: translate(var(--x2), var(--y2)) scale(0.88);
+  }
+  75% {
+    transform: translate(var(--x3), var(--y3)) scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lava-blob {
+    animation-name: lavaDrift;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}
+
+/* The metaball "goo" merge: a heavy blur softens each blob's edge, then the
+   color-matrix sharpens alpha back up past a threshold — anywhere two blurred
+   edges overlap enough, they fuse into one shape instead of just
+   alpha-blending, which is what makes it read as a lava lamp. */
+.lava-goo {
+  filter: url(#lava-goo-filter);
 }
