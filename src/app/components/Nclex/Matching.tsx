@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useRef, useState } from "react";
 import { QuestionType, shuffled } from "./Questions";
+import Temps from "./Temps";
 
 const SHAKE = [
   { transform: "translateX(0)" },
@@ -100,7 +101,9 @@ const Matching = ({
               key={item.id}
               className={`rounded-xl border-2 border-solid p-4 duration-300 ${shell}`}
             >
-              <p className="mb-3 text-sm">{item.text}</p>
+              <p className="mb-3 text-sm">
+                <Temps>{item.text}</Temps>
+              </p>
 
               <select
                 disabled={answered}
@@ -124,7 +127,9 @@ const Matching = ({
                       Correct term: {termOf(key[item.id])?.text}
                     </p>
                   )}
-                  <p className="mt-1 text-[var(--muted-color)]">{item.rationale}</p>
+                  <p className="mt-1 text-[var(--muted-color)]">
+                    <Temps>{item.rationale}</Temps>
+                  </p>
                 </div>
               )}
             </div>

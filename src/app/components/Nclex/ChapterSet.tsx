@@ -8,52 +8,12 @@ import {
   useState,
 } from "react";
 import { LuChevronDown } from "react-icons/lu";
+import Flash from "./Flash";
 import { ChapterType, displayNumberOf } from "./Questions";
 
 export type PickType = string;
 export type LensType = "all" | "incomplete";
 export type ResultType = "solved" | "missed";
-
-// Cycles through a few labels in place, crossfading, for tiles/headings that
-// stand in for more than one source chapter (a combined deck).
-export const Flash = ({
-  items,
-  className,
-}: {
-  items: ReactNode[];
-  className?: string;
-}) => {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    if (items.length < 2) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = setInterval(() => {
-      setIndex((current) => (current + 1) % items.length);
-    }, 1600);
-    return () => clearInterval(id);
-  }, [items.length]);
-
-  if (items.length < 2) return <>{items[0]}</>;
-
-  return (
-    <span className={`relative inline-grid ${className ?? ""}`}>
-      {items.map((item, itemIndex) => (
-        <span
-          // eslint-disable-next-line react/no-array-index-key
-          key={itemIndex}
-          className={`col-start-1 row-start-1 transition duration-[900ms] ease-in-out ${
-            itemIndex === index
-              ? "translate-y-0 opacity-100"
-              : "translate-y-1 opacity-0"
-          }`}
-        >
-          {item}
-        </span>
-      ))}
-    </span>
-  );
-};
 
 // A ring of fire along the tile's own border, sling-ring style, for flagging
 // new questions. An SVG rect (not a rotating conic-gradient) so it hugs the
@@ -430,7 +390,10 @@ const ChapterSet = ({
   const shown = chapters.find((chapter) => chapter.id === open);
 
   return (
-    <div data-shapes-safe className="mb-6 rounded-2xl bg-[var(--body-color)] px-5 pb-6 pt-5">
+    <div
+      data-shapes-safe
+      className="mb-6 rounded-2xl bg-[var(--body-color)] px-5 pb-6 pt-5"
+    >
       <div
         className={`flex flex-wrap items-center gap-x-2 gap-y-3 text-xs text-[var(--muted-color)] ${
           picker === "select" ? "" : "mb-6"
@@ -536,7 +499,7 @@ const ChapterSet = ({
                 }
                 className={`relative h-10 rounded-lg border-2 border-solid text-xs font-bold duration-300 ${
                   isNew
-                    ? "motion-safe:animate-tileBounce border-transparent bg-[hsl(38,100%,55%)] text-white"
+                    ? "border-transparent bg-[hsl(38,100%,55%)] text-white motion-safe:animate-tileBounce"
                     : `bg-[var(--container-color)] ${
                         !count
                           ? "cursor-not-allowed border-transparent text-[#d3d0e4]"

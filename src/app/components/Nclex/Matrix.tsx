@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import { QuestionType, rowKeys, RowType } from "./Questions";
+import Temps from "./Temps";
 
 const SHAKE = [
   { transform: "translateX(0)" },
@@ -174,7 +175,9 @@ const Matrix = ({
                     : ""
                 }`}
               >
-                <td className="p-2 align-middle">{row.text}</td>
+                <td className="p-2 align-middle">
+                  <Temps>{row.text}</Temps>
+                </td>
                 {columns.map((column) => (
                   <Cell
                     key={column}
@@ -209,7 +212,9 @@ const Matrix = ({
               <span className="ml-2 text-xs uppercase tracking-wide text-[var(--muted-color)]">
                 {rowKeys(row).join(", ") || "none"}
               </span>
-              <p className="mt-1 text-[var(--muted-color)]">{row.rationale}</p>
+              <p className="mt-1 text-[var(--muted-color)]">
+                <Temps>{row.rationale}</Temps>
+              </p>
             </div>
           ))}
         </div>

@@ -3,8 +3,20 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
 import Shapes from "../Home/Shapes";
 import { useSaved } from "../DosageCalculations/Saved";
-import { EXAMS, EXAM_KEY, EXAM_TITLES, ExamId, isExamId, loadBank } from "./Bank";
-import ChapterSet, { Flash, LensType, PickType, ResultType } from "./ChapterSet";
+import {
+  EXAMS,
+  EXAM_KEY,
+  EXAM_TITLES,
+  ExamId,
+  isExamId,
+  loadBank,
+} from "./Bank";
+import ChapterSet, {
+  LensType,
+  PickType,
+  ResultType,
+} from "./ChapterSet";
+import Flash from "./Flash";
 import { ChapterType, DerivedBank, labelOf, QuestionType } from "./Questions";
 import Quiz from "./Quiz";
 import Swap from "./Swap";
@@ -90,7 +102,9 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
       }),
     [bank],
   );
-  const section = available.includes(view.section) ? view.section : available[0];
+  const section = available.includes(view.section)
+    ? view.section
+    : available[0];
   useEffect(() => {
     if (section && section !== view.section) setSection(section);
   }, [section, view.section]);
@@ -142,7 +156,8 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
   // on that — so graduate any answered New question into the chapter
   // bank.New.homeChapterId says it belongs to, and drop it out of New.
   const { effectiveChapters, effectiveNew } = useMemo(() => {
-    if (!bank.New) return { effectiveChapters: bank.Chapters, effectiveNew: null };
+    if (!bank.New)
+      return { effectiveChapters: bank.Chapters, effectiveNew: null };
 
     const stillNew: QuestionType[] = [];
     const graduates = new Map<string, QuestionType[]>();
@@ -190,7 +205,11 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
             ? [effectiveNew, ...effectiveChapters]
             : effectiveChapters;
   const noun =
-    section === "skills" ? "skills" : section === "cases" ? "cases" : "chapters";
+    section === "skills"
+      ? "skills"
+      : section === "cases"
+        ? "cases"
+        : "chapters";
   const empty = groups.length === 0;
 
   const viewFor = useCallback(
@@ -257,7 +276,10 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     (targetAt: number) => {
       if (pick !== "new" || !started) return;
       const currentId = deck[targetAt]?.id;
-      if (currentId && effectiveNew?.questions.some((q) => q.id === currentId)) {
+      if (
+        currentId &&
+        effectiveNew?.questions.some((q) => q.id === currentId)
+      ) {
         return;
       }
       if (effectiveNew?.questions.length) {
@@ -382,8 +404,8 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
                 Nothing left here.
               </p>
               <p className="text-[var(--muted-color)]">
-                Every question in {noun} is answered correctly. Switch
-                back to All to run them again.
+                Every question in {noun} is answered correctly. Switch back to
+                All to run them again.
               </p>
               <button
                 type="button"
@@ -414,7 +436,9 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
         />
       )}
 
-      <Swap token={`${section}-${lens}-${String(pick)}-${deck[started?.at ?? -1]?.id ?? "none"}`}>
+      <Swap
+        token={`${section}-${lens}-${String(pick)}-${deck[started?.at ?? -1]?.id ?? "none"}`}
+      >
         {started === null || deck.length === 0 ? (
           <p className="ml-3.5 text-[var(--muted-color)] lg:ml-0 lg:text-center">
             Pick{" "}
@@ -481,52 +505,57 @@ const Nclex = () => {
   }, [exam]);
 
   return (
-    <section className="relative mx-auto max-w-[1080px] animate-fadeIn px-10 pb-24 pt-28 lg:pt-12 md:px-6">
-      {/* left-20 matches the sidebar's own width (see Sidebar.tsx's
-          "ml-20 lg:ml-0" convention) so shapes get the full visible
-          area right up to its edge, instead of wandering partly behind it. */}
+    <>
+      {/* This layer must stay a sibling of the section below, not a child:
+        the section runs animate-fadeIn with fill-mode "both", which leaves a
+        transform on it permanently, and any element with a transform becomes
+        the containing block for its `fixed` descendants. Nested inside, this
+        "fixed" layer was really sized to the section's own box — 1080px wide
+        and only as tall as the content — so shapes hit an invisible wall at
+        its edges instead of roaming the viewport. left-20 matches the
+        sidebar's own width (see Sidebar.tsx's "ml-20 lg:ml-0" convention). */}
       <div className="pointer-events-none fixed inset-y-0 left-20 right-0 z-0 overflow-hidden lg:left-0">
         <Shapes />
       </div>
 
-      <div className="relative z-10">
-        <div className="mb-2 flex items-start justify-between gap-x-4 lg:flex-col lg:items-center lg:gap-y-3">
-          <h1 className="relative ml-3.5 text-4xl font-bold lg:ml-0 lg:text-center">
-            NCLEX-<em>style</em> Questions
-          </h1>
+      <section className="relative mx-auto max-w-[1080px] animate-fadeIn px-10 pb-24 pt-28 lg:pt-12 md:px-6">
+        <div className="relative z-10">
+          <div className="mb-2 flex items-start justify-between gap-x-4 lg:flex-col lg:items-center lg:gap-y-3">
+            <h1 className="relative ml-3.5 text-4xl font-bold lg:ml-0 lg:text-center">
+              NCLEX-<em>style</em> Questions
+            </h1>
 
-          <div className="relative shrink-0">
-            <select
-              value={exam}
-              onChange={(event) => {
-                const next = event.target.value;
-                if (isExamId(next)) setExam(next);
-              }}
-              aria-label="Exam"
-              className="h-10 cursor-pointer appearance-none rounded-[1.875rem] border-none bg-[var(--body-color)] pl-5 pr-11 text-sm font-bold text-[var(--title-color)] shadow-inner outline-none"
-            >
-              {EXAMS.map((id) => (
-                <option key={id} value={id}>
-                  {EXAM_TITLES[id]}
-                </option>
-              ))}
-            </select>
-            <LuChevronDown
-              aria-hidden
-              className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
-            />
+            <div className="relative shrink-0">
+              <select
+                value={exam}
+                onChange={(event) => {
+                  const next = event.target.value;
+                  if (isExamId(next)) setExam(next);
+                }}
+                aria-label="Exam"
+                className="h-10 cursor-pointer appearance-none rounded-[1.875rem] border-none bg-[var(--body-color)] pl-5 pr-11 text-sm font-bold text-[var(--title-color)] shadow-inner outline-none"
+              >
+                {EXAMS.map((id) => (
+                  <option key={id} value={id}>
+                    {EXAM_TITLES[id]}
+                  </option>
+                ))}
+              </select>
+              <LuChevronDown
+                aria-hidden
+                className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
+              />
+            </div>
           </div>
+
+          <p className="mb-10 ml-3.5 lg:ml-0 lg:text-center">
+            {bank ? bank.Course : ` `}
+          </p>
+
+          {bank ? <ExamView key={exam} exam={exam} bank={bank} /> : <Loading />}
         </div>
-
-        <p className="mb-10 ml-3.5 lg:ml-0 lg:text-center">
-          {bank
-            ? bank.Course
-            : ` `}
-        </p>
-
-        {bank ? <ExamView key={exam} exam={exam} bank={bank} /> : <Loading />}
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

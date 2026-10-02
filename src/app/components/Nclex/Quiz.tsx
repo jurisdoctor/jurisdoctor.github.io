@@ -6,6 +6,7 @@ import Cloze from "./Cloze";
 import Highlight from "./Highlight";
 import Matching from "./Matching";
 import Matrix from "./Matrix";
+import Temps from "./Temps";
 import Ordered from "./Ordered";
 import {
   isCloze,
@@ -108,7 +109,9 @@ const Option = ({
           {option.id}
         </span>
 
-        <span className="min-w-0 flex-1 leading-7">{option.text}</span>
+        <span className="min-w-0 flex-1 leading-7">
+          <Temps>{option.text}</Temps>
+        </span>
 
         {won && <span className="shrink-0 leading-7">✅</span>}
         {wrongPick && <span className="shrink-0 leading-7">❌</span>}
@@ -121,7 +124,7 @@ const Option = ({
 
       {answered && (
         <p className="mt-1.5 animate-fadeIn px-[18px] text-sm leading-6 text-[var(--muted-color)]">
-          {option.rationale}
+          <Temps>{option.rationale}</Temps>
         </p>
       )}
     </div>
@@ -458,75 +461,77 @@ const Quiz = ({
         </div>
       )}
 
-      <p className="mb-6 text-lg sm:text-base">{question.stem}</p>
+      <p className="mb-6 text-lg sm:text-base">
+        <Temps>{question.stem}</Temps>
+      </p>
 
       <div ref={answerRef} className="scroll-mt-4">
-      {bowtie ? (
-        <Bowtie
-          key={`${question.id}-${redo}`}
-          question={question}
-          answered={answered}
-          onSettle={settleBuilt}
-          onClear={() => setAnswered(false)}
-        />
-      ) : marker ? (
-        <Highlight
-          key={`${question.id}-${redo}`}
-          question={question}
-          answered={answered}
-          onSettle={settleBuilt}
-          onClear={() => setAnswered(false)}
-        />
-      ) : grid ? (
-        <Matrix
-          key={`${question.id}-${redo}`}
-          question={question}
-          answered={answered}
-          onSettle={settleBuilt}
-          onClear={() => setAnswered(false)}
-        />
-      ) : ranked ? (
-        <Ordered
-          key={`${question.id}-${redo}`}
-          question={question}
-          answered={answered}
-          onSettle={settleBuilt}
-          onClear={() => setAnswered(false)}
-        />
-      ) : gapped ? (
-        <Cloze
-          key={`${question.id}-${redo}`}
-          question={question}
-          answered={answered}
-          onSettle={settleBuilt}
-          onClear={() => setAnswered(false)}
-        />
-      ) : paired ? (
-        <Matching
-          key={`${question.id}-${redo}`}
-          question={question}
-          answered={answered}
-          onSettle={settleBuilt}
-          onClear={() => setAnswered(false)}
-        />
-      ) : (
-        <div
-          className={`grid ${answered ? "gap-y-6" : "gap-y-3"} ${
-            answered || multi ? "mb-6" : ""
-          }`}
-        >
-          {question.options.map((option) => (
-            <Option
-              key={option.id}
-              option={option}
-              chosen={chosen.includes(option.id)}
-              answered={answered}
-              multi={multi}
-              onToggle={toggle}
-            />
-          ))}
-        </div>
-      )}
+        {bowtie ? (
+          <Bowtie
+            key={`${question.id}-${redo}`}
+            question={question}
+            answered={answered}
+            onSettle={settleBuilt}
+            onClear={() => setAnswered(false)}
+          />
+        ) : marker ? (
+          <Highlight
+            key={`${question.id}-${redo}`}
+            question={question}
+            answered={answered}
+            onSettle={settleBuilt}
+            onClear={() => setAnswered(false)}
+          />
+        ) : grid ? (
+          <Matrix
+            key={`${question.id}-${redo}`}
+            question={question}
+            answered={answered}
+            onSettle={settleBuilt}
+            onClear={() => setAnswered(false)}
+          />
+        ) : ranked ? (
+          <Ordered
+            key={`${question.id}-${redo}`}
+            question={question}
+            answered={answered}
+            onSettle={settleBuilt}
+            onClear={() => setAnswered(false)}
+          />
+        ) : gapped ? (
+          <Cloze
+            key={`${question.id}-${redo}`}
+            question={question}
+            answered={answered}
+            onSettle={settleBuilt}
+            onClear={() => setAnswered(false)}
+          />
+        ) : paired ? (
+          <Matching
+            key={`${question.id}-${redo}`}
+            question={question}
+            answered={answered}
+            onSettle={settleBuilt}
+            onClear={() => setAnswered(false)}
+          />
+        ) : (
+          <div
+            className={`grid ${answered ? "gap-y-6" : "gap-y-3"} ${
+              answered || multi ? "mb-6" : ""
+            }`}
+          >
+            {question.options.map((option) => (
+              <Option
+                key={option.id}
+                option={option}
+                chosen={chosen.includes(option.id)}
+                answered={answered}
+                multi={multi}
+                onToggle={toggle}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {multi && !built && !answered && (

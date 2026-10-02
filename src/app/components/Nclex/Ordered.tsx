@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useRef, useState } from "react";
 import { QuestionType, shuffled } from "./Questions";
+import Temps from "./Temps";
 
 const SHAKE = [
   { transform: "translateX(0)" },
@@ -133,7 +134,7 @@ const Ordered = ({
               >
                 {option ? (
                   <span>
-                    {option.text}
+                    <Temps>{option.text}</Temps>
                     {answered && !right && (
                       <span className="ml-2 text-xs font-bold uppercase tracking-wide text-[var(--primary-color)]">
                         belongs at {order.indexOf(option.id) + 1}
@@ -166,7 +167,7 @@ const Ordered = ({
               onClick={() => drop(option.id)}
               className="rounded-xl border-2 border-solid border-transparent bg-[var(--body-color)] p-3 text-left text-sm duration-300 hover:border-[hsl(219,100%,88%)]"
             >
-              {option.text}
+              <Temps>{option.text}</Temps>
             </button>
           ))}
         </div>
@@ -183,9 +184,11 @@ const Ordered = ({
                 className="animate-fadeIn rounded-xl bg-[var(--body-color)] p-3 text-sm"
               >
                 <span className="font-bold text-[var(--title-color)]">
-                  {index + 1}. {option.text}
+                  {index + 1}. <Temps>{option.text}</Temps>
                 </span>
-                <p className="mt-1 text-[var(--muted-color)]">{option.rationale}</p>
+                <p className="mt-1 text-[var(--muted-color)]">
+                  <Temps>{option.rationale}</Temps>
+                </p>
               </div>
             );
           })}

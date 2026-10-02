@@ -1,6 +1,7 @@
 "use client";
 import { Fragment, useRef, useState } from "react";
 import { OptionType, PoolType, poolsOf, QuestionType } from "./Questions";
+import Temps from "./Temps";
 
 const SHAKE = [
   { transform: "translateX(0)" },
@@ -280,7 +281,9 @@ const Bowtie = ({
                         aria-pressed={taken}
                         className={`flex w-full items-start gap-x-2 rounded-xl border-2 border-solid p-3 text-left text-sm duration-300 ${shell}`}
                       >
-                        <span className="min-w-0 flex-1">{option.text}</span>
+                        <span className="min-w-0 flex-1">
+                          <Temps>{option.text}</Temps>
+                        </span>
                         {answered && option.correct && (
                           <span className="shrink-0">✅</span>
                         )}
@@ -291,7 +294,7 @@ const Bowtie = ({
 
                       {answered && (
                         <p className="mt-1.5 animate-fadeIn px-[14px] text-sm leading-6 text-[var(--muted-color)]">
-                          {option.rationale}
+                          <Temps>{option.rationale}</Temps>
                         </p>
                       )}
                     </div>

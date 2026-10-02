@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import { QuestionType, SegmentType } from "./Questions";
+import Temps from "./Temps";
 
 const SHAKE = [
   { transform: "translateX(0)" },
@@ -49,7 +50,7 @@ const Segment = ({
         answered ? "cursor-default" : "cursor-pointer"
       }`}
     >
-      {segment.text}
+      <Temps>{segment.text}</Temps>
     </button>
   );
 };
@@ -153,9 +154,11 @@ const Highlight = ({
                 <span className="text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
                   {label}
                 </span>
-                <p className="mt-1 text-sm">{segment.text}</p>
+                <p className="mt-1 text-sm">
+                  <Temps>{segment.text}</Temps>
+                </p>
                 <p className="mt-1 text-sm text-[var(--muted-color)]">
-                  {segment.rationale}
+                  <Temps>{segment.rationale}</Temps>
                 </p>
               </div>
             );

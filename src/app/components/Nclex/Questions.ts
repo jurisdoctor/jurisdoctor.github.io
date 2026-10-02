@@ -455,6 +455,9 @@ const caseKey = (question: QuestionType) =>
 // judgment) from one raw bank file. `extra` grafts supplementary
 // further-teaching questions into their chapter by id; omit it for a bank
 // that doesn't have (or need) that treatment.
+const difficultRank = (question: QuestionType) =>
+  question.difficulty === "difficult" ? 1 : 0;
+
 export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => {
   const added = (extra?.items ?? []).reduce((map, item) => {
     const bucket = map.get(item.chapter) ?? [];
@@ -477,7 +480,12 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
         members: entry.members,
         title: entry.title,
         subtitle: entry.subtitle,
-        questions: [...own, ...join].map((question, index) => ({
+        // Difficult questions are pulled to the end, in their original
+        // relative order (Array.sort is stable), so the 🧱 marks sit together
+        // as one block of tiles instead of being scattered mid-chapter.
+        questions: [...own, ...join]
+          .sort((a, b) => difficultRank(a) - difficultRank(b))
+          .map((question, index) => ({
           ...question,
           ordinal: index + 1,
           contentHash: contentHashOf(question),

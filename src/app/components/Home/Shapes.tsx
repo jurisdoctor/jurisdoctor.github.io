@@ -156,6 +156,36 @@ const Shapes = () => {
     window.addEventListener("pointermove", handlePointer);
     window.addEventListener("pointerdown", handlePointer);
 
+    // Once the pointer leaves the page there are no more pointermove events
+    // to flip the mode, so the shapes would stay stuck swarming the last spot
+    // it touched on the way out. Treat leaving the document (or the window
+    // losing focus) like landing on real UI: release back to wandering.
+    // Touch is excluded — a finger lifting also fires pointerleave, and a tap
+    // is meant to keep the pull until the next tap.
+    // No single signal is reliable across browsers (Safari and fast exits
+    // skip some of them), so listen to all: pointerleave on <html>, a
+    // document-level mouseleave, a pointerout whose relatedTarget is null
+    // (the pointer went somewhere that isn't part of this page), and the tab
+    // losing focus or going hidden.
+    const handleLeave = (event: PointerEvent) => {
+      if (event.pointerType === "touch") return;
+      setMode("idle");
+    };
+    const handleOut = (event: PointerEvent) => {
+      if (event.pointerType === "touch" || event.relatedTarget) return;
+      setMode("idle");
+    };
+    const handleIdle = () => setMode("idle");
+    const handleVisibility = () => {
+      if (document.hidden) setMode("idle");
+    };
+
+    document.documentElement.addEventListener("pointerleave", handleLeave);
+    document.addEventListener("mouseleave", handleIdle);
+    window.addEventListener("pointerout", handleOut);
+    window.addEventListener("blur", handleIdle);
+    document.addEventListener("visibilitychange", handleVisibility);
+
     let raf = 0;
     const tick = () => {
       const now = performance.now();
@@ -202,6 +232,11 @@ const Shapes = () => {
       window.removeEventListener("resize", measure);
       window.removeEventListener("pointermove", handlePointer);
       window.removeEventListener("pointerdown", handlePointer);
+      document.documentElement.removeEventListener("pointerleave", handleLeave);
+      document.removeEventListener("mouseleave", handleIdle);
+      window.removeEventListener("pointerout", handleOut);
+      window.removeEventListener("blur", handleIdle);
+      document.removeEventListener("visibilitychange", handleVisibility);
     };
   }, []);
 
