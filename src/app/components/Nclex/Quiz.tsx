@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { LuStar } from "react-icons/lu";
 import Bowtie from "./Bowtie";
 import { ResultType } from "./ChapterSet";
 import Cloze from "./Cloze";
@@ -192,6 +193,8 @@ const Quiz = ({
   onResult,
   onMove,
   onRedo,
+  starred,
+  onStar,
 }: {
   label: string;
   questions: QuestionType[];
@@ -207,6 +210,10 @@ const Quiz = ({
   // feedback. Passed the index being redone, since "again" resets to
   // `start` rather than the current position.
   onRedo?: (at: number) => void;
+  // Favorites. Both are optional so other users of Quiz (the Pharm course)
+  // get no star button.
+  starred?: Record<string, true>;
+  onStar?: (id: string) => void;
 }) => {
   const [at, setAt] = useState(start);
   const [chosen, setChosen] = useState<string[]>([]);
@@ -371,7 +378,7 @@ const Quiz = ({
         </div>
       )}
 
-      <div className="mb-3 flex items-start justify-between gap-x-4">
+      <div className="mb-3 flex items-center justify-between gap-x-4">
         <span className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2">
           <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             {/* Under the Incomplete lens, at+1 is a position in a pool that
@@ -401,8 +408,38 @@ const Quiz = ({
           )}
         </span>
 
-        <span className="flex h-6 shrink-0 items-center whitespace-nowrap text-sm text-[var(--muted-color)]">
-          {right} / {asked}
+        <span className="flex h-6 shrink-0 items-center gap-x-3 whitespace-nowrap text-sm text-[var(--muted-color)]">
+          <span>
+            {right} / {asked}
+          </span>
+          {onStar && (
+            <button
+              type="button"
+              onClick={() => onStar(question.id)}
+              aria-pressed={!!starred?.[question.id]}
+              aria-label={
+                starred?.[question.id]
+                  ? "Remove from favorites"
+                  : "Add to favorites"
+              }
+              title={
+                starred?.[question.id]
+                  ? "Remove from favorites"
+                  : "Add to favorites"
+              }
+              className={`-m-1 inline-flex items-center justify-center rounded-full p-1 duration-300 hover:scale-110 ${
+                starred?.[question.id]
+                  ? "text-[hsl(43,100%,55%)]"
+                  : "hover:text-[hsl(43,100%,55%)]"
+              }`}
+            >
+              <LuStar
+                className="block"
+                size={20}
+                fill={starred?.[question.id] ? "currentColor" : "none"}
+              />
+            </button>
+          )}
         </span>
       </div>
 

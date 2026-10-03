@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
-import { LuChevronDown } from "react-icons/lu";
+import { LuChevronDown, LuStar } from "react-icons/lu";
 import Flash from "./Flash";
 import Glow from "./Glow";
 import { flameHueAt } from "./FlamePalette";
@@ -243,6 +243,7 @@ const ChapterSet = ({
   noun,
   labelFor,
   picker = "grid",
+  starred,
   progressOf,
   total,
   left,
@@ -258,6 +259,7 @@ const ChapterSet = ({
   noun: string;
   labelFor: (chapter: ChapterType) => string;
   picker?: "grid" | "select";
+  starred?: Record<string, true>;
   progressOf: (id: string) => { solved: number; missed: number; total: number };
   total: number;
   left: number;
@@ -520,6 +522,14 @@ const ChapterSet = ({
                     >
                       💀
                     </span>
+                  )}
+                  {starred?.[question.id] && (
+                    <LuStar
+                      aria-label="Favorite"
+                      size={11}
+                      fill="currentColor"
+                      className="pointer-events-none absolute -bottom-1 -left-1 text-[hsl(43,100%,55%)]"
+                    />
                   )}
                   {question.ordinal ?? index + 1}
                 </button>

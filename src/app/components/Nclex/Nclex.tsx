@@ -13,11 +13,17 @@ import {
 } from "./Bank";
 import ChapterSet, { LensType, PickType, ResultType } from "./ChapterSet";
 import Flash from "./Flash";
-import { ChapterType, DerivedBank, labelOf, QuestionType } from "./Questions";
+import {
+  ChapterType,
+  DerivedBank,
+  displayNumberOf,
+  labelOf,
+  QuestionType,
+} from "./Questions";
 import Quiz from "./Quiz";
 import Swap from "./Swap";
 
-type SectionType = "chapters" | "skills" | "cases" | "judgment";
+type SectionType = "chapters" | "skills" | "cases" | "judgment" | "favorites";
 
 interface StartType {
   pick: PickType;
@@ -51,13 +57,28 @@ const validHashes = (saved: Record<string, string>) =>
   !Array.isArray(saved) &&
   Object.values(saved).every((entry) => typeof entry === "string");
 
-const SECTIONS: SectionType[] = ["chapters", "skills", "cases", "judgment"];
+const SECTIONS: SectionType[] = [
+  "chapters",
+  "skills",
+  "cases",
+  "judgment",
+  "favorites",
+];
+
+const freshStars = (): Record<string, true> => ({});
+
+const validStars = (saved: Record<string, true>) =>
+  !!saved &&
+  typeof saved === "object" &&
+  !Array.isArray(saved) &&
+  Object.values(saved).every((entry) => entry === true);
 
 const TITLES: Record<SectionType, string> = {
   chapters: "Chapters",
   skills: "Skills",
   cases: "Case studies",
   judgment: "Clinical judgment",
+  favorites: "Favorites",
 };
 
 const validView = (saved: ViewType) =>
@@ -87,23 +108,53 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
   const setLens = (next: LensType) =>
     setView((prev) => ({ ...prev, lens: next }));
 
+  const [stars, setStars, starsReady] = useSaved<Record<string, true>>(
+    `nclex:favorites:v1:${exam}`,
+    freshStars,
+    validStars,
+  );
+  const toggleStar = useCallback(
+    (id: string) =>
+      setStars((prev) => {
+        const next = { ...prev };
+        if (next[id]) delete next[id];
+        else next[id] = true;
+        return next;
+      }),
+    [setStars],
+  );
+  const starCount = Object.keys(stars).length;
+
+  // Favorites only gets a tab while there is something in it. Two cases keep
+  // it around past that: before the saved stars have loaded (otherwise a
+  // saved Favorites tab would be bumped to Chapters for a frame and the
+  // choice overwritten), and after un-starring the last one while still
+  // looking at the tab, so the page doesn't change under the learner — it
+  // goes as soon as they move to another tab.
+  const [favoritesSeen, setFavoritesSeen] = useState(false);
+  useEffect(() => {
+    if (view.section === "favorites" && starCount > 0) setFavoritesSeen(true);
+    if (view.section !== "favorites") setFavoritesSeen(false);
+  }, [view.section, starCount]);
+  const showFavorites =
+    starCount > 0 ||
+    (view.section === "favorites" && (!starsReady || favoritesSeen));
+
   // Only offer tabs this exam actually has content for.
   const available = useMemo(
     () =>
       SECTIONS.filter((entry) => {
+        if (entry === "favorites") return showFavorites;
         if (entry === "skills") return bank.Skills.length > 0;
         if (entry === "cases") return bank.Cases.length > 0;
         if (entry === "judgment") return bank.Judgment.length > 0;
         return bank.Chapters.length > 0;
       }),
-    [bank],
+    [bank, showFavorites],
   );
   const section = available.includes(view.section)
     ? view.section
     : available[0];
-  useEffect(() => {
-    if (section && section !== view.section) setSection(section);
-  }, [section, view.section]);
 
   const [started, setStarted] = useState<StartType | null>(null);
   const [results, setResults, resultsReady] = useSaved<
@@ -115,6 +166,15 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     validHashes,
   );
   const [deck, setDeck] = useState<QuestionType[]>([]);
+  useEffect(() => {
+    if (section && section !== view.section) {
+      setSection(section);
+      // A run that belonged to the tab being left (e.g. Favorites, once it
+      // empties and goes away) has nothing to show on the new one.
+      setStarted(null);
+      setDeck([]);
+    }
+  }, [section, view.section]);
   const [at, setAt] = useState(0);
   const [pass, setPass] = useState(0);
   const pick = started?.pick ?? null;
@@ -145,6 +205,44 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     setHashes(current);
   }, [bank, resultsReady, hashesReady]);
 
+  // Favorites is a view across every other tab: each starred question is
+  // gathered back under the chapter, skill, case or judgment group it came
+  // from. The ids are prefixed by tab because the tabs reuse ids (a chapter
+  // and its judgment group share one), and the label each came from is
+  // kept so the tile and heading still read as "Chapter 27 · ..." etc.
+  const { favoriteGroups, favoriteLabels } = useMemo(() => {
+    const groupsOut: ChapterType[] = [];
+    const labels = new Map<string, string>();
+    const sources: [SectionType, ChapterType[]][] = [
+      ["chapters", bank.Chapters],
+      ["skills", bank.Skills],
+      ["cases", bank.Cases],
+      ["judgment", bank.Judgment],
+    ];
+    sources.forEach(([from, list]) => {
+      list.forEach((entry) => {
+        const questions = entry.questions.filter((item) => stars[item.id]);
+        if (!questions.length) return;
+        const id = `${from}:${entry.id}`;
+        labels.set(
+          id,
+          from === "chapters" || from === "judgment"
+            ? labelOf(entry)
+            : from === "cases"
+              ? `Chapter ${entry.id} · ${entry.title}`
+              : entry.title,
+        );
+        groupsOut.push({
+          ...entry,
+          id,
+          numberLabel: String(displayNumberOf(entry)),
+          questions,
+        });
+      });
+    });
+    return { favoriteGroups: groupsOut, favoriteLabels: labels };
+  }, [bank, stars]);
+
   const groups =
     section === "skills"
       ? bank.Skills
@@ -152,13 +250,17 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
         ? bank.Cases
         : section === "judgment"
           ? bank.Judgment
-          : bank.Chapters;
+          : section === "favorites"
+            ? favoriteGroups
+            : bank.Chapters;
   const noun =
     section === "skills"
       ? "skills"
       : section === "cases"
         ? "cases"
-        : "chapters";
+        : section === "favorites"
+          ? "favorites"
+          : "chapters";
   const empty = groups.length === 0;
 
   const viewFor = useCallback(
@@ -192,14 +294,15 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
 
     const target = pool[index];
     const story =
-      section !== "cases" && target?.caseId
+      section !== "cases" && section !== "favorites" && target?.caseId
         ? bank.Cases.find((entry) =>
             entry.questions.some((step) => step.id === target.id),
           )
         : undefined;
 
     const run = story ? story.questions : pool;
-    const sequential = run.some((entry) => entry.caseId);
+    const sequential =
+      section !== "favorites" && run.some((entry) => entry.caseId);
     const resume = run.findIndex((entry) => results[entry.id] !== "solved");
     const fallback = story ? 0 : index;
     const startAt = sequential && resume !== -1 ? resume : fallback;
@@ -231,12 +334,14 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
 
   const labelFor = useCallback(
     (entry: ChapterType) =>
-      section === "chapters" || section === "judgment"
-        ? labelOf(entry)
-        : section === "cases"
-          ? `Chapter ${entry.id} · ${entry.title}`
-          : entry.title,
-    [section],
+      section === "favorites"
+        ? (favoriteLabels.get(entry.id) ?? entry.title)
+        : section === "chapters" || section === "judgment"
+          ? labelOf(entry)
+          : section === "cases"
+            ? `Chapter ${entry.id} · ${entry.title}`
+            : entry.title,
+    [section, favoriteLabels],
   );
 
   const group = pick ? shown.find((entry) => entry.id === pick) : undefined;
@@ -288,6 +393,9 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
                 }`}
               >
                 {TITLES[entry]}
+                {entry === "favorites" && starsReady && starCount > 0
+                  ? ` (${starCount})`
+                  : ""}
               </button>
             ))}
           </div>
@@ -303,7 +411,16 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
 
       {shown.length === 0 ? (
         <div className="mb-8 rounded-2xl bg-[var(--body-color)] p-7 text-center">
-          {empty ? (
+          {section === "favorites" && empty ? (
+            <>
+              <p className="mb-1 text-lg font-bold text-[var(--title-color)]">
+                No favorites yet.
+              </p>
+              <p className="text-[var(--muted-color)]">
+                Tap the star on any question to save it here.
+              </p>
+            </>
+          ) : empty ? (
             <>
               <p className="mb-1 text-lg font-bold text-[var(--title-color)]">
                 Not in {EXAM_TITLES[exam]}.
@@ -347,6 +464,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
           onStart={(next, index) => open(next, index, shown)}
           onReset={reset}
           picker={section === "skills" ? "select" : "grid"}
+          starred={stars}
         />
       )}
 
@@ -394,6 +512,8 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
               results={results}
               onResult={mark}
               onMove={setAt}
+              starred={stars}
+              onStar={toggleStar}
             />
           </>
         )}

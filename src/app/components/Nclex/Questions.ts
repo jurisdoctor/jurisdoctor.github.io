@@ -243,6 +243,9 @@ export interface ChapterType {
   // Present when this tile combines several source chapters into one deck
   // (e.g. a PPT deck that covers Potter 42 and Iggy 13 together).
   members?: ChapterMemberType[];
+  // Overrides the tile's displayed number, for groups whose id is synthetic
+  // (the Favorites tab prefixes ids by source tab to keep them unique).
+  numberLabel?: string;
 }
 
 interface BankType {
@@ -267,7 +270,10 @@ interface ChapterGroupType {
 // `chapterNumber` carries the number to actually display; fall back to the
 // id for chapters that don't need the split.
 export const displayNumberOf = (chapter: ChapterType) =>
-  chapter.members?.[0]?.chapterNumber ?? chapter.chapterNumber ?? chapter.id;
+  chapter.numberLabel ??
+  chapter.members?.[0]?.chapterNumber ??
+  chapter.chapterNumber ??
+  chapter.id;
 
 export const labelOf = (chapter: ChapterType) => {
   if (chapter.members && chapter.members.length > 1) {
