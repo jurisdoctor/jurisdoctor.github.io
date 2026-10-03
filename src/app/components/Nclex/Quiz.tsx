@@ -159,16 +159,23 @@ const Aside = ({
   label,
   body,
   italic,
+  note,
 }: {
   label: string;
   body: string;
   italic?: boolean;
+  note?: string;
 }) => (
   <div>
     <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
       {label}
     </span>
     <p className={`mt-1 max-w-[80ch] ${italic ? "italic" : ""}`}>{body}</p>
+    {note && (
+      <p className="mt-1.5 max-w-[80ch] text-sm italic text-[var(--muted-color)]">
+        {note}
+      </p>
+    )}
   </div>
 );
 
@@ -557,7 +564,11 @@ const Quiz = ({
           <Verdict correct={correct} multi={multi} />
 
           <div className="mb-6 grid gap-y-4 rounded-2xl bg-[var(--body-color)] p-5">
-            <Aside label="Takeaway" body={question.takeaway} />
+            <Aside
+              label="Takeaway"
+              body={question.takeaway}
+              note={question.coverage}
+            />
             {question.strategy && (
               <Aside label="Strategy" body={question.strategy} italic />
             )}

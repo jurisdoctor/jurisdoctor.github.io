@@ -106,6 +106,15 @@ export interface QuestionType {
   answer: string | string[];
   takeaway: string;
   strategy?: string;
+  // Where the material is taught (lecture slides, which reading), shown in
+  // italics under the takeaway. coverageDetail is the same fact in
+  // structured form; neither is part of the question's content.
+  coverage?: string;
+  coverageDetail?: {
+    ppt?: string;
+    reading?: string[];
+    readingChecked?: boolean;
+  };
 }
 
 export const isHighlight = (question: QuestionType) =>
@@ -402,6 +411,8 @@ const CONTENT_HASH_OMIT = new Set([
   "dailySet",
   "difficulty",
   "homeChapterId",
+  "coverage",
+  "coverageDetail",
 ]);
 
 const contentHashOf = (question: QuestionType) => {
