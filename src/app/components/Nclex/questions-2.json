@@ -551,7 +551,7 @@
        "id": "A",
        "text": "Add a bed exit alarm at night",
        "correct": false,
-       "rationale": "An alarm tells staff he is already up. It does not remove what made him unsteady."
+       "rationale": "An alarm tells staff he is already up. It does not remove what contributed to the fall."
       },
       {
        "id": "B",
@@ -569,7 +569,7 @@
        "id": "D",
        "text": "Have the sleep medication reviewed",
        "correct": true,
-       "rationale": "The only thing that changed that day was the zolpidem. Medication dizziness is managed by monitoring and adjusting the drug or its timing."
+       "rationale": "The zolpidem is the one new factor the huddle found. Medication dizziness is managed by monitoring and adjusting the drug or its timing."
       }
      ],
      "answer": "D",
@@ -667,7 +667,7 @@
        "id": "B",
        "text": "A high fall risk client asking for help to the bathroom",
        "correct": false,
-       "rationale": "Urgent and tempting. Assistive personnel can assist with toileting right away, so it does not need the nurse first."
+       "rationale": "Urgent and tempting. Assisting with toileting can be delegated to assistive personnel, so it does not need the nurse's first visit."
       },
       {
        "id": "C",
@@ -701,7 +701,7 @@
        },
        {
         "action": "Use delegation",
-        "detail": "Toileting help goes to assistive personnel now."
+        "detail": "Toileting help can be delegated to assistive personnel."
        }
       ],
       "verdict": "The restrained client with numb, tingling fingers."
@@ -892,7 +892,7 @@
        "id": "B",
        "text": "Ask her daughter to come sit with her",
        "correct": false,
-       "rationale": "Family presence is a good alternative, but it takes time and does not meet the need she has right now."
+       "rationale": "Family presence is a good alternative, but it does not meet the need she has right now."
       },
       {
        "id": "C",
@@ -996,7 +996,7 @@
        "id": "A",
        "text": "Walked to the bathroom three times with staff",
        "correct": true,
-       "rationale": "She moved, with the help the plan called for, and did not fall. That is safe mobility."
+       "rationale": "She moved, with the help the plan called for. That is safe mobility."
       },
       {
        "id": "B",
@@ -1019,7 +1019,7 @@
      ],
      "answer": "A",
      "takeaway": "Fall prevention is safe mobility. Success is movement with the right help, and a shift in bed is not success.",
-     "strategy": "Every option ends without a fall. Ask which one shows both parts of the goal: moving and assisted.",
+     "strategy": "No option reports a fall. Ask which one shows both parts of the goal: moving and assisted.",
      "elimination": {
       "strategies": [
        "Priority key word"
@@ -1649,7 +1649,7 @@
        "id": "B",
        "text": "Had a seizure ten minutes ago, sleepy and slow to answer",
        "correct": false,
-       "rationale": "Looks alarming, and drowsiness after a seizure is expected. He is breathing and rousable."
+       "rationale": "Looks alarming, and drowsiness after a seizure is expected. He still answers when spoken to."
       },
       {
        "id": "C",
@@ -2412,7 +2412,7 @@
        "id": "F",
        "text": "\"I can walk him to the bathroom myself to save you a trip.\"",
        "correct": false,
-       "rationale": "Well meant, but she is not trained to support a weak adult who starts to go down."
+       "rationale": "Well meant, but a client who is weak and unsteady walks with staff assistance. She calls for help instead of walking him alone."
       }
      ],
      "answer": [
@@ -2494,7 +2494,7 @@
        },
        {
         "action": "Assess first",
-        "detail": "No cause has been looked for yet."
+        "detail": "The stem reports no check for a cause yet."
        }
       ],
       "verdict": "Look for the unmet need first."
@@ -2906,7 +2906,7 @@
        "id": "C",
        "text": "\"I will wear my soft slippers so I do not slip on tile.\"",
        "correct": false,
-       "rationale": "Loose, backless footwear is itself a fall hazard."
+       "rationale": "Soft slippers give poor grip and support. Sturdy nonskid shoes are the safe choice."
       },
       {
        "id": "D",
@@ -2949,7 +2949,7 @@
        "id": "A",
        "text": "Wipe it up at once with bath towels",
        "correct": false,
-       "rationale": "Prompt spill cleanup is right for water. An unknown chemical is not handled bare-handed."
+       "rationale": "Prompt spill cleanup is right for water. An unknown chemical is not handled until it is identified."
       },
       {
        "id": "B",
@@ -2967,7 +2967,7 @@
        "id": "D",
        "text": "Call housekeeping and return to the station",
        "correct": false,
-       "rationale": "The client reaches the spill before housekeeping does."
+       "rationale": "Leaving the spill unguarded exposes the approaching client to a fall and to the chemical."
       }
      ],
      "answer": "B",
@@ -3214,7 +3214,7 @@
          "id": "C",
          "text": "asks whether he promises to leave the tube alone",
          "correct": false,
-         "rationale": "A promise from a confused client is not an assessment."
+         "rationale": "A promise is not an assessment of his behavior."
         },
         {
          "id": "D",
@@ -3456,7 +3456,7 @@
        "id": "D",
        "text": "Keep her in bed until her legs are stronger",
        "correct": false,
-       "rationale": "Safe today, and it adds another day of the immobility that is weakening her."
+       "rationale": "Safe today, and it adds a day of immobility she does not need. She can sit, so she can be up in a chair."
       }
      ],
      "answer": "B",
@@ -3724,7 +3724,7 @@
        "id": "B",
        "text": "The nurse moves the arm through the full range while she relaxes",
        "correct": false,
-       "rationale": "Protects the joint, and tempting because the arm is weak. It wastes the strength she has, so the muscle keeps shrinking."
+       "rationale": "Protects the joint, and tempting because the arm is weak. It leaves the strength she has unused, and unused muscle weakens."
       },
       {
        "id": "C",
@@ -3975,7 +3975,7 @@
        "id": "D",
        "text": "Use a sit-to-stand lift to take him to the toilet",
        "correct": true,
-       "rationale": "He has some leg strength but cannot hold a stand for a count of 5. The lift lets him bear weight safely."
+       "rationale": "He has some leg strength but could not hold the stand; he dropped back after 2 seconds. The lift lets him bear weight safely."
       }
      ],
      "answer": "D",
@@ -3989,7 +3989,7 @@
       "steps": [
        {
         "action": "Use the failed test",
-        "detail": "He could not hold the hover for 5, so walking is out."
+        "detail": "He could not hold the stand past 2 seconds, so walking is out."
        },
        {
         "action": "Compare bed and lift",
@@ -4621,7 +4621,7 @@
        "id": "B",
        "text": "Request a urinary catheter to keep the bladder empty",
        "correct": false,
-       "rationale": "A catheter adds infection risk to a client who can void."
+       "rationale": "A catheter adds infection risk, and nothing in the stem shows a problem emptying the bladder."
       },
       {
        "id": "C",
@@ -4676,7 +4676,7 @@
        "id": "B",
        "text": "Leave the position and recheck at the next turn",
        "correct": false,
-       "rationale": "Two hours is too long to leave a client whose breathing has changed."
+       "rationale": "Waiting for the next turn leaves a client whose breathing has changed in the position that changed it."
       },
       {
        "id": "C",
@@ -4776,7 +4776,7 @@
      "id": "ch38-hd05",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A client who uses a walker at home is steady with it, but the walker was left at home. He asks to walk to the bathroom holding his IV pole. What does the nurse do?",
+     "stem": "A client who walks steadily only with his walker left it at home. He asks to walk to the bathroom holding his IV pole. What does the nurse do?",
      "options": [
       {
        "id": "A",
@@ -5012,7 +5012,7 @@
        "id": "C",
        "text": "At the foot of the bed, facing the door",
        "correct": false,
-       "rationale": "Lengthens the move and still leaves the weak side leading."
+       "rationale": "Lengthens the move and does not put the chair on his strong side."
       },
       {
        "id": "D",
@@ -5256,7 +5256,7 @@
      "id": "ch38-nx09",
      "type": "highlight",
      "difficulty": "nclex",
-     "nursesNote": "0900: 69-year-old, second day of treatment for pneumonia, prescribed hallway walks three times daily. Before admission she walked her dog every day without a device. Says her right knee is stiff on waking and loosens by breakfast. Stopped twice on the way to the bathroom to catch her breath. Says the room spun when she sat up this morning. Rates right hip pain 7 of 10 when she stands. Sat unsupported at the bedside and straightened both knees. Oxygen tubing from the wall reaches only as far as the door.",
+     "nursesNote": "0900: 69-year-old, second day of treatment for pneumonia, prescribed hallway walks three times daily. Before admission she walked her dog every day without a device. Says her right knee is stiff on waking and loosens by breakfast. Stopped twice on the way to the bathroom to catch her breath. Says the room spun when she sat up this morning. Rates right hip pain 7 of 10 when she stands. Sat unsupported at the bedside and straightened both knees. Receiving oxygen by nasal cannula from wall tubing that reaches only as far as the door.",
      "stem": "Highlight the findings that change how the nurse carries out this morning's walk.",
      "segments": [
       {
@@ -5297,7 +5297,7 @@
       },
       {
        "id": "s7",
-       "text": "Oxygen tubing from the wall reaches only as far as the door",
+       "text": "Receiving oxygen by nasal cannula from wall tubing that reaches only as far as the door",
        "correct": true,
        "rationale": "She needs portable oxygen to leave the room."
       }
@@ -5545,7 +5545,7 @@
        "id": "C",
        "text": "She bends her knees, holds him close and pivots her feet",
        "correct": true,
-       "rationale": "Wide base, load close to the body, leg muscles doing the work and no twisting."
+       "rationale": "Bent knees let her leg muscles do the work, the load stays close to her body and her feet turn so her spine does not twist."
       },
       {
        "id": "D",
@@ -5565,7 +5565,7 @@
       "steps": [
        {
         "action": "Look at the base and the knees",
-        "detail": "Wide stance, knees bent."
+        "detail": "Bent knees put the work in her legs. Feet together is a narrow base."
        },
        {
         "action": "Look at the distance",
@@ -5747,7 +5747,7 @@
     {
      "id": "ch38-g07",
      "type": "multiple_choice",
-     "stem": "Before a hip infection, a 82-year-old walked to her bathroom and kitchen with a wheeled walker. Which finding shows she has met her mobility goal for discharge?",
+     "stem": "Before a hip infection, an 82-year-old walked to her bathroom and kitchen with a wheeled walker. Which finding shows she has met her mobility goal for discharge?",
      "options": [
       {
        "id": "A",
@@ -6245,7 +6245,7 @@
          "id": "A",
          "text": "Kidney stone from immobility",
          "correct": true,
-         "rationale": "Unloaded bone releases calcium, and urine pools in the kidney when he lies flat. Colicky flank pain with blood fits a stone."
+         "rationale": "Unloaded bone releases calcium, and urine sits still and concentrated when he is immobile and drinks little. Colicky flank pain with blood fits a stone."
         },
         {
          "id": "B",
@@ -6373,7 +6373,7 @@
        "id": "D",
        "text": "Request a prescription for IV fluids",
        "correct": false,
-       "rationale": "She is alert and can drink, and it does nothing for the next two minutes."
+       "rationale": "She is alert, so oral fluids would be tried first, and it does nothing for the next two minutes."
       }
      ],
      "answer": "B",
@@ -6477,7 +6477,7 @@
        "id": "C",
        "text": "Flat T waves with a regular rhythm",
        "correct": false,
-       "rationale": "An expected ECG change. The rhythm is regular, so she stays on the monitor while you deal with breathing."
+       "rationale": "An expected ECG change. The rhythm is regular, so keep watching the rhythm while you deal with breathing."
       },
       {
        "id": "D",
@@ -7271,7 +7271,7 @@
        "id": "A",
        "text": "Recheck the fingerstick glucose now",
        "correct": false,
-       "rationale": "Tempting with insulin running. The glucose was just checked and weakness with a U wave is not how low glucose presents."
+       "rationale": "Tempting with insulin running. The last hourly check was 164, and weakness with a U wave is not how low glucose presents."
       },
       {
        "id": "B",
@@ -7289,7 +7289,7 @@
        "id": "D",
        "text": "Request a serum potassium level",
        "correct": true,
-       "rationale": "A fast insulin infusion moves potassium into cells. Weak legs and a U wave are the picture of low potassium."
+       "rationale": "An insulin infusion moves potassium into cells. Weak legs and a U wave are the picture of low potassium."
       }
      ],
      "answer": "D",
@@ -7303,7 +7303,7 @@
       "steps": [
        {
         "action": "Use the glucose in the stem",
-        "detail": "164 an hour ago rules out low glucose as the cause."
+        "detail": "164 at the last hourly check rules out low glucose as the cause."
        },
        {
         "action": "Read the monitor cue",
@@ -7418,13 +7418,13 @@
        "id": "C",
        "text": "Request a change to IV potassium",
        "correct": false,
-       "rationale": "IV potassium carries more risk. He is absorbing the oral doses, so the less invasive route stays."
+       "rationale": "IV potassium carries more risk. He is not vomiting, so the oral doses stay down and the less invasive route stays."
       },
       {
        "id": "D",
        "text": "Have him take the dose at bedtime",
        "correct": false,
-       "rationale": "An empty stomach at bedtime irritates just as much, and he would be lying down with it."
+       "rationale": "Bedtime is usually an empty stomach too, which irritates just as much, and he would be lying down with it."
       }
      ],
      "answer": "A",
@@ -7455,7 +7455,7 @@
     {
      "id": "ch42-v19",
      "type": "multiple_choice",
-     "stem": "A malnourished patient with alcohol use disorder still has a potassium of 3.0 mEq/L after 2 days of replacement. His reflexes are hyperactive. Which action does the nurse take?",
+     "stem": "A malnourished patient with alcohol use disorder still has a potassium of 3.0 mEq/L after 2 days of IV replacement. His reflexes are hyperactive. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -7627,7 +7627,7 @@
        "id": "A",
        "text": "Encourage extra oral fluids for the rest of the shift",
        "correct": false,
-       "rationale": "Tempting because it treats a deficit. It guesses at the problem in a patient who was overloaded yesterday."
+       "rationale": "Tempting because it treats a deficit. It guesses at the problem in a patient who was just treated for overload."
       },
       {
        "id": "B",
@@ -7650,7 +7650,7 @@
      ],
      "answer": "D",
      "takeaway": "A treatment can overshoot. When one finding does not fit a good result and nothing is urgent, measure it before you treat or call.",
-     "strategy": "Two findings say improved and one does not fit. He is in bed and the next dose is hours away, so there is time to assess.",
+     "strategy": "Two findings say improved and one does not fit. Nothing in the stem is an emergency and the next dose is hours away, so there is time to assess.",
      "elimination": {
       "strategies": [
        "Assessment before intervention",
@@ -7663,7 +7663,7 @@
        },
        {
         "action": "Check the urgency",
-        "detail": "He is not about to walk and the dose is 6 hours away."
+        "detail": "No finding in the stem is an emergency and the dose is 6 hours away."
        },
        {
         "action": "Choose between treating, calling and measuring",
@@ -7678,7 +7678,7 @@
      "id": "ch42-hd03",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A patient with heart failure had an intake of 1,400 mL and a recorded output of 2,300 mL yesterday. On the same scale before breakfast, he weighs 1.2 kg more. Which conclusion guides the nurse?",
+     "stem": "A patient with heart failure taking furosemide had an intake of 1,400 mL and a recorded output of 2,300 mL yesterday. On the same scale before breakfast, he weighs 1.2 kg more than yesterday. Which conclusion guides the nurse?",
      "options": [
       {
        "id": "A",
@@ -7696,7 +7696,7 @@
        "id": "C",
        "text": "The scale reading is likely an error, so reweigh tomorrow",
        "correct": false,
-       "rationale": "Reasonable if the method had changed. The stem says same scale, same time, so the reading stands."
+       "rationale": "Reasonable if the method had changed. The stem says same scale, before breakfast, so the reading stands."
       },
       {
        "id": "D",
@@ -8275,7 +8275,7 @@
       ],
       "steps": [
        {
-        "action": "Find the admission danger sign",
+        "action": "Find the danger sign in the stem",
         "detail": "Peaked T waves."
        },
        {
@@ -8330,7 +8330,7 @@
        "id": "F",
        "text": "She sleeps most of the day and is slow to wake",
        "correct": false,
-       "rationale": "Tempting to read as rest. New lethargy is a neurologic change and needs assessment."
+       "rationale": "Tempting to read as rest. Lethargy is a neurologic finding that needs assessment, not a sign that fluid balance is returning."
       }
      ],
      "answer": [
@@ -8339,7 +8339,7 @@
       "C",
       "D"
      ],
-     "takeaway": "Fluid replacement is working when the deficit signs reverse: pulse slows, standing is tolerated, weight returns and the mouth is moist. New edema or lethargy is a different problem.",
+     "takeaway": "Fluid replacement is working when the deficit signs reverse: pulse slows, standing is tolerated, weight returns and the mouth is moist. Edema or lethargy is a different problem.",
      "strategy": "For each option ask whether it is an admission sign going away or a new finding. Only signs that are going away count as improvement.",
      "elimination": {
       "strategies": [
@@ -8352,7 +8352,7 @@
        },
        {
         "action": "Test the new findings",
-        "detail": "Puffiness and lethargy were not there before."
+        "detail": "Puffiness and lethargy are not deficit signs going away."
        }
       ],
       "verdict": "A, B, C and D."
@@ -8449,7 +8449,7 @@
        "id": "D",
        "text": "Slow the tube feeding to half the current rate",
        "correct": false,
-       "rationale": "Cuts her calories and also cuts the little water she is getting."
+       "rationale": "Cuts her calories and also cuts the water the formula itself supplies."
       }
      ],
      "answer": "A",
@@ -8471,7 +8471,7 @@
        },
        {
         "action": "Pick the one that adds water",
-        "detail": "Flushes are her only source of free water."
+        "detail": "Flushes are how a tube fed patient gets free water."
        }
       ],
       "verdict": "Review the water flushes."
@@ -8490,7 +8490,7 @@
       },
       {
        "id": "B",
-       "text": "He is sleepy because the hours of earlier agitation have exhausted him",
+       "text": "He is sleepy because he is finally resting comfortably",
        "correct": false,
        "rationale": "A comfortable explanation that ignores a new headache with a falling level of consciousness."
       },
@@ -8526,7 +8526,7 @@
        },
        {
         "action": "Reject the reassuring reads",
-        "detail": "In range and tired both ignore the neurologic change."
+        "detail": "In range and resting both ignore the neurologic change."
        }
       ],
       "verdict": "Too fast, and the brain may be swelling."
@@ -8724,7 +8724,7 @@
        "id": "D",
        "text": "A repeat magnesium level in 12 hours",
        "correct": false,
-       "rationale": "Monitoring alone leaves a sedated patient with a rising risk of respiratory failure."
+       "rationale": "Monitoring alone leaves a patient who is hard to arouse with a rising risk of respiratory failure."
       }
      ],
      "answer": "C",
@@ -9036,7 +9036,7 @@
        "id": "A",
        "text": "Keep him on bed rest until he is stronger",
        "correct": false,
-       "rationale": "Tempting because he is weak, but immobility moves more calcium out of bone and raises his clot risk."
+       "rationale": "Tempting because high calcium causes weakness, but immobility moves more calcium out of bone and raises his clot risk."
       },
       {
        "id": "B",
@@ -9326,7 +9326,7 @@
        "id": "D",
        "text": "Give the instructions to his daughter by telephone",
        "correct": false,
-       "rationale": "This goes around him. He is able to learn once the nurse communicates the right way."
+       "rationale": "This goes around him. Hearing loss is a barrier to communication, not to learning, and the nurse has not yet communicated the right way."
       }
      ],
      "answer": "A",
@@ -9357,7 +9357,7 @@
     {
      "id": "ch49-v02",
      "type": "multiple_choice",
-     "stem": "A 31-year-old medical coder has burning eyes and blurred vision by midafternoon on workdays. Her eye exam last month was normal. Which instruction does the nurse give?",
+     "stem": "A 31-year-old who works at a computer all day has burning eyes and blurred vision by midafternoon on workdays. Her eye exam last month was normal. Which instruction does the nurse give?",
      "options": [
       {
        "id": "A",
@@ -9864,7 +9864,7 @@
        "id": "B",
        "text": "She speaks louder and repeats each question twice",
        "correct": false,
-       "rationale": "His hearing and understanding are intact. Volume does not help him produce words."
+       "rationale": "Expressive aphasia is a problem producing words, not hearing or understanding them. Volume does not help him speak."
       },
       {
        "id": "C",
@@ -10133,7 +10133,7 @@
        "id": "A",
        "text": "He denies pain in the ear",
        "correct": false,
-       "rationale": "He had no pain before. This shows no harm, not benefit."
+       "rationale": "Pain was not the problem being treated. This shows no harm, not benefit."
       },
       {
        "id": "B",
@@ -10514,7 +10514,7 @@
        "id": "B",
        "text": "Ask his wife what she thinks he is feeling",
        "correct": false,
-       "rationale": "She knows him well, but her guess replaces his own report when he can still answer."
+       "rationale": "A family member's guess replaces his own report. Expressive aphasia leaves understanding intact, so he can still answer yes or no."
       },
       {
        "id": "C",
@@ -10548,10 +10548,10 @@
        },
        {
         "action": "Pick the method that fits aphasia",
-        "detail": "Yes or no questions and pictures."
+        "detail": "Yes or no questions and a board."
        }
       ],
-      "verdict": "Assess the pain with yes or no questions and a picture board."
+      "verdict": "Assess the pain with yes or no questions and a board."
      }
     },
     {
@@ -10568,7 +10568,7 @@
       },
       {
        "id": "B",
-       "text": "Put his glasses on and brighten the room",
+       "text": "Brighten the room and reduce the glare",
        "correct": false,
        "rationale": "The usual first step for his known deficits and tempting here. Cataracts blur the whole field gradually, not one side overnight."
       },
@@ -11005,7 +11005,7 @@
     {
      "id": "ch49-nx06",
      "type": "multiple_choice",
-     "stem": "The nurse advised an 94-year-old bothered by glare to replace bare fluorescent tubes and cover her glossy kitchen table. Which finding best shows the changes worked?",
+     "stem": "The nurse advised a 94-year-old bothered by glare to replace bare fluorescent tubes and cover her glossy kitchen table. Which finding best shows the changes worked?",
      "options": [
       {
        "id": "A",
@@ -11325,7 +11325,7 @@
     {
      "id": "ch49-g01",
      "type": "multiple_choice",
-     "stem": "A sedated 47-year-old on a ventilator does not respond to voice. The assistive personnel bathes him in silence while discussing his prognosis with a coworker. Which action does the nurse take?",
+     "stem": "A sedated 47-year-old on a ventilator does not respond to voice. The assistive personnel bathes him without speaking to him while discussing his prognosis with a coworker. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -11429,19 +11429,19 @@
         "detail": "Reorientation fits confusion, and he is oriented."
        }
       ],
-      "verdict": "Add scheduled conversation and family contact."
+      "verdict": "Schedule unhurried staff visits and video calls."
      }
     },
     {
      "id": "ch49-g03",
      "type": "multiple_choice",
-     "stem": "A 48-year-old on day 3 in the ICU fidgets with his dressing and oxygen tubing, cannot hold a thought and needs frequent reorienting. He rates pain 2 of 10 and is afebrile. How does the nurse interpret this?",
+     "stem": "A 48-year-old on day 3 in the ICU after surgery fidgets with his dressing and oxygen tubing, cannot hold a thought and needs frequent reorienting. He rates pain 2 of 10 and is afebrile. How does the nurse interpret this?",
      "options": [
       {
        "id": "A",
        "text": "Too little meaningful input",
        "correct": false,
-       "rationale": "Deprivation also causes confusion, which makes it tempting. An ICU with constant alarms and care is excess, and his racing restlessness fits overload."
+       "rationale": "Deprivation also causes confusion, which makes it tempting. An ICU with constant alarms and care is excess, and his restlessness fits overload."
       },
       {
        "id": "B",
@@ -11528,7 +11528,7 @@
       "steps": [
        {
         "action": "List the two errors",
-        "detail": "Shouting at a client who hears normally, and moving her things."
+        "detail": "Loud, slow speech for a client whose deficit is vision, and moving her things."
        },
        {
         "action": "Find the option that fixes both",
@@ -11826,7 +11826,7 @@
        "id": "A",
        "text": "Repeat the sentence more slowly and loudly",
        "correct": false,
-       "rationale": "His hearing is intact. The problem is understanding language, and volume does not help."
+       "rationale": "Receptive aphasia is a problem understanding language, not hearing it, so volume does not help."
       },
       {
        "id": "B",
@@ -12003,13 +12003,13 @@
        "id": "C",
        "text": "She takes the client's arm and steers her to the chair",
        "correct": false,
-       "rationale": "The client should hold the guide's elbow and follow. Being pushed from behind removes her control."
+       "rationale": "The client should hold the guide's elbow and follow. Being steered removes her control."
       },
       {
        "id": "D",
        "text": "She completes the client's meal setup and feeds her",
        "correct": false,
-       "rationale": "Tempting as helpfulness. The client can feed herself once the tray is described."
+       "rationale": "Tempting as helpfulness. Blindness alone does not prevent self feeding, so the tray is described and she feeds herself."
       }
      ],
      "answer": "A",
@@ -12958,7 +12958,7 @@
        "id": "C",
        "text": "Fluid overload, so stop the infusion",
        "correct": false,
-       "rationale": "Tempting because overshoot is a real risk in older adults. Clear lungs and a value in the normal range argue against it, and she still needs the fluid."
+       "rationale": "Tempting because overshoot is a real risk in older adults. Clear lungs and a value in the normal range argue against it."
       },
       {
        "id": "D",
@@ -13178,7 +13178,7 @@
        "id": "A",
        "text": "Walk the patient in the hall three times a day",
        "correct": false,
-       "rationale": "Tempting because weight bearing protects bone. With nerves this excitable and fragile bones, the present need is calm and injury prevention."
+       "rationale": "Tempting because weight bearing protects bone. With nerves this excitable, the present need is calm and injury prevention."
       },
       {
        "id": "B",
@@ -13359,9 +13359,9 @@
       },
       {
        "id": "D",
-       "text": "Fluid overload, weight up 0.8 kg, ankle edema unchanged",
+       "text": "Fluid overload, weight up 0.8 kg, ankle edema unchanged, lungs clear",
        "correct": false,
-       "rationale": "Needs attention today. There is no breathing change, so this patient is stable for now."
+       "rationale": "Needs attention today. The lungs are clear, so this patient is stable for now."
       }
      ],
      "answer": "C",
@@ -13375,7 +13375,7 @@
       "steps": [
        {
         "action": "Cut the expected findings",
-        "detail": "A slow gut in high calcium under treatment, and edema with no breathing change."
+        "detail": "A slow gut in high calcium under treatment, and edema with clear lungs."
        },
        {
         "action": "Check the high potassium",
@@ -14479,7 +14479,7 @@
        "id": "D",
        "text": "Stop the IV and encourage oral fluids instead",
        "correct": false,
-       "rationale": "He needs IV volume. The problem is the type of fluid."
+       "rationale": "Hydration is the treatment, and oral intake alone is slower. The problem is the type of fluid, not the IV."
       }
      ],
      "answer": "B",
@@ -15167,7 +15167,7 @@
        "id": "B",
        "text": "Hold the fluid and question the order",
        "correct": false,
-       "rationale": "Tempting because hypotonic fluid is wrong for low blood pressure or a brain problem. Her pressure is now 118/72 and she has neither."
+       "rationale": "Tempting because hypotonic fluid is wrong for low blood pressure or a brain problem. The pressure is now 118/72 and no brain problem is reported."
       },
       {
        "id": "C",
@@ -15197,7 +15197,7 @@
        },
        {
         "action": "Check for a mismatch",
-        "detail": "No brain problem, and the pressure is no longer low."
+        "detail": "No brain problem is reported, and the pressure is no longer low."
        },
        {
         "action": "Cut the other fluids",
@@ -15436,7 +15436,7 @@
        "id": "A",
        "text": "Stop the infusion and notify the provider",
        "correct": false,
-       "rationale": "Tempting because the fluid is running too fast. Only 10 minutes have passed and the client has no symptoms, so the nurse corrects the rate and keeps monitoring."
+       "rationale": "Tempting because the fluid is running too fast. Only 10 minutes have passed and the client is comfortable, so the nurse corrects the rate and keeps monitoring."
       },
       {
        "id": "B",
@@ -15476,7 +15476,7 @@
        },
        {
         "action": "Test the stop option",
-        "detail": "No dyspnea and only 10 minutes at the wrong rate. Correct it and reassess."
+        "detail": "Comfortable, and only 10 minutes at the wrong rate. Correct it and reassess."
        }
       ],
       "verdict": "Set the clamp to 31 drops per minute."
@@ -15871,7 +15871,7 @@
          "id": "A",
          "text": "Infiltration",
          "correct": true,
-         "rationale": "Cool, pale, swollen skin, a slowed infusion and no blood return."
+         "rationale": "Cool, pale, puffy skin, a pump that keeps alarming and no blood return."
         },
         {
          "id": "B",
@@ -15913,7 +15913,7 @@
          "id": "C",
          "text": "Length of the red streak along the vein",
          "correct": false,
-         "rationale": "A phlebitis measure. No streak is present."
+         "rationale": "A phlebitis measure. This hand is cool and pale, not warm and red."
         },
         {
          "id": "D",
@@ -16003,7 +16003,7 @@
       "steps": [
        {
         "action": "Cut the large bore",
-        "detail": "No trauma and no need for speed."
+        "detail": "One unit at 84 does not call for rapid infusion."
        },
        {
         "action": "Cut the 24",
@@ -16538,7 +16538,7 @@
        "id": "A",
        "text": "Start the second unit of packed red blood cells",
        "correct": false,
-       "rationale": "It sounds routine because the first unit went well. Starting any unit of blood stays with the RN."
+       "rationale": "It sounds routine because it is a second unit. Starting any unit of blood stays with the RN."
       },
       {
        "id": "B",
@@ -16774,7 +16774,7 @@
        "id": "C",
        "text": "Restart the infusion lower in the same vein",
        "correct": false,
-       "rationale": "The next dose is due, which makes this tempting. Sites below a phlebitis are avoided, so the new catheter goes in the other arm."
+       "rationale": "Tempting because the vein is already located. Sites below a phlebitis are avoided, so a new catheter goes in the other arm."
       },
       {
        "id": "D",
@@ -16868,7 +16868,7 @@
      "id": "ig15-nx05",
      "type": "multiple_choice",
      "difficulty": "nclex",
-     "stem": "A phlebotomist prepares to draw morning labs just above a right forearm catheter infusing 0.9% sodium chloride in a 73-year-old. Which direction does the nurse give?",
+     "stem": "A phlebotomist prepares to draw morning labs just above a right forearm catheter infusing 0.9% sodium chloride in a 73-year-old. Her left arm has no IV or restrictions. Which direction does the nurse give?",
      "options": [
       {
        "id": "A",
@@ -17261,7 +17261,7 @@
        "id": "C",
        "text": "Platelet count rose to 210,000",
        "correct": false,
-       "rationale": "Plasma does not supply platelets, and his platelets were not the problem."
+       "rationale": "Plasma does not supply platelets. His bleeding came from a high INR."
       },
       {
        "id": "D",
@@ -17573,7 +17573,7 @@
     {
      "id": "ig15-g07",
      "type": "multiple_choice",
-     "stem": "After a missed IV attempt in the left forearm, a 71-year-old has a raised, bruised, tender lump at the puncture site. The fingers are warm and move well. Which action does the nurse take?",
+     "stem": "After a missed IV attempt in the left forearm, a 71-year-old has a raised, bruised, tender lump at the puncture site. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -17848,7 +17848,7 @@
     {
      "id": "ig15-g12",
      "type": "multiple_choice",
-     "stem": "A 33-year-old with obesity needs a peripheral IV. Two attempts in the forearm have failed, and no veins can be seen or felt. Which plan is best?",
+     "stem": "A 33-year-old with obesity needs a peripheral IV for a scheduled antibiotic. Two attempts in the forearm have failed, and no veins can be seen or felt. Which plan is best?",
      "options": [
       {
        "id": "A",
@@ -17909,7 +17909,7 @@
        "id": "A",
        "text": "Change the dressing to gauze so the site can be seen daily",
        "correct": false,
-       "rationale": "A transparent dressing already shows the site, and gauze needs changing more often."
+       "rationale": "Gauze hides the site and needs changing every 2 days. It does nothing about a line with no use."
       },
       {
        "id": "B",
@@ -17921,7 +17921,7 @@
        "id": "C",
        "text": "Draw blood cultures from the line as a precaution",
        "correct": false,
-       "rationale": "Cultures are for signs of infection. He has none."
+       "rationale": "Cultures are drawn for signs of infection, not as a routine on a clean site."
       },
       {
        "id": "D",
@@ -18179,7 +18179,7 @@
       },
       {
        "id": "C",
-       "text": "Apply a pressure patch to control the bleeding",
+       "text": "Apply a pressure patch over the eye",
        "correct": false,
        "rationale": "Pressure on a penetrated eye can push out its contents."
       },
@@ -18493,7 +18493,7 @@
     {
      "id": "ig39-v07",
      "type": "multiple_choice",
-     "stem": "A 69-year-old who is legally blind and lives alone receives her lunch tray. Which action does the nurse take?",
+     "stem": "A 69-year-old who is legally blind, lives alone and prepares her own meals receives her lunch tray. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -18517,12 +18517,12 @@
        "id": "D",
        "text": "Cut the food and butter the bread for her",
        "correct": false,
-       "rationale": "Kindly meant and less than feeding her, but she does these things herself at home once she knows where they are."
+       "rationale": "Kindly meant and less than feeding her, but she prepares her own meals at home and can do this once she knows where things are."
       }
      ],
      "answer": "A",
      "takeaway": "For vision loss: speak normally, describe in detail, allow touch. Give the least help that keeps the patient safe.",
-     "strategy": "Feeding her looks like the safety answer. The detail that she lives alone tells you she already feeds herself.",
+     "strategy": "Feeding her looks like the safety answer. The detail that she lives alone and prepares her own meals tells you she already feeds herself.",
      "elimination": {
       "strategies": [
        "Patient-centered option",
@@ -18531,7 +18531,7 @@
       "steps": [
        {
         "action": "Use the stem detail",
-        "detail": "She lives alone, so she eats without help."
+        "detail": "She lives alone and prepares her own meals, so she eats without help."
        },
        {
         "action": "Cut the two feeding options",
@@ -19558,7 +19558,7 @@
      "id": "ig39-hd05",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A client who is legally blind was shown the route to the bathroom once on admission. At 0200 she wants to walk there alone and refuses the bedpan. Which action does the nurse take?",
+     "stem": "A client who is legally blind and walks steadily was shown the route to the bathroom once on admission. At 0200 she wants to walk there alone and refuses the bedpan. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -19827,7 +19827,7 @@
        },
        {
         "action": "Pick the option that covers safety",
-        "detail": "Ride, sunglasses, expect blur."
+        "detail": "A ride and sunglasses until it wears off."
        }
       ],
       "verdict": "Ride home and sunglasses."
@@ -20370,7 +20370,7 @@
     {
      "id": "ig39-g03",
      "type": "multiple_choice",
-     "stem": "A 55-year-old who has taken prednisone for 3 years reports glare from headlights and faded colors. She asks for stronger glasses. Which action does the nurse take?",
+     "stem": "A 55-year-old who has taken prednisone for 3 years reports painless, gradually worsening headlight glare and faded colors. She asks for stronger glasses. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -20388,7 +20388,7 @@
        "id": "C",
        "text": "Advise her to stop the prednisone",
        "correct": false,
-       "rationale": "Corticosteroids are not stopped abruptly, and stopping would not clear a lens that is already opaque."
+       "rationale": "Corticosteroids are not stopped abruptly, and stopping would not reverse lens clouding that has already formed."
       },
       {
        "id": "D",
@@ -20535,7 +20535,7 @@
     {
      "id": "ig39-g06",
      "type": "multiple_choice",
-     "stem": "A client has used latanoprost in the right eye for 4 months. Her pressure is 15 mmHg. She notices the right iris is browner and its lashes are longer. How does the nurse evaluate this?",
+     "stem": "After 4 months of latanoprost in the right eye, a client's pressure is 15 mmHg. The right iris is browner with longer lashes. She has no pain, redness or vision change. How does the nurse evaluate this?",
      "options": [
       {
        "id": "A",
@@ -21507,7 +21507,7 @@
        "id": "A",
        "text": "Client with otitis media whose severe pain stopped suddenly an hour ago",
        "correct": false,
-       "rationale": "Tempting because it is unexpected and means the eardrum likely perforated. It must be reported, but the pressure is released and he is not in immediate danger."
+       "rationale": "Tempting because it is unexpected and means the eardrum likely perforated. It must be reported, but the pressure is released and the client is not in immediate danger."
       },
       {
        "id": "B",
@@ -21519,7 +21519,7 @@
        "id": "C",
        "text": "Client with Meniere disease standing at the sink who says the room began spinning",
        "correct": true,
-       "rationale": "She is upright during an attack and can drop without warning. An actual, immediate fall risk comes first."
+       "rationale": "The client is upright during an attack and can drop without warning. An actual, immediate fall risk comes first."
       },
       {
        "id": "D",
@@ -21529,7 +21529,7 @@
       }
      ],
      "answer": "C",
-     "takeaway": "Ear disorders are balance disorders. A client on her feet as vertigo starts is the one about to be injured.",
+     "takeaway": "Ear disorders are balance disorders. A client who is standing as vertigo starts is the one about to be injured.",
      "strategy": "Two clients have unexpected changes. Ask which one can be hurt in the next minute.",
      "elimination": {
       "strategies": [
@@ -21546,7 +21546,7 @@
        },
        {
         "action": "Choose the preventable injury",
-        "detail": "Get her seated or into bed now."
+        "detail": "Get the client seated or into bed now."
        }
       ],
       "verdict": "The standing client with Meniere disease."
@@ -22091,7 +22091,7 @@
       "F"
      ],
      "takeaway": "For a client who is deaf: interpreter services, face to face in good light, written material, and confirm understanding. Not family, not volume.",
-     "strategy": "The son is in the room and willing, which makes him tempting. Ask who is accountable for accuracy.",
+     "strategy": "A family member who signs is the convenient choice, which makes the son tempting. Ask who is accountable for accuracy.",
      "elimination": {
       "strategies": [
        "Treat each option as true or false"
@@ -22175,7 +22175,7 @@
          "id": "D",
          "text": "Meniere disease",
          "correct": false,
-         "rationale": "There is no vertigo, and Meniere disease does not cause fever."
+         "rationale": "Meniere disease causes vertigo and tinnitus. It does not cause fever or a bulging eardrum."
         }
        ]
       },
@@ -22670,7 +22670,7 @@
        "id": "C",
        "text": "Move closer and speak into his ear",
        "correct": false,
-       "rationale": "He loses her face and lips, which he is using."
+       "rationale": "Speaking into his ear hides her face and lips, which give visual cues to anyone with hearing loss."
       },
       {
        "id": "D",
@@ -22699,7 +22699,7 @@
        },
        {
         "action": "Cut volume and distance",
-        "detail": "Shouting distorts and the ear position hides her face."
+        "detail": "Shouting distorts and speaking into the ear hides her face."
        }
       ],
       "verdict": "Lower the pitch."
@@ -23062,7 +23062,7 @@
        "id": "s3",
        "text": "Follows conversation in the waiting room without asking for repeats",
        "correct": true,
-       "rationale": "The conductive hearing loss has cleared."
+       "rationale": "He follows conversation without asking for repeats, so the conductive hearing loss that otitis media causes is not present."
       },
       {
        "id": "s4",
@@ -23104,7 +23104,7 @@
       ],
       "steps": [
        {
-        "action": "List the original signs",
+        "action": "List the signs otitis media causes",
         "detail": "Fever, pain, hearing loss, bulging eardrum, tinnitus."
        },
        {
@@ -23308,7 +23308,7 @@
        "id": "A",
        "text": "Wear it all day so that he adjusts faster",
        "correct": false,
-       "rationale": "Full days in noise at the start is what is driving him to give up."
+       "rationale": "An aid amplifies background noise, so more hours of it in the first weeks is likely to make him give up sooner."
       },
       {
        "id": "B",
@@ -23595,7 +23595,7 @@
        "id": "C",
        "text": "Call the rapid response team for the change",
        "correct": false,
-       "rationale": "Tempting because the change is abrupt. It has a known cause and she has no other sign of instability."
+       "rationale": "Tempting because the change is abrupt. It has a known cause, and the stem gives no other sign of instability."
       },
       {
        "id": "D",
@@ -23864,7 +23864,7 @@
        "id": "B",
        "text": "\"Keep him in bed and offer the urinal until tomorrow.\"",
        "correct": false,
-       "rationale": "Tempting as the safest choice. He is allowed up with help, and the least restrictive safe option is used."
+       "rationale": "Tempting as the safest choice. Nothing in the stem restricts him to bed, and assisted walking is the least restrictive safe option."
       },
       {
        "id": "C",
@@ -23978,7 +23978,7 @@
     {
      "id": "ig40-g15",
      "type": "ordered_response",
-     "stem": "A client with external otitis has antibiotic ear drops prescribed, and the bottle has been stored in a cool cabinet. Place the nurse's steps in the correct order.",
+     "stem": "An adult with external otitis has antibiotic ear drops prescribed, and the bottle has been stored in a cool cabinet. Place the nurse's steps in the correct order.",
      "options": [
       {
        "id": "A",
@@ -24214,7 +24214,7 @@
     {
      "id": "ig41-v04",
      "type": "multiple_choice",
-     "stem": "A 59-year-old with diabetes cannot feel light touch on either foot and has weak ankles. Thigh strength is full. Which intervention leads the mobility plan?",
+     "stem": "A 59-year-old with diabetes cannot feel light touch on either foot. She can move both ankles, but weakly. Thigh strength is full. Which intervention leads the mobility plan?",
      "options": [
       {
        "id": "A",
@@ -24232,7 +24232,7 @@
        "id": "C",
        "text": "Passive range of motion to both ankles",
        "correct": false,
-       "rationale": "She can move her own joints, and this does nothing for lost sensation."
+       "rationale": "Passive motion keeps joints flexible but builds no strength and does nothing for lost sensation."
       },
       {
        "id": "D",
@@ -24394,7 +24394,7 @@
        "id": "A",
        "text": "Both calves are equal in size, soft and nontender",
        "correct": true,
-       "rationale": "No swelling, warmth or tenderness means no sign of thrombus, which is what the plan targets."
+       "rationale": "Equal, soft, nontender calves show no sign of thrombus, which is what the plan targets."
       },
       {
        "id": "B",
@@ -24515,7 +24515,7 @@
        "id": "C",
        "text": "A small bruise around the puncture site",
        "correct": false,
-       "rationale": "Tempting because it is visible and new. A small bruise is expected after a needle through tissue."
+       "rationale": "Tempting because it is visible. A small bruise is expected after a needle through tissue."
       },
       {
        "id": "D",
@@ -25469,13 +25469,13 @@
        "id": "A",
        "text": "Notify the provider of an absent pulse",
        "correct": false,
-       "rationale": "Tempting, because an absent pulse is a red flag. Every other part of the check is normal, so the pulse has not been shown to be absent yet, only hard to feel."
+       "rationale": "Tempting, because an absent pulse is a red flag. Every other finding given is normal, so the pulse has not been shown to be absent yet, only hard to feel."
       },
       {
        "id": "B",
        "text": "Use a Doppler to locate the pulse",
        "correct": true,
-       "rationale": "The other six parts of the check are normal, so finish the assessment. A Doppler finds a pulse that fingers cannot reach under a cast edge."
+       "rationale": "The other findings are normal, so finish the assessment. A Doppler finds a pulse that fingers cannot reach under a cast edge."
       },
       {
        "id": "C",
@@ -25637,7 +25637,7 @@
        "id": "A",
        "text": "Alkaline phosphatase above the normal range",
        "correct": false,
-       "rationale": "Tempting after a fall. Alkaline phosphatase rises with bone activity, and her x-rays show no fracture."
+       "rationale": "Tempting when a bone injury is suspected. Alkaline phosphatase rises with bone activity, and her x-rays show no fracture."
       },
       {
        "id": "B",
@@ -25811,7 +25811,7 @@
        "id": "B",
        "text": "Skip the exercises until she feels more rested",
        "correct": false,
-       "rationale": "Rest feels reasonable after surgery. Each skipped session on bed rest costs strength and raises clot risk."
+       "rationale": "Rest feels reasonable after surgery. Each skipped session after surgery costs strength and raises clot risk."
       },
       {
        "id": "C",
@@ -25933,7 +25933,7 @@
        "id": "C",
        "text": "Treat her pain before she goes to the scan",
        "correct": true,
-       "rationale": "She cannot hold still for up to an hour with uncontrolled rib pain."
+       "rationale": "She cannot hold still for up to an hour if the rib pain is not treated."
       },
       {
        "id": "D",
@@ -26365,7 +26365,7 @@
        "id": "B",
        "text": "Check her orientation and whether she follows directions",
        "correct": true,
-       "rationale": "Confusion and delirium are considered before anyone is asked to stand. A new change in thinking also needs its own follow-up."
+       "rationale": "Confusion and delirium are considered before anyone is asked to stand. Possible confusion also needs its own follow-up."
       },
       {
        "id": "C",
@@ -26390,7 +26390,7 @@
       ],
       "steps": [
        {
-        "action": "Find the new cue",
+        "action": "Find the cue",
         "detail": "Slow answers and the wrong name suggest confusion."
        },
        {
@@ -26608,7 +26608,7 @@
        "id": "C",
        "text": "Her fingers feel stiff, though she can move them all",
        "correct": false,
-       "rationale": "Stiffness with full movement and feeling is common beside a swollen joint."
+       "rationale": "Stiffness with full movement is common beside a swollen joint."
       },
       {
        "id": "D",
@@ -27039,7 +27039,7 @@
     {
      "id": "ig35-v03",
      "type": "multiple_choice",
-     "stem": "During an admission assessment, a 79-year-old gives answers unrelated to the questions. His hearing aids are in a bag at the bedside. Which action does the nurse take first?",
+     "stem": "During an admission assessment, a 79-year-old gives answers unrelated to the questions. His daughter is present. His hearing aids are in a bag at the bedside. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -27242,7 +27242,7 @@
       "steps": [
        {
         "action": "Name the response",
-        "detail": "Both arms flex to the chest no matter which hand is pressed. That is abnormal flexion."
+        "detail": "Both arms flex to the chest though only the right hand was pressed. That is abnormal flexion."
        },
        {
         "action": "Compare with 0400",
@@ -27271,7 +27271,7 @@
        "id": "B",
        "text": "Speak loudly and repeat each instruction twice, slowly",
        "correct": false,
-       "rationale": "Hearing and understanding are intact, so volume and repetition add nothing."
+       "rationale": "He follows commands correctly, so the message already gets through. Volume and repetition add nothing."
       },
       {
        "id": "C",
@@ -27923,7 +27923,7 @@
          "id": "D",
          "text": "Abnormal posturing from brain injury",
          "correct": false,
-         "rationale": "He moves all limbs normally."
+         "rationale": "He moves all four limbs equally, which is not posturing."
         }
        ]
       },
@@ -28266,7 +28266,7 @@
        "id": "B",
        "text": "Stroke 5 days ago with a limp left arm, crying and refusing breakfast",
        "correct": false,
-       "rationale": "Needs support and the weakness is stable. Nothing here is new."
+       "rationale": "Needs support, and the limp arm dates from the stroke 5 days ago. Nothing here is described as new."
       },
       {
        "id": "C",
@@ -28282,7 +28282,7 @@
       }
      ],
      "answer": "D",
-     "takeaway": "New beats dramatic. A quiet change in thinking after a head injury outranks severe findings that have not changed.",
+     "takeaway": "New beats dramatic. A quiet change in thinking after a fall outranks severe findings that have not changed.",
      "strategy": "Sort each patient as changed or unchanged before you look at how severe the finding sounds.",
      "elimination": {
       "strategies": [
@@ -28668,7 +28668,7 @@
        "id": "D",
        "text": "Place meal items on the left side of the tray",
        "correct": false,
-       "rationale": "Used for a lost visual field. Vision is intact here."
+       "rationale": "Used for a lost visual field. Bell palsy affects the facial nerve, not vision."
       }
      ],
      "answer": "A",
@@ -28686,7 +28686,7 @@
        },
        {
         "action": "Drop the vision aids",
-        "detail": "No double vision and no field loss."
+        "detail": "Bell palsy does not cause double vision or field loss."
        },
        {
         "action": "Weigh the swallow screen",
@@ -30552,7 +30552,7 @@
        "id": "B",
        "text": "Give a snack to keep the glucose up",
        "correct": false,
-       "rationale": "The patient has a facial droop and has not had a swallow screen."
+       "rationale": "A facial droop means aspiration risk, so nothing goes by mouth until a swallow screen."
       },
       {
        "id": "C",
@@ -30991,7 +30991,7 @@
          "id": "D",
          "text": "Give aspirin by mouth",
          "correct": false,
-         "rationale": "Worsens bleeding. He has had no swallow screen."
+         "rationale": "Worsens bleeding. A drowsy patient who is vomiting also takes nothing by mouth."
         }
        ]
       },
@@ -31015,7 +31015,7 @@
          "id": "C",
          "text": "Transient ischemic attack",
          "correct": false,
-         "rationale": "He is getting worse, not resolving."
+         "rationale": "His symptoms are severe and continuing, not resolving."
         },
         {
          "id": "D",
@@ -31548,9 +31548,9 @@
      "options": [
       {
        "id": "A",
-       "text": "Offer sips of water to a hungry patient admitted today",
+       "text": "Offer sips of water to a thirsty patient awaiting a swallow screen",
        "correct": false,
-       "rationale": "No swallow screen has been done. Hunger or thirst does not change that."
+       "rationale": "The swallow screen is not done yet. Thirst does not change that."
       },
       {
        "id": "B",
@@ -32105,13 +32105,13 @@
        "id": "C",
        "text": "Give his home aspirin with a sip of water",
        "correct": false,
-       "rationale": "Tempting, but nothing that affects clotting is given before a CT, and his swallow has not been screened."
+       "rationale": "Tempting, but nothing that affects clotting is given before a CT, and slurred speech means nothing by mouth until a swallow screen."
       },
       {
        "id": "D",
        "text": "Let him rest and repeat the check after breakfast",
        "correct": false,
-       "rationale": "He is alert, and that does not make him stable. Food is also unsafe before a swallow screen."
+       "rationale": "He is alert, and that does not make him stable. With slurred speech, food is also unsafe until a swallow screen."
       }
      ],
      "answer": "B",
@@ -32160,7 +32160,7 @@
        "id": "C",
        "text": "Move his belongings to the left side of the bed",
        "correct": false,
-       "rationale": "Reaching toward the weak, neglected side raises his fall risk."
+       "rationale": "Reaching toward the weak side raises his fall risk."
       },
       {
        "id": "D",
@@ -32778,7 +32778,7 @@
        "id": "C",
        "text": "Speak in a louder voice so the words are clear",
        "correct": false,
-       "rationale": "His hearing is intact. Slow down; do not raise the volume."
+       "rationale": "He understands what is said, so volume is not the problem. Slow down; do not raise the volume."
       },
       {
        "id": "D",
@@ -35656,7 +35656,7 @@
        "id": "A",
        "text": "Give the prescribed analgesic before breathing exercises",
        "correct": true,
-       "rationale": "Pain is why the breaths are shallow. Treating it makes deep breathing possible."
+       "rationale": "Incisional pain after abdominal surgery commonly keeps breaths shallow. Treating it makes deep breathing possible."
       },
       {
        "id": "B",
@@ -35680,7 +35680,7 @@
        "id": "E",
        "text": "Request an antibiotic to prevent infection",
        "correct": false,
-       "rationale": "No infection is present. Prevention here is movement and airway clearance."
+       "rationale": "The client is afebrile and no sign of infection is given. Prevention here is movement and airway clearance."
       },
       {
        "id": "F",
@@ -35996,7 +35996,7 @@
        },
        {
         "action": "Compare the two swim answers",
-        "detail": "A waterproof bandage still means removing the dressing early."
+        "detail": "A covered dressing is still taken into the pool inside the 8 hours it must stay dry."
        }
       ],
       "verdict": "Skips the pool and keeps the dressing dry."
@@ -36393,7 +36393,7 @@
         "detail": "Thin skin: turn, avoid tape, gentle bathing. Moist folds: air. Reduced sensation: measure water temperature."
        },
        {
-        "action": "Test the one about moving her",
+        "action": "Test the one about moving the client",
         "detail": "Sliding on the sheet edge drags skin over linen and causes shear."
        },
        {
@@ -36431,7 +36431,7 @@
        "id": "D",
        "text": "\"I will pick the scales off gently before I shampoo.\"",
        "correct": false,
-       "rationale": "Picking irritates an already inflamed scalp and treats nothing."
+       "rationale": "Picking irritates the scalp and treats nothing."
       }
      ],
      "answer": "B",
@@ -36453,7 +36453,7 @@
        },
        {
         "action": "Cut the one that injures",
-        "detail": "Picking scales inflames the scalp."
+        "detail": "Picking scales irritates the scalp."
        }
       ],
       "verdict": "Stop the oil and see the provider."
@@ -38534,13 +38534,13 @@
        "id": "A",
        "text": "\"I will give her a hot bath daily to keep her warm.\"",
        "correct": false,
-       "rationale": "Hot water and daily soap dry thin skin, and she feels heat poorly."
+       "rationale": "Hot water and daily soap dry thin skin, and hot water can burn it."
       },
       {
        "id": "B",
        "text": "\"I will put a heating pad under her at night.\"",
        "correct": false,
-       "rationale": "Reduced sensation makes burns likely."
+       "rationale": "Thin skin with little fat under it burns easily, and older adults often sense heat poorly."
       },
       {
        "id": "C",
@@ -39123,7 +39123,7 @@
        "id": "s6",
        "text": "Heels same temperature and firmness as surrounding skin, nontender",
        "correct": false,
-       "rationale": "No temperature change, firmness change or pain. Keep floating the heels."
+       "rationale": "No temperature change, firmness change or pain. Nothing here needs follow up."
       },
       {
        "id": "s7",
@@ -39514,7 +39514,7 @@
        "id": "r2",
        "text": "Heel shows redness that stays when pressed",
        "answer": "Plan needs revision",
-       "rationale": "Nonblanchable redness is new damage. The heels need to be floated."
+       "rationale": "Nonblanchable redness is new damage. The heel pillows are not keeping pressure off this heel."
       },
       {
        "id": "r3",
@@ -39941,7 +39941,7 @@
        "id": "D",
        "text": "Heel deep tissue injury that opened to a shallow ulcer overnight",
        "correct": false,
-       "rationale": "Tempting because it is a real change. Deep tissue injuries often open as they evolve, and this client has no sign of infection."
+       "rationale": "Tempting because it is a real change. Deep tissue injuries often open as they evolve, and the change described is local. No fever or drainage change is reported."
       }
      ],
      "answer": "C",
@@ -40430,7 +40430,7 @@
        "id": "B",
        "text": "The wound nurse for a different type of dressing",
        "correct": false,
-       "rationale": "Tempting because the wound is deep. The dressing plan is already working as designed and does not remove the pressure."
+       "rationale": "Tempting because the wound is deep. The dressing plan is already in place and followed, and no dressing removes the pressure."
       },
       {
        "id": "C",
@@ -40498,7 +40498,7 @@
        "id": "D",
        "text": "A tepid bath with moisturizer at bedtime",
        "correct": false,
-       "rationale": "Treats dry skin, and bath oil adds its own slipping risk."
+       "rationale": "Treats dry skin. It does nothing about the new drug's risk."
       }
      ],
      "answer": "C",
@@ -41143,7 +41143,7 @@
        "id": "C",
        "text": "The client asks for water less often",
        "correct": false,
-       "rationale": "Thirst is unreliable, and mouth sores limit drinking."
+       "rationale": "Thirst is subjective and does not measure circulating volume."
       },
       {
        "id": "D",
@@ -42877,7 +42877,7 @@
      "id": "sk14-hd01",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A 26-year-old with type 1 diabetes has a stomach virus and cannot keep food down. Her glucose is 190 mg/dL. Which statement shows the sick day teaching needs to be repeated?",
+     "stem": "A 26-year-old with type 1 diabetes has a stomach virus and cannot keep food down. Which statement shows the sick day teaching needs to be repeated?",
      "options": [
       {
        "id": "A",
@@ -43363,7 +43363,7 @@
       "steps": [
        {
         "action": "Part one",
-        "detail": "The meal is here and she is eating, so the scheduled dose is due."
+        "detail": "The tray has arrived, so the scheduled dose is due."
        },
        {
         "action": "Part two",
@@ -43605,7 +43605,7 @@
      "id": "sk14-nx09",
      "type": "sata",
      "difficulty": "nclex",
-     "stem": "At 1100 a 77-year-old who takes regular insulin before breakfast has a glucose of 57 mg/dL. After treating him, the nurse reviews the morning. Which findings could explain the low? Select all that apply.",
+     "stem": "At 1100 a 77-year-old who received regular insulin at 0700, before breakfast, has a glucose of 57 mg/dL. After treating him, the nurse reviews the morning. Which findings could explain the low? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -43617,7 +43617,7 @@
        "id": "B",
        "text": "He walked the hall for 30 minutes at 0930",
        "correct": true,
-       "rationale": "Exercise uses glucose, and it fell inside the insulin's peak."
+       "rationale": "Exercise uses glucose, and 0930 is 2.5 hours after the dose, inside the 2 to 4 hour peak."
       },
       {
        "id": "C",
@@ -43832,7 +43832,7 @@
          "id": "D",
          "text": "Encourage a walk to bring the glucose down",
          "correct": false,
-         "rationale": "Exercise with ketones present makes the ketosis worse."
+         "rationale": "Her signs point to ketones, and exercise with ketones makes the ketosis worse."
         }
        ]
       },
@@ -43862,7 +43862,7 @@
          "id": "D",
          "text": "Rebound after a night time low",
          "correct": false,
-         "rationale": "No low occurred. She has had no insulin at all."
+         "rationale": "A rebound follows a low in a client who is taking insulin. She has had no insulin for two days."
         }
        ]
       },
@@ -44002,7 +44002,7 @@
        },
        {
         "action": "Keep the middle",
-        "detail": "182 and 244 mg/dL, both falling with easing symptoms."
+        "detail": "182 and 244 mg/dL are both lower than 318 and neither is low."
        }
       ],
       "verdict": "Expected, follow up, follow up, expected, expected."
@@ -44451,7 +44451,7 @@
     {
      "id": "sk14-g12",
      "type": "multiple_choice",
-     "stem": "A 70-year-old with a prelunch glucose of 296 mg/dL says she will skip lunch to bring it down. After teaching, which statement shows she understood?",
+     "stem": "A 70-year-old on sliding scale insulin with a prelunch glucose of 296 mg/dL says she will skip lunch to bring it down. After teaching, which statement shows she understood?",
      "options": [
       {
        "id": "A",
