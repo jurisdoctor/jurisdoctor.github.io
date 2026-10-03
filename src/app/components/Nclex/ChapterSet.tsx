@@ -1,99 +1,14 @@
 "use client";
-import {
-  ReactNode,
-  useCallback,
-  useEffect,
-  useId,
-  useRef,
-  useState,
-} from "react";
+import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
 import Flash from "./Flash";
+import Glow from "./Glow";
+import { flameHueAt } from "./FlamePalette";
 import { ChapterType, displayNumberOf } from "./Questions";
 
 export type PickType = string;
 export type LensType = "all" | "incomplete";
 export type ResultType = "solved" | "missed";
-
-// A ring of fire along the tile's own border, sling-ring style, for flagging
-// new questions. An SVG rect (not a rotating conic-gradient) so it hugs the
-// actual rounded-rectangle shape regardless of the tile's aspect ratio. The
-// stroke is solid (no dash pattern) — the fire instead comes from a
-// hot-to-ember gradient whose angle keeps rotating via <animateTransform>,
-// so the brightest point sweeps around the whole ring rather than sitting
-// fixed in one corner. Every instance gets its own filter/gradient ids —
-// with dozens of these on screen at once, a shared id meant only the first
-// tile ever resolved correctly and the rest looked flat, which read as
-// "inconsistent".
-const Glow = ({ label }: { label: string }) => {
-  const uid = useId();
-  const filterId = `${uid}-blur`;
-  const gradientId = `${uid}-flame`;
-  return (
-    <svg
-      aria-label={label}
-      className="pointer-events-none absolute -inset-1 h-[calc(100%+8px)] w-[calc(100%+8px)] overflow-visible"
-    >
-      <defs>
-        <filter id={filterId} x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="2.2" />
-        </filter>
-        <linearGradient
-          id={gradientId}
-          x1="0%"
-          y1="0%"
-          x2="100%"
-          y2="100%"
-          gradientUnits="objectBoundingBox"
-        >
-          <animateTransform
-            attributeName="gradientTransform"
-            type="rotate"
-            from="0 0.5 0.5"
-            to="360 0.5 0.5"
-            dur="2.8s"
-            repeatCount="indefinite"
-          />
-          <stop offset="0%" stopColor="hsl(4, 90%, 38%)" />
-          <stop offset="22%" stopColor="hsl(14, 100%, 48%)" />
-          <stop offset="48%" stopColor="hsl(28, 100%, 58%)" />
-          <stop offset="70%" stopColor="hsl(38, 100%, 62%)" />
-          <stop offset="88%" stopColor="hsl(46, 100%, 74%)" />
-          <stop offset="100%" stopColor="hsl(52, 100%, 88%)" />
-        </linearGradient>
-      </defs>
-      <rect
-        x="5"
-        y="5"
-        width="calc(100% - 10px)"
-        height="calc(100% - 10px)"
-        rx="9"
-        fill="none"
-        stroke={`url(#${gradientId})`}
-        strokeWidth="4"
-        strokeLinecap="round"
-        pathLength={100}
-        className="glow-flicker"
-        filter={`url(#${filterId})`}
-        opacity={0.9}
-      />
-      <rect
-        x="5"
-        y="5"
-        width="calc(100% - 10px)"
-        height="calc(100% - 10px)"
-        rx="9"
-        fill="none"
-        stroke={`url(#${gradientId})`}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        pathLength={100}
-        className="glow-flicker"
-        style={{ animationDelay: "-0.35s" }}
-      />
-    </svg>
-  );
-};
 
 const Reset = ({ onReset }: { onReset: () => void }) => {
   const [confirming, setConfirming] = useState(false);
@@ -382,6 +297,17 @@ const ChapterSet = ({
     place(chapter.id);
   };
 
+  // A chapter's flame color follows its place in the chapter list (the New
+  // tile doesn't count), so it's stable across renders and the same for the
+  // chapter's own tile and for each of its questions shown in New.
+  const flameIndex = new Map(
+    chapters
+      .filter((chapter) => chapter.id !== "new")
+      .map((chapter, index) => [chapter.id, index] as const),
+  );
+  const hueOf = (chapterId: string) =>
+    flameHueAt(flameIndex.get(chapterId) ?? 0);
+
   const ready = chapters.filter((chapter) => chapter.questions.length > 0);
   const banked = ready.reduce(
     (sum, chapter) => sum + chapter.questions.length,
@@ -513,7 +439,9 @@ const ChapterSet = ({
                       }`
                 }`}
               >
-                {fresh && !isNew && <Glow label="Has new questions" />}
+                {fresh && !isNew && (
+                  <Glow label="Has new questions" hue={hueOf(chapter.id)} />
+                )}
                 <Fill {...progress} />
                 {isNew ? (
                   <span className="relative text-[9px] tracking-wide">NEW</span>
@@ -568,7 +496,12 @@ const ChapterSet = ({
             </span>
           </div>
 
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(2.5rem,1fr))] gap-2">
+          {/* On small screens a big set (the New section runs 200+ tiles)
+              would push everything else a few screens down, so the grid
+              scrolls inside itself instead. The p-2/-m-2 pair gives the
+              scroll box room for the flame ring and 🧱 that stick out past
+              each tile, which overflow clipping would otherwise cut off. */}
+          <div className="-m-2 grid grid-cols-[repeat(auto-fill,minmax(2.5rem,1fr))] gap-2 p-2 md:max-h-[45dvh] md:overflow-y-auto md:overscroll-contain">
             {shown.questions.map((question, index) => {
               const state = results[question.id];
               const here = current === question.id;
@@ -590,7 +523,10 @@ const ChapterSet = ({
                   }`}
                 >
                   {(question.new || question.dailySet) && !state && (
-                    <Glow label="New question" />
+                    <Glow
+                      label="New question"
+                      hue={hueOf(question.homeChapterId ?? shown.id)}
+                    />
                   )}
                   {question.difficulty === "difficult" && (
                     <span
