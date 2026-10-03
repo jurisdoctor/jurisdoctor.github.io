@@ -68,7 +68,7 @@ const useMedia = (query: string) => {
 // ring), and on small screens the blurred halo — the expensive part, one
 // filter per tile — becomes a plain translucent wider stroke instead.
 // Reduced-motion users get the still ring everywhere.
-const Glow = ({ label, hue = 28 }: { label: string; hue?: number }) => {
+const Glow = ({ label, hue }: { label: string; hue?: number }) => {
   const uid = useId();
   const filterId = `${uid}-blur`;
   const gradientId = `${uid}-flame`;
@@ -109,7 +109,7 @@ const Glow = ({ label, hue = 28 }: { label: string; hue?: number }) => {
               repeatCount="indefinite"
             />
           )}
-          {flameStops(hue).map((stop) => (
+          {flameStops(hue ?? 28, hue === undefined ? 1 : 0.25).map((stop) => (
             <stop
               key={stop.offset}
               offset={stop.offset}

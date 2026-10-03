@@ -4,34 +4,38 @@
 // section all burn the same color. Neighbours in the list are kept far apart
 // on the color wheel so adjacent chapters never look alike.
 //
-// `hue` is the middle of the flame (the orange-ish stop in the original
-// ember look); the Glow component spreads the rest of its gradient around it.
+// `hue` is the color of the flame; each chapter uses the same one for every
+// tile, so the color identifies the chapter and is never random.
 export interface FlameColor {
   name: string;
   hue: number;
 }
 
 export const FLAME_PALETTE: FlameColor[] = [
-  { name: "Ember", hue: 28 },
-  { name: "Cobalt", hue: 220 },
-  { name: "Lime", hue: 85 },
-  { name: "Magenta", hue: 315 },
-  { name: "Teal", hue: 175 },
-  { name: "Gold", hue: 46 },
-  { name: "Violet", hue: 265 },
-  { name: "Crimson", hue: 355 },
-  { name: "Sky", hue: 195 },
-  { name: "Chartreuse", hue: 65 },
-  { name: "Rose", hue: 335 },
+  // The first twelve sit exactly 30 degrees apart on the color wheel and are
+  // ordered so neighbours in the list are far apart; a bank with up to twelve
+  // chapter groups never reuses a color or puts two similar ones side by side.
+  { name: "Red", hue: 0 },
+  { name: "Mint", hue: 150 },
+  { name: "Magenta", hue: 300 },
+  { name: "Lime", hue: 90 },
   { name: "Indigo", hue: 240 },
-  { name: "Green", hue: 130 },
-  { name: "Scarlet", hue: 10 },
+  { name: "Ember", hue: 30 },
+  { name: "Cyan", hue: 180 },
+  { name: "Rose", hue: 330 },
+  { name: "Green", hue: 120 },
+  { name: "Violet", hue: 270 },
+  { name: "Gold", hue: 60 },
+  { name: "Azure", hue: 210 },
+  // The rest fall between those, for banks with more chapters.
+  { name: "Crimson", hue: 345 },
+  { name: "Cobalt", hue: 225 },
+  { name: "Emerald", hue: 135 },
+  { name: "Amber", hue: 45 },
+  { name: "Fuchsia", hue: 315 },
+  { name: "Sky", hue: 195 },
+  { name: "Chartreuse", hue: 105 },
   { name: "Orchid", hue: 285 },
-  { name: "Mint", hue: 155 },
-  { name: "Amber", hue: 36 },
-  { name: "Azure", hue: 207 },
-  { name: "Fuchsia", hue: 303 },
-  { name: "Moss", hue: 100 },
 ];
 
 // Where each stop sits relative to the flame's hue, and its saturation and
@@ -48,10 +52,14 @@ const STOPS: [offset: number, hue: number, sat: number, light: number][] = [
 
 const wrap = (hue: number) => ((hue % 360) + 360) % 360;
 
-export const flameStops = (hue: number) =>
+// `spread` scales how far the stops stray from the base hue. 1 is the
+// original red-to-yellow ember; a chapter's flame uses a small value so the
+// whole ring reads as that chapter's one color, with only its lightness
+// (dark rim to pale tip) changing as the gradient turns.
+export const flameStops = (hue: number, spread = 1) =>
   STOPS.map(([offset, shift, sat, light]) => ({
     offset: `${offset}%`,
-    color: `hsl(${wrap(hue + shift)}, ${sat}%, ${light}%)`,
+    color: `hsl(${wrap(hue + shift * spread)}, ${sat}%, ${light}%)`,
   }));
 
 export const flameHueAt = (index: number) =>
