@@ -486,7 +486,7 @@ const ChapterSet = ({
           {/* On small screens a big set (the New section runs 200+ tiles)
               would push everything else a few screens down, so the grid
               scrolls inside itself instead. The p-2/-m-2 pair gives the
-              scroll box room for the flame ring and 🧱 that stick out past
+              scroll box room for the flame ring and 💀 that stick out past
               each tile, which overflow clipping would otherwise cut off. */}
           <div className="-m-2 grid grid-cols-[repeat(auto-fill,minmax(2.5rem,1fr))] gap-2 p-2 md:max-h-[45dvh] md:overflow-y-auto md:overscroll-contain">
             {shown.questions.map((question, index) => {
@@ -518,7 +518,7 @@ const ChapterSet = ({
                       title="Difficult question"
                       className="pointer-events-none absolute -right-1 -top-1 text-[11px] leading-none"
                     >
-                      🧱
+                      💀
                     </span>
                   )}
                   {question.ordinal ?? index + 1}

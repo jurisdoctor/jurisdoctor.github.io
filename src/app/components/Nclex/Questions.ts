@@ -486,7 +486,7 @@ export const buildBank = (
         title: entry.title,
         subtitle: entry.subtitle,
         // Difficult questions are pulled to the end, in their original
-        // relative order (Array.sort is stable), so the 🧱 marks sit together
+        // relative order (Array.sort is stable), so the 💀 marks sit together
         // as one block of tiles instead of being scattered mid-chapter.
         questions: [...own, ...join]
           .sort((a, b) => difficultRank(a) - difficultRank(b))
