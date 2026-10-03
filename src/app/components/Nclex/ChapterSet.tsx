@@ -297,13 +297,11 @@ const ChapterSet = ({
     place(chapter.id);
   };
 
-  // A chapter's flame color follows its place in the chapter list (the New
-  // tile doesn't count), so it's stable across renders and the same for the
-  // chapter's own tile and for each of its questions shown in New.
+  // A chapter's flame color follows its place in the chapter list, so it's
+  // stable across renders and the same for the chapter's own tile and for
+  // every new question inside it.
   const flameIndex = new Map(
-    chapters
-      .filter((chapter) => chapter.id !== "new")
-      .map((chapter, index) => [chapter.id, index] as const),
+    chapters.map((chapter, index) => [chapter.id, index] as const),
   );
   const hueOf = (chapterId: string) =>
     flameHueAt(flameIndex.get(chapterId) ?? 0);
@@ -395,18 +393,13 @@ const ChapterSet = ({
             const here = open === chapter.id;
             const progress = progressOf(chapter.id);
             const wet = progress.solved + progress.missed > 0;
-            const isNew = chapter.id === "new";
-            // A graduated question (answered while it was in New, now
-            // living in its real chapter) still carries its new/dailySet
-            // flag from the data, so exclude anything already answered —
-            // otherwise a chapter would keep glowing for content that's
-            // actually done.
-            const fresh =
-              isNew ||
-              chapter.questions.some(
-                (question) =>
-                  (question.new || question.dailySet) && !results[question.id],
-              );
+            // A question keeps its new/dailySet flag from the data after it's
+            // answered, so exclude anything already answered — otherwise a
+            // chapter would keep glowing for content that's actually done.
+            const fresh = chapter.questions.some(
+              (question) =>
+                (question.new || question.dailySet) && !results[question.id],
+            );
             return (
               <button
                 key={chapter.id}
@@ -424,28 +417,22 @@ const ChapterSet = ({
                     : `${labelFor(chapter)} · no questions yet`
                 }
                 className={`relative h-10 rounded-lg border-2 border-solid text-xs font-bold duration-300 ${
-                  isNew
-                    ? "border-transparent bg-[hsl(38,100%,55%)] text-white motion-safe:animate-tileBounce"
-                    : `bg-[var(--container-color)] ${
-                        !count
-                          ? "cursor-not-allowed border-transparent text-[#d3d0e4]"
-                          : here
-                            ? "border-[var(--primary-color)] text-[var(--title-color)]"
-                            : active === chapter.id
-                              ? "border-[var(--chip-blue-border)] text-[var(--title-color)]"
-                              : wet
-                                ? "border-transparent text-[var(--title-color)] hover:border-[hsl(219,100%,80%)]"
-                                : "border-transparent text-[var(--muted-color)] hover:border-[hsl(219,100%,80%)] hover:text-[var(--title-color)]"
-                      }`
-                }`}
+                  !count
+                    ? "cursor-not-allowed border-transparent text-[#d3d0e4]"
+                    : here
+                      ? "border-[var(--primary-color)] text-[var(--title-color)]"
+                      : active === chapter.id
+                        ? "border-[var(--chip-blue-border)] text-[var(--title-color)]"
+                        : wet
+                          ? "border-transparent text-[var(--title-color)] hover:border-[hsl(219,100%,80%)]"
+                          : "border-transparent text-[var(--muted-color)] hover:border-[hsl(219,100%,80%)] hover:text-[var(--title-color)]"
+                } bg-[var(--container-color)]`}
               >
-                {fresh && !isNew && (
+                {fresh && (
                   <Glow label="Has new questions" hue={hueOf(chapter.id)} />
                 )}
                 <Fill {...progress} />
-                {isNew ? (
-                  <span className="relative text-[9px] tracking-wide">NEW</span>
-                ) : chapter.members && chapter.members.length > 1 ? (
+                {chapter.members && chapter.members.length > 1 ? (
                   <Flash
                     items={chapter.members.map((member, memberIndex) => (
                       <span key={memberIndex}>{member.chapterNumber}</span>
@@ -523,10 +510,7 @@ const ChapterSet = ({
                   }`}
                 >
                   {(question.new || question.dailySet) && !state && (
-                    <Glow
-                      label="New question"
-                      hue={hueOf(question.homeChapterId ?? shown.id)}
-                    />
+                    <Glow label="New question" hue={hueOf(shown.id)} />
                   )}
                   {question.difficulty === "difficult" && (
                     <span

@@ -11,11 +11,7 @@ import {
   isExamId,
   loadBank,
 } from "./Bank";
-import ChapterSet, {
-  LensType,
-  PickType,
-  ResultType,
-} from "./ChapterSet";
+import ChapterSet, { LensType, PickType, ResultType } from "./ChapterSet";
 import Flash from "./Flash";
 import { ChapterType, DerivedBank, labelOf, QuestionType } from "./Questions";
 import Quiz from "./Quiz";
@@ -149,51 +145,6 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     setHashes(current);
   }, [bank, resultsReady, hashesReady]);
 
-  // bank.New/bank.Chapters is the static "untouched" split: a fresh
-  // question stays out of its chapter there until a later drop clears its
-  // new/dailySet flag. Once the learner has actually answered it, though,
-  // it should show up in its real chapter right away rather than waiting
-  // on that — so graduate any answered New question into the chapter
-  // bank.New.homeChapterId says it belongs to, and drop it out of New.
-  const { effectiveChapters, effectiveNew } = useMemo(() => {
-    if (!bank.New)
-      return { effectiveChapters: bank.Chapters, effectiveNew: null };
-
-    const stillNew: QuestionType[] = [];
-    const graduates = new Map<string, QuestionType[]>();
-    bank.New.questions.forEach((question) => {
-      if (!results[question.id]) {
-        stillNew.push(question);
-        return;
-      }
-      const home = question.homeChapterId ?? "";
-      graduates.set(home, [...(graduates.get(home) ?? []), question]);
-    });
-
-    const chapters = bank.Chapters.map((chapter) => {
-      const extra = graduates.get(chapter.id);
-      if (!extra?.length) return chapter;
-      return {
-        ...chapter,
-        questions: [...chapter.questions, ...extra].map((question, index) => ({
-          ...question,
-          ordinal: index + 1,
-        })),
-      };
-    });
-
-    // Keep each question's own ordinal rather than renumbering 1..N here —
-    // bank.New already assigned those once, and reassigning them on every
-    // graduation would shift every later question's number down each time
-    // one answered question leaves, making the list look like it reshuffled
-    // instead of just losing the one you finished.
-    const newGroup: ChapterType | null = stillNew.length
-      ? { ...bank.New, questions: stillNew }
-      : null;
-
-    return { effectiveChapters: chapters, effectiveNew: newGroup };
-  }, [bank, results]);
-
   const groups =
     section === "skills"
       ? bank.Skills
@@ -201,9 +152,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
         ? bank.Cases
         : section === "judgment"
           ? bank.Judgment
-          : effectiveNew
-            ? [effectiveNew, ...effectiveChapters]
-            : effectiveChapters;
+          : bank.Chapters;
   const noun =
     section === "skills"
       ? "skills"
@@ -264,41 +213,6 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     setLens(which);
     open("all", 0, viewFor(which));
   };
-
-  // A "New" run freezes its deck like any other pick, so answering a
-  // question mid-run doesn't yank the feedback you're reading out from
-  // under you. But New is specifically meant to shrink as you go — each
-  // answer graduates that question into its real chapter — so once you
-  // land back on a question that's since graduated (by stepping onto it
-  // with Next, or by redoing one you already finished), resync to what's
-  // actually still new instead of continuing to show a stale snapshot.
-  const resyncNew = useCallback(
-    (targetAt: number) => {
-      if (pick !== "new" || !started) return;
-      const currentId = deck[targetAt]?.id;
-      if (
-        currentId &&
-        effectiveNew?.questions.some((q) => q.id === currentId)
-      ) {
-        return;
-      }
-      if (effectiveNew?.questions.length) {
-        open("new", 0, [effectiveNew, ...effectiveChapters]);
-      } else {
-        setStarted(null);
-        setDeck([]);
-      }
-    },
-    [pick, started, deck, effectiveNew, effectiveChapters],
-  );
-
-  // Keyed only on `at`/`pick`, not on results/effectiveNew directly, so
-  // answering the question currently on screen never triggers this — only
-  // actually moving on (Next) does.
-  useEffect(() => {
-    resyncNew(at);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [at, pick]);
 
   const progressOf = useCallback(
     (id: string) => {
@@ -480,7 +394,6 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
               results={results}
               onResult={mark}
               onMove={setAt}
-              onRedo={resyncNew}
             />
           </>
         )}

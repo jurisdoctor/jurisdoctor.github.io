@@ -262,7 +262,9 @@ export const displayNumberOf = (chapter: ChapterType) =>
 
 export const labelOf = (chapter: ChapterType) => {
   if (chapter.members && chapter.members.length > 1) {
-    const numbers = chapter.members.map((member) => member.chapterNumber).join(" & ");
+    const numbers = chapter.members
+      .map((member) => member.chapterNumber)
+      .join(" & ");
     return `Chapters ${numbers} · ${chapter.title}`;
   }
   return /^\d+$/.test(chapter.id)
@@ -278,7 +280,9 @@ const mergeGroups = (
   groups: ChapterGroupType[] | undefined,
 ): BankType[] => {
   if (!groups?.length) return chapters;
-  const byId = new Map(chapters.map((chapter) => [String(chapter.id), chapter]));
+  const byId = new Map(
+    chapters.map((chapter) => [String(chapter.id), chapter]),
+  );
   const consumed = new Set<string>();
 
   return chapters.reduce<BankType[]>((merged, chapter) => {
@@ -311,7 +315,6 @@ const mergeGroups = (
     return merged;
   }, []);
 };
-
 
 const strip = (text: string) =>
   text
@@ -413,7 +416,11 @@ interface ExtraType extends QuestionType {
 }
 
 interface RawBankFile {
-  meta: { course: string; textbook: string; chapterGroups?: ChapterGroupType[] };
+  meta: {
+    course: string;
+    textbook: string;
+    chapterGroups?: ChapterGroupType[];
+  };
   chapters: BankType[];
   skills?: BankType[];
 }
@@ -427,11 +434,6 @@ export interface DerivedBank {
   Skills: ChapterType[];
   Cases: ChapterType[];
   Judgment: ChapterType[];
-  // A synthetic tile bundling every question currently flagged new/dailySet,
-  // for quick review. It's a filtered view, not a move: once a question
-  // loses the flag in a later drop it just stops showing up here and is
-  // only found in its real chapter, same as it always was.
-  New: ChapterType | null;
   Ready: ChapterType[];
   AllQuestions: QuestionType[];
   AllSkillQuestions: QuestionType[];
@@ -458,7 +460,10 @@ const caseKey = (question: QuestionType) =>
 const difficultRank = (question: QuestionType) =>
   question.difficulty === "difficult" ? 1 : 0;
 
-export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => {
+export const buildBank = (
+  data: RawBankFile,
+  extra?: ExtraFile,
+): DerivedBank => {
   const added = (extra?.items ?? []).reduce((map, item) => {
     const bucket = map.get(item.chapter) ?? [];
     bucket.push(item);
@@ -486,10 +491,10 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
         questions: [...own, ...join]
           .sort((a, b) => difficultRank(a) - difficultRank(b))
           .map((question, index) => ({
-          ...question,
-          ordinal: index + 1,
-          contentHash: contentHashOf(question),
-        })),
+            ...question,
+            ordinal: index + 1,
+            contentHash: contentHashOf(question),
+          })),
       };
     });
 
@@ -497,8 +502,6 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
     mergeGroups(data.chapters, data.meta.chapterGroups),
     !!extra,
   );
-
-  const isFresh = (question: QuestionType) => !!(question.new || question.dailySet);
 
   const readyForChapters: ChapterType[] = banked.map((chapter) => ({
     ...chapter,
@@ -518,39 +521,15 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
     }))
     .filter((chapter) => chapter.questions.length > 0);
 
-  const New: ChapterType | null = (() => {
-    const fresh = readyForChapters.flatMap((chapter) =>
-      chapter.questions
-        .filter(isFresh)
-        .map((question) => ({ ...question, homeChapterId: chapter.id })),
-    );
-    if (!fresh.length) return null;
-    // Chapters are concatenated in order above, so without shuffling a
-    // chapter with many fresh questions would run as one long unbroken
-    // block (e.g. 15 skin questions, then 15 of the next chapter). A fixed
-    // seed keeps the mix stable across reloads of the same drop rather than
-    // reshuffling, and reordering, on every render.
-    return {
-      id: "new",
-      title: "New",
-      questions: shuffled(fresh, "new-tile").map((question, index) => ({
-        ...question,
-        ordinal: index + 1,
-      })),
-    };
-  })();
-
-  // Fresh-and-unanswered questions live only in the New tile; once a later
-  // drop clears the flag they stop matching here and fall straight back
-  // into this filter's normal output, no separate "move" needed. A fresh
-  // question the learner has already answered graduates into this same
-  // list sooner than that, client-side in Nclex.tsx (see effectiveChapters)
-  // — this static split is the "hasn't been touched yet" baseline.
+  // Fresh (new/dailySet) questions stay in their own chapter, where the tile
+  // glows until they're answered (see ChapterSet) — there is no separate
+  // "New" bucket to move them in and out of.
   const Chapters: ChapterType[] = readyForChapters.map((chapter) => ({
     ...chapter,
-    questions: chapter.questions
-      .filter((question) => !isFresh(question))
-      .map((question, index) => ({ ...question, ordinal: index + 1 })),
+    questions: chapter.questions.map((question, index) => ({
+      ...question,
+      ordinal: index + 1,
+    })),
   }));
 
   const Skills: ChapterType[] = group(data.skills ?? [], false);
@@ -587,7 +566,8 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
   const ContentHashes: Record<string, string> = {};
   [...banked, ...Skills].forEach((entry) =>
     entry.questions.forEach((question) => {
-      if (question.contentHash) ContentHashes[question.id] = question.contentHash;
+      if (question.contentHash)
+        ContentHashes[question.id] = question.contentHash;
     }),
   );
 
@@ -596,7 +576,6 @@ export const buildBank = (data: RawBankFile, extra?: ExtraFile): DerivedBank => 
     Skills,
     Cases,
     Judgment,
-    New,
     Ready: Chapters.filter((chapter) => chapter.questions.length > 0),
     AllQuestions: Chapters.flatMap((chapter) => chapter.questions),
     AllSkillQuestions: Skills.flatMap((skill) => skill.questions),
