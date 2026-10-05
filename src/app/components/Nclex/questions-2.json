@@ -971,7 +971,7 @@
     {
      "id": "ch27-v03",
      "type": "multiple_choice",
-     "stem": "A post-fall huddle reviews a client's 0300 fall on the way to the bathroom. Universal precautions were in place and he had voided with staff at 0230. Zolpidem was started that evening. Which change does the team make?",
+     "stem": "A post-fall huddle reviews a client's 0300 fall on the way to the bathroom. Universal fall precautions were in place and he had voided with staff at 0230. Zolpidem, a sleep medication, was started that evening. Which change does the team make?",
      "options": [
       {
        "id": "A",
@@ -1017,7 +1017,7 @@
       "steps": [
        {
         "action": "List what was already in place",
-        "detail": "Universal precautions and a toileting visit at 0230."
+        "detail": "Universal fall precautions and a toileting visit at 0230."
        },
        {
         "action": "Cut what repeats it",
@@ -1418,7 +1418,7 @@
     {
      "id": "ch27-v11",
      "type": "multiple_choice",
-     "stem": "A client weak after a long illness has a fall plan that includes assisted walking. Which finding at the end of the shift indicates the plan is working?",
+     "stem": "A woman weak after a long illness has a fall plan that includes assisted walking. Which finding at the end of the shift indicates the plan is working?",
      "options": [
       {
        "id": "A",
@@ -1481,7 +1481,7 @@
      "id": "ch27-v12",
      "type": "matrix",
      "scenario": "A client has had bilateral soft wrist restraints for 2 hours after pulling out a central line. The nurse releases one wrist at a time for the scheduled check.",
-     "stem": "For each finding, indicate whether it shows the restraint care is effective or requires the nurse to act.",
+     "stem": "For each finding, indicate whether it shows the restraint care is effective or requires the nurse to act. Choose requires action for any finding that means the nurse must change the care, including removing the restraints.",
      "columns": [
       "Care is effective",
       "Requires action"
@@ -1966,7 +1966,7 @@
      "options": [
       {
        "id": "A",
-       "text": "Agree on a night light and help at night",
+       "text": "Agree on a night light and staff help at night",
        "correct": true,
        "rationale": "It keeps her daytime independence, targets the one new limitation and is made with her."
       },
@@ -2019,7 +2019,7 @@
         "detail": "An alarm and a commode leave her standing alone. An agreed plan gives light and help."
        }
       ],
-      "verdict": "Agree on a night light and help at night. Targeted and shared."
+      "verdict": "Agree on a night light and staff help at night. Targeted and shared."
      }
     },
     {
@@ -2101,7 +2101,7 @@
        "id": "B",
        "text": "Had a seizure ten minutes ago, sleepy and slow to answer",
        "correct": false,
-       "rationale": "Looks alarming, and drowsiness after a seizure is expected. He still answers when spoken to."
+       "rationale": "Looks alarming, and drowsiness after a seizure is expected. The client still answers when spoken to."
       },
       {
        "id": "C",
@@ -2146,7 +2146,7 @@
         "detail": "A toileting need is voiced by an alert client. Repeating questions after a fall is a new brain cue."
        }
       ],
-      "verdict": "The client who fell and is now repeating himself."
+      "verdict": "The client who fell and is now repeating the same question."
      }
     },
     {
@@ -2439,7 +2439,7 @@
        "id": "s6",
        "text": "Demonstrates call light use correctly",
        "correct": false,
-       "rationale": "A universal precaution already met."
+       "rationale": "A universal fall precaution already met."
       },
       {
        "id": "s7",
@@ -3197,7 +3197,7 @@
     {
      "id": "ch27-g09",
      "type": "multiple_choice",
-     "stem": "A 67-year-old who lives alone and fell twice this year was taught home safety before discharge. Which statement shows the teaching was effective?",
+     "stem": "A 67-year-old woman who lives alone and fell twice this year was taught home safety before discharge. Which statement shows the teaching was effective?",
      "options": [
       {
        "id": "A",
@@ -3310,7 +3310,7 @@
        },
        {
         "action": "Protect the approaching client",
-        "detail": "Keep her away from the area."
+        "detail": "Keep the client away from the area."
        },
        {
         "action": "Identify before cleaning",
@@ -3323,7 +3323,7 @@
     {
      "id": "ch27-g11",
      "type": "multiple_choice",
-     "stem": "A client scored low fall risk on admission yesterday. Since surgery he has received IV hydromorphone and has a urinary catheter and an IV pole. How does the nurse interpret the admission score?",
+     "stem": "A client scored low fall risk on admission yesterday. Since surgery he has received IV hydromorphone, an opioid, and has a urinary catheter and an IV pole. How does the nurse interpret the admission score?",
      "options": [
       {
        "id": "A",
@@ -3431,7 +3431,7 @@
       ],
       "steps": [
        {
-        "action": "Check each against universal precautions",
+        "action": "Check each against universal fall precautions",
         "detail": "Low bed, footwear and possessions in reach all pass."
        },
        {
@@ -3644,7 +3644,7 @@
     {
      "id": "ch27-g15",
      "type": "bowtie",
-     "scenario": "A 78-year-old with heart failure is alert, oriented and steady when walking with staff by day. Furosemide was scheduled at 2000 starting two nights ago. On both nights staff found her hurrying to the bathroom alone, and she says she could not wait.",
+     "scenario": "A 78-year-old with heart failure is alert, oriented and steady when walking with staff by day. Furosemide, a diuretic, was scheduled at 2000 starting two nights ago. On both nights staff found her hurrying to the bathroom alone, and she says she could not wait.",
      "stem": "Complete the diagram by selecting 2 actions the nurse takes, the 1 problem the client is most likely experiencing, and 2 parameters the nurse monitors.",
      "pools": {
       "actions": {
@@ -3923,7 +3923,7 @@
        "id": "A",
        "text": "An 82-year-old who wears glasses and walks steadily",
        "correct": false,
-       "rationale": "Tempting because she is the oldest, but her sensory change is corrected and her gait is steady."
+       "rationale": "Tempting because she is the oldest, but the sensory change is corrected and the gait is steady."
       },
       {
        "id": "B",
@@ -3935,13 +3935,13 @@
        "id": "C",
        "text": "A 36-year-old on bed rest who calls for the bedpan",
        "correct": false,
-       "rationale": "He stays in bed and asks for help, so his exposure is low."
+       "rationale": "This client stays in bed and asks for help, so exposure is low."
       },
       {
        "id": "D",
        "text": "A 61-year-old who is newly confused and has urinary urgency",
        "correct": true,
-       "rationale": "Confusion leads to unsafe attempts to get up, and urgency makes her rush to the bathroom. Two intrinsic factors act together in one client."
+       "rationale": "Confusion leads to unsafe attempts to get up, and urgency makes the client rush to the bathroom. Two intrinsic factors act together in one client."
       }
      ],
      "answer": "D",
@@ -4498,7 +4498,7 @@
     {
      "id": "ch27-sp23",
      "type": "multiple_choice",
-     "stem": "A client has worn wrist restraints for 2 days for pulling at his endotracheal tube. The tube was removed this morning, and he is calm. The order runs until evening. Which action does the nurse take?",
+     "stem": "A client has worn wrist restraints for 2 days for pulling at his endotracheal tube. The provider removed the tube this morning, and he is calm. The order runs until evening. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -4706,13 +4706,13 @@
        "id": "A",
        "text": "A confused client who is climbing out of bed without help",
        "correct": true,
-       "rationale": "Confusion leads to unsafe attempts to get up, and he is in the act of doing it. This is the only report with harm seconds away."
+       "rationale": "Confusion leads to unsafe attempts to get up, and this client is in the act of doing it. This is the only report with harm seconds away."
       },
       {
        "id": "B",
        "text": "A client in wrist restraints who is shouting and pulling against them",
        "correct": false,
-       "rationale": "Rising agitation in restraints needs the nurse soon, but he is contained for the moment. The client climbing out of bed can fall in seconds."
+       "rationale": "Rising agitation in restraints needs the nurse soon, but this client is contained for the moment. The client climbing out of bed can fall in seconds."
       },
       {
        "id": "C",
@@ -4724,7 +4724,7 @@
        "id": "D",
        "text": "A weak client sitting in a chair who wants help back to bed",
        "correct": false,
-       "rationale": "He is seated and asking for help, so he is safe for a few minutes."
+       "rationale": "This client is seated and asking for help, so is safe for a few minutes."
       }
      ],
      "answer": "A",
@@ -5107,7 +5107,7 @@
     {
      "id": "ch38-v03",
      "type": "multiple_choice",
-     "stem": "A 70-year-old with left leg weakness is taught to walk with a straight cane. Which observation shows the teaching was effective?",
+     "stem": "A 70-year-old man with left leg weakness is taught to walk with a straight cane. Which observation shows the teaching was effective?",
      "options": [
       {
        "id": "A",
@@ -5228,7 +5228,7 @@
     {
      "id": "ch38-v05",
      "type": "multiple_choice",
-     "stem": "A thin patient kept at 60 degrees slides down the bed each hour, and staff drag him back up by the arms. Which change addresses the cause of his skin risk?",
+     "stem": "A thin patient kept with the head of the bed at 60 degrees slides down the bed each hour, and staff drag him back up by the arms. Which change addresses the cause of his skin risk?",
      "options": [
       {
        "id": "A",
@@ -6062,7 +6062,7 @@
        "id": "C",
        "text": "Retained secretions",
        "correct": true,
-       "rationale": "Secretions he cannot clear lead to atelectasis and pneumonia. Breathing outranks skin."
+       "rationale": "Secretions the patient cannot clear lead to atelectasis and pneumonia. Breathing outranks skin."
       },
       {
        "id": "D",
@@ -6424,7 +6424,7 @@
     {
      "id": "ch38-hd04",
      "type": "multiple_choice",
-     "stem": "A client with COPD walks 100 feet. Pulse rises from 84 to 108 and respirations to 28. Five minutes after sitting, pulse is 104 and respirations 28. What is the plan for the next walk?",
+     "stem": "A man with COPD walks 100 feet. Pulse rises from 84 to 108 and respirations from 18 to 28 per minute. Five minutes after sitting, pulse is 104 and respirations 28. What is the plan for the next walk?",
      "options": [
       {
        "id": "A",
@@ -6796,7 +6796,7 @@
      "id": "ch38-nx05",
      "type": "multiple_choice",
      "difficulty": "nclex",
-     "stem": "A 65-year-old with coronary artery disease is cleared to begin a walking program. Which statement shows the teaching was effective?",
+     "stem": "A 65-year-old man with coronary artery disease is cleared to begin a walking program. Which statement shows the teaching was effective?",
      "options": [
       {
        "id": "A",
@@ -7587,7 +7587,7 @@
     {
      "id": "ch38-g09",
      "type": "multiple_choice",
-     "stem": "A 22-year-old with a right ankle fracture was taught to climb stairs on crutches. Which observation shows the teaching was effective?",
+     "stem": "A 22-year-old man with a right ankle fracture was taught to climb stairs on crutches. Which observation shows the teaching was effective?",
      "options": [
       {
        "id": "A",
@@ -8139,7 +8139,7 @@
        "id": "B",
        "text": "One who asked to rest twice and finished the planned distance",
        "correct": false,
-       "rationale": "Rest stops are part of pacing. He completed the walk."
+       "rationale": "Rest stops are part of pacing. The planned distance was completed."
       },
       {
        "id": "C",
@@ -8151,7 +8151,7 @@
        "id": "D",
        "text": "One who is still breathing fast and feels dizzy in the chair",
        "correct": true,
-       "rationale": "Dyspnea and dizziness are responses to watch, and the ability to recover afterward is part of activity tolerance. Fifteen minutes later she has not recovered."
+       "rationale": "Dyspnea and dizziness are responses to watch, and the ability to recover afterward is part of activity tolerance. Fifteen minutes later this client has not recovered."
       }
      ],
      "answer": "D",
@@ -8210,13 +8210,13 @@
        "id": "C",
        "text": "Deep breathing and coughing every hour while awake",
        "correct": false,
-       "rationale": "This protects his lungs while he is in bed and is not an exercise load to hold."
+       "rationale": "This protects the lungs during bed rest and is not an exercise load to hold."
       },
       {
        "id": "D",
        "text": "Turning from side to side every 2 hours",
        "correct": false,
-       "rationale": "Tempting to stop all movement to rest his heart. Turning protects his skin and lungs and must continue."
+       "rationale": "Tempting to stop all movement to rest the heart. Turning protects the skin and lungs and must continue."
       }
      ],
      "answer": "A",
@@ -8604,13 +8604,13 @@
        "id": "C",
        "text": "Offer 240 mL of oral fluid every hour while awake",
        "correct": true,
-       "rationale": "Hydration helps prevent venous stasis only as appropriate for the client. Even 8 hours of this is 1,920 mL, well over his limit, and would overload a failing heart."
+       "rationale": "Hydration helps prevent venous stasis only as appropriate for the client. Even 8 hours of this is 1,920 mL, well over the limit, and would overload a failing heart."
       },
       {
        "id": "D",
        "text": "Advance activity each day as he tolerates it",
        "correct": false,
-       "rationale": "Progressive activity is the goal for every immobile client, paced to his tolerance."
+       "rationale": "Progressive activity is the goal for every immobile client, paced to tolerance."
       }
      ],
      "answer": "C",
@@ -8631,11 +8631,11 @@
       "steps": [
        {
         "action": "Name the polarity",
-        "detail": "You want the measure that does not fit him."
+        "detail": "You want the measure that does not fit this client."
        },
        {
         "action": "Use the stem fact",
-        "detail": "1,500 mL a day is his limit."
+        "detail": "1,500 mL a day is the limit."
        },
        {
         "action": "Find the conflict",
@@ -8718,13 +8718,13 @@
        "id": "A",
        "text": "A client due for a bedside mobility assessment after surgery",
        "correct": false,
-       "rationale": "The mobility assessment decides how he may be moved. Assessing and setting the plan stay with the nurse."
+       "rationale": "The mobility assessment decides how the client may be moved. Assessing and setting the plan stay with the nurse."
       },
       {
        "id": "B",
        "text": "A stable client who has walked the hall with help for 2 days",
        "correct": true,
-       "rationale": "Assisting with mobility according to the plan is delegated. He is stable and his plan is set."
+       "rationale": "Assisting with mobility according to the plan is delegated. The client is stable and the plan is set."
       },
       {
        "id": "C",
@@ -8736,7 +8736,7 @@
        "id": "D",
        "text": "A client who became dizzy when sitting up an hour ago",
        "correct": false,
-       "rationale": "Tempting because he only needs to try again. Dizziness is a change, and the nurse evaluates whether the plan still fits before he moves."
+       "rationale": "Tempting because the client only needs to try again. Dizziness is a change, and the nurse evaluates whether the plan still fits before the client moves."
       }
      ],
      "answer": "B",
@@ -8840,7 +8840,7 @@
     {
      "id": "ch38-sp27",
      "type": "multiple_choice",
-     "stem": "A client who cannot bear weight is due to be up in the chair for lunch. The mechanical lift is in use for 20 minutes. Assistive personnel offer to lift him with the nurse. Which action does the nurse take?",
+     "stem": "A client who cannot bear weight is due to be up in the chair for lunch. The mechanical lift will be in use elsewhere for the next 20 minutes. Assistive personnel offer to lift him with the nurse. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -9041,7 +9041,7 @@
     {
      "id": "ch42-v02",
      "type": "multiple_choice",
-     "stem": "Potassium chloride prescribed at 5 to 10 mEq per hour is running at 10 through a forearm IV. The patient reports burning. The site is soft, pale and has a brisk blood return. Which action does the nurse take?",
+     "stem": "Potassium chloride prescribed at 5 to 10 mEq per hour is running at 10 through a forearm IV. The patient reports burning. The site is soft, not red or swollen, and has a brisk blood return. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -9053,7 +9053,7 @@
        "id": "B",
        "text": "Continue at 10 mEq per hour and recheck in an hour",
        "correct": false,
-       "rationale": "Burning is common with potassium, but leaving the rate unchanged ignores her pain and keeps irritating the vein."
+       "rationale": "Burning is common with potassium, but leaving the rate unchanged ignores the patient's pain and keeps irritating the vein."
       },
       {
        "id": "C",
@@ -9085,7 +9085,7 @@
       "steps": [
        {
         "action": "Use the site findings",
-        "detail": "Soft, pale, brisk blood return. The catheter is still in the vein."
+        "detail": "Soft, not red or swollen, brisk blood return. The catheter is still in the vein."
        },
        {
         "action": "Compare stop and slow",
@@ -9163,7 +9163,7 @@
     {
      "id": "ch42-v04",
      "type": "multiple_choice",
-     "stem": "A 66-year-old taking a thiazide has a sodium of 124 mEq/L, a weak thready pulse and dry mucous membranes. Which prescription does the nurse clarify with the provider?",
+     "stem": "A 66-year-old woman taking a thiazide has a sodium of 124 mEq/L, a weak thready pulse and dry mucous membranes. Which prescription does the nurse clarify with the provider?",
      "options": [
       {
        "id": "A",
@@ -9487,7 +9487,7 @@
     {
      "id": "ch42-v08",
      "type": "multiple_choice",
-     "stem": "A patient taking lisinopril and spironolactone has a potassium of 5.4 mEq/L and receives diet teaching. Which statement indicates the teaching was effective?",
+     "stem": "A man taking lisinopril and spironolactone has a potassium of 5.4 mEq/L and receives diet teaching. Which statement indicates the teaching was effective?",
      "options": [
       {
        "id": "A",
@@ -10622,7 +10622,7 @@
      "id": "ch42-nx01",
      "type": "multiple_choice",
      "difficulty": "nclex",
-     "stem": "A 53-year-old using a morphine pump after surgery is drowsy with respirations of 10. Arterial blood gas: pH 7.31, PaCO2 54 mm Hg. Which action does the nurse take first?",
+     "stem": "A 53-year-old using a morphine pump after surgery is drowsy with respirations of 10 per minute. Arterial blood gas: pH 7.31, PaCO2 54 mm Hg. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -11004,7 +11004,7 @@
       },
       {
        "id": "B",
-       "text": "Blood pressure is lower when she lies flat",
+       "text": "Blood pressure is low even when she lies flat",
        "correct": false,
        "rationale": "Pressure that is low lying down is a late sign. The body holds pressure up until compensation fails."
       },
@@ -11444,7 +11444,7 @@
     {
      "id": "ch42-g06",
      "type": "multiple_choice",
-     "stem": "A patient with kidney failure who makes no urine has a magnesium of 4.2 mEq/L and is hard to arouse. IV calcium has been given. Which prescription does the nurse anticipate next?",
+     "stem": "A man with kidney failure who makes no urine has a magnesium of 4.2 mEq/L and is hard to arouse. IV calcium has been given. Which prescription does the nurse anticipate next?",
      "options": [
       {
        "id": "A",
@@ -11627,7 +11627,7 @@
     {
      "id": "ch42-g09",
      "type": "multiple_choice",
-     "stem": "A patient with kidney disease has a sodium of 151 mEq/L, a bounding pulse and edema to both knees. Which prescription does the nurse anticipate?",
+     "stem": "A man with kidney disease has a sodium of 151 mEq/L, a bounding pulse and edema to both knees. Which prescription does the nurse anticipate?",
      "options": [
       {
        "id": "A",
@@ -12347,7 +12347,7 @@
      "id": "ch42-sp20",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A 90-year-old has been NPO for 14 hours awaiting a delayed procedure. Maintenance IV fluid was prescribed but not started. She has voided 60 mL of dark urine since midnight. Which action does the nurse take?",
+     "stem": "A 90-year-old has been NPO for 14 hours awaiting a delayed procedure. Maintenance IV fluid was prescribed but not started. She has voided 60 mL of dark urine in the past 8 hours. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -12391,7 +12391,7 @@
       "steps": [
        {
         "action": "Read the cue",
-        "detail": "60 mL of dark urine since midnight means the kidneys are conserving water."
+        "detail": "60 mL of dark urine in 8 hours means the kidneys are conserving water."
        },
        {
         "action": "Cut what adds no fluid",
@@ -14126,7 +14126,7 @@
      "options": [
       {
        "id": "A",
-       "text": "Cataract surgery yesterday, eye itchy with slightly blurred vision",
+       "text": "Cataract surgery yesterday, operated eye itchy with slightly blurred vision",
        "correct": false,
        "rationale": "Itching and mild blurring are expected early; best vision takes weeks."
       },
@@ -14134,11 +14134,11 @@
        "id": "B",
        "text": "Meniere disease, vomiting during a spinning attack since morning",
        "correct": false,
-       "rationale": "Dramatic and miserable, and expected for an attack. She needs safety and antiemetics, not emergency care."
+       "rationale": "Dramatic and miserable, and expected for an attack. The client needs safety and antiemetics, not emergency care."
       },
       {
        "id": "C",
-       "text": "Cataract surgery yesterday, worsening pain in that eye with nausea",
+       "text": "Cataract surgery yesterday, worsening pain in the operated eye with nausea",
        "correct": true,
        "rationale": "Pain with nausea after eye surgery suggests rising pressure in the eye and must be reported at once."
       },
@@ -14205,7 +14205,7 @@
       },
       {
        "id": "D",
-       "text": "Ask yes or no questions about the pain with a board",
+       "text": "Ask yes or no questions about the pain, using a communication board",
        "correct": true,
        "rationale": "The assessment is not done yet. Yes or no questions and a board let him tell the nurse where and what the pain is."
       }
@@ -14737,7 +14737,7 @@
     {
      "id": "ch49-nx07",
      "type": "multiple_choice",
-     "stem": "A 57-year-old who has trouble seeing while driving at dusk was taught safer driving habits. Which statement shows the teaching was effective?",
+     "stem": "A 57-year-old man who has trouble seeing while driving at dusk was taught safer driving habits. Which statement shows the teaching was effective?",
      "options": [
       {
        "id": "A",
@@ -14861,7 +14861,7 @@
     {
      "id": "ch49-nx09",
      "type": "sata",
-     "stem": "A home health nurse visits a 93-year-old with reduced vision and poor balance. Which observations does the nurse identify as hazards to correct? Select all that apply.",
+     "stem": "A home health nurse visits a 93-year-old woman with reduced vision and poor balance. Which observations does the nurse identify as hazards to correct? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -15469,7 +15469,7 @@
        "id": "r2",
        "text": "In the emergency department hallway for 9 hours, restless, startles at each overhead page",
        "answer": "Reduce stimulation",
-       "rationale": "Constant noise and activity that she cannot filter."
+       "rationale": "Constant noise and activity that the client cannot filter."
       },
       {
        "id": "r3",
@@ -16306,7 +16306,7 @@
      "id": "ch49-sp24",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A 92-year-old admitted from home scores low on a mental status screening. His daughter then arrives with his hearing aids and glasses, which he was not wearing during the screening. Which action does the nurse take?",
+     "stem": "A 92-year-old admitted from home scores in the impaired range on a mental status screening. His daughter then arrives with his hearing aids and glasses, which he was not wearing during the screening. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -16369,7 +16369,7 @@
      "id": "ch49-sp25",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A 60-year-old in protective isolation for 9 days is tearful, bored and slow to solve simple problems. The television runs all day, and masked staff enter briefly for tasks. Which change does the nurse make?",
+     "stem": "A 60-year-old man in protective isolation for 9 days is tearful, bored and slow to solve simple problems. The television runs all day, and masked staff enter briefly for tasks. Which change does the nurse make?",
      "options": [
       {
        "id": "A",
@@ -16565,7 +16565,7 @@
     {
      "id": "ig13-v02",
      "type": "multiple_choice",
-     "stem": "One hour after regular insulin with dextrose for a potassium of 6.4 mEq/L, a patient is sweaty, shaky and anxious. Which action does the nurse take first?",
+     "stem": "One hour after regular insulin with dextrose for a potassium of 6.4 mEq/L, a man is sweaty, shaky and anxious. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -16808,7 +16808,7 @@
     {
      "id": "ig13-v06",
      "type": "multiple_choice",
-     "stem": "The evening after a thyroidectomy, a patient who reported tingling lips now makes a high-pitched sound with each breath in. Which action does the nurse take first?",
+     "stem": "The evening after a thyroidectomy, a woman who reported tingling lips now makes a high-pitched sound with each breath in. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -17060,7 +17060,7 @@
     {
      "id": "ig13-v10",
      "type": "multiple_choice",
-     "stem": "A patient with kidney failure who takes a magnesium antacid daily is drowsy with absent knee jerks and respirations of 9. Which prescription does the nurse anticipate first?",
+     "stem": "A man with kidney failure who takes a magnesium antacid daily is drowsy with absent knee jerks and respirations of 9 per minute. Which prescription does the nurse anticipate first?",
      "options": [
       {
        "id": "A",
@@ -17399,7 +17399,7 @@
       },
       {
        "id": "B",
-       "text": "Apply the compression device to that leg",
+       "text": "Apply the compression device to the left leg",
        "correct": false,
        "rationale": "Compression on a leg with a suspected clot can dislodge it."
       },
@@ -17411,7 +17411,7 @@
       },
       {
        "id": "D",
-       "text": "Keep the leg still and notify the provider",
+       "text": "Keep the left leg still and notify the provider",
        "correct": true,
        "rationale": "High calcium raises clot risk in the legs and pelvis. A warm, larger calf is reported promptly while the leg is protected."
       }
@@ -17443,7 +17443,7 @@
         "detail": "A possible clot is not rechecked in four hours."
        }
       ],
-      "verdict": "Keep the leg still and notify the provider."
+      "verdict": "Keep the left leg still and notify the provider."
      }
     },
     {
@@ -17501,7 +17501,7 @@
        },
        {
         "action": "Apply it to this patient",
-        "detail": "His brain cells have no room to swell."
+        "detail": "Brain cells inside a rigid skull have no room to swell."
        }
       ],
       "verdict": "Hold it and clarify the fluid."
@@ -17645,7 +17645,7 @@
     {
      "id": "ig13-v19",
      "type": "multiple_choice",
-     "stem": "A patient with kidney failure had a magnesium of 3.4 mEq/L after using a magnesium laxative daily. Which statement shows the discharge teaching was understood?",
+     "stem": "A man with kidney failure had a magnesium of 3.4 mEq/L after using a magnesium laxative daily. Which statement shows the discharge teaching was understood?",
      "options": [
       {
        "id": "A",
@@ -17827,7 +17827,7 @@
     {
      "id": "ig13-hd02",
      "type": "multiple_choice",
-     "stem": "A patient with a magnesium of 1.0 mEq/L has received IV magnesium sulfate for 3 hours. Her reflexes went from 4+ to 1+ and she is newly drowsy. Respirations are 14. Which action does the nurse take?",
+     "stem": "A patient with a magnesium of 1.0 mEq/L has received IV magnesium sulfate for 3 hours. Her reflexes went from 4+ to 1+ and she is newly drowsy. Respirations are 14 per minute. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -18072,7 +18072,7 @@
      "id": "ig13-nx01",
      "type": "multiple_choice",
      "difficulty": "nclex",
-     "stem": "A 47-year-old with a high-output ileostomy has a weak rapid pulse, a blood pressure of 94/56 and a sodium of 138 mEq/L. Which prescription does the nurse anticipate?",
+     "stem": "A 47-year-old woman with a high-output ileostomy has a weak rapid pulse, a blood pressure of 94/56 and a sodium of 138 mEq/L. Which prescription does the nurse anticipate?",
      "options": [
       {
        "id": "A",
@@ -18400,7 +18400,7 @@
        "id": "C",
        "text": "Fatigue from the retained waste products",
        "correct": false,
-       "rationale": "Real and chronic. It does not threaten him today."
+       "rationale": "Real and chronic. It does not threaten life today."
       },
       {
        "id": "D",
@@ -18994,7 +18994,7 @@
     {
      "id": "ig13-g11",
      "type": "multiple_choice",
-     "stem": "A patient with fluid overload is going home on a 1.2 L daily fluid restriction. Which statement shows the teaching was effective?",
+     "stem": "A man with fluid overload is going home on a 1.2 L daily fluid restriction. Which statement shows the teaching was effective?",
      "options": [
       {
        "id": "A",
@@ -20371,7 +20371,7 @@
        "id": "C",
        "text": "Keep the 0.9% sodium chloride running for now",
        "correct": false,
-       "rationale": "Isotonic fluid refilled the vessels. Staying on it leaves the cells dry and adds volume she no longer needs."
+       "rationale": "Isotonic fluid refilled the vessels. Staying on it leaves the cells dry and adds volume the client no longer needs."
       },
       {
        "id": "D",
@@ -20609,7 +20609,7 @@
        "id": "A",
        "text": "Sodium 136 mEq/L and the patient is now drowsy",
        "correct": false,
-       "rationale": "Tempting because the number is normal. A rise of 20 in 6 hours is far too fast, and the drowsiness is a new neurologic change."
+       "rationale": "Tempting because the number is normal. A rise of 20 mEq/L in 6 hours is far too fast, and the drowsiness is a new neurologic change."
       },
       {
        "id": "B",
@@ -20664,13 +20664,13 @@
     {
      "id": "ig15-v06",
      "type": "multiple_choice",
-     "stem": "The nurse hung 1,000 mL of lactated Ringer's to run over 8 hours by gravity with 15 drops per mL tubing. Ten minutes later it runs at 44 drops per minute. The client is comfortable. Which action is best?",
+     "stem": "The nurse hung 1,000 mL of lactated Ringer's to run over 8 hours by gravity with 15 drops per mL tubing. Ten minutes later it runs at 44 drops per minute. The client has no shortness of breath. Which action is best?",
      "options": [
       {
        "id": "A",
        "text": "Stop the infusion and notify the provider",
        "correct": false,
-       "rationale": "Tempting because the fluid is running too fast. Only 10 minutes have passed and the client is comfortable, so the nurse corrects the rate and keeps monitoring."
+       "rationale": "Tempting because the fluid is running too fast. Only 10 minutes have passed and the client has no shortness of breath, so the nurse corrects the rate and keeps monitoring."
       },
       {
        "id": "B",
@@ -20716,7 +20716,7 @@
        },
        {
         "action": "Test the stop option",
-        "detail": "Comfortable, and only 10 minutes at the wrong rate. Correct it and reassess."
+        "detail": "No shortness of breath, and only 10 minutes at the wrong rate. Correct it and reassess."
        }
       ],
       "verdict": "Set the clamp to 31 drops per minute."
@@ -20755,7 +20755,7 @@
        "id": "E",
        "text": "Lungs clear with respirations of 16",
        "correct": true,
-       "rationale": "Shows she is tolerating the volume. Clear lungs are the tolerated half of the question."
+       "rationale": "Shows the client is tolerating the volume. Clear lungs are the tolerated half of the question."
       },
       {
        "id": "F",
@@ -20790,7 +20790,7 @@
        },
        {
         "action": "Ask the second question",
-        "detail": "Is she tolerating it? Clear lungs say yes."
+        "detail": "Is the client tolerating it? Clear lungs say yes."
        },
        {
         "action": "Cut the warning signs",
@@ -20941,7 +20941,7 @@
        "id": "B",
        "text": "Hemoglobin 9.0 g/dL with new crackles",
        "correct": false,
-       "rationale": "Tempting because the number is right. New crackles mean the volume overloaded her, which is a complication."
+       "rationale": "Tempting because the number is right. New crackles mean the volume overloaded the circulation, which is a complication."
       },
       {
        "id": "C",
@@ -21328,7 +21328,7 @@
        "id": "A",
        "text": "Request an order for IV access and fluids",
        "correct": true,
-       "rationale": "Subcutaneous fluid absorbs slowly and is not used in severe dehydration or shock. She needs a route that reaches the vessels directly."
+       "rationale": "Subcutaneous fluid absorbs slowly and is not used in severe dehydration or shock. The client needs a route that reaches the vessels directly."
       },
       {
        "id": "B",
@@ -21346,7 +21346,7 @@
        "id": "D",
        "text": "Give oral fluids and recheck in 20 minutes",
        "correct": false,
-       "rationale": "She is hard to rouse, so oral fluid is an aspiration risk and a delay."
+       "rationale": "The client is hard to rouse, so oral fluid is an aspiration risk and a delay."
       }
      ],
      "answer": "A",
@@ -21359,7 +21359,7 @@
       ],
       "readingChecked": true
      },
-     "strategy": "The assessment is done and she is unstable. Ask whether the current route can ever deliver enough, then change it.",
+     "strategy": "The assessment is done and the client is unstable. Ask whether the current route can ever deliver enough, then change it.",
      "elimination": {
       "strategies": [
        "Odd man wins",
@@ -21835,7 +21835,7 @@
     {
      "id": "ig15-hd03",
      "type": "multiple_choice",
-     "stem": "A patient who had a right mastectomy with lymph node removal has a dialysis fistula in the left forearm. She needs IV antibiotics. Which action does the nurse take?",
+     "stem": "A patient who had a right mastectomy with lymph node removal 6 years ago has a dialysis fistula in the left forearm. She needs IV antibiotics. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -22031,7 +22031,7 @@
        "id": "A",
        "text": "Another short peripheral catheter",
        "correct": false,
-       "rationale": "Familiar and quick. Her veins have already failed twice and therapy runs well past 6 days."
+       "rationale": "Familiar and quick. The forearm veins have already failed twice and therapy runs well past 6 days."
       },
       {
        "id": "B",
@@ -22101,7 +22101,7 @@
        "id": "B",
        "text": "Phlebitis",
        "correct": false,
-       "rationale": "Phlebitis is warm, red and tender along the vein, often with a cord. Her skin color and temperature are normal."
+       "rationale": "Phlebitis is warm, red and tender along the vein, often with a cord. The skin color and temperature are normal."
       },
       {
        "id": "C",
@@ -22221,7 +22221,7 @@
      "options": [
       {
        "id": "A",
-       "text": "He rates pain at the needle site 4 of 10",
+       "text": "He rates pain at the needle site 4 on a 0 to 10 scale",
        "correct": false,
        "rationale": "Discomfort at the site is common and deserves treatment. It does not by itself show a limb at risk."
       },
@@ -22714,7 +22714,7 @@
       },
       {
        "id": "C",
-       "text": "Platelet count rose to 210,000",
+       "text": "Platelet count rose to 210,000/mm3",
        "correct": false,
        "rationale": "Plasma does not supply platelets. His bleeding came from a high INR."
       },
@@ -22769,13 +22769,13 @@
       },
       {
        "id": "B",
-       "text": "Send it back to the blood bank until she is free",
+       "text": "Send it back to the blood bank until the nurse is free",
        "correct": false,
        "rationale": "Possible, and it delays a product the client needs now. Twenty minutes at room temperature does no harm."
       },
       {
        "id": "C",
-       "text": "Keep it at room temperature and hang it when she is free",
+       "text": "Keep it at room temperature and hang it when the nurse is free",
        "correct": true,
        "rationale": "Platelets are stored at 20 to 24 C. The unit stays good on the counter for 20 minutes, and the bleeding client gets it without a trip back to the blood bank."
       },
@@ -22814,7 +22814,7 @@
         "detail": "None of them helps this unit or this client."
        }
       ],
-      "verdict": "Leave it at room temperature and hang it as soon as she is free."
+      "verdict": "Leave it at room temperature and hang it as soon as the nurse is free."
      }
     },
     {
@@ -23204,7 +23204,7 @@
        "id": "A",
        "text": "Pain 0 of 10, respirations 8, hard to wake",
        "correct": false,
-       "rationale": "The pain is gone because he is oversedated. Respiratory depression is the main risk of spinal opioids."
+       "rationale": "The pain is gone because the client is oversedated. Respiratory depression is the main risk of spinal opioids."
       },
       {
        "id": "B",
@@ -23222,7 +23222,7 @@
        "id": "D",
        "text": "Pain 7 of 10, respirations 18, walks in the hall",
        "correct": false,
-       "rationale": "Safe, and not effective. His pain is not controlled."
+       "rationale": "Safe, and not effective. The pain is not controlled."
       }
      ],
      "answer": "B",
@@ -23348,7 +23348,7 @@
        "id": "D",
        "text": "Ask whether the catheter can come out today",
        "correct": true,
-       "rationale": "Daily review of need and prompt removal are part of the bundle. He no longer uses the line."
+       "rationale": "Daily review of need and prompt removal are part of the bundle. The client no longer uses the line."
       }
      ],
      "answer": "D",
@@ -23378,7 +23378,7 @@
        },
        {
         "action": "Cut the options that keep or test it",
-        "detail": "None of them lowers his risk."
+        "detail": "None of them lowers the infection risk."
        }
       ],
       "verdict": "Ask about removing the catheter today."
@@ -23441,7 +23441,7 @@
       ],
       "readingChecked": true
      },
-     "strategy": "Picture thin skin and fragile veins. Anything forceful or on the back of the hand is wrong for her.",
+     "strategy": "Picture thin skin and fragile veins. Anything forceful or on the back of the hand is wrong for this client.",
      "elimination": {
       "strategies": [
        "Treat each option as true or false",
@@ -23925,7 +23925,7 @@
      "options": [
       {
        "id": "A",
-       "text": "Client with diabetic ketoacidosis whose blood pressure is restored after isotonic fluid",
+       "text": "Client with diabetic ketoacidosis whose blood pressure is 118/74 after isotonic fluid",
        "correct": false,
        "rationale": "Appropriate. Hypotonic fluid is used in ketoacidosis after the first fluid resuscitation."
       },
@@ -24177,7 +24177,7 @@
      "id": "ig15-sp32",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "Lactated Ringer's is infusing through a client's only IV catheter, which is patent. A unit of packed red blood cells has been verified at the bedside. Which action does the nurse take?",
+     "stem": "Lactated Ringer's is infusing through a client's only IV catheter, which flushes easily. A unit of packed red blood cells has been verified at the bedside. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -24256,7 +24256,7 @@
       },
       {
        "id": "C",
-       "text": "Soreness at the groin site rated 2 of 10",
+       "text": "Soreness at the groin site rated 2 on a 0 to 10 pain scale",
        "correct": false,
        "rationale": "Mild soreness at an insertion site is expected."
       },
@@ -24424,7 +24424,7 @@
        },
        {
         "action": "Weigh dominance",
-        "detail": "Using the dominant arm is less convenient and safe."
+        "detail": "Using the dominant arm is less convenient and still safe."
        }
       ],
       "verdict": "The right forearm."
@@ -24978,7 +24978,7 @@
       },
       {
        "id": "B",
-       "text": "Keep him resting with head still and the eye patched",
+       "text": "Keep him resting with head still and the affected eye patched",
        "correct": true,
        "rationale": "Before surgery, head movement and activity are restricted and a patch reduces eye movement."
       },
@@ -25094,7 +25094,7 @@
      "options": [
       {
        "id": "A",
-       "text": "A client with open-angle glaucoma whose pressure today is 26 mmHg",
+       "text": "A client with open-angle glaucoma whose eye pressure today is 26 mmHg",
        "correct": false,
        "rationale": "Elevated and needs attention, but this is a chronic, slow problem that will not change in the next hour."
       },
@@ -25386,7 +25386,7 @@
        },
        {
         "action": "Pick the measurement",
-        "detail": "16 is inside both normal ranges."
+        "detail": "16 mmHg is inside the normal range."
        }
       ],
       "verdict": "Pressure 16 mmHg with pain relieved."
@@ -25439,7 +25439,7 @@
       "reading": [],
       "readingChecked": false
      },
-     "strategy": "Judge each statement alone. Any statement that treats glaucoma as something he can feel or reverse is wrong.",
+     "strategy": "Judge each statement alone. Any statement that treats glaucoma as something the client can feel or reverse is wrong.",
      "elimination": {
       "strategies": [
        "Treat each option as true or false",
@@ -26077,7 +26077,7 @@
        "id": "A",
        "text": "Very nearsighted client with a painless shadow at one edge of vision",
        "correct": true,
-       "rationale": "The quiet one is the urgent one. A new painless shadow in a nearsighted client suggests the retina is detaching, and it spreads while he waits."
+       "rationale": "The quiet one is the urgent one. A new painless shadow in a nearsighted client suggests the retina is detaching, and it spreads while the client waits."
       },
       {
        "id": "B",
@@ -27026,7 +27026,7 @@
     {
      "id": "ig39-g06",
      "type": "multiple_choice",
-     "stem": "After 4 months of latanoprost in the right eye, a client's pressure is 15 mmHg. The right iris is browner with longer lashes. She has no pain, redness or vision change. How does the nurse evaluate this?",
+     "stem": "After 4 months of latanoprost in the right eye, a client's pressure in that eye is 15 mmHg. The right iris is browner with longer lashes. She has no pain, redness or vision change. How does the nurse evaluate this?",
      "options": [
       {
        "id": "A",
@@ -27654,11 +27654,11 @@
        },
        {
         "action": "Match the symptom",
-        "detail": "Near fainting on standing fits a slow pulse or low pressure."
+        "detail": "Near fainting on standing fits a slow pulse or low blood pressure."
        },
        {
         "action": "Rank the two good options",
-        "detail": "Technique explains how it happened. Pulse and pressure tell you if she is safe now."
+        "detail": "Technique explains how it happened. Pulse and blood pressure tell you if she is safe now."
        }
       ],
       "verdict": "Apical pulse and blood pressure first."
@@ -27795,7 +27795,7 @@
      "id": "ig39-sp22",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "The nurse cannot see a red reflex in the left eye of an 86-year-old whose vision has blurred slowly for years. The pupil looks bluish white and she has no pain. Which action does the nurse take?",
+     "stem": "The nurse cannot see a red reflex in the left eye of an 86-year-old whose vision has blurred slowly for years. The left pupil looks bluish white and she has no pain. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -28130,7 +28130,7 @@
      "id": "ig39-sp27",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A client with open-angle glaucoma instills two drops correctly and refills them on time. Her pressure is 26 mmHg and her side vision has narrowed since the last visit. Which does the nurse anticipate?",
+     "stem": "A client with open-angle glaucoma instills her prescribed drops correctly and refills them on time. Her eye pressure is 26 mmHg and her side vision has narrowed since the last visit. Which does the nurse anticipate?",
      "options": [
       {
        "id": "A",
@@ -28593,7 +28593,7 @@
       },
       {
        "id": "C",
-       "text": "A plugged feeling with muffled hearing on that side",
+       "text": "A plugged feeling with muffled hearing in the treated ear",
        "correct": false,
        "rationale": "Canal swelling causes temporary hearing loss. It is expected while the canal heals."
       },
@@ -28759,7 +28759,7 @@
     {
      "id": "ig40-v05",
      "type": "multiple_choice",
-     "stem": "An 86-year-old resident has seemed to ignore staff for a week. He reports itching and fullness in the right ear and turns his left ear toward speakers. Which problem does the nurse suspect first?",
+     "stem": "An 86-year-old resident has seemed to ignore staff for a week. He reports itching and fullness in the right ear and turns his left ear toward people who are speaking. Which problem does the nurse suspect first?",
      "options": [
       {
        "id": "A",
@@ -29061,7 +29061,7 @@
     {
      "id": "ig40-v11",
      "type": "multiple_choice",
-     "stem": "A 68-year-old who takes aspirin for arthritis tells the clinic nurse that both ears started ringing this week. Which action does the nurse take first?",
+     "stem": "A 68-year-old woman who takes aspirin for arthritis tells the clinic nurse that both ears started ringing this week. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -29182,7 +29182,7 @@
     {
      "id": "ig40-v14",
      "type": "multiple_choice",
-     "stem": "An assistive personnel shouts each instruction to a newly admitted 92-year-old, who winces. The assistive personnel says residents that age cannot hear. Which action does the nurse take?",
+     "stem": "An assistive personnel shouts each instruction to a newly admitted 92-year-old man, who winces. The assistive personnel says residents that age cannot hear. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -29858,7 +29858,7 @@
        "id": "D",
        "text": "Client with Meniere disease who is spinning and vomiting in bed",
        "correct": false,
-       "rationale": "The most dramatic client. Vertigo and vomiting are the expected attack, and she is already in bed."
+       "rationale": "The most dramatic client. Vertigo and vomiting are the expected attack, and the client is already in bed."
       }
      ],
      "answer": "C",
@@ -30531,7 +30531,7 @@
        "id": "s3",
        "text": "Follows conversation in the waiting room without asking for repeats",
        "correct": true,
-       "rationale": "He follows conversation without asking for repeats, so the conductive hearing loss that otitis media causes is not present."
+       "rationale": "The client follows conversation without asking for repeats, so the conductive hearing loss that otitis media causes is not present."
       },
       {
        "id": "s4",
@@ -31299,7 +31299,7 @@
       },
       {
        "id": "C",
-       "text": "\"If my face droops on that side I will call right away.\"",
+       "text": "\"If my face droops on the side of the surgery I will call right away.\"",
        "correct": true,
        "rationale": "The facial nerve runs close to the surgical site."
       },
@@ -31313,7 +31313,7 @@
        "id": "E",
        "text": "\"I will hold on to something when I stand up.\"",
        "correct": true,
-       "rationale": "Dizziness is expected early, so he guards against falls."
+       "rationale": "Dizziness is expected early, so the client guards against falls."
       },
       {
        "id": "F",
@@ -32027,7 +32027,7 @@
        "id": "B",
        "text": "Client admitted an hour ago with a first severe vertigo attack",
        "correct": false,
-       "rationale": "New and undiagnosed. He needs the registered nurse's initial assessment."
+       "rationale": "New and undiagnosed. This client needs the registered nurse's initial assessment."
       },
       {
        "id": "C",
@@ -32784,13 +32784,13 @@
     {
      "id": "ig41-v08",
      "type": "multiple_choice",
-     "stem": "A 78-year-old has left groin pain and cannot bear weight after a fall. The hip x-ray is negative and a bone scan is scheduled. She asks to walk to the bathroom. Which action does the nurse take?",
+     "stem": "A 78-year-old has left groin pain and cannot bear weight after a fall. The hip x-ray shows no fracture and a bone scan is scheduled. She asks to walk to the bathroom. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
        "text": "Walk her with a gait belt and a walker",
        "correct": false,
-       "rationale": "Tempting because the x-ray is negative and the equipment looks safe. A walker still puts weight through a hip that may be broken."
+       "rationale": "Tempting because the x-ray shows no fracture and the equipment looks safe. A walker still puts weight through a hip that may be broken."
       },
       {
        "id": "B",
@@ -32821,7 +32821,7 @@
       ],
       "readingChecked": true
      },
-     "strategy": "Ask why a bone scan was ordered after a negative x-ray. The provider still suspects a fracture, so the nurse acts as if there is one.",
+     "strategy": "Ask why a bone scan was ordered after an x-ray that showed no fracture. The provider still suspects a fracture, so the nurse acts as if there is one.",
      "elimination": {
       "strategies": [
        "Odd man wins",
@@ -32938,7 +32938,7 @@
       }
      ],
      "answer": "A",
-     "takeaway": "Before a CT with contrast, ask about any earlier contrast reaction. A positive answer pauses the test until the team decides.",
+     "takeaway": "Before a CT with contrast, ask about any earlier contrast reaction. A yes answer pauses the test until the team decides.",
      "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
      "coverageDetail": {
       "ppt": "partial",
@@ -33077,7 +33077,7 @@
        "id": "r6",
        "text": "Feels lightheaded each time the head of the bed is raised",
        "answer": "Not effective",
-       "rationale": "Orthostatic intolerance is developing. She needs gradual position changes and leg exercises before she is stood."
+       "rationale": "Orthostatic intolerance is developing. The client needs gradual position changes and leg exercises before standing."
       }
      ],
      "answer": {
@@ -33361,7 +33361,7 @@
     {
      "id": "ig41-v17",
      "type": "multiple_choice",
-     "stem": "After a hallway walk, a patient's heart rate rose from 76 to 98 and returned to 78 within 3 minutes. He reports mild tiredness and no dyspnea or dizziness. Which decision about tomorrow's walk is most appropriate?",
+     "stem": "After a hallway walk, a patient's heart rate rose from 76 to 98 beats per minute and returned to 78 within 3 minutes. He reports mild tiredness and no dyspnea or dizziness. Which decision about tomorrow's walk is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -33424,7 +33424,7 @@
     {
      "id": "ig41-v18",
      "type": "highlight",
-     "nursesNote": "1400: day 10 of bed rest after pelvic fracture. Turned to left side with pillows. Urinary catheter tubing lies under the right thigh. Heels rest on the mattress. Respirations 18 and unlabored. Right foot warm with palpable pulse. Reports comfort at 2 of 10. Left ear folded under the head.",
+     "nursesNote": "1400: day 10 of bed rest after pelvic fracture. Turned to left side with pillows. Urinary catheter tubing lies under the right thigh. Heels rest on the mattress. Respirations 18 and unlabored. Right foot warm with palpable pulse. Reports pain at 2 of 10. Left ear folded under the head.",
      "stem": "Highlight the findings that require follow-up after this repositioning.",
      "segments": [
       {
@@ -33443,7 +33443,7 @@
        "id": "s3",
        "text": "Respirations 18 and unlabored",
        "correct": false,
-       "rationale": "She is breathing comfortably in the new position."
+       "rationale": "The client is breathing comfortably in the new position."
       },
       {
        "id": "s4",
@@ -33453,9 +33453,9 @@
       },
       {
        "id": "s5",
-       "text": "Reports comfort at 2 of 10",
+       "text": "Reports pain at 2 of 10",
        "correct": false,
-       "rationale": "Acceptable comfort."
+       "rationale": "Mild pain, expected after a turn."
       },
       {
        "id": "s6",
@@ -33485,8 +33485,8 @@
       ],
       "steps": [
        {
-        "action": "Check breathing and comfort",
-        "detail": "Both fine."
+        "action": "Check breathing and pain",
+        "detail": "Respirations unlabored and pain mild."
        },
        {
         "action": "Check pressure areas and tubes",
@@ -33505,7 +33505,7 @@
        "id": "A",
        "text": "He needs total assist equipment for transfers",
        "correct": true,
-       "rationale": "He cannot reach across midline, so seated balance fails and he is Level 1 despite sitting upright."
+       "rationale": "He cannot reach across midline, so seated balance fails and he stays at mobility level 1, the lowest level, despite sitting upright."
       },
       {
        "id": "B",
@@ -33527,7 +33527,7 @@
       }
      ],
      "answer": "A",
-     "takeaway": "Sit and shake has three parts: sit unassisted over 2 minutes, reach across midline, shake the hand. Miss one and the patient is Level 1.",
+     "takeaway": "Sit and shake has three parts: sit unassisted over 2 minutes, reach across midline, shake the hand. Miss one and the patient is mobility level 1, the lowest level, and needs total assist.",
      "coverage": "Covered in Lecture PPT and Reading (Potter).",
      "coverageDetail": {
       "ppt": "full",
@@ -33555,7 +33555,7 @@
         "detail": "Fail any part, stay at that level."
        }
       ],
-      "verdict": "A. Level 1, total assist."
+      "verdict": "A. Mobility level 1, total assist."
      }
     },
     {
@@ -33661,7 +33661,7 @@
       ],
       "readingChecked": true
      },
-     "strategy": "The stem leads with reassuring findings. Check every part of the circ check before deciding the limb is fine.",
+     "strategy": "The stem leads with reassuring findings. Check every part of the neurovascular check before deciding the limb is fine.",
      "elimination": {
       "strategies": [
        "Priority key word",
@@ -33802,7 +33802,7 @@
        },
        {
         "action": "Check each fix against the client",
-        "detail": "He is unconscious, so only passive care and positioning apply."
+        "detail": "The client is unconscious, so only passive care and positioning apply."
        }
       ],
       "verdict": "Add ankle range of motion and neutral supports."
@@ -34130,7 +34130,7 @@
      "options": [
       {
        "id": "A",
-       "text": "Foot warm, pulse equal to the other, toes move",
+       "text": "Foot warm, pulse equal to the other foot, toes move",
        "correct": true,
        "rationale": "Neurovascular status is the priority after arthroscopy. A warm foot with an equal pulse and moving toes shows blood flow and nerves are intact."
       },
@@ -34708,7 +34708,7 @@
       },
       {
        "id": "D",
-       "text": "\"I'll cut back on the wine and work on quitting.\"",
+       "text": "\"I'll cut back on the wine and work on quitting smoking.\"",
        "correct": true,
        "rationale": "Tobacco and heavy alcohol both harm bone. She kept her walking and changed the two risks in her own history."
       }
@@ -35039,7 +35039,7 @@
        "id": "D",
        "text": "One aged 88 with stiff knees who needs extra time to stand",
        "correct": false,
-       "rationale": "Stiff joints and slowed movement are long-standing changes of aging. He needs patience, and he can wait."
+       "rationale": "Stiff joints and slowed movement are long-standing changes of aging. This client needs patience and can wait."
       }
      ],
      "answer": "A",
@@ -35877,7 +35877,7 @@
      "id": "ig41-sp27",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A 66-year-old admitted with pneumonia walks to the bathroom favoring his left leg. He did not limp yesterday and says nothing happened. Which action does the nurse take first?",
+     "stem": "A 66-year-old admitted with pneumonia walks to the bathroom limping on his left leg. He did not limp yesterday and says nothing happened. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -36459,7 +36459,7 @@
        "id": "B",
        "text": "Speak loudly and repeat each instruction twice, slowly",
        "correct": false,
-       "rationale": "He follows commands correctly, so the message already gets through. Volume and repetition add nothing."
+       "rationale": "The patient follows commands correctly, so the message already gets through. Volume and repetition add nothing."
       },
       {
        "id": "C",
@@ -36585,7 +36585,7 @@
       },
       {
        "id": "C",
-       "text": "Record eye opening as none on the GCS",
+       "text": "Record eye opening as none on the Glasgow Coma Scale",
        "correct": false,
        "rationale": "He has not been given the stronger stimuli yet, so the best response is still unknown."
       },
@@ -36937,7 +36937,7 @@
     {
      "id": "ig35-v15",
      "type": "multiple_choice",
-     "stem": "An 81-year-old, normally oriented x4, was admitted with new confusion from a urinary infection. Which finding on day 3 best indicates the neurologic problem has resolved?",
+     "stem": "An 81-year-old, normally oriented to person, place, time and situation (x4), was admitted with new confusion from a urinary infection. Which finding on day 3 best indicates the neurologic problem has resolved?",
      "options": [
       {
        "id": "A",
@@ -37427,7 +37427,7 @@
        "id": "B",
        "text": "Notify the provider now of the change from baseline",
        "correct": true,
-       "rationale": "A drop in LOC is the earliest sign of decline after a head injury. It is reported before the pupils or vital signs change."
+       "rationale": "A drop in level of consciousness (LOC) is the earliest sign of decline after a head injury. It is reported before the pupils or vital signs change."
       },
       {
        "id": "C",
@@ -37482,7 +37482,7 @@
        "id": "A",
        "text": "Hold the preparation and call the provider",
        "correct": true,
-       "rationale": "Headache, projectile vomiting and falling LOC suggest high intracranial pressure. A lumbar puncture without imaging risks herniation."
+       "rationale": "Headache, projectile vomiting and a falling level of consciousness suggest high intracranial pressure. A lumbar puncture without imaging risks herniation."
       },
       {
        "id": "B",
@@ -37559,7 +37559,7 @@
       },
       {
        "id": "D",
-       "text": "Fall yesterday, oriented, now asking the same question for the third time",
+       "text": "Fall yesterday, oriented at the last check, now asking the same question for the third time",
        "correct": true,
        "rationale": "A subtle new change in mental status after a fall. It is the earliest sign of neuro decline and the only finding that is new."
       }
@@ -38404,7 +38404,7 @@
       },
       {
        "id": "D",
-       "text": "Hold the opioid because the pupils have changed",
+       "text": "Hold the prescribed opioid because the pupils are large",
        "correct": false,
        "rationale": "Opioids make pupils small, not large. Holding it leaves the cause untreated."
       }
@@ -38815,7 +38815,7 @@
        "id": "A",
        "text": "\"I will let him sleep all night so his brain can rest.\"",
        "correct": false,
-       "rationale": "Without waking him she cannot tell sleep from a falling level of consciousness."
+       "rationale": "Without waking him the spouse cannot tell sleep from a falling level of consciousness."
       },
       {
        "id": "B",
@@ -38833,7 +38833,7 @@
        "id": "D",
        "text": "\"I will wake him and call if he is hard to rouse.\"",
        "correct": true,
-       "rationale": "Level of consciousness changes first, and she has a clear action for it."
+       "rationale": "Level of consciousness changes first, and the spouse has a clear action for it."
       }
      ],
      "answer": "D",
@@ -39172,17 +39172,17 @@
        "id": "C",
        "text": "Numbness in the left arm and left leg since this morning",
        "correct": true,
-       "rationale": "New since this morning and on one side only. A new sensory change with a difference between sides is reported now, and it does not fit his long standing pattern in both feet."
+       "rationale": "New since this morning and on one side only. A new sensory change with a difference between sides is reported now, and it does not fit the long standing pattern in both feet."
       },
       {
        "id": "D",
        "text": "Numbness in both feet has slowly reached the ankles",
        "correct": false,
-       "rationale": "Tempting because it is progressing. It is gradual and equal on both sides, so it fits his chronic pattern and is not a sudden change."
+       "rationale": "Tempting because it is progressing. It is gradual and equal on both sides, so it fits the chronic pattern and is not a sudden change."
       }
      ],
      "answer": "C",
-     "takeaway": "Compare right with left and now with baseline. Chronic and equal in both feet is his baseline. New and one sided is a change that is reported now.",
+     "takeaway": "Compare right with left and now with baseline. Chronic and equal in both feet is this patient's baseline. New and one sided is a change that is reported now.",
      "coverage": "Covered in Lecture PPT.",
      "coverageDetail": {
       "ppt": "full",
@@ -39217,7 +39217,7 @@
      "id": "ig35-sp09",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "The nurse reviews Glasgow Coma Scale scores for four patients on a neurology unit. Which patient does the nurse report to the provider immediately?",
+     "stem": "The nurse reviews Glasgow Coma Scale scores (range 3 to 15, 15 is fully alert) for four patients on a neurology unit. Which patient does the nurse report to the provider immediately?",
      "options": [
       {
        "id": "A",
@@ -40221,7 +40221,7 @@
     {
      "id": "ig38-v04",
      "type": "multiple_choice",
-     "stem": "A patient with increased ICP has gurgling secretions in the upper airway and an SpO2 of 90%. Which action does the nurse take?",
+     "stem": "A patient with increased intracranial pressure (ICP) has gurgling secretions in the upper airway and an SpO2 of 90%. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -40533,13 +40533,13 @@
        "id": "A",
        "text": "Give the prescribed PRN sedative for agitation",
        "correct": false,
-       "rationale": "Sedation hides the LOC changes the nurse needs to track."
+       "rationale": "Sedation hides the level of consciousness (LOC) changes the nurse needs to track."
       },
       {
        "id": "B",
-       "text": "Assess LOC, pupils and oxygen saturation",
+       "text": "Assess level of consciousness, pupils and oxygen saturation",
        "correct": true,
-       "rationale": "New restlessness is the earliest sign of rising ICP and can also mean hypoxia, so the cause must be found first."
+       "rationale": "New restlessness is the earliest sign of rising intracranial pressure (ICP) and can also mean hypoxia, so the cause must be found first."
       },
       {
        "id": "C",
@@ -41012,13 +41012,13 @@
     {
      "id": "ig38-v18",
      "type": "sata",
-     "stem": "A patient with increased ICP had a GCS of 11 and was restless. The nurse raised the head of the bed, kept the head midline and spaced care. Which findings 1 hour later indicate the interventions are effective? Select all that apply.",
+     "stem": "A patient with increased intracranial pressure (ICP) had a Glasgow Coma Scale (GCS) score of 11 (range 3 to 15, 15 is fully alert) and was restless. The nurse raised the head of the bed, kept the head midline and spaced care. Which findings 1 hour later indicate the interventions are effective? Select all that apply.",
      "options": [
       {
        "id": "A",
        "text": "GCS of 14",
        "correct": true,
-       "rationale": "A rising GCS shows LOC is improving, the best sign that ICP is coming down."
+       "rationale": "A rising GCS shows level of consciousness (LOC) is improving, the best sign that ICP is coming down."
       },
       {
        "id": "B",
@@ -41193,7 +41193,7 @@
          "id": "B",
          "text": "Raise the head of the bed and keep the head midline",
          "correct": true,
-         "rationale": "Helps venous blood drain from the skull while ICP is at risk."
+         "rationale": "Helps venous blood drain from the skull while intracranial pressure (ICP) is at risk."
         },
         {
          "id": "C",
@@ -41217,7 +41217,7 @@
          "id": "A",
          "text": "Hemorrhagic stroke",
          "correct": true,
-         "rationale": "Sudden headache, vomiting, a seizure, falling LOC, hypertension and cocaine use all point to a bleed."
+         "rationale": "Sudden headache, vomiting, a seizure, a falling level of consciousness (LOC), hypertension and cocaine use all point to a bleed."
         },
         {
          "id": "B",
@@ -41319,7 +41319,7 @@
     {
      "id": "ig38-hd01",
      "type": "multiple_choice",
-     "stem": "A restless patient with increased ICP has the head of the bed at 30 degrees, the head turned sharply right and clear lungs. A bath, a turn and suctioning are due. Which action does the nurse take?",
+     "stem": "A restless patient with increased intracranial pressure (ICP) has the head of the bed at 30 degrees, the head turned sharply right and clear lungs. A bath, a turn and suctioning are due. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -41444,7 +41444,7 @@
      "options": [
       {
        "id": "A",
-       "text": "Hemorrhagic stroke with a headache rated 6, unchanged since admission",
+       "text": "Hemorrhagic stroke with a headache rated 6 of 10, unchanged since admission",
        "correct": false,
        "rationale": "A headache is expected with a bleed and it has not changed."
       },
@@ -41815,13 +41815,13 @@
      "options": [
       {
        "id": "A",
-       "text": "Hoarse voice with swelling on that side of the neck",
+       "text": "Hoarse voice with swelling on the stent side of the neck",
        "correct": true,
        "rationale": "Neck swelling with hoarseness means pressure near the airway, so it is reported at once."
       },
       {
        "id": "B",
-       "text": "Headache rated 3 that eased with acetaminophen",
+       "text": "Headache rated 3 of 10 that eased with acetaminophen",
        "correct": false,
        "rationale": "Tempting because headache is on the report list, but that is a severe headache. This one is mild and relieved."
       },
@@ -41833,7 +41833,7 @@
       },
       {
        "id": "D",
-       "text": "Tenderness with no swelling at the groin site",
+       "text": "Tenderness with no swelling at the groin puncture site",
        "correct": false,
        "rationale": "Expected at a puncture site when there is no swelling or bleeding."
       }
@@ -41937,7 +41937,7 @@
      "id": "ig38-nx07",
      "type": "multiple_choice",
      "difficulty": "nclex",
-     "stem": "A patient had an NIHSS score of 13 before a clot buster. Which finding 2 hours after the infusion best indicates the treatment was effective?",
+     "stem": "A patient had a National Institutes of Health Stroke Scale (NIHSS) score of 13 (0 is normal, higher is worse) before a clot buster. Which finding 2 hours after the infusion best indicates the treatment was effective?",
      "options": [
       {
        "id": "A",
@@ -42061,7 +42061,7 @@
      "id": "ig38-nx09",
      "type": "sata",
      "difficulty": "nclex",
-     "stem": "A patient with a large stroke is at risk for increased ICP. The patient has a temperature of 38.4 C, hard stools and frequent visitors. Which interventions does the nurse include? Select all that apply.",
+     "stem": "A patient with a large stroke is at risk for increased intracranial pressure (ICP). The patient has a temperature of 38.4 C, hard stools and frequent visitors. Which interventions does the nurse include? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -42293,7 +42293,7 @@
        "id": "A",
        "text": "Apply oxygen to bring the saturation to 95% or higher",
        "correct": true,
-       "rationale": "Low oxygen dilates brain vessels, raises ICP and extends the injury. Oxygen is given when the saturation is below 95%."
+       "rationale": "Low oxygen dilates brain vessels, raises intracranial pressure (ICP) and extends the injury. Oxygen is given when the saturation is below 95%."
       },
       {
        "id": "B",
@@ -42364,7 +42364,7 @@
       },
       {
        "id": "C",
-       "text": "NIHSS score of 6, down from 9",
+       "text": "NIH Stroke Scale score of 6, down from 9 (0 is normal)",
        "correct": false,
        "rationale": "A falling score means the deficits are improving."
       },
@@ -42545,7 +42545,7 @@
        "id": "B",
        "text": "Hold the aspirin until 48 hours have passed",
        "correct": false,
-       "rationale": "The wait after a clot buster is 24 hours, and delay leaves him without stroke prevention."
+       "rationale": "The wait after a clot buster is 24 hours, and delay leaves the patient without stroke prevention."
       },
       {
        "id": "C",
@@ -42648,10 +42648,10 @@
        },
        {
         "action": "Read the last one",
-        "detail": "Aspirin on his own."
+        "detail": "Aspirin without the provider."
        }
       ],
-      "verdict": "Starting aspirin on his own."
+      "verdict": "Starting aspirin without the provider."
      }
     },
     {
@@ -42895,7 +42895,7 @@
       },
       {
        "id": "D",
-       "text": "Stroke 5 months ago, unchanged arm weakness, shoulder pain rated 7",
+       "text": "Stroke 5 months ago, unchanged arm weakness, shoulder pain rated 7 of 10",
        "correct": false,
        "rationale": "A chronic deficit with pain. It needs care, and it is stable."
       }
@@ -42948,7 +42948,7 @@
        "id": "B",
        "text": "Found with weakness 1 hour ago; last seen normal 10 hours ago",
        "correct": false,
-       "rationale": "The clock is off. Time runs from last seen normal, 10 hours, not from when he was found."
+       "rationale": "The clock is off. Time runs from last seen normal, 10 hours, not from when the patient was found."
       },
       {
        "id": "C",
@@ -42997,7 +42997,7 @@
      "id": "ig38-sp18",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A patient with increased ICP is grimacing and pulling at the sheets. The neurologic check done 5 minutes ago matches the last one. The headache is rated 7, unchanged since admission. Which action does the nurse take?",
+     "stem": "A patient with increased intracranial pressure (ICP) is grimacing and pulling at the sheets. The neurologic check done 5 minutes ago matches the last one. The headache is rated 7 of 10, unchanged since admission. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -43204,7 +43204,7 @@
        "id": "C",
        "text": "Stool softener daily",
        "correct": false,
-       "rationale": "Prevents straining, which raises ICP."
+       "rationale": "Prevents straining, which raises intracranial pressure."
       },
       {
        "id": "D",
@@ -43251,7 +43251,7 @@
      "id": "ig38-sp25",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A patient's alteplase infusion ended 90 minutes ago. The NIHSS score has gone from 8 to 14, and the patient now wakes only to a shoulder shake. Which action does the nurse take?",
+     "stem": "A patient's alteplase infusion ended 90 minutes ago. The NIH Stroke Scale (NIHSS) score has gone from 8 to 14 (higher is worse), and the patient now wakes only to a shoulder shake. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -43269,7 +43269,7 @@
        "id": "C",
        "text": "Notify the provider now and prepare the patient for a head CT",
        "correct": true,
-       "rationale": "A rising score with a falling LOC after a clot buster means bleeding in the brain until a CT shows otherwise."
+       "rationale": "A rising score with a falling level of consciousness after a clot buster means bleeding in the brain until a CT shows otherwise."
       },
       {
        "id": "D",
@@ -44340,7 +44340,7 @@
     {
      "id": "ig22-v08",
      "type": "multiple_choice",
-     "stem": "A client wearing dark nail polish has an SpO2 reading of 87% but is breathing easily at 16 with pink lips. The nurse moves the sensor. Which finding indicates the new reading can be trusted?",
+     "stem": "A client wearing dark nail polish has an SpO2 reading of 87% but is breathing easily at 16 breaths per minute with pink lips. The nurse moves the sensor. Which finding indicates the new reading can be trusted?",
      "options": [
       {
        "id": "A",
@@ -44401,7 +44401,7 @@
     {
      "id": "ig22-v09",
      "type": "multiple_choice",
-     "stem": "A 76-year-old with pneumonia on 4 L/min has a steady SpO2 of 93%. Her blood pressure fell from 130/78 to 92/54 and her lactate is 3.4 mmol/L. Which problem is the priority?",
+     "stem": "A 76-year-old with pneumonia on oxygen at 4 L/min has a steady SpO2 of 93%. Her blood pressure fell from 130/78 to 92/54 and her lactate is 3.4 mmol/L (normal below 2). Which problem is the priority?",
      "options": [
       {
        "id": "A",
@@ -44647,11 +44647,11 @@
     {
      "id": "ig22-v13",
      "type": "multiple_choice",
-     "stem": "A client with COVID 19 on oxygen drops to 90% and becomes breathless whenever bathing, linen change and meals happen back to back. Which plan is most appropriate?",
+     "stem": "A client with COVID 19 on oxygen has an SpO2 that drops to 90% and becomes breathless whenever bathing, linen change and meals happen back to back. Which plan is most appropriate?",
      "options": [
       {
        "id": "A",
-       "text": "Cluster care into short blocks with rest periods between them",
+       "text": "Split care into short blocks with rest periods between them",
        "correct": true,
        "rationale": "Spacing activity with rest lowers oxygen demand while keeping her moving."
       },
@@ -44675,7 +44675,7 @@
       }
      ],
      "answer": "A",
-     "takeaway": "For activity intolerance, balance rest and mobility. Group care, then protect rest between groups to lower oxygen demand.",
+     "takeaway": "For activity intolerance, balance rest and mobility. Break care into short groups, then protect rest between groups to lower oxygen demand.",
      "coverage": "Covered in Lecture PPT.",
      "coverageDetail": {
       "ppt": "full",
@@ -44702,7 +44702,7 @@
         "detail": "All care at once."
        }
       ],
-      "verdict": "Cluster care with rest periods."
+      "verdict": "Short blocks of care with rest periods."
      }
     },
     {
@@ -44823,7 +44823,7 @@
        },
        {
         "action": "Cut the options that leave the flow low",
-        "detail": "A cannula, a saturation check and a lower concentration all keep him at 3 L/min or less."
+        "detail": "A cannula, a saturation check and a lower concentration all keep the client at 3 L/min or less."
        },
        {
         "action": "Keep the correction",
@@ -45065,7 +45065,7 @@
       },
       {
        "id": "E",
-       "text": "Wait for a positive test before starting precautions",
+       "text": "Wait for a positive COVID 19 test result before starting precautions",
        "correct": false,
        "rationale": "Tempting because the test confirms the diagnosis. Exposure plus symptoms is enough to start precautions, and waiting exposes others."
       },
@@ -45073,7 +45073,7 @@
        "id": "F",
        "text": "Seat her at her own table in the dining room for meals",
        "correct": false,
-       "rationale": "Isolation is a real concern, but a shared room spreads infection even at a separate table. Use other ways to connect."
+       "rationale": "Isolation is a real concern, but a shared dining room spreads infection even at a separate table. Use other ways to connect."
       }
      ],
      "answer": [
@@ -45326,13 +45326,13 @@
      "options": [
       {
        "id": "A",
-       "text": "Fainter right sided breath sounds, rate up from 18 to 26",
+       "text": "Fainter right sided breath sounds, respiratory rate up from 18 to 26",
        "correct": true,
        "rationale": "Breath sounds should be the same or better after fluid is removed. Fainter sounds with a rising rate suggest a pneumothorax despite the client feeling better."
       },
       {
        "id": "B",
-       "text": "A coughing spell lasting several minutes after the procedure",
+       "text": "A coughing spell after the procedure that lasted several minutes and stopped",
        "correct": false,
        "rationale": "Coughing is common as the lung expands again. It settled, so it is watched."
       },
@@ -45406,7 +45406,7 @@
       },
       {
        "id": "D",
-       "text": "COVID 19 on 2 L/min with a steady saturation, fatigue and loss of taste",
+       "text": "COVID 19 on oxygen at 2 L/min with an SpO2 steady at 95%, fatigue and loss of taste",
        "correct": false,
        "rationale": "Expected cues with a stable saturation."
       }
@@ -45694,7 +45694,7 @@
      "id": "ig22-nx03",
      "type": "multiple_choice",
      "difficulty": "nclex",
-     "stem": "A 73-year-old going home on oxygen by nasal cannula lives with a spouse who smokes. Which statement shows the safety teaching was effective?",
+     "stem": "A 73-year-old man going home on oxygen by nasal cannula lives with a spouse who smokes. Which statement shows the safety teaching was effective?",
      "options": [
       {
        "id": "A",
@@ -45946,7 +45946,7 @@
      "id": "ig22-nx07",
      "type": "multiple_choice",
      "difficulty": "nclex",
-     "stem": "A drowsy client with a PaCO2 of 61 mm Hg is started on BiPAP. Which finding two hours later best shows the therapy is working?",
+     "stem": "A drowsy client with a PaCO2 of 61 mm Hg (normal 35 to 45) is started on BiPAP (bilevel positive airway pressure). Which finding two hours later best shows the therapy is working?",
      "options": [
       {
        "id": "A",
@@ -46104,7 +46104,7 @@
        "id": "E",
        "text": "Compares each spot with the same spot on the other side",
        "correct": true,
-       "rationale": "The client's other lung is the best reference for what is normal for him."
+       "rationale": "The client's other lung is the best reference for what is normal for this client."
       }
      ],
      "answer": [
@@ -46223,7 +46223,7 @@
      "id": "ig22-g01",
      "type": "cloze",
      "stem": "Complete each sentence by selecting from the choices below.",
-     "sentence": "A 44-year-old with heavy menstrual bleeding has a hemoglobin of 7.1 g/dL, clear lungs and an SpO2 of 99%. She is breathless climbing one flight of stairs. Her tissues are short of oxygen because [[1]].\n\nThat evening her temperature is 39.1 C and she is breathless at rest. The fever worsens her dyspnea because it [[2]].\n\nThe most useful nursing plan tonight is to [[3]].",
+     "sentence": "A 44-year-old with heavy menstrual bleeding has a hemoglobin of 7.1 g/dL, clear lungs and an SpO2 of 99% on room air. She is breathless climbing one flight of stairs. Her tissues are short of oxygen because [[1]].\n\nThat evening her temperature is 39.1 C and she is breathless at rest. The fever worsens her dyspnea because it [[2]].\n\nThe most useful nursing plan tonight is to [[3]].",
      "blanks": [
       {
        "id": 1,
@@ -46294,7 +46294,7 @@
         },
         {
          "id": "B",
-         "text": "raise the oxygen until the SpO2 reads 100%",
+         "text": "apply oxygen until the SpO2 reads 100%",
          "correct": false,
          "rationale": "One more point of saturation adds almost nothing when hemoglobin is the limit."
         },
@@ -46478,7 +46478,7 @@
      "options": [
       {
        "id": "A",
-       "text": "He rates the pain 2 of 10 while resting quietly",
+       "text": "He rates the pain 2 on a 0 to 10 scale while resting quietly",
        "correct": false,
        "rationale": "Tempting. The pain score is better, and it says nothing about whether he can now expand his lungs."
       },
@@ -46496,7 +46496,7 @@
       },
       {
        "id": "D",
-       "text": "He breathes deeply and sounds reach both bases",
+       "text": "He breathes deeply and breath sounds are heard at both bases",
        "correct": true,
        "rationale": "The goal of treating pleuritic pain is full lung expansion, and this shows it."
       }
@@ -46856,7 +46856,7 @@
     {
      "id": "ig22-g14",
      "type": "multiple_choice",
-     "stem": "A resident with fever, cough and a roommate who has COVID 19 has a negative rapid antigen test. What does the nurse do?",
+     "stem": "A resident with fever, cough and a roommate who has COVID 19 has a rapid antigen test result that is negative for COVID 19. What does the nurse do?",
      "options": [
       {
        "id": "A",
@@ -46878,7 +46878,7 @@
       },
       {
        "id": "D",
-       "text": "Continue the precautions and obtain a PCR test",
+       "text": "Continue the precautions and obtain a PCR (nucleic acid) test",
        "correct": true,
        "rationale": "A nucleic acid test is more sensitive, and precautions stay until it results."
       }
@@ -47260,7 +47260,7 @@
       }
      ],
      "answer": "D",
-     "takeaway": "Crackles mean fluid in the airways. When they are new, do not clear with a cough and follow a fluid load, sit the client up and report.",
+     "takeaway": "Crackles mean fluid in the airways. When crackles are new, remain after a cough and come after a fluid load, sit the client up and report.",
      "coverage": "Covered in Lecture PPT.",
      "coverageDetail": {
       "ppt": "full",
@@ -47738,7 +47738,7 @@
     {
      "id": "ig22-sp27",
      "type": "multiple_choice",
-     "stem": "A client with COVID 19 is breathing easily at 18 with an SpO2 of 96% on room air. The temperature is 38.9 C, the client vomited twice today and feels dizzy on standing. Which problem does the nurse address first?",
+     "stem": "A client with COVID 19 is breathing easily at 18 breaths per minute with an SpO2 of 96% on room air. The temperature is 38.9 C, the client vomited twice today and feels dizzy on standing. Which problem does the nurse address first?",
      "options": [
       {
        "id": "A",
@@ -47811,7 +47811,7 @@
       },
       {
        "id": "B",
-       "text": "Lung biopsy one hour ago, sudden sharp chest pain and a rate of 28",
+       "text": "Lung biopsy one hour ago, sudden sharp chest pain and a respiratory rate of 28",
        "correct": true,
        "rationale": "After a lung biopsy the nurse watches for pneumothorax and worsening distress. Sudden pain with rapid breathing is new and unstable."
       },
@@ -47851,7 +47851,7 @@
        },
        {
         "action": "Find the new finding",
-        "detail": "Sudden sharp pain and a rate of 28."
+        "detail": "Sudden sharp pain and a respiratory rate of 28."
        },
        {
         "action": "Tie it to the procedure",
@@ -49350,7 +49350,7 @@
     {
      "id": "ig20-hd02",
      "type": "multiple_choice",
-     "stem": "An 85-year-old is receiving IV fluids for dehydration. Forearm skin still tents, abdominal skin returns at once, and the lung bases have new crackles. Which action does the nurse take?",
+     "stem": "An 85-year-old is receiving IV fluids for dehydration. Forearm skin still tents, pinched abdominal skin flattens at once, and the lung bases have new crackles. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -49400,7 +49400,7 @@
        },
        {
         "action": "Read the reliable cue",
-        "detail": "Abdominal skin returns at once, so hydration is restored."
+        "detail": "Abdominal skin flattens at once, so hydration is restored."
        },
        {
         "action": "Find the new finding",
@@ -49730,7 +49730,7 @@
     {
      "id": "ig20-nx03",
      "type": "multiple_choice",
-     "stem": "A client with heart failure has been on bed rest for 4 days. Weight is up 1.5 kg, and both ankles are free of edema. Which assessment does the nurse perform next?",
+     "stem": "A client with heart failure has been on bed rest for 4 days. Weight is up 1.5 kg over those 4 days, and both ankles are free of edema. Which assessment does the nurse perform next?",
      "options": [
       {
        "id": "A",
@@ -49794,7 +49794,7 @@
     {
      "id": "ig20-nx04",
      "type": "multiple_choice",
-     "stem": "During a bath, the AP tells the nurse that a client who started a new antibiotic yesterday has \"red bumps\" on the back. Which action does the nurse take?",
+     "stem": "During a bath, the assistive personnel (AP) tells the nurse that a client who started a new antibiotic yesterday has \"red bumps\" on the back. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -50212,7 +50212,7 @@
     {
      "id": "ig20-g01",
      "type": "multiple_choice",
-     "stem": "A florist has itchy, cracked skin on both hands. It cleared during 2 weeks off spent at home and returned within days of going back. Which information is most important to obtain?",
+     "stem": "A florist has itchy, cracked skin on both hands. The rash cleared during 2 weeks off work spent at home and returned within days of going back to work. Which information is most important to obtain?",
      "options": [
       {
        "id": "A",
@@ -50587,7 +50587,7 @@
     {
      "id": "ig20-g11",
      "type": "multiple_choice",
-     "stem": "A client has undiagnosed weeping lesions on both forearms. The nurse teaches the AP about care. Which action by the AP shows the teaching was effective?",
+     "stem": "A client has open, draining lesions of unknown cause on both forearms. The nurse teaches the AP about care. Which action by the AP shows the teaching was effective?",
      "options": [
       {
        "id": "A",
@@ -51206,7 +51206,7 @@
      "id": "ig20-sp29",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A client with a dark skin tone returns after 4 hours on a transport stretcher. The nurse presses on the sacrum and sees no blanching and no redness. Which action does the nurse take next?",
+     "stem": "A client with a dark skin tone returns after 4 hours on a transport stretcher. The nurse presses on the sacrum and sees no color change: no redness and no visible blanching. Which action does the nurse take next?",
      "options": [
       {
        "id": "A",
@@ -51784,7 +51784,7 @@
      "id": "ig20-sp37",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A client with obesity sits in a recliner most of the day. Skin under both breasts and in the abdominal fold is intact but damp. Skin over the sacrum and heels is unchanged. Which addition to the plan addresses this?",
+     "stem": "A client with obesity sits in a recliner most of the day. Skin under both breasts and in the abdominal fold is intact but damp. Skin over the sacrum and heels is intact and its usual color. Which addition to the plan addresses this?",
      "options": [
       {
        "id": "A",
@@ -51796,7 +51796,7 @@
        "id": "B",
        "text": "Help the client change position at least every 2 hours",
        "correct": false,
-       "rationale": "Tempting because it belongs in the plan. It relieves pressure over bony prominences, and those areas are unchanged."
+       "rationale": "Tempting because it belongs in the plan. It relieves pressure over bony prominences, and those areas show no damage."
       },
       {
        "id": "C",
@@ -51829,7 +51829,7 @@
       "steps": [
        {
         "action": "Name the mechanism",
-        "detail": "Damp folds, bony areas unchanged, so moisture."
+        "detail": "Damp folds, bony areas undamaged, so moisture."
        },
        {
         "action": "Cut shear and pressure measures",
@@ -51920,7 +51920,7 @@
     {
      "id": "ig21-v01",
      "type": "multiple_choice",
-     "stem": "A client with a reddened sacrum and a Braden score of 12 receives continuous tube feeding. Which positioning plan does the nurse choose?",
+     "stem": "A client with a reddened sacrum and a Braden score of 12 (high risk) receives continuous tube feeding. Which positioning plan does the nurse choose?",
      "options": [
       {
        "id": "A",
@@ -52107,7 +52107,7 @@
     {
      "id": "ig21-v04",
      "type": "multiple_choice",
-     "stem": "The day after surgery, the AP reports a red heel. The nurse finds intact maroon skin that feels boggy and does not blanch. Which action does the nurse take?",
+     "stem": "The day after surgery, the assistive personnel (AP) reports a red heel. The nurse finds intact maroon skin that feels boggy and does not blanch. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -52448,7 +52448,7 @@
     {
      "id": "ig21-v09",
      "type": "multiple_choice",
-     "stem": "Two days after sharp debridement, a stage 3 injury measures larger than last week. The bed is moist and red with no odor, and the surrounding skin is unchanged. Which conclusion is correct?",
+     "stem": "Two days after sharp debridement, a stage 3 injury measures larger than last week. The bed is moist and red with no odor, and the surrounding skin is intact and its usual color. Which conclusion is correct?",
      "options": [
       {
        "id": "A",
@@ -52502,7 +52502,7 @@
        },
        {
         "action": "Check the margins",
-        "detail": "Unchanged skin means no spreading infection."
+        "detail": "Intact skin of the usual color means no spreading infection."
        }
       ],
       "verdict": "Expected. Continue the plan."
@@ -52763,7 +52763,7 @@
     {
      "id": "ig21-v14",
      "type": "matrix",
-     "scenario": "A client with a Braden score of 14 has had a prevention plan for one week: turning every 2 hours, heel pillows, barrier cream and a protein supplement.",
+     "scenario": "A client with a Braden score of 14 (moderate risk; lower scores mean higher risk) has had a prevention plan for one week: turning every 2 hours, heel pillows, barrier cream and a protein supplement.",
      "stem": "For each finding, indicate whether the plan is effective or needs revision.",
      "columns": [
       "Plan is effective",
@@ -52975,7 +52975,7 @@
     {
      "id": "ig21-v17",
      "type": "multiple_choice",
-     "stem": "A client with a Braden score of 15 sits in a chair most of the day and can stand with one person assisting. Which plan is best?",
+     "stem": "A client with a Braden score of 15 (mild risk) sits in a chair most of the day and can stand with one person assisting. Which plan is best?",
      "options": [
       {
        "id": "A",
@@ -53298,7 +53298,7 @@
     {
      "id": "ig21-hd02",
      "type": "multiple_choice",
-     "stem": "A client was turned off a reddened left hip 30 minutes ago. The skin is intact, and the redness does not blanch. The AP asks whether the left side can stay in the turning schedule. Which response is correct?",
+     "stem": "A male client was turned off a reddened left hip 30 minutes ago. The skin is intact, and the redness does not blanch. The AP asks whether the left side can stay in the turning schedule. Which response is correct?",
      "options": [
       {
        "id": "A",
@@ -53361,7 +53361,7 @@
     {
      "id": "ig21-hd03",
      "type": "multiple_choice",
-     "stem": "A stage 3 sacral injury is slightly smaller than two weeks ago. The wound bed, then beefy red and moist, is now pale and dry with no drainage or odor. How does the nurse interpret these findings?",
+     "stem": "A stage 3 sacral injury is slightly smaller than two weeks ago. The wound bed was beefy red and moist two weeks ago and is now pale and dry with no drainage or odor. How does the nurse interpret these findings?",
      "options": [
       {
        "id": "A",
@@ -54590,7 +54590,7 @@
     {
      "id": "ig21-g10",
      "type": "multiple_choice",
-     "stem": "A client who walks independently has a Braden score of 17. The lowest subscale is moisture, from urinary incontinence several times a day. Which plan best targets this client's risk?",
+     "stem": "A client who walks independently has a Braden score of 17 (mild risk). The lowest subscale is moisture, from urinary incontinence several times a day. Which plan best targets this client's risk?",
      "options": [
       {
        "id": "A",
@@ -54714,7 +54714,7 @@
     {
      "id": "ig21-g12",
      "type": "multiple_choice",
-     "stem": "A client with a stage 4 sacral injury is newly confused. Temperature is 38.9 C, heart rate 118 and blood pressure 88/52. Which action is the priority?",
+     "stem": "A client with a stage 4 sacral injury is newly confused. Temperature is 38.9 C, heart rate 118/min and blood pressure 88/52 mm Hg. Which action is the priority?",
      "options": [
       {
        "id": "A",
@@ -54988,7 +54988,7 @@
      "id": "ig21-sp31",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "An 86-year-old has a small skin tear on the shin that looks unchanged after 7 days of the same dressing. The AP says it is minor and can wait for weekly skin rounds. Which response does the nurse give?",
+     "stem": "An 86-year-old woman has a small skin tear on the shin that looks unchanged after 7 days of the same dressing. The AP says it is minor and can wait for weekly skin rounds. Which response does the nurse give?",
      "options": [
       {
        "id": "A",
@@ -55315,7 +55315,7 @@
      "id": "ig21-sp17",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "The nurse and an AP share care of a newly admitted client with a Braden score of 11 who wears a rigid cervical collar. Which task does the nurse keep?",
+     "stem": "The nurse and an assistive personnel (AP) share care of a newly admitted client with a Braden score of 11 (high risk) who wears a rigid cervical collar. Which task does the nurse keep?",
      "options": [
       {
        "id": "A",
@@ -55441,7 +55441,7 @@
      "id": "ig21-sp34",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A client with a Braden score of 13 has a prevention plan that sets fluids at 2500 mL/day and a protein goal. Which finding shows the plan needs revision?",
+     "stem": "A client with a Braden score of 13 (moderate risk) has a prevention plan that sets fluids at 2500 mL/day and a protein goal. Which finding shows the plan needs revision?",
      "options": [
       {
        "id": "A",
@@ -55632,7 +55632,7 @@
      "id": "ig21-sp36",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A stage 3 hip injury was 4 x 3 x 0.5 cm last week. Today, without debridement, it is 4 x 3 x 1.5 cm and the applicator slides 2 cm under the edge. How does the nurse interpret this?",
+     "stem": "A stage 3 hip injury measured 4 x 3 x 0.5 cm (length x width x depth) last week. Today, without debridement, it is 4 x 3 x 1.5 cm and the applicator slides 2 cm under the edge. How does the nurse interpret this?",
      "options": [
       {
        "id": "A",
@@ -56082,7 +56082,7 @@
     {
      "id": "sk14-v01",
      "type": "multiple_choice",
-     "stem": "A 61-year-old's premeal fingerstick reads 312 mg/dL after a week of readings near 150. He has just peeled an orange and his hands were not washed. Sliding scale insulin is ordered. Which action does the nurse take?",
+     "stem": "A 61-year-old's premeal fingerstick reads 312 mg/dL after a week of readings near 150 mg/dL. He has just peeled an orange and his hands were not washed. Sliding scale insulin is ordered. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -56128,7 +56128,7 @@
       "steps": [
        {
         "action": "Compare the value with the trend",
-        "detail": "312 after a week near 150 does not fit."
+        "detail": "312 mg/dL after a week near 150 mg/dL does not fit."
        },
        {
         "action": "Find the technique problem",
@@ -56422,13 +56422,13 @@
        "id": "A",
        "text": "Test for ketones",
        "correct": true,
-       "rationale": "A glucose that stays over 240 during illness calls for a ketone test, which shows whether ketoacidosis is developing."
+       "rationale": "A glucose that stays over 240 mg/dL during illness calls for a ketone test, which shows whether ketoacidosis is developing."
       },
       {
        "id": "B",
        "text": "Keep sipping fluids and recheck in four hours",
        "correct": false,
-       "rationale": "Tempting because both are sick day rules. She is already doing them. The sustained value over 240 adds a step."
+       "rationale": "Tempting because both are sick day rules. She is already doing them. The sustained value over 240 mg/dL adds a step."
       },
       {
        "id": "C",
@@ -56444,7 +56444,7 @@
       }
      ],
      "answer": "A",
-     "takeaway": "Sick days: keep taking insulin, check glucose every three to four hours, keep fluids going, test ketones when glucose stays over 240.",
+     "takeaway": "Sick days: keep taking insulin, check glucose every three to four hours, keep fluids going, test ketones when glucose stays over 240 mg/dL.",
      "coverage": "Covered in skills lab material. There is no Lecture PPT for this skill.",
      "coverageDetail": {
       "ppt": "none",
@@ -56465,11 +56465,11 @@
        },
        {
         "action": "Find the trigger in the stem",
-        "detail": "Glucose staying over 240."
+        "detail": "Glucose staying over 240 mg/dL."
        },
        {
         "action": "Match the trigger to its rule",
-        "detail": "Over 240 means ketones."
+        "detail": "Over 240 mg/dL means ketones."
        }
       ],
       "verdict": "Test for ketones."
@@ -56482,25 +56482,25 @@
      "options": [
       {
        "id": "A",
-       "text": "Rolls the NPH, draws NPH to 15, then regular to 20",
+       "text": "Rolls the NPH, draws NPH to the 15 unit mark, then regular to the 20 unit mark",
        "correct": false,
        "rationale": "Right total, wrong order. A syringe holding NPH should not enter the regular vial."
       },
       {
        "id": "B",
-       "text": "Rolls the NPH, draws regular to 5, then NPH to 20",
+       "text": "Rolls the NPH, draws regular to the 5 unit mark, then NPH to the 20 unit mark",
        "correct": true,
        "rationale": "Clear before cloudy, with the second insulin drawn to the total of both doses."
       },
       {
        "id": "C",
-       "text": "Rolls the NPH, draws regular to 5, then NPH to 15",
+       "text": "Rolls the NPH, draws regular to the 5 unit mark, then NPH to the 15 unit mark",
        "correct": false,
-       "rationale": "Right order, but stopping at 15 gives only 10 units of NPH."
+       "rationale": "Right order, but stopping at the 15 unit mark gives only 10 units of NPH."
       },
       {
        "id": "D",
-       "text": "Rolls the regular, draws regular to 5, then NPH to 20",
+       "text": "Rolls the regular, draws regular to the 5 unit mark, then NPH to the 20 unit mark",
        "correct": false,
        "rationale": "The vial that needs rolling is the cloudy NPH. Drawing it unmixed gives an uneven dose."
       }
@@ -56534,7 +56534,7 @@
         "detail": "The cloudy vial is rolled."
        }
       ],
-      "verdict": "Rolls the NPH, draws regular to 5, then NPH to 20."
+      "verdict": "Rolls the NPH, draws regular to the 5 unit mark, then NPH to the 20 unit mark."
      }
     },
     {
@@ -56607,7 +56607,7 @@
       {
        "id": "A",
        "text": "Give 15 to 20 g of fast-acting carbohydrate",
-       "rationale": "First. The glucose is known and under 70, so treatment comes before anything else.",
+       "rationale": "First. The glucose is known and under 70 mg/dL, so treatment comes before anything else.",
        "position": 1
       },
       {
@@ -56618,8 +56618,8 @@
       },
       {
        "id": "C",
-       "text": "Give another 15 to 20 g if the recheck is under 70",
-       "rationale": "Treatment repeats until the glucose is at least 70.",
+       "text": "Give another 15 to 20 g if the recheck is under 70 mg/dL",
+       "rationale": "Treatment repeats until the glucose is at least 70 mg/dL.",
        "position": 3
       },
       {
@@ -56636,7 +56636,7 @@
       "D"
      ],
      "scoring": "0/1",
-     "takeaway": "Treat first, recheck in 15 minutes, repeat if still under 70, then work out why it happened.",
+     "takeaway": "Treat first, recheck in 15 minutes, repeat if still under 70 mg/dL, then work out why it happened.",
      "coverage": "Covered in skills lab material. There is no Lecture PPT for this skill.",
      "coverageDetail": {
       "ppt": "none",
@@ -56645,7 +56645,7 @@
       ],
       "readingChecked": true
      },
-     "strategy": "The assessment is already in the stem. Start with treatment and leave the search for a cause until he is above 70.",
+     "strategy": "The assessment is already in the stem. Start with treatment and leave the search for a cause until he is above 70 mg/dL.",
      "elimination": {
       "strategies": [
        "Priority key word"
@@ -56863,7 +56863,7 @@
     {
      "id": "sk14-v14",
      "type": "multiple_choice",
-     "stem": "A 69-year-old's sliding scale lists regular insulin doses for 151 to 400 mg/dL and gives no instruction above 400. His 1130 fingerstick is 418 mg/dL. He is alert and thirsty. Which action does the nurse take?",
+     "stem": "A 69-year-old's sliding scale lists regular insulin doses for 151 to 400 mg/dL and gives no instruction above 400 mg/dL. His 1130 fingerstick is 418 mg/dL. He is alert and thirsty. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -56875,7 +56875,7 @@
        "id": "B",
        "text": "Report the value to the provider and get a dose",
        "correct": true,
-       "rationale": "The order does not cover 418. The nurse assesses him and gets a prescribed dose instead of choosing one."
+       "rationale": "The order does not cover 418 mg/dL. The nurse assesses him and gets a prescribed dose instead of choosing one."
       },
       {
        "id": "C",
@@ -56909,7 +56909,7 @@
       "steps": [
        {
         "action": "Place the value on the scale",
-        "detail": "418 is above the last range."
+        "detail": "418 mg/dL is above the last range."
        },
        {
         "action": "Cut the doses the nurse invents",
@@ -57016,9 +57016,9 @@
       },
       {
        "id": "r4",
-       "text": "\"If my sugar is 62, I take glucose and check again in 15 minutes.\"",
+       "text": "\"If my sugar is 62 mg/dL, I take glucose and check again in 15 minutes.\"",
        "answer": "Understood",
-       "rationale": "Under 70 is treated with fast-acting carbohydrate and rechecked in 15 minutes."
+       "rationale": "Under 70 mg/dL is treated with fast-acting carbohydrate and rechecked in 15 minutes."
       },
       {
        "id": "r5",
@@ -57159,7 +57159,7 @@
       }
      ],
      "answer": "D",
-     "takeaway": "The problem was the overnight low. The change worked only when the 0300 value is above 70 and the morning value is in range.",
+     "takeaway": "The problem was the overnight low. The change worked only when the 0300 value is above 70 mg/dL and the morning value is in range.",
      "coverage": "Covered in skills lab material. There is no Lecture PPT for this skill.",
      "coverageDetail": {
       "ppt": "none",
@@ -57179,8 +57179,8 @@
         "detail": "A low at 0300 that rebounded."
        },
        {
-        "action": "Cut any option with a 0300 value under 70",
-        "detail": "52 and 58 are still lows."
+        "action": "Cut any option with a 0300 value under 70 mg/dL",
+        "detail": "52 and 58 mg/dL are still lows."
        },
        {
         "action": "Cut the option with no 0300 value",
@@ -57334,7 +57334,7 @@
       },
       {
        "id": "C",
-       "text": "\"I will test for ketones if I stay over 240.\"",
+       "text": "\"I will test for ketones if I stay over 240 mg/dL.\"",
        "correct": false,
        "rationale": "Correct sick day rule."
       },
@@ -57368,7 +57368,7 @@
        },
        {
         "action": "Clear the two monitoring rules",
-        "detail": "Ketones over 240 and checks every three to four hours are right."
+        "detail": "Ketones over 240 mg/dL and checks every three to four hours are right."
        },
        {
         "action": "Split the insulin pair",
@@ -57468,7 +57468,7 @@
        "id": "D",
        "text": "Regular insulin at 0730, ate half of breakfast, asks for a snack",
        "correct": true,
-       "rationale": "Regular insulin peaks 2 to 4 hours after the dose, so he is at the peak with reduced intake. Hunger is an early sign of a low."
+       "rationale": "Regular insulin peaks 2 to 4 hours after the dose, so this client is at the peak with reduced intake. Hunger is an early sign of a low."
       }
      ],
      "answer": "D",
@@ -57513,7 +57513,7 @@
        "id": "A",
        "text": "Agree and request a lower bedtime NPH dose",
        "correct": false,
-       "rationale": "Tempting because a lower dose fixes a rebound high. A rebound needs an overnight low, and 128 is not low."
+       "rationale": "Tempting because a lower dose fixes a rebound high. A rebound needs an overnight low, and 128 mg/dL is not low."
       },
       {
        "id": "B",
@@ -57553,7 +57553,7 @@
       "steps": [
        {
         "action": "Read the 0200 value",
-        "detail": "128 is not a low."
+        "detail": "128 mg/dL is not a low."
        },
        {
         "action": "Name the pattern",
@@ -57570,19 +57570,19 @@
     {
      "id": "sk14-hd05",
      "type": "multiple_choice",
-     "stem": "At 1100 a client with a glucose of 262 mg/dL received correction insulin. At 1300 his glucose is 66 mg/dL. He feels fine and says, \"Finally, it is down.\" Which action does the nurse take?",
+     "stem": "At 1100 a client with a glucose of 262 mg/dL received correction insulin. At 1300 his glucose is 66 mg/dL. He reports no symptoms and says, \"Finally, it is down.\" Which action does the nurse take?",
      "options": [
       {
        "id": "A",
        "text": "Give 15 to 20 g of fast-acting carbohydrate",
        "correct": true,
-       "rationale": "66 is under 70, so it is treated now even without symptoms. The correction went too far."
+       "rationale": "66 mg/dL is under 70 mg/dL, so it is treated now even without symptoms. The correction went too far."
       },
       {
        "id": "B",
        "text": "Document the result as an effective treatment",
        "correct": false,
-       "rationale": "Tempting because the number fell and he feels well. Effective means 70 to 180, and lower is not better."
+       "rationale": "Tempting because the number fell and he has no symptoms. Effective means 70 to 180 mg/dL, and lower is not better."
       },
       {
        "id": "C",
@@ -57598,7 +57598,7 @@
       }
      ],
      "answer": "A",
-     "takeaway": "Effective glucose treatment lands between 70 and 180 mg/dL. Under 70 is treated first, with or without symptoms.",
+     "takeaway": "Effective glucose treatment lands between 70 and 180 mg/dL. Under 70 mg/dL is treated first, with or without symptoms.",
      "coverage": "Covered in skills lab material. There is no Lecture PPT for this skill.",
      "coverageDetail": {
       "ppt": "none",
@@ -57616,10 +57616,10 @@
       "steps": [
        {
         "action": "Place the value",
-        "detail": "66 is below the 70 line."
+        "detail": "66 mg/dL is below the 70 mg/dL line."
        },
        {
-        "action": "Ignore how he feels",
+        "action": "Ignore the lack of symptoms",
         "detail": "No symptoms does not cancel the rule."
        },
        {
@@ -57634,13 +57634,13 @@
      "id": "sk14-nx02",
      "type": "multiple_choice",
      "difficulty": "nclex",
-     "stem": "After teaching, a 54-year-old stopped injecting into a firm raised area on her abdomen. On unchanged doses her prelunch readings fell from the 230s to the low 70s within a week. Which action does the nurse take?",
+     "stem": "After teaching, a 54-year-old stopped injecting into a firm raised area on her abdomen. On unchanged doses her prelunch readings fell from the 230s to the low 70s mg/dL within a week. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
        "text": "Report the trend so the doses can be reviewed",
        "correct": true,
-       "rationale": "Insulin absorbs better from healthy tissue, so the same dose now does more. Readings heading toward 70 mean the dose needs review before a low happens."
+       "rationale": "Insulin absorbs better from healthy tissue, so the same dose now does more. Readings heading toward 70 mg/dL mean the dose needs review before a low happens."
       },
       {
        "id": "B",
@@ -57678,7 +57678,7 @@
       "steps": [
        {
         "action": "Read the trend",
-        "detail": "From the 230s to the low 70s on the same dose."
+        "detail": "From the 230s to the low 70s mg/dL on the same dose."
        },
        {
         "action": "Cut the step backward",
@@ -57750,7 +57750,7 @@
        },
        {
         "action": "Cut the delay",
-        "detail": "A reading of 41 in an unresponsive client fits."
+        "detail": "A reading of 41 mg/dL in an unresponsive client fits."
        }
       ],
       "verdict": "IV dextrose per protocol."
@@ -57766,13 +57766,13 @@
        "id": "A",
        "text": "Hold all insulin because the glucose is in range",
        "correct": false,
-       "rationale": "Tempting because 139 looks fine. The scheduled dose covers the meal she is about to eat, not the current number."
+       "rationale": "Tempting because 139 mg/dL is in range. The scheduled dose covers the meal she is about to eat, not the current number."
       },
       {
        "id": "B",
        "text": "Give 4 units plus the lowest correction dose",
        "correct": false,
-       "rationale": "The scale does not start until 150, so no correction is ordered for 139."
+       "rationale": "The scale does not start until 150 mg/dL, so no correction is ordered for 139 mg/dL."
       },
       {
        "id": "C",
@@ -57808,7 +57808,7 @@
        },
        {
         "action": "Part two",
-        "detail": "139 is under 150, so no correction."
+        "detail": "139 mg/dL is under 150 mg/dL, so no correction."
        },
        {
         "action": "Cut the all or nothing options",
@@ -57846,7 +57846,7 @@
        "id": "D",
        "text": "The lunch tray as soon as it arrives",
        "correct": false,
-       "rationale": "A glucose under 70 with symptoms is treated now, not in 20 minutes."
+       "rationale": "A glucose under 70 mg/dL with symptoms is treated now, not in 20 minutes."
       }
      ],
      "answer": "A",
@@ -57904,13 +57904,13 @@
        "id": "C",
        "text": "Humalog for a client whose tray comes at 0815",
        "correct": false,
-       "rationale": "Rapid acting insulin waits for the food. Given now, it would act before she eats."
+       "rationale": "Rapid acting insulin waits for the food. Given now, it would act before the client eats."
       },
       {
        "id": "D",
        "text": "Humalog for a client whose tray was just set down",
        "correct": true,
-       "rationale": "Rapid acting insulin is given as the meal arrives. Her food is here, so the dose is due this minute."
+       "rationale": "Rapid acting insulin is given as the meal arrives. The food is here, so the dose is due this minute."
       }
      ],
      "answer": "D",
@@ -57923,7 +57923,7 @@
       ],
       "readingChecked": true
      },
-     "strategy": "For each dose, find the tray. Only one client has food in front of her.",
+     "strategy": "For each dose, find the tray. Only one client has a tray at the bedside.",
      "elimination": {
       "strategies": [
        "Priority key word",
@@ -58018,25 +58018,25 @@
      "options": [
       {
        "id": "A",
-       "text": "Gives juice for a reading of 63, then tells the nurse",
+       "text": "Gives juice for a reading of 63 mg/dL, then tells the nurse",
        "correct": false,
        "rationale": "Tempting because the low gets treated. Deciding on treatment belongs to the nurse, who must assess the client first."
       },
       {
        "id": "B",
-       "text": "Charts a reading of 63 and reports it after rounds",
+       "text": "Charts a reading of 63 mg/dL and reports it after rounds",
        "correct": false,
        "rationale": "A low reported late is a low left untreated."
       },
       {
        "id": "C",
-       "text": "Uses the call light to report a reading of 63 now",
+       "text": "Uses the call light to report a reading of 63 mg/dL now",
        "correct": true,
        "rationale": "The value reaches the nurse at once and the assistive personnel stays with the client."
       },
       {
        "id": "D",
-       "text": "Repeats a reading of 63 twice before telling the nurse",
+       "text": "Repeats a reading of 63 mg/dL twice before telling the nurse",
        "correct": false,
        "rationale": "Extra checks delay the report the nurse asked for."
       }
@@ -58051,7 +58051,7 @@
       ],
       "readingChecked": true
      },
-     "strategy": "The direction had two parts: under 70, and at once. Find the action that meets both without adding anything.",
+     "strategy": "The direction had two parts: under 70 mg/dL, and at once. Find the action that meets both without adding anything.",
      "elimination": {
       "strategies": [
        "Treat each option as true or false",
@@ -58071,7 +58071,7 @@
         "detail": "Call light, now, staying with the client."
        }
       ],
-      "verdict": "Reports the 63 right away by call light."
+      "verdict": "Reports the 63 mg/dL right away by call light."
      }
     },
     {
@@ -58452,7 +58452,7 @@
        },
        {
         "action": "Keep the middle",
-        "detail": "182 and 244 mg/dL are both lower than 318 and neither is low."
+        "detail": "182 and 244 mg/dL are both lower than 318 mg/dL and neither is low."
        }
       ],
       "verdict": "Expected, follow up, follow up, expected, expected."
@@ -58829,7 +58829,7 @@
     {
      "id": "sk14-g11",
      "type": "multiple_choice",
-     "stem": "A 64-year-old's readings rose from the 140s to the 260s over 5 days on unchanged doses, meals and sites. Which report best explains the rise?",
+     "stem": "A 64-year-old's readings rose from the 140s to the 260s mg/dL over 5 days on unchanged doses, meals and sites. Which report best explains the rise?",
      "options": [
       {
        "id": "A",
@@ -59137,7 +59137,7 @@
      "id": "sk14-sp11",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "A client has NovoLog 5 units with each meal plus a NovoLog correction scale: 151 to 200 mg/dL, 2 units; 201 to 250, 4 units. The tray is here and the fingerstick is 236. Which dose does the nurse give?",
+     "stem": "A client has NovoLog 5 units with each meal plus a NovoLog correction scale: 151 to 200 mg/dL, 2 units; 201 to 250 mg/dL, 4 units. The tray is here and the fingerstick is 236 mg/dL. Which dose does the nurse give?",
      "options": [
       {
        "id": "A",
@@ -59155,13 +59155,13 @@
        "id": "C",
        "text": "7 units",
        "correct": false,
-       "rationale": "This adds the correction for 151 to 200. A value of 236 is in the next row."
+       "rationale": "This adds the correction for 151 to 200 mg/dL. A value of 236 mg/dL is in the next row."
       },
       {
        "id": "D",
        "text": "9 units",
        "correct": true,
-       "rationale": "The scheduled 5 units cover the meal and the 4 units from the 201 to 250 row correct the glucose. Both are the same insulin and both are due now."
+       "rationale": "The scheduled 5 units cover the meal and the 4 units from the 201 to 250 mg/dL row correct the glucose. Both are the same insulin and both are due now."
       }
      ],
      "answer": "D",
@@ -59184,7 +59184,7 @@
        },
        {
         "action": "Correction dose",
-        "detail": "236 sits in the 201 to 250 row: 4 units."
+        "detail": "236 mg/dL sits in the 201 to 250 mg/dL row: 4 units."
        },
        {
         "action": "Add",
@@ -59199,13 +59199,13 @@
      "id": "sk14-sp16",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "An 83-year-old received NPH insulin at 0730. His fingersticks were 122 mg/dL at 0730, 98 at 1130 and 74 at 1530. His afternoon snack has not come. Which action does the nurse take?",
+     "stem": "An 83-year-old received NPH insulin at 0730. His fingersticks were 122 mg/dL at 0730, 98 mg/dL at 1130 and 74 mg/dL at 1530. His afternoon snack has not come. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
-       "text": "Record 74 as within target and recheck before dinner",
+       "text": "Record 74 mg/dL as within target and recheck before dinner",
        "correct": false,
-       "rationale": "Tempting because 74 is inside the 70 to 180 target. The steady fall during the NPH peak with no snack yet is what makes waiting unsafe."
+       "rationale": "Tempting because 74 mg/dL is inside the 70 to 180 mg/dL target. The steady fall during the NPH peak with no snack yet is what makes waiting unsafe."
       },
       {
        "id": "B",
@@ -59217,13 +59217,13 @@
        "id": "C",
        "text": "Get his snack to him now and recheck the fingerstick",
        "correct": true,
-       "rationale": "The value is falling toward 70 at eight hours after NPH, inside its 4 to 12 hour peak. Food now and a recheck keep him from becoming low."
+       "rationale": "The value is falling toward 70 mg/dL at eight hours after NPH, inside its 4 to 12 hour peak. Food now and a recheck keep him from becoming low."
       },
       {
        "id": "D",
        "text": "Hold his next NPH dose",
        "correct": false,
-       "rationale": "The nurse does not withhold a later dose on her own for a value that is still in range."
+       "rationale": "The nurse does not withhold a later dose without an order for a value that is still in range."
       }
      ],
      "answer": "C",
@@ -59236,7 +59236,7 @@
       ],
       "readingChecked": true
      },
-     "strategy": "74 is in range, so ask where it is heading. Count the hours since the NPH and look at the three values together.",
+     "strategy": "74 mg/dL is in range, so ask where it is heading. Count the hours since the NPH and look at the three values together.",
      "elimination": {
       "strategies": [
        "Priority key word",
@@ -59245,11 +59245,11 @@
       "steps": [
        {
         "action": "Read the trend",
-        "detail": "122, then 98, then 74, eight hours after NPH."
+        "detail": "122, then 98, then 74 mg/dL, eight hours after NPH."
        },
        {
         "action": "Cut B",
-        "detail": "The protocol starts under 70."
+        "detail": "The protocol starts under 70 mg/dL."
        },
        {
         "action": "Cut D",
@@ -59476,7 +59476,7 @@
        "id": "B",
        "text": "Glucose 288 mg/dL, alert and thirsty, sliding scale dose due at dinner",
        "correct": false,
-       "rationale": "High and needs follow up, but he is alert and it is not an immediate threat."
+       "rationale": "High and needs follow up, but this client is alert and it is not an immediate threat."
       },
       {
        "id": "C",
@@ -59486,7 +59486,7 @@
       },
       {
        "id": "D",
-       "text": "NPH this morning, now sweaty and confused, no reading yet",
+       "text": "NPH at 0700, now sweaty and confused, no reading yet",
        "correct": true,
        "rationale": "Sweating and new confusion during the NPH peak point to a low that nobody has measured or treated."
       }
@@ -59533,7 +59533,7 @@
      "options": [
       {
        "id": "A",
-       "text": "\"I take 15 grams of fast sugar as soon as I am under 70.\"",
+       "text": "\"I take 15 grams of fast sugar as soon as I am under 70 mg/dL.\"",
        "correct": false,
        "rationale": "Correct. Under 70 mg/dL is treated right away."
       },
@@ -59551,9 +59551,9 @@
       },
       {
        "id": "D",
-       "text": "\"If I am still under 70 when I retest, I treat again.\"",
+       "text": "\"If I am still under 70 mg/dL when I retest, I treat again.\"",
        "correct": false,
-       "rationale": "Correct. Treatment is repeated while the value stays under 70."
+       "rationale": "Correct. Treatment is repeated while the value stays under 70 mg/dL."
       }
      ],
      "answer": "C",
@@ -59579,7 +59579,7 @@
        },
        {
         "action": "Check each against the rule",
-        "detail": "Treat under 70, recheck in 15 minutes, repeat if still low."
+        "detail": "Treat under 70 mg/dL, recheck in 15 minutes, repeat if still low."
        },
        {
         "action": "Spot the gap",
@@ -59600,7 +59600,7 @@
        "id": "A",
        "text": "His fingerstick is 59 mg/dL",
        "correct": true,
-       "rationale": "Insulin is never given to a client whose glucose is under 70. The low is treated first."
+       "rationale": "Insulin is never given to a client whose glucose is under 70 mg/dL. The low is treated first."
       },
       {
        "id": "B",
@@ -59618,7 +59618,7 @@
        "id": "D",
        "text": "His fingerstick is 172 mg/dL",
        "correct": false,
-       "rationale": "This is inside the 70 to 180 target and does not stop a scheduled premeal dose."
+       "rationale": "This is inside the 70 to 180 mg/dL target and does not stop a scheduled premeal dose."
       },
       {
        "id": "E",
@@ -59654,7 +59654,7 @@
       "steps": [
        {
         "action": "Find the unsafe findings",
-        "detail": "A glucose of 59 and no intake both make the dose dangerous."
+        "detail": "A glucose of 59 mg/dL and no intake both make the dose dangerous."
        },
        {
         "action": "Clear the expected findings",
@@ -59743,7 +59743,7 @@
        "id": "A",
        "text": "Stop and verify the dose before giving it",
        "correct": true,
-       "rationale": "A wrong dose is a main cause of a low, and the client knows his usual dose. The nurse checks before the insulin is in."
+       "rationale": "A wrong dose is a main cause of a low, and the client knows the usual home dose. The nurse checks before the insulin is in."
       },
       {
        "id": "B",
@@ -59781,7 +59781,7 @@
       "steps": [
        {
         "action": "Hear the client",
-        "detail": "His usual dose is half of what is drawn up."
+        "detail": "The usual home dose is half of what is drawn up."
        },
        {
         "action": "Cut C",
@@ -59793,7 +59793,7 @@
        },
        {
         "action": "Compare A and B",
-        "detail": "B answers him without checking."
+        "detail": "B answers the client without checking."
        }
       ],
       "verdict": "A: stop and verify the dose first."
@@ -59945,7 +59945,7 @@
        "id": "B",
        "text": "Give 15 to 20 g of fast-acting carbohydrate per the hypoglycemia protocol",
        "correct": false,
-       "rationale": "The protocol treats a glucose under 70. No value shows she is low yet."
+       "rationale": "The protocol treats a glucose under 70 mg/dL. No value shows she is low yet."
       },
       {
        "id": "C",
@@ -59998,7 +59998,7 @@
      "id": "sk14-sp28",
      "type": "multiple_choice",
      "difficulty": "difficult",
-     "stem": "At 1230 an assistive personnel tells the nurse, \"His fingerstick was 67 at 1100. He felt fine, and he ate all of his lunch at 1130.\" He is on insulin. What does the nurse do first?",
+     "stem": "At 1230 an assistive personnel tells the nurse, \"His fingerstick was 67 mg/dL at 1100. He had no symptoms, and he ate all of his lunch at 1130.\" He is on insulin. What does the nurse do first?",
      "options": [
       {
        "id": "A",
@@ -60010,7 +60010,7 @@
        "id": "B",
        "text": "Give 15 to 20 g of fast-acting carbohydrate",
        "correct": false,
-       "rationale": "Tempting because 67 is under 70 and should have been treated at 1100. A full meal has gone in since, so the nurse confirms where he is now before treating."
+       "rationale": "Tempting because 67 mg/dL is under 70 mg/dL and should have been treated at 1100. A full meal has gone in since, so the nurse confirms where he is now before treating."
       },
       {
        "id": "C",
@@ -60044,7 +60044,7 @@
       "steps": [
        {
         "action": "Date the data",
-        "detail": "67 was taken at 1100. Lunch was eaten at 1130. It is now 1230."
+        "detail": "67 mg/dL was taken at 1100. Lunch was eaten at 1130. It is now 1230."
        },
        {
         "action": "Cut C",
