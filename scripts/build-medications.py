@@ -4,9 +4,10 @@
     python3 scripts/build-medications.py ~/Downloads/medications.json
 
 The full export also carries the study-card editing log (`corrections`, plus
-the file-level `source` and `conventions`) and per-card `interaction_tags`.
-Those are for whoever maintains the data, not for students, so they are left
-out of what the site serves:
+the file-level `source` and `conventions`), per-card `interaction_tags`, and
+flat copies of what `sections` already lays out. Those are for whoever
+maintains the data, or are duplicates, so they are left out of what the site
+serves:
 
   src/app/components/Medications/medications.json   the guide itself
   src/app/components/Medications/interactions.json  the interaction map data,
@@ -26,9 +27,24 @@ inter = full["interactions"]
 
 guide = {k: full[k] for k in ("schema_version", "generated", "stats", "groups", "medications")}
 guide["stats"] = {k: v for k, v in guide["stats"].items() if k != "corrections_applied"}
+
+# Everything the pages and the flashcards read; everything else is dropped.
+# The per-section content (action, contraindications, side effects, nursing,
+# ...) is already laid out in `sections`, so the older flat copies of it are
+# not shipped a second time.
+KEEP = (
+    "id", "generic", "pronunciation", "brand", "group", "drug_class", "subclass",
+    "highlight", "quick", "why_this_one", "use", "working_because",
+    "high_alert", "black_box", "antidote", "sections",
+)
+slim = []
 for med in guide["medications"]:
-    med.pop("corrections", None)
-    med.pop("interaction_tags", None)
+    kept = {k: med[k] for k in KEEP}
+    # The medication card on the page is drawn from `flashcard`, and the
+    # flashcards read its serious side effects, so it ships whole.
+    kept["flashcard"] = med["flashcard"]
+    slim.append(kept)
+guide["medications"] = slim
 
 rules = [
     {k: rule[k] for k in ("id", "name", "severity", "mechanism", "watch", "exam") if k in rule}

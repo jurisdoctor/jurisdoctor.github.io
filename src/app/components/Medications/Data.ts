@@ -23,17 +23,22 @@ export interface RouteType {
   med: string | null;
   // The interaction map ("#/compare"): not under any category.
   compare?: boolean;
+  // Flashcard study mode ("#/study").
+  study?: boolean;
 }
 
 export const ROOT: RouteType = { group: null, med: null };
 export const COMPARE: RouteType = { group: null, med: null, compare: true };
+export const STUDY: RouteType = { group: null, med: null, study: true };
 
 export const hashOf = (route: RouteType) =>
   route.compare
     ? "#/compare"
-    : route.group
-      ? `#/${slugOf(route.group)}${route.med ? `/${route.med}` : ""}`
-      : "#/";
+    : route.study
+      ? "#/study"
+      : route.group
+        ? `#/${slugOf(route.group)}${route.med ? `/${route.med}` : ""}`
+        : "#/";
 
 export const parseHash = (hash: string, guide: MedFile): RouteType => {
   const [groupSlug, medId] = hash
@@ -42,6 +47,7 @@ export const parseHash = (hash: string, guide: MedFile): RouteType => {
     .filter(Boolean);
 
   if (groupSlug === "compare") return COMPARE;
+  if (groupSlug === "study") return STUDY;
 
   const med = medId
     ? guide.medications.find((entry) => entry.id === medId)

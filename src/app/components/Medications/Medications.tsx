@@ -8,7 +8,13 @@ import {
   useRef,
   useState,
 } from "react";
-import { LuChevronRight, LuNetwork, LuSearch, LuX } from "react-icons/lu";
+import {
+  LuChevronRight,
+  LuLayers,
+  LuNetwork,
+  LuSearch,
+  LuX,
+} from "react-icons/lu";
 import { useSaved } from "../DosageCalculations/Saved";
 import Shapes from "../Home/Shapes";
 import { flameHueAt } from "../Nclex/FlamePalette";
@@ -18,6 +24,7 @@ import { MAX_COMPARE, shortName } from "./Interactions";
 import {
   COMPARE,
   hashOf,
+  STUDY,
   loadGuide,
   parseHash,
   RouteType,
@@ -27,6 +34,7 @@ import {
 } from "./Data";
 import { Headline } from "./Emphasis";
 import MedDetail from "./MedDetail";
+import Study from "./Study";
 import { GroupType, MedFile, MedType } from "./types";
 
 const calm = () =>
@@ -85,7 +93,7 @@ const MedRow = ({
   <button
     type="button"
     onClick={() => onOpen(med.id)}
-    className="group flex w-auto min-w-[14rem] max-w-[26rem] items-start gap-x-4 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 text-left duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg sm:w-full sm:max-w-full sm:px-4"
+    className="group flex w-full items-start gap-x-4 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 text-left duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg sm:px-4"
   >
     <span
       aria-hidden
@@ -229,6 +237,10 @@ const Empty = ({ children }: { children: ReactNode }) => (
   </div>
 );
 
+// Flashcard study mode is built (Study.tsx, Cards.ts) but switched off for now.
+// Flip this to bring back its button and its "#/study" page.
+const FLASHCARDS = false;
+
 const freshList = (): string[] => [];
 const validList = (saved: string[]) =>
   Array.isArray(saved) && saved.every((entry) => typeof entry === "string");
@@ -320,7 +332,10 @@ const Medications = () => {
   // the browser's back/forward buttons walk the same path as the breadcrumb.
   useEffect(() => {
     if (!guide) return;
-    const read = () => setRoute(parseHash(window.location.hash, guide));
+    const read = () => {
+      const next = parseHash(window.location.hash, guide);
+      setRoute(next.study && !FLASHCARDS ? ROOT : next);
+    };
     read();
     window.addEventListener("hashchange", read);
     return () => window.removeEventListener("hashchange", read);
@@ -415,23 +430,31 @@ const Medications = () => {
     setQuery("");
     go(COMPARE);
   };
+  const openStudy = () => {
+    setQuery("");
+    go(STUDY);
+  };
 
   const searching = query.trim().length > 0;
   const view = route.compare
     ? "compare"
-    : med
-      ? `med:${med.id}`
-      : group
-        ? `group:${group.name}`
-        : "root";
+    : route.study
+      ? "study"
+      : med
+        ? `med:${med.id}`
+        : group
+          ? `group:${group.name}`
+          : "root";
 
   const crumbs: { label: string; onClick?: () => void }[] = [
     {
       label: "Drug guide",
-      onClick: group || med || route.compare ? openRoot : undefined,
+      onClick:
+        group || med || route.compare || route.study ? openRoot : undefined,
     },
   ];
   if (route.compare) crumbs.push({ label: "Interaction check" });
+  if (route.study) crumbs.push({ label: "Flashcards" });
   if (group) {
     crumbs.push({
       label: group.name,
@@ -463,23 +486,38 @@ const Medications = () => {
             <h1 className="ml-3.5 text-4xl font-bold lg:ml-0 lg:text-center">
               Drug <em>guide</em>
             </h1>
-            {guide && !route.compare && (
-              <button
-                type="button"
-                onClick={openCompare}
-                className="inline-flex items-center gap-x-2 rounded-[1.875rem] border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
-              >
-                <LuNetwork
-                  aria-hidden
-                  className="text-[var(--chip-blue-border)]"
-                />
-                Interaction check
-                {pickedMeds.length > 0 && (
-                  <span className="rounded-full bg-[var(--primary-color)] px-2 py-0.5 text-xs leading-none text-white">
-                    {pickedMeds.length}
-                  </span>
+            {guide && !route.compare && !route.study && (
+              <div className="flex flex-wrap items-center gap-2 lg:justify-center">
+                {FLASHCARDS && (
+                  <button
+                    type="button"
+                    onClick={openStudy}
+                    className="inline-flex items-center gap-x-2 rounded-[1.875rem] border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
+                  >
+                    <LuLayers
+                      aria-hidden
+                      className="text-[var(--chip-blue-border)]"
+                    />
+                    Flashcards
+                  </button>
                 )}
-              </button>
+                <button
+                  type="button"
+                  onClick={openCompare}
+                  className="inline-flex items-center gap-x-2 rounded-[1.875rem] border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
+                >
+                  <LuNetwork
+                    aria-hidden
+                    className="text-[var(--chip-blue-border)]"
+                  />
+                  Interaction check
+                  {pickedMeds.length > 0 && (
+                    <span className="rounded-full bg-[var(--primary-color)] px-2 py-0.5 text-xs leading-none text-white">
+                      {pickedMeds.length}
+                    </span>
+                  )}
+                </button>
+              </div>
             )}
           </div>
           <p className="mb-3 ml-3.5 text-[var(--text-color)] lg:ml-0 lg:text-center">
@@ -532,7 +570,7 @@ const Medications = () => {
                 </nav>
               )}
 
-              {!med && !route.compare && (
+              {!med && !route.compare && !route.study && (
                 <div className="relative mb-4">
                   <LuSearch
                     aria-hidden
@@ -569,7 +607,9 @@ const Medications = () => {
               )}
 
               <Swap token={`${view}:${searching ? "q" : "all"}`}>
-                {route.compare ? (
+                {route.study ? (
+                  <Study guide={guide} accentFor={accentFor} />
+                ) : route.compare ? (
                   <CompareMap
                     meds={pickedMeds}
                     onRemove={togglePicked}
@@ -587,6 +627,7 @@ const Medications = () => {
                       !picked.includes(med.id) && picked.length >= MAX_COMPARE
                     }
                     onPick={() => togglePicked(med.id)}
+                    accent={accentFor(med.group)}
                   />
                 ) : group ? (
                   <div className="flex flex-col gap-y-4">
@@ -603,7 +644,7 @@ const Medications = () => {
                         &rdquo;.
                       </Empty>
                     ) : (
-                      <div className="flex flex-wrap gap-3">
+                      <div className="grid grid-cols-3 gap-3 lg:grid-cols-1">
                         {matches.map((entry, position) => (
                           <MedRow
                             key={entry.id}
@@ -650,7 +691,7 @@ const Medications = () => {
                           or what it&apos;s used for.
                         </Empty>
                       ) : (
-                        <div className="flex flex-wrap gap-3">
+                        <div className="grid grid-cols-3 gap-3 lg:grid-cols-1">
                           {matches.map((entry, position) => (
                             <MedRow
                               key={entry.id}
@@ -686,7 +727,7 @@ const Medications = () => {
         </div>
       </section>
 
-      {guide && pickedMeds.length > 0 && !route.compare && (
+      {guide && pickedMeds.length > 0 && !route.compare && !route.study && (
         <Tray
           meds={pickedMeds}
           onRemove={togglePicked}
