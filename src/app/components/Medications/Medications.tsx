@@ -8,6 +8,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { usePathname } from "next/navigation";
 import {
   LuChevronRight,
   LuLayers,
@@ -22,11 +23,12 @@ import Swap from "../Nclex/Swap";
 import CompareMap from "./CompareMap";
 import { MAX_COMPARE, shortName } from "./Interactions";
 import {
+  BASE,
   COMPARE,
-  hashOf,
+  pathOf,
   STUDY,
   loadGuide,
-  parseHash,
+  parsePath,
   RouteType,
   ROOT,
   search,
@@ -309,6 +311,9 @@ const Medications = () => {
   const [guide, setGuide] = useState<MedFile | null>(null);
   const [failed, setFailed] = useState(false);
   const [route, setRoute] = useState<RouteType>(ROOT);
+  // Next tells us when the address changes by any route other than our own
+  // pushState: the sidebar's link back to /medications, for one.
+  const pathname = usePathname();
   const [query, setQuery] = useState("");
   const [picked, setPicked] = useSaved<string[]>(
     "meds:compare:v1",
@@ -328,24 +333,38 @@ const Medications = () => {
     };
   }, []);
 
-  // The URL hash is the single source of truth for where the learner is, so
+  // The address is the single source of truth for where the learner is, so
   // the browser's back/forward buttons walk the same path as the breadcrumb.
+  // We move with history.pushState rather than a Next navigation: the page
+  // stays mounted, so the guide doesn't reload on every click.
   useEffect(() => {
     if (!guide) return;
     const read = () => {
-      const next = parseHash(window.location.hash, guide);
+      // Links from before the address had real paths ("/medications#/x/y").
+      const legacy = window.location.hash.replace(/^#/, "");
+      if (legacy.startsWith("/")) {
+        const old = parsePath(`${BASE}${legacy}`, guide);
+        window.history.replaceState(null, "", pathOf(old));
+      }
+      const next = parsePath(window.location.pathname, guide);
       setRoute(next.study && !FLASHCARDS ? ROOT : next);
     };
     read();
-    window.addEventListener("hashchange", read);
-    return () => window.removeEventListener("hashchange", read);
-  }, [guide]);
+    window.addEventListener("popstate", read);
+    return () => window.removeEventListener("popstate", read);
+  }, [guide, pathname]);
 
-  const go = useCallback((next: RouteType) => {
-    const hash = hashOf(next);
-    if (window.location.hash === hash) return;
-    window.location.hash = hash;
-  }, []);
+  const go = useCallback(
+    (next: RouteType) => {
+      if (!guide) return;
+      const path = pathOf(next);
+      if (window.location.pathname.replace(/\/$/, "") !== path) {
+        window.history.pushState(null, "", path);
+      }
+      setRoute(parsePath(path, guide));
+    },
+    [guide],
+  );
 
   // Each step down or back up starts at the top of the page, not wherever
   // the previous list was scrolled to.

@@ -15,34 +15,40 @@ export const slugOf = (name: string) =>
     .replace(/^-+|-+$/g, "");
 
 // Where the learner is: nothing picked (every category), a category, or one
-// medication (which always belongs to a category). Kept in the URL hash —
-// "#/blood-pressure/amlodipine" — so the browser's back button, a refresh
-// and a shared link all land in the same place.
+// medication (which always belongs to a category). Kept in the address —
+// "/medications/blood-pressure/amlodipine" — so the browser's back button, a
+// refresh and a shared link all land in the same place. Every one of these
+// addresses is also built as a real page (see app/medications/[[...path]]),
+// so a refresh or a pasted link works on the static host too.
 export interface RouteType {
   group: string | null;
   med: string | null;
-  // The interaction map ("#/compare"): not under any category.
+  // The interaction map ("/medications/compare"): not under any category.
   compare?: boolean;
-  // Flashcard study mode ("#/study").
+  // Flashcard study mode ("/medications/study").
   study?: boolean;
 }
+
+export const BASE = "/medications";
 
 export const ROOT: RouteType = { group: null, med: null };
 export const COMPARE: RouteType = { group: null, med: null, compare: true };
 export const STUDY: RouteType = { group: null, med: null, study: true };
 
-export const hashOf = (route: RouteType) =>
+export const pathOf = (route: RouteType) =>
   route.compare
-    ? "#/compare"
+    ? `${BASE}/compare`
     : route.study
-      ? "#/study"
+      ? `${BASE}/study`
       : route.group
-        ? `#/${slugOf(route.group)}${route.med ? `/${route.med}` : ""}`
-        : "#/";
+        ? `${BASE}/${slugOf(route.group)}${route.med ? `/${route.med}` : ""}`
+        : BASE;
 
-export const parseHash = (hash: string, guide: MedFile): RouteType => {
-  const [groupSlug, medId] = hash
-    .replace(/^#\/?/, "")
+// "/medications/blood-pressure/amlodipine" -> that medication. Anything it
+// can't place (a typo, an old link) falls back to the main page.
+export const parsePath = (pathname: string, guide: MedFile): RouteType => {
+  const [groupSlug, medId] = pathname
+    .replace(new RegExp(`^${BASE}/?`), "")
     .split("/")
     .filter(Boolean);
 

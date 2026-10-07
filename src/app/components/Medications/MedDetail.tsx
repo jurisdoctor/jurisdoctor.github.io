@@ -307,19 +307,21 @@ const Row = ({ label, children }: { label: string; children: ReactNode }) => (
 // "Contraindicated: ...", "Antidote: ..." and "BLACK BOX: ..." keep their
 // text exactly; only the lead-in is picked out.
 const Consideration = ({ line }: { line: string }) => {
-  const match = line.match(/^(BLACK BOX|Contraindicated|Antidote):\s*(.*)$/);
+  // A lead-in is one of the named ones, or an ALL-CAPS label such as
+  // "VITALS BEFORE AND AFTER:" or "RESPIRATORY RATE BEFORE AND AFTER:".
+  const match = line.match(
+    /^(BLACK BOX|HIGH ALERT|Contraindicated|Antidote|[A-Z][A-Z ]{2,}[A-Z]):\s*(.*)$/,
+  );
   if (!match) return <>{line}</>;
-  const black = match[1] === "BLACK BOX";
+  const tone =
+    match[1] === "BLACK BOX"
+      ? "text-[var(--primary-color)]"
+      : match[1] === "HIGH ALERT"
+        ? "text-[hsl(38,100%,60%)] [:root[data-theme=light]_&]:text-[hsl(30,90%,28%)]"
+        : "text-[var(--title-color)]";
   return (
     <>
-      <span
-        className={`font-bold ${
-          black ? "text-[var(--primary-color)]" : "text-[var(--title-color)]"
-        }`}
-      >
-        {match[1]}:
-      </span>{" "}
-      {match[2]}
+      <span className={`font-bold ${tone}`}>{match[1]}:</span> {match[2]}
     </>
   );
 };

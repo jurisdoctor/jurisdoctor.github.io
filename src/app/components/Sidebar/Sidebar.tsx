@@ -120,7 +120,7 @@ const Sidebar = () => {
                   onClick={() => setToggle(false)}
                   aria-label="Drug guide"
                   title="Drug guide"
-                  className={`${navLink} ${path === "/medications" ? "!text-[hsl(43,100%,68%)]" : ""}`}
+                  className={`${navLink} ${path.startsWith("/medications") ? "!text-[hsl(43,100%,68%)]" : ""}`}
                 >
                   <LuPill />
                 </Link>

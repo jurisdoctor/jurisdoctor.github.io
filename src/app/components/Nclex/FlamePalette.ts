@@ -1,6 +1,6 @@
 // Flame colors for the "new question" glow. Each chapter takes one by its
 // position in the chapter list (first chapter -> first color, and so on,
-// wrapping after 20), so a chapter's own tile and its questions in the New
+// wrapping after 24), so a chapter's own tile and its questions in the New
 // section all burn the same color. Neighbours in the list are kept far apart
 // on the color wheel so adjacent chapters never look alike.
 //
@@ -36,6 +36,11 @@ export const FLAME_PALETTE: FlameColor[] = [
   { name: "Sky", hue: 195 },
   { name: "Chartreuse", hue: 105 },
   { name: "Orchid", hue: 285 },
+  // And four more for guides with more than twenty categories.
+  { name: "Vermilion", hue: 15 },
+  { name: "Spring", hue: 165 },
+  { name: "Periwinkle", hue: 255 },
+  { name: "Olive", hue: 75 },
 ];
 
 // Where each stop sits relative to the flame's hue, and its saturation and

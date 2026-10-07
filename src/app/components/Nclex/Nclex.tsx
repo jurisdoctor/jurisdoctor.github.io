@@ -123,7 +123,19 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
       }),
     [setStars],
   );
-  const starCount = Object.keys(stars).length;
+  // Favorites saved against questions a later question drop removed would
+  // inflate the count (and keep an empty tab alive), so only count the ones
+  // that still exist.
+  const known = useMemo(
+    () =>
+      new Set(
+        [...bank.Chapters, ...bank.Skills, ...bank.Cases, ...bank.Judgment]
+          .flatMap((entry) => entry.questions)
+          .map((entry) => entry.id),
+      ),
+    [bank],
+  );
+  const starCount = Object.keys(stars).filter((id) => known.has(id)).length;
 
   // Favorites only gets a tab while there is something in it. Two cases keep
   // it around past that: before the saved stars have loaded (otherwise a
