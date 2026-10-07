@@ -35,7 +35,7 @@ guide["stats"] = {k: v for k, v in guide["stats"].items() if k != "corrections_a
 KEEP = (
     "id", "generic", "pronunciation", "brand", "group", "drug_class", "subclass",
     "highlight", "quick", "why_this_one", "use", "working_because",
-    "high_alert", "black_box", "antidote", "sections",
+    "high_alert", "black_box", "antidote", "sections", "must_check",
 )
 slim = []
 for med in guide["medications"]:

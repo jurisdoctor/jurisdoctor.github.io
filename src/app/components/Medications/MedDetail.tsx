@@ -131,7 +131,9 @@ const Steps = ({ items }: { items: StepItem[] }) => (
                 Black box
               </span>
             )}
-            <span className="font-bold text-[var(--title-color)]">{text}</span>
+            <span className="font-bold text-[var(--title-color)]">
+              <Consideration line={text} />
+            </span>
             {entry.rationale && (
               <span className="mt-1 block text-[var(--text-color)]">
                 <span className="italic text-[var(--muted-color)]">Why: </span>
@@ -187,7 +189,7 @@ const Grouped = ({ title, groups }: { title: string; groups: GroupItem[] }) => (
               return (
                 <li
                   key={position}
-                  className="grid grid-cols-[6.5rem_1fr] items-start gap-x-4 sm:grid-cols-1 sm:gap-y-1"
+                  className="grid grid-cols-[6.5rem_1fr] items-start gap-x-4 sm:grid-cols-[4.5rem_1fr] sm:gap-x-2.5"
                 >
                   <span className="py-1 text-sm font-bold leading-snug text-[var(--title-color)]">
                     {system}
@@ -351,7 +353,7 @@ const Effects = ({
         return (
           <li
             key={position}
-            className="grid grid-cols-[5.5rem_1fr] items-start gap-x-3 sm:grid-cols-1 sm:gap-y-1"
+            className="grid grid-cols-[5.5rem_1fr] items-start gap-x-3 sm:grid-cols-[4.5rem_1fr] sm:gap-x-2.5"
           >
             <span className="py-1 text-sm font-bold leading-snug text-[var(--muted-color)]">
               {system}
