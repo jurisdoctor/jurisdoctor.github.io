@@ -106,16 +106,6 @@ const Sidebar = () => {
 
               <li className="nav__item">
                 <Link
-                  href="/pharm"
-                  onClick={() => setToggle(false)}
-                  className={`${navLink} ${path === "/pharm" ? "!text-[hsl(43,100%,68%)]" : ""}`}
-                >
-                  <LuGraduationCap />
-                </Link>
-              </li>
-
-              <li className="nav__item">
-                <Link
                   href="/medications"
                   onClick={() => setToggle(false)}
                   aria-label="Drug guide"
@@ -123,6 +113,16 @@ const Sidebar = () => {
                   className={`${navLink} ${path.startsWith("/medications") ? "!text-[hsl(43,100%,68%)]" : ""}`}
                 >
                   <LuPill />
+                </Link>
+              </li>
+
+              <li className="nav__item">
+                <Link
+                  href="/pharm"
+                  onClick={() => setToggle(false)}
+                  className={`${navLink} ${path === "/pharm" ? "!text-[hsl(43,100%,68%)]" : ""}`}
+                >
+                  <LuGraduationCap />
                 </Link>
               </li>
             </ul>

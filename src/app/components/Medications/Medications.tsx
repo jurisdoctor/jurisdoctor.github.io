@@ -179,10 +179,24 @@ const GroupCard = ({
       style={{ background: accentOf(index) }}
     />
     <span className="min-w-0 flex-1">
-      <span className="block text-lg font-bold leading-tight text-[var(--title-color)]">
-        <Marked text={group.name} query={query} />
+      {/* A name of several words wraps onto the next line like any text. Only
+          a single word too long for the card ("Immunosuppressants") is cut
+          with an ellipsis, so each word is its own box that can be cut. The
+          full name is in the tooltip. */}
+      <span
+        title={group.name}
+        className="block text-lg font-bold leading-tight text-[var(--title-color)]"
+      >
+        {group.name.split(" ").map((word, position) => (
+          <Fragment key={position}>
+            {position > 0 && " "}
+            <span className="inline-block max-w-full truncate align-bottom">
+              <Marked text={word} query={query} />
+            </span>
+          </Fragment>
+        ))}
       </span>
-      <span className="text-sm text-[var(--muted-color)]">
+      <span className="block truncate text-sm text-[var(--muted-color)]">
         {group.count} {group.count === 1 ? "medication" : "medications"}
       </span>
     </span>
