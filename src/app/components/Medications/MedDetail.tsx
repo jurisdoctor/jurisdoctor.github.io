@@ -23,13 +23,15 @@ const Heading = ({
   tone,
 }: {
   children: ReactNode;
-  tone?: "danger";
+  tone?: "danger" | "caution";
 }) => (
   <h3
     className={`mb-3 text-xs font-bold uppercase tracking-wide ${
       tone === "danger"
         ? "text-[var(--primary-color)]"
-        : "text-[var(--muted-color)]"
+        : tone === "caution"
+          ? "text-[hsl(38,100%,60%)] [:root[data-theme=light]_&]:text-[hsl(30,90%,28%)]"
+          : "text-[var(--muted-color)]"
     }`}
   >
     {children}
@@ -385,8 +387,9 @@ const Effects = ({
 // (interactions live in the Interaction check).
 // (Name, indication, action, classes and side effects are already on the card.)
 const ROWS: string[][] = [
-  ["why", "contraindications"],
-  ["working", "safety"],
+  ["why", "working"],
+  ["contraindications", "cautions"],
+  ["safety"],
   ["nursing"],
 ];
 
@@ -478,7 +481,17 @@ const MedDetail = ({
         }
       >
         {section.type !== "grouped" && (
-          <Heading tone={danger ? "danger" : undefined}>{title}</Heading>
+          <Heading
+            tone={
+              danger
+                ? "danger"
+                : section.id === "cautions"
+                  ? "caution"
+                  : undefined
+            }
+          >
+            {title}
+          </Heading>
         )}
         {body(section)}
       </section>
