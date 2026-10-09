@@ -72,19 +72,19 @@ const Option = ({
     ? won
       ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
       : wrongPick
-        ? "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
+        ? "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
         : missed
           ? "border-dashed border-[rgb(68,215,182)] bg-[var(--body-color)]"
           : "border-transparent bg-[var(--body-color)] opacity-60"
     : chosen
       ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
-      : "border-transparent bg-[var(--body-color)] hover:border-[hsl(219,100%,88%)]";
+      : "border-transparent bg-[var(--body-color)] hover:border-[var(--chip-blue-border)]";
 
   const badge = answered
     ? won || missed
       ? "bg-[rgb(68,215,182)] text-white"
       : wrongPick
-        ? "bg-[var(--primary-color)] text-white"
+        ? "bg-[var(--primary-color)] text-[var(--on-primary)]"
         : "border-2 border-solid border-[var(--chip-blue-border)] text-[var(--chip-blue-border)]"
     : chosen
       ? "bg-[var(--chip-blue-border)] text-white"
@@ -117,7 +117,7 @@ const Option = ({
         {won && <span className="shrink-0 leading-7">✅</span>}
         {wrongPick && <span className="shrink-0 leading-7">❌</span>}
         {missed && (
-          <span className="flex h-7 shrink-0 items-center rounded-full bg-[rgba(68,215,182,0.18)] px-2 text-[10px] font-bold uppercase tracking-wide text-[var(--title-color)]">
+          <span className="flex h-7 shrink-0 items-center rounded-md bg-[rgba(68,215,182,0.18)] px-2 text-[10px] font-bold uppercase tracking-wide text-[var(--title-color)]">
             Missed
           </span>
         )}
@@ -135,11 +135,11 @@ const Option = ({
 const Verdict = ({ correct, multi }: { correct: boolean; multi: boolean }) => (
   <div
     className={`mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 ${
-      correct ? "bg-[rgba(68,215,182,0.12)]" : "bg-[hsla(353,100%,65%,0.1)]"
+      correct ? "bg-[rgba(68,215,182,0.12)]" : "bg-[hsla(14, 100%, 57%,0.1)]"
     }`}
   >
     <span
-      className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${
+      className={`rounded-md px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${
         correct ? "bg-[rgb(68,215,182)]" : "bg-[var(--primary-color)]"
       }`}
     >
@@ -181,9 +181,9 @@ const Aside = ({
 );
 
 const button =
-  "inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none";
+  "inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none";
 const ghost =
-  "inline-block rounded-[1.875rem] border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)] hover:animate-pulse";
+  "inline-block rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)]";
 
 const Quiz = ({
   label,
@@ -366,7 +366,7 @@ const Quiz = ({
               {Array.from({ length: question.caseSteps }).map((_, index) => (
                 <span
                   key={index}
-                  className={`h-1.5 flex-1 rounded-full duration-300 ${
+                  className={`h-1.5 flex-1 rounded-sm duration-300 ${
                     index < (question.caseStep ?? 0)
                       ? "bg-[var(--chip-blue-border)]"
                       : "bg-[var(--chip-blue-track)]"
@@ -388,7 +388,7 @@ const Quiz = ({
             {question.ordinal ?? at + 1} of {questions.length}
           </span>
           {multi && (
-            <span className="rounded-full bg-[var(--chip-blue)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
+            <span className="rounded-md bg-[var(--chip-blue)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
               {bowtie
                 ? "Bow tie"
                 : marker
@@ -450,7 +450,7 @@ const Quiz = ({
       )}
 
       {question.nursesNote && (
-        <div className="mb-4 rounded-2xl border-2 border-solid border-[#e6e4f0] p-5">
+        <div className="mb-4 rounded-2xl border-2 border-solid border-[#e4dfd3] p-5">
           <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             Nurses note
           </span>
@@ -488,7 +488,7 @@ const Quiz = ({
               {question.data.rows.map((row) => (
                 <tr
                   key={row[0]}
-                  className="border-t-[1px] border-solid border-[#e6e4f0]"
+                  className="border-t-[1px] border-solid border-[#e4dfd3]"
                 >
                   {row.map((cell, index) => (
                     <td

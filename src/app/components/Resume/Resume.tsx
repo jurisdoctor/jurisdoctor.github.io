@@ -13,7 +13,7 @@ const Resume = () => {
   const tabBtn = (active: boolean) =>
     `flex-1 rounded-xl px-5 py-3 text-sm font-bold transition-colors ${
       active
-        ? "bg-[var(--primary-color)] text-white shadow-lg"
+        ? "bg-[var(--primary-color)] text-[var(--on-primary)] shadow-lg"
         : "bg-[var(--container-color)] text-[var(--title-color)] shadow"
     }`;
 

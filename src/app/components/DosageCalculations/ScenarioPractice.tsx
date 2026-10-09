@@ -338,7 +338,7 @@ const Step = ({ step, firstTip }: { step: StepType; firstTip: number }) => {
           const flip = flipOf(tip);
           return (
             <div key={tip} className="flex gap-x-3">
-              <span className="-mt-0.5 shrink-0 self-start rounded-full bg-[hsla(43,100%,68%,0.25)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
+              <span className="-mt-0.5 shrink-0 self-start rounded-md bg-[hsla(43,100%,68%,0.25)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
                 Step {firstTip + id}
               </span>
               <div className="min-w-0 flex-1">
@@ -402,7 +402,7 @@ const Round = ({
       </div>
 
       <div className="mt-3 flex gap-x-3">
-        <span className="-mt-0.5 shrink-0 self-start rounded-full bg-[hsla(43,100%,68%,0.25)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
+        <span className="-mt-0.5 shrink-0 self-start rounded-md bg-[hsla(43,100%,68%,0.25)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
           Step {step}
         </span>
         <p className="max-w-[70ch] text-sm text-[var(--muted-color)]">
@@ -504,10 +504,10 @@ const Verdict = ({
   answer: React.ReactNode;
 }) => (
   <div
-    className={`mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 last:mb-0 ${correct ? "bg-[rgba(68,215,182,0.12)]" : "bg-[hsla(353,100%,65%,0.1)]"}`}
+    className={`mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 last:mb-0 ${correct ? "bg-[rgba(68,215,182,0.12)]" : "bg-[hsla(14, 100%, 57%,0.1)]"}`}
   >
     <span
-      className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${correct ? "bg-[rgb(68,215,182)]" : "bg-[var(--primary-color)]"}`}
+      className={`rounded-md px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[var(--on-primary)] ${correct ? "bg-[rgb(68,215,182)]" : "bg-[var(--primary-color)]"}`}
     >
       {correct ? "Correct ✅" : "Not quite"}
     </span>
@@ -584,9 +584,9 @@ const ScenarioPractice = () => {
     }
   };
   const button =
-    "inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse";
+    "inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg";
   const ghost =
-    "inline-block rounded-[1.875rem] border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)] hover:animate-pulse";
+    "inline-block rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)]";
   return (
     <section className="mb-16" id="scenarios">
       <h2 className="relative mb-2 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center">
@@ -610,9 +610,9 @@ const ScenarioPractice = () => {
                 type="button"
                 onClick={() => setOpen((prev) => !prev)}
                 aria-expanded={open}
-                className={`flex items-center gap-x-1.5 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide duration-300 ${
+                className={`flex items-center gap-x-1.5 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wide duration-300 ${
                   open
-                    ? "bg-[var(--primary-color)] text-white"
+                    ? "bg-[var(--primary-color)] text-[var(--on-primary)]"
                     : "bg-[var(--body-color)] text-[var(--muted-color)] hover:text-[var(--title-color)]"
                 }`}
               >

@@ -104,7 +104,7 @@ const Gate = ({ children }: { children: ReactNode }) => {
 
         <button
           type="submit"
-          className="inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse"
+          className="inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg"
         >
           Unlock
         </button>

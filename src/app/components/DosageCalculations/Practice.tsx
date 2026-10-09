@@ -321,9 +321,9 @@ const Practice = () => {
     }
   };
   const button =
-    "inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse";
+    "inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg";
   const ghost =
-    "inline-block rounded-[1.875rem] border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)] hover:animate-pulse";
+    "inline-block rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)]";
   return (
     <section className="mb-8" id="practice">
       <h2 className="relative mb-8 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center">
@@ -342,9 +342,9 @@ const Practice = () => {
                 type="button"
                 onClick={() => setOpen((prev) => !prev)}
                 aria-expanded={open}
-                className={`flex items-center gap-x-1.5 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide duration-300 ${
+                className={`flex items-center gap-x-1.5 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wide duration-300 ${
                   open
-                    ? "bg-[var(--primary-color)] text-white"
+                    ? "bg-[var(--primary-color)] text-[var(--on-primary)]"
                     : "bg-[var(--body-color)] text-[var(--muted-color)] hover:text-[var(--title-color)]"
                 }`}
               >
@@ -417,11 +417,11 @@ const Practice = () => {
                 className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 ${
                   saved.status === "solved"
                     ? "bg-[rgba(68,215,182,0.12)]"
-                    : "bg-[hsla(353,100%,65%,0.1)]"
+                    : "bg-[hsla(14, 100%, 57%,0.1)]"
                 }`}
               >
                 <span
-                  className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${
+                  className={`rounded-md px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${
                     saved.status === "solved"
                       ? "bg-[rgb(68,215,182)]"
                       : "bg-[var(--primary-color)]"

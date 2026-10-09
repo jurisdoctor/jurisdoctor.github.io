@@ -99,14 +99,14 @@ const Gate = ({ children }: { children: ReactNode }) => {
           Enter the password to open the question bank.
         </p>
 
-        <div className="mb-4 inline-flex gap-x-1 rounded-[1.875rem] bg-[var(--body-color)] p-1">
+        <div className="mb-4 inline-flex gap-x-1 rounded-md bg-[var(--body-color)] p-1">
           {EXAMS.map((entry) => (
             <button
               key={entry}
               type="button"
               onClick={() => pick(entry)}
               aria-pressed={exam === entry}
-              className={`rounded-[1.5rem] px-5 py-2 text-sm font-bold duration-300 ${
+              className={`rounded-md px-5 py-2 text-sm font-bold duration-300 ${
                 exam === entry
                   ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
                   : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
@@ -135,7 +135,7 @@ const Gate = ({ children }: { children: ReactNode }) => {
 
         <button
           type="submit"
-          className="inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse"
+          className="inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg"
         >
           Unlock
         </button>

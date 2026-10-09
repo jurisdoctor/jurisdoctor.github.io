@@ -79,7 +79,7 @@ const Matching = ({
   return (
     <div className="mb-6">
       {!answered && question.note && (
-        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[var(--muted-color)]">
+        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#cfc9bb] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}
@@ -91,7 +91,7 @@ const Matching = ({
           const shell = answered
             ? right
               ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
-              : "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
+              : "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
             : chosen
               ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
               : "border-transparent bg-[var(--body-color)]";
@@ -110,7 +110,7 @@ const Matching = ({
                 value={chosen ?? ""}
                 onChange={(event) => assign(item.id, event.target.value)}
                 aria-label={`Term for ${item.text.slice(0, 40)}`}
-                className="w-full rounded-xl border-2 border-solid border-[#d3d0e4] bg-[var(--container-color)] p-3 text-sm text-[var(--text-color)] outline-none disabled:opacity-70"
+                className="w-full rounded-xl border-2 border-solid border-[#cfc9bb] bg-[var(--container-color)] p-3 text-sm text-[var(--text-color)] outline-none disabled:opacity-70"
               >
                 <option value="">Choose a term</option>
                 {deck.map((term) => (
@@ -150,7 +150,7 @@ const Matching = ({
             type="button"
             disabled={!full}
             onClick={check}
-            className="inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
+            className="inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
           >
             Check answer
           </button>

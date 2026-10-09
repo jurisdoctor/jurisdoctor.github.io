@@ -37,7 +37,7 @@ const Reset = ({ onReset }: { onReset: () => void }) => {
           onReset();
           setConfirming(false);
         }}
-        className="rounded-full bg-[var(--primary-color)] px-3 py-1 font-bold uppercase tracking-wide text-white"
+        className="rounded-md bg-[var(--primary-color)] px-3 py-1 font-bold uppercase tracking-wide text-[var(--on-primary)]"
       >
         Reset
       </button>
@@ -54,7 +54,7 @@ const Reset = ({ onReset }: { onReset: () => void }) => {
 };
 
 const chip =
-  "flex items-center gap-x-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide duration-300";
+  "flex items-center gap-x-2 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wide duration-300";
 
 const GLIDE = "cubic-bezier(0.22, 1, 0.36, 1)";
 
@@ -78,7 +78,7 @@ const Fill = ({
   const done = solved + missed;
   const level = total ? (done / total) * 100 : 0;
   const crest =
-    missed > 0 ? "bg-[hsla(353,100%,65%,0.5)]" : "bg-[rgba(68,215,182,0.55)]";
+    missed > 0 ? "bg-[hsla(14, 100%, 57%,0.5)]" : "bg-[rgba(68,215,182,0.55)]";
 
   useEffect(() => {
     if (!done || calm()) return;
@@ -138,7 +138,7 @@ const Fill = ({
         />
         <span
           style={{ flexGrow: missed }}
-          className="w-full bg-[hsla(353,100%,65%,0.5)]"
+          className="bg-[hsla(14, 100%, 57%,0.5)] w-full"
         />
 
         {done > 0 && (
@@ -318,7 +318,7 @@ const ChapterSet = ({
   return (
     <div
       data-shapes-safe
-      className="mb-6 rounded-2xl bg-[var(--body-color)] px-5 pb-6 pt-5"
+      className="mb-6 rounded-2xl bg-[var(--container-color)] p-5"
     >
       <div
         className={`flex flex-wrap items-center gap-x-2 gap-y-3 text-xs text-[var(--muted-color)] ${
@@ -356,7 +356,7 @@ const ChapterSet = ({
               <select
                 value={open ?? ""}
                 onChange={(event) => setOpen(event.target.value || null)}
-                className="w-44 cursor-pointer appearance-none truncate rounded-full bg-[var(--container-color)] py-1.5 pl-3 pr-8 text-xs font-bold text-[var(--title-color)] outline-none duration-300 focus:ring-2 focus:ring-[var(--primary-color)]"
+                className="w-44 cursor-pointer appearance-none truncate rounded-md bg-[var(--body-color)] py-1.5 pl-3 pr-8 text-xs font-bold text-[var(--title-color)] outline-none duration-300 focus:ring-2 focus:ring-[var(--primary-color)]"
               >
                 <option value="">Choose a skill…</option>
                 {chapters.map((chapter) => (
@@ -388,7 +388,7 @@ const ChapterSet = ({
       {picker === "select" ? null : (
         <div
           ref={gridRef}
-          className="grid grid-cols-[repeat(auto-fill,minmax(2.75rem,1fr))] gap-2 p-1"
+          className="-m-1 grid grid-cols-[repeat(auto-fill,minmax(2.75rem,1fr))] gap-2 p-1"
         >
           {chapters.map((chapter) => {
             const count = chapter.questions.length;
@@ -420,15 +420,15 @@ const ChapterSet = ({
                 }
                 className={`relative h-10 rounded-lg border-2 border-solid text-xs font-bold duration-300 ${
                   !count
-                    ? "cursor-not-allowed border-transparent text-[#d3d0e4]"
+                    ? "cursor-not-allowed border-transparent text-[#cfc9bb]"
                     : here
                       ? "border-[var(--primary-color)] text-[var(--title-color)]"
                       : active === chapter.id
                         ? "border-[var(--chip-blue-border)] text-[var(--title-color)]"
                         : wet
-                          ? "border-transparent text-[var(--title-color)] hover:border-[hsl(219,100%,80%)]"
-                          : "border-transparent text-[var(--muted-color)] hover:border-[hsl(219,100%,80%)] hover:text-[var(--title-color)]"
-                } bg-[var(--container-color)]`}
+                          ? "border-transparent text-[var(--title-color)] hover:border-[var(--chip-blue-border)]"
+                          : "border-transparent text-[var(--muted-color)] hover:border-[var(--chip-blue-border)] hover:text-[var(--title-color)]"
+                } bg-[var(--body-color)]`}
               >
                 {fresh && (
                   <Glow label="Has new questions" hue={hueOf(chapter.id)} />
@@ -444,7 +444,7 @@ const ChapterSet = ({
                   <span className="relative">{displayNumberOf(chapter)}</span>
                 )}
                 {count > 0 && (
-                  <span className="pointer-events-none absolute -right-1 -top-1 rounded-full bg-[var(--chip-blue)] px-1 text-[9px] leading-[14px] text-[var(--title-color)]">
+                  <span className="pointer-events-none absolute -right-1 -top-1 rounded-md bg-[var(--chip-blue)] px-1 text-[9px] leading-[14px] text-[var(--title-color)]">
                     {count}
                   </span>
                 )}
@@ -455,7 +455,7 @@ const ChapterSet = ({
       )}
 
       {shown && (
-        <div className="relative mt-6 animate-fadeIn rounded-2xl bg-[var(--container-color)] p-5 shadow-lg">
+        <div className="relative mt-6 animate-fadeIn">
           {picker === "grid" && (
             <span
               aria-hidden
@@ -502,12 +502,14 @@ const ChapterSet = ({
                   aria-current={here}
                   onClick={() => onStart(shown.id, index)}
                   className={`relative h-9 rounded-lg text-xs font-bold duration-300 ${
-                    here ? "ring-2 ring-[var(--title-color)]" : ""
+                    here
+                      ? "ring-2 ring-[var(--primary-color)] ring-offset-2 ring-offset-[var(--container-color)]"
+                      : ""
                   } ${
                     state === "solved"
                       ? "bg-[rgb(68,215,182)] text-white"
                       : state === "missed"
-                        ? "bg-[var(--primary-color)] text-white"
+                        ? "bg-[var(--primary-color)] text-[var(--on-primary)]"
                         : "bg-[var(--body-color)] text-[var(--muted-color)] hover:bg-[var(--chip-blue)] hover:text-[var(--title-color)]"
                   }`}
                 >

@@ -60,9 +60,9 @@ const Pill = ({
   tone?: "alert" | "danger" | "accent";
 }) => (
   <span
-    className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-bold ${
+    className={`inline-flex items-center rounded-md px-3 py-1 text-xs font-bold ${
       tone === "danger"
-        ? "bg-[hsla(353,100%,68%,0.16)] text-[var(--primary-color)]"
+        ? "bg-[hsla(14, 100%, 57%,0.16)] text-[var(--primary-color)]"
         : tone === "alert"
           ? "bg-[var(--chip-amber)] text-[hsl(38,100%,60%)] [:root[data-theme=light]_&]:text-[hsl(30,90%,28%)]"
           : tone === "accent"
@@ -129,7 +129,7 @@ const Steps = ({ items }: { items: StepItem[] }) => (
           </span>
           <span className="min-w-0 leading-relaxed">
             {flagged && (
-              <span className="mr-2 rounded-md bg-[hsla(353,100%,68%,0.16)] px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
+              <span className="mr-2 rounded-md bg-[hsla(14, 100%, 57%,0.16)] px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
                 Black box
               </span>
             )}
@@ -202,7 +202,7 @@ const Grouped = ({ title, groups }: { title: string; groups: GroupItem[] }) => (
                         key={effect}
                         className={`rounded-lg px-2.5 py-1 text-sm leading-snug ${
                           serious
-                            ? "bg-[hsla(353,100%,68%,0.14)] text-[var(--title-color)]"
+                            ? "bg-[hsla(14, 100%, 57%,0.14)] text-[var(--title-color)]"
                             : "bg-[var(--body-color)] text-[var(--text-color)]"
                         }`}
                       >
@@ -222,8 +222,8 @@ const Grouped = ({ title, groups }: { title: string; groups: GroupItem[] }) => (
 
 const SEVERITY: Record<LinkItem["severity"], { label: string; color: string }> =
   {
-    avoid: { label: "Avoid", color: "hsl(353, 100%, 66%)" },
-    high: { label: "High risk", color: "hsl(353, 100%, 66%)" },
+    avoid: { label: "Avoid", color: "hsl(14, 100%, 57%)" },
+    high: { label: "High risk", color: "hsl(14, 100%, 57%)" },
     moderate: { label: "Use with care", color: "hsl(38, 96%, 54%)" },
   };
 
@@ -366,7 +366,7 @@ const Effects = ({
                   key={effect}
                   className={`rounded-lg px-2.5 py-1 text-base leading-snug sm:text-sm ${
                     tone === "serious"
-                      ? "bg-[hsla(353,100%,68%,0.14)] text-[var(--title-color)]"
+                      ? "bg-[hsla(14, 100%, 57%,0.14)] text-[var(--title-color)]"
                       : "bg-[var(--body-color)] text-[var(--text-color)]"
                   }`}
                 >
@@ -394,7 +394,7 @@ const ROWS: string[][] = [
 ];
 
 const step =
-  "inline-flex max-w-[16rem] items-center gap-x-2 rounded-[1.875rem] border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-4 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)]";
+  "inline-flex max-w-[16rem] items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-4 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)]";
 
 const MedDetail = ({
   med,
@@ -476,7 +476,7 @@ const MedDetail = ({
         key={section.id}
         className={
           danger
-            ? "rounded-2xl border-2 border-solid border-[var(--primary-color)] bg-[linear-gradient(hsla(353,100%,68%,0.08),hsla(353,100%,68%,0.08)),var(--container-color)] p-5 sm:p-4"
+            ? "rounded-2xl border-2 border-solid border-[var(--primary-color)] bg-[linear-gradient(hsla(14, 100%, 57%,0.08),hsla(14, 100%, 57%,0.08)),var(--container-color)] p-5 sm:p-4"
             : plain
         }
       >
@@ -508,7 +508,7 @@ const MedDetail = ({
         } as CSSProperties
       }
     >
-      <div className="overflow-hidden rounded-[1.75rem] border border-solid border-[var(--border-color)] bg-[var(--container-color)] shadow-xl">
+      <div className="overflow-hidden rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] shadow-xl">
         <header
           className="relative px-7 pb-6 pt-7 sm:px-5 sm:pb-5 sm:pt-5"
           style={{
@@ -574,7 +574,7 @@ const MedDetail = ({
         </header>
 
         {med.highlight.critical && (
-          <div className="crit-glow border-y border-solid border-[var(--primary-color)] bg-[linear-gradient(hsla(353,100%,68%,0.1),hsla(353,100%,68%,0.1)),var(--container-color)] px-7 py-4 sm:px-5">
+          <div className="crit-glow border-y border-solid border-[var(--primary-color)] bg-[linear-gradient(hsla(14, 100%, 57%,0.1),hsla(14, 100%, 57%,0.1)),var(--container-color)] px-7 py-4 sm:px-5">
             <p className="mb-1 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
               Do not miss
             </p>
@@ -681,7 +681,7 @@ const MedDetail = ({
         <button
           type="button"
           onClick={onBack}
-          className="rounded-[1.875rem] border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-6 py-2.5 text-sm font-bold text-[var(--primary-color)] duration-300 hover:bg-[hsla(353,100%,68%,0.1)]"
+          className="rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-6 py-2.5 text-sm font-bold text-[var(--primary-color)] duration-300 hover:bg-[hsla(14, 100%, 57%,0.1)]"
         >
           Back to {med.group}
         </button>

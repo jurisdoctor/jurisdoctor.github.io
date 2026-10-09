@@ -36,13 +36,13 @@ const Cell = ({
     ? on && right
       ? "border-[rgb(68,215,182)] bg-[rgb(68,215,182)] text-white"
       : on
-        ? "border-[var(--primary-color)] bg-[var(--primary-color)] text-white"
+        ? "border-[var(--primary-color)] bg-[var(--primary-color)] text-[var(--on-primary)]"
         : right
           ? "border-dashed border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)] text-[rgb(68,215,182)]"
-          : "border-[#d3d0e4] bg-[var(--container-color)] text-transparent"
+          : "border-[#cfc9bb] bg-[var(--container-color)] text-transparent"
     : on
       ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-border)] text-white"
-      : "border-[#d3d0e4] bg-[var(--container-color)] text-transparent hover:border-[var(--chip-blue-border)]";
+      : "border-[#cfc9bb] bg-[var(--container-color)] text-transparent hover:border-[var(--chip-blue-border)]";
 
   return (
     <td className="p-2 text-center">
@@ -54,7 +54,7 @@ const Cell = ({
         disabled={answered}
         onClick={onToggle}
         className={`h-6 w-6 border-2 border-solid text-xs font-bold leading-none duration-200 ${
-          multi ? "rounded-[5px]" : "rounded-full"
+          multi ? "rounded-md" : "rounded-full"
         } ${tone}`}
       >
         {answered && !on && right ? "·" : "✓"}
@@ -141,7 +141,7 @@ const Matrix = ({
   return (
     <div className="mb-6">
       {!answered && question.note && (
-        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[var(--muted-color)]">
+        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#cfc9bb] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}
@@ -167,11 +167,11 @@ const Matrix = ({
             {rows.map((row) => (
               <tr
                 key={row.id}
-                className={`border-t-[1px] border-solid border-[#e6e4f0] ${
+                className={`border-t-[1px] border-solid border-[#e4dfd3] ${
                   answered
                     ? rowRight(row)
                       ? "bg-[rgba(68,215,182,0.08)]"
-                      : "bg-[hsla(353,100%,65%,0.07)]"
+                      : "bg-[hsla(14, 100%, 57%,0.07)]"
                     : ""
                 }`}
               >
@@ -203,7 +203,7 @@ const Matrix = ({
               className={`animate-fadeIn rounded-xl border-2 border-solid p-3 text-sm ${
                 rowRight(row)
                   ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
-                  : "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
+                  : "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
               }`}
             >
               <span className="font-bold text-[var(--title-color)]">
@@ -233,7 +233,7 @@ const Matrix = ({
             type="button"
             disabled={!ready}
             onClick={check}
-            className="inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
+            className="inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
           >
             Check answer
           </button>

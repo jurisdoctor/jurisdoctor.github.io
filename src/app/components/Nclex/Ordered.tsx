@@ -83,7 +83,7 @@ const Ordered = ({
   return (
     <div className="mb-6">
       {!answered && question.note && (
-        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#d3d0e4] p-4 text-sm text-[var(--muted-color)]">
+        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#cfc9bb] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}
@@ -96,12 +96,12 @@ const Ordered = ({
           const shell = answered
             ? right
               ? "border-solid border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
-              : "border-solid border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
+              : "border-solid border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
             : option
               ? "border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
               : held
-                ? "border-dashed border-[hsl(219,100%,80%)] bg-[var(--body-color)]"
-                : "border-dashed border-[#d3d0e4] bg-[var(--body-color)]";
+                ? "border-dashed border-[var(--chip-blue-border)] bg-[var(--body-color)]"
+                : "border-dashed border-[#cfc9bb] bg-[var(--body-color)]";
 
           return (
             <div key={index} className="flex items-stretch gap-x-3">
@@ -110,7 +110,7 @@ const Ordered = ({
                   answered && option
                     ? right
                       ? "bg-[rgb(68,215,182)] text-white"
-                      : "bg-[var(--primary-color)] text-white"
+                      : "bg-[var(--primary-color)] text-[var(--on-primary)]"
                     : "bg-[var(--body-color)] text-[var(--muted-color)]"
                 }`}
               >
@@ -142,7 +142,7 @@ const Ordered = ({
                     )}
                   </span>
                 ) : (
-                  <span className="text-xs uppercase tracking-wide text-[#b6b3ce]">
+                  <span className="text-xs uppercase tracking-wide text-[#aaa397]">
                     Drop or tap an action
                   </span>
                 )}
@@ -165,7 +165,7 @@ const Ordered = ({
               onDragStart={() => setHeld(option.id)}
               onDragEnd={() => setHeld(null)}
               onClick={() => drop(option.id)}
-              className="rounded-xl border-2 border-solid border-transparent bg-[var(--body-color)] p-3 text-left text-sm duration-300 hover:border-[hsl(219,100%,88%)]"
+              className="rounded-xl border-2 border-solid border-transparent bg-[var(--body-color)] p-3 text-left text-sm duration-300 hover:border-[var(--chip-blue-border)]"
             >
               <Temps>{option.text}</Temps>
             </button>
@@ -208,7 +208,7 @@ const Ordered = ({
             type="button"
             disabled={!full}
             onClick={check}
-            className="inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
+            className="inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
           >
             Check answer
           </button>

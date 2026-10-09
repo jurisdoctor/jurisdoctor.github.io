@@ -30,8 +30,7 @@ interface StartType {
   at: number;
 }
 
-const tab =
-  "rounded-[1.875rem] px-6 py-2 text-sm font-bold duration-300 lg:px-5";
+const tab = "rounded-md px-6 py-2 text-sm font-bold duration-300 lg:px-5";
 
 interface ViewType {
   section: SectionType;
@@ -87,7 +86,7 @@ const validView = (saved: ViewType) =>
   (saved.lens === "all" || saved.lens === "incomplete");
 
 const Loading = () => (
-  <div className="mb-8 rounded-2xl bg-[var(--body-color)] p-7 text-center">
+  <div className="mb-8 rounded-2xl bg-[var(--container-color)] p-7 text-center">
     <p className="text-[var(--muted-color)]">Loading questions…</p>
   </div>
 );
@@ -379,7 +378,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
 
   if (!section) {
     return (
-      <div className="mb-8 rounded-2xl bg-[var(--body-color)] p-7 text-center">
+      <div className="mb-8 rounded-2xl bg-[var(--container-color)] p-7 text-center">
         <p className="text-[var(--muted-color)]">
           {EXAM_TITLES[exam]} doesn&apos;t have any questions yet.
         </p>
@@ -391,7 +390,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     <>
       {available.length > 1 && (
         <div className="mb-6 lg:flex lg:justify-center">
-          <div className="ml-3.5 inline-flex gap-x-1 rounded-[1.875rem] bg-[var(--body-color)] p-1 lg:ml-0">
+          <div className="ml-3.5 inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1 lg:ml-0">
             {available.map((entry) => (
               <button
                 key={entry}
@@ -400,7 +399,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
                 aria-pressed={section === entry}
                 className={`${tab} ${
                   section === entry
-                    ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
+                    ? "bg-[var(--chip-blue)] text-[var(--title-color)] shadow-lg"
                     : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
                 }`}
               >
@@ -422,7 +421,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
       </Swap>
 
       {shown.length === 0 ? (
-        <div className="mb-8 rounded-2xl bg-[var(--body-color)] p-7 text-center">
+        <div className="mb-8 rounded-2xl bg-[var(--container-color)] p-7 text-center">
           {section === "favorites" && empty ? (
             <>
               <p className="mb-1 text-lg font-bold text-[var(--title-color)]">
@@ -453,7 +452,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
               <button
                 type="button"
                 onClick={() => setLens("all")}
-                className="mt-5 inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse"
+                className="mt-5 inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg"
               >
                 Show all
               </button>
@@ -578,7 +577,7 @@ const Nclex = () => {
                   if (isExamId(next)) setExam(next);
                 }}
                 aria-label="Exam"
-                className="h-10 cursor-pointer appearance-none rounded-[1.875rem] border-none bg-[var(--body-color)] pl-5 pr-11 text-sm font-bold text-[var(--title-color)] shadow-inner outline-none"
+                className="h-10 cursor-pointer appearance-none rounded-md border-none bg-[var(--container-color)] pl-5 pr-11 text-sm font-bold text-[var(--title-color)] shadow-inner outline-none"
               >
                 {EXAMS.map((id) => (
                   <option key={id} value={id}>

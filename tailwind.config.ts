@@ -28,6 +28,23 @@ const config: Config = {
       // => @media (max-width: 576px) { ... }
     },
     extend: {
+      // Two corner sizes site-wide (6px for small controls, 8px for panels and
+      // cards) and flat, low shadows. "full" is kept for real circles only.
+      borderRadius: {
+        DEFAULT: "6px",
+        sm: "3px",
+        md: "6px",
+        lg: "6px",
+        xl: "8px",
+        "2xl": "8px",
+        "3xl": "8px",
+      },
+      boxShadow: {
+        md: "0 1px 2px rgba(0,0,0,0.22)",
+        lg: "0 1px 3px rgba(0,0,0,0.26)",
+        xl: "0 2px 6px rgba(0,0,0,0.26)",
+        "2xl": "0 4px 12px rgba(0,0,0,0.28)",
+      },
       animation: {
         mouseBounce: "animateMouse 1s linear infinite",
         dribbleSway: "animateSway 2s linear infinite",

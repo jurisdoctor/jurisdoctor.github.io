@@ -28,7 +28,7 @@ const Reset = ({ onReset }: { onReset: () => void }) => {
           onReset();
           setConfirming(false);
         }}
-        className="rounded-full bg-[var(--primary-color)] px-3 py-1 font-bold uppercase tracking-wide text-white"
+        className="rounded-md bg-[var(--primary-color)] px-3 py-1 font-bold uppercase tracking-wide text-[var(--on-primary)]"
       >
         Reset
       </button>

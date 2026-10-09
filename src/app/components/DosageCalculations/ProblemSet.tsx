@@ -89,7 +89,7 @@ const ProblemSet = ({
   );
 
   return (
-    <div className="mb-6 animate-fadeIn rounded-2xl bg-[var(--body-color)] p-5">
+    <div className="mb-6 animate-fadeIn rounded-2xl bg-[var(--container-color)] p-5">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-x-5 gap-y-2 text-xs text-[var(--muted-color)]">
         <span className="flex flex-wrap items-center gap-x-1 gap-y-2">
           {offered.map((entry) => {
@@ -102,7 +102,7 @@ const ProblemSet = ({
                   setFilter(on || entry.key === "all" ? null : entry.key)
                 }
                 aria-pressed={on}
-                className={`flex items-center gap-x-2 rounded-full px-3 py-1 duration-300 ${
+                className={`flex items-center gap-x-2 rounded-md px-3 py-1 duration-300 ${
                   on
                     ? "bg-[var(--chip-blue)] font-bold text-[var(--title-color)]"
                     : "hover:text-[var(--title-color)]"
@@ -156,7 +156,7 @@ const ProblemSet = ({
                 state === "solved"
                   ? "bg-[rgb(68,215,182)] text-white"
                   : state === "missed"
-                    ? "bg-[var(--primary-color)] text-white"
+                    ? "bg-[var(--primary-color)] text-[var(--on-primary)]"
                     : "bg-[var(--container-color)] text-[var(--muted-color)] hover:text-[var(--title-color)]"
               }`}
             >

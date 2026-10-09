@@ -113,7 +113,7 @@ export const Mcq = ({
                 isRight
                   ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)] text-[var(--title-color)]"
                   : isWrong
-                    ? "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)] text-[var(--title-color)]"
+                    ? "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)] text-[var(--title-color)]"
                     : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
               }`}
             >
@@ -184,7 +184,7 @@ export const Reveal = ({
             type="button"
             disabled={text.trim().length < 8}
             onClick={() => setData((prev) => ({ ...prev, shown: true }))}
-            className="inline-block rounded-full border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-5 py-2 text-sm font-bold text-white disabled:cursor-not-allowed disabled:opacity-40"
+            className="inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-5 py-2 text-sm font-bold text-[var(--on-primary)] disabled:cursor-not-allowed disabled:opacity-40"
           >
             Compare with model answer
           </button>
@@ -310,7 +310,7 @@ export const SortActivity = ({
           >
             <p className="mb-2 text-[var(--text-color)]">{item.text}</p>
             {state[index] ? (
-              <span className="inline-block rounded-full bg-[rgb(68,215,182)] px-3 py-1 text-xs font-bold text-white">
+              <span className="inline-block rounded-md bg-[rgb(68,215,182)] px-3 py-1 text-xs font-bold text-white">
                 ✓ {buckets[item.answer]}
               </span>
             ) : (
@@ -320,9 +320,9 @@ export const SortActivity = ({
                     key={bucketIndex}
                     type="button"
                     onClick={() => pick(index, bucketIndex)}
-                    className={`rounded-full border border-solid px-3 py-1 text-xs font-bold duration-150 ${
+                    className={`rounded-md border border-solid px-3 py-1 text-xs font-bold duration-150 ${
                       wrong[index] === bucketIndex
-                        ? "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)] text-[var(--title-color)]"
+                        ? "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)] text-[var(--title-color)]"
                         : "border-[var(--chip-blue-border)] text-[var(--chip-blue-border)] hover:bg-[var(--chip-blue-soft)]"
                     }`}
                   >
@@ -417,7 +417,7 @@ export const OrderActivity = ({
                 checked
                   ? seq[position] === position
                     ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.08)] text-[var(--title-color)]"
-                    : "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)] text-[var(--title-color)]"
+                    : "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)] text-[var(--title-color)]"
                   : "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
               }`}
             >
@@ -441,7 +441,7 @@ export const OrderActivity = ({
               key={index}
               type="button"
               onClick={() => add(index)}
-              className="rounded-full border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-3 py-1.5 text-sm text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
+              className="rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-3 py-1.5 text-sm text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
             >
               {text}
             </button>
@@ -621,7 +621,7 @@ export const ReadinessQuiz = ({
                   state === "right"
                     ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)] text-[var(--title-color)]"
                     : state === "wrong"
-                      ? "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)] text-[var(--title-color)]"
+                      ? "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)] text-[var(--title-color)]"
                       : state === "selected"
                         ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
                         : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]";
@@ -654,7 +654,7 @@ export const ReadinessQuiz = ({
             type="button"
             disabled={answered < questions.length}
             onClick={submit}
-            className="inline-block rounded-full border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-6 py-2.5 font-bold text-white disabled:cursor-not-allowed disabled:opacity-40"
+            className="inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-6 py-2.5 font-bold text-[var(--on-primary)] disabled:cursor-not-allowed disabled:opacity-40"
           >
             Submit answers
           </button>

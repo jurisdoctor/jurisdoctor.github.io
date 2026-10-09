@@ -65,12 +65,12 @@ const accentOf = (index: number) => `hsl(${flameHueAt(index)}, 75%, 60%)`;
 const Badges = ({ med }: { med: MedType }) => (
   <>
     {med.high_alert && (
-      <span className="rounded-full bg-[var(--chip-amber)] px-2.5 py-0.5 text-[11px] font-bold text-[hsl(38,100%,60%)] [:root[data-theme=light]_&]:text-[hsl(30,90%,28%)]">
+      <span className="rounded-md bg-[var(--chip-amber)] px-2.5 py-0.5 text-[11px] font-bold text-[hsl(38,100%,60%)] [:root[data-theme=light]_&]:text-[hsl(30,90%,28%)]">
         High alert
       </span>
     )}
     {med.black_box.length > 0 && (
-      <span className="rounded-full bg-[hsla(353,100%,68%,0.16)] px-2.5 py-0.5 text-[11px] font-bold text-[var(--primary-color)]">
+      <span className="rounded-md bg-[hsla(14, 100%, 57%,0.16)] px-2.5 py-0.5 text-[11px] font-bold text-[var(--primary-color)]">
         Black box
       </span>
     )}
@@ -99,7 +99,7 @@ const MedRow = ({
   >
     <span
       aria-hidden
-      className="w-1.5 shrink-0 self-stretch rounded-full"
+      className="w-1.5 shrink-0 self-stretch rounded-sm"
       style={{ background: accent }}
     />
     <span className="min-w-0 flex-1">
@@ -175,7 +175,7 @@ const GroupCard = ({
   >
     <span
       aria-hidden
-      className="w-1.5 shrink-0 self-stretch rounded-full"
+      className="w-1.5 shrink-0 self-stretch rounded-sm"
       style={{ background: accentOf(index) }}
     />
     <span className="min-w-0 flex-1">
@@ -228,7 +228,7 @@ const GroupTag = ({
     aria-pressed
     aria-label={`${group.name} selected. Show all categories`}
     title="Show all categories"
-    className="group inline-flex max-w-full items-center gap-x-3 rounded-full border-2 border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] py-2 pl-5 pr-2.5 shadow-lg duration-300 hover:bg-[var(--chip-blue)]"
+    className="group inline-flex max-w-full items-center gap-x-3 rounded-md border-2 border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] py-2 pl-5 pr-2.5 shadow-lg duration-300 hover:bg-[var(--chip-blue)]"
   >
     <span
       aria-hidden
@@ -248,7 +248,7 @@ const GroupTag = ({
 );
 
 const Empty = ({ children }: { children: ReactNode }) => (
-  <div className="rounded-2xl bg-[var(--body-color)] p-7 text-center text-[var(--muted-color)]">
+  <div className="rounded-2xl bg-[var(--container-color)] p-7 text-center text-[var(--muted-color)]">
     {children}
   </div>
 );
@@ -287,7 +287,7 @@ const Tray = ({
       {meds.map((med) => (
         <span
           key={med.id}
-          className="inline-flex items-center gap-x-1 rounded-full bg-[var(--chip-blue)] py-1 pl-3.5 pr-1 text-sm font-bold text-[var(--title-color)]"
+          className="inline-flex items-center gap-x-1 rounded-md bg-[var(--chip-blue)] py-1 pl-3.5 pr-1 text-sm font-bold text-[var(--title-color)]"
         >
           {shortName(med)}
           <button
@@ -312,7 +312,7 @@ const Tray = ({
           type="button"
           onClick={onOpen}
           disabled={meds.length < 2}
-          className="rounded-[1.875rem] bg-[var(--primary-color)] px-5 py-2.5 text-sm font-bold leading-4 text-white shadow-lg duration-300 hover:animate-pulse disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:hover:animate-none"
+          className="rounded-md bg-[var(--primary-color)] px-5 py-2.5 text-sm font-bold leading-4 text-[var(--on-primary)] shadow-lg duration-300 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:hover:animate-none"
         >
           {meds.length < 2 ? "Add one more" : "Check interactions"}
         </button>
@@ -517,7 +517,7 @@ const Medications = () => {
         <div ref={top} className="relative z-10 scroll-mt-6">
           <div className="mb-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-3 lg:justify-center">
             <h1 className="ml-3.5 text-4xl font-bold lg:ml-0 lg:text-center">
-              Drug <em>guide</em>
+              Agave&apos;s Drug Guide
             </h1>
             {guide && !route.compare && !route.study && (
               <div className="flex flex-wrap items-center gap-2 lg:justify-center">
@@ -525,7 +525,7 @@ const Medications = () => {
                   <button
                     type="button"
                     onClick={openStudy}
-                    className="inline-flex items-center gap-x-2 rounded-[1.875rem] border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
+                    className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
                   >
                     <LuLayers
                       aria-hidden
@@ -537,7 +537,7 @@ const Medications = () => {
                 <button
                   type="button"
                   onClick={openCompare}
-                  className="inline-flex items-center gap-x-2 rounded-[1.875rem] border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
+                  className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
                 >
                   <LuNetwork
                     aria-hidden
@@ -545,7 +545,7 @@ const Medications = () => {
                   />
                   Interaction check
                   {pickedMeds.length > 0 && (
-                    <span className="rounded-full bg-[var(--primary-color)] px-2 py-0.5 text-xs leading-none text-white">
+                    <span className="rounded-md bg-[var(--primary-color)] px-2 py-0.5 text-xs leading-none text-[var(--on-primary)]">
                       {pickedMeds.length}
                     </span>
                   )}
@@ -624,7 +624,7 @@ const Medications = () => {
                     }
                     autoComplete="off"
                     spellCheck={false}
-                    className="h-12 w-full rounded-[1.875rem] border border-solid border-[var(--border-color)] bg-[var(--container-color)] pl-12 pr-12 text-base text-[var(--title-color)] outline-none duration-300 placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
+                    className="h-12 w-full rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] pl-12 pr-12 text-base text-[var(--title-color)] outline-none duration-300 placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
                   />
                   {query && (
                     <button

@@ -62,7 +62,7 @@ const Portfolio = () => {
                 <div className="absolute left-0 top-0 h-full w-full bg-[purple] opacity-0 duration-300 group-hover:opacity-90"></div>
               </div>
 
-              <span className="absolute left-0 top-0 inline-block -translate-y-[40px] rounded-b-2xl bg-[var(--primary-color)] px-[0.625rem] py-[0.19rem] text-xs text-white duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+              <span className="absolute left-0 top-0 inline-block -translate-y-[40px] rounded-b-2xl bg-[var(--primary-color)] px-[0.625rem] py-[0.19rem] text-xs text-[var(--on-primary)] duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                 {category}
               </span>
               <h3 className="absolute top-[3.75rem] mb-4 translate-y-[30px] px-5 text-xl text-white opacity-0 duration-300 group-hover:translate-y-0 group-hover:opacity-100">

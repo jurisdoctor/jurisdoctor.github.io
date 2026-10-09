@@ -27,7 +27,7 @@ const Connector = ({ flip }: { flip?: boolean }) => (
     aria-hidden
     viewBox="0 0 40 100"
     preserveAspectRatio="none"
-    className={`h-full w-full self-stretch text-[#d3d0e4] lg:hidden ${
+    className={`h-full w-full self-stretch text-[#cfc9bb] lg:hidden ${
       flip ? "-scale-x-100" : ""
     }`}
   >
@@ -72,14 +72,14 @@ const Slot = ({
   const shell = answered
     ? right
       ? "border-solid border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
-      : "border-solid border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
+      : "border-solid border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
     : option
       ? "border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
       : over
         ? "border-dashed border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
         : active
-          ? "border-dashed border-[hsl(219,100%,80%)] bg-[var(--body-color)]"
-          : "border-dashed border-[#d3d0e4] bg-[var(--body-color)]";
+          ? "border-dashed border-[var(--chip-blue-border)] bg-[var(--body-color)]"
+          : "border-dashed border-[#cfc9bb] bg-[var(--body-color)]";
 
   return (
     <button
@@ -110,7 +110,7 @@ const Slot = ({
           )}
         </span>
       ) : (
-        <span className="text-xs uppercase tracking-wide text-[#b6b3ce]">
+        <span className="text-xs uppercase tracking-wide text-[#aaa397]">
           Drop or tap a choice
         </span>
       )}
@@ -263,11 +263,11 @@ const Bowtie = ({
                     ? option.correct
                       ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
                       : taken
-                        ? "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
+                        ? "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
                         : "border-transparent bg-[var(--body-color)] opacity-60"
                     : taken
                       ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
-                      : "border-transparent bg-[var(--body-color)] hover:border-[hsl(219,100%,88%)]";
+                      : "border-transparent bg-[var(--body-color)] hover:border-[var(--chip-blue-border)]";
 
                   return (
                     <div key={option.id}>
@@ -322,7 +322,7 @@ const Bowtie = ({
             type="button"
             disabled={!full}
             onClick={check}
-            className="inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
+            className="inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
           >
             Check answer
           </button>

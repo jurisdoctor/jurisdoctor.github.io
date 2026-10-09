@@ -6,7 +6,6 @@ import {
   LuHome,
   LuCalculator,
   LuBookOpen,
-  LuGraduationCap,
   LuPill,
   LuMenu,
 } from "react-icons/lu";
@@ -32,7 +31,7 @@ const Sidebar = () => {
     router.push("/", { scroll: false });
   };
   const navLink =
-    "text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]";
+    "text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[var(--accent-color)]";
   const sectionHref = (id: string) => (onLanding ? `#${id}` : `/#${id}`);
   const navToggle =
     "fixed left-[1.875rem] top-5 z-10 hidden h-[40px] w-[45px] cursor-pointer items-center justify-center border-[1px] border-solid border-[var(--border-color)] bg-[var(--body-color)] lg:flex rounded-lg duration-300 shadow-md";
@@ -88,7 +87,7 @@ const Sidebar = () => {
                 <Link
                   href="/dosage-calculations"
                   onClick={() => setToggle(false)}
-                  className={`${navLink} ${path === "/dosage-calculations" ? "!text-[hsl(43,100%,68%)]" : ""}`}
+                  className={`${navLink} ${path === "/dosage-calculations" ? "!text-[var(--accent-color)]" : ""}`}
                 >
                   <LuCalculator />
                 </Link>
@@ -98,7 +97,7 @@ const Sidebar = () => {
                 <Link
                   href="/nclex"
                   onClick={() => setToggle(false)}
-                  className={`${navLink} ${path === "/nclex" ? "!text-[hsl(43,100%,68%)]" : ""}`}
+                  className={`${navLink} ${path === "/nclex" ? "!text-[var(--accent-color)]" : ""}`}
                 >
                   <LuBookOpen />
                 </Link>
@@ -110,19 +109,9 @@ const Sidebar = () => {
                   onClick={() => setToggle(false)}
                   aria-label="Drug guide"
                   title="Drug guide"
-                  className={`${navLink} ${path.startsWith("/medications") ? "!text-[hsl(43,100%,68%)]" : ""}`}
+                  className={`${navLink} ${path.startsWith("/medications") ? "!text-[var(--accent-color)]" : ""}`}
                 >
                   <LuPill />
-                </Link>
-              </li>
-
-              <li className="nav__item">
-                <Link
-                  href="/pharm"
-                  onClick={() => setToggle(false)}
-                  className={`${navLink} ${path === "/pharm" ? "!text-[hsl(43,100%,68%)]" : ""}`}
-                >
-                  <LuGraduationCap />
                 </Link>
               </li>
             </ul>

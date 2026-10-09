@@ -89,7 +89,7 @@ const Badge = ({ status }: { status: Status }) => {
   const tone = toneOf(status);
   return (
     <span
-      className="inline-flex items-center gap-x-1.5 rounded-full px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide"
+      className="inline-flex items-center gap-x-1.5 rounded-md px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide"
       style={{
         color: COLORS[tone],
         background: `color-mix(in srgb, ${COLORS[tone]} 16%, transparent)`,
@@ -166,7 +166,7 @@ const PairBody = ({
                 <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm font-bold text-[var(--title-color)]">
                   {def?.name ?? rule.rule}
                   {rule.highest && (
-                    <span className="rounded-full bg-[hsla(353,100%,68%,0.16)] px-2.5 py-0.5 text-[10px] uppercase tracking-wide text-[var(--primary-color)]">
+                    <span className="rounded-md bg-[hsla(14, 100%, 57%,0.16)] px-2.5 py-0.5 text-[10px] uppercase tracking-wide text-[var(--primary-color)]">
                       Highest-risk pairing
                     </span>
                   )}
@@ -351,7 +351,7 @@ const CompareMap = ({
 
   if (failed) {
     return (
-      <div className="rounded-2xl bg-[var(--body-color)] p-7 text-center text-[var(--muted-color)]">
+      <div className="rounded-2xl bg-[var(--container-color)] p-7 text-center text-[var(--muted-color)]">
         The interaction data couldn&apos;t be loaded. Refresh to try again.
       </div>
     );
@@ -383,7 +383,7 @@ const CompareMap = ({
           {meds.map((med) => (
             <span
               key={med.id}
-              className="inline-flex items-center gap-x-1 rounded-full bg-[var(--chip-blue)] py-1 pl-4 pr-1.5 text-sm font-bold text-[var(--title-color)]"
+              className="inline-flex items-center gap-x-1 rounded-md bg-[var(--chip-blue)] py-1 pl-4 pr-1.5 text-sm font-bold text-[var(--title-color)]"
             >
               <button
                 type="button"

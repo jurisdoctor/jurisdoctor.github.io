@@ -79,10 +79,10 @@ const Cloze = ({
           const tone = answered
             ? right
               ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.18)]"
-              : "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.14)]"
+              : "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.14)]"
             : chosen
               ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
-              : "border-[#d3d0e4] bg-[var(--container-color)]";
+              : "border-[#cfc9bb] bg-[var(--container-color)]";
 
           return (
             <select
@@ -117,7 +117,7 @@ const Cloze = ({
                 className={`animate-fadeIn rounded-xl border-2 border-solid p-4 ${
                   right
                     ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
-                    : "border-[var(--primary-color)] bg-[hsla(353,100%,65%,0.1)]"
+                    : "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
                 }`}
               >
                 <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
@@ -156,7 +156,7 @@ const Cloze = ({
             type="button"
             disabled={!full}
             onClick={check}
-            className="inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
+            className="inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
           >
             Check answer
           </button>

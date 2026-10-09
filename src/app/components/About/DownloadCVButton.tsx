@@ -19,7 +19,7 @@ const DownloadCVButton = () => {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="mb-1 inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse"
+        className="mb-1 inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg"
       >
         Download CV
       </button>
@@ -38,7 +38,7 @@ const DownloadCVButton = () => {
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="inline-block rounded-[1.875rem] border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg hover:animate-pulse"
+              className="inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg"
             >
               Got it
             </button>

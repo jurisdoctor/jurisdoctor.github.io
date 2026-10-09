@@ -41,9 +41,9 @@ const valid = (saved: ProgressType) =>
   typeof saved.d === "object";
 
 const button =
-  "inline-block rounded-xl border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-white shadow-lg duration-200 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none disabled:hover:brightness-100";
+  "inline-block rounded-xl border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg duration-200 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none disabled:hover:brightness-100";
 const ghost =
-  "inline-block rounded-xl border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)] duration-200 hover:bg-[var(--primary-color)] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-[var(--primary-color)]";
+  "inline-block rounded-xl border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)] duration-200 hover:bg-[var(--primary-color)] hover:text-[var(--on-primary)] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-[var(--primary-color)]";
 
 const calloutClass: Record<string, string> = {
   tip: "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]",
@@ -484,9 +484,9 @@ const Pharm = () => {
             <span>Course progress</span>
             <span>{pct}%</span>
           </div>
-          <div className="h-2 overflow-hidden rounded-full bg-[var(--track-color)]">
+          <div className="h-2 overflow-hidden rounded-sm bg-[var(--track-color)]">
             <div
-              className="h-full rounded-full bg-[var(--primary-color)] duration-300"
+              className="h-full rounded-sm bg-[var(--primary-color)] duration-300"
               style={{ width: `${pct}%` }}
             />
           </div>
@@ -611,7 +611,7 @@ const Pharm = () => {
                           ? "All activities complete"
                           : `${left} ${left === 1 ? "activity" : "activities"} left to unlock the next step`
                       }
-                      className={`shrink-0 whitespace-nowrap rounded-full px-2.5 py-1 text-xs font-bold ${
+                      className={`shrink-0 whitespace-nowrap rounded-md px-2.5 py-1 text-xs font-bold ${
                         canContinue
                           ? "text-[rgb(68,215,182)]"
                           : "text-[var(--muted-color)]"

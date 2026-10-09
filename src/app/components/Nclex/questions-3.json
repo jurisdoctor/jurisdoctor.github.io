@@ -1,0 +1,2483 @@
+{
+  "meta": {
+    "course": "N55 Fundamentals of Nursing",
+    "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
+    "schemaVersion": 3,
+    "set": "Exam 3",
+    "notes": "Exam 3 practice questions for Iggy chapters 16, 19 and 31. Ten per chapter: eight regular and two difficult. Built from the lecture PowerPoints, with the readings as support.",
+    "questionCount": 30,
+    "chapterQuestionCount": 30,
+    "skillCount": 0,
+    "chaptersIncluded": [
+      1016,
+      1019,
+      1031
+    ],
+    "skillsIncluded": [],
+    "sections": [
+      "chapters",
+      "skills"
+    ],
+    "questionTypes": {
+      "multiple_choice": 20,
+      "highlight": 3,
+      "cloze": 1,
+      "matrix": 2,
+      "sata": 1,
+      "bowtie": 2,
+      "ordered_response": 1
+    },
+    "itemTypes": [
+      "bowtie",
+      "cloze",
+      "highlight"
+    ],
+    "optionStrategies": [
+      {
+        "n": 1,
+        "name": "Eliminate absolutes",
+        "cue": "always, never, all, none, only, every",
+        "note": "Absolutes are usually wrong because medicine rarely deals in certainties."
+      },
+      {
+        "n": 2,
+        "name": "Favor qualifiers",
+        "cue": "usually, generally, often, may, approximately, most",
+        "note": "Qualifiers make a statement realistic. Not automatically right, but worth a second look against an absolute."
+      },
+      {
+        "n": 3,
+        "name": "Opposite pair, look closely",
+        "cue": "increase vs decrease, before vs after",
+        "note": "Often one of the pair is correct. Sometimes both are distractors, so treat it as a flag for attention."
+      },
+      {
+        "n": 4,
+        "name": "Global or umbrella option",
+        "cue": "one option covers two or more others",
+        "note": "If one option encompasses the others it is often the most complete answer."
+      },
+      {
+        "n": 5,
+        "name": "Patient-centered option",
+        "cue": "asks, involves, or respects the patient",
+        "note": "Options that involve the patient beat options that decide for them."
+      },
+      {
+        "n": 6,
+        "name": "Duplicate facts",
+        "cue": "a wrong fact shared by two or more options",
+        "note": "One shared wrong fact eliminates several options at once."
+      },
+      {
+        "n": 7,
+        "name": "Eliminate options that deny patient feelings",
+        "cue": "don't worry, it's nothing, most people are fine",
+        "note": "Therapeutic communication reflects feelings and invites more."
+      },
+      {
+        "n": 8,
+        "name": "Odd man wins",
+        "cue": "three options share an idea, one stands apart",
+        "note": "When most options point one way, the different one is often correct."
+      },
+      {
+        "n": 9,
+        "name": "Negative polarity",
+        "cue": "avoid, except, not, least, contraindicated, requires further teaching",
+        "note": "You are hunting the wrong option. Identify polarity before reading the choices."
+      },
+      {
+        "n": 10,
+        "name": "Priority key word",
+        "cue": "priority, immediate, first, best, most, least",
+        "note": "More than one option may be true. The key word decides how to choose among them."
+      },
+      {
+        "n": 11,
+        "name": "Apply the ABCs",
+        "cue": "airway, breathing, circulation",
+        "note": "In ordering and priority questions, airway, breathing, and circulation come first, then safety, then comfort."
+      },
+      {
+        "n": 12,
+        "name": "Assessment before intervention",
+        "cue": "assess, check, determine versus administer, apply, notify",
+        "note": "When the stem asks what comes first and an assessment option is present, assessment usually precedes action."
+      },
+      {
+        "n": 13,
+        "name": "Treat each option as true or false",
+        "cue": "select all that apply",
+        "note": "Work each option independently. Partial credit means a wrong selection costs you, so only select what the scenario supports."
+      }
+    ],
+    "exams": [
+      {
+        "id": "exam3",
+        "label": "Exam 3",
+        "chapters": [
+          1016,
+          1019,
+          1031
+        ],
+        "skills": [],
+        "questionCount": 30
+      }
+    ],
+    "chapterGroups": [
+      {
+        "id": "inflammation-immunity",
+        "title": "Inflammation and Immunity",
+        "exam": "Exam 3",
+        "chapters": [
+          1016,
+          1019
+        ]
+      },
+      {
+        "id": "infection-sepsis",
+        "title": "Infection and Sepsis",
+        "exam": "Exam 3",
+        "chapters": [
+          1031
+        ]
+      }
+    ],
+    "currentDailySet": {
+      "date": "",
+      "chapters": [],
+      "skills": [],
+      "questionIds": [],
+      "caseStudyIds": []
+    },
+    "difficultCount": 6,
+    "difficultIds": [
+      "ig16-x01",
+      "ig16-x02",
+      "ig19-x02",
+      "ig19-x01",
+      "ig31-x01",
+      "ig31-x02"
+    ],
+    "nclexCount": 10,
+    "nclexIds": [
+      "ig16-m02",
+      "ig16-m05",
+      "ig16-m07",
+      "ig19-m02",
+      "ig19-m03",
+      "ig19-m06",
+      "ig19-m08",
+      "ig31-m03",
+      "ig31-m04",
+      "ig31-m05"
+    ]
+  },
+  "chapters": [
+    {
+      "id": 1016,
+      "chapterNumber": 16,
+      "source": "Iggy",
+      "title": "Concepts of Inflammation and Immunity",
+      "exam": "Exam 3",
+      "group": "inflammation-immunity",
+      "questions": [
+        {
+          "id": "ig16-m01",
+          "type": "multiple_choice",
+          "stem": "A client had a laceration on the left forearm closed with sutures 6 hours ago. The wound edges are warm, with redness 0.5 cm from the wound and slight swelling. The client rates the pain 4 of 10 and makes a full fist with the left hand. Oral temperature is 36.8 °C. The client's partner says, \"Please do something before this turns into an infection.\" Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Document the findings and report them to the provider now as an early wound infection",
+              "correct": false,
+              "rationale": "Documenting is right, but the label is wrong. Warmth, redness, swelling, and pain 6 hours after closure do not establish infection."
+            },
+            {
+              "id": "B",
+              "text": "Recheck the left forearm on a schedule and hold the documentation until a change appears",
+              "correct": false,
+              "rationale": "Rechecking is right, but the first set of findings is the baseline. Without it there is nothing to compare a change against."
+            },
+            {
+              "id": "C",
+              "text": "Document the redness size, pain rating, and hand function with the time, then recheck on a schedule",
+              "correct": true,
+              "rationale": "These are the expected early findings of inflammation. Measured findings with a time give the baseline that later checks are compared with."
+            },
+            {
+              "id": "D",
+              "text": "Document the findings and tell the partner that redness this soon means healing has been delayed",
+              "correct": false,
+              "rationale": "Redness this soon is expected. Vessels dilate and blood flow increases in the vascular response."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Early warmth, redness, swelling, and pain at a wound are expected. Record measured findings with the time so that later findings can be compared with baseline.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Every option documents or rechecks, so read the second half of each one. Only one sets a measured baseline without adding a wrong label or a wrong delay.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Name the findings",
+                "detail": "Four cardinal signs, 6 hours after closure, function intact."
+              },
+              {
+                "action": "Check each second half",
+                "detail": "\"As infection,\" \"hold the documentation,\" and \"healing delayed\" are each one thing off."
+              },
+              {
+                "action": "Keep the baseline",
+                "detail": "Measured findings with a time, then a scheduled recheck."
+              }
+            ],
+            "verdict": "Document measured findings with the time and recheck on a schedule."
+          },
+          "caseGroup": "ig16-case1",
+          "caseStep": 1,
+          "objective": "Describe the three stages of the inflammatory response"
+        },
+        {
+          "id": "ig16-m02",
+          "type": "highlight",
+          "nursesNote": "Yesterday 0800, day 1 after closure of a left forearm laceration: wound edges warm, redness 0.5 cm from wound edge, swelling limited to the wound edges, pain 4 of 10, makes a full fist with left hand, oral temperature 36.7 °C.\n\nToday 0800: Wound edges are warm. Redness is 0.3 cm from wound edge. Swelling extends to the left wrist. Pain is 4 of 10. Unable to make a full fist with left hand. Oral temperature is 36.8 °C.",
+          "stem": "Highlight the findings that require follow-up.",
+          "segments": [
+            {
+              "id": "s1",
+              "text": "Wound edges are warm",
+              "correct": false,
+              "rationale": "Warmth is a cardinal sign and matches yesterday's entry."
+            },
+            {
+              "id": "s2",
+              "text": "Redness is 0.3 cm from wound edge",
+              "correct": false,
+              "rationale": "Redness was 0.5 cm yesterday. It is smaller, which is not a worsening finding."
+            },
+            {
+              "id": "s3",
+              "text": "Swelling extends to the left wrist",
+              "correct": true,
+              "rationale": "Yesterday the swelling was limited to the wound edges. It has spread, and a worsening sign is followed up."
+            },
+            {
+              "id": "s4",
+              "text": "Pain is 4 of 10",
+              "correct": false,
+              "rationale": "Pain is a cardinal sign and the rating is unchanged from yesterday."
+            },
+            {
+              "id": "s5",
+              "text": "Unable to make a full fist with left hand",
+              "correct": true,
+              "rationale": "Yesterday the client made a full fist. Decreased function is a cardinal sign, and a loss from baseline is followed up."
+            },
+            {
+              "id": "s6",
+              "text": "Oral temperature is 36.8 °C",
+              "correct": false,
+              "rationale": "This reading is close to yesterday's 36.7 °C and does not change the plan. The local findings are judged against their own baseline."
+            }
+          ],
+          "answer": [
+            "s3",
+            "s5"
+          ],
+          "format": "+/-",
+          "scoring": "+/-",
+          "takeaway": "A cardinal sign that matches baseline is expected. A cardinal sign that is worse than baseline is followed up, and function counts as much as redness.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Do not highlight a finding because it is a sign of inflammation. Line up each of today's findings with yesterday's entry and highlight only what is worse.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Line up today with yesterday",
+                "detail": "Six findings in each entry."
+              },
+              {
+                "action": "Mark what changed for the worse",
+                "detail": "Swelling has spread and the fist is lost."
+              },
+              {
+                "action": "Leave what matches or is better",
+                "detail": "Warmth, pain, and temperature match. Redness is smaller."
+              }
+            ],
+            "verdict": "s3, s5."
+          },
+          "caseGroup": "ig16-case1",
+          "caseStep": 2,
+          "objective": "Identify the five cardinal signs of inflammation"
+        },
+        {
+          "id": "ig16-x01",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client had a laceration on the left forearm closed with sutures 3 days ago. Yesterday at 0800 the nurse marked the edge of the redness at 0.3 cm from the wound. The client rated pain 4 of 10, swelling reached the left wrist, and the client was unable to make a full fist. Today at 0800 the redness is 1 cm from the wound, past the marked line, and pain is 5 of 10. Swelling is back to the wound edges and the client makes a full fist. Oral temperature is 36.9 °C. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Report the wider redness and higher pain now, and include that swelling and hand function are better",
+              "correct": true,
+              "rationale": "Redness has crossed the marked line and pain has risen. Worsening findings are reported, and the report gives the whole picture, including what is better."
+            },
+            {
+              "id": "B",
+              "text": "Document all four changes and recheck at 2000, because swelling and hand function are better",
+              "correct": false,
+              "rationale": "Two findings are better, but two are worse. Improvement in one sign does not cancel worsening in another."
+            },
+            {
+              "id": "C",
+              "text": "Report the wider redness and higher pain now as a wound infection that needs treatment",
+              "correct": false,
+              "rationale": "Reporting is right, but the label goes beyond the findings. Redness and pain alone do not establish infection."
+            },
+            {
+              "id": "D",
+              "text": "Redraw the line at 1 cm and use today's redness and pain as the baseline from now on",
+              "correct": false,
+              "rationale": "A new mark helps later checks, but resetting the baseline without reporting hides the change just found."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Compare every sign with baseline. Worsening in any sign is reported, even when other signs are better, and the report states findings without naming a cause.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The trend is mixed, which makes waiting look reasonable. The deciding cue is that redness has passed the marked line and pain is up: two signs moved the wrong way. Then choose the report that does not add a diagnosis.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Sort the four signs",
+                "detail": "Redness and pain are worse. Swelling and function are better."
+              },
+              {
+                "action": "Apply the rule",
+                "detail": "Worsening symptoms are reported. Better signs do not cancel them."
+              },
+              {
+                "action": "Compare the two reports",
+                "detail": "One states findings. One adds \"infection,\" which the findings do not establish."
+              },
+              {
+                "action": "Reject the reset",
+                "detail": "Moving the baseline hides the change."
+              }
+            ],
+            "verdict": "Report the wider redness and higher pain, with the improved swelling and function."
+          },
+          "caseGroup": "ig16-case1",
+          "caseStep": 3,
+          "objective": "Identify the five cardinal signs of inflammation"
+        },
+        {
+          "id": "ig16-m03",
+          "type": "multiple_choice",
+          "stem": "A client had a deep laceration of the left forearm that extended into the muscle. It was sutured 3 weeks ago and has healed with a firm scar. The client says, \"The scar feels tight and my left grip is weaker than my right. Did the healing fail?\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"It did not fail. Once the scar matures, the muscle under it will work as it did before.\"",
+              "correct": false,
+              "rationale": "The first sentence is right. The promise is not: scar tissue does not work like the tissue it replaced."
+            },
+            {
+              "id": "B",
+              "text": "\"The scar shows that the repair stage did not finish, so the weak grip should be reported.\"",
+              "correct": false,
+              "rationale": "Scar formation is part of tissue repair. It does not show that the stage was left unfinished."
+            },
+            {
+              "id": "C",
+              "text": "\"It did not fail. A scar means that new muscle cells have replaced the damaged ones.\"",
+              "correct": false,
+              "rationale": "Replacement with new cells is regeneration. A scar is the other way tissue repairs."
+            },
+            {
+              "id": "D",
+              "text": "\"It did not fail. Scar is one way tissue repairs, and it may not work like the tissue it replaced.\"",
+              "correct": true,
+              "rationale": "Tissue repair happens by regeneration, scar formation, or both. The area returns toward normal function, and scar tissue does not function like the original tissue."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Tissue repair is regeneration, scar formation, or both. The area returns toward normal function, and scar does not work like the tissue it replaced.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Three options reassure the client that healing did not fail. Compare what each one says about the scar: full return, new muscle cells, or a repair that may not work like the original.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts",
+              "Favor qualifiers"
+            ],
+            "steps": [
+              {
+                "action": "Drop the option that calls repair unfinished",
+                "detail": "A scar is repair."
+              },
+              {
+                "action": "Compare the three reassurances",
+                "detail": "One promises full return and one describes regeneration."
+              },
+              {
+                "action": "Keep the qualified one",
+                "detail": "\"May not work like the tissue it replaced.\""
+              }
+            ],
+            "verdict": "It did not fail, and scar may not work like the tissue it replaced."
+          },
+          "caseGroup": "ig16-case1",
+          "caseStep": 4,
+          "objective": "Describe the three stages of the inflammatory response"
+        },
+        {
+          "id": "ig16-m04",
+          "type": "multiple_choice",
+          "stem": "A client has never had a certain infectious disease and has never been vaccinated against it. The client was exposed to the disease this morning. Immune globulin is ordered. The client says, \"I would rather have the vaccine today instead. I heard it lasts longer.\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"The vaccine does last longer, so it is the better choice for the exposure you had today.\"",
+              "correct": false,
+              "rationale": "Longer lasting is true, but active immunity takes time to develop, so it cannot be counted on alone for protection right now."
+            },
+            {
+              "id": "B",
+              "text": "\"Immune globulin protects you now but fades. A vaccine takes time but builds your own protection.\"",
+              "correct": true,
+              "rationale": "Passive immunity is immediate and temporary. Active immunity takes time, creates memory, and often lasts longer. Both halves are true and they explain the order."
+            },
+            {
+              "id": "C",
+              "text": "\"Immune globulin protects you now, and it also teaches your body to remember this disease.\"",
+              "correct": false,
+              "rationale": "The first half is right. The second is not: passive immunity does not create personal immune memory."
+            },
+            {
+              "id": "D",
+              "text": "\"The vaccine protects you now, and immune globulin is added later to make that protection last.\"",
+              "correct": false,
+              "rationale": "This reverses the two. The vaccine takes time, and immune globulin is the one that acts immediately."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Passive immunity is immediate but temporary with no personal memory. Active immunity takes time to develop, creates memory, and often lasts longer.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The client is right that a vaccine lasts longer, which makes the first option tempting. The stem's cue is timing: the exposure was this morning.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Find the cue",
+                "detail": "Exposed this morning, no immunity."
+              },
+              {
+                "action": "Test each half of each option",
+                "detail": "Two options pair a true half with a false half, and one reverses both."
+              },
+              {
+                "action": "Keep the option with two true halves",
+                "detail": "Now but fades, versus slow but the client's own."
+              }
+            ],
+            "verdict": "Immune globulin protects now but fades. A vaccine takes time but builds the client's own protection."
+          },
+          "caseGroup": "ig16-case2",
+          "caseStep": 1,
+          "objective": "Distinguish active from passive immunity using examples"
+        },
+        {
+          "id": "ig16-m05",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A client with no prior immunity to a disease was exposed to it and received immune globulin 1 hour ago. The type of immunity this provides is [[1]].\n\nThe nurse teaches that the protection is [[2]].\n\nFor lasting protection, the client needs [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "artificial passive immunity",
+                  "correct": true,
+                  "rationale": "Antibodies made by another source and given as a health care product are artificial passive immunity."
+                },
+                {
+                  "id": "B",
+                  "text": "artificial active immunity",
+                  "correct": false,
+                  "rationale": "Artificial active immunity follows vaccination, in which the body produces its own response."
+                },
+                {
+                  "id": "C",
+                  "text": "natural passive immunity",
+                  "correct": false,
+                  "rationale": "Natural passive immunity is maternal antibodies passed through the placenta or breast milk."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "delayed but long lasting",
+                  "correct": false,
+                  "rationale": "This describes active immunity."
+                },
+                {
+                  "id": "B",
+                  "text": "immediate but temporary",
+                  "correct": true,
+                  "rationale": "Both passive types give immediate but temporary protection."
+                },
+                {
+                  "id": "C",
+                  "text": "immediate and long lasting",
+                  "correct": false,
+                  "rationale": "Passive protection is immediate, but it does not last and creates no personal memory."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "a larger dose of immune globulin",
+                  "correct": false,
+                  "rationale": "A larger dose of a passive product is still passive. It does not create the client's own immune memory."
+                },
+                {
+                  "id": "B",
+                  "text": "no vaccine, because immune globulin has been given",
+                  "correct": false,
+                  "rationale": "Immune globulin does not create personal immune memory, so it does not remove the need for the client's own response."
+                },
+                {
+                  "id": "C",
+                  "text": "vaccination when the provider advises",
+                  "correct": true,
+                  "rationale": "Vaccination produces active immunity, in which the person makes the response, creates memory, and often has longer protection."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "B",
+            "3": "C"
+          },
+          "scoring": "0/1",
+          "takeaway": "Immune globulin gives artificial passive immunity: immediate, temporary, and without personal memory. Lasting protection needs active immunity.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Ask who made the antibodies and how they arrived. Another source, given as a product: artificial passive. The other two blanks follow from that.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Blank 1",
+                "detail": "Another source made the antibodies and they were given as a product."
+              },
+              {
+                "action": "Blank 2",
+                "detail": "Passive means immediate and temporary."
+              },
+              {
+                "action": "Blank 3",
+                "detail": "Only the client's own response leaves memory."
+              }
+            ],
+            "verdict": "Artificial passive immunity; immediate but temporary; vaccination when the provider advises."
+          },
+          "caseGroup": "ig16-case2",
+          "caseStep": 2,
+          "objective": "Distinguish active from passive immunity using examples"
+        },
+        {
+          "id": "ig16-m06",
+          "type": "multiple_choice",
+          "stem": "A client received immune globulin after an exposure to a disease. During the teaching, the client, who is breastfeeding a 2 month old infant, asks whether breast milk gives the infant any immune protection in general. After teaching, which statement by the client shows correct understanding?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"My baby gets my antibodies through my milk now, and that protection is temporary.\"",
+              "correct": true,
+              "rationale": "Maternal antibodies in breast milk give natural passive immunity: immediate but temporary."
+            },
+            {
+              "id": "B",
+              "text": "\"My baby gets my antibodies through my milk now and will keep making them afterward.\"",
+              "correct": false,
+              "rationale": "The first half is right. But receiving antibodies does not create the infant's own immune memory."
+            },
+            {
+              "id": "C",
+              "text": "\"My baby got antibodies before birth through the placenta, so my milk adds nothing now.\"",
+              "correct": false,
+              "rationale": "Antibodies do cross the placenta, but breast milk is a second route of natural passive immunity."
+            },
+            {
+              "id": "D",
+              "text": "\"My baby will get my antibodies through my milk in a few weeks, once enough has built up.\"",
+              "correct": false,
+              "rationale": "A delay belongs to active immunity. Passive protection is immediate."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Maternal antibodies through the placenta or breast milk give natural passive immunity: immediate, temporary, and without personal memory.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Every option contains something true about maternal antibodies. Check the second half of each for timing and for who is making the antibodies.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Ask who made the antibodies",
+                "detail": "The breastfeeding client, not the infant."
+              },
+              {
+                "action": "Check timing",
+                "detail": "Passive protection is immediate, not delayed."
+              },
+              {
+                "action": "Check duration",
+                "detail": "Temporary, with no memory formed by the infant."
+              }
+            ],
+            "verdict": "Antibodies through milk now, and the protection is temporary."
+          },
+          "caseGroup": "ig16-case2",
+          "caseStep": 3,
+          "objective": "Distinguish active from passive immunity using examples"
+        },
+        {
+          "id": "ig16-x02",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client with no prior immunity to a disease received immune globulin after an exposure 3 months ago. The client received the first dose of the vaccine against the same disease 2 days ago. Today the client reports a new close exposure to the disease this morning and says, \"I have had both, so I am covered.\" Which response by the nurse is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"The immune globulin from 3 months ago is still working, so nothing more is needed today.\"",
+              "correct": false,
+              "rationale": "Passive protection is temporary. The nurse cannot assume it is still present 3 months later."
+            },
+            {
+              "id": "B",
+              "text": "\"The vaccine from 2 days ago covers you, because vaccines create immune memory.\"",
+              "correct": false,
+              "rationale": "Vaccines do create memory, but active immunity takes time to develop. Two days is too soon to count on it."
+            },
+            {
+              "id": "C",
+              "text": "\"Neither can be counted on today. One is temporary and the other needs time. I will report this exposure.\"",
+              "correct": true,
+              "rationale": "Passive protection fades and active protection has not had time to form. The client may be unprotected, so the nurse reports the exposure for a decision about protection now."
+            },
+            {
+              "id": "D",
+              "text": "\"Neither can be counted on today, so I will give you another dose of immune globulin now.\"",
+              "correct": false,
+              "rationale": "The reasoning is right and the product may be what is needed, but the nurse does not give it without an order. The exposure is reported first."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Passive immunity is temporary and active immunity takes time to develop. A client can sit in the gap between the two.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Each product sounds like it should cover the client, and two options lean on one of them. The deciding cues are the two time points: 3 months since the temporary product and 2 days since the slow one.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Take each product in turn",
+                "detail": "Immune globulin: immediate but temporary. Vaccine: lasting but slow."
+              },
+              {
+                "action": "Apply the two time points",
+                "detail": "3 months is long for a temporary product, and 2 days is too early for the other."
+              },
+              {
+                "action": "Compare the two \"neither\" options",
+                "detail": "One acts without an order. One reports so that a decision can be made."
+              }
+            ],
+            "verdict": "Neither can be counted on today, so the exposure is reported."
+          },
+          "caseGroup": "ig16-case2",
+          "caseStep": 4,
+          "objective": "Distinguish active from passive immunity using examples"
+        },
+        {
+          "id": "ig16-m08",
+          "type": "multiple_choice",
+          "stem": "A client twisted the right ankle 1 hour ago and has never injured it before. The right ankle is already warm and swollen. The client asks, \"How can my body react this fast to something it has never dealt with?\" Which explanation by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"This is your body's built in response. It starts right away because cells matched to this injury were ready.\"",
+              "correct": false,
+              "rationale": "Built in and immediate are right. The reason is not: cells matched to one specific target belong to adaptive immunity."
+            },
+            {
+              "id": "B",
+              "text": "\"This is your body's built in response. It starts right away and needs no earlier exposure.\"",
+              "correct": true,
+              "rationale": "Inflammation is part of innate immunity: present at birth, rapid, broad, and ready without prior exposure."
+            },
+            {
+              "id": "C",
+              "text": "\"This is a targeted response. It starts right away because antibodies are already present.\"",
+              "correct": false,
+              "rationale": "A targeted response with antibodies describes adaptive immunity, which develops through exposure to antigens."
+            },
+            {
+              "id": "D",
+              "text": "\"This is your body's built in response. It will be faster next time because it creates memory.\"",
+              "correct": false,
+              "rationale": "Creating memory for a faster response next time is a feature of adaptive immunity, not of inflammation."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Inflammation is part of innate immunity: present at birth, rapid, broad, and needing no prior exposure. Memory and targeting belong to adaptive immunity.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Three options begin the same way. The difference is the reason each gives, and only one reason belongs to the innate system.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Pull the cues",
+                "detail": "One hour, first injury, already warm and swollen."
+              },
+              {
+                "action": "Compare the reasons",
+                "detail": "Matched cells, antibodies, and memory are all adaptive."
+              },
+              {
+                "action": "Keep the innate reason",
+                "detail": "Needs no earlier exposure."
+              }
+            ],
+            "verdict": "A built in response that needs no earlier exposure."
+          },
+          "caseGroup": "ig16-case3",
+          "caseStep": 1,
+          "objective": "Compare innate and adaptive immunity"
+        },
+        {
+          "id": "ig16-m07",
+          "type": "matrix",
+          "scenario": "A client twisted the right ankle 2 days ago. At 0800 today the nurse documented: right ankle warm, redness 4 cm across over the outer ankle, swelling limited to the ankle, pain 4 of 10, and able to bear weight with a limp. The nurse reassesses at 1600.",
+          "stem": "For each 1600 finding, indicate whether it is expected with inflammation or requires follow-up.",
+          "columns": [
+            "Expected with inflammation",
+            "Requires follow-up"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Right ankle is warm to the touch",
+              "answer": "Expected with inflammation",
+              "rationale": "Warmth is a cardinal sign and has not changed from the 0800 baseline."
+            },
+            {
+              "id": "r2",
+              "text": "Swelling reaches the middle of the right calf",
+              "answer": "Requires follow-up",
+              "rationale": "Swelling has spread beyond the 0800 baseline. Worsening findings are reported."
+            },
+            {
+              "id": "r3",
+              "text": "Pain is 4 of 10",
+              "answer": "Expected with inflammation",
+              "rationale": "Pain is a cardinal sign and the rating is unchanged from 0800."
+            },
+            {
+              "id": "r4",
+              "text": "Client cannot bear weight on the right leg",
+              "answer": "Requires follow-up",
+              "rationale": "Function has decreased since 0800, when the client could bear weight with a limp."
+            },
+            {
+              "id": "r5",
+              "text": "Redness over the outer right ankle is 2 cm across",
+              "answer": "Expected with inflammation",
+              "rationale": "The redness was 4 cm across at 0800, so it is smaller. A cardinal sign that is easing is not a worsening finding."
+            }
+          ],
+          "answer": {
+            "r1": "Expected with inflammation",
+            "r2": "Requires follow-up",
+            "r3": "Expected with inflammation",
+            "r4": "Requires follow-up",
+            "r5": "Expected with inflammation"
+          },
+          "scoring": "0/1",
+          "takeaway": "A cardinal sign that matches or is better than baseline is expected. A sign that has worsened since baseline needs follow-up.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Do not judge each finding by whether it is a cardinal sign. Judge it against the 0800 entry: same, better, or worse?",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Set the baseline",
+                "detail": "0800: warm, redness 4 cm across, swelling at the ankle only, pain 4 of 10, bears weight with a limp."
+              },
+              {
+                "action": "Compare each row",
+                "detail": "Warmth and pain match, redness is less, swelling and function are worse."
+              },
+              {
+                "action": "Apply the rule",
+                "detail": "Only worsening signs are reported."
+              }
+            ],
+            "verdict": "Warmth, pain, and smaller redness are expected. Spreading swelling and lost weight bearing require follow-up."
+          },
+          "caseGroup": "ig16-case3",
+          "caseStep": 2,
+          "objective": "Identify the five cardinal signs of inflammation"
+        }
+      ]
+    },
+    {
+      "id": 1019,
+      "chapterNumber": 19,
+      "source": "Iggy",
+      "title": "Concepts of Care for Patients With Infection",
+      "exam": "Exam 3",
+      "group": "inflammation-immunity",
+      "questions": [
+        {
+          "id": "ig19-m01",
+          "type": "multiple_choice",
+          "stem": "An 81 year old client is admitted for a wound on the left lower leg. The admission history shows a daily immunosuppressant and less than half of each meal eaten for the past 3 weeks. Oral temperature is 36.7 °C. Redness extends 1 cm around the wound. Which conclusion guides the nurse's plan of care?",
+          "options": [
+            {
+              "id": "A",
+              "text": "All three history findings raise concern, so the wound is reported on admission as infected",
+              "correct": false,
+              "rationale": "The history does raise concern, but redness of 1 cm does not establish infection."
+            },
+            {
+              "id": "B",
+              "text": "Age and the medication raise concern, while food intake matters for healing but not for immune protection",
+              "correct": false,
+              "rationale": "Malnutrition impairs immune cell function as well as healing. All three findings count."
+            },
+            {
+              "id": "C",
+              "text": "All three history findings raise concern, but closer assessment begins only if a fever develops",
+              "correct": false,
+              "rationale": "The concern is right, but the trigger is wrong. The plan follows from the history now, without waiting for a fever."
+            },
+            {
+              "id": "D",
+              "text": "All three history findings raise concern, so closer assessment against baseline is planned from admission",
+              "correct": true,
+              "rationale": "Advanced age, an immunosuppressant, and poor nutrition each affect immunity. Reviewing the history identifies them so the plan can start now."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Age, nutritional status, disease, medications, and environmental exposures affect immunity. The history tells you whose protection is weak, and the plan starts from there.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Three options accept that all three findings matter. They differ in what the nurse does next: label the wound, wait for a fever, or assess more closely now.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "List the cues",
+                "detail": "Age 81, daily immunosuppressant, poor intake for 3 weeks."
+              },
+              {
+                "action": "Drop the option that discounts one",
+                "detail": "Nutrition affects immune protection too."
+              },
+              {
+                "action": "Compare the three that remain",
+                "detail": "Labeling infection overreaches, and waiting for fever delays."
+              }
+            ],
+            "verdict": "All three raise concern, so closer assessment against baseline starts on admission."
+          },
+          "caseGroup": "ig19-case1",
+          "caseStep": 1,
+          "objective": "Connect immune responses with nursing assessment"
+        },
+        {
+          "id": "ig19-m02",
+          "type": "sata",
+          "stem": "An 81 year old client is admitted with a wound on the left lower leg. The nurse reviews the history to identify factors that may affect the client's immune protection. Which information does the nurse review for this purpose? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Current medications, including any that suppress the immune system",
+              "correct": true,
+              "rationale": "Immunosuppressants can affect immune function."
+            },
+            {
+              "id": "B",
+              "text": "Recent food intake and any change in weight",
+              "correct": true,
+              "rationale": "Malnutrition impairs immune cell function. Protein, vitamins, and minerals support immune responses and wound healing."
+            },
+            {
+              "id": "C",
+              "text": "Chronic health conditions",
+              "correct": true,
+              "rationale": "Chronic disease impacts immune competence and disease susceptibility."
+            },
+            {
+              "id": "D",
+              "text": "Pain rating at the wound today",
+              "correct": false,
+              "rationale": "This is an assessment finding to compare with baseline. It is not a factor that affects immune protection."
+            },
+            {
+              "id": "E",
+              "text": "Recent environmental exposures",
+              "correct": true,
+              "rationale": "Environmental exposures are one of the factors that affect immunity."
+            },
+            {
+              "id": "F",
+              "text": "Size of the redness around the wound on admission",
+              "correct": false,
+              "rationale": "This is the baseline for the wound. It is not a factor that affects immune protection."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          "takeaway": "The factors that affect immunity are age and developmental stage, nutritional status, disease and overall health, medications, and environmental exposures.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Every option is something the nurse collects. Separate the factors that affect immune protection from the findings that describe the wound.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the factors",
+                "detail": "Age, nutrition, disease, medications, environmental exposures."
+              },
+              {
+                "action": "Match each option",
+                "detail": "Medications, intake and weight, chronic conditions, and exposures all match."
+              },
+              {
+                "action": "Leave out what does not match",
+                "detail": "A pain rating and the size of the redness are findings, not factors."
+              }
+            ],
+            "verdict": "A, B, C, E."
+          },
+          "caseGroup": "ig19-case1",
+          "caseStep": 2,
+          "objective": "Connect immune responses with nursing assessment"
+        },
+        {
+          "id": "ig19-m03",
+          "type": "bowtie",
+          "scenario": "An 81 year old client was admitted 2 days ago with a wound on the left lower leg. The client takes a daily immunosuppressant and has eaten about one quarter of each meal since admission. Today the redness extends 1 cm around the wound, the same as on admission. The area is warm with mild swelling, both as on admission. Pain is 2 of 10, the same as on admission, and the client walks to the bathroom as on admission. Oral temperature is 36.6 °C.",
+          "stem": "Complete the diagram by selecting 2 actions the nurse takes, the 1 condition the client is most likely experiencing, and 2 parameters the nurse monitors.",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Compare the wound findings with the admission baseline at each assessment",
+                  "correct": true,
+                  "rationale": "The findings match baseline now. Comparing over time is how a change will be recognized in a client whose protection is reduced."
+                },
+                {
+                  "id": "B",
+                  "text": "Arrange a review of the client's intake of protein, vitamins, and minerals",
+                  "correct": true,
+                  "rationale": "The client eats one quarter of each meal. Adequate protein, vitamins, and minerals support immune responses and wound healing."
+                },
+                {
+                  "id": "C",
+                  "text": "Report the wound to the provider today as infected",
+                  "correct": false,
+                  "rationale": "Redness of 1 cm that is unchanged from admission does not establish infection."
+                },
+                {
+                  "id": "D",
+                  "text": "Hold further wound checks until the provider has reviewed the nutrition plan",
+                  "correct": false,
+                  "rationale": "Nutrition matters, but assessment of the wound continues. Three factors lower this client's immune protection."
+                }
+              ]
+            },
+            "condition": {
+              "label": "The problem",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Inflammation at the wound in a client with reduced immune protection",
+                  "correct": true,
+                  "rationale": "The local findings are unchanged cardinal signs, and age, an immunosuppressant, and poor intake each reduce immune protection."
+                },
+                {
+                  "id": "B",
+                  "text": "Wound infection, shown by redness and warmth",
+                  "correct": false,
+                  "rationale": "Redness and warmth alone do not establish infection, and neither has changed."
+                },
+                {
+                  "id": "C",
+                  "text": "Expected healing with no added risk",
+                  "correct": false,
+                  "rationale": "The local findings fit, but the history adds risk."
+                },
+                {
+                  "id": "D",
+                  "text": "Failure of the tissue repair stage",
+                  "correct": false,
+                  "rationale": "Nothing in the findings shows that repair has failed at 2 days."
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to monitor",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Size of the redness and swelling around the wound",
+                  "correct": true,
+                  "rationale": "Color change and swelling are assessed and compared with baseline."
+                },
+                {
+                  "id": "B",
+                  "text": "Pain rating and ability to walk on the left leg",
+                  "correct": true,
+                  "rationale": "Pain and functional ability are assessed and compared with baseline."
+                },
+                {
+                  "id": "C",
+                  "text": "Oral temperature as the only sign of change",
+                  "correct": false,
+                  "rationale": "Temperature is one finding. Changes in the site, in pain, and in function are compared with baseline as well."
+                },
+                {
+                  "id": "D",
+                  "text": "Size of the redness alone, measured once a day",
+                  "correct": false,
+                  "rationale": "Redness is one of several findings, and this client's history calls for closer assessment, not less."
+                }
+              ]
+            }
+          },
+          "answer": {
+            "actions": [
+              "A",
+              "B"
+            ],
+            "condition": [
+              "A"
+            ],
+            "parameters": [
+              "A",
+              "B"
+            ]
+          },
+          "scoring": "0/1",
+          "takeaway": "Unchanged cardinal signs point to inflammation. A history of advanced age, an immunosuppressant, and poor intake means the nurse keeps comparing with baseline and acts on nutrition.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Settle the condition first. Unchanged local findings rule out calling it infection, and the history rules out calling it risk free. The actions and parameters then follow.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Condition",
+                "detail": "Unchanged cardinal signs plus three factors that reduce protection."
+              },
+              {
+                "action": "Actions",
+                "detail": "Keep comparing with baseline and act on the poor intake."
+              },
+              {
+                "action": "Parameters",
+                "detail": "The findings the nurse assesses: color, swelling, pain, function."
+              }
+            ],
+            "verdict": "Inflammation with reduced immune protection; compare with baseline and review nutrition; monitor redness and swelling, pain and walking."
+          },
+          "caseGroup": "ig19-case1",
+          "caseStep": 3,
+          "objective": "Connect immune responses with nursing assessment"
+        },
+        {
+          "id": "ig19-x02",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "An 81 year old client was admitted 3 days ago with a wound on the left lower leg and takes a daily immunosuppressant. On admission the client was alert, talkative, and ate about one quarter of each meal. Today the redness is 1 cm around the wound and pain is 2 of 10, both the same as on admission. Oral temperature is 36.5 °C. The client has slept through two meals, is slow to answer questions, and ate a few bites at breakfast. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Report the change in alertness and intake now, even though the wound and temperature are unchanged",
+              "correct": true,
+              "rationale": "The client has changed from baseline in behavior and function. In a client with reduced immune protection, the nurse does not rely on the wound or on fever alone, and worsening is reported."
+            },
+            {
+              "id": "B",
+              "text": "Wake the client for lunch, encourage fluids, and report if alertness is no better this afternoon",
+              "correct": false,
+              "rationale": "Supporting intake is reasonable care, but it delays the report of a change from baseline in a client with reduced immune protection."
+            },
+            {
+              "id": "C",
+              "text": "Report the wound as infected now, because the client is at risk and is sleeping more than before",
+              "correct": false,
+              "rationale": "Reporting is right, but the wound findings have not changed. The report should state what changed, not name a cause."
+            },
+            {
+              "id": "D",
+              "text": "Document the change in alertness, and report it if the temperature rises above the admission reading",
+              "correct": false,
+              "rationale": "This client takes an immunosuppressant and is 81 years old. The nurse does not wait for a fever before acting on a change in behavior."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Compare the whole client with baseline, not only the wound. A change in behavior or function is reported, and fever is not required, especially when immune protection is reduced.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The wound and the temperature both say nothing has changed, which makes waiting look reasonable. The deciding cue is the client: alert and talkative on admission, now slow to answer and sleeping through meals.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Compare the wound",
+                "detail": "Unchanged."
+              },
+              {
+                "action": "Compare the client",
+                "detail": "Alertness and intake are both worse than on admission."
+              },
+              {
+                "action": "Weigh the risk",
+                "detail": "Age 81 and an immunosuppressant: do not wait for fever."
+              },
+              {
+                "action": "Choose the report that states findings",
+                "detail": "One report names infection, which the wound does not support."
+              }
+            ],
+            "verdict": "Report the change in alertness and intake now."
+          },
+          "caseGroup": "ig19-case1",
+          "caseStep": 4,
+          "objective": "Connect immune responses with nursing assessment"
+        },
+        {
+          "id": "ig19-m04",
+          "type": "multiple_choice",
+          "stem": "During a morning assessment the nurse finds a warm, red, swollen area on a client's left lower leg. Nothing about this area appears in the earlier notes, and the client has not mentioned it. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ask when the area appeared and about any recent injury, then assess warmth, pain, and use of the leg",
+              "correct": true,
+              "rationale": "Assessment begins with onset, recent injury, and illness history, followed by the physical findings. This gives the baseline."
+            },
+            {
+              "id": "B",
+              "text": "Assess warmth, pain, and use of the leg, then report the area to the provider as an infection",
+              "correct": false,
+              "rationale": "The physical findings are needed, but redness and swelling alone do not establish infection, and no history has been taken."
+            },
+            {
+              "id": "C",
+              "text": "Ask when the area appeared and about any recent injury, then recheck the area tomorrow morning",
+              "correct": false,
+              "rationale": "The history is right, but the physical assessment is put off for a day and no baseline is recorded."
+            },
+            {
+              "id": "D",
+              "text": "Mark the edge of the redness, then document the area as inflammation from a minor injury",
+              "correct": false,
+              "rationale": "Marking the edge helps later comparison, but no injury has been reported. Naming a cause before asking is a guess."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "For a new area of redness, warmth, and swelling: ask about onset, recent injury, and illness history, then assess warmth, color, swelling, pain, and function to set the baseline.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Every option contains a useful step. Check what each one leaves out or adds: a label, a delay, or a guess.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Note what is missing",
+                "detail": "No onset, no cause, no baseline."
+              },
+              {
+                "action": "Check each option's second step",
+                "detail": "Reporting infection, waiting a day, and naming a cause each go wrong."
+              },
+              {
+                "action": "Keep history plus assessment",
+                "detail": "Both are done now."
+              }
+            ],
+            "verdict": "Ask about onset and recent injury, then assess warmth, pain, and use of the leg."
+          },
+          "caseGroup": "ig19-case2",
+          "caseStep": 1,
+          "objective": "Connect immune responses with nursing assessment"
+        },
+        {
+          "id": "ig19-m05",
+          "type": "multiple_choice",
+          "stem": "A client bumped the left lower leg on a bed frame 2 days ago. Today an area on the left lower leg is warm, red, and swollen, and the client rates the pain 5 of 10. The skin over the area is intact. A family member says, \"It is red and swollen, so it must be infected.\" Which response by the nurse is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"These signs can come from the bump itself. I will mark the edge and look again tomorrow.\"",
+              "correct": false,
+              "rationale": "The explanation and the mark are right, but a day is a long gap and there is no commitment to report worsening."
+            },
+            {
+              "id": "B",
+              "text": "\"These signs can come from the bump itself. I will keep checking and report it if it worsens.\"",
+              "correct": true,
+              "rationale": "Inflammation can follow an injury without infection. The nurse says so and commits to reassessment and to reporting any worsening."
+            },
+            {
+              "id": "C",
+              "text": "\"These signs can come from the bump itself. I will report it if a fever develops.\"",
+              "correct": false,
+              "rationale": "The explanation is right, but worsening at the site is reported as well. The nurse does not wait for a fever."
+            },
+            {
+              "id": "D",
+              "text": "\"These signs usually mean that infection is starting, so I will ask for treatment to be safe.\"",
+              "correct": false,
+              "rationale": "Redness and swelling alone do not establish infection."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Inflammation can occur without infection. Redness and swelling alone do not establish infection, and the nurse keeps assessing and reports worsening.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Three options correctly say the bump can cause these signs. They differ in what comes next: look again tomorrow, wait for a fever, or keep checking and report worsening.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Find the cause in the stem",
+                "detail": "A bump 2 days ago, skin intact."
+              },
+              {
+                "action": "Compare the three similar options",
+                "detail": "One leaves a day between checks and one waits for a fever."
+              },
+              {
+                "action": "Keep the one that explains and reassesses",
+                "detail": "It corrects the belief and keeps watching."
+              }
+            ],
+            "verdict": "These signs can come from the bump. The nurse keeps checking and reports worsening."
+          },
+          "caseGroup": "ig19-case2",
+          "caseStep": 2,
+          "objective": "Differentiate inflammation from infection"
+        },
+        {
+          "id": "ig19-m06",
+          "type": "highlight",
+          "nursesNote": "Yesterday 0800, day 3 after a bump to the left lower leg: red area 2 cm across, warm to touch, pain 3 of 10, walks to bathroom without help, skin intact, oral temperature 36.6 °C.\n\nToday 0800: Red area on left lower leg is 2 cm across. Area is warm to touch. Pain is 5 of 10. Walks to bathroom only with one person helping. Skin over the area is intact. Oral temperature is 36.7 °C.",
+          "stem": "Highlight the findings that require follow-up.",
+          "segments": [
+            {
+              "id": "s1",
+              "text": "Red area on left lower leg is 2 cm across",
+              "correct": false,
+              "rationale": "The size of the redness matches yesterday's entry."
+            },
+            {
+              "id": "s2",
+              "text": "Area is warm to touch",
+              "correct": false,
+              "rationale": "Warmth is a cardinal sign and has not changed."
+            },
+            {
+              "id": "s3",
+              "text": "Pain is 5 of 10",
+              "correct": true,
+              "rationale": "Pain was 3 of 10 yesterday. It has risen, and a worsening sign is followed up."
+            },
+            {
+              "id": "s4",
+              "text": "Walks to bathroom only with one person helping",
+              "correct": true,
+              "rationale": "Yesterday the client walked to the bathroom without help. Functional ability has decreased from baseline."
+            },
+            {
+              "id": "s5",
+              "text": "Skin over the area is intact",
+              "correct": false,
+              "rationale": "Intact skin matches yesterday and is not a worsening finding."
+            },
+            {
+              "id": "s6",
+              "text": "Oral temperature is 36.7 °C",
+              "correct": false,
+              "rationale": "This reading is close to yesterday's 36.6 °C and does not cancel the two findings that are worse."
+            }
+          ],
+          "answer": [
+            "s3",
+            "s4"
+          ],
+          "format": "+/-",
+          "scoring": "+/-",
+          "takeaway": "Assess warmth, color, swelling, pain, and functional ability, and compare each with baseline. Unchanged redness does not outweigh worse pain and lost function.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The eye goes to the redness, which is unchanged. Line up each of today's findings with yesterday's entry: two of them are worse.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Line up today with yesterday",
+                "detail": "Six findings in each entry."
+              },
+              {
+                "action": "Mark what is worse",
+                "detail": "Pain 3 to 5 of 10, and walking alone to walking with help."
+              },
+              {
+                "action": "Leave what matches",
+                "detail": "Redness, warmth, intact skin, and temperature."
+              }
+            ],
+            "verdict": "s3, s4."
+          },
+          "caseGroup": "ig19-case2",
+          "caseStep": 3,
+          "objective": "Connect immune responses with nursing assessment"
+        },
+        {
+          "id": "ig19-x01",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client bumped the left lower leg 5 days ago and the skin is intact. Yesterday at 0800 the note read: red area 2 cm across, pain 5 of 10, walks to the bathroom with one person helping. Today at 0800 the red area is still 2 cm across, the client rates pain 7 of 10, and the client is unable to stand on the left leg. The client slept in a chair overnight with the left leg bent and says, \"I just slept on it wrong. Please do not bother anyone about it.\" Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Respect the client's request, document today's findings, and recheck the left leg in 4 hours",
+              "correct": false,
+              "rationale": "Listening to the client matters, but pain and function are clearly worse than baseline. A request not to bother anyone does not remove the duty to report worsening."
+            },
+            {
+              "id": "B",
+              "text": "Give the ordered pain relief, reassess the pain in 1 hour, and report then if the client still cannot stand",
+              "correct": false,
+              "rationale": "Treating the pain is reasonable care, but it delays the report of two findings that are already clearly worse than baseline."
+            },
+            {
+              "id": "C",
+              "text": "Report the rise in pain and the loss of standing now, and explain to the client why it needs to be reported",
+              "correct": true,
+              "rationale": "Pain has risen from 5 to 7 of 10 and the client can no longer stand on the left leg. Worsening is reported whatever the suspected cause, and the nurse tells the client why."
+            },
+            {
+              "id": "D",
+              "text": "Ask the client to stand once more with help, and report only if the client is still unable to stand",
+              "correct": false,
+              "rationale": "The assessment already shows the change. Repeating it delays the report and adds nothing."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Changes from baseline that show worsening are reported. A client's explanation is heard and documented, and the report is still made.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Three things pull toward waiting: the redness has not changed, the client offers another cause, and the client has asked the nurse not to report. The deciding cue is that pain and function are both worse than yesterday, and the nurse reports findings without having to settle the cause.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Compare every sign",
+                "detail": "Redness same. Pain 5 to 7 of 10. Walking with help to unable to stand."
+              },
+              {
+                "action": "Weigh the client's request",
+                "detail": "It is heard, but it does not change the findings."
+              },
+              {
+                "action": "Reject treat and wait",
+                "detail": "Pain relief does not replace reporting a loss of function."
+              },
+              {
+                "action": "Do not repeat what is known",
+                "detail": "Standing again only delays the report."
+              }
+            ],
+            "verdict": "Report the rise in pain and the loss of standing now, and explain why."
+          },
+          "caseGroup": "ig19-case2",
+          "caseStep": 4,
+          "objective": "Connect immune responses with nursing assessment"
+        },
+        {
+          "id": "ig19-m08",
+          "type": "matrix",
+          "scenario": "A nurse is orienting a new nurse to the care of a client with a red, swollen area around a wound on the right heel. The client has eaten poorly for a month. The new nurse makes the statements below.",
+          "stem": "For each statement, indicate whether it is correct or requires correction.",
+          "columns": [
+            "Correct",
+            "Requires correction"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "\"The heel is red and swollen, which tells me the wound is infected.\"",
+              "answer": "Requires correction",
+              "rationale": "Redness and swelling alone do not establish infection."
+            },
+            {
+              "id": "r2",
+              "text": "\"I will compare what I find today with the earlier notes.\"",
+              "answer": "Correct",
+              "rationale": "Findings are compared with the client's baseline."
+            },
+            {
+              "id": "r3",
+              "text": "\"Poor intake of protein and vitamins can slow healing of this wound.\"",
+              "answer": "Correct",
+              "rationale": "Adequate protein, vitamins, and minerals support immune responses and wound healing."
+            },
+            {
+              "id": "r4",
+              "text": "\"The redness is the same size as yesterday, so the wound has not changed.\"",
+              "answer": "Requires correction",
+              "rationale": "Redness is one finding. Pain and functional ability are assessed and compared with baseline before the nurse can say nothing has changed."
+            },
+            {
+              "id": "r5",
+              "text": "\"This area can be inflamed without being infected.\"",
+              "answer": "Correct",
+              "rationale": "Inflammation can occur without infection."
+            },
+            {
+              "id": "r6",
+              "text": "\"A normal temperature does not tell me that this wound is free of infection.\"",
+              "answer": "Correct",
+              "rationale": "The nurse does not rely on fever alone. Findings at the site and changes from baseline are assessed as well."
+            }
+          ],
+          "answer": {
+            "r1": "Requires correction",
+            "r2": "Correct",
+            "r3": "Correct",
+            "r4": "Requires correction",
+            "r5": "Correct",
+            "r6": "Correct"
+          },
+          "scoring": "0/1",
+          "takeaway": "Redness and swelling alone do not establish infection. The nurse assesses every sign, including pain and function, compares with baseline, and does not rely on temperature alone.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Test each statement against the steps of the assessment: ask, review, assess, compare, document. A statement that skips or shortcuts a step needs correction. Read each one to the end: one of them sounds wrong and is true.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check for a leap to infection",
+                "detail": "Statement 1."
+              },
+              {
+                "action": "Check for shortcuts",
+                "detail": "Statement 4 judges the whole wound by one finding. Statement 6 sounds wrong but is true."
+              },
+              {
+                "action": "Confirm the rest",
+                "detail": "Comparing with baseline, nutrition and healing, and inflammation without infection are correct."
+              }
+            ],
+            "verdict": "Statements 1 and 4 require correction. Statements 2, 3, 5, and 6 are correct."
+          },
+          "caseGroup": "ig19-case3",
+          "caseStep": 1,
+          "objective": "Differentiate inflammation from infection"
+        },
+        {
+          "id": "ig19-m07",
+          "type": "multiple_choice",
+          "stem": "A client has a wound on the right heel and has eaten poorly for a month. Yesterday at 0800 the note read: redness 1 cm around the wound, mild swelling, no drainage, pain 2 of 10. Today at 0800 the redness extends 3 cm around the wound, the swelling has increased, the dressing holds thick yellow drainage (pus), and the client rates pain 6 of 10. Oral temperature is 36.8 °C. A new nurse says, \"Redness and swelling alone do not establish infection, so I will chart this as inflammation.\" Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Agree, document the findings as expected inflammation, and compare the heel again at 2000",
+              "correct": false,
+              "rationale": "The rule is quoted correctly, but it no longer fits. There is more than redness and swelling here: the drainage is new, and the redness, swelling, and pain are all worse."
+            },
+            {
+              "id": "B",
+              "text": "Report the wider redness, new thick yellow drainage, and higher pain now as findings that suggest infection",
+              "correct": true,
+              "rationale": "Redness has spread from 1 cm to 3 cm, pain has risen from 2 to 6 of 10, and thick yellow drainage is new. Pus is a sign of local infection, and worsening findings are reported."
+            },
+            {
+              "id": "C",
+              "text": "Clean away the drainage, apply a fresh dressing, and report if drainage appears again by 2000",
+              "correct": false,
+              "rationale": "Wound care is appropriate, but waiting for the drainage to return delays the report of findings that are already worse."
+            },
+            {
+              "id": "D",
+              "text": "Report the findings once the oral temperature rises above the 36.8 °C measured this morning",
+              "correct": false,
+              "rationale": "The nurse does not wait for a fever. The local findings have already changed."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Redness and swelling alone do not establish infection. Spreading redness, rising pain, and new pus are more than that: they are worsening findings that suggest infection and are reported.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "The new nurse's rule is true and it is the trap. Ask what the stem adds beyond redness and swelling, and whether the findings match yesterday.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Compare with yesterday",
+                "detail": "Redness 1 cm to 3 cm. Pain 2 to 6 of 10. Drainage: none to thick yellow."
+              },
+              {
+                "action": "Test the rule against the stem",
+                "detail": "\"Alone\" no longer applies. Drainage is new."
+              },
+              {
+                "action": "Drop the options that wait",
+                "detail": "For more drainage, or for a fever."
+              },
+              {
+                "action": "Keep the report",
+                "detail": "It states the findings and what they suggest."
+              }
+            ],
+            "verdict": "Report the wider redness, new drainage, and higher pain as findings that suggest infection."
+          },
+          "caseGroup": "ig19-case3",
+          "caseStep": 2,
+          "objective": "Differentiate inflammation from infection"
+        }
+      ]
+    },
+    {
+      "id": 1031,
+      "chapterNumber": 31,
+      "source": "Iggy",
+      "title": "Infection and Sepsis",
+      "exam": "Exam 3",
+      "group": "infection-sepsis",
+      "questions": [
+        {
+          "id": "ig31-m01",
+          "type": "multiple_choice",
+          "stem": "A client receiving treatment that suppresses the immune system is on neutropenic precautions. This morning the client develops frequent liquid stools, and the provider suspects C. difficile. The stool test result will not be available until tomorrow. Which action does the nurse take when preparing to give care?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Continue neutropenic precautions today and add contact precautions when the result is confirmed",
+              "correct": false,
+              "rationale": "Contact precautions are right, but the timing is wrong. They are started for suspected as well as confirmed C. difficile."
+            },
+            {
+              "id": "B",
+              "text": "Replace neutropenic precautions with contact precautions and wear a gown and gloves for all contact",
+              "correct": false,
+              "rationale": "Gown and gloves are right, but precautions are added, not swapped. The client still needs protective precautions."
+            },
+            {
+              "id": "C",
+              "text": "Continue neutropenic precautions and start contact precautions now, with gown and gloves for all contact",
+              "correct": true,
+              "rationale": "Contact precautions are initiated for suspected or confirmed C. difficile, with gown and gloves during all client contact. The client's protective precautions continue."
+            },
+            {
+              "id": "D",
+              "text": "Continue neutropenic precautions and add a mask for all care until the result is available",
+              "correct": false,
+              "rationale": "A mask is for droplet spread. C. difficile calls for contact precautions with gown and gloves."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Start contact precautions for suspected or confirmed C. difficile, with gown and gloves for all contact. Precautions are added to what the client already needs, never swapped.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two decisions are packed into each option: what happens to the precautions the client already has, and when and how the new ones start.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Find the cues",
+                "detail": "Neutropenic precautions in place. C. difficile suspected, result tomorrow."
+              },
+              {
+                "action": "Check timing",
+                "detail": "Suspected or confirmed, so start now."
+              },
+              {
+                "action": "Check the route",
+                "detail": "Contact: gown and gloves, not a mask."
+              },
+              {
+                "action": "Check what happens to the first set",
+                "detail": "It continues."
+              }
+            ],
+            "verdict": "Continue neutropenic precautions and start contact precautions now."
+          },
+          "caseGroup": "ig31-case1",
+          "caseStep": 1,
+          "objective": "Select standard and transmission-based precautions"
+        },
+        {
+          "id": "ig31-m02",
+          "type": "multiple_choice",
+          "stem": "A nurse finishes care for a client on neutropenic precautions and contact precautions for suspected C. difficile. Facility policy states that soap and water is used after care of clients with suspected or confirmed C. difficile. The nurse's gloves are intact and the hands are not visibly soiled. How does the nurse complete hand hygiene?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Remove the gown and gloves, then wash with soap and water before going on to the next client",
+              "correct": true,
+              "rationale": "Hands are cleaned after gloves are removed, and for C. difficile soap and water is used when facility policy indicates it."
+            },
+            {
+              "id": "B",
+              "text": "Remove the gown and gloves, then use alcohol based sanitizer because the hands are not visibly soiled",
+              "correct": false,
+              "rationale": "Sanitizer is preferred in most routine situations when hands are not visibly soiled. Here the facility policy for C. difficile directs soap and water."
+            },
+            {
+              "id": "C",
+              "text": "Wash the gloved hands with soap and water, then remove the gown and gloves and go to the next client",
+              "correct": false,
+              "rationale": "Soap and water is right, but the order is wrong. Hands are cleaned after the gloves come off."
+            },
+            {
+              "id": "D",
+              "text": "Remove the gown and gloves, use alcohol based sanitizer now, and wash with soap and water before eating",
+              "correct": false,
+              "rationale": "Washing before eating is correct in general, but it does not replace the hand hygiene the policy requires now."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Clean hands after removing gloves. Sanitizer is preferred for routine care when hands are not visibly soiled, but for C. difficile use soap and water when facility policy indicates it.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "\"Not visibly soiled\" and \"gloves intact\" both point toward sanitizer. The stated policy for C. difficile overrides the routine choice, and the order of glove removal settles the rest.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Find the routine rule",
+                "detail": "Not visibly soiled: sanitizer is usually preferred."
+              },
+              {
+                "action": "Find the exception in the stem",
+                "detail": "Facility policy: soap and water after C. difficile care."
+              },
+              {
+                "action": "Check the order",
+                "detail": "Gloves come off first, then hands are cleaned."
+              }
+            ],
+            "verdict": "Remove gown and gloves, then wash with soap and water."
+          },
+          "caseGroup": "ig31-case1",
+          "caseStep": 2,
+          "objective": "Select standard and transmission-based precautions"
+        },
+        {
+          "id": "ig31-x01",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client receiving treatment that suppresses the immune system is on neutropenic precautions and contact precautions for suspected C. difficile. The client is tearful and asks to see a family member. The family member arrives and says, \"My allergies are acting up, so I have had a runny nose and a little cough since yesterday. I brought a mask and I will stay only a few minutes.\" Which action is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Have the family member put on a mask, gown, and gloves and clean the hands, then allow a visit of a few minutes",
+              "correct": false,
+              "rationale": "Protective equipment does not make an ill visitor safe for this client. The visitor reports new symptoms, and the nurse cannot confirm the cause. A short visit still exposes the client."
+            },
+            {
+              "id": "B",
+              "text": "Explain that visitors are screened for illness, ask the family member to wait until well, and offer a phone call now",
+              "correct": true,
+              "rationale": "Neutropenic precautions include screening visitors and staff for illness. The nurse explains this in plain language and still responds to the client's wish for contact."
+            },
+            {
+              "id": "C",
+              "text": "Ask the client to decide, because the client understands the risk and has asked for the visit",
+              "correct": false,
+              "rationale": "Involving the client is usually right, but screening visitors for illness is part of the precautions that protect this client."
+            },
+            {
+              "id": "D",
+              "text": "Allow the family member to stand in the doorway in a mask, away from the bed, for a few minutes",
+              "correct": false,
+              "rationale": "Distance and a mask do not make an ill visitor safe for a client on neutropenic precautions."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Neutropenic precautions protect the client: protective precautions as indicated, meticulous hand hygiene, and screening visitors and staff for illness.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Protective equipment sounds like enough, and the client's distress pulls toward allowing the visit. The visitor's own explanation, allergies, makes the symptoms sound harmless. The deciding cue is that screening is for symptoms, and this visitor has a runny nose and a cough that began yesterday.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Name who is being protected",
+                "detail": "The client, by the neutropenic precautions."
+              },
+              {
+                "action": "Find the cue",
+                "detail": "Runny nose and cough since yesterday, whatever the visitor thinks the cause is."
+              },
+              {
+                "action": "Weigh the tempting options",
+                "detail": "Equipment, distance, and client choice do not remove the exposure."
+              },
+              {
+                "action": "Meet the client's need another way",
+                "detail": "Explain plainly and offer contact that carries no exposure."
+              }
+            ],
+            "verdict": "Explain the screening, ask the family member to wait until well, and offer a phone call."
+          },
+          "caseGroup": "ig31-case1",
+          "caseStep": 3,
+          "objective": "Select standard and transmission-based precautions"
+        },
+        {
+          "id": "ig31-m03",
+          "type": "highlight",
+          "nursesNote": "1400, day 2 of admission for pneumonia: Restless and pulling at bed linen, calm and alert at 1000. Respiratory rate 26 breaths per minute, was 18 at 1000. Oxygen saturation 95% on room air, same as at 1000. Oral temperature 37.1 °C. Urine output 25 mL per hour, was 60 mL per hour at 1000. Productive cough, unchanged since admission.",
+          "stem": "Highlight the findings that suggest possible sepsis.",
+          "segments": [
+            {
+              "id": "s1",
+              "text": "Restless and pulling at bed linen, calm and alert at 1000",
+              "correct": true,
+              "rationale": "A new change in mental status in a client with an infection is an early cue of sepsis."
+            },
+            {
+              "id": "s2",
+              "text": "Respiratory rate 26 breaths per minute, was 18 at 1000",
+              "correct": true,
+              "rationale": "A respiratory rate above 20 breaths per minute is concerning, and this is a rise from baseline."
+            },
+            {
+              "id": "s3",
+              "text": "Oxygen saturation 95% on room air, same as at 1000",
+              "correct": false,
+              "rationale": "The value matches baseline."
+            },
+            {
+              "id": "s4",
+              "text": "Oral temperature 37.1 °C",
+              "correct": false,
+              "rationale": "This reading is not a cue by itself, and it does not rule sepsis out. The nurse does not rely on fever alone."
+            },
+            {
+              "id": "s5",
+              "text": "Urine output 25 mL per hour, was 60 mL per hour at 1000",
+              "correct": true,
+              "rationale": "Decreased urine output signals deterioration."
+            },
+            {
+              "id": "s6",
+              "text": "Productive cough, unchanged since admission",
+              "correct": false,
+              "rationale": "The cough is an expected finding of pneumonia and has not changed."
+            }
+          ],
+          "answer": [
+            "s1",
+            "s2",
+            "s5"
+          ],
+          "format": "+/-",
+          "scoring": "+/-",
+          "takeaway": "Early cues of sepsis in a client with an infection: new confusion or restlessness, a respiratory rate above 20 breaths per minute, temperature changes, and decreased urine output. Fever is not required.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Look for change from the 1000 baseline in mentation, breathing, and urine output. An unchanged finding of the pneumonia itself is not a new cue.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Confirm the infection",
+                "detail": "Pneumonia."
+              },
+              {
+                "action": "Mark the changes from 1000",
+                "detail": "Mentation, respiratory rate, urine output."
+              },
+              {
+                "action": "Leave what matches baseline",
+                "detail": "Oxygen saturation and cough."
+              },
+              {
+                "action": "Do not lean on the temperature",
+                "detail": "37.1 °C neither adds a cue nor removes the others."
+              }
+            ],
+            "verdict": "s1, s2, s5."
+          },
+          "caseGroup": "ig31-case2",
+          "caseStep": 1,
+          "objective": "Recognize early cues of sepsis and septic shock"
+        },
+        {
+          "id": "ig31-m04",
+          "type": "ordered_response",
+          "stem": "A client with pneumonia has become restless over the past 4 hours. The respiratory rate has risen from 18 to 26 breaths per minute and urine output has fallen from 60 to 25 mL per hour. The nurse has just assessed the client, found these changes, and suspects sepsis. Place the nurse's next actions in order.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the prescribed treatment promptly and reassess the client's response",
+              "rationale": "Treatment is given once it is prescribed, and the nurse then checks whether it worked.",
+              "position": 4
+            },
+            {
+              "id": "B",
+              "text": "Notify the provider or activate the rapid response process",
+              "rationale": "Escalation comes first when sepsis is suspected, so that help and orders are on the way.",
+              "position": 1
+            },
+            {
+              "id": "C",
+              "text": "Obtain the ordered specimens and check that the intravenous access works",
+              "rationale": "Ordered specimens are collected before the antimicrobial is started, and working access lets treatment begin without delay.",
+              "position": 3
+            },
+            {
+              "id": "D",
+              "text": "Reassess breathing, circulation, mentation, and vital signs while help is on the way",
+              "rationale": "The first assessment is already done. This is the reassessment while help is on the way, so that current findings are ready to report.",
+              "position": 2
+            }
+          ],
+          "answer": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ],
+          "scoring": "0/1",
+          "takeaway": "When sepsis is suspected: escalate immediately, reassess breathing, circulation, mentation, and vital signs, obtain ordered specimens and check intravenous access, then give prescribed treatment promptly and reassess.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The stem says the assessment has been done and the cues are in hand, so the first move is to escalate. Reassessment follows while help is on the way, and treatment comes after the specimens.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Start with escalation",
+                "detail": "The cues are already in hand, so call first."
+              },
+              {
+                "action": "Reassess while help comes",
+                "detail": "Breathing, circulation, mentation, vital signs."
+              },
+              {
+                "action": "Specimens and access before treatment",
+                "detail": "Ordered specimens are obtained and the line is checked."
+              },
+              {
+                "action": "Finish with treatment and reassessment",
+                "detail": "Give what is prescribed, then check the response."
+              }
+            ],
+            "verdict": "Notify, reassess, obtain specimens and check access, treat and reassess."
+          },
+          "caseGroup": "ig31-case2",
+          "caseStep": 2,
+          "objective": "Describe immediate nursing actions when sepsis is suspected"
+        },
+        {
+          "id": "ig31-m05",
+          "type": "bowtie",
+          "scenario": "A client is on day 2 of admission for pneumonia. At 1000 the client was calm and alert with a heart rate of 88 beats per minute, a respiratory rate of 18 breaths per minute, and urine output of 60 mL per hour. At 1400 the client is restless, the heart rate is 112 beats per minute, the respiratory rate is 26 breaths per minute, urine output is 25 mL per hour, and the oral temperature is 37.1 °C. No new orders have been written.",
+          "stem": "Complete the diagram by selecting 2 actions the nurse takes, the 1 condition the client is most likely experiencing, and 2 parameters the nurse monitors.",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Notify the provider or activate the rapid response process now",
+                  "correct": true,
+                  "rationale": "When sepsis is suspected, the nurse escalates immediately."
+                },
+                {
+                  "id": "B",
+                  "text": "Reassess breathing, circulation, mentation, and vital signs",
+                  "correct": true,
+                  "rationale": "The nurse reassesses these while help is on the way."
+                },
+                {
+                  "id": "C",
+                  "text": "Recheck the oral temperature in 1 hour and escalate if a fever develops",
+                  "correct": false,
+                  "rationale": "Rechecking is reasonable, but the nurse does not wait for fever. Several cues are already present."
+                },
+                {
+                  "id": "D",
+                  "text": "Encourage oral fluids and reassess urine output at the end of the shift",
+                  "correct": false,
+                  "rationale": "Supporting hydration is appropriate in general, but it is not a response to a falling urine output with other cues of sepsis."
+                }
+              ]
+            },
+            "condition": {
+              "label": "The problem",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Possible sepsis",
+                  "correct": true,
+                  "rationale": "A client with an infection has a new mental status change, a faster heart rate, a respiratory rate above 20, and decreased urine output."
+                },
+                {
+                  "id": "B",
+                  "text": "Expected course of pneumonia",
+                  "correct": false,
+                  "rationale": "New restlessness and a fall in urine output are changes from baseline, not expected findings."
+                },
+                {
+                  "id": "C",
+                  "text": "Anxiety about the hospital stay",
+                  "correct": false,
+                  "rationale": "Restlessness with faster breathing and less urine in a client with an infection is not treated as anxiety."
+                },
+                {
+                  "id": "D",
+                  "text": "Inflammation without infection",
+                  "correct": false,
+                  "rationale": "The client has a known infection, and the findings show body systems working worse than at baseline."
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to monitor",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Mental status compared with the 1000 baseline",
+                  "correct": true,
+                  "rationale": "Mental status moving toward baseline is a marker of improvement."
+                },
+                {
+                  "id": "B",
+                  "text": "Urine output each hour",
+                  "correct": true,
+                  "rationale": "Urine output is a key marker of adequate perfusion."
+                },
+                {
+                  "id": "C",
+                  "text": "Amount and color of sputum",
+                  "correct": false,
+                  "rationale": "Sputum describes the pneumonia. It does not show whether perfusion is improving."
+                },
+                {
+                  "id": "D",
+                  "text": "Oral temperature every 4 hours as the main measure",
+                  "correct": false,
+                  "rationale": "Temperature is trended, but the nurse does not rely on it alone. Mentation and urine output show perfusion."
+                }
+              ]
+            }
+          },
+          "answer": {
+            "actions": [
+              "A",
+              "B"
+            ],
+            "condition": [
+              "A"
+            ],
+            "parameters": [
+              "A",
+              "B"
+            ]
+          },
+          "scoring": "0/1",
+          "takeaway": "Infection plus new changes in mentation, breathing, and urine output is possible sepsis. Escalate and reassess, then follow mental status, blood pressure and perfusion, urine output, and breathing.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Name the condition from the changes since 1000, not from the temperature. The actions are the first two steps for suspected sepsis, and the parameters are the markers of perfusion.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Condition",
+                "detail": "Known infection plus four changes from baseline."
+              },
+              {
+                "action": "Actions",
+                "detail": "Escalate now and reassess. Options that wait are out."
+              },
+              {
+                "action": "Parameters",
+                "detail": "Choose markers of perfusion and mentation, not descriptions of the pneumonia."
+              }
+            ],
+            "verdict": "Possible sepsis; escalate and reassess; monitor mental status and hourly urine output."
+          },
+          "caseGroup": "ig31-case2",
+          "caseStep": 3,
+          "objective": "Recognize early cues of sepsis and septic shock"
+        },
+        {
+          "id": "ig31-x02",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client with pneumonia was treated for suspected sepsis 2 hours ago with the prescribed antimicrobial and intravenous fluids. By the time treatment began the client was restless and confused, blood pressure was 96/58 mm Hg, the respiratory rate was 26 breaths per minute, both feet were cool and mottled, and urine output was 20 mL per hour. Now blood pressure is 118/70 mm Hg and the respiratory rate is 22 breaths per minute. The client is still confused, both feet are still cool and mottled, and urine output is still 20 mL per hour. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Continue the current plan and reassess in 15 minutes, because blood pressure and breathing are both better",
+              "correct": false,
+              "rationale": "Two numbers are better, but the nurse judges the whole trend. Mentation, skin, and urine output have not changed."
+            },
+            {
+              "id": "B",
+              "text": "Report the better blood pressure and breathing now, and hold the other findings for the next update",
+              "correct": false,
+              "rationale": "A report that leaves out the unchanged findings hides the reason for concern."
+            },
+            {
+              "id": "C",
+              "text": "Warm both feet with blankets and recheck the skin before deciding whether the other findings need a call",
+              "correct": false,
+              "rationale": "Warming addresses one finding and delays action on persistent poor perfusion."
+            },
+            {
+              "id": "D",
+              "text": "Notify the provider of the current findings now and ask for the plan to be reviewed",
+              "correct": true,
+              "rationale": "Mentation, skin findings, and urine output are considered together with blood pressure and breathing. Persistent signs of poor perfusion require further escalation."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Judge the whole trend rather than one number: mentation, blood pressure, skin findings, breathing, and urine output together. Persistent signs of poor perfusion require further escalation.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "A better blood pressure is the most reassuring number there is, and breathing is better too. The deciding cue is that the three findings that show perfusion at the tissues have not moved.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Separate the findings",
+                "detail": "Better: blood pressure, respiratory rate. Unchanged: mentation, skin, urine output."
+              },
+              {
+                "action": "Ask what shows perfusion",
+                "detail": "Mentation, skin color and temperature, urine output."
+              },
+              {
+                "action": "Weigh the tempting option",
+                "detail": "A recheck in 15 minutes fits a client improving across the board. Two hours after treatment, this client is not."
+              },
+              {
+                "action": "Apply the rule",
+                "detail": "Persistent poor perfusion: escalate further."
+              }
+            ],
+            "verdict": "Notify the provider of the current findings now."
+          },
+          "caseGroup": "ig31-case2",
+          "caseStep": 4,
+          "objective": "Describe immediate nursing actions when sepsis is suspected"
+        },
+        {
+          "id": "ig31-m06",
+          "type": "multiple_choice",
+          "stem": "A client with pneumonia was treated for suspected sepsis 6 hours ago. By the time treatment began the client was restless and confused, the respiratory rate was 26 breaths per minute, both feet were cool and mottled, and urine output was 20 mL per hour. Which set of findings now shows that the client is improving?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oral temperature is 37.0 °C, the client is still confused, and urine output is 20 mL per hour",
+              "correct": false,
+              "rationale": "One number in range does not show improvement when mentation and urine output have not changed."
+            },
+            {
+              "id": "B",
+              "text": "Client is alert and oriented, respiratory rate is 20 breaths per minute, and urine output is 55 mL per hour",
+              "correct": true,
+              "rationale": "Mental status has moved toward baseline, breathing has slowed from 26 to 20, and urine output has risen from 20 to 55 mL per hour. Every finding given points the same way."
+            },
+            {
+              "id": "C",
+              "text": "Client is alert and oriented, respiratory rate is 20 breaths per minute, and both feet are cool and mottled",
+              "correct": false,
+              "rationale": "Mentation and breathing are better, but cool, mottled skin is a sign of poor perfusion. The whole trend has to improve."
+            },
+            {
+              "id": "D",
+              "text": "Respiratory rate is 18 breaths per minute, and the client now responds only when shaken",
+              "correct": false,
+              "rationale": "A slower rate with a drop in responsiveness is not improvement. Mental status has moved away from baseline."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Judge the whole trend: mental status toward baseline, blood pressure and perfusion improving, urine output improving, breathing and oxygenation stabilizing.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options start with the same good findings. Read to the end of each: one finishes with a sign of poor perfusion and one with a better urine output.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "List what was wrong",
+                "detail": "Confusion, respiratory rate 26, cool mottled feet, urine 20 mL per hour."
+              },
+              {
+                "action": "Check each option to the end",
+                "detail": "Only one has every finding moving the right way."
+              },
+              {
+                "action": "Reject partial pictures",
+                "detail": "A normal temperature, a slower rate, or two good findings with mottled skin is not improvement."
+              }
+            ],
+            "verdict": "Alert and oriented, respiratory rate 20, urine output 55 mL per hour."
+          },
+          "caseGroup": "ig31-case2",
+          "caseStep": 5,
+          "objective": "Describe immediate nursing actions when sepsis is suspected"
+        },
+        {
+          "id": "ig31-m07",
+          "type": "multiple_choice",
+          "stem": "A client had surgery on the right lower leg 4 days ago and has had an indwelling urinary catheter since the operation. The provider's orders include strict intake and output. The unit has no nurse driven protocol for catheter removal. The client now walks to the bathroom with one person assisting and is eating and drinking. During morning care the nurse reviews the client's devices. Which action does the nurse take about the catheter?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Leave the catheter in place, because the order for strict intake and output requires accurate measurement",
+              "correct": false,
+              "rationale": "The order is for measurement, not for a catheter. A client who walks to the bathroom can have output measured another way."
+            },
+            {
+              "id": "B",
+              "text": "Leave the catheter in place, and increase catheter care to twice each shift to lower the risk",
+              "correct": false,
+              "rationale": "Catheter care helps prevent exposure, but it does not answer whether the device is still needed."
+            },
+            {
+              "id": "C",
+              "text": "Raise with the provider whether the catheter is still needed, and offer to measure output another way",
+              "correct": true,
+              "rationale": "The nurse reassesses whether urinary catheters are still needed. This client walks and drinks, and the reason given for the catheter can be met without it."
+            },
+            {
+              "id": "D",
+              "text": "Remove the catheter this morning, because the nurse decides when a device is no longer needed",
+              "correct": false,
+              "rationale": "Questioning the device is right. Removing it without an order or a protocol goes beyond what the situation supports."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Invasive devices bypass natural barriers. Reassess whether urinary catheters and vascular access devices are still needed, and raise it when the reason for the device can be met another way.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The order for strict intake and output makes keeping the catheter look required. Separate what was ordered, which is measurement, from the device, and then stay within the nurse's role.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Find the cues",
+                "detail": "Day 4, walks to the bathroom, drinking."
+              },
+              {
+                "action": "Separate the order from the device",
+                "detail": "Output can be measured without a catheter."
+              },
+              {
+                "action": "Compare the two options that question the device",
+                "detail": "One raises it with the provider. One removes it without an order."
+              }
+            ],
+            "verdict": "Raise whether the catheter is still needed and offer another way to measure output."
+          },
+          "caseGroup": "ig31-case3",
+          "caseStep": 1,
+          "objective": "Identify patient factors that increase infection risk"
+        },
+        {
+          "id": "ig31-m08",
+          "type": "multiple_choice",
+          "stem": "A client had surgery on the right lower leg 5 days ago, and the surgical wound is now draining. The provider orders a wound culture and a first dose of an antimicrobial, both to be done this morning. The antimicrobial is at the bedside and due now, and the culture swab has to be brought from the supply room. The client is alert, with a respiratory rate of 16 breaths per minute and a blood pressure of 124/76 mm Hg, which matches the readings from the past 2 days. In which order does the nurse carry out the orders?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Obtain the wound culture, then give the first dose of the antimicrobial",
+              "correct": true,
+              "rationale": "The culture identifies the organism and guides treatment. It is collected before the antimicrobial is started."
+            },
+            {
+              "id": "B",
+              "text": "Give the first dose of the antimicrobial, then obtain the wound culture",
+              "correct": false,
+              "rationale": "Both actions are right, but the order is reversed. The specimen is collected before the antimicrobial is started."
+            },
+            {
+              "id": "C",
+              "text": "Obtain the wound culture and hold the antimicrobial until the result is reported",
+              "correct": false,
+              "rationale": "The culture comes first, but treatment is not held for the result. Treatment of the suspected cause is given as ordered."
+            },
+            {
+              "id": "D",
+              "text": "Give the first dose of the antimicrobial and obtain the culture only if the wound does not improve",
+              "correct": false,
+              "rationale": "The culture was ordered to guide treatment from the start. It is not kept in reserve."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Culture and susceptibility identifies the organism and guides treatment. Collect the specimen before the antimicrobial is started, and do not hold treatment for the result.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "The drug is ready and the swab is not, which pulls toward giving the dose first. The client's vital signs match baseline, so there is time to collect the specimen first.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Keep both orders",
+                "detail": "Options that hold or skip an order are out."
+              },
+              {
+                "action": "Compare the two that do both",
+                "detail": "Culture first, or antimicrobial first."
+              },
+              {
+                "action": "Apply the rule",
+                "detail": "The specimen is collected before the antimicrobial is started."
+              }
+            ],
+            "verdict": "Culture first, then the antimicrobial."
+          },
+          "caseGroup": "ig31-case3",
+          "caseStep": 2,
+          "objective": "Explain the nurse's role in testing, treatment, and teaching"
+        }
+      ]
+    }
+  ],
+  "skills": []
+}

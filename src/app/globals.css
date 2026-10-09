@@ -4,64 +4,58 @@
 
 :root {
   /* ======== Colors ======== */
-  /* Dark is the default palette — a first-time visitor sees dark mode
-     regardless of their OS setting; light is the opt-in override below. */
-  --primary-color: hsl(353, 100%, 68%);
-  --title-color: hsl(244, 30%, 92%);
-  --text-color: hsl(244, 16%, 75%);
-  --body-color: hsl(244, 28%, 9%);
-  --container-color: hsl(244, 24%, 14%);
-  --muted-color: hsl(244, 14%, 62%);
-  --track-color: hsl(244, 16%, 22%);
-  --icon-muted-color: hsl(244, 14%, 45%);
-  --border-color: hsl(244, 16%, 24%);
-  --scroll-icon-color: hsl(244, 20%, 68%);
-  /* Blue "chip" surfaces: badges, pills, selected/chosen states, case-study
-     banners — all paired with var(--title-color) text, which already
-     flips light/dark, so only the surface itself needs redefining here. */
-  --chip-blue: hsl(219, 45%, 24%);
-  --chip-blue-soft: hsl(219, 40%, 18%);
-  --chip-blue-border: hsl(219, 90%, 62%);
-  --chip-blue-track: hsl(219, 30%, 26%);
-  --case-label-color: hsl(219, 90%, 75%);
+  /* Vibrant on near-black: orange for actions and "selected", deep purple
+     for chips, yellow for hover and the chosen edge, green only for
+     correct. Dark is the default; light is the opt-in override below. */
+  --primary-color: #ff5722;
+  --on-primary: #fff;
+  --accent-color: #ffeb3b;
+  --title-color: #f7f7f7;
+  --text-color: hsl(0, 0%, 78%);
+  --body-color: #181818;
+  --container-color: hsl(0, 0%, 13.5%);
+  --muted-color: hsl(0, 0%, 60%);
+  --track-color: hsl(0, 0%, 23%);
+  --icon-muted-color: hsl(0, 0%, 42%);
+  --border-color: hsl(0, 0%, 22%);
+  --scroll-icon-color: hsl(0, 0%, 70%);
+  /* "Chip" surfaces: badges, pills, selected/chosen states, case-study
+     banners. Deep purple, with a bright yellow edge on a chosen thing. */
+  --chip-blue: #673ab7;
+  --chip-blue-soft: hsl(262, 40%, 22%);
+  --chip-blue-border: #ffeb3b;
+  --chip-blue-track: hsl(262, 28%, 34%);
+  --case-label-color: #ffeb3b;
   --chip-amber: hsl(38, 55%, 22%);
-  /* Frosted-glass surfaces: translucent panels meant to sit over the
-     blurred lava-lamp background blobs (see Pharm/LavaBackground.tsx). */
-  --glass-bg: hsla(244, 26%, 14%, 0.55);
-  --glass-bg-soft: hsla(244, 26%, 14%, 0.35);
-  --glass-border: hsla(0, 0%, 100%, 0.08);
-  /* A light background needs more pigment than a dark one for the same
-     blobs to read at all, so this isn't just the dark value reused. */
+  --glass-bg: hsl(0, 0%, 14%);
+  --glass-bg-soft: hsl(0, 0%, 11%);
+  --glass-border: hsl(0, 0%, 23%);
   --lava-opacity: 0.4;
-  /* Normal alpha blending over a near-black body just dilutes every color
-     toward black no matter how high the opacity goes — "screen" instead
-     adds light, so a saturated blob reads as a bright glow, the way a lava
-     lamp actually looks. Over a near-white body (light theme, below)
-     screen barely does anything beyond normal blending, so that theme
-     keeps "normal". */
   --lava-blend: screen;
 }
 
 :root[data-theme="light"] {
-  --primary-color: hsl(353, 100%, 65%);
-  --title-color: hsl(244, 24%, 26%);
-  --text-color: hsl(244, 16%, 43%);
-  --body-color: hsl(258, 60%, 98%);
-  --container-color: #fff;
-  --muted-color: #8b88b1;
-  --track-color: #f1f1f1;
-  --icon-muted-color: #dedeea;
-  --border-color: #e8dfec;
-  --chip-blue: hsl(219, 100%, 91%);
-  --chip-blue-soft: hsl(219, 100%, 96%);
-  --chip-blue-border: hsl(219, 100%, 72%);
-  --chip-blue-track: hsl(219, 100%, 89%);
-  --case-label-color: hsl(219, 60%, 45%);
+  --on-primary: #fff;
+  --accent-color: hsl(40, 78%, 44%);
+  --primary-color: hsl(14, 90%, 46%);
+  --title-color: hsl(40, 14%, 11%);
+  --text-color: hsl(40, 8%, 30%);
+  --body-color: hsl(42, 30%, 95%);
+  --container-color: hsl(44, 40%, 98.5%);
+  --muted-color: hsl(40, 6%, 45%);
+  --track-color: hsl(42, 20%, 88%);
+  --icon-muted-color: hsl(42, 14%, 78%);
+  --border-color: hsl(42, 18%, 84%);
+  --chip-blue: hsl(43, 60%, 87%);
+  --chip-blue-soft: hsl(43, 50%, 93%);
+  --chip-blue-border: hsl(40, 78%, 44%);
+  --chip-blue-track: hsl(43, 40%, 84%);
+  --case-label-color: hsl(36, 70%, 32%);
   --chip-amber: hsl(38, 100%, 85%);
-  --scroll-icon-color: #454360;
-  --glass-bg: hsla(0, 0%, 100%, 0.55);
-  --glass-bg-soft: hsla(0, 0%, 100%, 0.35);
-  --glass-border: hsla(244, 24%, 26%, 0.08);
+  --scroll-icon-color: hsl(40, 10%, 25%);
+  --glass-bg: hsl(44, 40%, 98.5%);
+  --glass-bg-soft: hsl(44, 40%, 97%);
+  --glass-border: hsl(42, 18%, 84%);
   --lava-opacity: 0.22;
   --lava-blend: normal;
 }
@@ -103,6 +97,7 @@ h3 {
   color: var(--title-color);
   font-weight: 600;
   line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
 a {
@@ -234,7 +229,7 @@ button {
     90deg,
     var(--title-color) 0%,
     hsl(43, 100%, 66%) 22%,
-    hsl(353, 100%, 74%) 46%,
+    hsl(2, 85%, 66%) 46%,
     hsl(219, 100%, 76%) 70%,
     var(--title-color) 100%
   );
@@ -295,21 +290,21 @@ button {
 
 @keyframes critPulse {
   0% {
-    box-shadow: 0 0 0 0 hsla(353, 100%, 68%, 0.6);
+    box-shadow: 0 0 0 0 hsla(352, 84%, 62%, 0.6);
   }
   70%,
   100% {
-    box-shadow: 0 0 0 9px hsla(353, 100%, 68%, 0);
+    box-shadow: 0 0 0 9px hsla(352, 84%, 62%, 0);
   }
 }
 
 @keyframes critGlow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 hsla(353, 100%, 68%, 0);
+    box-shadow: 0 0 0 0 hsla(352, 84%, 62%, 0);
   }
   50% {
-    box-shadow: 0 0 18px 0 hsla(353, 100%, 68%, 0.28);
+    box-shadow: 0 0 18px 0 hsla(352, 84%, 62%, 0.28);
   }
 }
 

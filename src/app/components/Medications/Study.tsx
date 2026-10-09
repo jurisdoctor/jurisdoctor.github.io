@@ -80,11 +80,11 @@ const clock = (ms: number) => {
 };
 
 const btn =
-  "rounded-[1.875rem] px-6 py-3 text-base font-bold leading-4 duration-300 disabled:cursor-not-allowed disabled:opacity-40";
+  "rounded-md px-6 py-3 text-base font-bold leading-4 duration-300 disabled:cursor-not-allowed disabled:opacity-40";
 
 // ----------------------------------------------------------------- the card
 const Chip = ({ group, accent }: { group: string; accent: string }) => (
-  <span className="inline-flex max-w-full items-center gap-x-2 rounded-full bg-[var(--body-color)] px-3 py-1 text-xs font-bold text-[var(--muted-color)]">
+  <span className="inline-flex max-w-full items-center gap-x-2 rounded-md bg-[var(--body-color)] px-3 py-1 text-xs font-bold text-[var(--muted-color)]">
     <span
       aria-hidden
       className="h-2 w-2 shrink-0 rounded-full"
@@ -353,7 +353,7 @@ const Session = ({
                           style={{
                             background:
                               result === "missed"
-                                ? "hsl(353, 100%, 66%)"
+                                ? "hsl(14, 100%, 57%)"
                                 : "hsl(38, 96%, 54%)",
                           }}
                         />
@@ -387,7 +387,7 @@ const Session = ({
             <button
               type="button"
               onClick={() => onFinish(shuffle(weakCards))}
-              className={`${btn} bg-[var(--primary-color)] text-white shadow-lg hover:animate-pulse`}
+              className={`${btn} bg-[var(--primary-color)] text-[var(--on-primary)] shadow-lg`}
             >
               Study the {weakCards.length} again
             </button>
@@ -419,7 +419,7 @@ const Session = ({
         </button>
         <div className="min-w-0 flex-1">
           <div
-            className="h-2 overflow-hidden rounded-full bg-[var(--track-color)]"
+            className="h-2 overflow-hidden rounded-sm bg-[var(--track-color)]"
             role="progressbar"
             aria-valuemin={0}
             aria-valuemax={total}
@@ -427,7 +427,7 @@ const Session = ({
             aria-label="Cards done"
           >
             <div
-              className="h-full rounded-full bg-[hsl(150,62%,46%)] duration-500"
+              className="h-full rounded-sm bg-[hsl(150,62%,46%)] duration-500"
               style={{ width: `${(gotCount / total) * 100}%` }}
             />
           </div>
@@ -506,7 +506,7 @@ const Session = ({
           <button
             type="button"
             onClick={reveal}
-            className={`${btn} w-full bg-[var(--primary-color)] py-4 text-lg text-white shadow-lg`}
+            className={`${btn} w-full bg-[var(--primary-color)] py-4 text-lg text-[var(--on-primary)] shadow-lg`}
           >
             Show answer{" "}
             <span className="ml-2 text-sm font-normal opacity-70 sm:hidden">
@@ -528,7 +528,7 @@ const Session = ({
                   "missed",
                   "Missed",
                   "3",
-                  "bg-[var(--primary-color)] text-white",
+                  "bg-[var(--primary-color)] text-[var(--on-primary)]",
                 ],
               ] as const
             ).map(([value, label, key, tone]) => (
@@ -616,7 +616,7 @@ const Segmented = <T extends string>({
   <div
     role="radiogroup"
     aria-label={label}
-    className="inline-flex flex-wrap gap-1 rounded-[1.875rem] bg-[var(--body-color)] p-1"
+    className="inline-flex flex-wrap gap-1 rounded-md bg-[var(--body-color)] p-1"
   >
     {options.map(([id, text]) => (
       <button
@@ -625,7 +625,7 @@ const Segmented = <T extends string>({
         role="radio"
         aria-checked={value === id}
         onClick={() => onChange(id)}
-        className={`rounded-[1.875rem] px-5 py-2 text-sm font-bold duration-300 ${
+        className={`rounded-md px-5 py-2 text-sm font-bold duration-300 ${
           value === id
             ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
             : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
@@ -867,7 +867,7 @@ const Study = ({
                   onClick={() =>
                     set({ groups: toggle(prefs.groups, group.name) })
                   }
-                  className={`inline-flex items-center gap-x-2 rounded-full border-2 border-solid px-4 py-2 text-sm font-bold duration-300 ${
+                  className={`inline-flex items-center gap-x-2 rounded-md border-2 border-solid px-4 py-2 text-sm font-bold duration-300 ${
                     on
                       ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
                       : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
@@ -902,7 +902,7 @@ const Study = ({
                 placeholder="Find a drug…"
                 aria-label="Find a drug"
                 autoComplete="off"
-                className="h-11 w-full rounded-[1.875rem] border border-solid border-[var(--border-color)] bg-[var(--body-color)] pl-11 pr-4 text-[var(--title-color)] outline-none placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
+                className="h-11 w-full rounded-md border border-solid border-[var(--border-color)] bg-[var(--body-color)] pl-11 pr-4 text-[var(--title-color)] outline-none placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
               />
             </div>
             <div className="mb-2 flex items-center justify-between px-1 text-sm">
@@ -1045,7 +1045,7 @@ const Study = ({
               setSession(cards);
             }
           }}
-          className={`${btn} bg-[var(--primary-color)] text-white shadow-lg hover:animate-pulse disabled:shadow-none disabled:hover:animate-none`}
+          className={`${btn} bg-[var(--primary-color)] text-[var(--on-primary)] shadow-lg disabled:shadow-none disabled:hover:animate-none`}
         >
           Start studying
         </button>

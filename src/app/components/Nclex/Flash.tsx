@@ -2,7 +2,12 @@
 import { ReactNode, useEffect, useState } from "react";
 
 // Cycles through a few labels in place, crossfading, for tiles/headings that
-// stand in for more than one source chapter (a combined deck).
+// stand in for more than one source chapter (a combined deck). The label shown
+// comes from the clock, not from when each one mounted, so every Flash on the
+// page (a tile and the heading under it) always shows the same position.
+const STEP = 1600;
+const slotNow = () => Math.floor(Date.now() / STEP);
+
 const Flash = ({
   items,
   className,
@@ -15,10 +20,13 @@ const Flash = ({
   useEffect(() => {
     if (items.length < 2) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = setInterval(() => {
-      setIndex((current) => (current + 1) % items.length);
-    }, 1600);
-    return () => clearInterval(id);
+    let timer: ReturnType<typeof setTimeout>;
+    const tick = () => {
+      setIndex(slotNow() % items.length);
+      timer = setTimeout(tick, STEP - (Date.now() % STEP));
+    };
+    tick();
+    return () => clearTimeout(timer);
   }, [items.length]);
 
   if (items.length < 2) return <>{items[0]}</>;

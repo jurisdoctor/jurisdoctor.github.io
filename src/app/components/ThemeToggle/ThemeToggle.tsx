@@ -35,7 +35,7 @@ const ThemeToggle = () => {
       type="button"
       onClick={toggle}
       aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-      className="text-xl text-[var(--title-color)] duration-300 hover:text-[hsl(43,100%,68%)]"
+      className="text-xl text-[var(--title-color)] duration-300 hover:text-[var(--accent-color)]"
     >
       {theme === "dark" ? <LuSun /> : <LuMoon />}
     </button>
