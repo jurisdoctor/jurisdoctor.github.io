@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // A pointer over any real UI — nav, a button, a link, a card — attracts
 // nothing; the shapes wander on their own. A pointer over open background
@@ -49,7 +49,23 @@ const randomWanderTarget = () => ({
   y: (Math.random() * 2 - 1) * WANDER_RADIUS,
 });
 
+// How many shapes there are, and where each sits on this visit: rolled fresh
+// every time the page opens, anywhere on the screen, so the arrangement is
+// never the same twice (the way the lava lamp's blobs start somewhere new).
+const COUNT = 11;
+const rollSpots = () =>
+  Array.from({ length: COUNT }, () => ({
+    left: 2 + Math.random() * 92,
+    top: 4 + Math.random() * 88,
+  }));
+
 const Shapes = () => {
+  // Null until the browser has rolled them, so the page the server sends and
+  // the first paint agree; the shapes are hidden until then.
+  const [spots, setSpots] = useState<{ left: number; top: number }[] | null>(
+    null,
+  );
+  useEffect(() => setSpots(rollSpots()), []);
   const containerRef = useRef<HTMLDivElement>(null);
   const shapeRefs = useRef<(SVGSVGElement | null)[]>([]);
   const states = useRef<ShapeState[]>([]);
@@ -57,6 +73,7 @@ const Shapes = () => {
   const pointer = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
+    if (!spots) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
@@ -242,7 +259,7 @@ const Shapes = () => {
       window.removeEventListener("blur", handleIdle);
       document.removeEventListener("visibilitychange", handleVisibility);
     };
-  }, []);
+  }, [spots]);
 
   const ref = (index: number) => (el: SVGSVGElement | null) => {
     shapeRefs.current[index] = el;
@@ -257,7 +274,12 @@ const Shapes = () => {
         ref={ref(0)}
         width="27"
         height="29"
-        className="absolute left-[2%] top-[10%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[0].left}%`, top: `${spots[0].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -271,7 +293,12 @@ const Shapes = () => {
         ref={ref(1)}
         width="26"
         height="26"
-        className="absolute left-[18%] top-[30%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[1].left}%`, top: `${spots[1].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -288,7 +315,12 @@ const Shapes = () => {
         ref={ref(2)}
         width="26"
         height="26"
-        className="absolute bottom-[30%] left-[5%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[2].left}%`, top: `${spots[2].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
@@ -305,7 +337,12 @@ const Shapes = () => {
         ref={ref(3)}
         width="15"
         height="23"
-        className="absolute bottom-[10%] left-[2%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[3].left}%`, top: `${spots[3].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
@@ -324,7 +361,12 @@ const Shapes = () => {
         ref={ref(4)}
         width="22"
         height="22"
-        className="absolute left-[44%] top-[10%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[4].left}%`, top: `${spots[4].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -339,7 +381,12 @@ const Shapes = () => {
         ref={ref(5)}
         width="40"
         height="18"
-        className="absolute bottom-[10%] left-[36%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[5].left}%`, top: `${spots[5].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <polyline
@@ -357,7 +404,12 @@ const Shapes = () => {
         ref={ref(6)}
         width="26"
         height="30"
-        className="absolute right-[25%] top-[20%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[6].left}%`, top: `${spots[6].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -373,7 +425,12 @@ const Shapes = () => {
         ref={ref(7)}
         width="19"
         height="21"
-        className="absolute bottom-[20%] right-[24%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[7].left}%`, top: `${spots[7].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
@@ -392,7 +449,12 @@ const Shapes = () => {
         ref={ref(8)}
         width="28"
         height="28"
-        className="absolute right-[2%] top-[10%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[8].left}%`, top: `${spots[8].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect
@@ -412,7 +474,12 @@ const Shapes = () => {
         ref={ref(9)}
         width="30"
         height="30"
-        className="absolute left-[11%] top-[45%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[9].left}%`, top: `${spots[9].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <g style={{ fill: "var(--shape-d)" }} fillRule="evenodd">
@@ -427,7 +494,12 @@ const Shapes = () => {
         ref={ref(10)}
         width="26"
         height="25"
-        className="absolute bottom-[10%] right-[2%]"
+        className="absolute"
+        style={
+          spots
+            ? { left: `${spots[10].left}%`, top: `${spots[10].top}%` }
+            : { visibility: "hidden" }
+        }
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

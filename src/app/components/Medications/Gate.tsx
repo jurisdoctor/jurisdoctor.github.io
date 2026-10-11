@@ -81,9 +81,9 @@ const Gate = ({ children }: { children: ReactNode }) => {
         onSubmit={submit}
         className="w-full max-w-[420px] animate-fadeIn rounded-xl bg-[var(--container-color)] p-7 text-center shadow-xl"
       >
-        <h1 className="mb-2 text-2xl font-bold">This page is private</h1>
+        <h1 className="mb-2 text-2xl font-bold">This one&apos;s private</h1>
         <p className="mb-6 text-sm text-[var(--muted-color)]">
-          Enter the password to open the drug guide.
+          Password, please. Ask me if you don&apos;t have it.
         </p>
 
         <input

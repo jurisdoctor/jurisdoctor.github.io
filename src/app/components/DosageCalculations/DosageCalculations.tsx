@@ -17,7 +17,7 @@ const DosageCalculations = () => {
           <TypedText text="Dosage Calculations" typeOnMount />
         </h1>
         <p className="mb-14 ml-3.5 lg:ml-0 lg:text-center">
-          A reference for the conversions, and a spot to practice them.
+          The conversions I keep having to look up, and drills until I stop.
         </p>
 
         <Conversions />

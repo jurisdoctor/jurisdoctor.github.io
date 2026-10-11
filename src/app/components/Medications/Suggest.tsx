@@ -151,9 +151,11 @@ export const SuggestModal = ({ onClose }: { onClose: () => void }) => {
             <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(0,212,127,0.18)] text-[rgb(0,212,127)]">
               <LuCheck aria-hidden />
             </span>
-            <p className="font-bold text-[var(--title-color)]">Thank you!</p>
+            <p className="font-bold text-[var(--title-color)]">
+              Got it, thank you.
+            </p>
             <p className="mt-1 text-sm text-[var(--muted-color)]">
-              Your suggestion was sent.
+              I&apos;ll look it up and add it.
             </p>
             {status === "local" && (
               <p className="mt-3 text-xs italic text-[var(--muted-color)]">

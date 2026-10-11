@@ -286,6 +286,10 @@ const CompareMap = ({
     x: number;
     y: number;
   } | null>(null);
+  // Which block in the list to flash after a click on a line.
+  const [flashKey, setFlashKey] = useState<string | null>(null);
+  const flashTimer = useRef(0);
+  useEffect(() => () => window.clearTimeout(flashTimer.current), []);
   const [pinned, setPinned] = useState<{
     key: string;
     x: number;
@@ -379,6 +383,24 @@ const CompareMap = ({
       : { x: 0, y: 0 };
   };
 
+  // Back up to the map, with this pair's card open again where its badge sits.
+  // It stays until you click the map's background or another line. The card
+  // is placed by the room on screen, so it is placed again once the page has
+  // finished scrolling up.
+  const [, replace] = useState(0);
+  const showOnMap = (key: string) => {
+    const line = byKey.get(key);
+    if (!line) return;
+    const width = box.current?.clientWidth ?? W;
+    const height = box.current?.clientHeight ?? H;
+    const mx = line.a.x + (line.b.x - line.a.x) * line.t;
+    const my = line.a.y + (line.b.y - line.a.y) * line.t;
+    setHover(null);
+    setPinned({ key, x: (mx / W) * width, y: (my / H) * height });
+    jumpTo(box.current);
+    window.setTimeout(() => replace((n) => n + 1), 800);
+  };
+
   const active = hover ?? pinned;
   const activeLine = active ? byKey.get(active.key) : undefined;
 
@@ -390,28 +412,16 @@ const CompareMap = ({
       event.preventDefault();
     }
     event.stopPropagation();
-    const at =
-      "clientX" in event
-        ? where(event)
-        : (() => {
-            const line = byKey.get(key);
-            return line
-              ? {
-                  x:
-                    ((line.a.x + line.b.x) / 2 / W) *
-                    (box.current?.clientWidth ?? W),
-                  y:
-                    ((line.a.y + line.b.y) / 2 / H) *
-                    (box.current?.clientHeight ?? H),
-                }
-              : { x: 0, y: 0 };
-          })();
-    const unpin = pinned?.key === key;
-    setPinned(unpin ? null : { key, ...at });
-    setHover(null);
     // The popup is a quick peek; the full text reads better in its block
-    // below, so a click takes you there.
-    if (!unpin) jumpTo(document.getElementById(`pair-${key}`));
+    // below, so a click takes you there, and the popup goes away rather than
+    // staying stuck on the map. The block flashes briefly so you can see which
+    // one you came to.
+    setPinned(null);
+    setHover(null);
+    setFlashKey(key);
+    window.clearTimeout(flashTimer.current);
+    flashTimer.current = window.setTimeout(() => setFlashKey(null), 2200);
+    jumpTo(document.getElementById(`pair-${key}`));
   };
 
   if (failed) {
@@ -773,7 +783,7 @@ const CompareMap = ({
               </h2>
               <ul className="grid gap-y-3">
                 {sorted.map((line) => {
-                  const selected = pinned?.key === line.key;
+                  const selected = flashKey === line.key;
                   return (
                     <li
                       key={line.key}
@@ -798,15 +808,13 @@ const CompareMap = ({
                         index={index}
                         full
                       />
-                      {selected && (
-                        <button
-                          type="button"
-                          onClick={() => jumpTo(box.current)}
-                          className="mt-3 text-sm font-bold text-[var(--chip-blue-border)] duration-300 hover:underline"
-                        >
-                          ↑ Show on the map
-                        </button>
-                      )}
+                      <button
+                        type="button"
+                        onClick={() => showOnMap(line.key)}
+                        className="mt-3 text-sm font-bold text-[var(--chip-blue-border)] duration-300 hover:underline"
+                      >
+                        ↑ Show on the map
+                      </button>
                     </li>
                   );
                 })}

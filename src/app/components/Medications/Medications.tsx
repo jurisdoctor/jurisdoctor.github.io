@@ -115,11 +115,11 @@ const MedRow = ({
   pickedFull: boolean;
   onPick: () => void;
 }) => (
-  <div className="relative">
+  <div className="relative h-full">
     <button
       type="button"
       onClick={() => onOpen(med.id)}
-      className="group flex w-full items-start gap-x-4 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 text-left duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg sm:px-4"
+      className="group flex h-full w-full items-start gap-x-4 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 text-left duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg sm:px-4"
     >
       <span
         aria-hidden
@@ -219,7 +219,7 @@ const GroupCard = ({
     type="button"
     onClick={onPick}
     aria-pressed={selected}
-    className={`flex items-center gap-x-4 rounded-2xl border-2 border-solid px-5 py-4 text-left duration-300 ${
+    className={`flex h-full items-center gap-x-4 rounded-2xl border-2 border-solid px-5 py-4 text-left duration-300 ${
       selected
         ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] shadow-lg"
         : "border-[var(--border-color)] bg-[var(--container-color)] hover:border-[var(--chip-blue-border)] hover:shadow-lg"
@@ -637,7 +637,7 @@ const Medications = () => {
           </div>
           <p className="mb-3 ml-3.5 text-[var(--text-color)] lg:ml-0 lg:text-center">
             {guide
-              ? `${guide.stats.medications} medications in ${guide.stats.groups} categories`
+              ? `${guide.stats.medications} drugs in ${guide.stats.groups} categories, and the one reason to reach for each.`
               : " "}
           </p>
 

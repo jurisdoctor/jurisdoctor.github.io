@@ -34,9 +34,9 @@ const About = () => {
         >
           <div className="md:text-center">
             <p className="mb-4">
-              This space is where lines of code converge into transformative
-              creations. As a passionate developer, I breathe life into ideas
-              and craft digital experiences that leave an impact.
+              I write software and study math, and lately a lot of nursing,
+              which is why half of this site is dosage drills and drug cards. I
+              build the tools I wish I had while I&apos;m studying.
             </p>
             <DownloadCVButton />
           </div>
