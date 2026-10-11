@@ -52,7 +52,7 @@ const config: Config = {
         strike: "strike 2.6s ease-in-out infinite",
         mark: "mark 2.6s ease-in-out infinite",
         indeterminate: "indeterminate 1.8s ease-in-out infinite",
-        fadeIn: "fadeIn 0.6s ease-out both",
+        fadeIn: "fadeIn 0.3s ease-out both",
         tileBounce: "tileBounce 1.6s ease-in-out infinite",
       },
       backgroundImage: {
@@ -102,9 +102,11 @@ const config: Config = {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(400%)" },
         },
+        // A plain, quick fade: no sliding. The one entrance used for sections,
+        // cards, panels and answer reveals across the site.
         fadeIn: {
-          "0%": { opacity: "0", transform: "translateY(8px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
         tileBounce: {
           "0%, 100%": { transform: "translateY(0)" },

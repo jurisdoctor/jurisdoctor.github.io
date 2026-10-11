@@ -52,7 +52,7 @@ for med in guide["medications"]:
 guide["medications"] = slim
 
 rules = [
-    {k: rule[k] for k in ("id", "name", "severity", "mechanism", "watch", "exam") if k in rule}
+    {k: rule[k] for k in ("id", "name", "severity", "mechanism", "watch", "exam", "brief") if k in rule}
     for rule in inter["rules"]
 ]
 pairs = [

@@ -469,9 +469,9 @@ const ChapterSet = ({
                 <Fill {...progress} />
                 {chapter.members && chapter.members.length > 1 ? (
                   <Flash
-                    items={chapter.members.map((member, memberIndex) => (
-                      <span key={memberIndex}>{member.chapterNumber}</span>
-                    ))}
+                    items={chapter.members.map((member) =>
+                      String(member.chapterNumber),
+                    )}
                   />
                 ) : (
                   <span className="relative">{displayNumberOf(chapter)}</span>
@@ -503,9 +503,9 @@ const ChapterSet = ({
                 <>
                   Chapter{" "}
                   <Flash
-                    items={shown.members.map((member, memberIndex) => (
-                      <span key={memberIndex}>{member.chapterNumber}</span>
-                    ))}
+                    items={shown.members.map((member) =>
+                      String(member.chapterNumber),
+                    )}
                   />{" "}
                   · {shown.title}
                 </>

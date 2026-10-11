@@ -11,6 +11,10 @@ export interface RuleDef {
   mechanism: string;
   watch: string;
   exam: string;
+  // The rule in three short parts for someone at the bedside: what happens
+  // (one line), what to do (the part to read first) and what to watch for.
+  // `mechanism` stays whole beside it, so nothing is lost.
+  brief?: { result: string; do: string; watch: string };
 }
 
 export interface PairRule {

@@ -109,6 +109,23 @@ const Names = ({ a, b }: { a: MedType; b: MedType }) => (
   </span>
 );
 
+// A short version of a long explanation: whole sentences from the start, as many
+// as fit in `max` letters (at least the first, cut at a word if it alone is too
+// long). The hover card shows this; the full text stays in the list below the
+// map, one tap away, so nothing is lost, only moved out of the way.
+const lead = (text: string, max = 170) => {
+  const flat = text.replace(/\s+/g, " ").trim();
+  const sentences = flat.match(/[^.!?]+[.!?]+(?=\s|$)|[^.!?]+$/g) ?? [flat];
+  let out = sentences[0].trim();
+  for (const next of sentences.slice(1)) {
+    if (out.length + 1 + next.trim().length > max) break;
+    out = `${out} ${next.trim()}`;
+  }
+  return out.length > max
+    ? `${out.slice(0, max).replace(/\s+\S*$/, "")}…`
+    : out;
+};
+
 const PairBody = ({
   a,
   b,
@@ -172,16 +189,52 @@ const PairBody = ({
                     </span>
                   )}
                 </p>
-                <p className="text-sm leading-relaxed text-[var(--text-color)]">
-                  {rule.why}
-                </p>
-                {full && def?.watch && (
-                  <p className="text-sm leading-relaxed text-[var(--muted-color)]">
-                    <span className="font-bold text-[var(--title-color)]">
-                      Watch:{" "}
-                    </span>
-                    {def.watch}
-                  </p>
+                {def?.brief ? (
+                  // The rule written for the bedside: the action first (it is
+                  // what this card is for), then what happens and what to
+                  // watch. The pair's own explanation follows in full view.
+                  <>
+                    <p className="text-sm leading-relaxed text-[var(--title-color)]">
+                      <span className="mr-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
+                        Do
+                      </span>
+                      {def.brief.do}
+                    </p>
+                    <p className="text-sm leading-relaxed text-[var(--text-color)]">
+                      <span className="mr-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--muted-color)]">
+                        Result
+                      </span>
+                      {def.brief.result}
+                    </p>
+                    <p className="text-sm leading-relaxed text-[var(--text-color)]">
+                      <span className="mr-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--muted-color)]">
+                        Watch
+                      </span>
+                      {def.brief.watch}
+                    </p>
+                    {full && (
+                      <p className="text-sm leading-relaxed text-[var(--muted-color)]">
+                        <span className="mr-1.5 text-[11px] font-bold uppercase tracking-wide">
+                          This pair
+                        </span>
+                        {rule.why}
+                      </p>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <p className="text-sm leading-relaxed text-[var(--text-color)]">
+                      {full ? rule.why : lead(rule.why)}
+                    </p>
+                    {def?.watch && (
+                      <p className="text-sm leading-relaxed text-[var(--muted-color)]">
+                        <span className="font-bold text-[var(--title-color)]">
+                          Watch:{" "}
+                        </span>
+                        {full ? def.watch : lead(def.watch, 150)}
+                      </p>
+                    )}
+                  </>
                 )}
               </div>
             );
@@ -189,9 +242,12 @@ const PairBody = ({
         </div>
       )}
 
-      {!full && rules.length > shown.length && (
+      {!full && (
         <p className="text-xs italic text-[var(--muted-color)]">
-          +{rules.length - shown.length} more — tap the line to read everything
+          {rules.length > shown.length
+            ? `+${rules.length - shown.length} more · `
+            : ""}
+          Tap the line for the full explanation
         </p>
       )}
     </div>
@@ -620,34 +676,53 @@ const CompareMap = ({
               </svg>
 
               {/* hover / pinned popup */}
-              {active && activeLine && index && (
-                <div
-                  role="tooltip"
-                  className="pointer-events-none absolute z-20 rounded-2xl border border-solid p-4 text-left shadow-2xl backdrop-blur"
-                  style={{
-                    width: tipWidth,
-                    left: Math.min(
-                      Math.max(active.x - tipWidth / 2, 8),
-                      boxWidth - tipWidth - 8,
-                    ),
-                    top: active.y < 190 ? active.y + 22 : undefined,
-                    bottom:
-                      active.y < 190
-                        ? undefined
-                        : (box.current?.clientHeight ?? H) - active.y + 18,
-                    background: "var(--container-color)",
-                    borderColor: COLORS[activeLine.tone],
-                  }}
-                >
-                  <PairBody
-                    a={activeLine.a.med}
-                    b={activeLine.b.med}
-                    line={activeLine}
-                    index={index}
-                    full={false}
-                  />
-                </div>
-              )}
+              {active &&
+                activeLine &&
+                index &&
+                (() => {
+                  // Room above and below the line, in screen pixels.
+                  const top = box.current?.getBoundingClientRect().top ?? 0;
+                  const spaceAbove = top + active.y - 18 - 12;
+                  const spaceBelow =
+                    (typeof window === "undefined" ? 800 : window.innerHeight) -
+                    (top + active.y + 22) -
+                    12;
+                  const below = spaceBelow >= spaceAbove;
+                  return (
+                    <div
+                      role="tooltip"
+                      className="pointer-events-none absolute z-20 rounded-2xl border border-solid p-4 text-left shadow-2xl backdrop-blur"
+                      style={{
+                        width: tipWidth,
+                        left: Math.min(
+                          Math.max(active.x - tipWidth / 2, 8),
+                          boxWidth - tipWidth - 8,
+                        ),
+                        top: below ? active.y + 22 : undefined,
+                        bottom: below
+                          ? undefined
+                          : (box.current?.clientHeight ?? H) - active.y + 18,
+                        // Never taller than the room on its side of the line: a
+                        // card that would run off the screen is cut off instead.
+                        maxHeight: Math.max(
+                          140,
+                          below ? spaceBelow : spaceAbove,
+                        ),
+                        overflow: "hidden",
+                        background: "var(--container-color)",
+                        borderColor: COLORS[activeLine.tone],
+                      }}
+                    >
+                      <PairBody
+                        a={activeLine.a.med}
+                        b={activeLine.b.med}
+                        line={activeLine}
+                        index={index}
+                        full={false}
+                      />
+                    </div>
+                  );
+                })()}
             </div>
             <p className="px-3 pb-2 pt-1 text-center text-xs text-[var(--muted-color)]">
               Hover or tap a line for the reason · click a medication to open it

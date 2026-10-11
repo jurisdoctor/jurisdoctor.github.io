@@ -23,6 +23,7 @@ import { useSaved } from "../DosageCalculations/Saved";
 import Shapes from "../Home/Shapes";
 import { flameHueAt } from "../Nclex/FlamePalette";
 import Swap from "../Nclex/Swap";
+import TypedText from "../Typed/TypedText";
 import CompareMap from "./CompareMap";
 import { MAX_COMPARE, shortName } from "./Interactions";
 import {
@@ -586,7 +587,7 @@ const Medications = () => {
         <div ref={top} className="relative z-10 scroll-mt-6">
           <div className="mb-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-3 lg:justify-center">
             <h1 className="ml-3.5 text-4xl font-bold lg:ml-0 lg:text-center">
-              Agave&apos;s Lab
+              <TypedText text="Agave's Lab" typeOnMount />
             </h1>
             {guide && !route.compare && !route.study && (
               <div className="flex flex-wrap items-center gap-2 lg:justify-center">

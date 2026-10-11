@@ -11,6 +11,7 @@ import {
   LuX,
 } from "react-icons/lu";
 import { useSaved } from "../DosageCalculations/Saved";
+import TypedText from "../Typed/TypedText";
 import { search } from "./Data";
 import {
   COLORS,
@@ -117,89 +118,6 @@ const Panel = ({
   </div>
 );
 
-// One line of text that is replaced by another in the same place: the old one
-// dissolves (fades, blurs and lifts off) while the new one sharpens in behind
-// it. Works for any change of `id`, so Normal -> High, High -> Low and back all
-// animate, not just the first and last.
-type Phase = "pre" | "in" | "out";
-interface LayerType {
-  id: string;
-  text: string;
-  strong: boolean;
-  phase: Phase;
-}
-
-const LAYER_CLASS: Record<Phase, string> = {
-  pre: "translate-y-1.5 scale-95 opacity-0 blur-[5px]",
-  in: "opacity-100 delay-200",
-  out: "-translate-y-1.5 scale-95 opacity-0 blur-[5px]",
-};
-
-const Dissolve = ({
-  id,
-  text,
-  strong,
-}: {
-  id: string;
-  text: string;
-  strong: boolean;
-}) => {
-  const [layers, setLayers] = useState<LayerType[]>([
-    { id, text, strong, phase: "in" },
-  ]);
-
-  useEffect(() => {
-    setLayers((prev) => {
-      if (prev.some((layer) => layer.id === id && layer.phase !== "out"))
-        return prev;
-      return [
-        ...prev
-          .filter((layer) => layer.id !== id)
-          .map((layer) => ({ ...layer, phase: "out" as Phase })),
-        { id, text, strong, phase: "pre" },
-      ];
-    });
-    // A beat after mounting, so the new line is painted hidden before it is
-    // let in (a timeout rather than animation frames, which a background tab
-    // never runs).
-    const enter = setTimeout(
-      () =>
-        setLayers((prev) =>
-          prev.map((layer) =>
-            layer.id === id ? { ...layer, phase: "in" } : layer,
-          ),
-        ),
-      40,
-    );
-    const clear = setTimeout(
-      () => setLayers((prev) => prev.filter((layer) => layer.id === id)),
-      900,
-    );
-    return () => {
-      clearTimeout(enter);
-      clearTimeout(clear);
-    };
-  }, [id, text, strong]);
-
-  return (
-    <span className="grid font-mono text-xs leading-snug">
-      {layers.map((layer) => (
-        <span
-          key={layer.id}
-          aria-hidden={layer.phase === "out"}
-          className={`col-start-1 row-start-1 duration-500 ease-out motion-reduce:transition-none ${
-            layer.strong
-              ? "font-bold text-[var(--title-color)]"
-              : "text-[var(--muted-color)]"
-          } ${LAYER_CLASS[layer.phase]}`}
-        >
-          {layer.text}
-        </span>
-      ))}
-    </span>
-  );
-};
-
 // ------------------------------------------------------------ 1. labs
 const LabSelect = ({
   param,
@@ -250,17 +168,31 @@ const LabSelect = ({
           className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
         />
       </span>
-      <Dissolve
-        id={chosen ? chosen.id : "normal"}
-        strong={!!chosen}
-        text={
-          chosen
-            ? chosen.bound
-              ? chosen.bound.charAt(0).toUpperCase() + chosen.bound.slice(1)
-              : chosen.label
-            : `Normal: ${range}`
-        }
-      />
+      <span className="font-mono text-xs leading-snug">
+        <TypedText
+          segments={[
+            {
+              text: chosen
+                ? chosen.bound
+                  ? chosen.bound.charAt(0).toUpperCase() + chosen.bound.slice(1)
+                  : chosen.label
+                : `Normal: ${range}`,
+              // Over the normal range reads as danger, under it as a warning.
+              className: chosen
+                ? `font-bold ${
+                    chosen.dir === "high"
+                      ? "text-[var(--danger-color)]"
+                      : "text-[var(--warning-color)]"
+                  }`
+                : "text-[var(--muted-color)]",
+            },
+          ]}
+          reserve={[
+            `Normal: ${range}`,
+            ...states.map((entry) => entry.bound ?? entry.label),
+          ]}
+        />
+      </span>
     </label>
   );
 };
@@ -471,6 +403,33 @@ const PairRow = ({
 
       {open && (
         <div className="grid gap-y-3 px-4 pb-4 text-sm">
+          {/* What to do about it, from each rule involved (said once per rule). */}
+          {Array.from(
+            new Set([
+              ...pair.entries.map(({ item }) => item.rule),
+              ...(own?.rules.map((rule) => rule.rule) ?? []),
+            ]),
+          ).flatMap((id) => {
+            const brief = index.rules.get(id)?.brief;
+            return brief
+              ? [
+                  <p key={`do-${id}`} className="max-w-[80ch]">
+                    <span className="mr-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
+                      Do
+                    </span>
+                    <span className="text-[var(--title-color)]">
+                      {brief.do}
+                    </span>
+                    <span className="block text-[var(--muted-color)]">
+                      <span className="mr-1.5 text-[11px] font-bold uppercase tracking-wide">
+                        Watch
+                      </span>
+                      {brief.watch}
+                    </span>
+                  </p>,
+                ]
+              : [];
+          })}
           {pair.entries.map(({ state, item }) => (
             <p key={`${state.id}-${item.rule}`} className="max-w-[80ch]">
               <span className="font-bold text-[var(--title-color)]">

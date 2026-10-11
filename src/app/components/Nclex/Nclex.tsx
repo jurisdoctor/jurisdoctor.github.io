@@ -31,6 +31,7 @@ import {
 } from "./Questions";
 import Quiz from "./Quiz";
 import Swap from "./Swap";
+import TypedText, { Segment } from "../Typed/TypedText";
 
 type SectionType = "chapters" | "skills" | "cases" | "judgment" | "favorites";
 
@@ -98,7 +99,7 @@ export type SetKind = "nclex" | "kaplan";
 interface SetType {
   scope: string;
   examKey: string;
-  heading: ReactNode;
+  heading: Segment[];
   // Per-set wording for a tab, what its groups are called, and how a group
   // is picked, where it differs from the defaults (the Kaplan set has no
   // chapters or skills, just topics, which use the skills picker).
@@ -111,11 +112,11 @@ const SETS: Record<SetKind, SetType> = {
   nclex: {
     scope: "nclex",
     examKey: EXAM_KEY,
-    heading: (
-      <>
-        NCLEX-<em>style</em> Questions
-      </>
-    ),
+    heading: [
+      { text: "NCLEX-" },
+      { text: "style", className: "italic" },
+      { text: " Questions" },
+    ],
     names: {},
     nouns: {},
     picks: {},
@@ -123,7 +124,7 @@ const SETS: Record<SetKind, SetType> = {
   kaplan: {
     scope: "kaplan",
     examKey: KAPLAN_EXAM_KEY,
-    heading: "Kaplan Questions",
+    heading: [{ text: "Kaplan Questions" }],
     names: { skills: "Topics" },
     nouns: { skills: "topics" },
     picks: { skills: "a topic" },
@@ -488,12 +489,9 @@ const ExamView = ({
         </div>
       )}
 
-      <Swap
-        token={section}
-        className="relative mb-1 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center"
-      >
-        <h2>{names[section]}</h2>
-      </Swap>
+      <h2 className="relative mb-1 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center">
+        <TypedText text={names[section]} reserve={Object.values(names)} />
+      </h2>
 
       {shown.length === 0 ? (
         <div className="mb-8 rounded-2xl bg-[var(--container-color)] p-7 text-center">
@@ -575,9 +573,9 @@ const ExamView = ({
                 <>
                   Chapter{" "}
                   <Flash
-                    items={group.members.map((member, memberIndex) => (
-                      <span key={memberIndex}>{member.chapterNumber}</span>
-                    ))}
+                    items={group.members.map((member) =>
+                      String(member.chapterNumber),
+                    )}
                   />{" "}
                   · {group.title}
                 </>
@@ -669,7 +667,7 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
         <div className="relative z-10">
           <div className="mb-2 flex items-start justify-between gap-x-4 lg:flex-col lg:items-center lg:gap-y-3">
             <h1 className="relative ml-3.5 text-4xl font-bold lg:ml-0 lg:text-center">
-              {set.heading}
+              <TypedText segments={set.heading} typeOnMount />
             </h1>
 
             <div className="relative shrink-0">

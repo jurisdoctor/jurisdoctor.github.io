@@ -11,9 +11,9 @@ import {
 const card =
   "rounded-xl bg-[var(--container-color)] p-7 lg:p-5 sm:p-7 shadow-xl animate-fadeIn mb-7 md:mb-4 break-inside-avoid";
 const rowClass =
-  "grid grid-cols-[1fr_auto_1fr] items-center gap-x-4 border-b border-solid border-[var(--track-color)] py-2 last:border-none lg:gap-x-2 lg:text-sm md:gap-x-1 md:text-xs sm:grid-cols-1 sm:gap-y-1 sm:text-center sm:text-base";
+  "grid grid-cols-[1fr_auto_1fr] items-center gap-x-4 border-b border-solid border-[var(--track-color)] py-2 last:border-none sm:border-none lg:gap-x-2 lg:text-sm md:gap-x-1 md:text-xs sm:flex sm:flex-wrap sm:items-baseline sm:justify-center sm:gap-x-2 sm:text-sm xs:gap-x-1 xs:text-xs";
 const tableCard =
-  "rounded-xl bg-[var(--container-color)] shadow-xl animate-fadeIn p-7 md:p-4 sm:p-7";
+  "rounded-xl bg-[var(--container-color)] shadow-xl animate-fadeIn p-7 md:p-4";
 const Table = ({
   title,
   rows,
@@ -42,7 +42,7 @@ const Table = ({
       <div className="grid gap-y-1">
         {rows.map((row) => (
           <div key={`${row.left} ${row.right}`} className={rowClass}>
-            <span className="text-right sm:text-center">{row.left}</span>
+            <span className="text-right sm:text-left">{row.left}</span>
             <span className="font-bold text-[var(--primary-color)]">=</span>
             <Cycle
               options={Array.isArray(row.right) ? row.right : [row.right]}
