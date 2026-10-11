@@ -24,8 +24,8 @@ export interface LavaBlob {
   y3: string;
 }
 
-const SCALE = 3; // CSS pixels per canvas pixel
-const SOFT = 66; // how far a disc's soft edge reaches, in CSS pixels
+const SCALE = 2; // CSS pixels per canvas pixel
+const SOFT = 40; // how far a disc's soft edge reaches, in CSS pixels
 
 const seconds = (value: string) => parseFloat(value);
 
@@ -108,7 +108,7 @@ const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
         // the reach, like a blurred circle.
         const fade = ctx.createRadialGradient(cx, cy, 0, cx, cy, reach);
         fade.addColorStop(0, paint(1));
-        fade.addColorStop((r * 0.7) / reach, paint(0.97));
+        fade.addColorStop(Math.max(0, r - 24 / SCALE) / reach, paint(0.98));
         fade.addColorStop(r / reach, paint(0.5));
         fade.addColorStop(1, paint(0));
         ctx.fillStyle = fade;
@@ -120,16 +120,22 @@ const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
       const image = ctx.getImageData(0, 0, width, height);
       const px = image.data;
       for (let i = 3; i < px.length; i += 4) {
-        // A gentler slope than the filter's 18, so the rim spreads over a few
-        // canvas pixels instead of one hard step: smooth edges, not stairs.
-        const sharpened = 9 * (px[i] / 255 - 0.47) + 0.5;
+        // Close to the filter's own curve (18 x alpha - 8, clamped), a touch
+        // softer so the rim spans about one canvas pixel and stays smooth
+        // once scaled up.
+        const sharpened = 14 * (px[i] / 255 - 0.47) + 0.5;
         px[i] = sharpened <= 0 ? 0 : sharpened >= 1 ? 255 : sharpened * 255;
       }
       ctx.putImageData(image, 0, 0);
     };
 
+    let last = 0;
     const loop = (now: number) => {
-      if (!document.hidden) draw(now);
+      // About 30 frames a second is plenty for a drift this slow.
+      if (!document.hidden && now - last > 30) {
+        last = now;
+        draw(now);
+      }
       if (!calm) raf = requestAnimationFrame(loop);
     };
     raf = requestAnimationFrame(loop);
@@ -144,7 +150,7 @@ const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
     <canvas
       ref={ref}
       aria-hidden
-      className="lava-canvas absolute inset-0 hidden h-full w-full [filter:blur(2px)]"
+      className="lava-canvas absolute inset-0 hidden h-full w-full"
     />
   );
 };
