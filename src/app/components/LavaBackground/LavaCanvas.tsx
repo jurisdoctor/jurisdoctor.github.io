@@ -25,7 +25,7 @@ export interface LavaBlob {
   y3: string;
 }
 
-const SOFT = 30; // half the width of a disc's soft rim, in CSS pixels
+const SOFT = 30; // half the width of a disc's soft rim, in CSS pixels, at full size
 
 const VERTEX = `
 attribute vec2 a;
@@ -37,6 +37,7 @@ const fragment = (count: number) => `
 precision highp float;
 uniform vec2 uCanvas;
 uniform float uScale;
+uniform float uSoft;
 uniform vec3 uBlob[${count}];
 uniform vec3 uCol[${count}];
 void main() {
@@ -46,7 +47,7 @@ void main() {
   for (int i = 0; i < ${count}; i++) {
     float d = distance(p, uBlob[i].xy);
     float r = uBlob[i].z;
-    float w = 1.0 - smoothstep(r - ${SOFT.toFixed(1)}, r + ${SOFT.toFixed(1)}, d);
+    float w = 1.0 - smoothstep(r - uSoft, r + uSoft, d);
     premult = uCol[i] * w + premult * (1.0 - w);
     alpha = w + alpha * (1.0 - w);
   }
@@ -81,6 +82,7 @@ const stateAt = (
   seconds_: number,
   vw: number,
   vh: number,
+  shrink: number,
 ): [number, number, number] => {
   const duration = seconds(blob.duration);
   const t = seconds_ - seconds(blob.delay);
@@ -100,10 +102,11 @@ const stateAt = (
   const dx = a[0] + (b[0] - a[0]) * u;
   const dy = a[1] + (b[1] - a[1]) * u;
   const grow = a[2] + (b[2] - a[2]) * u;
+  const size = blob.size * shrink;
   return [
-    toPx(blob.left, vw, vh, vw) + blob.size / 2 + dx,
-    toPx(blob.top, vw, vh, vh) + blob.size / 2 + dy,
-    (blob.size / 2) * grow,
+    toPx(blob.left, vw, vh, vw) + size / 2 + dx,
+    toPx(blob.top, vw, vh, vh) + size / 2 + dy,
+    (size / 2) * grow,
   ];
 };
 
@@ -158,6 +161,7 @@ const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
 
     const uCanvas = gl.getUniformLocation(program, "uCanvas");
     const uScale = gl.getUniformLocation(program, "uScale");
+    const uSoft = gl.getUniformLocation(program, "uSoft");
     const uBlob = gl.getUniformLocation(program, "uBlob");
     const uCol = gl.getUniformLocation(program, "uCol");
     gl.uniform3fv(uCol, new Float32Array(blobs.flatMap((b) => rgb(b.color))));
@@ -165,7 +169,13 @@ const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
     const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let vw = 0;
     let vh = 0;
+    // The blobs' size relative to full (see --lava-scale in globals.css).
+    let shrink = 1;
     const fit = () => {
+      shrink =
+        parseFloat(getComputedStyle(root).getPropertyValue("--lava-scale")) ||
+        1;
+      gl.uniform1f(uSoft, SOFT * shrink);
       vw = window.innerWidth;
       vh = window.innerHeight;
       // The screen's own pixels, but no more than twice over: past that the
@@ -184,7 +194,7 @@ const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
       const t = calm ? 0 : now / 1000;
       gl.uniform3fv(
         uBlob,
-        new Float32Array(blobs.flatMap((b) => stateAt(b, t, vw, vh))),
+        new Float32Array(blobs.flatMap((b) => stateAt(b, t, vw, vh, shrink))),
       );
       gl.clearColor(0, 0, 0, 0);
       gl.clear(gl.COLOR_BUFFER_BIT);

@@ -313,6 +313,23 @@ button {
    blob sets its own --x1..--x3/--y1..--y3 waypoints (in vw/vh, so the
    travel is page-scale, not relative to the blob's own small box) and
    shares this one keyframe definition instead of each needing its own. */
+/* How big the lava lamp's blobs are, as a share of their full size: on a phone
+   they are scaled down so the screen holds several blobs, not one giant one.
+   Read by LavaBackground (the blob boxes) and LavaCanvas (the iPhone version). */
+:root {
+  --lava-scale: 1;
+}
+@media (max-width: 767px) {
+  :root {
+    --lava-scale: 0.7;
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    --lava-scale: 0.55;
+  }
+}
+
 @keyframes lavaDrift {
   0%,
   100% {

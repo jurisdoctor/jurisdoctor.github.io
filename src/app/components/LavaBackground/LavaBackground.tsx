@@ -151,8 +151,8 @@ const LavaBackground = () => (
             className="lava-blob absolute rounded-full"
             style={
               {
-                width: blob.size,
-                height: blob.size,
+                width: `calc(${blob.size}px * var(--lava-scale))`,
+                height: `calc(${blob.size}px * var(--lava-scale))`,
                 top: blob.top,
                 left: blob.left,
                 backgroundColor: blob.color,
