@@ -476,7 +476,7 @@ const MedDetail = ({
         key={section.id}
         className={
           danger
-            ? "bg-[linear-gradient(hsla(257, 100%, 85%,0.08),hsla(257, 100%, 85%,0.08)),var(--container-color)] rounded-2xl border-2 border-solid border-[var(--primary-color)] p-5 sm:p-4"
+            ? "rounded-2xl border-2 border-solid border-[var(--primary-color)] bg-[var(--container-color)] p-5 [background-image:linear-gradient(hsla(257,100%,85%,0.08),hsla(257,100%,85%,0.08))] sm:p-4"
             : plain
         }
       >
@@ -574,7 +574,7 @@ const MedDetail = ({
         </header>
 
         {med.highlight.critical && (
-          <div className="crit-glow bg-[linear-gradient(hsla(257, 100%, 85%,0.1),hsla(257, 100%, 85%,0.1)),var(--container-color)] border-y border-solid border-[var(--primary-color)] px-7 py-4 sm:px-5">
+          <div className="crit-glow border-y border-solid border-[var(--primary-color)] bg-[var(--container-color)] px-7 py-4 [background-image:linear-gradient(hsla(257,100%,85%,0.1),hsla(257,100%,85%,0.1))] sm:px-5">
             <p className="mb-1 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
               Do not miss
             </p>
