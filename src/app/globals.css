@@ -352,5 +352,5 @@ button {
   filter: none;
 }
 :root.no-goo .lava-blob {
-  filter: blur(36px);
+  filter: blur(18px);
 }
