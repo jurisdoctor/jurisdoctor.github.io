@@ -47,3 +47,30 @@ export const loadBank = (exam: ExamId): Promise<DerivedBank> => {
   cache.set(exam, promise);
   return promise;
 };
+
+// The Kaplan question set (route /kaplan) is a separate bank with its own
+// exams. scripts/build-kaplan.py writes each exam's file and keeps the
+// manifest, so adding or replacing an exam is a data change only.
+export interface KaplanExamType {
+  id: string;
+  title: string;
+}
+
+export const KAPLAN_EXAM_KEY = "kaplan:exam:v1";
+
+const kaplanCache = new Map<string, Promise<DerivedBank>>();
+
+export const loadKaplanExams = (): Promise<KaplanExamType[]> =>
+  import("./kaplan/manifest.json").then(
+    (mod) => mod.default as KaplanExamType[],
+  );
+
+export const loadKaplanBank = (exam: string): Promise<DerivedBank> => {
+  const cached = kaplanCache.get(exam);
+  if (cached) return cached;
+  const promise = import(`./kaplan/${exam}.json`).then((mod) =>
+    buildBank(mod.default as unknown as Parameters<typeof buildBank>[0]),
+  );
+  kaplanCache.set(exam, promise);
+  return promise;
+};

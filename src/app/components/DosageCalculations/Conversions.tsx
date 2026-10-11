@@ -68,7 +68,9 @@ const Conversions = () => {
         {Prefixes.map((prefix) => (
           <div key={prefix.name} className={card}>
             <h3 className="text-xl">{prefix.name}</h3>
-            <span className="text-sm text-[var(--muted-color)]">{prefix.meaning}</span>
+            <span className="text-sm text-[var(--muted-color)]">
+              {prefix.meaning}
+            </span>
 
             <div className="mx-auto mt-3 grid w-fit grid-cols-[auto_auto_auto] items-center gap-x-2 gap-y-2 text-sm lg:gap-x-1.5 lg:text-xs sm:gap-x-2 sm:text-sm">
               {prefix.lines.map((line) => (

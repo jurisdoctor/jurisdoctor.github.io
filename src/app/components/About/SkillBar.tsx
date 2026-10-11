@@ -23,7 +23,7 @@ const SkillBar = ({ name, percent, color }: SkillBarProps) => {
     <div className="skills__data">
       <div className="mb-4 flex justify-between">
         <h3 className="text-base font-semibold">{name}</h3>
-        <span className="font-mono leading-5 tabular-nums">
+        <span className="font-mono tabular-nums leading-5">
           {display.toFixed(1)}%
         </span>
       </div>

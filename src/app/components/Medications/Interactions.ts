@@ -72,9 +72,9 @@ export const toneOf = (status: Status): Tone =>
   status === "ok" ? "green" : status === "moderate" ? "amber" : "red";
 
 export const COLORS: Record<Tone, string> = {
-  green: "hsl(150, 62%, 46%)",
+  green: "hsl(156, 100%, 42%)",
   amber: "hsl(38, 96%, 54%)",
-  red: "hsl(14, 100%, 57%)",
+  red: "hsl(4, 82%, 60%)",
 };
 
 export const LABELS: Record<Status, string> = {

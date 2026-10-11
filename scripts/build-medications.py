@@ -12,6 +12,11 @@ serves:
   src/app/components/Medications/medications.json   the guide itself
   src/app/components/Medications/interactions.json  the interaction map data,
                                                     loaded only on that page
+  src/app/components/Medications/patient.json       the Test Patient data (the
+                                                    18 lab states, each drug's
+                                                    reading under them, and how
+                                                    each pair changes), loaded
+                                                    only on that page
 
 Keep the full export somewhere safe (e.g. the nclex-bank folder).
 """
@@ -80,5 +85,25 @@ def dump(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf8")
     print(f"{path.name}: {path.stat().st_size // 1024} KB")
 
+# The Test Patient feature: `patient_states` (the document) plus, per drug, its
+# own `patient_states` entries and, per pair, `in_patient`. They are kept in
+# their own file, not in the two above, because they are large (about 900 KB)
+# and only that page needs them. Pairs are keyed "a|b" with the ids sorted,
+# the same key the interaction map uses.
+patient = {
+    "doc": full["patient_states"],
+    "meds": {
+        med["id"]: med["patient_states"]
+        for med in full["medications"]
+        if med.get("patient_states")
+    },
+    "pairs": {
+        "|".join(sorted((pair["a"], pair["b"]))): pair["in_patient"]
+        for pair in inter["pairs"]
+        if pair.get("in_patient")
+    },
+}
+
 dump(out / "medications.json", guide)
 dump(out / "interactions.json", interactions)
+dump(out / "patient.json", patient)

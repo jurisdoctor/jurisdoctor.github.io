@@ -90,8 +90,8 @@ const Matching = ({
           const right = answered && rightFor(item.id);
           const shell = answered
             ? right
-              ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
-              : "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
+              ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
+              : "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
             : chosen
               ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
               : "border-transparent bg-[var(--body-color)]";

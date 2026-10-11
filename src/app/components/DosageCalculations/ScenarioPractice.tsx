@@ -342,7 +342,9 @@ const Step = ({ step, firstTip }: { step: StepType; firstTip: number }) => {
                 Step {firstTip + id}
               </span>
               <div className="min-w-0 flex-1">
-                <p className="max-w-[70ch] text-sm text-[var(--muted-color)]">{tip}</p>
+                <p className="max-w-[70ch] text-sm text-[var(--muted-color)]">
+                  {tip}
+                </p>
                 {rearrange && tip.includes(SWAP_TIP) && (
                   <Rearrange {...rearrange} />
                 )}
@@ -504,10 +506,10 @@ const Verdict = ({
   answer: React.ReactNode;
 }) => (
   <div
-    className={`mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 last:mb-0 ${correct ? "bg-[rgba(68,215,182,0.12)]" : "bg-[hsla(14, 100%, 57%,0.1)]"}`}
+    className={`mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 last:mb-0 ${correct ? "bg-[rgba(0,212,127,0.12)]" : "bg-[hsla(257,100%,85%,0.1)]"}`}
   >
     <span
-      className={`rounded-md px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[var(--on-primary)] ${correct ? "bg-[rgb(68,215,182)]" : "bg-[var(--primary-color)]"}`}
+      className={`rounded-md px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[var(--on-primary)] ${correct ? "bg-[rgb(0,212,127)]" : "bg-[var(--primary-color)]"}`}
     >
       {correct ? "Correct ✅" : "Not quite"}
     </span>
@@ -687,7 +689,9 @@ const ScenarioPractice = () => {
               {saved.status === "missed" && <Solution scenario={scenario} />}
 
               {scenario.note && (
-                <p className="mt-4 text-sm text-[var(--muted-color)]">{scenario.note}</p>
+                <p className="mt-4 text-sm text-[var(--muted-color)]">
+                  {scenario.note}
+                </p>
               )}
             </div>
           )}

@@ -17,7 +17,7 @@ const ActivityShell = ({
   <div
     className={`rounded-lg border border-l-4 border-solid bg-[var(--body-color)] p-5 duration-300 ${
       done
-        ? "border-[var(--border-color)] border-l-[rgb(68,215,182)]"
+        ? "border-[var(--border-color)] border-l-[rgb(0,212,127)]"
         : "border-[var(--border-color)] border-l-[var(--chip-blue-border)]"
     }`}
   >
@@ -26,7 +26,7 @@ const ActivityShell = ({
         {label}
       </span>
       {done && (
-        <span className="flex items-center gap-x-1 text-xs font-bold text-[rgb(68,215,182)]">
+        <span className="flex items-center gap-x-1 text-xs font-bold text-[rgb(0,212,127)]">
           <LuCheck /> Done
         </span>
       )}
@@ -111,9 +111,9 @@ export const Mcq = ({
               onClick={() => pick(index)}
               className={`rounded-xl border border-solid p-3 text-left duration-200 disabled:cursor-default ${
                 isRight
-                  ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)] text-[var(--title-color)]"
+                  ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)] text-[var(--title-color)]"
                   : isWrong
-                    ? "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)] text-[var(--title-color)]"
+                    ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)] text-[var(--title-color)]"
                     : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
               }`}
             >
@@ -232,18 +232,18 @@ export const FlipCards = ({
                 type="button"
                 onClick={() => flip(index)}
                 aria-label={`Flip card ${index + 1}: ${item.title}`}
-                className="relative h-36 w-full [transform-style:preserve-3d] transition-transform duration-500"
+                className="relative h-36 w-full transition-transform duration-500 [transform-style:preserve-3d]"
                 style={{ transform: isFlipped ? "rotateY(180deg)" : "none" }}
               >
                 <div
                   className={`absolute inset-0 flex flex-col items-center justify-center gap-y-1 rounded-lg border border-solid p-3 text-center [backface-visibility:hidden] ${
                     seen.includes(index)
-                      ? "border-[var(--border-color)] bg-[rgba(68,215,182,0.05)]"
+                      ? "border-[var(--border-color)] bg-[rgba(0,212,127,0.05)]"
                       : "border-[var(--border-color)] bg-[var(--container-color)]"
                   }`}
                 >
                   {seen.includes(index) && (
-                    <span className="absolute right-1.5 top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[rgb(68,215,182)] text-white">
+                    <span className="absolute right-1.5 top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[rgb(0,212,127)] text-white">
                       <LuCheck size={10} />
                     </span>
                   )}
@@ -304,13 +304,13 @@ export const SortActivity = ({
             key={index}
             className={`rounded-xl border border-solid p-3 ${
               state[index]
-                ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.08)]"
+                ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.08)]"
                 : "border-[var(--border-color)] bg-[var(--container-color)]"
             }`}
           >
             <p className="mb-2 text-[var(--text-color)]">{item.text}</p>
             {state[index] ? (
-              <span className="inline-block rounded-md bg-[rgb(68,215,182)] px-3 py-1 text-xs font-bold text-white">
+              <span className="inline-block rounded-md bg-[rgb(0,212,127)] px-3 py-1 text-xs font-bold text-white">
                 ✓ {buckets[item.answer]}
               </span>
             ) : (
@@ -322,7 +322,7 @@ export const SortActivity = ({
                     onClick={() => pick(index, bucketIndex)}
                     className={`rounded-md border border-solid px-3 py-1 text-xs font-bold duration-150 ${
                       wrong[index] === bucketIndex
-                        ? "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)] text-[var(--title-color)]"
+                        ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)] text-[var(--title-color)]"
                         : "border-[var(--chip-blue-border)] text-[var(--chip-blue-border)] hover:bg-[var(--chip-blue-soft)]"
                     }`}
                   >
@@ -358,7 +358,11 @@ export const OrderActivity = ({
 }) => {
   const ok = !!data?.ok;
   const pool = useMemo(
-    () => shuffled(items.map((text, index) => ({ text, index })), id),
+    () =>
+      shuffled(
+        items.map((text, index) => ({ text, index })),
+        id,
+      ),
     [items, id],
   );
   const [seq, setSeq] = useState<number[]>([]);
@@ -372,7 +376,7 @@ export const OrderActivity = ({
           {items.map((item) => (
             <div
               key={item}
-              className="rounded-xl border border-solid border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.08)] p-3 text-[var(--title-color)]"
+              className="rounded-xl border border-solid border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.08)] p-3 text-[var(--title-color)]"
             >
               {item}
             </div>
@@ -416,8 +420,8 @@ export const OrderActivity = ({
               className={`rounded-xl border border-solid p-3 text-left ${
                 checked
                   ? seq[position] === position
-                    ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.08)] text-[var(--title-color)]"
-                    : "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)] text-[var(--title-color)]"
+                    ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.08)] text-[var(--title-color)]"
+                    : "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)] text-[var(--title-color)]"
                   : "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
               }`}
             >
@@ -449,8 +453,8 @@ export const OrderActivity = ({
       </div>
       {checked ? (
         <p className="mt-3 text-sm text-[var(--primary-color)]">
-          Green steps are in the right spot. Tap the red ones to send them
-          back, then try again.
+          Green steps are in the right spot. Tap the red ones to send them back,
+          then try again.
         </p>
       ) : (
         <p className="mt-3 text-sm text-[var(--muted-color)]">
@@ -580,13 +584,16 @@ export const ReadinessQuiz = ({
   );
   const [graded, setGraded] = useState(false);
 
-  const correct = picks.filter((pick, index) => pick === questions[index].answer)
-    .length;
+  const correct = picks.filter(
+    (pick, index) => pick === questions[index].answer,
+  ).length;
   const answered = picks.filter((pick) => pick !== null).length;
 
   const choose = (questionIndex: number, optionIndex: number) => {
     setPicks((prev) =>
-      prev.map((value, index) => (index === questionIndex ? optionIndex : value)),
+      prev.map((value, index) =>
+        index === questionIndex ? optionIndex : value,
+      ),
     );
     setGraded(false);
   };
@@ -615,13 +622,17 @@ export const ReadinessQuiz = ({
                   "neutral";
                 if (passed && oi === question.answer) state = "right";
                 else if (!passed && picks[qi] === oi)
-                  state = graded ? (oi === question.answer ? "right" : "wrong") : "selected";
+                  state = graded
+                    ? oi === question.answer
+                      ? "right"
+                      : "wrong"
+                    : "selected";
 
                 const cls =
                   state === "right"
-                    ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)] text-[var(--title-color)]"
+                    ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)] text-[var(--title-color)]"
                     : state === "wrong"
-                      ? "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)] text-[var(--title-color)]"
+                      ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)] text-[var(--title-color)]"
                       : state === "selected"
                         ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
                         : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]";
@@ -630,7 +641,9 @@ export const ReadinessQuiz = ({
                   <button
                     key={oi}
                     type="button"
-                    disabled={passed || (graded && picks[qi] === question.answer)}
+                    disabled={
+                      passed || (graded && picks[qi] === question.answer)
+                    }
                     onClick={() => choose(qi, oi)}
                     className={`rounded-xl border border-solid p-3 text-left duration-150 ${cls}`}
                   >

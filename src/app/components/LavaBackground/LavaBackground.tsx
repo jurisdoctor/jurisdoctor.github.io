@@ -21,7 +21,7 @@ interface Blob {
 
 const BLOBS: Blob[] = [
   {
-    color: "#34d399",
+    color: "#00D47F",
     size: 360,
     top: "-6%",
     left: "-4%",
@@ -35,7 +35,7 @@ const BLOBS: Blob[] = [
     y3: "8vh",
   },
   {
-    color: "#60a5fa",
+    color: "#C9B5FF",
     size: 380,
     top: "2%",
     left: "70%",
@@ -49,7 +49,7 @@ const BLOBS: Blob[] = [
     y3: "-8vh",
   },
   {
-    color: "#f472b6",
+    color: "#FFF0B5",
     size: 340,
     top: "52%",
     left: "6%",
@@ -63,7 +63,7 @@ const BLOBS: Blob[] = [
     y3: "-6vh",
   },
   {
-    color: "#fbbf24",
+    color: "#91FF00",
     size: 320,
     top: "66%",
     left: "76%",
@@ -77,7 +77,7 @@ const BLOBS: Blob[] = [
     y3: "10vh",
   },
   {
-    color: "#a78bfa",
+    color: "#3b6f85",
     size: 300,
     top: "30%",
     left: "40%",
@@ -109,13 +109,7 @@ const LavaBackground = () => (
         neighboring blob, so nothing ever merges there even though the exact
         same markup goo's together fine on desktop. */}
     <svg className="absolute h-0 w-0">
-      <filter
-        id="lava-goo-filter"
-        x="-50%"
-        y="-50%"
-        width="200%"
-        height="200%"
-      >
+      <filter id="lava-goo-filter" x="-50%" y="-50%" width="200%" height="200%">
         <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="blur" />
         <feColorMatrix
           in="blur"

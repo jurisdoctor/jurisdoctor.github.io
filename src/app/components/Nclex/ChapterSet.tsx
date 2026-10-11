@@ -4,7 +4,7 @@ import { LuChevronDown, LuStar } from "react-icons/lu";
 import Flash from "./Flash";
 import Glow from "./Glow";
 import { flameHueAt } from "./FlamePalette";
-import { ChapterType, displayNumberOf } from "./Questions";
+import { ChapterType, displayNumberOf, QuestionType } from "./Questions";
 
 export type PickType = string;
 export type LensType = "all" | "incomplete";
@@ -78,7 +78,7 @@ const Fill = ({
   const done = solved + missed;
   const level = total ? (done / total) * 100 : 0;
   const crest =
-    missed > 0 ? "bg-[hsla(14, 100%, 57%,0.5)]" : "bg-[rgba(68,215,182,0.55)]";
+    missed > 0 ? "bg-[hsla(257,100%,85%,0.5)]" : "bg-[rgba(0,212,127,0.55)]";
 
   useEffect(() => {
     if (!done || calm()) return;
@@ -134,11 +134,11 @@ const Fill = ({
       >
         <span
           style={{ flexGrow: solved }}
-          className="w-full bg-[rgba(68,215,182,0.55)]"
+          className="w-full bg-[rgba(0,212,127,0.55)]"
         />
         <span
           style={{ flexGrow: missed }}
-          className="bg-[hsla(14, 100%, 57%,0.5)] w-full"
+          className="w-full bg-[hsla(257,100%,85%,0.5)]"
         />
 
         {done > 0 && (
@@ -233,6 +233,21 @@ const Chip = ({
   );
 };
 
+// Where to pick up in a list of questions: the first one never answered; once
+// everything has been answered, the first one answered wrong; once everything
+// is right, the start.
+export const firstToDo = (
+  questions: QuestionType[],
+  results: Record<string, ResultType>,
+) => {
+  const fresh = questions.findIndex((entry) => results[entry.id] === undefined);
+  if (fresh !== -1) return fresh;
+  return Math.max(
+    0,
+    questions.findIndex((entry) => results[entry.id] !== "solved"),
+  );
+};
+
 const ChapterSet = ({
   chapters,
   active,
@@ -243,6 +258,7 @@ const ChapterSet = ({
   noun,
   labelFor,
   picker = "grid",
+  placeholder = "Choose a skill…",
   starred,
   progressOf,
   total,
@@ -259,6 +275,7 @@ const ChapterSet = ({
   noun: string;
   labelFor: (chapter: ChapterType) => string;
   picker?: "grid" | "select";
+  placeholder?: string;
   starred?: Record<string, true>;
   progressOf: (id: string) => { solved: number; missed: number; total: number };
   total: number;
@@ -290,6 +307,14 @@ const ChapterSet = ({
     return () => observer.disconnect();
   }, [open, place]);
 
+  // Opening a chapter or topic also starts it, at the first question not yet
+  // answered (else the first one missed, else the first), so there is nothing more
+  // to click: the tiles below are only for jumping to a particular question.
+  const begin = (chapter: ChapterType) => {
+    if (!chapter.questions.length) return;
+    onStart(chapter.id, firstToDo(chapter.questions, results));
+  };
+
   const toggle = (chapter: ChapterType) => {
     if (open === chapter.id) {
       setOpen(null);
@@ -297,6 +322,7 @@ const ChapterSet = ({
     }
     setOpen(chapter.id);
     place(chapter.id);
+    begin(chapter);
   };
 
   // A chapter's flame color follows its place in the chapter list, so it's
@@ -355,10 +381,15 @@ const ChapterSet = ({
             <span className="relative sm:order-last">
               <select
                 value={open ?? ""}
-                onChange={(event) => setOpen(event.target.value || null)}
+                onChange={(event) => {
+                  const next = event.target.value || null;
+                  setOpen(next);
+                  const chapter = chapters.find((entry) => entry.id === next);
+                  if (chapter) begin(chapter);
+                }}
                 className="w-44 cursor-pointer appearance-none truncate rounded-md bg-[var(--body-color)] py-1.5 pl-3 pr-8 text-xs font-bold text-[var(--title-color)] outline-none duration-300 focus:ring-2 focus:ring-[var(--primary-color)]"
               >
-                <option value="">Choose a skill…</option>
+                <option value="">{placeholder}</option>
                 {chapters.map((chapter) => (
                   <option
                     key={chapter.id}
@@ -507,7 +538,7 @@ const ChapterSet = ({
                       : ""
                   } ${
                     state === "solved"
-                      ? "bg-[rgb(68,215,182)] text-white"
+                      ? "bg-[rgb(0,212,127)] text-white"
                       : state === "missed"
                         ? "bg-[var(--primary-color)] text-[var(--on-primary)]"
                         : "bg-[var(--body-color)] text-[var(--muted-color)] hover:bg-[var(--chip-blue)] hover:text-[var(--title-color)]"

@@ -1,0 +1,2731 @@
+{
+ "meta": {
+  "course": "Kaplan practice questions",
+  "textbook": "Kaplan",
+  "exam": "Exam 4"
+ },
+ "chapters": [],
+ "skills": [
+  {
+   "id": "eye-detached-retina",
+   "title": "Eye: Detached Retina",
+   "questions": [
+    {
+     "id": "exam4-025",
+     "type": "multiple_choice",
+     "stem": "An adolescent is brought to the emergency department (ED) after being hit on the head while playing baseball. After examination, a diagnosis of detached retina of the left eye is made. Which sign or symptom does the nurse expect to observe?",
+     "options": [
+      {
+       "id": "A",
+       "text": "The client reports seeing quick flashes of light",
+       "correct": true,
+       "rationale": "Correct. Flashes of light, floaters and a curtain over part of the visual field are the signs of retinal detachment."
+      },
+      {
+       "id": "B",
+       "text": "The client reports severe pain in the affected eye",
+       "correct": false,
+       "rationale": "Retinal detachment is painless."
+      },
+      {
+       "id": "C",
+       "text": "The client has increased intraocular pressure",
+       "correct": false,
+       "rationale": "Raised intraocular pressure is a possible complication, not a presenting sign. It belongs to glaucoma."
+      },
+      {
+       "id": "D",
+       "text": "The client has bilateral periorbital edema",
+       "correct": false,
+       "rationale": "Swelling around both eyes is not a sign of a detachment in one eye."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Detachment is painless and visual, so eliminate pain and pressure.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-028",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client diagnosed with a detached left retina. Which finding can the nurse expect the client to report?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Blurred vision in the left eye",
+       "correct": true,
+       "rationale": "Correct. Blurred or sooty vision in the affected eye is a sign of retinal detachment."
+      },
+      {
+       "id": "B",
+       "text": "Severe left eye pain",
+       "correct": false,
+       "rationale": "Retinal detachment is painless."
+      },
+      {
+       "id": "C",
+       "text": "Left homonymous hemianopsia",
+       "correct": false,
+       "rationale": "Homonymous hemianopsia is loss of the same half of the visual field in both eyes and comes from a brain lesion such as a stroke."
+      },
+      {
+       "id": "D",
+       "text": "Narrowing of the left visual field",
+       "correct": false,
+       "rationale": "Gradual narrowing of the visual field (tunnel vision) describes glaucoma. Detachment causes a curtain or blank area, not a narrowed field."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Three options belong to similar conditions: glaucoma (pain, narrowed field) and stroke (hemianopsia).",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-071",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client after repair of a detached right retina with injection of a gas bubble. How does the nurse position the client?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Flat on the back",
+       "correct": false,
+       "rationale": "Lying on the back moves the bubble away from the retina."
+      },
+      {
+       "id": "B",
+       "text": "Face down, as prescribed",
+       "correct": true,
+       "rationale": "Correct. When gas is injected the client is placed face down so the bubble presses on the retina."
+      },
+      {
+       "id": "C",
+       "text": "High Fowler position",
+       "correct": false,
+       "rationale": "Sitting upright does not place the bubble against the repair."
+      },
+      {
+       "id": "D",
+       "text": "On the right side",
+       "correct": false,
+       "rationale": "Position follows the prescription for the bubble, which is face down."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. The gas bubble decides the position.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-072",
+     "type": "multiple_choice",
+     "stem": "A client reports nausea 2 hours after scleral buckling of the left eye. Which action does the nurse take first?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Offers sips of clear liquids",
+       "correct": false,
+       "rationale": "Oral fluids may trigger vomiting."
+      },
+      {
+       "id": "B",
+       "text": "Encourages coughing and deep breathing",
+       "correct": false,
+       "rationale": "Coughing is avoided after retinal surgery because it raises pressure in the eye."
+      },
+      {
+       "id": "C",
+       "text": "Administers the prescribed antiemetic",
+       "correct": true,
+       "rationale": "Correct. Vomiting raises intraocular pressure, so nausea is treated promptly."
+      },
+      {
+       "id": "D",
+       "text": "Applies a cool cloth to the forehead",
+       "correct": false,
+       "rationale": "A comfort measure does not prevent vomiting."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. The data are complete, so act with the option that prevents a rise in eye pressure.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-073",
+     "type": "sata",
+     "stem": "The nurse provides discharge teaching to a client after surgical repair of a detached retina. Which instructions does the nurse include? (Select all that apply.)",
+     "options": [
+      {
+       "id": "A",
+       "text": "Avoid bending over and lifting heavy objects",
+       "correct": true,
+       "rationale": "Correct. Bending and heavy lifting are restricted after surgery."
+      },
+      {
+       "id": "B",
+       "text": "Take the prescribed stool softener",
+       "correct": true,
+       "rationale": "Correct. Stool softeners prevent straining at stool."
+      },
+      {
+       "id": "C",
+       "text": "Wait 1 week before washing the hair",
+       "correct": true,
+       "rationale": "Correct. Hair washing is delayed for 1 week."
+      },
+      {
+       "id": "D",
+       "text": "Resume jogging 2 weeks after the surgery",
+       "correct": false,
+       "rationale": "Strenuous activity is avoided for 3 months."
+      },
+      {
+       "id": "E",
+       "text": "Report sudden sharp pain in the eye",
+       "correct": true,
+       "rationale": "Correct. Sudden sharp eye pain after surgery is reported."
+      }
+     ],
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+     ],
+     "takeaway": "",
+     "strategy": "Step 1: treat each option as true or false against the postoperative restrictions.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-074",
+     "type": "multiple_choice",
+     "stem": "A client calls the clinic and says, \"It looks like a curtain is coming down over my right eye. It does not hurt.\" Which response by the nurse is best?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"Rest your eye today and call back if you develop any pain\"",
+       "correct": false,
+       "rationale": "Detachment is painless, so waiting for pain delays treatment."
+      },
+      {
+       "id": "B",
+       "text": "\"I can schedule you for the first opening later this week\"",
+       "correct": false,
+       "rationale": "Vision is lost if the detachment is not repaired at once."
+      },
+      {
+       "id": "C",
+       "text": "\"Place a warm compress on the eye and lie down for an hour\"",
+       "correct": false,
+       "rationale": "A compress does not treat a detachment and delays care."
+      },
+      {
+       "id": "D",
+       "text": "\"You need to be examined right away. This is an emergency\"",
+       "correct": true,
+       "rationale": "Correct. A curtain over the visual field with no pain is retinal detachment, a medical emergency that needs immediate repair to save vision."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. No pain does not mean no emergency. Choose the response that protects vision.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-075",
+     "type": "multiple_choice",
+     "stem": "The nurse assesses a client 1 day after laser repair of a detached left retina. Which finding does the nurse report to the health care provider immediately?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Mild swelling of the left eyelid",
+       "correct": false,
+       "rationale": "Eyelid swelling is expected and is treated with ice packs."
+      },
+      {
+       "id": "B",
+       "text": "Blurred vision in the left eye",
+       "correct": false,
+       "rationale": "Transient blurred vision is expected after laser surgery."
+      },
+      {
+       "id": "C",
+       "text": "Anxiety about losing eyesight",
+       "correct": false,
+       "rationale": "This needs emotional support, but a physical complication comes first."
+      },
+      {
+       "id": "D",
+       "text": "Sudden sharp pain in the left eye",
+       "correct": true,
+       "rationale": "Correct. Sudden sharp eye pain after surgery is a finding to report, along with fever and eye discharge."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 3 and Step 5: physical before psychosocial, and unexpected before expected.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    }
+   ]
+  },
+  {
+   "id": "hearing-impairment",
+   "title": "Hearing Impairment",
+   "questions": [
+    {
+     "id": "exam4-002",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for an older adult client who is hard of hearing. Which activity is most important to include in the client's plan of care?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Provide intellectual challenges",
+       "correct": false,
+       "rationale": "Intellectual stimulation is helpful but does not address the main complication of hearing loss, which is withdrawal from other people."
+      },
+      {
+       "id": "B",
+       "text": "Use sign language to communicate",
+       "correct": false,
+       "rationale": "Sign language is for clients who already use it. An older adult who is hard of hearing usually does not know it."
+      },
+      {
+       "id": "C",
+       "text": "Schedule visits with the client's family",
+       "correct": false,
+       "rationale": "Family visits are the right idea but too narrow, and the nurse scheduling them does less than encouraging interaction in general."
+      },
+      {
+       "id": "D",
+       "text": "Encourage social interactions",
+       "correct": true,
+       "rationale": "Correct. Social isolation and loneliness are the complications of hearing loss, so encouraging social interaction does the most good."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 5: all options are implementations with no physical need at stake, so compare outcomes. Preventing social isolation does the most good.",
+     "coverage": "Psychosocial Integrity"
+    },
+    {
+     "id": "exam4-009",
+     "type": "multiple_choice",
+     "stem": "The nurse cares for an older adult client with a documented hearing impairment. When communicating with the client, it is important for the nurse to take which action?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Face the client and speak clearly and at a normal pace",
+       "correct": true,
+       "rationale": "Correct. Facing the client lets the client see the lips and face, and clear speech at a normal pace is easiest to follow."
+      },
+      {
+       "id": "B",
+       "text": "Speak loudly and exaggerate lip movements",
+       "correct": false,
+       "rationale": "Shouting distorts sound and exaggerated lip movements make speechreading harder."
+      },
+      {
+       "id": "C",
+       "text": "Avoid using facial expressions, gestures, and other nonverbal cues",
+       "correct": false,
+       "rationale": "Nonverbal cues help the client understand, so they are used, not avoided."
+      },
+      {
+       "id": "D",
+       "text": "Ask the client, \"Do you understand?\" to check for understanding",
+       "correct": false,
+       "rationale": "Checking understanding is the right idea done the wrong way. A yes or no question invites a nod. The nurse asks the client to repeat the message."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 5: compare outcomes. Only one option improves what the client can see and hear without distorting it.",
+     "coverage": "Psychosocial Integrity"
+    },
+    {
+     "id": "exam4-013",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client diagnosed with sensorineural hearing loss. Which is the most important consideration for the nurse when communicating with the client who is hearing impaired?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Provide all information and instructions to the client in written form",
+       "correct": false,
+       "rationale": "Writing helps some clients, but the word all is too absolute and assumes the client can read and prefers it."
+      },
+      {
+       "id": "B",
+       "text": "Ease the client's anxiety by appearing to understand everything the client attempts to communicate",
+       "correct": false,
+       "rationale": "Pretending to understand is dishonest and leads to missed information."
+      },
+      {
+       "id": "C",
+       "text": "Determine the client's preferred method of communication",
+       "correct": true,
+       "rationale": "Correct. The nurse assesses first. Knowing how the client prefers to communicate guides every other choice."
+      },
+      {
+       "id": "D",
+       "text": "Provide a setting for communication with multiple sounds in order to stimulate the sensorineural hearing apparatus",
+       "correct": false,
+       "rationale": "Background noise makes hearing harder. A quiet, well-lit room is used."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 2: assessment or implementation. Only one option is an assessment, and the nurse needs that information before acting.",
+     "coverage": "Psychosocial Integrity"
+    },
+    {
+     "id": "exam4-036",
+     "type": "multiple_choice",
+     "stem": "The nurse teaches a client about care of a new hearing aid. Which statement by the client indicates a need for further teaching?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"I will leave the battery in the aid overnight so it is ready\"",
+       "correct": true,
+       "rationale": "Correct. This statement is wrong. The battery is removed or disconnected when the aid is not in use."
+      },
+      {
+       "id": "B",
+       "text": "\"I will wipe the hearing aid with a soft cloth to clean it\"",
+       "correct": false,
+       "rationale": "A correct statement. The aid is cleaned with a soft cloth."
+      },
+      {
+       "id": "C",
+       "text": "\"I will apply my hairspray before I put the hearing aid in\"",
+       "correct": false,
+       "rationale": "A correct statement. Hairspray and perfume are not used while wearing the aid."
+      },
+      {
+       "id": "D",
+       "text": "\"I will change the batteries in my hearing aid every week\"",
+       "correct": false,
+       "rationale": "A correct statement. Batteries are changed at least weekly."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 2 hint words: need for further teaching. Pick the WRONG statement.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-037",
+     "type": "multiple_choice",
+     "stem": "The nurse assesses an older adult client diagnosed with presbycusis. Which finding does the nurse expect?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Difficulty telling apart words with high-pitched consonants in a group",
+       "correct": true,
+       "rationale": "Correct. Presbycusis is bilateral, progressive sensorineural loss. High-pitched tones go first, and background noise makes speech harder to follow."
+      },
+      {
+       "id": "B",
+       "text": "Sudden loss of hearing in one ear that began earlier in the week",
+       "correct": false,
+       "rationale": "Presbycusis is gradual and bilateral. Sudden loss in one ear is a different problem."
+      },
+      {
+       "id": "C",
+       "text": "Difficulty hearing low-pitched voices while high tones are clear",
+       "correct": false,
+       "rationale": "This reverses the pattern. High-pitched tones are lost first."
+      },
+      {
+       "id": "D",
+       "text": "Hearing loss that results from a fixed stapes in the middle ear",
+       "correct": false,
+       "rationale": "This describes otosclerosis, a conductive loss, not presbycusis."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Check each option against bilateral, progressive, high-pitched, sensorineural.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-038",
+     "type": "multiple_choice",
+     "stem": "The nurse reviews the health history of four clients. Which client does the nurse identify as most at risk for hearing loss?",
+     "options": [
+      {
+       "id": "A",
+       "text": "A client who wears reading glasses and is 45 years old",
+       "correct": false,
+       "rationale": "Vision changes and this age are not risk factors for hearing loss."
+      },
+      {
+       "id": "B",
+       "text": "A client who has worked around loud machinery for 25 years",
+       "correct": true,
+       "rationale": "Correct. Long-term exposure to loud noise damages the hair cells of the inner ear, and they do not grow back."
+      },
+      {
+       "id": "C",
+       "text": "A client who swims at a community pool twice each week",
+       "correct": false,
+       "rationale": "Swimming is not listed as a risk factor for hearing loss."
+      },
+      {
+       "id": "D",
+       "text": "A client who takes a daily vitamin and walks every day",
+       "correct": false,
+       "rationale": "These habits do not raise the risk of hearing loss."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Look for a known cause of sensorineural loss.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-039",
+     "type": "multiple_choice",
+     "stem": "The nurse supervises a nursing student who is interviewing an older adult client with hearing loss. Which action by the student requires the nurse to intervene?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Stands directly in front of the client in a room that is well lit",
+       "correct": false,
+       "rationale": "This is correct positioning for a client with hearing loss."
+      },
+      {
+       "id": "B",
+       "text": "Holds the clipboard in front of the mouth while reading the questions",
+       "correct": true,
+       "rationale": "Correct. Hands and objects are kept away from the mouth so the client can see the speaker's lips and face."
+      },
+      {
+       "id": "C",
+       "text": "Asks the client to repeat the discharge instructions back",
+       "correct": false,
+       "rationale": "Asking the client to repeat statements confirms understanding."
+      },
+      {
+       "id": "D",
+       "text": "Writes the name of the new medication on paper for the client",
+       "correct": false,
+       "rationale": "Writing the message is appropriate when the client can read."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Find the action that blocks communication.",
+     "coverage": "Safe and Effective Care Environment: Management of Care"
+    },
+    {
+     "id": "exam4-040",
+     "type": "multiple_choice",
+     "stem": "An older adult client tells the nurse, \"I stopped going to my card group because I cannot follow what anyone is saying.\" Which action is most important for the nurse to take?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Refers the client to an audiologist for a hearing test",
+       "correct": true,
+       "rationale": "Correct. The degree of hearing loss has not been measured. Assessment by an audiologist comes before choosing a treatment."
+      },
+      {
+       "id": "B",
+       "text": "Encourages the client to return to the card group this week",
+       "correct": false,
+       "rationale": "Social interaction is the goal, but returning without help for the hearing loss repeats the same problem."
+      },
+      {
+       "id": "C",
+       "text": "Teaches the client that hearing aids can restore hearing",
+       "correct": false,
+       "rationale": "Hearing aids may help, but the loss has not been evaluated and this promises a result."
+      },
+      {
+       "id": "D",
+       "text": "Suggests that the client ask the group to speak louder",
+       "correct": false,
+       "rationale": "Speaking louder distorts sound and does not address the cause."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 2: assess before implementing. The hearing loss has not been evaluated yet.",
+     "coverage": "Psychosocial Integrity"
+    }
+   ]
+  },
+  {
+   "id": "integument-impaired",
+   "title": "Integument: Impaired",
+   "questions": [
+    {
+     "id": "exam4-007",
+     "type": "multiple_choice",
+     "stem": "The nurse is providing education to a client with a new diagnosis of psoriasis. Which information does the nurse include about the condition?",
+     "options": [
+      {
+       "id": "A",
+       "text": "It is a chronic autoimmune reaction",
+       "correct": true,
+       "rationale": "Correct. Psoriasis is a chronic, noninfectious, autoimmune, inflammatory skin disease."
+      },
+      {
+       "id": "B",
+       "text": "It is an acute infectious process",
+       "correct": false,
+       "rationale": "Psoriasis is chronic, not acute, and it is not infectious."
+      },
+      {
+       "id": "C",
+       "text": "It is caused by a virus",
+       "correct": false,
+       "rationale": "Psoriasis is not caused by a virus and is not contagious."
+      },
+      {
+       "id": "D",
+       "text": "It is due to a chronic fungal infection",
+       "correct": false,
+       "rationale": "The word chronic is right, but the cause is autoimmune, not fungal."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. This is a knowledge question, and three options call psoriasis an infection.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-015",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a child who has a macular rash with open vesicles. The client is prescribed oatmeal baths. Which is the purpose of an oatmeal bath?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Decreases itching",
+       "correct": true,
+       "rationale": "Correct. A tepid oatmeal bath soothes the skin and relieves pruritus, which reduces scratching and further breakdown."
+      },
+      {
+       "id": "B",
+       "text": "Cleanses the area",
+       "correct": false,
+       "rationale": "Any bath cleanses, but that is not why oatmeal is prescribed."
+      },
+      {
+       "id": "C",
+       "text": "Debrides the rash",
+       "correct": false,
+       "rationale": "Oatmeal does not remove tissue, and a vesicular rash is not debrided."
+      },
+      {
+       "id": "D",
+       "text": "Reduces bacteria on the skin",
+       "correct": false,
+       "rationale": "Oatmeal is not an antibacterial agent."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. The question asks for the purpose of a comfort measure for itching skin.",
+     "coverage": "Physiological Integrity: Basic Care and Comfort"
+    },
+    {
+     "id": "exam4-051",
+     "type": "multiple_choice",
+     "stem": "The nurse assesses a client diagnosed with psoriasis. Which finding does the nurse expect?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Fluid-filled vesicles in a band on one side of the trunk",
+       "correct": false,
+       "rationale": "Vesicles along one side of the body describe a viral infection, not psoriasis."
+      },
+      {
+       "id": "B",
+       "text": "Honey-colored crusts over open sores around the mouth",
+       "correct": false,
+       "rationale": "Crusted sores describe a bacterial skin infection."
+      },
+      {
+       "id": "C",
+       "text": "A red, ring-shaped patch with a clear center on one arm",
+       "correct": false,
+       "rationale": "A ring-shaped patch describes a fungal infection, and psoriasis is symmetrical."
+      },
+      {
+       "id": "D",
+       "text": "Thick red plaques with silvery white scales on both elbows",
+       "correct": true,
+       "rationale": "Correct. Psoriasis causes thick, itchy, red plaques covered with silvery white scales in a symmetrical pattern on the elbows, knees, scalp and sacrum."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Look for scales and symmetry.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-052",
+     "type": "multiple_choice",
+     "stem": "A client with psoriasis plaques on both arms says, \"Nobody wants to be near me.\" Which action by the nurse is most appropriate?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Tells the client the plaques will clear completely with treatment",
+       "correct": false,
+       "rationale": "Psoriasis is chronic and recurrent, so this is false reassurance."
+      },
+      {
+       "id": "B",
+       "text": "Moves the client to a private room to protect the client's privacy",
+       "correct": false,
+       "rationale": "Isolating the client reinforces the belief that others should stay away."
+      },
+      {
+       "id": "C",
+       "text": "Puts on gloves and a gown before entering the client's room",
+       "correct": false,
+       "rationale": "Protective equipment for a condition that is not infectious signals rejection."
+      },
+      {
+       "id": "D",
+       "text": "Sits beside the client and touches the client's shoulder while talking",
+       "correct": true,
+       "rationale": "Correct. Psoriasis is not infectious. Touching the client demonstrates acceptance and supports self-esteem."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 3: no physical need is at stake, so address the psychosocial need. Choose the action that shows acceptance.",
+     "coverage": "Psychosocial Integrity"
+    },
+    {
+     "id": "exam4-053",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client with severe pruritus caused by hyperbilirubinemia. Which intervention does the nurse implement?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Assists with a hot shower and dries the skin briskly with a towel",
+       "correct": false,
+       "rationale": "Heat and brisk rubbing make itching worse and can excoriate the skin."
+      },
+      {
+       "id": "B",
+       "text": "Applies mittens and wrist restraints so the client cannot scratch",
+       "correct": false,
+       "rationale": "Mittens are appropriate if the client cannot control scratching. Restraints are not the least invasive action."
+      },
+      {
+       "id": "C",
+       "text": "Applies an alcohol-based lotion to the skin after each bath",
+       "correct": false,
+       "rationale": "Alcohol dries the skin and makes itching worse."
+      },
+      {
+       "id": "D",
+       "text": "Assists with a tepid bath and keeps the client's fingernails short",
+       "correct": true,
+       "rationale": "Correct. Soothing tepid baths ease itching, and short nails limit skin damage from scratching."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Choose the least invasive action that relieves itching and protects the skin.",
+     "coverage": "Physiological Integrity: Basic Care and Comfort"
+    },
+    {
+     "id": "exam4-054",
+     "type": "multiple_choice",
+     "stem": "The nurse teaches a client newly diagnosed with psoriasis. Which statement by the client indicates the teaching is understood?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"I should keep my towels separate so my family does not catch it\"",
+       "correct": false,
+       "rationale": "Psoriasis is not infectious."
+      },
+      {
+       "id": "B",
+       "text": "\"Once the antibiotic is finished, the patches should be gone\"",
+       "correct": false,
+       "rationale": "Psoriasis is autoimmune, not a bacterial infection."
+      },
+      {
+       "id": "C",
+       "text": "\"I should scrub the patches hard to remove all of the scales\"",
+       "correct": false,
+       "rationale": "Plaques are scrubbed gently with a soft brush."
+      },
+      {
+       "id": "D",
+       "text": "\"This is a long-term condition, and the patches can come back\"",
+       "correct": true,
+       "rationale": "Correct. Psoriasis is chronic and recurrent."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 2 hint words: teaching is understood. Pick the CORRECT statement.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-055",
+     "type": "sata",
+     "stem": "The nurse plans care for a client with a large area of impaired skin integrity. The nurse monitors the client for which problems? (Select all that apply.)",
+     "options": [
+      {
+       "id": "A",
+       "text": "Infection",
+       "correct": true,
+       "rationale": "Correct. Loss of the skin barrier raises the risk of infection."
+      },
+      {
+       "id": "B",
+       "text": "Fluid and electrolyte imbalance",
+       "correct": true,
+       "rationale": "Correct. Impaired skin integrity can affect fluid and electrolyte balance."
+      },
+      {
+       "id": "C",
+       "text": "Altered body temperature",
+       "correct": true,
+       "rationale": "Correct. The skin helps regulate body temperature."
+      },
+      {
+       "id": "D",
+       "text": "Hyperbilirubinemia",
+       "correct": false,
+       "rationale": "Hyperbilirubinemia is a cause of pruritus, not a result of impaired skin."
+      },
+      {
+       "id": "E",
+       "text": "Altered self-concept",
+       "correct": true,
+       "rationale": "Correct. Visible skin impairment can affect body image and self-concept."
+      }
+     ],
+     "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+     ],
+     "takeaway": "",
+     "strategy": "Step 1: treat each option as true or false against the functions of intact skin.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    }
+   ]
+  },
+  {
+   "id": "pressure-injury-ulcer",
+   "title": "Pressure Injury (Ulcer)",
+   "questions": [
+    {
+     "id": "exam4-008",
+     "type": "multiple_choice",
+     "stem": "The nurse assesses a client for skin breakdown. Which condition does the nurse identify as a risk factor for the development of a pressure injury?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Excessive skin dryness",
+       "correct": false,
+       "rationale": "Dry skin can crack, but moisture, not dryness, is the skin condition tied to pressure injury."
+      },
+      {
+       "id": "B",
+       "text": "Regular ambulation with a walker",
+       "correct": false,
+       "rationale": "A client who walks regularly relieves pressure, so this lowers risk."
+      },
+      {
+       "id": "C",
+       "text": "Anemia",
+       "correct": true,
+       "rationale": "Correct. Anemia reduces oxygen delivery to tissue, so compressed skin becomes ischemic sooner and heals poorly."
+      },
+      {
+       "id": "D",
+       "text": "Alzheimer disease",
+       "correct": false,
+       "rationale": "The diagnosis alone does not cause pressure injury. Adding immobility or incontinence would be adding facts to the stem."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 1 and do not add facts: pick the option that directly reduces tissue oxygen without assuming anything extra about the client.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-010",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for an older adult client who has a non-blanchable reddened area over the coccyx. Which action by the nurse is most important?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Monitor the reddened area during routine daily bath care",
+       "correct": false,
+       "rationale": "Monitoring is true and necessary, but the injury is already identified. More assessment does not relieve the pressure."
+      },
+      {
+       "id": "B",
+       "text": "Reposition the client at least every 1 to 2 hours",
+       "correct": true,
+       "rationale": "Correct. Non-blanchable redness is a stage 1 pressure injury. Relieving the pressure by frequent repositioning stops further damage."
+      },
+      {
+       "id": "C",
+       "text": "Massage the reddened area four times daily",
+       "correct": false,
+       "rationale": "Massage damages tissue that is already ischemic."
+      },
+      {
+       "id": "D",
+       "text": "Place the client in a semi-reclining position",
+       "correct": false,
+       "rationale": "A semi-reclining position puts weight and shear directly on the coccyx."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 2: the assessment is complete (non-blanchable redness), so implement. Choose the action that removes the cause.",
+     "coverage": "Physiological Integrity: Basic Care and Comfort"
+    },
+    {
+     "id": "exam4-018",
+     "type": "sata",
+     "stem": "The nurse provides care for a client diagnosed with a spinal cord injury. Which factor increases the nurse's concern about impaired skin integrity? (Select all that apply.)",
+     "options": [
+      {
+       "id": "A",
+       "text": "The client's inability to move to change pressure on the skin",
+       "correct": true,
+       "rationale": "Correct. Immobility leaves pressure on the same skin, which causes ischemia."
+      },
+      {
+       "id": "B",
+       "text": "The client's use of straight catheterization",
+       "correct": false,
+       "rationale": "Intermittent catheterization keeps urine off the skin, so it protects the skin."
+      },
+      {
+       "id": "C",
+       "text": "The client's nutritional intake is high in protein, vitamins, and calories",
+       "correct": false,
+       "rationale": "This intake supports tissue repair and lowers risk."
+      },
+      {
+       "id": "D",
+       "text": "The client is unable to sense if the skin is being pinched",
+       "correct": true,
+       "rationale": "Correct. Without sensation the client cannot feel pressure or pinching and will not shift position."
+      },
+      {
+       "id": "E",
+       "text": "The client's insensitivity to heat and cold",
+       "correct": true,
+       "rationale": "Correct. A client who cannot feel temperature can be burned or frozen without knowing it."
+      }
+     ],
+     "answer": [
+      "A",
+      "D",
+      "E"
+     ],
+     "takeaway": "",
+     "strategy": "Step 1: treat each option as true or false. The risks are impaired mobility and impaired sensory perception.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-020",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client diagnosed with an uninfected stage 3 pressure injury over the coccyx. Which intervention is most appropriate for the nurse to implement?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Massage the reddened tissue surrounding the wound margin",
+       "correct": false,
+       "rationale": "Massage damages fragile tissue around the wound."
+      },
+      {
+       "id": "B",
+       "text": "Apply a transparent film dressing directly over the wound",
+       "correct": false,
+       "rationale": "This is the right kind of action for a shallower wound. A film dressing does not absorb drainage or fill a full-thickness wound."
+      },
+      {
+       "id": "C",
+       "text": "Irrigate the wound with a sodium hypochlorite solution",
+       "correct": false,
+       "rationale": "Sodium hypochlorite is toxic to healing tissue and is not used on a clean, uninfected wound."
+      },
+      {
+       "id": "D",
+       "text": "Irrigate the wound with 0.9% sodium chloride and apply a hydrocolloid dressing",
+       "correct": true,
+       "rationale": "Correct. Normal saline cleans without harming tissue, and a hydrocolloid dressing keeps the wound moist and protected."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 5: all options are implementations. Choose the one that helps healing without harming new tissue.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-021",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client who has a long arm cast applied. The client reports localized discomfort under the cast. Which finding indicates to the nurse the development of a pressure injury?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Pain over a bony prominence under the cast",
+       "correct": true,
+       "rationale": "Correct. A pressure injury forms where the cast presses soft tissue against a bony prominence, and localized pain or burning there is the early sign."
+      },
+      {
+       "id": "B",
+       "text": "Numbness and tingling in the affected hand",
+       "correct": false,
+       "rationale": "Numbness and tingling point to nerve compression or compartment syndrome."
+      },
+      {
+       "id": "C",
+       "text": "Swelling of the fingers on the casted extremity",
+       "correct": false,
+       "rationale": "Swelling of the fingers points to edema or impaired venous return."
+      },
+      {
+       "id": "D",
+       "text": "Coolness of the digits distal to the cast",
+       "correct": false,
+       "rationale": "Cool digits point to impaired arterial circulation."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Three options are neurovascular problems, a similar but different complication of a cast.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-022",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client diagnosed with a sacral pressure injury. The nurse observes full-thickness tissue loss with visible adipose tissue but no exposed muscle or bone. How does the nurse classify this pressure injury?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Stage 1",
+       "correct": false,
+       "rationale": "Stage 1 is intact skin with redness that does not blanch."
+      },
+      {
+       "id": "B",
+       "text": "Stage 2",
+       "correct": false,
+       "rationale": "Stage 2 is partial-thickness skin loss."
+      },
+      {
+       "id": "C",
+       "text": "Stage 3",
+       "correct": true,
+       "rationale": "Correct. Stage 3 is full-thickness skin loss. Fat may be visible, but muscle and bone are not."
+      },
+      {
+       "id": "D",
+       "text": "Stage 4",
+       "correct": false,
+       "rationale": "Stage 4 is full-thickness skin and tissue loss with exposed muscle, tendon or bone."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Match the depth described in the stem to the stage definition.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-056",
+     "type": "multiple_choice",
+     "stem": "The nurse turns a client and notes a reddened area on the right heel. When the nurse presses on the area, it turns pale and the redness returns. How does the nurse interpret this finding?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Reactive hyperemia that should resolve once pressure is relieved",
+       "correct": true,
+       "rationale": "Correct. Redness that blanches is reactive hyperemia, the normal return of blood flow after pressure is removed."
+      },
+      {
+       "id": "B",
+       "text": "A stage 1 pressure injury that requires a dressing",
+       "correct": false,
+       "rationale": "Stage 1 is redness that does not blanch."
+      },
+      {
+       "id": "C",
+       "text": "A stage 2 pressure injury with partial-thickness loss",
+       "correct": false,
+       "rationale": "Stage 2 involves a break in the skin, and this skin is intact."
+      },
+      {
+       "id": "D",
+       "text": "Poor circulation that will improve with heel massage",
+       "correct": false,
+       "rationale": "Reddened areas are not massaged."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 2: assessment. Interpret the blanching before choosing any action.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-057",
+     "type": "multiple_choice",
+     "stem": "The nurse observes assistive personnel (AP) caring for a client on bed rest. Which action by the AP requires the nurse to intervene?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Uses a draw sheet with a second person to turn the client",
+       "correct": false,
+       "rationale": "A draw sheet is the correct way to reposition without shear."
+      },
+      {
+       "id": "B",
+       "text": "Dries the skin thoroughly after an episode of incontinence",
+       "correct": false,
+       "rationale": "Keeping moisture away from the skin prevents breakdown."
+      },
+      {
+       "id": "C",
+       "text": "Offers the client fluids each time the client is turned",
+       "correct": false,
+       "rationale": "Adequate fluids support skin integrity."
+      },
+      {
+       "id": "D",
+       "text": "Pulls the client up in bed by lifting under both of the client's arms",
+       "correct": true,
+       "rationale": "Correct. Pulling the client drags the skin and causes shear and friction. A draw sheet is used to reposition the client."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Find the action that harms the skin.",
+     "coverage": "Safe and Effective Care Environment: Management of Care"
+    },
+    {
+     "id": "exam4-058",
+     "type": "multiple_choice",
+     "stem": "The nurse admits a client from home and finds a stage 2 pressure injury on the left hip. Which action does the nurse take first?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Obtains a wound culture and sends it to the laboratory",
+       "correct": false,
+       "rationale": "A culture is obtained when there are signs of infection, and none are described."
+      },
+      {
+       "id": "B",
+       "text": "Measures the wound and documents its stage and appearance",
+       "correct": true,
+       "rationale": "Correct. A pressure injury found on admission is staged, measured, photographed and documented before treatment begins."
+      },
+      {
+       "id": "C",
+       "text": "Covers the wound with a dressing to protect the tissue",
+       "correct": false,
+       "rationale": "A dressing is appropriate, but the wound is assessed and documented first."
+      },
+      {
+       "id": "D",
+       "text": "Requests a consultation with the wound care nurse",
+       "correct": false,
+       "rationale": "Collaboration is appropriate after the nurse completes the admission assessment."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 2: assess before implementing. The wound has been found but not yet measured.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-059",
+     "type": "multiple_choice",
+     "stem": "The nurse reviews the histories of four clients. Which client does the nurse identify as most at risk for a pressure injury?",
+     "options": [
+      {
+       "id": "A",
+       "text": "A client with altered consciousness and urinary incontinence who takes a steroid",
+       "correct": true,
+       "rationale": "Correct. Altered level of consciousness, moisture and chronic steroid use are all risk factors for pressure injury."
+      },
+      {
+       "id": "B",
+       "text": "An alert client with diabetes mellitus who walks in the hallway using a cane",
+       "correct": false,
+       "rationale": "Diabetes is a risk factor, but this client is alert and mobile."
+      },
+      {
+       "id": "C",
+       "text": "A client one day after surgery who turns independently and uses a pain pump",
+       "correct": false,
+       "rationale": "This client changes position without help."
+      },
+      {
+       "id": "D",
+       "text": "A client with a long leg cast who moves about the unit on crutches each day",
+       "correct": false,
+       "rationale": "This client is mobile, although the skin under the cast is checked."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Count the risk factors each client actually has without adding any.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-060",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client with a stage 3 pressure injury over the sacrum. The wound has purulent drainage and the client's temperature is 38.6 C. Which prescription does the nurse anticipate?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Apply a hydrocolloid dressing",
+       "correct": false,
+       "rationale": "A hydrocolloid dressing suits a clean, uninfected wound."
+      },
+      {
+       "id": "B",
+       "text": "Massage the skin around the wound",
+       "correct": false,
+       "rationale": "Massage damages tissue and is not done."
+      },
+      {
+       "id": "C",
+       "text": "Reposition the client every 4 hours",
+       "correct": false,
+       "rationale": "Repositioning is needed, but this interval is too long and it does not address the infection."
+      },
+      {
+       "id": "D",
+       "text": "Obtain a wound culture",
+       "correct": true,
+       "rationale": "Correct. A wound culture is obtained when there are signs of infection so the infection can be treated."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Purulent drainage and fever change this from wound care to infection.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    }
+   ]
+  },
+  {
+   "id": "respiratory-chronic-disorders",
+   "title": "Respiratory: Chronic Disorders",
+   "questions": [
+    {
+     "id": "exam4-012",
+     "type": "multiple_choice",
+     "stem": "An adolescent client arrives in the emergency department with an acute asthma attack. Albuterol is given using a nebulizer. Which observation by the nurse best indicates the treatment is effective?",
+     "options": [
+      {
+       "id": "A",
+       "text": "An increase in the client's alertness",
+       "correct": false,
+       "rationale": "Alertness may improve as oxygenation improves, but it is an indirect sign and less specific than the work of breathing."
+      },
+      {
+       "id": "B",
+       "text": "An increase in the client's pulse rate",
+       "correct": false,
+       "rationale": "A faster pulse is an expected adverse effect of albuterol, not evidence that the airways opened."
+      },
+      {
+       "id": "C",
+       "text": "A decrease in the client's blood pressure",
+       "correct": false,
+       "rationale": "A lower blood pressure is not the intended effect of a bronchodilator."
+      },
+      {
+       "id": "D",
+       "text": "A decrease in the client's inspiratory difficulty",
+       "correct": true,
+       "rationale": "Correct. Albuterol is a bronchodilator, so easier breathing is the direct measure of its effect."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 1: the topic is evaluation of a bronchodilator. Match the outcome to the purpose of the medication.",
+     "coverage": "Physiological Integrity: Pharmacological and Parenteral Therapies"
+    },
+    {
+     "id": "exam4-023",
+     "type": "multiple_choice",
+     "stem": "The nurse on the respiratory unit provides care for an adult client diagnosed with asthma. Which medication prescription would the nurse question for the client?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Albuterol",
+       "correct": false,
+       "rationale": "Albuterol is a beta agonist bronchodilator used for asthma."
+      },
+      {
+       "id": "B",
+       "text": "Metoprolol",
+       "correct": true,
+       "rationale": "Correct. Metoprolol is a beta blocker. Beta blockade can cause bronchoconstriction and works against the client's bronchodilators."
+      },
+      {
+       "id": "C",
+       "text": "Theophylline",
+       "correct": false,
+       "rationale": "Theophylline is a xanthine bronchodilator used for asthma."
+      },
+      {
+       "id": "D",
+       "text": "Ipratropium",
+       "correct": false,
+       "rationale": "Ipratropium is an anticholinergic bronchodilator used for asthma."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 2 hint word: question. Look for the one option that is unsafe. Three options open the airway and one can close it.",
+     "coverage": "Physiological Integrity: Pharmacological and Parenteral Therapies"
+    },
+    {
+     "id": "exam4-024",
+     "type": "multiple_choice",
+     "stem": "An adult client diagnosed with asthma is experiencing an acute asthma attack. The nurse expects to auscultate which characteristic sound of breathing for this client?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Murmuring, with \"lub-dub\" sounds",
+       "correct": false,
+       "rationale": "This describes heart sounds."
+      },
+      {
+       "id": "B",
+       "text": "High-pitched musical-like squeaky sounds",
+       "correct": true,
+       "rationale": "Correct. This describes wheezing, the sound of air moving through narrowed airways."
+      },
+      {
+       "id": "C",
+       "text": "High-pitched harsh, loud, blowing sounds",
+       "correct": false,
+       "rationale": "This describes bronchial breath sounds or stridor, not the wheeze of asthma."
+      },
+      {
+       "id": "D",
+       "text": "Low-pitched rubbing or grating sounds",
+       "correct": false,
+       "rationale": "This describes a pleural friction rub."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Reword it as: which description is a wheeze?",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-029",
+     "type": "multiple_choice",
+     "stem": "The nurse teaches an adult client diagnosed with asthma. The nurse determines further teaching is necessary if the client makes which statement?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"My guests are not allowed to smoke in the house\"",
+       "correct": false,
+       "rationale": "A correct statement. Tobacco smoke is a trigger."
+      },
+      {
+       "id": "B",
+       "text": "\"I can no longer rake the leaves or garden like I used to\"",
+       "correct": false,
+       "rationale": "A correct statement. Mold and pollen from leaves and gardens are triggers."
+      },
+      {
+       "id": "C",
+       "text": "\"We are going to have to dust and vacuum more frequently\"",
+       "correct": false,
+       "rationale": "A correct statement. Dust is a trigger."
+      },
+      {
+       "id": "D",
+       "text": "\"Stress does not cause an asthma attack\"",
+       "correct": true,
+       "rationale": "Correct answer because the statement is wrong. Stress and strong emotion can trigger an attack."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 2 hint words: further teaching is necessary. Pick the WRONG statement.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-061",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client admitted with status asthmaticus. The nurse is most concerned if which finding is observed?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Loud wheezes are heard throughout exhalation in all lung fields",
+       "correct": false,
+       "rationale": "Wheezing shows air is still moving through narrowed airways."
+      },
+      {
+       "id": "B",
+       "text": "Wheezing is no longer heard and little air movement is noted",
+       "correct": true,
+       "rationale": "Correct. Absence of air movement signals impending respiratory failure."
+      },
+      {
+       "id": "C",
+       "text": "The client is using accessory muscles and sitting upright in bed",
+       "correct": false,
+       "rationale": "Accessory muscle use is expected during a severe attack."
+      },
+      {
+       "id": "D",
+       "text": "The client coughs up thick mucus that is clear to yellow in color",
+       "correct": false,
+       "rationale": "Thick clear or yellow mucus is expected in status asthmaticus."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 4: ABCs. A quiet chest in a client who is not improving means the airway is closing.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-062",
+     "type": "multiple_choice",
+     "stem": "The nurse teaches a client diagnosed with asthma to use a peak flow meter. Which statement by the client indicates the teaching is understood?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"I take the deepest breath I can, seal my lips, and blow out hard and fast\"",
+       "correct": true,
+       "rationale": "Correct. The client inhales fully, seals the lips around the mouthpiece and exhales as fast and as hard as possible."
+      },
+      {
+       "id": "B",
+       "text": "\"I take the deepest breath I can, seal my lips, and blow out slow and steady\"",
+       "correct": false,
+       "rationale": "This is the right technique with one thing off. The exhalation must be fast and forceful."
+      },
+      {
+       "id": "C",
+       "text": "\"I seal my lips on the mouthpiece and breathe in through it as fast as I can\"",
+       "correct": false,
+       "rationale": "A peak flow meter measures exhalation, not inhalation."
+      },
+      {
+       "id": "D",
+       "text": "\"I breathe normally into the mouthpiece for one minute and read the marker\"",
+       "correct": false,
+       "rationale": "The reading comes from one forceful exhalation."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 2 hint words: teaching is understood. Pick the CORRECT statement.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-063",
+     "type": "multiple_choice",
+     "stem": "The nurse obtains a history from a client whose asthma has recently become worse. Which information is most likely related to the change?",
+     "options": [
+      {
+       "id": "A",
+       "text": "The client adopted a cat from a shelter 3 weeks ago",
+       "correct": true,
+       "rationale": "Correct. Animal dander is a common asthma trigger, and the timing matches the change."
+      },
+      {
+       "id": "B",
+       "text": "The client started eating more fresh vegetables",
+       "correct": false,
+       "rationale": "Fresh vegetables are not a typical asthma trigger."
+      },
+      {
+       "id": "C",
+       "text": "The client replaced carpet with hardwood floors",
+       "correct": false,
+       "rationale": "Removing carpet lowers dust, which reduces triggers."
+      },
+      {
+       "id": "D",
+       "text": "The client stopped allowing smoking in the home",
+       "correct": false,
+       "rationale": "Removing tobacco smoke reduces triggers."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Look for a new exposure to a known trigger.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-064",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client who develops bronchospasm with frequent coughing and wheezing. Which goal is the priority?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Reduce the client's anxiety",
+       "correct": false,
+       "rationale": "Anxiety is addressed after the physical need."
+      },
+      {
+       "id": "B",
+       "text": "Increase the client's fluid intake",
+       "correct": false,
+       "rationale": "Fluids thin secretions but do not open a narrowed airway now."
+      },
+      {
+       "id": "C",
+       "text": "Maintain a patent airway",
+       "correct": true,
+       "rationale": "Correct. The priority of care in bronchospasm is a patent airway."
+      },
+      {
+       "id": "D",
+       "text": "Teach avoidance of triggers",
+       "correct": false,
+       "rationale": "Teaching waits until the acute problem is controlled."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 4: ABCs. Airway comes first.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-065",
+     "type": "multiple_choice",
+     "stem": "The nurse receives prescriptions for a client admitted with status asthmaticus. Which prescription does the nurse implement first?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Start an infusion of IV fluids",
+       "correct": false,
+       "rationale": "Fluids correct dehydration but do not open the airway."
+      },
+      {
+       "id": "B",
+       "text": "Administer an IV corticosteroid",
+       "correct": false,
+       "rationale": "Corticosteroids reduce inflammation but take longer to work than a bronchodilator."
+      },
+      {
+       "id": "C",
+       "text": "Administer albuterol by nebulizer",
+       "correct": true,
+       "rationale": "Correct. An inhaled short-acting beta 2 agonist opens the airways and is the first treatment."
+      },
+      {
+       "id": "D",
+       "text": "Obtain an arterial blood gas",
+       "correct": false,
+       "rationale": "Blood gases confirm the client's status, but treatment of the airway is not delayed for them."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 4: ABCs. All four are correct prescriptions, so the one that opens the airway comes first.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    }
+   ]
+  },
+  {
+   "id": "respiratory-copd",
+   "title": "Respiratory: COPD",
+   "questions": [
+    {
+     "id": "exam4-003",
+     "type": "multiple_choice",
+     "stem": "The home health care nurse visits a client diagnosed with chronic bronchitis. The nurse notes the client is weak and congested. It is most important for the nurse to make which statement to the client?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"Cough as much as you can. The secretions have to come out!\"",
+       "correct": false,
+       "rationale": "Constant coughing exhausts a client who is already weak and can collapse the small airways without moving secretions."
+      },
+      {
+       "id": "B",
+       "text": "\"If you hold a pillow against your abdomen, the coughing will be easier\"",
+       "correct": false,
+       "rationale": "Splinting with a pillow is the right action for a different client, one with an abdominal or chest incision."
+      },
+      {
+       "id": "C",
+       "text": "\"Take 3 or 4 deep breaths, and as you exhale the last breath, cough 3 times\"",
+       "correct": true,
+       "rationale": "Correct. This is controlled coughing. Deep breaths get air behind the secretions and a few coughs on one exhalation move them out while conserving energy."
+      },
+      {
+       "id": "D",
+       "text": "\"It does not matter when you cough. Just do it correctly\"",
+       "correct": false,
+       "rationale": "This gives no usable instruction, and timing does matter for effective coughing."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 4 and Step 5: the problem is airway clearance. Choose the statement that actually clears the airway with the least energy cost.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-004",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client diagnosed with chronic obstructive pulmonary disease (COPD) who is drowsy and unable to expectorate secretions. Which initial action does the nurse take?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Encourages fluids to thin respiratory secretions",
+       "correct": false,
+       "rationale": "Fluids thin secretions over hours, and a drowsy client is at risk of aspirating them. It does not clear the airway now."
+      },
+      {
+       "id": "B",
+       "text": "Administers high-flow oxygen via mask",
+       "correct": false,
+       "rationale": "Oxygen is the right idea at the wrong setting. A client with COPD receives low-flow oxygen, and oxygen does not remove the secretions blocking the airway."
+      },
+      {
+       "id": "C",
+       "text": "Performs nasotracheal suctioning",
+       "correct": true,
+       "rationale": "Correct. The client cannot clear the airway and is too drowsy to cooperate, so the nurse clears it by suctioning. Airway comes first."
+      },
+      {
+       "id": "D",
+       "text": "Encourages the client to perform pursed-lip breathing",
+       "correct": false,
+       "rationale": "Pursed-lip breathing helps with air trapping, but a drowsy client cannot perform it and it does not remove secretions."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 4: ABCs. The data are complete (drowsy, cannot clear secretions), so act, and airway comes before breathing.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-014",
+     "type": "multiple_choice",
+     "stem": "The nurse teaches pursed-lip breathing to a client diagnosed with chronic obstructive pulmonary disease (COPD). The nurse understands which is the best description of the underlying purpose of this type of breathing?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Prevent air trapping",
+       "correct": true,
+       "rationale": "Correct. Exhaling against pursed lips creates resistance, slows the exhale and keeps the airways open so air can leave."
+      },
+      {
+       "id": "B",
+       "text": "Strengthen oral musculature",
+       "correct": false,
+       "rationale": "The lips are used but strengthening them is not the purpose."
+      },
+      {
+       "id": "C",
+       "text": "Promote deep relaxation",
+       "correct": false,
+       "rationale": "The technique can ease anxiety, but relaxation is a side benefit, not the underlying purpose."
+      },
+      {
+       "id": "D",
+       "text": "Enhance inspiratory capacity",
+       "correct": false,
+       "rationale": "This is the right idea with one thing off. The technique works on exhalation, not inspiration."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Pursed-lip breathing is a way of exhaling, so the answer must be about getting air out.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-030",
+     "type": "multiple_choice",
+     "stem": "The nurse obtains a history from a client admitted to the hospital with chronic obstructive pulmonary disease (COPD). The nurse identifies which factor is most likely related to the client developing COPD?",
+     "options": [
+      {
+       "id": "A",
+       "text": "The client smoked for more than 30 years",
+       "correct": true,
+       "rationale": "Correct. Cigarette smoking is the primary cause of COPD."
+      },
+      {
+       "id": "B",
+       "text": "The client worked in an orchard for 20 years",
+       "correct": false,
+       "rationale": "Occupational dusts and chemicals are a real risk factor, but a less likely cause than 30 years of smoking."
+      },
+      {
+       "id": "C",
+       "text": "The client drinks four cans of beer a day",
+       "correct": false,
+       "rationale": "Alcohol use does not cause COPD."
+      },
+      {
+       "id": "D",
+       "text": "The client had pancreatitis four times",
+       "correct": false,
+       "rationale": "Pancreatitis does not cause COPD."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 2 hint words: most likely. Two options are plausible, so choose the primary cause.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-041",
+     "type": "multiple_choice",
+     "stem": "A client diagnosed with chronic obstructive pulmonary disease (COPD) is prescribed oxygen at 2 L/min by nasal cannula. A family member increased the flow to 6 L/min. The client is now drowsy with a respiratory rate of 8 breaths/min. Which action does the nurse take first?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Removes the nasal cannula until the client is alert",
+       "correct": false,
+       "rationale": "This is the right idea taken too far. The client still needs oxygen at the prescribed low rate."
+      },
+      {
+       "id": "B",
+       "text": "Obtains a sample for arterial blood gas analysis",
+       "correct": false,
+       "rationale": "Blood gases are needed, but the cause is known and can be corrected at once."
+      },
+      {
+       "id": "C",
+       "text": "Returns the oxygen flow rate to the prescribed 2 L/min",
+       "correct": true,
+       "rationale": "Correct. A client with chronic pulmonary disease receives a low flow rate. High concentrations can lead to carbon dioxide narcosis, shown by drowsiness and slow breathing."
+      },
+      {
+       "id": "D",
+       "text": "Teaches the family not to adjust the flow meter",
+       "correct": false,
+       "rationale": "Teaching is needed, but a psychosocial action comes after the physical problem is corrected."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 2 and Step 4: the data are complete, so act. Breathing comes first.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-042",
+     "type": "multiple_choice",
+     "stem": "The nurse assesses a client diagnosed with emphysema. Which finding does the nurse expect?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Copious purulent sputum with swelling of both ankles",
+       "correct": false,
+       "rationale": "This is the picture of chronic bronchitis, the similar condition."
+      },
+      {
+       "id": "B",
+       "text": "Low-pitched wheezes that clear after the client coughs",
+       "correct": false,
+       "rationale": "Rhonchi that clear with coughing point to mucus in the airways, as in chronic bronchitis."
+      },
+      {
+       "id": "C",
+       "text": "Increased anterior-posterior chest diameter with scant sputum",
+       "correct": true,
+       "rationale": "Correct. Air trapping in emphysema produces a barrel chest, and sputum production is scant."
+      },
+      {
+       "id": "D",
+       "text": "Slow, deep respirations with a prolonged inspiration",
+       "correct": false,
+       "rationale": "Emphysema causes rapid, shallow breathing with difficulty exhaling."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Separate emphysema from chronic bronchitis.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-043",
+     "type": "multiple_choice",
+     "stem": "The nurse teaches a client diagnosed with chronic bronchitis about self-care at home. Which statement by the client indicates a need for further teaching?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"I will eat small meals several times during the day\"",
+       "correct": false,
+       "rationale": "A correct statement. Small, frequent meals reduce oxygen demand."
+      },
+      {
+       "id": "B",
+       "text": "\"I will cut back on fluids so that I make less mucus\"",
+       "correct": true,
+       "rationale": "Correct. This statement is wrong. Fluids are increased to liquefy secretions so they can be coughed out."
+      },
+      {
+       "id": "C",
+       "text": "\"I will get the influenza and pneumococcal vaccines\"",
+       "correct": false,
+       "rationale": "A correct statement. Vaccines help prevent respiratory infections."
+      },
+      {
+       "id": "D",
+       "text": "\"I will pace my chores and rest between my activities\"",
+       "correct": false,
+       "rationale": "A correct statement. Pacing activity lowers oxygen demand."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 2 hint words: need for further teaching. Pick the WRONG statement.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-044",
+     "type": "multiple_choice",
+     "stem": "The nurse teaches pursed-lip breathing to a client diagnosed with emphysema. Which instruction does the nurse give?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"Breathe in through your nose, then blow out fast and hard through pursed lips\"",
+       "correct": false,
+       "rationale": "This is the right technique with one thing off. A forceful exhale collapses the airways."
+      },
+      {
+       "id": "B",
+       "text": "\"Breathe in slowly through pursed lips, then breathe out through your nose\"",
+       "correct": false,
+       "rationale": "This reverses the technique. The lips are pursed on exhalation."
+      },
+      {
+       "id": "C",
+       "text": "\"Breathe in through your nose, then breathe out slowly through pursed lips\"",
+       "correct": true,
+       "rationale": "Correct. Pursed-lip breathing is a method of exhaling. The resistance slows the exhale and keeps the airways open."
+      },
+      {
+       "id": "D",
+       "text": "\"Breathe in deeply, hold the breath for 10 seconds, then exhale normally\"",
+       "correct": false,
+       "rationale": "Breath holding does not create the resistance on exhalation that keeps airways open."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. The technique is about a slow exhale against resistance.",
+     "coverage": "Physiological Integrity: Basic Care and Comfort"
+    },
+    {
+     "id": "exam4-045",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client with a long history of chronic obstructive pulmonary disease (COPD). Which finding is most important for the nurse to report to the health care provider?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Use of accessory muscles when the client is walking",
+       "correct": false,
+       "rationale": "Accessory muscle use with exertion is an expected finding in COPD."
+      },
+      {
+       "id": "B",
+       "text": "A productive cough that is worse in the early morning",
+       "correct": false,
+       "rationale": "A chronic productive cough is expected with chronic bronchitis."
+      },
+      {
+       "id": "C",
+       "text": "New swelling of both ankles with distended neck veins",
+       "correct": true,
+       "rationale": "Correct. These are signs of right-sided heart failure (cor pulmonale), a complication of COPD."
+      },
+      {
+       "id": "D",
+       "text": "An increased anterior-posterior diameter of the chest",
+       "correct": false,
+       "rationale": "A barrel chest is an expected long-term change in emphysema."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Three findings are expected for the disease. One is a new complication.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    }
+   ]
+  },
+  {
+   "id": "respiratory-infections",
+   "title": "Respiratory: Infections",
+   "questions": [
+    {
+     "id": "exam4-017",
+     "type": "multiple_choice",
+     "stem": "The nurse identifies which client is most at risk for developing aspiration pneumonia?",
+     "options": [
+      {
+       "id": "A",
+       "text": "A client with indwelling urinary catheter",
+       "correct": false,
+       "rationale": "A urinary catheter raises the risk of urinary tract infection, not aspiration."
+      },
+      {
+       "id": "B",
+       "text": "A client with a nasogastric (NG) tube",
+       "correct": true,
+       "rationale": "Correct. An NG tube holds the lower esophageal sphincter open and allows reflux of stomach contents, which can be aspirated."
+      },
+      {
+       "id": "C",
+       "text": "A client diagnosed with psoriasis",
+       "correct": false,
+       "rationale": "Psoriasis is a skin disease with no effect on swallowing or the airway."
+      },
+      {
+       "id": "D",
+       "text": "A client diagnosed with Paget disease",
+       "correct": false,
+       "rationale": "Paget disease affects bone and does not impair swallowing."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 4: ABCs. Only one option involves a route for stomach contents to reach the airway.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-026",
+     "type": "multiple_choice",
+     "stem": "A client is admitted to the hospital with a diagnosis of acute right upper lobe pneumonia. The client has a history of chronic bronchitis. Which symptom does the nurse expect to see?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Moist, cool skin",
+       "correct": false,
+       "rationale": "Pneumonia causes fever, so the skin is hot and flushed."
+      },
+      {
+       "id": "B",
+       "text": "Rust-colored sputum",
+       "correct": true,
+       "rationale": "Correct. A productive cough with purulent or rust-colored sputum is a classic finding in pneumonia."
+      },
+      {
+       "id": "C",
+       "text": "Bradycardia",
+       "correct": false,
+       "rationale": "Fever and hypoxia cause tachycardia."
+      },
+      {
+       "id": "D",
+       "text": "Decreased respiratory rate",
+       "correct": false,
+       "rationale": "Pneumonia causes tachypnea."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Three options are the opposite of what infection and hypoxia cause.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-066",
+     "type": "multiple_choice",
+     "stem": "The nurse assesses a client diagnosed with sinusitis. Which finding does the nurse expect?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Sneezing with clear, watery nasal discharge",
+       "correct": false,
+       "rationale": "This describes viral rhinitis, the common cold."
+      },
+      {
+       "id": "B",
+       "text": "Facial pressure with purulent nasal discharge",
+       "correct": true,
+       "rationale": "Correct. Sinusitis causes facial pressure, a stuffy nose, purulent discharge, headache, ear pain and dental pain."
+      },
+      {
+       "id": "C",
+       "text": "Coughing spells that end with a whoop",
+       "correct": false,
+       "rationale": "This describes pertussis."
+      },
+      {
+       "id": "D",
+       "text": "Pleuritic chest pain with rust-colored sputum",
+       "correct": false,
+       "rationale": "This describes pneumonia."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Three options belong to other respiratory infections.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-067",
+     "type": "multiple_choice",
+     "stem": "The nurse teaches a client diagnosed with pneumonia who is going home on an oral antibiotic. Which statement by the client indicates a need for further teaching?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"I will stop the antibiotic when my cough is gone\"",
+       "correct": true,
+       "rationale": "Correct. This statement is wrong. The client completes the full course of antibiotic therapy."
+      },
+      {
+       "id": "B",
+       "text": "\"I will drink extra fluids to thin my mucus\"",
+       "correct": false,
+       "rationale": "A correct statement. Fluids thin secretions."
+      },
+      {
+       "id": "C",
+       "text": "\"I will get a flu vaccine every single year\"",
+       "correct": false,
+       "rationale": "A correct statement. Influenza vaccine is given annually."
+      },
+      {
+       "id": "D",
+       "text": "\"I will wash my hands after I cough or sneeze\"",
+       "correct": false,
+       "rationale": "A correct statement. Hand hygiene prevents spread."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 2 hint words: need for further teaching. Pick the WRONG statement.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-068",
+     "type": "multiple_choice",
+     "stem": "The nurse receives prescriptions for a client admitted with pneumonia whose oxygen saturation is 95% on room air. Which prescription does the nurse implement first?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Administer the first dose of IV antibiotic",
+       "correct": false,
+       "rationale": "This is the right action at the wrong time. The antibiotic is given after the culture is collected."
+      },
+      {
+       "id": "B",
+       "text": "Collect a sputum specimen for culture",
+       "correct": true,
+       "rationale": "Correct. The sputum culture is collected before antimicrobial therapy starts so the result is accurate."
+      },
+      {
+       "id": "C",
+       "text": "Give acetaminophen for a temperature of 38.4 C",
+       "correct": false,
+       "rationale": "Fever reduction is appropriate but does not affect the accuracy of another prescription."
+      },
+      {
+       "id": "D",
+       "text": "Teach the client about pneumococcal vaccine",
+       "correct": false,
+       "rationale": "Teaching comes after the physical needs are met."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Oxygenation is adequate, so sequence the remaining actions. The culture must come before the antibiotic.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-069",
+     "type": "multiple_choice",
+     "stem": "The nurse reviews the histories of four clients. Which client does the nurse identify as most at risk for pneumonia?",
+     "options": [
+      {
+       "id": "A",
+       "text": "A young adult with a fractured wrist in a short arm cast",
+       "correct": false,
+       "rationale": "This client is mobile with no respiratory risk factors."
+      },
+      {
+       "id": "B",
+       "text": "An older adult on bed rest who has difficulty swallowing",
+       "correct": true,
+       "rationale": "Correct. Age 65 and older, prolonged immobility and impaired swallowing are all risk factors."
+      },
+      {
+       "id": "C",
+       "text": "A middle-aged adult who walks 2 miles each morning",
+       "correct": false,
+       "rationale": "Regular activity does not raise the risk."
+      },
+      {
+       "id": "D",
+       "text": "An adult with psoriasis who uses a topical steroid",
+       "correct": false,
+       "rationale": "A topical steroid for a skin condition is not a listed risk factor."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Count the risk factors each client actually has.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-070",
+     "type": "multiple_choice",
+     "stem": "The nurse teaches a client with hypertension about self-care for a common cold. Which statement by the client indicates a need for further teaching?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"I will fill my cool mist humidifier with distilled water\"",
+       "correct": false,
+       "rationale": "A correct statement. A cool mist humidifier is filled with distilled water."
+      },
+      {
+       "id": "B",
+       "text": "\"I will not give aspirin to my teenager who has a cold\"",
+       "correct": false,
+       "rationale": "A correct statement. Aspirin is avoided in children and teenagers because of Reye syndrome."
+      },
+      {
+       "id": "C",
+       "text": "\"I will take an oral decongestant to clear my stuffy nose\"",
+       "correct": true,
+       "rationale": "Correct. This statement is wrong. Decongestants raise heart rate and blood pressure and are unsafe for clients with hypertension."
+      },
+      {
+       "id": "D",
+       "text": "\"I will keep to the dose on the acetaminophen label\"",
+       "correct": false,
+       "rationale": "A correct statement. Overuse of acetaminophen causes severe liver damage."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 2 hint words: need for further teaching. Pick the WRONG statement.",
+     "coverage": "Physiological Integrity: Pharmacological and Parenteral Therapies"
+    }
+   ]
+  },
+  {
+   "id": "respiratory-oxygen-therapy",
+   "title": "Respiratory: Oxygen Therapy",
+   "questions": [
+    {
+     "id": "exam4-005",
+     "type": "multiple_choice",
+     "stem": "The nurse monitors an adult client receiving oxygen via face mask. The nurse is most concerned if which observation is made?",
+     "options": [
+      {
+       "id": "A",
+       "text": "There is condensation in the tubing of the humidifier container",
+       "correct": false,
+       "rationale": "Condensation is expected when oxygen is humidified."
+      },
+      {
+       "id": "B",
+       "text": "The pulse oximetry reading is 94%",
+       "correct": false,
+       "rationale": "A reading of 94% is acceptable for a client receiving oxygen."
+      },
+      {
+       "id": "C",
+       "text": "The client has a frequent nonproductive cough",
+       "correct": true,
+       "rationale": "Correct. A frequent dry cough suggests the airway is being dried and irritated, which can mean the humidification is not working or oxygen toxicity is beginning."
+      },
+      {
+       "id": "D",
+       "text": "The skin under the elastic band is reddened",
+       "correct": false,
+       "rationale": "Reddened skin needs padding and skin care, but it is a comfort and skin problem, not a breathing problem."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 4: ABCs. Three options are expected or minor findings. The cough is the only one involving the airway.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-019",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for an adult client receiving oxygen via nasal cannula. Which observation requires an immediate intervention by the nurse?",
+     "options": [
+      {
+       "id": "A",
+       "text": "A visitor arrives with a strong odor of cigarettes on the clothing",
+       "correct": false,
+       "rationale": "The smell of smoke is not a flame. The hazard would be smoking in the room."
+      },
+      {
+       "id": "B",
+       "text": "The electric plug for the suction machine has three prongs rather than two",
+       "correct": false,
+       "rationale": "A three-prong plug is grounded, which is the safe plug."
+      },
+      {
+       "id": "C",
+       "text": "The client reports a dry mouth and has a cracked lip",
+       "correct": false,
+       "rationale": "Dry mouth needs mouth care and humidification, but it is not an immediate danger."
+      },
+      {
+       "id": "D",
+       "text": "A visitor is putting clear nail polish on the fingernails of the client",
+       "correct": true,
+       "rationale": "Correct. Nail polish is a flammable product and must not be used where oxygen is flowing."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 3 and Step 5: a physical safety hazard comes first. Find the option that can start a fire now.",
+     "coverage": "Safe and Effective Care Environment: Safety and Infection Control"
+    },
+    {
+     "id": "exam4-046",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client receiving oxygen by nasal cannula. The nurse notes reddened skin above both ears. Which action does the nurse take?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Pads the tubing over the ears with gauze",
+       "correct": true,
+       "rationale": "Correct. Reddened areas under the tubing are padded with gauze, and the tubing is checked so it is not too tight."
+      },
+      {
+       "id": "B",
+       "text": "Removes the cannula until the redness fades",
+       "correct": false,
+       "rationale": "The client still needs the prescribed oxygen."
+      },
+      {
+       "id": "C",
+       "text": "Applies petroleum jelly to the reddened skin",
+       "correct": false,
+       "rationale": "Oil-based products are not used with oxygen."
+      },
+      {
+       "id": "D",
+       "text": "Massages the reddened skin above each ear",
+       "correct": false,
+       "rationale": "Massage can damage skin that is already irritated by pressure."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Relieve the pressure without stopping the oxygen or adding a fire hazard.",
+     "coverage": "Physiological Integrity: Basic Care and Comfort"
+    },
+    {
+     "id": "exam4-047",
+     "type": "multiple_choice",
+     "stem": "The nurse teaches a client who will use oxygen at home. Which statement by the client indicates a need for further teaching?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"I will post a sign on my door that oxygen is in use\"",
+       "correct": false,
+       "rationale": "A correct statement. An oxygen precautions sign is posted."
+      },
+      {
+       "id": "B",
+       "text": "\"I can keep using my electric razor while the oxygen is on\"",
+       "correct": true,
+       "rationale": "Correct. This statement is wrong. Electric razors can produce a spark and are not used near oxygen."
+      },
+      {
+       "id": "C",
+       "text": "\"I will keep candles out of the room where I use oxygen\"",
+       "correct": false,
+       "rationale": "A correct statement. Open flames are kept away from oxygen."
+      },
+      {
+       "id": "D",
+       "text": "\"I will keep my oxygen tank standing upright in a holder\"",
+       "correct": false,
+       "rationale": "A correct statement. A tank is secured in an upright position."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 2 hint words: need for further teaching. Pick the WRONG statement.",
+     "coverage": "Safe and Effective Care Environment: Safety and Infection Control"
+    },
+    {
+     "id": "exam4-048",
+     "type": "multiple_choice",
+     "stem": "A client receiving oxygen at 5 L/min by nasal cannula reports a dry, sore nose. The nurse notes crusting in both nostrils. Which action does the nurse take?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Adds humidification to the oxygen delivery system",
+       "correct": true,
+       "rationale": "Correct. Oxygen flow above 3 L/min is humidified to prevent drying of the mucous membranes."
+      },
+      {
+       "id": "B",
+       "text": "Applies petroleum jelly to the inside of both nostrils",
+       "correct": false,
+       "rationale": "This is the right idea with the wrong product. Oil-based products are not used with oxygen. Water-soluble jelly is used."
+      },
+      {
+       "id": "C",
+       "text": "Lowers the oxygen flow rate to 2 L/min until it heals",
+       "correct": false,
+       "rationale": "This changes the prescribed flow rate and may leave the client hypoxemic."
+      },
+      {
+       "id": "D",
+       "text": "Removes the cannula for 15 minutes of every hour",
+       "correct": false,
+       "rationale": "Interrupting prescribed oxygen places the client at risk."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Fix the drying without changing the prescribed oxygen and without adding a fire hazard.",
+     "coverage": "Physiological Integrity: Basic Care and Comfort"
+    },
+    {
+     "id": "exam4-049",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client receiving oxygen by simple face mask. Which action does the nurse include in the plan of care?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Removes the mask every 1 to 2 hours to wash and dry the skin",
+       "correct": true,
+       "rationale": "Correct. The mask is removed every 1 to 2 hours so the skin can be washed, dried and protected."
+      },
+      {
+       "id": "B",
+       "text": "Loosens the strap so the mask rests away from the face",
+       "correct": false,
+       "rationale": "The mask fits snugly but comfortably so oxygen is delivered."
+      },
+      {
+       "id": "C",
+       "text": "Replaces the mask with a nasal cannula during the night",
+       "correct": false,
+       "rationale": "The nurse does not change the prescribed delivery device."
+      },
+      {
+       "id": "D",
+       "text": "Keeps the mask on without a break to keep oxygen steady",
+       "correct": false,
+       "rationale": "Leaving the mask on continuously leads to skin breakdown."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Choose the action that protects the skin and keeps the prescription.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-050",
+     "type": "sata",
+     "stem": "The nurse teaches a client and family about using an oxygen concentrator at home. Which instructions does the nurse include? (Select all that apply.)",
+     "options": [
+      {
+       "id": "A",
+       "text": "Do not allow anyone to smoke in the area where oxygen is used",
+       "correct": true,
+       "rationale": "Correct. No smoking is permitted where oxygen is in use."
+      },
+      {
+       "id": "B",
+       "text": "Place the concentrator flush against a wall to keep it steady",
+       "correct": false,
+       "rationale": "The concentrator needs air space around it and is not placed flush against a wall."
+      },
+      {
+       "id": "C",
+       "text": "Use the flow rate and hours per day that the provider prescribed",
+       "correct": true,
+       "rationale": "Correct. The provider prescribes the flow rate, hours per day and conditions of use."
+      },
+      {
+       "id": "D",
+       "text": "Turn the flow rate up whenever shortness of breath gets worse",
+       "correct": false,
+       "rationale": "The client does not adjust the prescribed flow rate. Worsening dyspnea is reported."
+      },
+      {
+       "id": "E",
+       "text": "Keep the phone number of the oxygen equipment vendor available",
+       "correct": true,
+       "rationale": "Correct. The client and family need to know how and when to reach the vendor."
+      }
+     ],
+     "answer": [
+      "A",
+      "C",
+      "E"
+     ],
+     "takeaway": "",
+     "strategy": "Step 1: treat each option as true or false against safe home oxygen use.",
+     "coverage": "Safe and Effective Care Environment: Safety and Infection Control"
+    }
+   ]
+  },
+  {
+   "id": "stroke-cva",
+   "title": "Stroke (CVA)",
+   "questions": [
+    {
+     "id": "exam4-001",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for an older adult client diagnosed with stroke earlier that day. Which nursing assessment is priority?",
+     "options": [
+      {
+       "id": "A",
+       "text": "The ability to speak",
+       "correct": false,
+       "rationale": "Speech is assessed, but aphasia is an expected deficit and does not show that the stroke is worsening as early as a change in consciousness does."
+      },
+      {
+       "id": "B",
+       "text": "The level of consciousness",
+       "correct": true,
+       "rationale": "Correct. A change in level of consciousness is the earliest and most sensitive sign of rising intracranial pressure or an evolving stroke."
+      },
+      {
+       "id": "C",
+       "text": "The color and temperature of the skin",
+       "correct": false,
+       "rationale": "Skin color and temperature reflect circulation, not neurological status, so they do not detect an evolving stroke."
+      },
+      {
+       "id": "D",
+       "text": "The ability to follow simple commands",
+       "correct": false,
+       "rationale": "Following commands is part of the neurological check, but it depends on the client first being awake and alert. Level of consciousness comes before it."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 2: all four options are assessments, so choose the assessment that best detects the complication. Level of consciousness is the most sensitive neurological indicator.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-006",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client at risk for an intracranial hemorrhage. Which are risk factors for an intracranial hemorrhage?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Atherosclerosis and hyperlipidemia",
+       "correct": false,
+       "rationale": "These are the right idea for a similar condition. Plaque and high lipids block vessels and lead to ischemic stroke."
+      },
+      {
+       "id": "B",
+       "text": "Anemia and kidney disease",
+       "correct": false,
+       "rationale": "Neither anemia nor kidney disease directly causes a cerebral vessel to rupture."
+      },
+      {
+       "id": "C",
+       "text": "Hypothyroidism and glaucoma",
+       "correct": false,
+       "rationale": "Neither condition is a risk factor for bleeding in the brain."
+      },
+      {
+       "id": "D",
+       "text": "Arteriosclerosis and hypertension",
+       "correct": true,
+       "rationale": "Correct. Hypertension is the most significant risk factor, and hardened, weakened vessel walls rupture under high pressure."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. The question is about a bleed, not a clot, so eliminate the pair that causes ischemic stroke.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-011",
+     "type": "multiple_choice",
+     "stem": "A client with a history of poorly controlled hypertension is diagnosed with a possible stroke. The client takes antihypertensive medication and hormone replacement therapy. The client is overweight and reports watching television or working on the computer all day. The nurse identifies which risk factor as most significant for development of a stroke for this client?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Obesity",
+       "correct": false,
+       "rationale": "Obesity is a true risk factor for this client but not the most significant one."
+      },
+      {
+       "id": "B",
+       "text": "Hypertension",
+       "correct": true,
+       "rationale": "Correct. Hypertension is the most significant risk factor for both ischemic and hemorrhagic stroke, and this client's is poorly controlled."
+      },
+      {
+       "id": "C",
+       "text": "Sedentary lifestyle",
+       "correct": false,
+       "rationale": "Inactivity is a true risk factor but carries less risk than hypertension."
+      },
+      {
+       "id": "D",
+       "text": "Hormone replacement therapy",
+       "correct": false,
+       "rationale": "Hormone therapy raises clot risk, but it is not the leading risk factor."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 2 hint word: most. All four are true, so rank them. A true statement is not always the answer.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-016",
+     "type": "multiple_choice",
+     "stem": "The nurse assesses a client diagnosed with a transient ischemic attack (TIA). The nurse anticipates the client will report which symptom?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Inability to speak for 7 to 10 days",
+       "correct": false,
+       "rationale": "Aphasia is the right kind of deficit with the wrong duration. TIA signs resolve within minutes to 24 hours."
+      },
+      {
+       "id": "B",
+       "text": "Intermittent sharp, stabbing pain on one side of the head",
+       "correct": false,
+       "rationale": "A TIA causes neurological deficits, not stabbing head pain."
+      },
+      {
+       "id": "C",
+       "text": "Acute right lower extremity weakness that lasts about 15 minutes",
+       "correct": true,
+       "rationale": "Correct. A TIA causes a sudden one-sided deficit that clears completely within minutes to 24 hours."
+      },
+      {
+       "id": "D",
+       "text": "Bilateral upper extremity weakness that progresses downward",
+       "correct": false,
+       "rationale": "TIA deficits are one-sided, and a weakness that progresses is not transient."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. Transient means short, and carotid deficits are unilateral. Check each option for duration and side.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-027",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client at high risk for an ischemic stroke. Which is a known risk factor for a stroke?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Atrial fibrillation",
+       "correct": true,
+       "rationale": "Correct. Atrial fibrillation lets clots form in the heart, and they travel to the brain as emboli."
+      },
+      {
+       "id": "B",
+       "text": "Senile dementia",
+       "correct": false,
+       "rationale": "Dementia can follow strokes but does not cause them."
+      },
+      {
+       "id": "C",
+       "text": "Chronic constipation",
+       "correct": false,
+       "rationale": "Constipation is not a risk factor for stroke."
+      },
+      {
+       "id": "D",
+       "text": "Coagulopathies",
+       "correct": false,
+       "rationale": "Bleeding disorders relate to hemorrhage, not to an ischemic stroke caused by a clot."
+      }
+     ],
+     "answer": "A",
+     "takeaway": "",
+     "strategy": "Step 1: identify the topic. The stem says ischemic, so look for a source of clots.",
+     "coverage": "Health Promotion and Maintenance"
+    },
+    {
+     "id": "exam4-031",
+     "type": "multiple_choice",
+     "stem": "A client arrives at the emergency department with sudden left arm weakness and slurred speech. Which question is most important for the nurse to ask the family member?",
+     "options": [
+      {
+       "id": "A",
+       "text": "\"Does the client have a history of high blood pressure?\"",
+       "correct": false,
+       "rationale": "Hypertension is the leading risk factor and worth knowing, but it does not decide the treatment that is time limited."
+      },
+      {
+       "id": "B",
+       "text": "\"Has the client had any headaches during the past week?\"",
+       "correct": false,
+       "rationale": "Headache history is useful background, but it does not determine eligibility for clot treatment."
+      },
+      {
+       "id": "C",
+       "text": "\"Which medications does the client take at home each day?\"",
+       "correct": false,
+       "rationale": "Anticoagulant use matters for alteplase, but the time of onset is the first piece of data needed."
+      },
+      {
+       "id": "D",
+       "text": "\"When was the client last seen without these symptoms?\"",
+       "correct": true,
+       "rationale": "Correct. The last known well time decides whether the client is inside the 3 to 4.5 hour window for alteplase."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 2: assessment. All four are assessments, so pick the one that controls the next treatment decision.",
+     "coverage": "Physiological Integrity: Physiological Adaptation"
+    },
+    {
+     "id": "exam4-032",
+     "type": "multiple_choice",
+     "stem": "The nurse provides care for a client diagnosed with an ischemic stroke 6 hours ago. The client has a right facial droop and asks for a drink of water. Which action does the nurse take first?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Offers thickened liquids with the client sitting upright",
+       "correct": false,
+       "rationale": "This is the right action at the wrong time. Thickened liquids and upright positioning come after the swallow screen."
+      },
+      {
+       "id": "B",
+       "text": "Places suction equipment at the bedside and offers ice chips",
+       "correct": false,
+       "rationale": "Suction at the bedside is appropriate, but ice chips are still oral intake before swallowing has been checked."
+      },
+      {
+       "id": "C",
+       "text": "Performs a bedside swallow screen before any oral intake",
+       "correct": true,
+       "rationale": "Correct. The client stays NPO until a swallow screen is passed. Facial droop signals a high risk of aspiration, and the nurse needs the data before giving anything by mouth."
+      },
+      {
+       "id": "D",
+       "text": "Explains that fluids are restricted to lower intracranial pressure",
+       "correct": false,
+       "rationale": "This is not the reason, and it leaves the client NPO without assessing whether swallowing is safe."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 2: assess before implementing. Data about swallowing are missing, so the assessment comes first.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-033",
+     "type": "multiple_choice",
+     "stem": "The nurse prepares to feed a client who has difficulty swallowing after a stroke. Which action is most important for the nurse to take?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Offers thin liquids through a straw between bites",
+       "correct": false,
+       "rationale": "Straws are avoided, and liquids are thickened for a client with dysphagia."
+      },
+      {
+       "id": "B",
+       "text": "Sits the client upright with the neck tilted forward",
+       "correct": true,
+       "rationale": "Correct. Upright positioning with the neck flexed forward protects the airway during swallowing."
+      },
+      {
+       "id": "C",
+       "text": "Places food on the affected side of the mouth",
+       "correct": false,
+       "rationale": "Food is placed on the unaffected side."
+      },
+      {
+       "id": "D",
+       "text": "Talks with the client to make the meal relaxing",
+       "correct": false,
+       "rationale": "The client needs to concentrate on eating and swallowing."
+      }
+     ],
+     "answer": "B",
+     "takeaway": "",
+     "strategy": "Step 4: ABCs. Choose the action that protects the airway.",
+     "coverage": "Physiological Integrity: Reduction of Risk Potential"
+    },
+    {
+     "id": "exam4-034",
+     "type": "multiple_choice",
+     "stem": "The nurse admits a client diagnosed with a stroke who has left homonymous hemianopsia. Which action does the nurse include in the initial plan of care?",
+     "options": [
+      {
+       "id": "A",
+       "text": "Teaches the client to scan by turning the head toward the left",
+       "correct": false,
+       "rationale": "This is the right action at the wrong time. Scanning is taught as rehabilitation progresses."
+      },
+      {
+       "id": "B",
+       "text": "Approaches and speaks to the client from the client's left side",
+       "correct": false,
+       "rationale": "The client cannot see the left field, so approaching from the left startles the client."
+      },
+      {
+       "id": "C",
+       "text": "Applies an eye patch over the client's left eye during meals",
+       "correct": false,
+       "rationale": "The loss is in the same half of both visual fields, so patching one eye does not help."
+      },
+      {
+       "id": "D",
+       "text": "Places the call light and meal items on the client's right side",
+       "correct": true,
+       "rationale": "Correct. Early in care, needed items go inside the intact field of vision, which is the right side for this client."
+      }
+     ],
+     "answer": "D",
+     "takeaway": "",
+     "strategy": "Step 3: Maslow. Safety now comes first, so the client must be able to see and reach the call light today.",
+     "coverage": "Safe and Effective Care Environment: Safety and Infection Control"
+    },
+    {
+     "id": "exam4-035",
+     "type": "multiple_choice",
+     "stem": "The nurse observes assistive personnel (AP) ambulating a client who has right-sided hemiparesis after a stroke. Which observation requires the nurse to intervene?",
+     "options": [
+      {
+       "id": "A",
+       "text": "The AP applies a gait belt before helping the client to stand",
+       "correct": false,
+       "rationale": "A gait belt is the correct safety device for ambulation."
+      },
+      {
+       "id": "B",
+       "text": "The AP supports the client's right arm in a sling while walking",
+       "correct": false,
+       "rationale": "Supporting the affected arm prevents shoulder subluxation."
+      },
+      {
+       "id": "C",
+       "text": "The AP walks on the client's left side while holding the gait belt",
+       "correct": true,
+       "rationale": "Correct. The nurse stands on the affected side, which is the right side for this client, to support the weak side."
+      },
+      {
+       "id": "D",
+       "text": "The AP stops to let the client rest halfway down the hallway",
+       "correct": false,
+       "rationale": "Rest periods are appropriate and do not place the client at risk."
+      }
+     ],
+     "answer": "C",
+     "takeaway": "",
+     "strategy": "Step 5: outcomes. Find the unsafe action. Three options are correct technique.",
+     "coverage": "Safe and Effective Care Environment: Management of Care"
+    }
+   ]
+  }
+ ]
+}

@@ -100,7 +100,7 @@ const Back = ({ card, pick }: { card: Card; pick: string | null }) => (
       <p
         className={`text-sm font-bold ${
           pick === card.answer
-            ? "text-[hsl(150,62%,46%)]"
+            ? "text-[hsl(156,100%,42%)]"
             : "text-[var(--primary-color)]"
         }`}
       >
@@ -353,7 +353,7 @@ const Session = ({
                           style={{
                             background:
                               result === "missed"
-                                ? "hsl(14, 100%, 57%)"
+                                ? "hsl(257, 100%, 85%)"
                                 : "hsl(38, 96%, 54%)",
                           }}
                         />
@@ -427,7 +427,7 @@ const Session = ({
             aria-label="Cards done"
           >
             <div
-              className="h-full rounded-sm bg-[hsl(150,62%,46%)] duration-500"
+              className="h-full rounded-sm bg-[hsl(156,100%,42%)] duration-500"
               style={{ width: `${(gotCount / total) * 100}%` }}
             />
           </div>

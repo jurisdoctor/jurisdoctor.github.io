@@ -14,7 +14,7 @@ import { useEffect, useRef } from "react";
 type Mode = "idle" | "attracted";
 
 const SAFE_SELECTOR =
-  'button, a, input, select, textarea, label, aside, [data-shapes-safe]';
+  "button, a, input, select, textarea, label, aside, [data-shapes-safe]";
 
 // At IDLE_EASE, a shape is ~95% of the way to its target after ~1.4s — the
 // retarget window has to stay shorter than that, or it visibly finishes
@@ -101,10 +101,8 @@ const Shapes = () => {
           targetX: prev?.targetX ?? 0,
           targetY: prev?.targetY ?? 0,
           nextRetarget: prev?.nextRetarget ?? 0,
-          attractOffsetX:
-            prev?.attractOffsetX ?? (Math.random() * 2 - 1) * 90,
-          attractOffsetY:
-            prev?.attractOffsetY ?? (Math.random() * 2 - 1) * 90,
+          attractOffsetX: prev?.attractOffsetX ?? (Math.random() * 2 - 1) * 90,
+          attractOffsetY: prev?.attractOffsetY ?? (Math.random() * 2 - 1) * 90,
         };
       });
     };
@@ -133,7 +131,9 @@ const Shapes = () => {
         state.targetX = wander.x;
         state.targetY = wander.y;
         state.nextRetarget =
-          now + SEGMENT_MIN_MS + Math.random() * (SEGMENT_MAX_MS - SEGMENT_MIN_MS);
+          now +
+          SEGMENT_MIN_MS +
+          Math.random() * (SEGMENT_MAX_MS - SEGMENT_MIN_MS);
       });
     };
 
@@ -203,10 +203,14 @@ const Shapes = () => {
             state.attractOffsetX = (Math.random() * 2 - 1) * SWARM_RADIUS;
             state.attractOffsetY = (Math.random() * 2 - 1) * SWARM_RADIUS;
             state.nextRetarget =
-              now + SWARM_MIN_MS + Math.random() * (SWARM_MAX_MS - SWARM_MIN_MS);
+              now +
+              SWARM_MIN_MS +
+              Math.random() * (SWARM_MAX_MS - SWARM_MIN_MS);
           }
-          state.targetX = pointer.current.x - state.anchorX + state.attractOffsetX;
-          state.targetY = pointer.current.y - state.anchorY + state.attractOffsetY;
+          state.targetX =
+            pointer.current.x - state.anchorX + state.attractOffsetX;
+          state.targetY =
+            pointer.current.y - state.anchorY + state.attractOffsetY;
         } else if (now >= state.nextRetarget) {
           const wander = randomWanderTarget();
           state.targetX = wander.x;
@@ -258,7 +262,7 @@ const Shapes = () => {
       >
         <path
           d="M21.15625.60099c4.37954 3.67487 6.46544 9.40612 5.47254 15.03526-.9929 5.62915-4.91339 10.30141-10.2846 12.25672-5.37122 1.9553-11.3776.89631-15.75715-2.77856l2.05692-2.45134c3.50315 2.93948 8.3087 3.78663 12.60572 2.22284 4.297-1.5638 7.43381-5.30209 8.22768-9.80537.79387-4.50328-.8749-9.08872-4.37803-12.02821L21.15625.60099z"
-          fill="#FFEB3B"
+          fill="#FFF0B5"
           fillRule="evenodd"
         />
       </svg>
@@ -272,7 +276,7 @@ const Shapes = () => {
       >
         <path
           d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z"
-          stroke="#FF5722"
+          stroke="#C9B5FF"
           strokeWidth="3"
           fill="none"
           fillRule="evenodd"
@@ -291,7 +295,7 @@ const Shapes = () => {
           cx="13"
           cy="13"
           r="10"
-          stroke="#A8A8A8"
+          stroke="#91FF00"
           strokeWidth="3"
           fill="none"
         />
@@ -310,7 +314,7 @@ const Shapes = () => {
           width="3"
           height="25"
           rx="1.5"
-          fill="#FFEB3B"
+          fill="#FFF0B5"
           fillRule="evenodd"
         />
       </svg>
@@ -325,7 +329,7 @@ const Shapes = () => {
       >
         <path
           d="M9.5 0h3v9.5H22v3h-9.5V22h-3v-9.5H0v-3h9.5V0z"
-          fill="#7E57C2"
+          fill="#00D47F"
           fillRule="evenodd"
         />
       </svg>
@@ -340,7 +344,7 @@ const Shapes = () => {
       >
         <polyline
           points="2,16 11,2 20,16 29,2 38,16"
-          stroke="#FF5722"
+          stroke="#C9B5FF"
           strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -358,7 +362,7 @@ const Shapes = () => {
       >
         <path
           d="M13 1.5l11 6.5v14l-11 6.5-11-6.5V8l11-6.5z"
-          stroke="#FFEB3B"
+          stroke="#FFF0B5"
           strokeWidth="2.5"
           fill="none"
           fillRule="evenodd"
@@ -378,7 +382,7 @@ const Shapes = () => {
           width="3"
           height="25"
           rx="1.5"
-          fill="#7E57C2"
+          fill="#00D47F"
           fillRule="evenodd"
         />
       </svg>
@@ -396,7 +400,7 @@ const Shapes = () => {
           y="5"
           width="18"
           height="18"
-          stroke="#7E57C2"
+          stroke="#00D47F"
           strokeWidth="3"
           fill="none"
           transform="rotate(45 14 14)"
@@ -411,7 +415,7 @@ const Shapes = () => {
         className="absolute left-[11%] top-[45%]"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g fill="#A8A8A8" fillRule="evenodd">
+        <g fill="#91FF00" fillRule="evenodd">
           <circle cx="4" cy="4" r="3.5" />
           <circle cx="15" cy="15" r="3.5" />
           <circle cx="26" cy="26" r="3.5" />
@@ -428,7 +432,7 @@ const Shapes = () => {
       >
         <path
           d="M13 0l3.21 6.73 7.41.98-5.4 5.13 1.42 7.35L13 16.7l-6.64 3.49 1.42-7.35-5.4-5.13 7.41-.98L13 0z"
-          fill="#FFEB3B"
+          fill="#FFF0B5"
           fillRule="evenodd"
         />
       </svg>

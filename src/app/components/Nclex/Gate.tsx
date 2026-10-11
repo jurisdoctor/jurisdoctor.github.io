@@ -25,7 +25,18 @@ const hash = async (word: string) => {
     .join("");
 };
 
-const Gate = ({ children }: { children: ReactNode }) => {
+// Also guards the Kaplan page: same password and the same "unlocked" mark, so
+// opening one opens the other. The exam picker is only for the NCLEX bank,
+// which is the one whose saved exam choice it sets.
+const Gate = ({
+  children,
+  what = "question bank",
+  picker = true,
+}: {
+  children: ReactNode;
+  what?: string;
+  picker?: boolean;
+}) => {
   const [open, setOpen] = useState(false);
   const [ready, setReady] = useState(false);
   const [word, setWord] = useState("");
@@ -96,26 +107,28 @@ const Gate = ({ children }: { children: ReactNode }) => {
       >
         <h1 className="mb-2 text-2xl font-bold">This page is private</h1>
         <p className="mb-6 text-sm text-[var(--muted-color)]">
-          Enter the password to open the question bank.
+          Enter the password to open the {what}.
         </p>
 
-        <div className="mb-4 inline-flex gap-x-1 rounded-md bg-[var(--body-color)] p-1">
-          {EXAMS.map((entry) => (
-            <button
-              key={entry}
-              type="button"
-              onClick={() => pick(entry)}
-              aria-pressed={exam === entry}
-              className={`rounded-md px-5 py-2 text-sm font-bold duration-300 ${
-                exam === entry
-                  ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
-                  : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
-              }`}
-            >
-              {EXAM_TITLES[entry]}
-            </button>
-          ))}
-        </div>
+        {picker && (
+          <div className="mb-4 inline-flex gap-x-1 rounded-md bg-[var(--body-color)] p-1">
+            {EXAMS.map((entry) => (
+              <button
+                key={entry}
+                type="button"
+                onClick={() => pick(entry)}
+                aria-pressed={exam === entry}
+                className={`rounded-md px-5 py-2 text-sm font-bold duration-300 ${
+                  exam === entry
+                    ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
+                    : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
+                }`}
+              >
+                {EXAM_TITLES[entry]}
+              </button>
+            ))}
+          </div>
+        )}
 
         <input
           type="password"

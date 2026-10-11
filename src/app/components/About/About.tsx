@@ -6,7 +6,7 @@ import Reveal from "../Reveal";
 const About = () => {
   return (
     <section
-      className="about mx-auto max-w-[1080px] px-10 md:px-6 pb-8 pt-28 lg:pt-12"
+      className="about mx-auto max-w-[1080px] px-10 pb-8 pt-28 lg:pt-12 md:px-6"
       id="about"
     >
       <Reveal
@@ -58,7 +58,7 @@ const About = () => {
               </div>
 
               <div className="relative h-[7px] overflow-hidden rounded bg-[var(--track-color)]">
-                <div className="absolute h-[7px] w-1/4 animate-indeterminate rounded bg-[rgb(68,215,182)]"></div>
+                <div className="absolute h-[7px] w-1/4 animate-indeterminate rounded bg-[rgb(0,212,127)]"></div>
               </div>
             </div>
           </div>

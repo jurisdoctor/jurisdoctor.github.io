@@ -29,7 +29,13 @@ interface ProgressType {
 }
 
 const KEY = "pharm:progress:v2";
-const fresh = (): ProgressType => ({ name: "", cur: 0, max: 0, d: {}, doneAt: null });
+const fresh = (): ProgressType => ({
+  name: "",
+  cur: 0,
+  max: 0,
+  d: {},
+  doneAt: null,
+});
 const valid = (saved: ProgressType) =>
   !!saved &&
   typeof saved === "object" &&
@@ -49,7 +55,7 @@ const calloutClass: Record<string, string> = {
   tip: "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]",
   critical: "border-[var(--primary-color)] bg-[var(--chip-amber)]",
   idea: "border-[var(--chip-blue-border)] bg-[var(--chip-blue)]",
-  takeaway: "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.08)]",
+  takeaway: "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.08)]",
   reference: "border-[var(--muted-color)] bg-[var(--body-color)]",
 };
 
@@ -126,12 +132,16 @@ const Finale = ({
           ))}
         </ul>
         <p className="text-xs italic text-[var(--muted-color)]">
-          Always verify specific drugs in a current drug reference and
-          follow facility policy and protocols.
+          Always verify specific drugs in a current drug reference and follow
+          facility policy and protocols.
         </p>
 
         <div className="flex flex-wrap gap-4">
-          <button type="button" onClick={() => window.print()} className={button}>
+          <button
+            type="button"
+            onClick={() => window.print()}
+            className={button}
+          >
             🖨 Print certificate
           </button>
           <button type="button" onClick={onReview} className={ghost}>
@@ -176,13 +186,15 @@ const Pharm = () => {
   const i = Math.min(state.cur, state.max);
   const step = STEPS[i];
   const tasks = stepTasks(step);
-  const left = tasks.filter((block) => !blockDone(block, state.d, state.name))
-    .length;
+  const left = tasks.filter(
+    (block) => !blockDone(block, state.d, state.name),
+  ).length;
   const canContinue = stepDone(step, state.d, state.name);
   const pct = Math.round((Math.min(state.max, LAST_INDEX) / LAST_INDEX) * 100);
 
   const scrollTop = () => {
-    const top = (rootRef.current?.getBoundingClientRect().top ?? 0) + window.scrollY;
+    const top =
+      (rootRef.current?.getBoundingClientRect().top ?? 0) + window.scrollY;
     window.scrollTo({ top, behavior: "smooth" });
   };
 
@@ -199,7 +211,8 @@ const Pharm = () => {
     patch((prev) => ({
       cur: i + 1,
       max: Math.max(prev.max, i + 1),
-      doneAt: finishing && !prev.doneAt ? new Date().toISOString() : prev.doneAt,
+      doneAt:
+        finishing && !prev.doneAt ? new Date().toISOString() : prev.doneAt,
     }));
     scrollTop();
   };
@@ -452,8 +465,7 @@ const Pharm = () => {
             key={key}
             className="rounded-xl border border-dashed border-[var(--border-color)] p-4 text-sm text-[var(--muted-color)]"
           >
-            🔒 Finish the activities above to see the facilitator&apos;s
-            answer.
+            🔒 Finish the activities above to see the facilitator&apos;s answer.
           </div>
         );
 
@@ -492,7 +504,10 @@ const Pharm = () => {
           </div>
         </RevealBox>
 
-        <RevealBox delay={140} className="flex items-start gap-8 xl:flex-col xl:gap-6">
+        <RevealBox
+          delay={140}
+          className="flex items-start gap-8 xl:flex-col xl:gap-6"
+        >
           <nav className="sticky top-8 w-72 shrink-0 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] p-4 shadow-xl backdrop-blur-xl xl:static xl:w-full">
             {/* Only shown once the layout has stacked (xl: and below) —
                 side-by-side on desktop there's room for the full step list
@@ -518,57 +533,57 @@ const Pharm = () => {
             </button>
 
             <div className={navOpen ? "mt-2" : "xl:hidden"}>
-            {STEPS.map((entry, index) => {
-              const sectionHeading =
-                entry.section !== lastSection ? entry.section : null;
-              lastSection = entry.section;
-              const unlocked = index <= state.max;
-              const current = index === i;
-              const complete =
-                !current &&
-                (index < state.max || (!!entry.final && !!state.doneAt));
+              {STEPS.map((entry, index) => {
+                const sectionHeading =
+                  entry.section !== lastSection ? entry.section : null;
+                lastSection = entry.section;
+                const unlocked = index <= state.max;
+                const current = index === i;
+                const complete =
+                  !current &&
+                  (index < state.max || (!!entry.final && !!state.doneAt));
 
-              return (
-                <div key={entry.id} className="mt-1 first:mt-0">
-                  {sectionHeading && (
-                    <p className="mb-2 mt-6 px-3 text-[11px] font-bold uppercase tracking-wide text-[var(--muted-color)] first:mt-0">
-                      {sectionHeading}
-                    </p>
-                  )}
-                  <button
-                    type="button"
-                    disabled={!unlocked}
-                    onClick={() => go(index)}
-                    className={`flex w-full items-center gap-x-3 rounded-lg px-3 py-2.5 text-left text-sm leading-snug duration-150 ${
-                      current
-                        ? "bg-[var(--chip-blue)] font-bold text-[var(--title-color)]"
-                        : unlocked
-                          ? "text-[var(--text-color)] hover:bg-[var(--body-color)]"
-                          : "cursor-not-allowed text-[var(--muted-color)] opacity-50"
-                    }`}
-                  >
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--body-color)] text-[11px]">
-                      {!unlocked ? (
-                        <LuLock />
-                      ) : complete ? (
-                        <LuCheck className="text-[rgb(68,215,182)]" />
-                      ) : (
-                        index + 1
-                      )}
-                    </span>
-                    <span className="truncate">{entry.title}</span>
-                  </button>
-                </div>
-              );
-            })}
+                return (
+                  <div key={entry.id} className="mt-1 first:mt-0">
+                    {sectionHeading && (
+                      <p className="mb-2 mt-6 px-3 text-[11px] font-bold uppercase tracking-wide text-[var(--muted-color)] first:mt-0">
+                        {sectionHeading}
+                      </p>
+                    )}
+                    <button
+                      type="button"
+                      disabled={!unlocked}
+                      onClick={() => go(index)}
+                      className={`flex w-full items-center gap-x-3 rounded-lg px-3 py-2.5 text-left text-sm leading-snug duration-150 ${
+                        current
+                          ? "bg-[var(--chip-blue)] font-bold text-[var(--title-color)]"
+                          : unlocked
+                            ? "text-[var(--text-color)] hover:bg-[var(--body-color)]"
+                            : "cursor-not-allowed text-[var(--muted-color)] opacity-50"
+                      }`}
+                    >
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--body-color)] text-[11px]">
+                        {!unlocked ? (
+                          <LuLock />
+                        ) : complete ? (
+                          <LuCheck className="text-[rgb(0,212,127)]" />
+                        ) : (
+                          index + 1
+                        )}
+                      </span>
+                      <span className="truncate">{entry.title}</span>
+                    </button>
+                  </div>
+                );
+              })}
 
-            <button
-              type="button"
-              onClick={confirmReset}
-              className="mt-6 w-full rounded-lg px-3 py-2 text-left text-xs font-semibold text-[var(--muted-color)] hover:text-[var(--primary-color)]"
-            >
-              Reset progress
-            </button>
+              <button
+                type="button"
+                onClick={confirmReset}
+                className="mt-6 w-full rounded-lg px-3 py-2 text-left text-xs font-semibold text-[var(--muted-color)] hover:text-[var(--primary-color)]"
+              >
+                Reset progress
+              </button>
             </div>
           </nav>
 
@@ -613,7 +628,7 @@ const Pharm = () => {
                       }
                       className={`shrink-0 whitespace-nowrap rounded-md px-2.5 py-1 text-xs font-bold ${
                         canContinue
-                          ? "text-[rgb(68,215,182)]"
+                          ? "text-[rgb(0,212,127)]"
                           : "text-[var(--muted-color)]"
                       }`}
                     >

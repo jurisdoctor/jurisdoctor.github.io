@@ -34,11 +34,11 @@ const Cell = ({
 }) => {
   const tone = answered
     ? on && right
-      ? "border-[rgb(68,215,182)] bg-[rgb(68,215,182)] text-white"
+      ? "border-[rgb(0,212,127)] bg-[rgb(0,212,127)] text-white"
       : on
         ? "border-[var(--primary-color)] bg-[var(--primary-color)] text-[var(--on-primary)]"
         : right
-          ? "border-dashed border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)] text-[rgb(68,215,182)]"
+          ? "border-dashed border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)] text-[rgb(0,212,127)]"
           : "border-[#cfc9bb] bg-[var(--container-color)] text-transparent"
     : on
       ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-border)] text-white"
@@ -170,8 +170,8 @@ const Matrix = ({
                 className={`border-t-[1px] border-solid border-[#e4dfd3] ${
                   answered
                     ? rowRight(row)
-                      ? "bg-[rgba(68,215,182,0.08)]"
-                      : "bg-[hsla(14, 100%, 57%,0.07)]"
+                      ? "bg-[rgba(0,212,127,0.08)]"
+                      : "bg-[hsla(257,100%,85%,0.07)]"
                     : ""
                 }`}
               >
@@ -202,8 +202,8 @@ const Matrix = ({
               key={row.id}
               className={`animate-fadeIn rounded-xl border-2 border-solid p-3 text-sm ${
                 rowRight(row)
-                  ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
-                  : "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
+                  ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
+                  : "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
               }`}
             >
               <span className="font-bold text-[var(--title-color)]">

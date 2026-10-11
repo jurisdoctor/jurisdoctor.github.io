@@ -19,7 +19,7 @@ const Resume = () => {
 
   return (
     <section
-      className="resume mx-auto max-w-[1080px] px-10 md:px-6 pb-28 pt-28 lg:pt-12"
+      className="resume mx-auto max-w-[1080px] px-10 pb-28 pt-28 lg:pt-12 md:px-6"
       id="resume"
     >
       <Reveal
@@ -29,7 +29,7 @@ const Resume = () => {
         Experience
       </Reveal>
 
-      <div className="mb-8 hidden gap-3 lg:flex lg:max-w-[450px] lg:mx-auto">
+      <div className="mb-8 hidden gap-3 lg:mx-auto lg:flex lg:max-w-[450px]">
         <button
           type="button"
           onClick={() => setTab("education")}
@@ -46,7 +46,7 @@ const Resume = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-2 items-start gap-x-7 sm:grid-cols-1 lg:grid-cols-[450px] lg:justify-center lg:gap-y-[1.875rem]">
+      <div className="grid grid-cols-2 items-start gap-x-7 lg:grid-cols-[450px] lg:justify-center lg:gap-y-[1.875rem] sm:grid-cols-1">
         <Reveal delay={80}>
           <div
             key={`education-${tab}`}

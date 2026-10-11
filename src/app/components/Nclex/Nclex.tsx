@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
 import Shapes from "../Home/Shapes";
 import { useSaved } from "../DosageCalculations/Saved";
@@ -9,9 +9,18 @@ import {
   EXAM_TITLES,
   ExamId,
   isExamId,
+  KAPLAN_EXAM_KEY,
+  KaplanExamType,
   loadBank,
+  loadKaplanBank,
+  loadKaplanExams,
 } from "./Bank";
-import ChapterSet, { LensType, PickType, ResultType } from "./ChapterSet";
+import ChapterSet, {
+  firstToDo,
+  LensType,
+  PickType,
+  ResultType,
+} from "./ChapterSet";
 import Flash from "./Flash";
 import {
   ChapterType,
@@ -80,6 +89,47 @@ const TITLES: Record<SectionType, string> = {
   favorites: "Favorites",
 };
 
+// Which question set a page shows. "nclex" is the original bank; "kaplan"
+// is the Kaplan set at /kaplan. Everything saved on the device is prefixed
+// with `scope`, so the two never share progress, favorites or tab choice
+// (the NCLEX keys keep their original "nclex:" names).
+export type SetKind = "nclex" | "kaplan";
+
+interface SetType {
+  scope: string;
+  examKey: string;
+  heading: ReactNode;
+  // Per-set wording for a tab, what its groups are called, and how a group
+  // is picked, where it differs from the defaults (the Kaplan set has no
+  // chapters or skills, just topics, which use the skills picker).
+  names: Partial<Record<SectionType, string>>;
+  nouns: Partial<Record<SectionType, string>>;
+  picks: Partial<Record<SectionType, string>>;
+}
+
+const SETS: Record<SetKind, SetType> = {
+  nclex: {
+    scope: "nclex",
+    examKey: EXAM_KEY,
+    heading: (
+      <>
+        NCLEX-<em>style</em> Questions
+      </>
+    ),
+    names: {},
+    nouns: {},
+    picks: {},
+  },
+  kaplan: {
+    scope: "kaplan",
+    examKey: KAPLAN_EXAM_KEY,
+    heading: "Kaplan Questions",
+    names: { skills: "Topics" },
+    nouns: { skills: "topics" },
+    picks: { skills: "a topic" },
+  },
+};
+
 const validView = (saved: ViewType) =>
   !!saved &&
   SECTIONS.includes(saved.section) &&
@@ -95,9 +145,20 @@ const Loading = () => (
 // the whole component remounts on exam switch (see `key={exam}` below), so
 // progress and tab choice never leak between exams that happen to share
 // question ids.
-const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
+const ExamView = ({
+  set,
+  exam,
+  examTitle,
+  bank,
+}: {
+  set: SetType;
+  exam: string;
+  examTitle: string;
+  bank: DerivedBank;
+}) => {
+  const names = { ...TITLES, ...set.names };
   const [view, setView] = useSaved<ViewType>(
-    `nclex:view:v1:${exam}`,
+    `${set.scope}:view:v1:${exam}`,
     freshView,
     validView,
   );
@@ -108,7 +169,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     setView((prev) => ({ ...prev, lens: next }));
 
   const [stars, setStars, starsReady] = useSaved<Record<string, true>>(
-    `nclex:favorites:v1:${exam}`,
+    `${set.scope}:favorites:v1:${exam}`,
     freshStars,
     validStars,
   );
@@ -170,9 +231,9 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
   const [started, setStarted] = useState<StartType | null>(null);
   const [results, setResults, resultsReady] = useSaved<
     Record<string, ResultType>
-  >(`nclex:results:v1:${exam}`, freshMarks, validMarks);
+  >(`${set.scope}:results:v1:${exam}`, freshMarks, validMarks);
   const [hashes, setHashes, hashesReady] = useSaved<Record<string, string>>(
-    `nclex:hashes:v1:${exam}`,
+    `${set.scope}:hashes:v1:${exam}`,
     freshHashes,
     validHashes,
   );
@@ -266,7 +327,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
             : bank.Chapters;
   const noun =
     section === "skills"
-      ? "skills"
+      ? (set.nouns.skills ?? "skills")
       : section === "cases"
         ? "cases"
         : section === "favorites"
@@ -323,9 +384,13 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     setStarted({ pick: next, at: startAt });
   };
 
+  // Starts the whole set of the current tab at the first question not yet
+  // answered, so it picks up where the learner left off.
   const run = (which: LensType) => {
     setLens(which);
-    open("all", 0, viewFor(which));
+    const list = viewFor(which);
+    const pool = list.flatMap((entry) => entry.questions);
+    open("all", firstToDo(pool, results), list);
   };
 
   const progressOf = useCallback(
@@ -369,18 +434,28 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
     setPass((prev) => prev + 1);
   };
 
+  // Switching tabs starts the new tab's questions right away. The tab's own
+  // groups only exist once the section has actually changed, so the swap
+  // just records where it is going and the effect below starts the run.
+  const [arriving, setArriving] = useState<SectionType | null>(null);
   const swap = (next: SectionType) => {
     setSection(next);
     setStarted(null);
     setDeck([]);
     setAt(0);
+    setArriving(next);
   };
+  useEffect(() => {
+    if (arriving === null || section !== arriving) return;
+    setArriving(null);
+    if (groups.length > 0) run(lens);
+  }, [arriving, section]);
 
   if (!section) {
     return (
       <div className="mb-8 rounded-2xl bg-[var(--container-color)] p-7 text-center">
         <p className="text-[var(--muted-color)]">
-          {EXAM_TITLES[exam]} doesn&apos;t have any questions yet.
+          {examTitle} doesn&apos;t have any questions yet.
         </p>
       </div>
     );
@@ -403,7 +478,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
                     : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
                 }`}
               >
-                {TITLES[entry]}
+                {names[entry]}
                 {entry === "favorites" && starsReady && starCount > 0
                   ? ` (${starCount})`
                   : ""}
@@ -417,7 +492,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
         token={section}
         className="relative mb-1 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center"
       >
-        <h2>{TITLES[section]}</h2>
+        <h2>{names[section]}</h2>
       </Swap>
 
       {shown.length === 0 ? (
@@ -434,7 +509,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
           ) : empty ? (
             <>
               <p className="mb-1 text-lg font-bold text-[var(--title-color)]">
-                Not in {EXAM_TITLES[exam]}.
+                Not in {examTitle}.
               </p>
               <p className="text-[var(--muted-color)]">
                 This exam doesn&apos;t include {noun}. Try another tab.
@@ -475,6 +550,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
           onStart={(next, index) => open(next, index, shown)}
           onReset={reset}
           picker={section === "skills" ? "select" : "grid"}
+          placeholder={`Choose ${set.picks.skills ?? "a skill"}…`}
           starred={stars}
         />
       )}
@@ -486,7 +562,7 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
           <p className="ml-3.5 text-[var(--muted-color)] lg:ml-0 lg:text-center">
             Pick{" "}
             {section === "skills"
-              ? "a skill"
+              ? (set.picks.skills ?? "a skill")
               : section === "cases"
                 ? "a case"
                 : "a chapter"}{" "}
@@ -533,20 +609,47 @@ const ExamView = ({ exam, bank }: { exam: ExamId; bank: DerivedBank }) => {
   );
 };
 
-const Nclex = () => {
-  const [exam, setExam] = useSaved<ExamId>(EXAM_KEY, () => "exam1", isExamId);
+const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
+  const set = SETS[kind];
+  const [exams, setExams] = useState<KaplanExamType[]>(
+    kind === "nclex" ? EXAMS.map((id) => ({ id, title: EXAM_TITLES[id] })) : [],
+  );
+  const [saved, setExam] = useSaved<string>(
+    set.examKey,
+    () => (kind === "nclex" ? "exam1" : ""),
+    (value) => typeof value === "string",
+  );
+  // A saved exam that isn't (or is no longer) in the list falls back to the
+  // first one rather than leaving the page empty.
+  const exam =
+    exams.find((entry) => entry.id === saved)?.id ?? exams[0]?.id ?? "";
+  const examTitle = exams.find((entry) => entry.id === exam)?.title ?? "";
   const [bank, setBank] = useState<DerivedBank | null>(null);
 
   useEffect(() => {
+    if (kind !== "kaplan") return;
+    let alive = true;
+    loadKaplanExams().then((list) => {
+      if (alive) setExams(list);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [kind]);
+
+  useEffect(() => {
+    if (!exam) return;
     let alive = true;
     setBank(null);
-    loadBank(exam).then((next) => {
+    const load =
+      kind === "kaplan" ? loadKaplanBank(exam) : loadBank(exam as ExamId);
+    load.then((next) => {
       if (alive) setBank(next);
     });
     return () => {
       alive = false;
     };
-  }, [exam]);
+  }, [kind, exam]);
 
   return (
     <>
@@ -566,22 +669,21 @@ const Nclex = () => {
         <div className="relative z-10">
           <div className="mb-2 flex items-start justify-between gap-x-4 lg:flex-col lg:items-center lg:gap-y-3">
             <h1 className="relative ml-3.5 text-4xl font-bold lg:ml-0 lg:text-center">
-              NCLEX-<em>style</em> Questions
+              {set.heading}
             </h1>
 
             <div className="relative shrink-0">
               <select
                 value={exam}
                 onChange={(event) => {
-                  const next = event.target.value;
-                  if (isExamId(next)) setExam(next);
+                  setExam(event.target.value);
                 }}
                 aria-label="Exam"
                 className="h-10 cursor-pointer appearance-none rounded-md border-none bg-[var(--container-color)] pl-5 pr-11 text-sm font-bold text-[var(--title-color)] shadow-inner outline-none"
               >
-                {EXAMS.map((id) => (
-                  <option key={id} value={id}>
-                    {EXAM_TITLES[id]}
+                {exams.map((entry) => (
+                  <option key={entry.id} value={entry.id}>
+                    {entry.title}
                   </option>
                 ))}
               </select>
@@ -596,7 +698,17 @@ const Nclex = () => {
             {bank ? bank.Course : ` `}
           </p>
 
-          {bank ? <ExamView key={exam} exam={exam} bank={bank} /> : <Loading />}
+          {bank ? (
+            <ExamView
+              key={`${kind}-${exam}`}
+              set={set}
+              exam={exam}
+              examTitle={examTitle}
+              bank={bank}
+            />
+          ) : (
+            <Loading />
+          )}
         </div>
       </section>
     </>

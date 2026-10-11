@@ -13,7 +13,7 @@ const Portfolio = () => {
 
   return (
     <section
-      className="work mx-auto max-w-[1080px] px-10 md:px-6 pb-8 pt-28"
+      className="work mx-auto max-w-[1080px] px-10 pb-8 pt-28 md:px-6"
       id="portfolio"
     >
       <h2 className="relative mb-14 ml-3.5 text-4xl font-bold">Recent Works</h2>

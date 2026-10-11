@@ -71,8 +71,8 @@ const Slot = ({
 
   const shell = answered
     ? right
-      ? "border-solid border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
-      : "border-solid border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
+      ? "border-solid border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
+      : "border-solid border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
     : option
       ? "border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
       : over
@@ -261,9 +261,9 @@ const Bowtie = ({
                   const taken = (placed[key] ?? []).includes(option.id);
                   const shell = answered
                     ? option.correct
-                      ? "border-[rgb(68,215,182)] bg-[rgba(68,215,182,0.12)]"
+                      ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
                       : taken
-                        ? "border-[var(--primary-color)] bg-[hsla(14, 100%, 57%,0.1)]"
+                        ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
                         : "border-transparent bg-[var(--body-color)] opacity-60"
                     : taken
                       ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"

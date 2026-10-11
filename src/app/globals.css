@@ -4,58 +4,59 @@
 
 :root {
   /* ======== Colors ======== */
-  /* Vibrant on near-black: orange for actions and "selected", deep purple
-     for chips, yellow for hover and the chosen edge, green only for
-     correct. Dark is the default; light is the opt-in override below. */
-  --primary-color: #ff5722;
-  --on-primary: #fff;
-  --accent-color: #ffeb3b;
-  --title-color: #f7f7f7;
-  --text-color: hsl(0, 0%, 78%);
-  --body-color: #181818;
-  --container-color: hsl(0, 0%, 13.5%);
-  --muted-color: hsl(0, 0%, 60%);
-  --track-color: hsl(0, 0%, 23%);
-  --icon-muted-color: hsl(0, 0%, 42%);
-  --border-color: hsl(0, 0%, 22%);
-  --scroll-icon-color: hsl(0, 0%, 70%);
+  /* Deep blue cards on a darker blue page, manela titles, purple for actions
+     and "selected", cream for the highlighted edge and hover, green for
+     correct only (bright green is kept for the shapes). Dark is the default;
+     light is the opt-in override below, on manela and white. */
+  --primary-color: #c9b5ff;
+  --on-primary: #152a32;
+  --accent-color: #fff0b5;
+  --title-color: #fffcee;
+  --text-color: #c6d3d7;
+  --body-color: #0d1b21;
+  --container-color: #152a32;
+  --muted-color: #8aa2ab;
+  --track-color: #24424e;
+  --icon-muted-color: #46646f;
+  --border-color: #24424e;
+  --scroll-icon-color: #c6d3d7;
   /* "Chip" surfaces: badges, pills, selected/chosen states, case-study
-     banners. Deep purple, with a bright yellow edge on a chosen thing. */
-  --chip-blue: #673ab7;
-  --chip-blue-soft: hsl(262, 40%, 22%);
-  --chip-blue-border: #ffeb3b;
-  --chip-blue-track: hsl(262, 28%, 34%);
-  --case-label-color: #ffeb3b;
+     banners. A lighter blue, with a cream edge on a chosen thing. */
+  --chip-blue: #28495a;
+  --chip-blue-soft: #1d3844;
+  --chip-blue-border: #fff0b5;
+  --chip-blue-track: #34596b;
+  --case-label-color: #fff0b5;
   --chip-amber: hsl(38, 55%, 22%);
-  --glass-bg: hsl(0, 0%, 14%);
-  --glass-bg-soft: hsl(0, 0%, 11%);
-  --glass-border: hsl(0, 0%, 23%);
+  --glass-bg: #152a32;
+  --glass-bg-soft: #112228;
+  --glass-border: #24424e;
   --lava-opacity: 0.4;
   --lava-blend: screen;
 }
 
 :root[data-theme="light"] {
+  --primary-color: #6a4bd6;
   --on-primary: #fff;
-  --accent-color: hsl(40, 78%, 44%);
-  --primary-color: hsl(14, 90%, 46%);
-  --title-color: hsl(40, 14%, 11%);
-  --text-color: hsl(40, 8%, 30%);
-  --body-color: hsl(42, 30%, 95%);
-  --container-color: hsl(44, 40%, 98.5%);
-  --muted-color: hsl(40, 6%, 45%);
-  --track-color: hsl(42, 20%, 88%);
-  --icon-muted-color: hsl(42, 14%, 78%);
-  --border-color: hsl(42, 18%, 84%);
-  --chip-blue: hsl(43, 60%, 87%);
-  --chip-blue-soft: hsl(43, 50%, 93%);
-  --chip-blue-border: hsl(40, 78%, 44%);
-  --chip-blue-track: hsl(43, 40%, 84%);
-  --case-label-color: hsl(36, 70%, 32%);
-  --chip-amber: hsl(38, 100%, 85%);
-  --scroll-icon-color: hsl(40, 10%, 25%);
-  --glass-bg: hsl(44, 40%, 98.5%);
-  --glass-bg-soft: hsl(44, 40%, 97%);
-  --glass-border: hsl(42, 18%, 84%);
+  --accent-color: #152a32;
+  --title-color: #152a32;
+  --text-color: #2c4650;
+  --body-color: #fffcee;
+  --container-color: #ffffff;
+  --muted-color: #667f89;
+  --track-color: #efe9d4;
+  --icon-muted-color: #cfc9b4;
+  --border-color: #e8e2cc;
+  --chip-blue: #e9e0ff;
+  --chip-blue-soft: #f4efff;
+  --chip-blue-border: #8a6ee0;
+  --chip-blue-track: #d8cbfb;
+  --case-label-color: #5a3fc0;
+  --chip-amber: hsl(46, 100%, 85%);
+  --scroll-icon-color: #2c4650;
+  --glass-bg: #ffffff;
+  --glass-bg-soft: #fffcee;
+  --glass-border: #e8e2cc;
   --lava-opacity: 0.22;
   --lava-blend: normal;
 }
@@ -229,7 +230,7 @@ button {
     90deg,
     var(--title-color) 0%,
     hsl(43, 100%, 66%) 22%,
-    hsl(2, 85%, 66%) 46%,
+    hsl(257, 100%, 90%) 46%,
     hsl(219, 100%, 76%) 70%,
     var(--title-color) 100%
   );

@@ -7,7 +7,11 @@ import {
   TherapeuticWindow,
   ThreeChecks,
 } from "./Diagrams";
-import { MODULE1_QUESTIONS, MODULE2_QUESTIONS, MODULE3_QUESTIONS } from "./questions";
+import {
+  MODULE1_QUESTIONS,
+  MODULE2_QUESTIONS,
+  MODULE3_QUESTIONS,
+} from "./questions";
 import { Block, Step } from "./types";
 
 const DECIDE = ["✅ Give", "✋ Hold + notify", "❓ Clarify the order"];
@@ -36,8 +40,7 @@ export const REFERENCES: ReactNode[] = [
   <>
     Open Resources for Nursing (Open RN). (2023).{" "}
     <ExternalLink href={PHARM_2E_URL}>Nursing Pharmacology 2e</ExternalLink>,
-    Chapter 1: Pharmacokinetics and Pharmacodynamics. WisTech Open. CC BY
-    4.0.
+    Chapter 1: Pharmacokinetics and Pharmacodynamics. WisTech Open. CC BY 4.0.
   </>,
   <>
     Open Resources for Nursing (Open RN). (2023).{" "}
@@ -47,11 +50,9 @@ export const REFERENCES: ReactNode[] = [
   </>,
   <>
     Open Resources for Nursing (Open RN). (2023).{" "}
-    <ExternalLink href={NURSING_SKILLS_2E_URL}>
-      Nursing Skills 2e
-    </ExternalLink>
-    , 15.3 Assessments Related to Medication Administration. WisTech Open.
-    CC BY 4.0.
+    <ExternalLink href={NURSING_SKILLS_2E_URL}>Nursing Skills 2e</ExternalLink>,
+    15.3 Assessments Related to Medication Administration. WisTech Open. CC BY
+    4.0.
   </>,
 ];
 
@@ -75,10 +76,19 @@ export const STEPS: Step[] = [
         node: (
           <Objectives
             items={[
-              ["🔄", "Explain a drug's trip through the body and who is at higher risk."],
+              [
+                "🔄",
+                "Explain a drug's trip through the body and who is at higher risk.",
+              ],
               ["✅", "Use the rights and the 3 checks at every med pass."],
-              ["🚨", "Spot high-alert meds, allergies, controlled substances, and black box warnings."],
-              ["🩺", "Decide to give, hold, or clarify using assessment before and after."],
+              [
+                "🚨",
+                "Spot high-alert meds, allergies, controlled substances, and black box warnings.",
+              ],
+              [
+                "🩺",
+                "Decide to give, hold, or clarify using assessment before and after.",
+              ],
             ]}
           />
         ),
@@ -89,7 +99,11 @@ export const STEPS: Step[] = [
         rows: [
           ["Module 1: How drugs work", "20 min", "Read, self-check"],
           ["Module 2: Safe administration", "30 min", "Read, error-spotting"],
-          ["Module 3: Assess before and after", "10 min", "Give-or-hold practice"],
+          [
+            "Module 3: Assess before and after",
+            "10 min",
+            "Give-or-hold practice",
+          ],
           ["Readiness quiz", "10 min", "7 questions, due before class"],
         ],
       },
@@ -129,16 +143,56 @@ export const STEPS: Step[] = [
         type: "flip",
         id: "top10",
         items: [
-          { emoji: "🪪", title: "Two identifiers", back: "Two identifiers, every time: name + date of birth, armband to MAR." },
-          { emoji: "🔁", title: "Three checks", back: "Three checks: pull → prepare → bedside." },
-          { emoji: "🫘", title: "Liver & kidneys", back: "Weak liver or kidneys = drug builds up → watch for toxicity." },
-          { emoji: "🩺", title: "Check before you give", back: "Know the check before you give: HR and BP, RR and sedation, glucose, labs." },
-          { emoji: "✋", title: "When in doubt", back: "When in doubt, hold and clarify. Asking is safe; guessing is not." },
-          { emoji: "⚠️", title: "High-alert meds", back: '"I Hate Other Pain" = Insulin, Heparin, Opioids, Potassium.' },
-          { emoji: "🤧", title: "Allergies", back: 'Ask "What happened?" Anaphylaxis → stop the drug, call for help, epinephrine.' },
-          { emoji: "🔒", title: "Controlled substances", back: "Lock, count, witness every waste." },
-          { emoji: "⬛", title: "Black box", back: "Black box = the drug's biggest risk. Watch for it and teach it." },
-          { emoji: "📲", title: "Scanner alerts", back: "Scanner alert = STOP. Find out why. Chart after giving, never before." },
+          {
+            emoji: "🪪",
+            title: "Two identifiers",
+            back: "Two identifiers, every time: name + date of birth, armband to MAR.",
+          },
+          {
+            emoji: "🔁",
+            title: "Three checks",
+            back: "Three checks: pull → prepare → bedside.",
+          },
+          {
+            emoji: "🫘",
+            title: "Liver & kidneys",
+            back: "Weak liver or kidneys = drug builds up → watch for toxicity.",
+          },
+          {
+            emoji: "🩺",
+            title: "Check before you give",
+            back: "Know the check before you give: HR and BP, RR and sedation, glucose, labs.",
+          },
+          {
+            emoji: "✋",
+            title: "When in doubt",
+            back: "When in doubt, hold and clarify. Asking is safe; guessing is not.",
+          },
+          {
+            emoji: "⚠️",
+            title: "High-alert meds",
+            back: '"I Hate Other Pain" = Insulin, Heparin, Opioids, Potassium.',
+          },
+          {
+            emoji: "🤧",
+            title: "Allergies",
+            back: 'Ask "What happened?" Anaphylaxis → stop the drug, call for help, epinephrine.',
+          },
+          {
+            emoji: "🔒",
+            title: "Controlled substances",
+            back: "Lock, count, witness every waste.",
+          },
+          {
+            emoji: "⬛",
+            title: "Black box",
+            back: "Black box = the drug's biggest risk. Watch for it and teach it.",
+          },
+          {
+            emoji: "📲",
+            title: "Scanner alerts",
+            back: "Scanner alert = STOP. Find out why. Chart after giving, never before.",
+          },
         ],
       },
     ],
@@ -165,10 +219,26 @@ export const STEPS: Step[] = [
         type: "table",
         headers: ["Stop", "Plain words", "Nurse watches"],
         rows: [
-          ["1. Absorption (getting in)", "Drug enters the blood", "Can they swallow? Vomiting? Food timing? Never crush ER (extended-release) pills"],
-          ["2. Distribution (getting around)", "Blood carries it to tissues", "Albumin (protein that holds drug; low = more active drug), dehydration"],
-          ["3. Metabolism (breaking down)", "Liver breaks it down", "AST/ALT (liver damage labs), yellow skin (jaundice)"],
-          ["4. Excretion (getting out)", "Kidneys remove it", "Creatinine (kidney lab; high = kidneys struggling), urine output at least 30 mL/hr"],
+          [
+            "1. Absorption (getting in)",
+            "Drug enters the blood",
+            "Can they swallow? Vomiting? Food timing? Never crush ER (extended-release) pills",
+          ],
+          [
+            "2. Distribution (getting around)",
+            "Blood carries it to tissues",
+            "Albumin (protein that holds drug; low = more active drug), dehydration",
+          ],
+          [
+            "3. Metabolism (breaking down)",
+            "Liver breaks it down",
+            "AST/ALT (liver damage labs), yellow skin (jaundice)",
+          ],
+          [
+            "4. Excretion (getting out)",
+            "Kidneys remove it",
+            "Creatinine (kidney lab; high = kidneys struggling), urine output at least 30 mL/hr",
+          ],
         ],
       },
       {
@@ -183,12 +253,38 @@ export const STEPS: Step[] = [
         q: "Which stop on the trip is affected? Pick one for each finding.",
         buckets: ["Absorption", "Distribution", "Metabolism", "Excretion"],
         items: [
-          { text: "AST and ALT are high; skin looks yellow", answer: 2, explain: "The liver, the breakdown crew, is struggling." },
-          { text: "Someone crushed an extended-release tablet", answer: 0, explain: "The whole dose is absorbed at once, which can cause an overdose." },
-          { text: "Albumin is low from malnutrition", answer: 1, explain: 'Less protein to "park" the drug, so more free drug circulates.' },
-          { text: "Creatinine is rising; urine output 15 mL/hr", answer: 3, explain: "The kidneys can't clear the drug, so it builds up." },
-          { text: "Severe dehydration", answer: 1, explain: "Less blood flow carries less drug to the tissues." },
-          { text: "Patient vomited 10 minutes after swallowing her pills", answer: 0, explain: "The drug never got in." },
+          {
+            text: "AST and ALT are high; skin looks yellow",
+            answer: 2,
+            explain: "The liver, the breakdown crew, is struggling.",
+          },
+          {
+            text: "Someone crushed an extended-release tablet",
+            answer: 0,
+            explain:
+              "The whole dose is absorbed at once, which can cause an overdose.",
+          },
+          {
+            text: "Albumin is low from malnutrition",
+            answer: 1,
+            explain:
+              'Less protein to "park" the drug, so more free drug circulates.',
+          },
+          {
+            text: "Creatinine is rising; urine output 15 mL/hr",
+            answer: 3,
+            explain: "The kidneys can't clear the drug, so it builds up.",
+          },
+          {
+            text: "Severe dehydration",
+            answer: 1,
+            explain: "Less blood flow carries less drug to the tissues.",
+          },
+          {
+            text: "Patient vomited 10 minutes after swallowing her pills",
+            answer: 0,
+            explain: "The drug never got in.",
+          },
         ],
       },
     ],
@@ -200,7 +296,10 @@ export const STEPS: Step[] = [
     icon: "🔬",
     meta: "Module 1",
     blocks: [
-      { type: "heading", text: "Absorption: the route changes how much and how fast" },
+      {
+        type: "heading",
+        text: "Absorption: the route changes how much and how fast",
+      },
       {
         type: "p",
         text: "Bioavailability is how much of the dose actually reaches the blood. The first-pass effect means swallowed drugs pass through the liver first, which breaks some down before it reaches the body.",
@@ -209,11 +308,31 @@ export const STEPS: Step[] = [
         type: "table",
         headers: ["Route", "Speed and amount", "Nurse tip"],
         rows: [
-          ["IV", "Fastest; 100% reaches the blood", "Sterile technique; check IV compatibility; infection risk"],
-          ["Oral (PO)", "Slowest; less reaches the blood (first-pass)", "Food, stomach acid, other drugs, enteric coating and ER forms change absorption. Can they swallow?"],
-          ["Subcut / IM", "Medium", "Rotate sites; watch for bruising, redness, swelling"],
-          ["Inhaled", "Fast, straight to the lungs", "Works only with good technique: teach and watch them use it"],
-          ["Topical / patch", "Slow and steady; skips first-pass", "Remove the old patch; rotate sites; heat speeds absorption"],
+          [
+            "IV",
+            "Fastest; 100% reaches the blood",
+            "Sterile technique; check IV compatibility; infection risk",
+          ],
+          [
+            "Oral (PO)",
+            "Slowest; less reaches the blood (first-pass)",
+            "Food, stomach acid, other drugs, enteric coating and ER forms change absorption. Can they swallow?",
+          ],
+          [
+            "Subcut / IM",
+            "Medium",
+            "Rotate sites; watch for bruising, redness, swelling",
+          ],
+          [
+            "Inhaled",
+            "Fast, straight to the lungs",
+            "Works only with good technique: teach and watch them use it",
+          ],
+          [
+            "Topical / patch",
+            "Slow and steady; skips first-pass",
+            "Remove the old patch; rotate sites; heat speeds absorption",
+          ],
         ],
       },
       {
@@ -227,26 +346,49 @@ export const STEPS: Step[] = [
           "Stomach acid makes oral drugs stronger",
         ],
         answer: 1,
-        explain: "Bioavailability is lower by mouth. IV delivers 100% to the blood.",
+        explain:
+          "Bioavailability is lower by mouth. IV delivers 100% to the blood.",
       },
       { type: "heading", text: "Distribution: getting to the right place" },
       {
         type: "table",
         headers: ["Factor", "What it means", "Nursing example"],
         rows: [
-          ["Blood flow", "Drug goes where blood goes", "Dehydration, blocked vessels, or heart failure = less drug reaches the target"],
-          ['Protein binding', 'Drug "parked" on albumin = inactive; only free drug works', "Low albumin = more free drug = stronger effect"],
-          ["Blood-brain barrier", "Tight wall protecting the brain", "Some drugs need a carrier to get in"],
-          ["Placental barrier", "Some drugs reach the baby", "Always ask about pregnancy before giving meds"],
+          [
+            "Blood flow",
+            "Drug goes where blood goes",
+            "Dehydration, blocked vessels, or heart failure = less drug reaches the target",
+          ],
+          [
+            "Protein binding",
+            'Drug "parked" on albumin = inactive; only free drug works',
+            "Low albumin = more free drug = stronger effect",
+          ],
+          [
+            "Blood-brain barrier",
+            "Tight wall protecting the brain",
+            "Some drugs need a carrier to get in",
+          ],
+          [
+            "Placental barrier",
+            "Some drugs reach the baby",
+            "Always ask about pregnancy before giving meds",
+          ],
         ],
       },
       {
         type: "mcq",
         id: "albumin-mcq",
         q: "An older adult with low albumin gets a drug that binds heavily to protein. What do you expect?",
-        options: ["A weaker effect", "A stronger effect: more free (active) drug", "No change", "The drug can't reach the blood"],
+        options: [
+          "A weaker effect",
+          "A stronger effect: more free (active) drug",
+          "No change",
+          "The drug can't reach the blood",
+        ],
         answer: 1,
-        explain: 'Less albumin means less "parking," so more drug is free and active. Watch for toxicity.',
+        explain:
+          'Less albumin means less "parking," so more drug is free and active. Watch for toxicity.',
       },
       { type: "heading", text: "Metabolism: the liver's breakdown crew" },
       {
@@ -289,10 +431,26 @@ export const STEPS: Step[] = [
         type: "table",
         headers: ["Term", "Meaning", "Example"],
         rows: [
-          ["Therapeutic effect", "The reason we give it", "Morphine relieves pain"],
-          ["Side effect", "Expected, usually mild", "Morphine: constipation, drowsiness"],
-          ["Adverse effect", "Harmful, unintended", "Morphine: RR 8, hard to wake"],
-          ["Narrow therapeutic range", 'Tiny gap between "works" and "toxic"', "Digoxin, warfarin, lithium, vancomycin, phenytoin"],
+          [
+            "Therapeutic effect",
+            "The reason we give it",
+            "Morphine relieves pain",
+          ],
+          [
+            "Side effect",
+            "Expected, usually mild",
+            "Morphine: constipation, drowsiness",
+          ],
+          [
+            "Adverse effect",
+            "Harmful, unintended",
+            "Morphine: RR 8, hard to wake",
+          ],
+          [
+            "Narrow therapeutic range",
+            'Tiny gap between "works" and "toxic"',
+            "Digoxin, warfarin, lithium, vancomycin, phenytoin",
+          ],
         ],
       },
       {
@@ -301,10 +459,26 @@ export const STEPS: Step[] = [
         q: "Your patient got morphine. Sort each finding.",
         buckets: ["Therapeutic", "Side effect", "Adverse effect"],
         items: [
-          { text: "RR 8, hard to wake", answer: 2, explain: "Respiratory depression is harmful. Act now." },
-          { text: "No bowel movement for 2 days", answer: 1, explain: "Constipation is expected. Plan a bowel regimen." },
-          { text: "Pain goes from 7/10 to 2/10", answer: 0, explain: "This is the reason we gave it." },
-          { text: "Mild drowsiness", answer: 1, explain: "Expected and usually mild. Keep watching." },
+          {
+            text: "RR 8, hard to wake",
+            answer: 2,
+            explain: "Respiratory depression is harmful. Act now.",
+          },
+          {
+            text: "No bowel movement for 2 days",
+            answer: 1,
+            explain: "Constipation is expected. Plan a bowel regimen.",
+          },
+          {
+            text: "Pain goes from 7/10 to 2/10",
+            answer: 0,
+            explain: "This is the reason we gave it.",
+          },
+          {
+            text: "Mild drowsiness",
+            answer: 1,
+            explain: "Expected and usually mild. Keep watching.",
+          },
         ],
       },
       { type: "heading", text: "Onset, peak, duration, half-life" },
@@ -312,11 +486,27 @@ export const STEPS: Step[] = [
         type: "table",
         headers: ["Term", "Meaning", "Nursing use"],
         rows: [
-          ["Onset", "When the drug starts working", "Tells you when relief should begin"],
-          ["Peak", "Highest drug level = strongest effect", "Reassess at the peak and watch for adverse effects"],
+          [
+            "Onset",
+            "When the drug starts working",
+            "Tells you when relief should begin",
+          ],
+          [
+            "Peak",
+            "Highest drug level = strongest effect",
+            "Reassess at the peak and watch for adverse effects",
+          ],
           ["Duration", "How long it works", "Plan the next dose"],
-          ["Half-life", "Time for half the drug to leave the body", "Liver or kidney disease can lengthen it"],
-          ["Steady state", "Amount in = amount out", "Reached after about 4 to 5 half-lives"],
+          [
+            "Half-life",
+            "Time for half the drug to leave the body",
+            "Liver or kidney disease can lengthen it",
+          ],
+          [
+            "Steady state",
+            "Amount in = amount out",
+            "Reached after about 4 to 5 half-lives",
+          ],
         ],
       },
       {
@@ -329,15 +519,26 @@ export const STEPS: Step[] = [
         type: "mcq",
         id: "peak-mcq",
         q: "When is the best time to reassess pain and watch for adverse effects?",
-        options: ["Right after giving it", "At the drug's peak", "At the end of its duration", "At the next shift"],
+        options: [
+          "Right after giving it",
+          "At the drug's peak",
+          "At the end of its duration",
+          "At the next shift",
+        ],
         answer: 1,
-        explain: "The peak is the strongest effect, so it's the time to check both benefit and harm.",
+        explain:
+          "The peak is the strongest effect, so it's the time to check both benefit and harm.",
       },
       {
         type: "mcq",
         id: "ss-mcq",
         q: "About how long until a drug reaches steady state?",
-        options: ["1 half-life", "2 half-lives", "4 to 5 half-lives", "10 half-lives"],
+        options: [
+          "1 half-life",
+          "2 half-lives",
+          "4 to 5 half-lives",
+          "10 half-lives",
+        ],
         answer: 2,
         explain: "This is why some drugs take days to reach full effect.",
       },
@@ -359,9 +560,21 @@ export const STEPS: Step[] = [
         type: "table",
         headers: ["Term", "Meaning", "Nursing use"],
         rows: [
-          ["Therapeutic index", "Gap between the helpful dose and the toxic dose", "Small gap = narrow = risky: digoxin, warfarin, lithium, vancomycin, phenytoin"],
-          ["Peak level", "Blood drawn when the drug is highest", "Shows if the dose is too strong"],
-          ["Trough level", "Blood drawn right before the next dose", "Shows if the drug is clearing; a high trough signals toxicity risk"],
+          [
+            "Therapeutic index",
+            "Gap between the helpful dose and the toxic dose",
+            "Small gap = narrow = risky: digoxin, warfarin, lithium, vancomycin, phenytoin",
+          ],
+          [
+            "Peak level",
+            "Blood drawn when the drug is highest",
+            "Shows if the dose is too strong",
+          ],
+          [
+            "Trough level",
+            "Blood drawn right before the next dose",
+            "Shows if the drug is clearing; a high trough signals toxicity risk",
+          ],
         ],
       },
       {
@@ -374,7 +587,12 @@ export const STEPS: Step[] = [
         type: "mcq",
         id: "trough-mcq",
         q: "A trough level is ordered. When should it be drawn?",
-        options: ["At the drug's peak", "Right before the next dose", "Any time today", "1 hour after the dose"],
+        options: [
+          "At the drug's peak",
+          "Right before the next dose",
+          "Any time today",
+          "1 hour after the dose",
+        ],
         answer: 1,
         explain: "The trough is the lowest level, just before the next dose.",
       },
@@ -383,11 +601,23 @@ export const STEPS: Step[] = [
         type: "table",
         headers: ["Who", "Why"],
         rows: [
-          ["Older adults", "Weaker liver and kidneys, less albumin, polypharmacy, falls"],
-          ["Infants and children", "Immature liver and kidneys; weight-based doses"],
-          ["Pregnant or breastfeeding", "Drug can cross the placenta or enter breast milk"],
+          [
+            "Older adults",
+            "Weaker liver and kidneys, less albumin, polypharmacy, falls",
+          ],
+          [
+            "Infants and children",
+            "Immature liver and kidneys; weight-based doses",
+          ],
+          [
+            "Pregnant or breastfeeding",
+            "Drug can cross the placenta or enter breast milk",
+          ],
           ["Kidney or liver disease", "Drug builds up; longer half-life"],
-          ["Genetic differences", "Pharmacogenetics: same dose, different effect"],
+          [
+            "Genetic differences",
+            "Pharmacogenetics: same dose, different effect",
+          ],
         ],
       },
       {
@@ -402,7 +632,8 @@ export const STEPS: Step[] = [
         q: "Which drug has a narrow therapeutic range?",
         options: ["Acetaminophen", "Docusate", "Digoxin", "Multivitamin"],
         answer: 2,
-        explain: "Digoxin, warfarin, lithium, vancomycin, and phenytoin all need close monitoring.",
+        explain:
+          "Digoxin, warfarin, lithium, vancomycin, and phenytoin all need close monitoring.",
       },
     ],
   },
@@ -439,7 +670,10 @@ export const STEPS: Step[] = [
         type: "table",
         headers: ["Right", "Ask yourself"],
         rows: [
-          ["Patient", "Name + date of birth match the armband and MAR? Also check allergies every time."],
+          [
+            "Patient",
+            "Name + date of birth match the armband and MAR? Also check allergies every time.",
+          ],
           ["Drug", "Label matches the MAR exactly? Look-alike name?"],
           ["Dose", "Does it make sense for this patient?"],
           ["Route", "Can they safely take it this way?"],
@@ -463,13 +697,22 @@ export const STEPS: Step[] = [
         type: "order",
         id: "3checks",
         q: "Put the 3 checks in order. Tap each one in sequence.",
-        items: ["Pull from the med system", "Prepare before opening", "Bedside with armband + scan"],
+        items: [
+          "Pull from the med system",
+          "Prepare before opening",
+          "Bedside with armband + scan",
+        ],
       },
       {
         type: "mcq",
         id: "chart-mcq",
         q: "When do you chart a medication?",
-        options: ["Before giving it, so you don't forget", "After giving it", "At the end of the shift", "Whenever the scanner reminds you"],
+        options: [
+          "Before giving it, so you don't forget",
+          "After giving it",
+          "At the end of the shift",
+          "Whenever the scanner reminds you",
+        ],
         answer: 1,
         explain: "Always chart after giving, never before.",
       },
@@ -491,23 +734,58 @@ export const STEPS: Step[] = [
         type: "flip",
         id: "ihop",
         items: [
-          { emoji: "I", title: "Insulin", back: "Danger: hypoglycemia. Safeguard: check glucose, insulin type and concentration, vial open date; second-nurse check." },
-          { emoji: "H", title: "Heparin & anticoagulants", back: "Danger: bleeding. Safeguard: check aPTT/INR and platelets; watch for bleeding." },
-          { emoji: "O", title: "Opioids", back: "Danger: respiratory depression. Safeguard: RR, sedation, SpO2; naloxone ready." },
-          { emoji: "P", title: "Potassium, concentrated IV", back: "Danger: deadly heart rhythms. Safeguard: never IV push; premixed bag on a pump." },
+          {
+            emoji: "I",
+            title: "Insulin",
+            back: "Danger: hypoglycemia. Safeguard: check glucose, insulin type and concentration, vial open date; second-nurse check.",
+          },
+          {
+            emoji: "H",
+            title: "Heparin & anticoagulants",
+            back: "Danger: bleeding. Safeguard: check aPTT/INR and platelets; watch for bleeding.",
+          },
+          {
+            emoji: "O",
+            title: "Opioids",
+            back: "Danger: respiratory depression. Safeguard: RR, sedation, SpO2; naloxone ready.",
+          },
+          {
+            emoji: "P",
+            title: "Potassium, concentrated IV",
+            back: "Danger: deadly heart rhythms. Safeguard: never IV push; premixed bag on a pump.",
+          },
         ],
       },
-      { type: "p", text: "Also high-alert: IV sedatives and chemotherapy, given in specialty or monitored settings." },
+      {
+        type: "p",
+        text: "Also high-alert: IV sedatives and chemotherapy, given in specialty or monitored settings.",
+      },
       {
         type: "sort",
         id: "ihop-sort",
         q: "Match each safeguard to its drug.",
         buckets: ["Insulin", "Heparin", "Opioids", "Potassium"],
         items: [
-          { text: "Naloxone at the bedside", answer: 2, explain: "Naloxone reverses opioids." },
-          { text: "Never IV push; premixed bag on a pump", answer: 3, explain: "Concentrated IV potassium can stop the heart." },
-          { text: "Check aPTT/INR and platelets", answer: 1, explain: "Clotting labs guide anticoagulants." },
-          { text: "Check glucose and the date the vial was opened", answer: 0, explain: "Low glucose plus insulin means hypoglycemia." },
+          {
+            text: "Naloxone at the bedside",
+            answer: 2,
+            explain: "Naloxone reverses opioids.",
+          },
+          {
+            text: "Never IV push; premixed bag on a pump",
+            answer: 3,
+            explain: "Concentrated IV potassium can stop the heart.",
+          },
+          {
+            text: "Check aPTT/INR and platelets",
+            answer: 1,
+            explain: "Clotting labs guide anticoagulants.",
+          },
+          {
+            text: "Check glucose and the date the vial was opened",
+            answer: 0,
+            explain: "Low glucose plus insulin means hypoglycemia.",
+          },
         ],
       },
     ],
@@ -523,10 +801,26 @@ export const STEPS: Step[] = [
         type: "table",
         headers: ["Type", "What it means", "Example"],
         rows: [
-          ["Side effect", "Expected, not immune-related", "Nausea with codeine"],
-          ["Intolerance", "Unpleasant, not immune-related", "Upset stomach with ibuprofen"],
-          ["Allergy", "Immune system reaction; can worsen with each exposure", "Hives with penicillin"],
-          ["Anaphylaxis", "Severe, fast, whole-body allergy — life-threatening", "Throat swelling minutes after an IV antibiotic"],
+          [
+            "Side effect",
+            "Expected, not immune-related",
+            "Nausea with codeine",
+          ],
+          [
+            "Intolerance",
+            "Unpleasant, not immune-related",
+            "Upset stomach with ibuprofen",
+          ],
+          [
+            "Allergy",
+            "Immune system reaction; can worsen with each exposure",
+            "Hives with penicillin",
+          ],
+          [
+            "Anaphylaxis",
+            "Severe, fast, whole-body allergy — life-threatening",
+            "Throat swelling minutes after an IV antibiotic",
+          ],
         ],
       },
       {
@@ -545,11 +839,31 @@ export const STEPS: Step[] = [
         q: "Classify each reaction.",
         buckets: ["Side effect / intolerance", "Allergy", "Anaphylaxis"],
         items: [
-          { text: '"Codeine makes me nauseated"', answer: 0, explain: 'Not immune-related. Document "codeine: nausea."' },
-          { text: "Throat swelling 5 min into an IV antibiotic", answer: 2, explain: "This is an emergency. Start the response now." },
-          { text: "Hives after penicillin", answer: 1, explain: "An immune reaction that can worsen with each exposure." },
-          { text: "Upset stomach with ibuprofen", answer: 0, explain: "Unpleasant, but not an allergy." },
-          { text: 'Wheezing, low BP, "sense of doom"', answer: 2, explain: "Whole-body and life-threatening." },
+          {
+            text: '"Codeine makes me nauseated"',
+            answer: 0,
+            explain: 'Not immune-related. Document "codeine: nausea."',
+          },
+          {
+            text: "Throat swelling 5 min into an IV antibiotic",
+            answer: 2,
+            explain: "This is an emergency. Start the response now.",
+          },
+          {
+            text: "Hives after penicillin",
+            answer: 1,
+            explain: "An immune reaction that can worsen with each exposure.",
+          },
+          {
+            text: "Upset stomach with ibuprofen",
+            answer: 0,
+            explain: "Unpleasant, but not an allergy.",
+          },
+          {
+            text: 'Wheezing, low BP, "sense of doom"',
+            answer: 2,
+            explain: "Whole-body and life-threatening.",
+          },
         ],
       },
       {
@@ -562,7 +876,14 @@ export const STEPS: Step[] = [
         type: "order",
         id: "ana-order",
         q: "Put the anaphylaxis response in order.",
-        items: ["STOP the drug", "CALL for help", "AIRWAY + oxygen", "EPINEPHRINE IM", "MONITOR", "DOCUMENT + allergy band"],
+        items: [
+          "STOP the drug",
+          "CALL for help",
+          "AIRWAY + oxygen",
+          "EPINEPHRINE IM",
+          "MONITOR",
+          "DOCUMENT + allergy band",
+        ],
       },
     ],
   },
@@ -582,8 +903,16 @@ export const STEPS: Step[] = [
         headers: ["Schedule", "Risk", "Examples"],
         rows: [
           ["C-I", "Highest; no accepted medical use", "Heroin, LSD"],
-          ["C-II", "High; severe dependence", "Morphine, oxycodone, fentanyl, hydromorphone, amphetamine"],
-          ["C-III", "Moderate", "Acetaminophen with codeine, ketamine, buprenorphine"],
+          [
+            "C-II",
+            "High; severe dependence",
+            "Morphine, oxycodone, fentanyl, hydromorphone, amphetamine",
+          ],
+          [
+            "C-III",
+            "Moderate",
+            "Acetaminophen with codeine, ketamine, buprenorphine",
+          ],
           ["C-IV", "Lower", "Lorazepam, alprazolam, zolpidem, tramadol"],
           ["C-V", "Lowest", "Cough syrup with codeine, pregabalin"],
         ],
@@ -618,10 +947,22 @@ export const STEPS: Step[] = [
         headers: ["Drug", "Boxed risk", "Watch for"],
         rows: [
           ["Opioids", "Addiction, breathing problems", "RR, sedation, SpO2"],
-          ["Opioids + benzodiazepines", "Deep sedation, stopped breathing", "Avoid unless ordered; monitor closely"],
+          [
+            "Opioids + benzodiazepines",
+            "Deep sedation, stopped breathing",
+            "Avoid unless ordered; monitor closely",
+          ],
           ["Warfarin", "Major bleeding", "INR, bleeding signs"],
-          ["Fluoroquinolones", "Tendon rupture, nerve damage", "Tendon pain, numbness, especially older adults"],
-          ["Antidepressants", "Suicidal thoughts in children and young adults", "Mood changes, especially early on"],
+          [
+            "Fluoroquinolones",
+            "Tendon rupture, nerve damage",
+            "Tendon pain, numbness, especially older adults",
+          ],
+          [
+            "Antidepressants",
+            "Suicidal thoughts in children and young adults",
+            "Mood changes, especially early on",
+          ],
         ],
       },
       {
@@ -634,9 +975,15 @@ export const STEPS: Step[] = [
         type: "mcq",
         id: "bbw-mcq",
         q: "A 74-year-old starts levofloxacin. Which boxed risk do you teach?",
-        options: ["Tendon rupture: report tendon pain right away", "Hair loss", "Yellow-tinted vision", "Weight gain"],
+        options: [
+          "Tendon rupture: report tendon pain right away",
+          "Hair loss",
+          "Yellow-tinted vision",
+          "Weight gain",
+        ],
         answer: 0,
-        explain: "Fluoroquinolones carry a boxed warning for tendon rupture and nerve damage, especially in older adults.",
+        explain:
+          "Fluoroquinolones carry a boxed warning for tendon rupture and nerve damage, especially in older adults.",
       },
     ],
   },
@@ -651,9 +998,15 @@ export const STEPS: Step[] = [
         type: "table",
         headers: ["Do", "Don't"],
         rows: [
-          ["Read tall-man letters: hydrALAZINE vs hydrOXYzine", "Trust a quick glance"],
+          [
+            "Read tall-man letters: hydrALAZINE vs hydrOXYzine",
+            "Trust a quick glance",
+          ],
           ["Give only what you prepared", "Give a med someone else drew up"],
-          ["Protect your focus during med pass", "Multitask while preparing meds"],
+          [
+            "Protect your focus during med pass",
+            "Multitask while preparing meds",
+          ],
           ["Report errors and near misses", "Hide mistakes"],
         ],
       },
@@ -667,7 +1020,12 @@ export const STEPS: Step[] = [
         type: "mcq",
         id: "tall-mcq",
         q: 'Why is "hydrALAZINE" printed with some capital letters?',
-        options: ["It's a controlled substance", "Tall-man letters show the difference from look-alike names like hydrOXYzine", "It's a high-alert medication", "It's a brand name"],
+        options: [
+          "It's a controlled substance",
+          "Tall-man letters show the difference from look-alike names like hydrOXYzine",
+          "It's a high-alert medication",
+          "It's a brand name",
+        ],
         answer: 1,
         explain: "The capitals draw your eye to the letters that differ.",
       },
@@ -675,7 +1033,12 @@ export const STEPS: Step[] = [
         type: "mcq",
         id: "drawup-mcq",
         q: "A busy colleague drew up a med and asks you to give it. What do you do?",
-        options: ["Give it; they're experienced", "Give only what you prepared: politely decline", "Give it, but chart their name", "Ask the patient if it looks right"],
+        options: [
+          "Give it; they're experienced",
+          "Give only what you prepared: politely decline",
+          "Give it, but chart their name",
+          "Ask the patient if it looks right",
+        ],
         answer: 1,
         explain: "You can't verify what you didn't prepare.",
       },
@@ -721,15 +1084,55 @@ export const STEPS: Step[] = [
       },
       {
         type: "table",
-        headers: ["Drug", "Check before", "Hold and notify if", "Recheck after"],
+        headers: [
+          "Drug",
+          "Check before",
+          "Hold and notify if",
+          "Recheck after",
+        ],
         rows: [
-          ["Beta blockers (metoprolol)", "HR, BP", "HR under 60 or SBP under 100, or per order", "HR, BP, dizziness"],
-          ["Digoxin", "Apical pulse for 1 full minute, potassium, dig level", "Apical pulse under 60 (adult); nausea, vision changes", "HR, toxicity signs"],
-          ["Loop diuretics (furosemide)", "BP, potassium, urine output", "Low BP, potassium under 3.5", "Urine output, weight, BP, potassium"],
-          ["Opioids", "RR, sedation, SpO2, pain", "RR under 12, too sleepy", "Pain in 30-60 min; RR, sedation"],
-          ["Insulin", "Glucose, meal plan", "Low glucose; NPO (clarify)", "Glucose; low-sugar signs"],
-          ["Anticoagulants", "aPTT or INR, platelets, bleeding", "Labs out of range; bleeding", "Bleeding, bruising, stool color"],
-          ["ACE inhibitors (lisinopril)", "BP, potassium, creatinine", "Low BP; high potassium", "BP, cough, face or lip swelling"],
+          [
+            "Beta blockers (metoprolol)",
+            "HR, BP",
+            "HR under 60 or SBP under 100, or per order",
+            "HR, BP, dizziness",
+          ],
+          [
+            "Digoxin",
+            "Apical pulse for 1 full minute, potassium, dig level",
+            "Apical pulse under 60 (adult); nausea, vision changes",
+            "HR, toxicity signs",
+          ],
+          [
+            "Loop diuretics (furosemide)",
+            "BP, potassium, urine output",
+            "Low BP, potassium under 3.5",
+            "Urine output, weight, BP, potassium",
+          ],
+          [
+            "Opioids",
+            "RR, sedation, SpO2, pain",
+            "RR under 12, too sleepy",
+            "Pain in 30-60 min; RR, sedation",
+          ],
+          [
+            "Insulin",
+            "Glucose, meal plan",
+            "Low glucose; NPO (clarify)",
+            "Glucose; low-sugar signs",
+          ],
+          [
+            "Anticoagulants",
+            "aPTT or INR, platelets, bleeding",
+            "Labs out of range; bleeding",
+            "Bleeding, bruising, stool color",
+          ],
+          [
+            "ACE inhibitors (lisinopril)",
+            "BP, potassium, creatinine",
+            "Low BP; high potassium",
+            "BP, cough, face or lip swelling",
+          ],
         ],
       },
       {
@@ -745,7 +1148,8 @@ export const STEPS: Step[] = [
         q: "Lisinopril is due. BP 86/50, potassium 4.2.",
         options: DECIDE,
         answer: 1,
-        explain: "Hold and notify. Low BP is a hold parameter for ACE inhibitors.",
+        explain:
+          "Hold and notify. Low BP is a hold parameter for ACE inhibitors.",
       },
       {
         type: "mcq",
@@ -753,7 +1157,8 @@ export const STEPS: Step[] = [
         q: "Oxycodone PRN is requested. RR 16, alert and talking, SpO2 97%, pain 6/10.",
         options: DECIDE,
         answer: 0,
-        explain: "Give it, since it's safe. Then reassess pain, RR, and sedation in 30 to 60 minutes.",
+        explain:
+          "Give it, since it's safe. Then reassess pain, RR, and sedation in 30 to 60 minutes.",
       },
       {
         type: "mcq",
@@ -769,7 +1174,8 @@ export const STEPS: Step[] = [
         q: "Enoxaparin is due. Platelets are low and there is new bruising on the arms.",
         options: DECIDE,
         answer: 1,
-        explain: "Hold and notify. Labs are out of range and there are signs of bleeding.",
+        explain:
+          "Hold and notify. Labs are out of range and there are signs of bleeding.",
       },
     ],
   },
@@ -789,9 +1195,17 @@ export const STEPS: Step[] = [
         headers: ["Route", "Reassess about", "Example"],
         rows: [
           ["IV", "15-30 min", "IV morphine: pain, RR, sedation"],
-          ["IM / subcut", "30 min", "Rapid-acting insulin: watch glucose around meals"],
+          [
+            "IM / subcut",
+            "30 min",
+            "Rapid-acting insulin: watch glucose around meals",
+          ],
           ["PO", "30-60 min", "Oral acetaminophen or oxycodone: pain score"],
-          ["Drug levels", "Per order", "Peak or trough: give the dose around the lab draw"],
+          [
+            "Drug levels",
+            "Per order",
+            "Peak or trough: give the dose around the lab draw",
+          ],
         ],
       },
       {
@@ -826,7 +1240,7 @@ export const STEPS: Step[] = [
         type: "callout",
         tone: "takeaway",
         title: "Takeaway",
-        text: 'Before: is it safe? After: did it work, and is the patient OK?',
+        text: "Before: is it safe? After: did it work, and is the patient OK?",
       },
     ],
   },
@@ -863,17 +1277,32 @@ export const STEPS: Step[] = [
           },
           {
             q: "A patient has chronic kidney disease. Which is most likely with a renally excreted drug?",
-            options: ["The drug is cleared faster", "The drug builds up and may become toxic", "The drug is not absorbed", "No change in drug effect"],
+            options: [
+              "The drug is cleared faster",
+              "The drug builds up and may become toxic",
+              "The drug is not absorbed",
+              "No change in drug effect",
+            ],
             answer: 1,
           },
           {
             q: "Which is an adverse effect rather than a side effect of morphine?",
-            options: ["Constipation", "Mild drowsiness", "Respiratory rate of 8", "Nausea"],
+            options: [
+              "Constipation",
+              "Mild drowsiness",
+              "Respiratory rate of 8",
+              "Nausea",
+            ],
             answer: 2,
           },
           {
             q: "Which two identifiers should be used before giving a medication?",
-            options: ["Room number and name", "Name and date of birth", "Bed number and diagnosis", "Name and provider"],
+            options: [
+              "Room number and name",
+              "Name and date of birth",
+              "Bed number and diagnosis",
+              "Name and provider",
+            ],
             answer: 1,
           },
           {
@@ -888,7 +1317,12 @@ export const STEPS: Step[] = [
           },
           {
             q: "The barcode scanner flags a mismatch at the bedside. What should you do?",
-            options: ["Override it; you already checked twice", "Give the med and report it later", "Stop and find the cause before giving", "Ask the patient if it looks right"],
+            options: [
+              "Override it; you already checked twice",
+              "Give the med and report it later",
+              "Stop and find the cause before giving",
+              "Ask the patient if it looks right",
+            ],
             answer: 2,
           },
         ],
@@ -918,9 +1352,8 @@ export const STEPS: Step[] = [
             ]}
           >
             <p>
-              Order: morphine 4 mg IV every 4 hours PRN for pain. Last dose
-              was 3 hours 50 minutes ago. He is asking for more pain
-              medicine.
+              Order: morphine 4 mg IV every 4 hours PRN for pain. Last dose was
+              3 hours 50 minutes ago. He is asking for more pain medicine.
             </p>
           </PatientChart>
         ),
@@ -929,13 +1362,15 @@ export const STEPS: Step[] = [
         type: "reveal",
         id: "c1-1",
         q: "Recognize cues: which findings concern you?",
-        answer: "RR 10, SpO2 91%, difficult to keep awake mid-sentence, and low urine output (20 mL/hr).",
+        answer:
+          "RR 10, SpO2 91%, difficult to keep awake mid-sentence, and low urine output (20 mL/hr).",
       },
       {
         type: "reveal",
         id: "c1-2",
         q: "Analyze cues: how do his age and kidney disease change the way morphine acts in his body?",
-        answer: "Reduced kidney function lets morphine and its active metabolites build up, and older adults clear drugs more slowly, so each dose acts stronger and longer.",
+        answer:
+          "Reduced kidney function lets morphine and its active metabolites build up, and older adults clear drugs more slowly, so each dose acts stronger and longer.",
       },
       {
         type: "reveal",
@@ -970,12 +1405,12 @@ export const STEPS: Step[] = [
             <p>
               Do not give the morphine. RR 10, SpO2 91%, and heavy sedation
               point to opioid-induced respiratory depression; reduced kidney
-              function lets morphine and its active metabolites build up.
-              Stay with him, stimulate and tell him to take deep breaths,
-              raise the head of the bed, apply oxygen per protocol, and call
-              the provider or rapid response. Have naloxone ready and give
-              per order or protocol. Success looks like RR 12 or higher,
-              SpO2 at least 94%, and easier arousal.
+              function lets morphine and its active metabolites build up. Stay
+              with him, stimulate and tell him to take deep breaths, raise the
+              head of the bed, apply oxygen per protocol, and call the provider
+              or rapid response. Have naloxone ready and give per order or
+              protocol. Success looks like RR 12 or higher, SpO2 at least 94%,
+              and easier arousal.
             </p>
             <p className="mt-3 font-semibold text-[var(--title-color)]">
               Sleepy + slow breathing = do NOT give the opioid. Weak kidneys
@@ -1017,33 +1452,43 @@ export const STEPS: Step[] = [
         type: "reveal",
         id: "c2-1",
         q: "Recognize cues: what information matters for her insulin today?",
-        answer: "She is NPO, her glucose is low-normal (72), and she feels shaky, a possible early sign of low blood sugar.",
+        answer:
+          "She is NPO, her glucose is low-normal (72), and she feels shaky, a possible early sign of low blood sugar.",
       },
       {
         type: "reveal",
         id: "c2-2",
         q: "Analyze cues: what is the difference between long-acting and rapid-acting insulin here?",
-        answer: "Glargine is basal (long-acting) and covers baseline needs; it is often reduced or held when NPO. Lispro is rapid-acting and covers meals, so with no meal it would drop her glucose.",
+        answer:
+          "Glargine is basal (long-acting) and covers baseline needs; it is often reduced or held when NPO. Lispro is rapid-acting and covers meals, so with no meal it would drop her glucose.",
       },
       {
         type: "mcq",
         id: "c2-mcq",
         q: "Take action: what about the lispro?",
-        options: ["Give it per the sliding scale", "Hold it: she's NPO with low-normal glucose", "Give half the dose", "Give it with juice"],
+        options: [
+          "Give it per the sliding scale",
+          "Hold it: she's NPO with low-normal glucose",
+          "Give half the dose",
+          "Give it with juice",
+        ],
         answer: 1,
-        explain: "Then clarify the glargine with the provider before giving it.",
+        explain:
+          "Then clarify the glargine with the provider before giving it.",
       },
       {
         type: "reveal",
         id: "c2-4",
         q: "Take action: she is shaky with a glucose of 72. What do you do for her right now, given she is NPO?",
-        answer: "Recheck her glucose now. If it's under 70 mg/dL, follow the hypoglycemia protocol; because she is NPO, this usually means IV dextrose per order rather than juice.",
+        answer:
+          "Recheck her glucose now. If it's under 70 mg/dL, follow the hypoglycemia protocol; because she is NPO, this usually means IV dextrose per order rather than juice.",
       },
       {
         type: "reveal",
         id: "c2-5",
         q: "Evaluate outcomes: when do you recheck, and what result do you want?",
-        answer: "Recheck in 15 minutes; aim for over 70 mg/dL with symptoms resolved.",
+        answer:
+          "Recheck in 15 minutes; aim for over 70 mg/dL with symptoms resolved.",
       },
       {
         type: "after",
@@ -1051,18 +1496,17 @@ export const STEPS: Step[] = [
         node: (
           <>
             <p>
-              Hold the lispro: she is NPO and her glucose is low-normal.
-              Clarify the glargine with the provider before giving; basal
-              insulin is often reduced or held when a patient is NPO,
-              depending on the order and protocol. Recheck her glucose now.
-              If it is under 70 mg/dL, follow the hypoglycemia protocol;
-              because she is NPO, this usually means IV dextrose per order
-              rather than juice. Recheck in 15 minutes and aim for over 70
-              mg/dL with symptoms resolved.
+              Hold the lispro: she is NPO and her glucose is low-normal. Clarify
+              the glargine with the provider before giving; basal insulin is
+              often reduced or held when a patient is NPO, depending on the
+              order and protocol. Recheck her glucose now. If it is under 70
+              mg/dL, follow the hypoglycemia protocol; because she is NPO, this
+              usually means IV dextrose per order rather than juice. Recheck in
+              15 minutes and aim for over 70 mg/dL with symptoms resolved.
             </p>
             <p className="mt-3 font-semibold text-[var(--title-color)]">
-              No food + low glucose = hold the mealtime insulin and clarify
-              the long-acting dose.
+              No food + low glucose = hold the mealtime insulin and clarify the
+              long-acting dose.
             </p>
           </>
         ),
@@ -1099,33 +1543,43 @@ export const STEPS: Step[] = [
         type: "reveal",
         id: "c3-1",
         q: "Recognize cues: list every abnormal finding.",
-        answer: "HR 54, low-normal BP, potassium 3.1, nausea, and yellow vision.",
+        answer:
+          "HR 54, low-normal BP, potassium 3.1, nausea, and yellow vision.",
       },
       {
         type: "reveal",
         id: "c3-2",
         q: "Analyze cues: how does low potassium relate to digoxin? How could furosemide make it worse?",
-        answer: "Low potassium increases the risk of digoxin toxicity, and furosemide lowers potassium further.",
+        answer:
+          "Low potassium increases the risk of digoxin toxicity, and furosemide lowers potassium further.",
       },
       {
         type: "mcq",
         id: "c3-mcq",
         q: "Prioritize hypotheses: what condition do her symptoms suggest?",
-        options: ["Dehydration", "Digoxin toxicity", "An allergic reaction", "High potassium"],
+        options: [
+          "Dehydration",
+          "Digoxin toxicity",
+          "An allergic reaction",
+          "High potassium",
+        ],
         answer: 1,
-        explain: "Nausea, yellow vision, and bradycardia with low potassium are classic signs.",
+        explain:
+          "Nausea, yellow vision, and bradycardia with low potassium are classic signs.",
       },
       {
         type: "reveal",
         id: "c3-4",
         q: "Take action: which medications do you hold? What do you report, and in what format?",
-        answer: "Hold the digoxin and hold or clarify the furosemide. Call the provider using SBAR (Situation, Background, Assessment, Recommendation).",
+        answer:
+          "Hold the digoxin and hold or clarify the furosemide. Call the provider using SBAR (Situation, Background, Assessment, Recommendation).",
       },
       {
         type: "reveal",
         id: "c3-5",
         q: "Evaluate outcomes: what labs or follow-up would you expect?",
-        answer: "A digoxin level, potassium replacement, an ECG, and closer monitoring.",
+        answer:
+          "A digoxin level, potassium replacement, an ECG, and closer monitoring.",
       },
       {
         type: "after",
@@ -1133,17 +1587,16 @@ export const STEPS: Step[] = [
         node: (
           <>
             <p>
-              Abnormal findings are HR 54, low-normal BP, potassium 3.1,
-              nausea, and yellow vision. Low potassium increases the risk of
-              digoxin toxicity, and furosemide lowers potassium further. Her
-              symptoms suggest digoxin toxicity. Hold the digoxin and hold
-              or clarify the furosemide, then call the provider using SBAR.
-              Expect a digoxin level, potassium replacement, an ECG, and
-              closer monitoring.
+              Abnormal findings are HR 54, low-normal BP, potassium 3.1, nausea,
+              and yellow vision. Low potassium increases the risk of digoxin
+              toxicity, and furosemide lowers potassium further. Her symptoms
+              suggest digoxin toxicity. Hold the digoxin and hold or clarify the
+              furosemide, then call the provider using SBAR. Expect a digoxin
+              level, potassium replacement, an ECG, and closer monitoring.
             </p>
             <p className="mt-3 font-semibold text-[var(--title-color)]">
-              Low potassium + digoxin = toxicity risk. Nausea and yellow
-              vision are red flags.
+              Low potassium + digoxin = toxicity risk. Nausea and yellow vision
+              are red flags.
             </p>
           </>
         ),
@@ -1207,9 +1660,24 @@ export const STEPS: Step[] = [
         q: "For each med: give it, or don't?",
         buckets: ["Give", "Don't give"],
         items: [
-          { text: "Metoprolol tartrate 25 mg PO", answer: 0, explain: "Safe to give: HR 76 and BP 132/80 are within range. Not every med needs to be held." },
-          { text: "Amoxicillin 500 mg PO", answer: 1, explain: "Amoxicillin is a penicillin, and he has a penicillin allergy (hives). Notify the provider." },
-          { text: "HydrALAZINE 25 mg PO", answer: 1, explain: "Pharmacy sent hydrOXYzine, a look-alike, sound-alike drug. Get the correct drug from pharmacy." },
+          {
+            text: "Metoprolol tartrate 25 mg PO",
+            answer: 0,
+            explain:
+              "Safe to give: HR 76 and BP 132/80 are within range. Not every med needs to be held.",
+          },
+          {
+            text: "Amoxicillin 500 mg PO",
+            answer: 1,
+            explain:
+              "Amoxicillin is a penicillin, and he has a penicillin allergy (hives). Notify the provider.",
+          },
+          {
+            text: "HydrALAZINE 25 mg PO",
+            answer: 1,
+            explain:
+              "Pharmacy sent hydrOXYzine, a look-alike, sound-alike drug. Get the correct drug from pharmacy.",
+          },
         ],
       },
       { type: "heading", text: "Debrief" },
@@ -1217,19 +1685,22 @@ export const STEPS: Step[] = [
         type: "reveal",
         id: "c4-1",
         q: "Which errors did you catch, and at which check?",
-        answer: "Amoxicillin + penicillin allergy: caught at the allergy check. Hydroxyzine instead of hydralazine: caught at the label check during prepare or at the bedside scan.",
+        answer:
+          "Amoxicillin + penicillin allergy: caught at the allergy check. Hydroxyzine instead of hydralazine: caught at the label check during prepare or at the bedside scan.",
       },
       {
         type: "reveal",
         id: "c4-2",
         q: "What would have happened if each one reached the patient?",
-        answer: "Amoxicillin: an allergic reaction, possibly anaphylaxis. Hydroxyzine: his blood pressure would go untreated, and he would get an unneeded sedating drug (fall risk).",
+        answer:
+          "Amoxicillin: an allergic reaction, possibly anaphylaxis. Hydroxyzine: his blood pressure would go untreated, and he would get an unneeded sedating drug (fall risk).",
       },
       {
         type: "reveal",
         id: "c4-3",
         q: "What would you say to the provider about the amoxicillin, and to pharmacy about the hydroxyzine?",
-        answer: 'Provider (SBAR): "Robert Chen has a documented penicillin allergy with hives, and amoxicillin is ordered. I\'m holding it. Can we get an alternative?" Pharmacy: "The MAR says hydralazine 25 mg, but hydroxyzine 25 mg was sent. Please send the correct medication."',
+        answer:
+          'Provider (SBAR): "Robert Chen has a documented penicillin allergy with hives, and amoxicillin is ordered. I\'m holding it. Can we get an alternative?" Pharmacy: "The MAR says hydralazine 25 mg, but hydroxyzine 25 mg was sent. Please send the correct medication."',
       },
       {
         type: "callout",
@@ -1275,9 +1746,22 @@ export const STEPS: Step[] = [
         type: "fields",
         id: "exit",
         items: [
-          { key: "habit", label: "One habit I will use at every med pass starting at my next clinical:" },
-          { key: "alert", label: "One high-alert medication and what I will check before giving it:" },
-          { key: "rate", label: "On a scale of 1 to 5, how confident do I feel giving medications safely?", rating: true },
+          {
+            key: "habit",
+            label:
+              "One habit I will use at every med pass starting at my next clinical:",
+          },
+          {
+            key: "alert",
+            label:
+              "One high-alert medication and what I will check before giving it:",
+          },
+          {
+            key: "rate",
+            label:
+              "On a scale of 1 to 5, how confident do I feel giving medications safely?",
+            rating: true,
+          },
           { key: "raise", label: "What would raise it by one point?" },
         ],
       },

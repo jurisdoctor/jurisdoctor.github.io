@@ -10,7 +10,10 @@ import {
 } from "react";
 import { usePathname } from "next/navigation";
 import {
+  LuCheck,
   LuChevronRight,
+  LuPlus,
+  LuMessageSquarePlus,
   LuLayers,
   LuNetwork,
   LuSearch,
@@ -33,10 +36,20 @@ import {
   ROOT,
   search,
   searchGroups,
+  termsOf,
 } from "./Data";
 import { Headline } from "./Emphasis";
 import MedDetail from "./MedDetail";
+import {
+  PatientBar,
+  PatientDisclaimer,
+  PatientModal,
+  PatientReadings,
+  useLabs,
+  usePatient,
+} from "./Patient";
 import Study from "./Study";
+import { SuggestModal } from "./Suggest";
 import { GroupType, MedFile, MedType } from "./types";
 
 const calm = () =>
@@ -45,17 +58,20 @@ const calm = () =>
 
 // Wraps the part of `text` that matches what was typed.
 const Marked = ({ text, query }: { text: string; query: string }) => {
-  const q = query.trim();
-  if (!q) return <>{text}</>;
-  const at = text.toLowerCase().indexOf(q.toLowerCase());
-  if (at === -1) return <>{text}</>;
+  // With a comma-separated search, the first of the terms found is marked.
+  const lower = text.toLowerCase();
+  const term = termsOf(query).find((entry) =>
+    lower.includes(entry.toLowerCase()),
+  );
+  if (!term) return <>{text}</>;
+  const at = lower.indexOf(term.toLowerCase());
   return (
     <>
       {text.slice(0, at)}
       <mark className="rounded bg-[hsla(43,100%,55%,0.35)] px-0.5 text-inherit">
-        {text.slice(at, at + q.length)}
+        {text.slice(at, at + term.length)}
       </mark>
-      {text.slice(at + q.length)}
+      {text.slice(at + term.length)}
     </>
   );
 };
@@ -70,7 +86,7 @@ const Badges = ({ med }: { med: MedType }) => (
       </span>
     )}
     {med.black_box.length > 0 && (
-      <span className="rounded-md bg-[hsla(14, 100%, 57%,0.16)] px-2.5 py-0.5 text-[11px] font-bold text-[var(--primary-color)]">
+      <span className="rounded-md bg-[hsla(257,100%,85%,0.16)] px-2.5 py-0.5 text-[11px] font-bold text-[var(--primary-color)]">
         Black box
       </span>
     )}
@@ -84,6 +100,9 @@ const MedRow = ({
   accent,
   delay,
   onOpen,
+  picked,
+  pickedFull,
+  onPick,
 }: {
   med: MedType;
   query: string;
@@ -91,63 +110,95 @@ const MedRow = ({
   accent: string;
   delay: number;
   onOpen: (id: string) => void;
+  picked: boolean;
+  pickedFull: boolean;
+  onPick: () => void;
 }) => (
-  <button
-    type="button"
-    onClick={() => onOpen(med.id)}
-    className="group flex w-full items-start gap-x-4 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 text-left duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg sm:px-4"
-  >
-    <span
-      aria-hidden
-      className="w-1.5 shrink-0 self-stretch rounded-sm"
-      style={{ background: accent }}
-    />
-    <span className="min-w-0 flex-1">
-      <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
-        <span className="text-lg font-bold text-[var(--title-color)]">
-          <Marked text={med.generic} query={query} />
+  <div className="relative">
+    <button
+      type="button"
+      onClick={() => onOpen(med.id)}
+      className="group flex w-full items-start gap-x-4 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 text-left duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg sm:px-4"
+    >
+      <span
+        aria-hidden
+        className="w-1.5 shrink-0 self-stretch rounded-sm"
+        style={{ background: accent }}
+      />
+      <span className="min-w-0 flex-1">
+        <span className="flex flex-wrap items-center gap-x-2 gap-y-1.5 pr-8">
+          <span className="text-lg font-bold text-[var(--title-color)]">
+            <Marked text={med.generic} query={query} />
+          </span>
+          <Badges med={med} />
         </span>
-        <Badges med={med} />
-      </span>
-      <span className="block text-sm text-[var(--muted-color)]">
-        <Marked text={med.brand.join(", ")} query={query} />
-      </span>
-      {showGroup && (
-        <span className="mt-0.5 block text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
-          {med.group}
+        <span className="mt-1.5 block text-sm text-[var(--muted-color)]">
+          <Marked text={med.brand.join(", ")} query={query} />
         </span>
-      )}
-      <span className="mt-2.5 block text-base font-bold leading-snug text-[var(--title-color)]">
-        <Headline text={med.highlight.headline} delay={delay} />
-      </span>
-      <span className="mt-2 block text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
-        Why this one
-      </span>
-      {med.why_this_one.points.length > 1 ? (
-        <span className="mt-1 grid gap-y-1.5 text-sm leading-relaxed text-[var(--text-color)]">
-          {med.why_this_one.points.map((point) => (
-            <span key={point} className="flex gap-x-2.5">
-              <span
-                aria-hidden
-                className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--chip-blue-border)]"
-              />
-              <span className="min-w-0">
-                <Marked text={point} query={query} />
+        {showGroup && (
+          <span className="mt-1.5 block text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
+            {med.group}
+          </span>
+        )}
+        <span className="mt-2.5 block text-base font-bold leading-snug text-[var(--title-color)]">
+          <Headline text={med.highlight.headline} delay={delay} />
+        </span>
+        <span className="mt-2 block text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
+          Why this one
+        </span>
+        {med.why_this_one.points.length > 1 ? (
+          <span className="mt-1 grid gap-y-1.5 text-sm leading-relaxed text-[var(--text-color)]">
+            {med.why_this_one.points.map((point) => (
+              <span key={point} className="flex gap-x-2.5">
+                <span
+                  aria-hidden
+                  className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--chip-blue-border)]"
+                />
+                <span className="min-w-0">
+                  <Marked text={point} query={query} />
+                </span>
               </span>
-            </span>
-          ))}
-        </span>
-      ) : (
-        <span className="mt-0.5 block text-sm leading-relaxed text-[var(--text-color)]">
-          <Marked text={med.why_this_one.text} query={query} />
-        </span>
-      )}
-    </span>
-    <LuChevronRight
-      aria-hidden
-      className="shrink-0 self-center text-[var(--muted-color)] duration-300 group-hover:translate-x-0.5 group-hover:text-[var(--title-color)]"
-    />
-  </button>
+            ))}
+          </span>
+        ) : (
+          <span className="mt-0.5 block text-sm leading-relaxed text-[var(--text-color)]">
+            <Marked text={med.why_this_one.text} query={query} />
+          </span>
+        )}
+      </span>
+      <LuChevronRight
+        aria-hidden
+        className="shrink-0 self-center text-[var(--muted-color)] duration-300 group-hover:translate-x-0.5 group-hover:text-[var(--title-color)]"
+      />
+    </button>
+    {/* Beside the card, not inside it: a button can't hold a button. Adds this
+      medication to (or takes it off) the interaction check without opening it. */}
+    <button
+      type="button"
+      onClick={onPick}
+      aria-pressed={picked}
+      aria-label={
+        picked
+          ? `Remove ${med.generic} from the interaction check`
+          : `Add ${med.generic} to the interaction check`
+      }
+      disabled={!picked && pickedFull}
+      title={
+        picked
+          ? "On your interaction-check list. Tap to remove"
+          : pickedFull
+            ? "The interaction-check list is full (8)"
+            : "Add to the interaction check"
+      }
+      className={`absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full border-2 border-solid duration-300 disabled:cursor-not-allowed disabled:opacity-40 ${
+        picked
+          ? "border-[hsl(156,100%,42%)] bg-[hsl(156,100%,42%)] text-white hover:brightness-110"
+          : "border-[var(--muted-color)] bg-[var(--container-color)] text-[var(--title-color)] hover:scale-105 hover:border-[var(--title-color)]"
+      }`}
+    >
+      {picked ? <LuCheck size={16} /> : <LuPlus size={18} />}
+    </button>
+  </div>
 );
 
 const GroupCard = ({
@@ -278,29 +329,31 @@ const Tray = ({
     <div
       role="region"
       aria-label="Medications picked for the interaction check"
-      className="pointer-events-auto flex max-h-[40dvh] w-full max-w-[52rem] animate-fadeIn flex-wrap items-center gap-2 overflow-y-auto rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-3 shadow-2xl"
+      className="pointer-events-auto flex max-h-[40dvh] w-full max-w-[52rem] animate-fadeIn flex-wrap items-center gap-x-4 gap-y-3 overflow-y-auto rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-3 shadow-2xl"
     >
-      <span className="mr-1 flex items-center gap-x-2 text-sm font-bold text-[var(--title-color)]">
-        <LuNetwork aria-hidden className="text-[var(--chip-blue-border)]" />
-        {meds.length}/{MAX_COMPARE}
-      </span>
-      {meds.map((med) => (
-        <span
-          key={med.id}
-          className="inline-flex items-center gap-x-1 rounded-md bg-[var(--chip-blue)] py-1 pl-3.5 pr-1 text-sm font-bold text-[var(--title-color)]"
-        >
-          {shortName(med)}
-          <button
-            type="button"
-            onClick={() => onRemove(med.id)}
-            aria-label={`Remove ${med.generic}`}
-            className="flex h-6 w-6 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--body-color)] hover:text-[var(--title-color)]"
-          >
-            <LuX size={14} />
-          </button>
+      <div className="flex min-w-0 flex-1 basis-[18rem] flex-wrap items-center gap-2">
+        <span className="mr-1 flex items-center gap-x-2 text-sm font-bold text-[var(--title-color)]">
+          <LuNetwork aria-hidden className="text-[var(--chip-blue-border)]" />
+          {meds.length}/{MAX_COMPARE}
         </span>
-      ))}
-      <span className="ml-auto flex items-center gap-x-3">
+        {meds.map((med) => (
+          <span
+            key={med.id}
+            className="inline-flex items-center gap-x-1 rounded-md bg-[var(--chip-blue)] py-1 pl-3.5 pr-1 text-sm font-bold text-[var(--title-color)]"
+          >
+            {shortName(med)}
+            <button
+              type="button"
+              onClick={() => onRemove(med.id)}
+              aria-label={`Remove ${med.generic}`}
+              className="flex h-6 w-6 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--body-color)] hover:text-[var(--title-color)]"
+            >
+              <LuX size={14} />
+            </button>
+          </span>
+        ))}
+      </div>
+      <span className="flex shrink-0 items-center gap-x-3 md:w-full md:justify-end">
         <button
           type="button"
           onClick={onClear}
@@ -336,6 +389,12 @@ const Medications = () => {
   );
   const top = useRef<HTMLDivElement>(null);
   const first = useRef(true);
+  // The test patient: labs and vitals kept on the device, edited in a window,
+  // and read against the medications picked on the interaction check.
+  const [labs, setLabs] = useLabs();
+  const [labsOpen, setLabsOpen] = useState(false);
+  const [suggestOpen, setSuggestOpen] = useState(false);
+  const patient = usePatient(labsOpen || route.compare === true);
 
   useEffect(() => {
     let alive = true;
@@ -463,6 +522,16 @@ const Medications = () => {
     setQuery("");
     go(COMPARE);
   };
+  const openPatient = () => setLabsOpen(true);
+  // Done with the labs window: go to the comparison, where the patient's
+  // readings sit beside the medications picked.
+  const closePatient = () => {
+    setLabsOpen(false);
+    if (!route.compare) {
+      setQuery("");
+      go(COMPARE);
+    }
+  };
   const openStudy = () => {
     setQuery("");
     go(STUDY);
@@ -549,6 +618,18 @@ const Medications = () => {
                       {pickedMeds.length}
                     </span>
                   )}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSuggestOpen(true)}
+                  aria-label="Suggest a medication"
+                  className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
+                >
+                  <LuMessageSquarePlus
+                    aria-hidden
+                    className="text-[var(--chip-blue-border)]"
+                  />
+                  Suggest
                 </button>
               </div>
             )}
@@ -643,12 +724,40 @@ const Medications = () => {
                 {route.study ? (
                   <Study guide={guide} accentFor={accentFor} />
                 ) : route.compare ? (
-                  <CompareMap
-                    meds={pickedMeds}
-                    onRemove={togglePicked}
-                    onClear={clearPicked}
-                    onOpen={openMed}
-                  />
+                  <>
+                    <PatientBar
+                      file={patient.file}
+                      labs={labs}
+                      onEdit={openPatient}
+                      onClear={() => setLabs({})}
+                    />
+                    <CompareMap
+                      meds={pickedMeds}
+                      onRemove={togglePicked}
+                      onClear={clearPicked}
+                      onOpen={openMed}
+                      between={
+                        patient.file && patient.index ? (
+                          <PatientReadings
+                            file={patient.file}
+                            index={patient.index}
+                            labs={labs}
+                            meds={pickedMeds}
+                            names={
+                              new Map(
+                                guide.medications.map((entry) => [
+                                  entry.id,
+                                  shortName(entry),
+                                ]),
+                              )
+                            }
+                            onOpen={openMed}
+                          />
+                        ) : null
+                      }
+                    />
+                    {Object.keys(labs).length > 0 && <PatientDisclaimer />}
+                  </>
                 ) : med ? (
                   <MedDetail
                     med={med}
@@ -686,6 +795,12 @@ const Medications = () => {
                             delay={Math.min(position, 10) * 0.07}
                             showGroup={false}
                             accent={accentOf(groupIndex)}
+                            picked={picked.includes(entry.id)}
+                            pickedFull={
+                              !picked.includes(entry.id) &&
+                              picked.length >= MAX_COMPARE
+                            }
+                            onPick={() => togglePicked(entry.id)}
                             onOpen={openMed}
                           />
                         ))}
@@ -733,6 +848,12 @@ const Medications = () => {
                               delay={Math.min(position, 10) * 0.07}
                               showGroup
                               accent={accentFor(entry.group)}
+                              picked={picked.includes(entry.id)}
+                              pickedFull={
+                                !picked.includes(entry.id) &&
+                                picked.length >= MAX_COMPARE
+                              }
+                              onPick={() => togglePicked(entry.id)}
                               onOpen={openMed}
                             />
                           ))}
@@ -759,6 +880,18 @@ const Medications = () => {
           )}
         </div>
       </section>
+
+      {suggestOpen && <SuggestModal onClose={() => setSuggestOpen(false)} />}
+
+      {labsOpen && (
+        <PatientModal
+          file={patient.file}
+          failed={patient.failed}
+          labs={labs}
+          setLabs={setLabs}
+          onDone={closePatient}
+        />
+      )}
 
       {guide && pickedMeds.length > 0 && !route.compare && !route.study && (
         <Tray

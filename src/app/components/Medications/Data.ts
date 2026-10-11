@@ -73,7 +73,15 @@ const norm = (text: string) => text.toLowerCase();
 // How well a medication matches what was typed, lowest first; null = no
 // match. Names beat classes, which beat the free-text "use" lines, so typing
 // "lis" puts lisinopril ahead of anything that merely mentions it.
-export const rankOf = (med: MedType, query: string): number | null => {
+// What was typed, split at commas: "lisinopril, metoprolol" is two searches
+// whose results are shown together.
+export const termsOf = (query: string) =>
+  query
+    .split(",")
+    .map((term) => term.trim())
+    .filter(Boolean);
+
+const rankOne = (med: MedType, query: string): number | null => {
   const q = norm(query.trim());
   if (!q) return 0;
 
@@ -99,18 +107,48 @@ export const rankOf = (med: MedType, query: string): number | null => {
   return null;
 };
 
-export const search = (meds: MedType[], query: string): MedType[] =>
-  meds
+export const rankOf = (med: MedType, query: string): number | null => {
+  const terms = termsOf(query);
+  if (!terms.length) return 0;
+  // A list of names is a list of medications, so each term only matches a
+  // medication's own name (generic or brand), not drugs that merely mention it
+  // in a description; a single search keeps looking everywhere.
+  const ranks = terms
+    .map((term) => rankOne(med, term))
+    .filter(
+      (rank): rank is number =>
+        rank !== null && (terms.length === 1 || rank <= NAME),
+    );
+  return ranks.length ? Math.min(...ranks) : null;
+};
+
+// Mentions in a description (the last kind of match) are only for searches
+// that are not a medication's name: "seizure" should find the drugs that treat
+// it, but "digoxin" should find digoxin, not every card that happens to
+// mention it.
+const MENTION = 6;
+const NAME = 3;
+
+export const search = (meds: MedType[], query: string): MedType[] => {
+  const ranked = meds
     .map((med) => ({ med, rank: rankOf(med, query) }))
     .filter(
       (entry): entry is { med: MedType; rank: number } => entry.rank !== null,
-    )
+    );
+  const named = ranked.some((entry) => entry.rank <= NAME);
+  return ranked
+    .filter((entry) => !named || entry.rank < MENTION)
     .sort(
       (a, b) => a.rank - b.rank || a.med.generic.localeCompare(b.med.generic),
     )
     .map((entry) => entry.med);
+};
 
 export const searchGroups = (groups: GroupType[], query: string) => {
-  const q = norm(query.trim());
-  return q ? groups.filter((group) => norm(group.name).includes(q)) : groups;
+  const terms = termsOf(norm(query));
+  return terms.length
+    ? groups.filter((group) =>
+        terms.some((term) => norm(group.name).includes(term)),
+      )
+    : groups;
 };

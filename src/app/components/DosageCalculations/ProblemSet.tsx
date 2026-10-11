@@ -46,7 +46,7 @@ const TwinStar = () => {
 
 const FILTERS = [
   { key: "all", label: "All", tone: "" },
-  { key: "solved", label: "Correct", tone: "bg-[rgb(68,215,182)]" },
+  { key: "solved", label: "Correct", tone: "bg-[rgb(0,212,127)]" },
   { key: "missed", label: "Missed", tone: "bg-[var(--primary-color)]" },
   { key: "todo", label: "Not done", tone: "bg-[var(--container-color)]" },
   { key: "extra", label: "Extra", tone: "" },
@@ -154,7 +154,7 @@ const ProblemSet = ({
                 here ? "ring-2 ring-[var(--title-color)]" : ""
               } ${
                 state === "solved"
-                  ? "bg-[rgb(68,215,182)] text-white"
+                  ? "bg-[rgb(0,212,127)] text-white"
                   : state === "missed"
                     ? "bg-[var(--primary-color)] text-[var(--on-primary)]"
                     : "bg-[var(--container-color)] text-[var(--muted-color)] hover:text-[var(--title-color)]"

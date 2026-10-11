@@ -4,6 +4,7 @@ import {
   KeyboardEvent,
   MouseEvent,
   PointerEvent,
+  ReactNode,
   useEffect,
   useMemo,
   useRef,
@@ -166,7 +167,7 @@ const PairBody = ({
                 <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm font-bold text-[var(--title-color)]">
                   {def?.name ?? rule.rule}
                   {rule.highest && (
-                    <span className="rounded-md bg-[hsla(14, 100%, 57%,0.16)] px-2.5 py-0.5 text-[10px] uppercase tracking-wide text-[var(--primary-color)]">
+                    <span className="rounded-md bg-[hsla(257,100%,85%,0.16)] px-2.5 py-0.5 text-[10px] uppercase tracking-wide text-[var(--primary-color)]">
                       Highest-risk pairing
                     </span>
                   )}
@@ -213,11 +214,14 @@ const CompareMap = ({
   onRemove,
   onClear,
   onOpen,
+  between,
 }: {
   meds: MedType[];
   onRemove: (id: string) => void;
   onClear: () => void;
   onOpen: (id: string) => void;
+  // Shown under the map and its verdict, above the list of every combination.
+  between?: ReactNode;
 }) => {
   const [index, setIndex] = useState<IndexType | null>(null);
   const [failed, setFailed] = useState(false);
@@ -297,13 +301,18 @@ const CompareMap = ({
     return c;
   }, [lines]);
 
+  // Only the pairs with something to say: a combination with no known
+  // interaction is already visible as a green line on the map and in the count
+  // above, and listing each one buries the ones that matter.
   const sorted = useMemo(
     () =>
-      [...lines].sort(
-        (x, y) =>
-          ORDER[x.status] - ORDER[y.status] ||
-          x.a.label.localeCompare(y.a.label),
-      ),
+      lines
+        .filter((line) => line.status !== "ok")
+        .sort(
+          (x, y) =>
+            ORDER[x.status] - ORDER[y.status] ||
+            x.a.label.localeCompare(y.a.label),
+        ),
     [lines],
   );
 
@@ -417,40 +426,6 @@ const CompareMap = ({
 
       {meds.length >= 2 && (
         <>
-          {/* Verdict + legend */}
-          <section className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 sm:px-4">
-            <p className="font-bold text-[var(--title-color)]">
-              {!index
-                ? "Checking…"
-                : counts.red > 0
-                  ? `${counts.red} ${counts.red === 1 ? "combination is" : "combinations are"} flagged red`
-                  : counts.amber > 0
-                    ? "No red flags, but some need care"
-                    : "No known interactions between these"}
-            </p>
-            <ul className="flex flex-wrap gap-x-5 gap-y-1.5 text-sm text-[var(--text-color)]">
-              {(
-                [
-                  ["red", "Avoid or high risk", counts.red],
-                  ["amber", "Use with care", counts.amber],
-                  ["green", "No known interaction", counts.green],
-                ] as const
-              ).map(([tone, label, n]) => (
-                <li key={tone} className="inline-flex items-center gap-x-2">
-                  <span
-                    aria-hidden
-                    className="h-1 w-6 rounded-full"
-                    style={{ background: COLORS[tone] }}
-                  />
-                  {label}
-                  {index && (
-                    <span className="text-[var(--muted-color)]">({n})</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </section>
-
           {/* The map */}
           <section className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-3 sm:p-1">
             <div ref={box} className="relative">
@@ -536,6 +511,32 @@ const CompareMap = ({
                         onClick={press(line.key)}
                         onKeyDown={press(line.key)}
                       />
+                    </g>
+                  );
+                })}
+
+                {/* The badges are drawn in a second pass, after every line, so
+                    a line that crosses another line's badge always passes
+                    behind it. */}
+                {lines.map((line) => {
+                  const dim =
+                    (focusNode &&
+                      line.a.med.id !== focusNode &&
+                      line.b.med.id !== focusNode) ||
+                    (pinned && !hover && pinned.key !== line.key);
+                  const on = active?.key === line.key;
+                  const color = COLORS[line.tone];
+                  const mx = line.a.x + (line.b.x - line.a.x) * line.t;
+                  const my = line.a.y + (line.b.y - line.a.y) * line.t;
+                  return (
+                    <g
+                      key={`${line.key}-badge`}
+                      style={{
+                        opacity: dim ? 0.22 : 1,
+                        transition: "opacity 0.25s",
+                      }}
+                      pointerEvents="none"
+                    >
                       {/* a badge with a different shape per state, so the
                           colors are never the only clue */}
                       <circle
@@ -653,11 +654,47 @@ const CompareMap = ({
             </p>
           </section>
 
+          {/* Verdict + legend */}
+          <section className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 sm:px-4">
+            <p className="font-bold text-[var(--title-color)]">
+              {!index
+                ? "Checking…"
+                : counts.red > 0
+                  ? `${counts.red} ${counts.red === 1 ? "combination is" : "combinations are"} flagged red`
+                  : counts.amber > 0
+                    ? "No red flags, but some need care"
+                    : "No known interactions between these"}
+            </p>
+            <ul className="flex flex-wrap gap-x-5 gap-y-1.5 text-sm text-[var(--text-color)]">
+              {(
+                [
+                  ["red", "Avoid or high risk", counts.red],
+                  ["amber", "Use with care", counts.amber],
+                  ["green", "No known interaction", counts.green],
+                ] as const
+              ).map(([tone, label, n]) => (
+                <li key={tone} className="inline-flex items-center gap-x-2">
+                  <span
+                    aria-hidden
+                    className="h-1 w-6 rounded-full"
+                    style={{ background: COLORS[tone] }}
+                  />
+                  {label}
+                  {index && (
+                    <span className="text-[var(--muted-color)]">({n})</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {between}
+
           {/* Everything, in words: works without a mouse, and on a phone */}
-          {index && (
+          {index && sorted.length > 0 && (
             <section className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-5 sm:p-4">
               <h2 className="mb-4 text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
-                Every combination
+                Interactions
               </h2>
               <ul className="grid gap-y-3">
                 {sorted.map((line) => {
