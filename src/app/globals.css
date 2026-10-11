@@ -345,12 +345,15 @@ button {
   filter: url(#lava-goo-filter);
 }
 
-/* On iPhones and iPads the SVG goo filter is skipped (see layout.tsx), so each
-   blob is blurred on its own instead: softer edges, no fusing, but the same
-   overlapping glow of colors. */
+/* On iPhones and iPads the SVG goo filter is skipped (see layout.tsx), so the
+   lava lamp is drawn on a canvas instead (LavaCanvas.tsx): the blob elements
+   and the filter step out of the way and the canvas shows. */
 :root.no-goo .lava-goo {
   filter: none;
 }
 :root.no-goo .lava-blob {
-  filter: blur(18px);
+  display: none;
+}
+:root.no-goo .lava-canvas {
+  display: block;
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { CSSProperties } from "react";
+import LavaCanvas from "./LavaCanvas";
 
 interface Blob {
   color: string;
@@ -167,6 +168,7 @@ const LavaBackground = () => (
             }
           />
         ))}
+        <LavaCanvas blobs={BLOBS} />
       </div>
     </div>
   </div>

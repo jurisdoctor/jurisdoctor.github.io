@@ -14,8 +14,9 @@ export const metadata: Metadata = {
 // Apple's browsers (every browser on an iPhone or iPad, Chrome included, runs
 // WebKit) skip the SVG blur the lava lamp background is built on when it is
 // this big, leaving hard-edged circles. Marked here, before paint, so the
-// background can use plain CSS blurs there instead (see globals.css).
-const WEBKIT_SCRIPT = `(function(){try{var u=navigator.userAgent;if(/iP(hone|ad|od)/.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1)){document.documentElement.classList.add("no-goo");}}catch(e){}})();`;
+// background is drawn on a canvas there instead (see LavaCanvas.tsx). Adding
+// ?lava=canvas to any address forces that on any device, to look at it.
+const WEBKIT_SCRIPT = `(function(){try{var u=navigator.userAgent;if(/iP(hone|ad|od)/.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1)||/[?&]lava=canvas/.test(location.search)){document.documentElement.classList.add("no-goo");}}catch(e){}})();`;
 
 const THEME_SCRIPT = `(function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();`;
 
