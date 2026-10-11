@@ -11,6 +11,12 @@ export const metadata: Metadata = {
 // choice of "light" needs an attribute before paint — anything else (no
 // choice yet, or a stored "dark") already renders correctly with no
 // attribute at all, so there's nothing to flash.
+// Apple's browsers (every browser on an iPhone or iPad, Chrome included, runs
+// WebKit) skip the SVG blur the lava lamp background is built on when it is
+// this big, leaving hard-edged circles. Marked here, before paint, so the
+// background can use plain CSS blurs there instead (see globals.css).
+const WEBKIT_SCRIPT = `(function(){try{var u=navigator.userAgent;if(/iP(hone|ad|od)/.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1)){document.documentElement.classList.add("no-goo");}}catch(e){}})();`;
+
 const THEME_SCRIPT = `(function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();`;
 
 // GitHub's own "Enforce HTTPS" toggle has knocked this domain's TLS offline
@@ -44,6 +50,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        <script dangerouslySetInnerHTML={{ __html: WEBKIT_SCRIPT }} />
       </head>
       <body>
         <LavaBackground />

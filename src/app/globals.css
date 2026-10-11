@@ -344,3 +344,13 @@ button {
 .lava-goo {
   filter: url(#lava-goo-filter);
 }
+
+/* On iPhones and iPads the SVG goo filter is skipped (see layout.tsx), so each
+   blob is blurred on its own instead: softer edges, no fusing, but the same
+   overlapping glow of colors. */
+:root.no-goo .lava-goo {
+  filter: none;
+}
+:root.no-goo .lava-blob {
+  filter: blur(36px);
+}
