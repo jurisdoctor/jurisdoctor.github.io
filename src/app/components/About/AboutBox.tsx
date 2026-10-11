@@ -3,7 +3,7 @@ import { FaYelp } from "react-icons/fa";
 import Reveal from "../Reveal";
 
 const STATS = [
-  { Icon: LuRocket, value: "113", label: "Projects Completed" },
+  { Icon: LuRocket, value: "217", label: "Projects Completed" },
   { Icon: LuCoffee, value: "1992", label: "Energy Drinks" },
   { Icon: LuDumbbell, value: "1035", label: "1000lb Club" },
   { Icon: FaYelp, value: "5", label: "Yelp Elite Years" },

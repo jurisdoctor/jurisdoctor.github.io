@@ -506,7 +506,7 @@ const Verdict = ({
   answer: React.ReactNode;
 }) => (
   <div
-    className={`mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 last:mb-0 ${correct ? "bg-[rgba(0,212,127,0.12)]" : "bg-[hsla(257,100%,85%,0.1)]"}`}
+    className={`mb-5 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 last:mb-0 ${correct ? "bg-[rgba(0,212,127,0.12)]" : "bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"}`}
   >
     <span
       className={`rounded-md px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-[var(--on-primary)] ${correct ? "bg-[rgb(0,212,127)]" : "bg-[var(--primary-color)]"}`}

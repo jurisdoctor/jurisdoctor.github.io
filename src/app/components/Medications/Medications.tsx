@@ -86,7 +86,7 @@ const Badges = ({ med }: { med: MedType }) => (
       </span>
     )}
     {med.black_box.length > 0 && (
-      <span className="rounded-md bg-[hsla(257,100%,85%,0.16)] px-2.5 py-0.5 text-[11px] font-bold text-[var(--primary-color)]">
+      <span className="rounded-md bg-[color-mix(in_srgb,var(--primary-color)_16%,transparent)] px-2.5 py-0.5 text-[11px] font-bold text-[var(--primary-color)]">
         Black box
       </span>
     )}

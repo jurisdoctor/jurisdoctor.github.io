@@ -91,7 +91,7 @@ const Matching = ({
           const shell = answered
             ? right
               ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
-              : "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
+              : "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
             : chosen
               ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
               : "border-transparent bg-[var(--body-color)]";

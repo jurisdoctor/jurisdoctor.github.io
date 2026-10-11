@@ -4,33 +4,42 @@
 
 :root {
   /* ======== Colors ======== */
-  /* Deep blue cards on a darker blue page, manela titles, purple for actions
-     and "selected", cream for the highlighted edge and hover, green for
-     correct only (bright green is kept for the shapes). Dark is the default;
-     light is the opt-in override below, on manela and white. */
-  --primary-color: #c9b5ff;
-  --on-primary: #152a32;
-  --accent-color: #fff0b5;
-  --title-color: #fffcee;
-  --text-color: #c6d3d7;
-  --body-color: #0d1b21;
-  --container-color: #152a32;
-  --muted-color: #8aa2ab;
-  --track-color: #24424e;
-  --icon-muted-color: #46646f;
-  --border-color: #24424e;
-  --scroll-icon-color: #c6d3d7;
+  /* Vibrant on near-black: orange for actions and "selected", deep purple
+     for chips, yellow for the chosen edge, hover and highlights, green for
+     correct only. Dark is the default; light is the opt-in override below. */
+  --primary-color: #ff5722;
+  --on-primary: #fff;
+  --accent-color: #ffeb3b;
+  --title-color: #f7f7f7;
+  --text-color: hsl(0, 0%, 78%);
+  --body-color: #181818;
+  --container-color: hsl(0, 0%, 13.5%);
+  --muted-color: hsl(0, 0%, 60%);
+  --track-color: hsl(0, 0%, 23%);
+  --icon-muted-color: hsl(0, 0%, 42%);
+  --border-color: hsl(0, 0%, 22%);
+  --scroll-icon-color: hsl(0, 0%, 70%);
   /* "Chip" surfaces: badges, pills, selected/chosen states, case-study
-     banners. A lighter blue, with a cream edge on a chosen thing. */
-  --chip-blue: #28495a;
-  --chip-blue-soft: #1d3844;
-  --chip-blue-border: #fff0b5;
-  --chip-blue-track: #34596b;
-  --case-label-color: #fff0b5;
+     banners. Deep purple, with a bright yellow edge on a chosen thing. */
+  --chip-blue: #673ab7;
+  --chip-blue-soft: hsl(262, 40%, 22%);
+  --chip-blue-border: #ffeb3b;
+  --chip-blue-track: hsl(262, 28%, 34%);
+  --case-label-color: #ffeb3b;
   --chip-amber: hsl(38, 55%, 22%);
-  --glass-bg: #152a32;
-  --glass-bg-soft: #112228;
-  --glass-border: #24424e;
+  --glass-bg: hsl(0, 0%, 14%);
+  --glass-bg-soft: hsl(0, 0%, 11%);
+  --glass-border: hsl(0, 0%, 23%);
+  /* The lava lamp's blobs and the floating shapes, in this theme's colors. */
+  --lava-1: #ff5722;
+  --lava-2: #673ab7;
+  --lava-3: #ffeb3b;
+  --lava-4: #9c6bff;
+  --lava-5: #ff8a50;
+  --shape-a: #9c6bff;
+  --shape-b: #ffeb3b;
+  --shape-c: #ff5722;
+  --shape-d: #ff8a50;
   --lava-opacity: 0.4;
   --lava-blend: screen;
 }
@@ -57,6 +66,15 @@
   --glass-bg: #ffffff;
   --glass-bg-soft: #fffcee;
   --glass-border: #e8e2cc;
+  --lava-1: #00d47f;
+  --lava-2: #c9b5ff;
+  --lava-3: #fff0b5;
+  --lava-4: #91ff00;
+  --lava-5: #3b6f85;
+  --shape-a: #c9b5ff;
+  --shape-b: #fff0b5;
+  --shape-c: #00d47f;
+  --shape-d: #91ff00;
   --lava-opacity: 0.22;
   --lava-blend: normal;
 }

@@ -52,7 +52,7 @@ const FlowNode = ({
     tone === "give"
       ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
       : tone === "hold"
-        ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
+        ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
         : tone === "clarify"
           ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
           : "border-[var(--border-color)] bg-[var(--body-color)]";
@@ -125,7 +125,7 @@ export const TherapeuticWindow = () => {
   return (
     <div className="grid gap-4 rounded-xl bg-[var(--container-color)] p-4">
       <div className="relative h-40 w-full overflow-hidden rounded-xl">
-        <div className="absolute inset-x-0 top-0 h-1/3 bg-[hsla(257,100%,85%,0.25)]" />
+        <div className="absolute inset-x-0 top-0 h-1/3 bg-[color-mix(in_srgb,var(--primary-color)_25%,transparent)]" />
         <div className="absolute inset-x-0 top-1/3 h-1/3 bg-[rgba(0,212,127,0.22)]" />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[var(--chip-blue)]" />
 
@@ -206,7 +206,7 @@ export const PatientChart = ({
           key={label}
           className={`rounded-md px-3 py-1 text-xs font-bold ${
             bad
-              ? "bg-[hsla(257,100%,85%,0.15)] text-[var(--primary-color)]"
+              ? "bg-[color-mix(in_srgb,var(--primary-color)_15%,transparent)] text-[var(--primary-color)]"
               : "bg-[rgba(0,212,127,0.15)] text-[rgb(0,212,127)]"
           }`}
         >

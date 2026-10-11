@@ -417,7 +417,7 @@ const Practice = () => {
                 className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 ${
                   saved.status === "solved"
                     ? "bg-[rgba(0,212,127,0.12)]"
-                    : "bg-[hsla(257,100%,85%,0.1)]"
+                    : "bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
                 }`}
               >
                 <span

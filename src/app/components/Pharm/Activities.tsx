@@ -113,7 +113,7 @@ export const Mcq = ({
                 isRight
                   ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)] text-[var(--title-color)]"
                   : isWrong
-                    ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)] text-[var(--title-color)]"
+                    ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
                     : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
               }`}
             >
@@ -322,7 +322,7 @@ export const SortActivity = ({
                     onClick={() => pick(index, bucketIndex)}
                     className={`rounded-md border border-solid px-3 py-1 text-xs font-bold duration-150 ${
                       wrong[index] === bucketIndex
-                        ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)] text-[var(--title-color)]"
+                        ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
                         : "border-[var(--chip-blue-border)] text-[var(--chip-blue-border)] hover:bg-[var(--chip-blue-soft)]"
                     }`}
                   >
@@ -421,7 +421,7 @@ export const OrderActivity = ({
                 checked
                   ? seq[position] === position
                     ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.08)] text-[var(--title-color)]"
-                    : "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)] text-[var(--title-color)]"
+                    : "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
                   : "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
               }`}
             >
@@ -632,7 +632,7 @@ export const ReadinessQuiz = ({
                   state === "right"
                     ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)] text-[var(--title-color)]"
                     : state === "wrong"
-                      ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)] text-[var(--title-color)]"
+                      ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
                       : state === "selected"
                         ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
                         : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]";

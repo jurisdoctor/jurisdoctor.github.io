@@ -79,7 +79,7 @@ const Cloze = ({
           const tone = answered
             ? right
               ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.18)]"
-              : "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.14)]"
+              : "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_14%,transparent)]"
             : chosen
               ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
               : "border-[#cfc9bb] bg-[var(--container-color)]";
@@ -117,7 +117,7 @@ const Cloze = ({
                 className={`animate-fadeIn rounded-xl border-2 border-solid p-4 ${
                   right
                     ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
-                    : "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
+                    : "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
                 }`}
               >
                 <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">

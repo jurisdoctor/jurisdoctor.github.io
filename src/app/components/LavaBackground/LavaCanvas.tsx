@@ -25,6 +25,13 @@ export interface LavaBlob {
   y3: string;
 }
 
+// Where a blob begins on this visit (see LavaBackground).
+export interface LavaStart {
+  phase: number; // 0-1: how far along its drift
+  jx: number; // nudge off its usual spot, % of the screen's width
+  jy: number; // and of its height
+}
+
 const SOFT = 30; // half the width of a disc's soft rim, in CSS pixels, at full size
 
 const VERTEX = `
@@ -83,9 +90,10 @@ const stateAt = (
   vw: number,
   vh: number,
   shrink: number,
+  start: LavaStart,
 ): [number, number, number] => {
   const duration = seconds(blob.duration);
-  const t = seconds_ - seconds(blob.delay);
+  const t = seconds_ + start.phase * duration;
   const phase = (((t % duration) + duration) % duration) / duration;
   const stops = [
     [0, 0, 1],
@@ -104,8 +112,8 @@ const stateAt = (
   const grow = a[2] + (b[2] - a[2]) * u;
   const size = blob.size * shrink;
   return [
-    toPx(blob.left, vw, vh, vw) + size / 2 + dx,
-    toPx(blob.top, vw, vh, vh) + size / 2 + dy,
+    toPx(blob.left, vw, vh, vw) + (start.jx / 100) * vw + size / 2 + dx,
+    toPx(blob.top, vw, vh, vh) + (start.jy / 100) * vh + size / 2 + dy,
     (size / 2) * grow,
   ];
 };
@@ -122,7 +130,13 @@ const compile = (
   return gl.getShaderParameter(shader, gl.COMPILE_STATUS) ? shader : null;
 };
 
-const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
+const LavaCanvas = ({
+  blobs,
+  starts,
+}: {
+  blobs: LavaBlob[];
+  starts: LavaStart[] | null;
+}) => {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -131,6 +145,7 @@ const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
     const root = document.documentElement;
     // Only where the SVG version is skipped (marked by layout.tsx).
     if (!root.classList.contains("no-goo")) return;
+    if (!starts) return;
 
     // Without WebGL there is nothing to draw with: hand the page back to the
     // ordinary blobs rather than leave it empty.
@@ -164,7 +179,22 @@ const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
     const uSoft = gl.getUniformLocation(program, "uSoft");
     const uBlob = gl.getUniformLocation(program, "uBlob");
     const uCol = gl.getUniformLocation(program, "uCol");
-    gl.uniform3fv(uCol, new Float32Array(blobs.flatMap((b) => rgb(b.color))));
+    // Each blob's colour comes from the theme (--lava-1.. in globals.css), and
+    // is read again whenever the theme is switched.
+    const paintColors = () => {
+      const style = getComputedStyle(root);
+      const list = blobs.flatMap((b, i) => {
+        const value = style.getPropertyValue(`--lava-${i + 1}`).trim();
+        return rgb(/^#[0-9a-f]{6}$/i.test(value) ? value : b.color);
+      });
+      gl.uniform3fv(uCol, new Float32Array(list));
+    };
+    paintColors();
+    const watcher = new MutationObserver(paintColors);
+    watcher.observe(root, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
 
     const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let vw = 0;
@@ -194,7 +224,9 @@ const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
       const t = calm ? 0 : now / 1000;
       gl.uniform3fv(
         uBlob,
-        new Float32Array(blobs.flatMap((b) => stateAt(b, t, vw, vh, shrink))),
+        new Float32Array(
+          blobs.flatMap((b, i) => stateAt(b, t, vw, vh, shrink, starts[i])),
+        ),
       );
       gl.clearColor(0, 0, 0, 0);
       gl.clear(gl.COLOR_BUFFER_BIT);
@@ -217,9 +249,10 @@ const LavaCanvas = ({ blobs }: { blobs: LavaBlob[] }) => {
 
     return () => {
       cancelAnimationFrame(raf);
+      watcher.disconnect();
       window.removeEventListener("resize", fit);
     };
-  }, [blobs]);
+  }, [blobs, starts]);
 
   return (
     <canvas

@@ -167,7 +167,7 @@ const PairBody = ({
                 <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm font-bold text-[var(--title-color)]">
                   {def?.name ?? rule.rule}
                   {rule.highest && (
-                    <span className="rounded-md bg-[hsla(257,100%,85%,0.16)] px-2.5 py-0.5 text-[10px] uppercase tracking-wide text-[var(--primary-color)]">
+                    <span className="rounded-md bg-[color-mix(in_srgb,var(--primary-color)_16%,transparent)] px-2.5 py-0.5 text-[10px] uppercase tracking-wide text-[var(--primary-color)]">
                       Highest-risk pairing
                     </span>
                   )}

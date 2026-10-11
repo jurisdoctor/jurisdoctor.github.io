@@ -72,7 +72,7 @@ const Option = ({
     ? won
       ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
       : wrongPick
-        ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
+        ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
         : missed
           ? "border-dashed border-[rgb(0,212,127)] bg-[var(--body-color)]"
           : "border-transparent bg-[var(--body-color)] opacity-60"
@@ -135,7 +135,9 @@ const Option = ({
 const Verdict = ({ correct, multi }: { correct: boolean; multi: boolean }) => (
   <div
     className={`mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 ${
-      correct ? "bg-[rgba(0,212,127,0.12)]" : "bg-[hsla(257,100%,85%,0.1)]"
+      correct
+        ? "bg-[rgba(0,212,127,0.12)]"
+        : "bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
     }`}
   >
     <span

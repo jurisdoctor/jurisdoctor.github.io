@@ -32,7 +32,7 @@ const Segment = ({
     ? picked && segment.correct
       ? "bg-[rgba(0,212,127,0.35)] decoration-[rgb(0,212,127)]"
       : picked && !segment.correct
-        ? "bg-[hsla(257,100%,85%,0.22)] line-through decoration-[var(--primary-color)]"
+        ? "bg-[color-mix(in_srgb,var(--primary-color)_22%,transparent)] line-through decoration-[var(--primary-color)]"
         : segment.correct
           ? "bg-transparent underline decoration-dashed decoration-[rgb(0,212,127)] underline-offset-4"
           : "bg-transparent"
@@ -137,7 +137,7 @@ const Highlight = ({
               took && segment.correct
                 ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
                 : took
-                  ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
+                  ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
                   : "border-dashed border-[rgb(0,212,127)] bg-[var(--body-color)]";
             const label =
               took && segment.correct

@@ -78,7 +78,9 @@ const Fill = ({
   const done = solved + missed;
   const level = total ? (done / total) * 100 : 0;
   const crest =
-    missed > 0 ? "bg-[hsla(257,100%,85%,0.5)]" : "bg-[rgba(0,212,127,0.55)]";
+    missed > 0
+      ? "bg-[color-mix(in_srgb,var(--primary-color)_50%,transparent)]"
+      : "bg-[rgba(0,212,127,0.55)]";
 
   useEffect(() => {
     if (!done || calm()) return;
@@ -138,7 +140,7 @@ const Fill = ({
         />
         <span
           style={{ flexGrow: missed }}
-          className="w-full bg-[hsla(257,100%,85%,0.5)]"
+          className="w-full bg-[color-mix(in_srgb,var(--primary-color)_50%,transparent)]"
         />
 
         {done > 0 && (

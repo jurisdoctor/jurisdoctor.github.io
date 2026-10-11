@@ -62,7 +62,7 @@ const Pill = ({
   <span
     className={`inline-flex items-center rounded-md px-3 py-1 text-xs font-bold ${
       tone === "danger"
-        ? "bg-[hsla(257,100%,85%,0.16)] text-[var(--primary-color)]"
+        ? "bg-[color-mix(in_srgb,var(--primary-color)_16%,transparent)] text-[var(--primary-color)]"
         : tone === "alert"
           ? "bg-[var(--chip-amber)] text-[hsl(38,100%,60%)] [:root[data-theme=light]_&]:text-[hsl(30,90%,28%)]"
           : tone === "accent"
@@ -129,7 +129,7 @@ const Steps = ({ items }: { items: StepItem[] }) => (
           </span>
           <span className="min-w-0 leading-relaxed">
             {flagged && (
-              <span className="mr-2 rounded-md bg-[hsla(257,100%,85%,0.16)] px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
+              <span className="mr-2 rounded-md bg-[color-mix(in_srgb,var(--primary-color)_16%,transparent)] px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
                 Black box
               </span>
             )}
@@ -202,7 +202,7 @@ const Grouped = ({ title, groups }: { title: string; groups: GroupItem[] }) => (
                         key={effect}
                         className={`rounded-lg px-2.5 py-1 text-sm leading-snug ${
                           serious
-                            ? "bg-[hsla(257,100%,85%,0.14)] text-[var(--title-color)]"
+                            ? "bg-[color-mix(in_srgb,var(--primary-color)_14%,transparent)] text-[var(--title-color)]"
                             : "bg-[var(--body-color)] text-[var(--text-color)]"
                         }`}
                       >
@@ -366,7 +366,7 @@ const Effects = ({
                   key={effect}
                   className={`rounded-lg px-2.5 py-1 text-base leading-snug sm:text-sm ${
                     tone === "serious"
-                      ? "bg-[hsla(257,100%,85%,0.14)] text-[var(--title-color)]"
+                      ? "bg-[color-mix(in_srgb,var(--primary-color)_14%,transparent)] text-[var(--title-color)]"
                       : "bg-[var(--body-color)] text-[var(--text-color)]"
                   }`}
                 >
@@ -476,7 +476,7 @@ const MedDetail = ({
         key={section.id}
         className={
           danger
-            ? "rounded-2xl border-2 border-solid border-[var(--primary-color)] bg-[var(--container-color)] p-5 [background-image:linear-gradient(hsla(257,100%,85%,0.08),hsla(257,100%,85%,0.08))] sm:p-4"
+            ? "rounded-2xl border-2 border-solid border-[var(--primary-color)] bg-[var(--container-color)] p-5 [background-image:linear-gradient(color-mix(in_srgb,var(--primary-color)_8%,transparent),color-mix(in_srgb,var(--primary-color)_8%,transparent))] sm:p-4"
             : plain
         }
       >
@@ -574,7 +574,7 @@ const MedDetail = ({
         </header>
 
         {med.highlight.critical && (
-          <div className="crit-glow border-y border-solid border-[var(--primary-color)] bg-[var(--container-color)] px-7 py-4 [background-image:linear-gradient(hsla(257,100%,85%,0.1),hsla(257,100%,85%,0.1))] sm:px-5">
+          <div className="crit-glow border-y border-solid border-[var(--primary-color)] bg-[var(--container-color)] px-7 py-4 [background-image:linear-gradient(color-mix(in_srgb,var(--primary-color)_10%,transparent),color-mix(in_srgb,var(--primary-color)_10%,transparent))] sm:px-5">
             <p className="mb-1 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
               Do not miss
             </p>
@@ -681,7 +681,7 @@ const MedDetail = ({
         <button
           type="button"
           onClick={onBack}
-          className="rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-6 py-2.5 text-sm font-bold text-[var(--primary-color)] duration-300 hover:bg-[hsla(257,100%,85%,0.1)]"
+          className="rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-6 py-2.5 text-sm font-bold text-[var(--primary-color)] duration-300 hover:bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
         >
           Back to {med.group}
         </button>

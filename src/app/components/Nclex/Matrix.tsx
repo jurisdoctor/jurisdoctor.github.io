@@ -171,7 +171,7 @@ const Matrix = ({
                   answered
                     ? rowRight(row)
                       ? "bg-[rgba(0,212,127,0.08)]"
-                      : "bg-[hsla(257,100%,85%,0.07)]"
+                      : "bg-[color-mix(in_srgb,var(--primary-color)_7%,transparent)]"
                     : ""
                 }`}
               >
@@ -203,7 +203,7 @@ const Matrix = ({
               className={`animate-fadeIn rounded-xl border-2 border-solid p-3 text-sm ${
                 rowRight(row)
                   ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
-                  : "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
+                  : "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
               }`}
             >
               <span className="font-bold text-[var(--title-color)]">

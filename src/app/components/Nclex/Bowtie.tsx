@@ -72,7 +72,7 @@ const Slot = ({
   const shell = answered
     ? right
       ? "border-solid border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
-      : "border-solid border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
+      : "border-solid border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
     : option
       ? "border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
       : over
@@ -263,7 +263,7 @@ const Bowtie = ({
                     ? option.correct
                       ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
                       : taken
-                        ? "border-[var(--primary-color)] bg-[hsla(257,100%,85%,0.1)]"
+                        ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
                         : "border-transparent bg-[var(--body-color)] opacity-60"
                     : taken
                       ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"

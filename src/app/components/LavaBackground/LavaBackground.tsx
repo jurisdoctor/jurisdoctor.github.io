@@ -1,7 +1,7 @@
 "use client";
 
-import { CSSProperties } from "react";
-import LavaCanvas from "./LavaCanvas";
+import { CSSProperties, useEffect, useState } from "react";
+import LavaCanvas, { LavaStart } from "./LavaCanvas";
 
 interface Blob {
   color: string;
@@ -96,12 +96,26 @@ const BLOBS: Blob[] = [
 // Fixed to the viewport (not the page), so it drifts continuously behind
 // every route without remounting — RootLayout renders this once and the
 // App Router's shared layout keeps it mounted across client-side navigation.
-const LavaBackground = () => (
-  <div
-    className="pointer-events-none fixed inset-0 -z-10 overflow-hidden [transform:translateZ(0)]"
-    aria-hidden
-  >
-    {/* feColorMatrix alpha row (18 -8): opaque where blurred alpha is already
+// Where each blob begins is rolled fresh on every visit: how far along its
+// drift it already is, and a small nudge off its usual spot. Done in the
+// browser once the page is up (so the server's page and the browser's agree),
+// with the lamp faded in afterwards rather than showing a first guess.
+const roll = (): LavaStart[] =>
+  BLOBS.map(() => ({
+    phase: Math.random(),
+    jx: (Math.random() - 0.5) * 14,
+    jy: (Math.random() - 0.5) * 14,
+  }));
+
+const LavaBackground = () => {
+  const [starts, setStarts] = useState<LavaStart[] | null>(null);
+  useEffect(() => setStarts(roll()), []);
+  return (
+    <div
+      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden [transform:translateZ(0)]"
+      aria-hidden
+    >
+      {/* feColorMatrix alpha row (18 -8): opaque where blurred alpha is already
         high, transparent below the threshold, which is what turns a soft
         blurred overlap into one fused blob instead of a hazy double-blur.
         The filter region (x/y/width/height) is set explicitly and generously
@@ -112,18 +126,24 @@ const LavaBackground = () => (
         region (-10%/120%), cutting the blur off before it reaches a
         neighboring blob, so nothing ever merges there even though the exact
         same markup goo's together fine on desktop. */}
-    <svg className="absolute h-0 w-0">
-      <filter id="lava-goo-filter" x="-30%" y="-20%" width="160%" height="140%">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="blur" />
-        <feColorMatrix
-          in="blur"
-          mode="matrix"
-          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
-        />
-      </filter>
-    </svg>
+      <svg className="absolute h-0 w-0">
+        <filter
+          id="lava-goo-filter"
+          x="-30%"
+          y="-20%"
+          width="160%"
+          height="140%"
+        >
+          <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+          />
+        </filter>
+      </svg>
 
-    {/* The merge filter and the blend mode are kept on two separate nested
+      {/* The merge filter and the blend mode are kept on two separate nested
         layers rather than one element — Safari's handling of `filter` and
         `mix-blend-mode` together on the same box is inconsistent (one of
         the two silently stops applying on some versions), but each on its
@@ -140,38 +160,45 @@ const LavaBackground = () => (
         identically across the seam between them, showing up as a visible
         hard line (most often right at the fold where the browser's own
         viewport-height tile boundary falls). */}
-    <div className="absolute inset-0 [mix-blend-mode:var(--lava-blend)] [transform:translateZ(0)]">
-      <div
-        className="lava-goo absolute inset-0"
-        style={{ opacity: "var(--lava-opacity)" }}
-      >
-        {BLOBS.map((blob, index) => (
-          <span
-            key={index}
-            className="lava-blob absolute rounded-full"
-            style={
-              {
-                width: `calc(${blob.size}px * var(--lava-scale))`,
-                height: `calc(${blob.size}px * var(--lava-scale))`,
-                top: blob.top,
-                left: blob.left,
-                backgroundColor: blob.color,
-                animationDuration: blob.duration,
-                animationDelay: blob.delay,
-                "--x1": blob.x1,
-                "--y1": blob.y1,
-                "--x2": blob.x2,
-                "--y2": blob.y2,
-                "--x3": blob.x3,
-                "--y3": blob.y3,
-              } as CSSProperties
-            }
-          />
-        ))}
-        <LavaCanvas blobs={BLOBS} />
+      <div className="absolute inset-0 [mix-blend-mode:var(--lava-blend)] [transform:translateZ(0)]">
+        <div
+          className="lava-goo absolute inset-0 duration-1000"
+          style={{ opacity: starts ? "var(--lava-opacity)" : 0 }}
+        >
+          {BLOBS.map((blob, index) => (
+            <span
+              key={index}
+              className="lava-blob absolute rounded-full"
+              style={
+                {
+                  width: `calc(${blob.size}px * var(--lava-scale))`,
+                  height: `calc(${blob.size}px * var(--lava-scale))`,
+                  top: starts
+                    ? `calc(${blob.top} + ${starts[index].jy}%)`
+                    : blob.top,
+                  left: starts
+                    ? `calc(${blob.left} + ${starts[index].jx}%)`
+                    : blob.left,
+                  backgroundColor: `var(--lava-${index + 1})`,
+                  animationDuration: blob.duration,
+                  animationDelay: starts
+                    ? `${-starts[index].phase * parseFloat(blob.duration)}s`
+                    : blob.delay,
+                  "--x1": blob.x1,
+                  "--y1": blob.y1,
+                  "--x2": blob.x2,
+                  "--y2": blob.y2,
+                  "--x3": blob.x3,
+                  "--y3": blob.y3,
+                } as CSSProperties
+              }
+            />
+          ))}
+          <LavaCanvas blobs={BLOBS} starts={starts} />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default LavaBackground;
