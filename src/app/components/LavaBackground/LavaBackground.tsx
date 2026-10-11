@@ -104,12 +104,15 @@ const LavaBackground = () => (
         high, transparent below the threshold, which is what turns a soft
         blurred overlap into one fused blob instead of a hazy double-blur.
         The filter region (x/y/width/height) is set explicitly and generously
-        — mobile WebKit clips an SVG filter to its default, much tighter
+        (but not more: on a tall phone at 3x pixel density, a region twice the
+        screen in each direction is taller than WebKit's largest filter
+        texture, and the whole blur is silently skipped, leaving hard-edged
+        circles) — mobile WebKit clips an SVG filter to its default, much tighter
         region (-10%/120%), cutting the blur off before it reaches a
         neighboring blob, so nothing ever merges there even though the exact
         same markup goo's together fine on desktop. */}
     <svg className="absolute h-0 w-0">
-      <filter id="lava-goo-filter" x="-50%" y="-50%" width="200%" height="200%">
+      <filter id="lava-goo-filter" x="-30%" y="-20%" width="160%" height="140%">
         <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="blur" />
         <feColorMatrix
           in="blur"
