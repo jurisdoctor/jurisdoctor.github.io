@@ -82,7 +82,7 @@ export const SuggestModal = ({ onClose }: { onClose: () => void }) => {
         body: JSON.stringify({
           access_key: SUGGEST_KEY,
           subject: `Medication suggestion: ${name}`,
-          from_name: "Agave's Drug Guide",
+          from_name: "Agave's Lab",
           medication: name,
           message: note.trim() || "(no note)",
         }),

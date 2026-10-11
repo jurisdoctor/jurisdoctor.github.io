@@ -4,7 +4,7 @@ import { slugOf } from "../../components/Medications/Data";
 import MedicationsScreen from "../../screen/MedicationsScreen";
 
 export const metadata: Metadata = {
-  title: "Agave's Drug Guide",
+  title: "Agave's Lab",
   description: "Searchable medication guide organized by category",
 };
 
