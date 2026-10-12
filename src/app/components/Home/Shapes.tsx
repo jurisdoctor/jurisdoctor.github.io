@@ -22,8 +22,8 @@ const SAFE_SELECTOR =
 const SEGMENT_MIN_MS = 900;
 const SEGMENT_MAX_MS = 1700;
 const WANDER_RADIUS = 170;
-const IDLE_EASE = 0.035;
-const ATTRACT_EASE = 0.07;
+const IDLE_EASE = 0.045;
+const ATTRACT_EASE = 0.09;
 // How often each shape re-rolls where near the cursor it's circling, so a
 // held-still pointer still reads as a little swarm instead of the shapes
 // converging and freezing in formation.
@@ -165,9 +165,20 @@ const Shapes = () => {
     // pointer.current is stored in viewport space to match the anchors
     // (see measure()); the safe-zone check uses the event's own target,
     // which needs no coordinate conversion at all.
+    // The pull never lasts: two seconds after the last move or click on open
+    // background, the shapes let go and scatter to random places again, rather
+    // than staying parked around wherever the pointer stopped.
+    const PULL_MS = 2000;
+    let release = 0;
     const handlePointer = (event: PointerEvent) => {
       pointer.current = { x: event.clientX, y: event.clientY };
-      setMode(overSafeZone(event.target) ? "idle" : "attracted");
+      window.clearTimeout(release);
+      if (overSafeZone(event.target)) {
+        setMode("idle");
+        return;
+      }
+      setMode("attracted");
+      release = window.setTimeout(() => setMode("idle"), PULL_MS);
     };
 
     window.addEventListener("pointermove", handlePointer);
@@ -204,8 +215,15 @@ const Shapes = () => {
     document.addEventListener("visibilitychange", handleVisibility);
 
     let raf = 0;
+    let lastFrame = performance.now();
     const tick = () => {
       const now = performance.now();
+      // The easing is per 60th of a second, scaled by how long the frame
+      // really took, so the shapes cover the same ground in the same time on a
+      // phone running at 30 frames a second as on a laptop at 120. (Easing
+      // once per frame made them crawl wherever the page was drawing slowly.)
+      const frames = Math.min((now - lastFrame) / (1000 / 60), 4);
+      lastFrame = now;
       const attracted = mode.current === "attracted";
 
       states.current.forEach((state) => {
@@ -238,7 +256,8 @@ const Shapes = () => {
             Math.random() * (SEGMENT_MAX_MS - SEGMENT_MIN_MS);
         }
 
-        const ease = attracted ? ATTRACT_EASE : IDLE_EASE;
+        const ease =
+          1 - Math.pow(1 - (attracted ? ATTRACT_EASE : IDLE_EASE), frames);
         state.curX += (state.targetX - state.curX) * ease;
         state.curY += (state.targetY - state.curY) * ease;
         state.el.style.transform = `translate(${state.curX.toFixed(2)}px, ${state.curY.toFixed(2)}px)`;
@@ -249,6 +268,7 @@ const Shapes = () => {
     raf = requestAnimationFrame(tick);
 
     return () => {
+      window.clearTimeout(release);
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", measure);
       window.removeEventListener("pointermove", handlePointer);

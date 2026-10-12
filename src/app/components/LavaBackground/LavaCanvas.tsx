@@ -201,6 +201,10 @@ const LavaCanvas = ({
     let vh = 0;
     // The blobs' size relative to full (see --lava-scale in globals.css).
     let shrink = 1;
+    const LEVELS = [1.5, 1, 0.75, 0.5];
+    let level = 0;
+    // Whether to draw less often still, once the density can go no lower.
+    let every = 30;
     const fit = () => {
       shrink =
         parseFloat(getComputedStyle(root).getPropertyValue("--lava-scale")) ||
@@ -208,9 +212,10 @@ const LavaCanvas = ({
       gl.uniform1f(uSoft, SOFT * shrink);
       vw = window.innerWidth;
       vh = window.innerHeight;
-      // The screen's own pixels, but no more than twice over: past that the
-      // extra detail is lost on the eye and costs the battery.
-      const density = Math.min(window.devicePixelRatio || 1, 2);
+      // How many canvas pixels per screen pixel: the screen's own at first (up
+      // to 1.5), and fewer if the page turns out to be running slowly (see the
+      // loop below). Soft blobs lose nothing visible at a lower density.
+      const density = Math.min(window.devicePixelRatio || 1, LEVELS[level]);
       canvas.width = Math.round(vw * density);
       canvas.height = Math.round(vh * density);
       gl.viewport(0, 0, canvas.width, canvas.height);
@@ -235,9 +240,31 @@ const LavaCanvas = ({
 
     let raf = 0;
     let last = 0;
+    let before = 0;
+    let average = 16;
+    let counted = 0;
     const loop = (now: number) => {
+      // Watch how long frames really take. If the page is struggling (under
+      // about 38 a second, smoothed), the lava steps down a notch: fewer
+      // pixels, then, at the bottom, fewer redraws, so it never drags the
+      // shapes and the page itself down with it.
+      if (before && !document.hidden) {
+        average = average * 0.9 + (now - before) * 0.1;
+        counted += 1;
+        if (counted > 40 && average > 26) {
+          counted = 0;
+          average = 16;
+          if (level < LEVELS.length - 1) {
+            level += 1;
+            fit();
+          } else {
+            every = Math.min(every * 2, 500);
+          }
+        }
+      }
+      before = now;
       // About 30 frames a second is plenty for a drift this slow.
-      if (!document.hidden && now - last > 30) {
+      if (!document.hidden && now - last > every) {
         last = now;
         draw(now);
       }
