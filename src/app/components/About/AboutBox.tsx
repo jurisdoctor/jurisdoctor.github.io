@@ -11,14 +11,18 @@ const STATS = [
 
 const AboutBox = () => {
   return (
-    <div className="mt-16 grid grid-cols-4 justify-items-center gap-x-7 md:grid-cols-[repeat(2,150px)] md:justify-center md:gap-y-6">
+    <div className="mt-16 grid grid-cols-4 justify-items-center gap-x-7 md:grid-cols-2 md:gap-x-4 md:gap-y-9">
       {STATS.map(({ Icon, value, label }, index) => (
-        <Reveal key={label} delay={index * 100} className="flex gap-x-6">
+        <Reveal
+          key={label}
+          delay={index * 100}
+          className="flex gap-x-6 md:flex-col md:items-center md:gap-x-0 md:gap-y-2 md:text-center"
+        >
           <Icon className="text-4xl text-[var(--icon-muted-color)]" />
 
           <div>
-            <h3 className="text-3xl">{value}</h3>
-            <span className="text-sm">{label}</span>
+            <h3 className="text-3xl leading-tight">{value}</h3>
+            <span className="block text-sm leading-snug">{label}</span>
           </div>
         </Reveal>
       ))}

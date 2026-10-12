@@ -15,7 +15,7 @@ const Home = () => {
           clipped there. Hoisting it into its own fixed, unclipped layer —
           left-20 matches the sidebar's width, same as the NCLEX page's
           version of this fix — lets shapes roam the full viewport instead. */}
-      <div className="pointer-events-none fixed inset-y-0 left-20 right-0 z-0 overflow-hidden lg:left-0">
+      <div className="pointer-events-none fixed inset-y-0 left-20 right-0 -z-[5] overflow-hidden lg:left-0">
         <Shapes />
       </div>
 

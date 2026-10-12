@@ -659,7 +659,7 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
         and only as tall as the content — so shapes hit an invisible wall at
         its edges instead of roaming the viewport. left-20 matches the
         sidebar's own width (see Sidebar.tsx's "ml-20 lg:ml-0" convention). */}
-      <div className="pointer-events-none fixed inset-y-0 left-20 right-0 z-0 overflow-hidden lg:left-0">
+      <div className="pointer-events-none fixed inset-y-0 left-20 right-0 -z-[5] overflow-hidden lg:left-0">
         <Shapes />
       </div>
 
