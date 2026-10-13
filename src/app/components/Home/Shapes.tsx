@@ -1,20 +1,18 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { CONSTELLATIONS } from "./Constellations";
 
-// A pointer over any real UI — nav, a button, a link, a card — attracts
-// nothing; the shapes wander on their own. A pointer over open background
-// anywhere else (or any tap, since touch has no hover) pulls every shape
-// toward it. The moment the pointer lands back on real UI, each shape rolls
-// a fresh random wander target instead of resuming whatever path it was
-// on, so the "release" always looks like a new scatter, not a resumed
-// loop. This is DOM-driven (closest(SAFE_SELECTOR) on the actual pointer
-// target), not tied to one ref, so it works the same on every page without
-// each one having to wire up its own "safe zone".
+// The shapes wander on their own, and every so often they gather into a
+// constellation somewhere on the screen: the twelve zodiac signs plus a few
+// more (Ophiuchus, Orion, the Big Dipper...), each coming up once in a random
+// order before any repeats. A different set of shapes drifts into the star
+// positions, sways a little, and thin lines join the stars the way the
+// constellation is drawn, with its name under it. Only as many shapes as it has
+// stars are used; the rest shrink away until it breaks up. A few seconds later
+// the shapes drift off to wander again as the lines fade, and then the next one
+// forms. Nothing follows the pointer.
 type Mode = "idle" | "attracted";
-
-const SAFE_SELECTOR =
-  "button, a, input, select, textarea, label, aside, [data-shapes-safe]";
 
 // At IDLE_EASE, a shape is ~95% of the way to its target after ~1.4s — the
 // retarget window has to stay shorter than that, or it visibly finishes
@@ -23,13 +21,20 @@ const SEGMENT_MIN_MS = 900;
 const SEGMENT_MAX_MS = 1700;
 const WANDER_RADIUS = 170;
 const IDLE_EASE = 0.045;
-const ATTRACT_EASE = 0.09;
-// How often each shape re-rolls where near the cursor it's circling, so a
-// held-still pointer still reads as a little swarm instead of the shapes
-// converging and freezing in formation.
-const SWARM_MIN_MS = 400;
-const SWARM_MAX_MS = 900;
-const SWARM_RADIUS = 110;
+// Constellation: how fast a shape eases to its star (per 60th of a second), how
+// wide the pattern is (a share of the window, capped), how strong the lines
+// are, how fast they fade in and out, and how far a shape sways around its star.
+const ATTRACT_EASE = 0.07;
+const PATTERN_MAX = 460;
+const PATTERN_SHARE = 0.5;
+const LINE_OPACITY = 0.6;
+const LINE_FADE = 0.08;
+const SWAY = 4;
+// How long the shapes wander between signs (a random time in this range), and
+// how long a sign holds before it breaks up.
+const WANDER_MIN_MS = 2000;
+const WANDER_MAX_MS = 2000;
+const HOLD_MS = 4000;
 
 interface ShapeState {
   el: SVGSVGElement | null;
@@ -37,12 +42,45 @@ interface ShapeState {
   anchorY: number;
   curX: number;
   curY: number;
+  scale: number;
+  // Called in with no star to take: faded out until released.
+  spare: boolean;
   targetX: number;
   targetY: number;
   nextRetarget: number;
-  attractOffsetX: number;
-  attractOffsetY: number;
+  // Constellation: this shape's spot relative to the center, and where it
+  // is in its sway.
+  spotX: number;
+  spotY: number;
+  phase: number;
 }
+
+// How much of a square around a point (reach pixels to each side) has page
+// content on top of it, sampled on a grid: an element that has its own text or
+// a background of its own, as opposed to an empty wrapper.
+const coverage = (cx: number, cy: number, reach: number) => {
+  let covered = 0;
+  for (let i = -2; i <= 2; i++) {
+    for (let j = -2; j <= 2; j++) {
+      const el = document.elementFromPoint(
+        cx + (i * reach) / 2,
+        cy + (j * reach) / 2,
+      );
+      if (!el || el === document.body || el === document.documentElement) {
+        continue;
+      }
+      const hasText = Array.from(el.childNodes).some(
+        (node) => node.nodeType === 3 && !!node.textContent?.trim(),
+      );
+      const color = getComputedStyle(el).backgroundColor;
+      const hasFill = color !== "rgba(0, 0, 0, 0)" && color !== "transparent";
+      if (hasText || hasFill || el.matches("img, svg, button, input, select")) {
+        covered++;
+      }
+    }
+  }
+  return covered;
+};
 
 const randomWanderTarget = () => ({
   x: (Math.random() * 2 - 1) * WANDER_RADIUS,
@@ -69,8 +107,11 @@ const Shapes = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const shapeRefs = useRef<(SVGSVGElement | null)[]>([]);
   const states = useRef<ShapeState[]>([]);
+  const lineRefs = useRef<(SVGLineElement | null)[]>([]);
+  const labelRef = useRef<SVGTextElement>(null);
   const mode = useRef<Mode>("idle");
-  const pointer = useRef({ x: 0, y: 0 });
+  // Where the current constellation is centered, in viewport space.
+  const center = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     if (!spots) return;
@@ -89,21 +130,24 @@ const Shapes = () => {
               anchorY: 0,
               curX: 0,
               curY: 0,
+              scale: 1,
+              spare: false,
               targetX: 0,
               targetY: 0,
               nextRetarget: 0,
-              attractOffsetX: 0,
-              attractOffsetY: 0,
+              spotX: 0,
+              spotY: 0,
+              phase: 0,
             }
           );
         }
         // Clear any transform before measuring, so the rect reflects the
         // shape's untransformed CSS anchor position, not wherever it last
-        // drifted to. Measured in viewport space, matching the pointer
-        // (clientX/clientY below) — every mount point for this component is
+        // drifted to. Measured in viewport space, matching the constellation
+        // center (viewport coordinates too) — every mount point for this component is
         // a `fixed` layer that doesn't scroll with the page, so adding
         // scrollX/scrollY here would offset the anchor by however far the
-        // page had scrolled, throwing the "move toward the pointer" math off
+        // page had scrolled, throwing the "move toward the center" math off
         // by exactly that amount instead of keeping it accurate.
         el.style.transform = "";
         const rect = el.getBoundingClientRect();
@@ -115,11 +159,14 @@ const Shapes = () => {
           anchorY,
           curX: prev?.curX ?? 0,
           curY: prev?.curY ?? 0,
+          scale: prev?.scale ?? 1,
+          spare: prev?.spare ?? false,
           targetX: prev?.targetX ?? 0,
           targetY: prev?.targetY ?? 0,
           nextRetarget: prev?.nextRetarget ?? 0,
-          attractOffsetX: prev?.attractOffsetX ?? (Math.random() * 2 - 1) * 90,
-          attractOffsetY: prev?.attractOffsetY ?? (Math.random() * 2 - 1) * 90,
+          spotX: prev?.spotX ?? 0,
+          spotY: prev?.spotY ?? 0,
+          phase: prev?.phase ?? index,
         };
       });
     };
@@ -127,93 +174,128 @@ const Shapes = () => {
     measure();
     window.addEventListener("resize", measure);
 
-    const overSafeZone = (target: EventTarget | null) =>
-      target instanceof Element && !!target.closest(SAFE_SELECTOR);
-
-    // Force every shape to re-roll immediately on the next tick, instead of
-    // waiting out whatever retarget timer it had queued from the mode it
-    // was just in — without this, a shape could inherit a multi-second-old
-    // idle timer the instant it became attracted, and visibly sit still
-    // for however much of that was left before its first swarm jitter.
-    const rerollAll = () => {
-      states.current.forEach((state) => {
-        state.nextRetarget = 0;
-      });
-    };
-
-    const scatter = () => {
-      const now = performance.now();
-      states.current.forEach((state) => {
-        const wander = randomWanderTarget();
-        state.targetX = wander.x;
-        state.targetY = wander.y;
-        state.nextRetarget =
-          now +
-          SEGMENT_MIN_MS +
-          Math.random() * (SEGMENT_MAX_MS - SEGMENT_MIN_MS);
-      });
-    };
+    let plan = { name: "", edges: [] as [number, number][], labelDrop: 0 };
 
     const setMode = (next: Mode) => {
       if (mode.current === next) return;
-      const wasAttracted = mode.current === "attracted";
       mode.current = next;
-      if (next === "idle" && wasAttracted) scatter();
-      if (next === "attracted" && !wasAttracted) rerollAll();
-    };
-
-    // pointer.current is stored in viewport space to match the anchors
-    // (see measure()); the safe-zone check uses the event's own target,
-    // which needs no coordinate conversion at all.
-    // The pull never lasts: two seconds after the last move or click on open
-    // background, the shapes let go and scatter to random places again, rather
-    // than staying parked around wherever the pointer stopped.
-    const PULL_MS = 2000;
-    let release = 0;
-    const handlePointer = (event: PointerEvent) => {
-      pointer.current = { x: event.clientX, y: event.clientY };
-      window.clearTimeout(release);
-      if (overSafeZone(event.target)) {
-        setMode("idle");
-        return;
+      // Every call picks a constellation, turns it a little, and deals the
+      // shapes out to its stars at random, so it is never the same twice. The
+      // shapes with no star hang round the outside of it.
+      if (next === "attracted") {
+        const all = states.current;
+        const sky = nextSky();
+        const size = Math.min(PATTERN_MAX, window.innerWidth * PATTERN_SHARE);
+        const turn = (Math.random() * 2 - 1) * 0.3;
+        const xs = sky.stars.map((star) => star[0]);
+        const ys = sky.stars.map((star) => star[1]);
+        const midX = (Math.min(...xs) + Math.max(...xs)) / 2;
+        const midY = (Math.min(...ys) + Math.max(...ys)) / 2;
+        const span = Math.max(
+          Math.max(...xs) - Math.min(...xs),
+          Math.max(...ys) - Math.min(...ys),
+        );
+        const order = all.map((_, index) => index);
+        for (let i = order.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [order[i], order[j]] = [order[j], order[i]];
+        }
+        sky.stars.forEach((star, n) => {
+          const shape = all[order[n]];
+          if (!shape) return;
+          const x = ((star[0] - midX) / span) * size;
+          const y = ((star[1] - midY) / span) * size;
+          shape.spotX = x * Math.cos(turn) - y * Math.sin(turn);
+          shape.spotY = x * Math.sin(turn) + y * Math.cos(turn);
+          shape.phase = Math.random() * Math.PI * 2;
+        });
+        // Only as many shapes as the constellation has stars are called in;
+        // the rest shrink away where they are, and grow back once released.
+        all.forEach((shape) => {
+          shape.spare = true;
+        });
+        order.slice(0, sky.stars.length).forEach((index) => {
+          if (all[index]) all[index].spare = false;
+        });
+        plan = {
+          name: `${sky.glyph}\uFE0E  ${sky.name}`,
+          edges: sky.edges.map(([a, b]) => [order[a], order[b]]),
+          labelDrop:
+            (((Math.max(...ys) - Math.min(...ys)) / span) * size) / 2 + 40,
+        };
       }
+      // Leaving it, every shape picks a fresh place to wander to at once,
+      // rather than waiting out a timer from before it was called in.
+      if (next === "idle") {
+        states.current.forEach((state) => {
+          state.nextRetarget = 0;
+        });
+      }
+    };
+
+    // The cycle: wander for a while, then form a sign somewhere on screen
+    // (kept clear of the edges so it fits), hold it, break it up, repeat.
+    let cycle = 0;
+    // Every constellation comes up once, in a fresh random order, before any
+    // repeats (and the first of a new round is never the one just shown).
+    let bag: typeof CONSTELLATIONS = [];
+    let last: (typeof CONSTELLATIONS)[number] | null = null;
+    const nextSky = () => {
+      if (!bag.length) {
+        bag = [...CONSTELLATIONS];
+        for (let i = bag.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [bag[i], bag[j]] = [bag[j], bag[i]];
+        }
+        if (bag[bag.length - 1] === last) bag.unshift(bag.pop()!);
+      }
+      last = bag.pop()!;
+      return last;
+    };
+    const form = () => {
+      const box = containerRef.current?.getBoundingClientRect();
+      const left = box?.left ?? 0;
+      const top = box?.top ?? 0;
+      const width = box?.width ?? window.innerWidth;
+      const height = box?.height ?? window.innerHeight;
+      const room =
+        Math.min(PATTERN_MAX, window.innerWidth * PATTERN_SHARE) / 2 + 50;
+      // The shapes sit behind the page, so try a handful of places and take
+      // the one with the least text and cards in the way.
+      let best = { x: left + width / 2, y: top + height / 2 };
+      let fewest = Infinity;
+      for (let attempt = 0; attempt < 14; attempt++) {
+        const spot = {
+          x: left + room + Math.random() * Math.max(0, width - room * 2),
+          y: top + room + Math.random() * Math.max(0, height - room * 2),
+        };
+        const covered = coverage(spot.x, spot.y, room - 50);
+        if (covered < fewest) {
+          fewest = covered;
+          best = spot;
+        }
+      }
+      center.current = best;
       setMode("attracted");
-      release = window.setTimeout(() => setMode("idle"), PULL_MS);
+      cycle = window.setTimeout(() => {
+        setMode("idle");
+        wait();
+      }, HOLD_MS);
     };
-
-    window.addEventListener("pointermove", handlePointer);
-    window.addEventListener("pointerdown", handlePointer);
-
-    // Once the pointer leaves the page there are no more pointermove events
-    // to flip the mode, so the shapes would stay stuck swarming the last spot
-    // it touched on the way out. Treat leaving the document (or the window
-    // losing focus) like landing on real UI: release back to wandering.
-    // Touch is excluded — a finger lifting also fires pointerleave, and a tap
-    // is meant to keep the pull until the next tap.
-    // No single signal is reliable across browsers (Safari and fast exits
-    // skip some of them), so listen to all: pointerleave on <html>, a
-    // document-level mouseleave, a pointerout whose relatedTarget is null
-    // (the pointer went somewhere that isn't part of this page), and the tab
-    // losing focus or going hidden.
-    const handleLeave = (event: PointerEvent) => {
-      if (event.pointerType === "touch") return;
-      setMode("idle");
+    const wait = () => {
+      cycle = window.setTimeout(
+        form,
+        WANDER_MIN_MS + Math.random() * (WANDER_MAX_MS - WANDER_MIN_MS),
+      );
     };
-    const handleOut = (event: PointerEvent) => {
-      if (event.pointerType === "touch" || event.relatedTarget) return;
-      setMode("idle");
-    };
-    const handleIdle = () => setMode("idle");
-    const handleVisibility = () => {
-      if (document.hidden) setMode("idle");
-    };
+    wait();
 
-    document.documentElement.addEventListener("pointerleave", handleLeave);
-    document.addEventListener("mouseleave", handleIdle);
-    window.addEventListener("pointerout", handleOut);
-    window.addEventListener("blur", handleIdle);
-    document.addEventListener("visibilitychange", handleVisibility);
-
+    const lines = lineRefs.current;
+    let lineAlpha = 0;
+    // The lines only light once the shapes have (nearly) reached their stars,
+    // so they never stretch across the screen while the shapes are still on
+    // their way.
+    let lit = false;
     let raf = 0;
     let lastFrame = performance.now();
     const tick = () => {
@@ -226,26 +308,28 @@ const Shapes = () => {
       lastFrame = now;
       const attracted = mode.current === "attracted";
 
+      let farthest = 0;
       states.current.forEach((state) => {
         if (!state.el) return;
 
-        if (attracted) {
-          // Re-roll where near the cursor this shape is circling every
-          // SWARM_MIN-MAX_MS, rather than settling into a fixed offset —
-          // keeps the group visibly moving around each other and the
-          // pointer even while the pointer itself holds still.
-          if (now >= state.nextRetarget) {
-            state.attractOffsetX = (Math.random() * 2 - 1) * SWARM_RADIUS;
-            state.attractOffsetY = (Math.random() * 2 - 1) * SWARM_RADIUS;
-            state.nextRetarget =
-              now +
-              SWARM_MIN_MS +
-              Math.random() * (SWARM_MAX_MS - SWARM_MIN_MS);
-          }
+        if (attracted && state.spare) {
+          // No star: stay put while shrinking away.
+          state.targetX = state.curX;
+          state.targetY = state.curY;
+        } else if (attracted) {
+          // Head for this shape's own spot, swaying a touch so the sky is
+          // never quite still.
+          const t = now / 1000;
           state.targetX =
-            pointer.current.x - state.anchorX + state.attractOffsetX;
+            center.current.x -
+            state.anchorX +
+            state.spotX +
+            Math.sin(t * 0.9 + state.phase) * SWAY;
           state.targetY =
-            pointer.current.y - state.anchorY + state.attractOffsetY;
+            center.current.y -
+            state.anchorY +
+            state.spotY +
+            Math.cos(t * 0.7 + state.phase) * SWAY;
         } else if (now >= state.nextRetarget) {
           const wander = randomWanderTarget();
           state.targetX = wander.x;
@@ -258,26 +342,66 @@ const Shapes = () => {
 
         const ease =
           1 - Math.pow(1 - (attracted ? ATTRACT_EASE : IDLE_EASE), frames);
+        if (attracted && !state.spare) {
+          farthest = Math.max(
+            farthest,
+            Math.hypot(state.targetX - state.curX, state.targetY - state.curY),
+          );
+        }
         state.curX += (state.targetX - state.curX) * ease;
         state.curY += (state.targetY - state.curY) * ease;
-        state.el.style.transform = `translate(${state.curX.toFixed(2)}px, ${state.curY.toFixed(2)}px)`;
+        // Shapes without a star shrink to nothing as they fade, and return at
+        // full size once the sign breaks up.
+        const wanted = attracted && state.spare ? 0 : 1;
+        state.scale += (wanted - state.scale) * ease;
+        state.el.style.opacity = state.scale.toFixed(3);
+        state.el.style.transform = `translate(${state.curX.toFixed(2)}px, ${state.curY.toFixed(2)}px) scale(${state.scale.toFixed(3)})`;
       });
+
+      // The lines run along the constellation's edges, and fade in and out
+      // with the call. They are drawn in the layer's own space, which is not
+      // always the window's (the question banks' layer starts after the sidebar).
+      if (!attracted) lit = false;
+      else if (farthest < 40) lit = true;
+      lineAlpha +=
+        ((lit ? 1 : 0) - lineAlpha) * (1 - Math.pow(1 - LINE_FADE, frames));
+      const origin = containerRef.current?.getBoundingClientRect();
+      const offX = origin?.left ?? 0;
+      const offY = origin?.top ?? 0;
+      lines.forEach((line, index) => {
+        if (!line) return;
+        const edge = plan.edges[index];
+        const from = edge && states.current[edge[0]];
+        const to = edge && states.current[edge[1]];
+        if (!from || !to || lineAlpha < 0.01) {
+          line.style.opacity = "0";
+          return;
+        }
+        line.setAttribute("x1", (from.anchorX + from.curX - offX).toFixed(1));
+        line.setAttribute("y1", (from.anchorY + from.curY - offY).toFixed(1));
+        line.setAttribute("x2", (to.anchorX + to.curX - offX).toFixed(1));
+        line.setAttribute("y2", (to.anchorY + to.curY - offY).toFixed(1));
+        line.style.opacity = (lineAlpha * LINE_OPACITY).toFixed(3);
+      });
+      const label = labelRef.current;
+      if (label) {
+        if (label.textContent !== plan.name) label.textContent = plan.name;
+        label.setAttribute("x", (center.current.x - offX).toFixed(1));
+        label.setAttribute(
+          "y",
+          (center.current.y - offY + plan.labelDrop).toFixed(1),
+        );
+        label.style.opacity = (lineAlpha * 0.7).toFixed(3);
+      }
 
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
 
     return () => {
-      window.clearTimeout(release);
+      window.clearTimeout(cycle);
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", measure);
-      window.removeEventListener("pointermove", handlePointer);
-      window.removeEventListener("pointerdown", handlePointer);
-      document.documentElement.removeEventListener("pointerleave", handleLeave);
-      document.removeEventListener("mouseleave", handleIdle);
-      window.removeEventListener("pointerout", handleOut);
-      window.removeEventListener("blur", handleIdle);
-      document.removeEventListener("visibilitychange", handleVisibility);
     };
   }, [spots]);
 
@@ -290,6 +414,30 @@ const Shapes = () => {
       ref={containerRef}
       className="pointer-events-none absolute left-0 top-0 z-0 h-full w-full"
     >
+      {/* constellation lines, one for each edge, and its name */}
+      <svg
+        className="absolute left-0 top-0 h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {Array.from({ length: 12 }, (_, index) => (
+          <line
+            key={index}
+            ref={(el) => {
+              lineRefs.current[index] = el;
+            }}
+            style={{ stroke: "var(--shape-b)", opacity: 0 }}
+            strokeWidth="1.2"
+          />
+        ))}
+        <text
+          ref={labelRef}
+          textAnchor="middle"
+          style={{ fill: "var(--shape-b)", opacity: 0 }}
+          fontSize="13"
+          letterSpacing="3"
+        />
+      </svg>
+
       <svg
         ref={ref(0)}
         width="27"

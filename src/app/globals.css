@@ -166,6 +166,37 @@ button {
   }
 }
 
+/* The open chapter tile (see Nclex/ChapterSet.tsx): it stays a little raised,
+   and springs up with a small bounce the moment it is picked. */
+.tile-selected {
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes tilePop {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.22);
+  }
+  60% {
+    transform: scale(0.97);
+  }
+  80% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .tile-selected {
+    animation: tilePop 0.45s ease-out;
+  }
+}
+
 /* Interaction map (see Medications/CompareMap.tsx): lines draw themselves in,
    one after another, so the web builds up instead of appearing at once. */
 @media (prefers-reduced-motion: no-preference) {

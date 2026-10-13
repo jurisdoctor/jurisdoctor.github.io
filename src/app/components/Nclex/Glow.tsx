@@ -14,15 +14,35 @@ import { flameStops } from "./FlamePalette";
 // "inconsistent".
 //
 // `hue` picks the chapter's flame color (see FlamePalette); without one it's
-// the original red-to-yellow ember.
-const Glow = ({ label, hue }: { label: string; hue?: number }) => {
+// the original red-to-yellow ember. `edge` is the width of the tile's own
+// border, if it has one: the ring is drawn along the middle of that border, so
+// the glow sits on it, not floating inside it.
+const Glow = ({
+  label,
+  hue,
+  edge = 0,
+}: {
+  label: string;
+  hue?: number;
+  edge?: number;
+}) => {
+  // Where the ring runs, in from the tile's outer edge, and its corner radius
+  // (the tiles are rounded to 6px).
+  const inset = edge ? edge / 2 : 1;
+  const radius = 6 - inset;
   const uid = useId();
   const filterId = `${uid}-blur`;
   const gradientId = `${uid}-flame`;
   return (
     <svg
       aria-label={label}
-      className="pointer-events-none absolute -inset-1 h-[calc(100%+8px)] w-[calc(100%+8px)] overflow-visible"
+      className="pointer-events-none absolute overflow-visible"
+      style={{
+        left: -edge,
+        top: -edge,
+        width: `calc(100% + ${edge * 2}px)`,
+        height: `calc(100% + ${edge * 2}px)`,
+      }}
     >
       <defs>
         <filter id={filterId} x="-50%" y="-50%" width="200%" height="200%">
@@ -54,11 +74,11 @@ const Glow = ({ label, hue }: { label: string; hue?: number }) => {
         </linearGradient>
       </defs>
       <rect
-        x="5"
-        y="5"
-        width="calc(100% - 10px)"
-        height="calc(100% - 10px)"
-        rx="9"
+        x={inset}
+        y={inset}
+        width={`calc(100% - ${inset * 2}px)`}
+        height={`calc(100% - ${inset * 2}px)`}
+        rx={radius}
         fill="none"
         stroke={`url(#${gradientId})`}
         strokeWidth="4"
@@ -69,11 +89,11 @@ const Glow = ({ label, hue }: { label: string; hue?: number }) => {
         opacity={0.9}
       />
       <rect
-        x="5"
-        y="5"
-        width="calc(100% - 10px)"
-        height="calc(100% - 10px)"
-        rx="9"
+        x={inset}
+        y={inset}
+        width={`calc(100% - ${inset * 2}px)`}
+        height={`calc(100% - ${inset * 2}px)`}
+        rx={radius}
         fill="none"
         stroke={`url(#${gradientId})`}
         strokeWidth="1.5"

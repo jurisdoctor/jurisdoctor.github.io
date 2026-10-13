@@ -1,40 +1,32 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-// Text that types itself. When the text it is given changes, the old text is
-// wiped letter by letter and the new text is typed in; with `typeOnMount` the
-// first text is typed in as well, which is what page headings use. This is the
-// one text transition used across the site.
+// Text that fades itself. When the text it is given changes, the old text blurs
+// and fades out while the new text blurs and fades in over it; with
+// `typeOnMount` the first text fades in as well, which is what page headings
+// use. This is the one text transition used across the site (the name is left
+// over from when it typed each letter).
 //
 // The words are also laid out unseen in the same space (the longest of this
 // text and everything in `reserve`), so the box keeps its size and nothing
-// around it shifts while letters come and go. Screen readers get the finished
-// text, not the letters; with reduced motion on, text just changes.
+// around it shifts while the text changes. Screen readers get the finished
+// text, not the fading layers; with reduced motion on, text just changes.
 
 export interface Segment {
   text: string;
   className?: string;
 }
 
-const ERASE_MS = 9; // per letter, taking the old text away
-const TYPE_MS = 26; // per letter, putting the new text in
+const FADE_MS = 500;
 
 const flat = (segments: Segment[]) =>
   segments.map((segment) => segment.text).join("");
 
-// The first `count` letters of the segments, each part keeping its own style.
-const upTo = (segments: Segment[], count: number) => {
-  let left = count;
-  return segments.map((segment, index) => {
-    const part = segment.text.slice(0, Math.max(0, left));
-    left -= segment.text.length;
-    return part ? (
-      <span key={index} className={segment.className}>
-        {part}
-      </span>
-    ) : null;
-  });
-};
+interface Layer {
+  id: number;
+  segments: Segment[];
+  shown: boolean;
+}
 
 const TypedText = ({
   text,
@@ -59,56 +51,63 @@ const TypedText = ({
     typeof window !== "undefined" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // What is on screen: some segments, and how many of their letters.
-  const [view, setView] = useState<Segment[]>(typeOnMount ? [] : target);
-  const [count, setCount] = useState(typeOnMount ? 0 : full.length);
-  const [typing, setTyping] = useState(false);
-  const shownFull = useRef(typeOnMount ? "" : full);
-  const countRef = useRef(count);
-  const viewRef = useRef(view);
+  // Every piece of text on screen: the newest one and any still fading out.
+  const [layers, setLayers] = useState<Layer[]>([
+    { id: 0, segments: target, shown: !typeOnMount },
+  ]);
+  const latest = useRef(full);
+  const lastId = useRef(0);
   const targetRef = useRef(target);
   targetRef.current = target;
+  const timers = useRef<number[]>([]);
+  const later = (run: () => void, ms: number) => {
+    timers.current.push(window.setTimeout(run, ms));
+  };
 
   useEffect(() => {
-    if (shownFull.current === full) return;
+    const pending = timers.current;
+    if (typeOnMount && !calm()) {
+      later(
+        () => setLayers((all) => all.map((one) => ({ ...one, shown: true }))),
+        30,
+      );
+    } else if (typeOnMount) {
+      setLayers((all) => all.map((one) => ({ ...one, shown: true })));
+    }
+    return () => pending.forEach((timer) => window.clearTimeout(timer));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (latest.current === full) return;
+    latest.current = full;
     if (calm()) {
-      shownFull.current = full;
-      viewRef.current = targetRef.current;
-      countRef.current = full.length;
-      setView(targetRef.current);
-      setCount(full.length);
+      lastId.current += 1;
+      setLayers([
+        { id: lastId.current, segments: targetRef.current, shown: true },
+      ]);
       return;
     }
-
-    let timer = 0;
-    const put = (next: number) => {
-      countRef.current = next;
-      setCount(next);
-    };
-    setTyping(true);
-    const type = () => {
-      if (countRef.current < full.length) {
-        put(countRef.current + 1);
-        timer = window.setTimeout(type, TYPE_MS);
-      } else {
-        // Only now is this text really on screen; an effect that is cleaned up
-        // half-way (React's development double run) starts over cleanly.
-        shownFull.current = full;
-        setTyping(false);
-      }
-    };
-    const erase = () => {
-      if (countRef.current > 0) {
-        put(countRef.current - 1);
-        timer = window.setTimeout(erase, ERASE_MS);
-      } else {
-        viewRef.current = targetRef.current;
-        setView(targetRef.current);
-        type();
-      }
-    };
-    erase();
-    return () => window.clearTimeout(timer);
+    // The old text starts leaving, the new text is added hidden and then shown
+    // a moment later (so it has something to fade in from), and old layers are
+    // dropped once they are gone.
+    lastId.current += 1;
+    const id = lastId.current;
+    setLayers((all) => [
+      ...all.map((one) => ({ ...one, shown: false })),
+      { id, segments: targetRef.current, shown: false },
+    ]);
+    later(
+      () =>
+        setLayers((all) =>
+          all.map((one) => (one.id === id ? { ...one, shown: true } : one)),
+        ),
+      30,
+    );
+    later(
+      () => setLayers((all) => all.filter((one) => one.shown)),
+      FADE_MS + 300,
+    );
   }, [full]);
 
   const wrap = nowrap ? "whitespace-nowrap" : "";
@@ -130,14 +129,23 @@ const TypedText = ({
         </span>
       ))}
       <span className="sr-only">{full}</span>
-      <span aria-hidden className={`col-start-1 row-start-1 ${wrap}`}>
-        {upTo(view, count)}
+      {layers.map((layer) => (
         <span
-          className={`ml-px inline-block h-[1em] w-[2px] translate-y-[0.12em] bg-current ${
-            typing ? "opacity-100" : "opacity-0"
+          key={layer.id}
+          aria-hidden
+          className={`col-start-1 row-start-1 duration-500 ease-out motion-reduce:transition-none ${wrap} ${
+            layer.shown
+              ? "opacity-100 blur-0 delay-200"
+              : "opacity-0 blur-[4px]"
           }`}
-        />
-      </span>
+        >
+          {layer.segments.map((segment, at) => (
+            <span key={at} className={segment.className}>
+              {segment.text}
+            </span>
+          ))}
+        </span>
+      ))}
     </span>
   );
 };

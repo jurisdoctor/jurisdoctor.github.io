@@ -4,28 +4,31 @@
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
     "set": "Exam 3",
-    "notes": "Exam 3 practice questions for Iggy chapters 16, 19 and 31. Ten per chapter: eight regular and two difficult. Built from the lecture PowerPoints, with the readings as support.",
-    "questionCount": 30,
-    "chapterQuestionCount": 30,
-    "skillCount": 0,
+    "notes": "Exam 3 practice questions for Iggy chapters 16, 19 and 31, ten per chapter, plus ten each for the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true were added in the latest update (5 each for chapters 16, 19, 31 and the Cardiac Assessment skill).",
+    "questionCount": 70,
+    "chapterQuestionCount": 45,
+    "skillCount": 2,
     "chaptersIncluded": [
       1016,
       1019,
       1031
     ],
-    "skillsIncluded": [],
+    "skillsIncluded": [
+      1,
+      2
+    ],
     "sections": [
       "chapters",
       "skills"
     ],
     "questionTypes": {
-      "multiple_choice": 20,
-      "highlight": 3,
-      "cloze": 1,
-      "matrix": 2,
-      "sata": 1,
-      "bowtie": 2,
-      "ordered_response": 1
+      "multiple_choice": 37,
+      "highlight": 6,
+      "cloze": 4,
+      "matrix": 8,
+      "sata": 6,
+      "ordered_response": 6,
+      "bowtie": 3
     },
     "itemTypes": [
       "bowtie",
@@ -121,8 +124,11 @@
           1019,
           1031
         ],
-        "skills": [],
-        "questionCount": 30
+        "skills": [
+          1,
+          2
+        ],
+        "questionCount": 70
       }
     ],
     "chapterGroups": [
@@ -151,28 +157,82 @@
       "questionIds": [],
       "caseStudyIds": []
     },
-    "difficultCount": 6,
+    "difficultCount": 14,
     "difficultIds": [
       "ig16-x01",
       "ig16-x02",
+      "ig16-x03",
       "ig19-x02",
       "ig19-x01",
+      "ig19-x03",
       "ig31-x01",
-      "ig31-x02"
+      "ig31-x02",
+      "ig31-x03",
+      "sk-cardiac-x01",
+      "sk-cardiac-x02",
+      "sk-cardiac-x03",
+      "sk-infusion-x01",
+      "sk-infusion-x02"
     ],
-    "nclexCount": 10,
+    "nclexCount": 33,
     "nclexIds": [
       "ig16-m02",
       "ig16-m05",
       "ig16-m07",
+      "ig16-m09",
+      "ig16-m10",
+      "ig16-m11",
       "ig19-m02",
       "ig19-m03",
       "ig19-m06",
       "ig19-m08",
+      "ig19-m09",
+      "ig19-m10",
+      "ig19-m11",
+      "ig19-m12",
       "ig31-m03",
       "ig31-m04",
-      "ig31-m05"
-    ]
+      "ig31-m05",
+      "ig31-m09",
+      "ig31-m11",
+      "ig31-m10",
+      "ig31-m12",
+      "sk-cardiac-m02",
+      "sk-cardiac-m04",
+      "sk-cardiac-m06",
+      "sk-cardiac-m10",
+      "sk-cardiac-m11",
+      "sk-cardiac-m12",
+      "sk-cardiac-m09",
+      "sk-infusion-m02",
+      "sk-infusion-m04",
+      "sk-infusion-m05",
+      "sk-infusion-m08",
+      "sk-infusion-m06"
+    ],
+    "newIds": [
+      "ig16-m09",
+      "ig16-m10",
+      "ig16-m11",
+      "ig16-m12",
+      "ig16-x03",
+      "ig19-m09",
+      "ig19-m10",
+      "ig19-m11",
+      "ig19-m12",
+      "ig19-x03",
+      "ig31-m09",
+      "ig31-m11",
+      "ig31-m10",
+      "ig31-m12",
+      "ig31-x03",
+      "sk-cardiac-m10",
+      "sk-cardiac-m11",
+      "sk-cardiac-x03",
+      "sk-cardiac-m12",
+      "sk-cardiac-m09"
+    ],
+    "newCount": 20
   },
   "chapters": [
     {
@@ -909,6 +969,396 @@
           "caseGroup": "ig16-case3",
           "caseStep": 2,
           "objective": "Identify the five cardinal signs of inflammation"
+        },
+        {
+          "id": "ig16-m09",
+          "type": "sata",
+          "stem": "A client fell onto an outstretched right hand 4 hours ago. Imaging shows no fracture. The client has deeply pigmented skin. The nurse assesses both wrists and compares the right with the left. Which findings does the nurse document as cardinal signs of inflammation? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Skin over the right wrist is warmer to the touch than the left wrist",
+              "correct": true,
+              "rationale": "Local warmth at the injured site, compared with the other wrist, is a cardinal sign of inflammation."
+            },
+            {
+              "id": "B",
+              "text": "Skin over the right wrist is darker than skin over the left wrist",
+              "correct": true,
+              "rationale": "In deeply pigmented skin, the redness of inflammation can appear as a darker color. A color change at the site is the cardinal sign of redness."
+            },
+            {
+              "id": "C",
+              "text": "Right wrist circumference is 2 cm larger than the left wrist",
+              "correct": true,
+              "rationale": "A larger circumference on the injured side is measured swelling, a cardinal sign."
+            },
+            {
+              "id": "D",
+              "text": "Client is unable to turn a doorknob with the right hand",
+              "correct": true,
+              "rationale": "Decreased function is the fifth cardinal sign and the one most often left out. Losing a task the hand can normally do counts."
+            },
+            {
+              "id": "E",
+              "text": "Oral temperature is 37.0 °C (reference 36.1 to 37.2 °C)",
+              "correct": false,
+              "rationale": "Warmth as a cardinal sign is local, felt at the site. A core temperature within the reference range is not one of the five signs."
+            },
+            {
+              "id": "F",
+              "text": "Capillary refill in the right fingers is 2 seconds (reference under 3 seconds)",
+              "correct": false,
+              "rationale": "This checks circulation beyond the injury and is within the reference range. It is not one of the five cardinal signs."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "takeaway": "The five cardinal signs are warmth, redness, swelling, pain, and decreased function, all found at the site. In deeply pigmented skin, redness can show as a darker color, and lost function counts as fully as swelling.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Recite the five signs and match each option to one of them. Warmth means warmth at the site, not core temperature, and a color change is the redness sign even when it does not look red.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "List the five signs",
+                "detail": "Warmth, redness, swelling, pain, decreased function."
+              },
+              {
+                "action": "Match each option",
+                "detail": "Warmer right wrist, darker right wrist, larger right wrist, lost doorknob task."
+              },
+              {
+                "action": "Reject the systemic and circulation checks",
+                "detail": "Oral temperature and capillary refill are not among the five, and both are within reference ranges."
+              }
+            ],
+            "verdict": "A, B, C, D."
+          },
+          "caseGroup": "ig16-case5",
+          "caseStep": 1,
+          "objective": "Identify the five cardinal signs of inflammation",
+          "new": true
+        },
+        {
+          "id": "ig16-m10",
+          "type": "ordered_response",
+          "stem": "A client touched a hot pan with the left palm 1 hour ago. The palm is warm, red, and swollen, and the skin is intact. The client asks what the body is doing to heal the burn. Place the events of the inflammatory response in the order in which they occur.",
+          "options": [
+            {
+              "id": "A",
+              "text": "White blood cells move through the blood vessel walls into the burned area",
+              "rationale": "This begins the cellular response, the second stage. Cells arrive after the vascular response has opened the way.",
+              "position": 4
+            },
+            {
+              "id": "B",
+              "text": "Blood vessels in the left palm dilate and blood flow to the area increases",
+              "rationale": "Vessel dilation starts the vascular response, the first stage. Histamine released at the site causes this dilation, which produces the warmth and redness.",
+              "position": 2
+            },
+            {
+              "id": "C",
+              "text": "The area heals by new cells, scar, or both and returns toward normal function",
+              "rationale": "Tissue repair is the third stage. Damaged tissue heals by regeneration, scar formation, or both.",
+              "position": 6
+            },
+            {
+              "id": "D",
+              "text": "Fluid moves out of the vessels into the tissue and the palm swells",
+              "rationale": "Still in the vascular response: fluid leaves the dilated vessels, causing swelling and helping deliver immune cells.",
+              "position": 3
+            },
+            {
+              "id": "E",
+              "text": "Neutrophils and macrophages engulf dead cells and harmful material",
+              "rationale": "Once in the area, white blood cells remove harmful material and dead cells by phagocytosis, completing the cellular response.",
+              "position": 5
+            },
+            {
+              "id": "F",
+              "text": "Mast cells and basophils in the left palm release histamine",
+              "rationale": "Mast cells and basophils release histamine and other substances that promote inflammation. Histamine release comes first because it is what dilates the vessels in the vascular response.",
+              "position": 1
+            }
+          ],
+          "answer": [
+            "F",
+            "B",
+            "D",
+            "A",
+            "E",
+            "C"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Inflammation runs in three stages: vascular (histamine release, dilation, then fluid shift and swelling), cellular (white cells migrate in, then engulf), and tissue repair (regeneration, scar, or both).",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Sort the six events into the three stages first, then order the two events inside each stage. Within a stage, something has to arrive before it can act.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Group by stage",
+                "detail": "Histamine release, dilation, and fluid shift are vascular. Migration and engulfing are cellular. Healing is repair."
+              },
+              {
+                "action": "Start with the trigger",
+                "detail": "Histamine release comes first; it is what dilates the vessels."
+              },
+              {
+                "action": "Order within the vascular stage",
+                "detail": "Vessels dilate before fluid can leave them."
+              },
+              {
+                "action": "Order within the cellular stage",
+                "detail": "White cells must move into the area before they can engulf anything."
+              },
+              {
+                "action": "Place repair last",
+                "detail": "The area returns toward normal function at the end."
+              }
+            ],
+            "verdict": "Histamine release, dilation, fluid shift and swelling, white cell migration, engulfing, tissue repair."
+          },
+          "caseGroup": "ig16-case5",
+          "caseStep": 2,
+          "objective": "Describe the three stages of the inflammatory response",
+          "new": true
+        },
+        {
+          "id": "ig16-m11",
+          "type": "matrix",
+          "scenario": "A nurse at a clinic reviews the immunity history of five clients.",
+          "stem": "For each client, indicate the type of immunity described.",
+          "columns": [
+            "Natural active",
+            "Artificial active",
+            "Natural passive",
+            "Artificial passive"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "A client has measles antibodies 10 years after recovering from measles",
+              "answer": "Natural active",
+              "rationale": "The body made its own response to a natural infection, which develops memory and provides long lasting protection."
+            },
+            {
+              "id": "r2",
+              "text": "A client received an antitoxin in the emergency department after a venomous snakebite",
+              "answer": "Artificial passive",
+              "rationale": "An antitoxin supplies protection made by another source. It is given as a product, so it is artificial passive."
+            },
+            {
+              "id": "r3",
+              "text": "A 3 month old infant receives antibodies in the parent's breast milk",
+              "answer": "Natural passive",
+              "rationale": "Antibodies came from another source, the parent, by a natural route. The protection is immediate but temporary."
+            },
+            {
+              "id": "r4",
+              "text": "A client received a vaccine containing a weakened virus",
+              "answer": "Artificial active",
+              "rationale": "A vaccine introduces a weakened pathogen so the body produces its own response without causing the disease."
+            },
+            {
+              "id": "r5",
+              "text": "A client received a vaccine containing an inactivated pathogen",
+              "answer": "Artificial active",
+              "rationale": "Inactivated sounds like nothing happens, but the body still makes its own response to the vaccine. Vaccines give active immunity."
+            }
+          ],
+          "answer": {
+            "r1": "Natural active",
+            "r2": "Artificial passive",
+            "r3": "Natural passive",
+            "r4": "Artificial active",
+            "r5": "Artificial active"
+          },
+          "scoring": "0/1",
+          "takeaway": "Ask two questions. Who made the response: the client (active) or another source (passive)? How did it arrive: an illness or a parent (natural) or a health care product (artificial)?",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Do not sort by how the product sounds. Ask who made the antibodies, then whether a health care product was involved.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Who made it",
+                "detail": "The client made it after a vaccine or an illness: active. Another source made it: passive."
+              },
+              {
+                "action": "How it arrived",
+                "detail": "Illness or breast milk: natural. Vaccine, antitoxin, or other product: artificial."
+              },
+              {
+                "action": "Catch the trap row",
+                "detail": "An inactivated pathogen in a vaccine still triggers the client's own response."
+              }
+            ],
+            "verdict": "Measles antibodies after recovery: natural active. Antitoxin: artificial passive. Breast milk: natural passive. Weakened and inactivated vaccines: artificial active."
+          },
+          "caseGroup": "ig16-case6",
+          "caseStep": 1,
+          "objective": "Distinguish active from passive immunity using examples",
+          "new": true
+        },
+        {
+          "id": "ig16-m12",
+          "type": "multiple_choice",
+          "stem": "A client had a splinter removed from the right index finger 3 days ago. Within hours of the injury the fingertip became warm and swollen. Yesterday the client received a vaccine against a disease the client has never had. The client asks, \"My finger reacted within hours. Why will the vaccine take longer to protect me?\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Your finger used an inborn, broad response. A vaccine response builds over time, targets one threat, and leaves memory.\"",
+              "correct": true,
+              "rationale": "Innate immunity is present at birth, rapid, and broad. Adaptive immunity develops through exposure to antigens, targets specific threats, and creates memory."
+            },
+            {
+              "id": "B",
+              "text": "\"Your finger reacted fast because it remembered your earlier splinters. The vaccine response is new to you, so it takes time.\"",
+              "correct": false,
+              "rationale": "The vaccine half is close, but memory belongs to adaptive immunity. The finger response needs no prior exposure."
+            },
+            {
+              "id": "C",
+              "text": "\"Your finger used a built in, broad response. The vaccine is slower because its antibodies come from another source.\"",
+              "correct": false,
+              "rationale": "The finger half is right. Antibodies from another source describe passive immunity, which acts immediately, not a vaccine."
+            },
+            {
+              "id": "D",
+              "text": "\"Your finger made a response aimed only at this one splinter. The vaccine response is slower because it is broad and general.\"",
+              "correct": false,
+              "rationale": "This reverses the two systems. The innate response is broad, and the adaptive response targets a specific antigen."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Innate immunity is present at birth, rapid, and broad, with no prior exposure needed. Adaptive immunity develops through exposure to antigens, targets one threat with B and T cells, and creates memory.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Each option has two halves. Check the finger half for innate features and the vaccine half for adaptive features. One option gets both halves right.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Name the systems",
+                "detail": "Finger: inflammation, part of innate immunity. Vaccine: adaptive immunity."
+              },
+              {
+                "action": "Test the finger half",
+                "detail": "Remembered and aimed at this splinter are adaptive features, so two options drop out."
+              },
+              {
+                "action": "Test the vaccine half",
+                "detail": "Antibodies from another source is passive immunity, so that option drops out."
+              }
+            ],
+            "verdict": "Innate is fast and broad. Adaptive develops over time, is specific, and leaves memory."
+          },
+          "caseGroup": "ig16-case6",
+          "caseStep": 2,
+          "objective": "Compare innate and adaptive immunity",
+          "new": true
+        },
+        {
+          "id": "ig16-x03",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A nurse at a clinic reviews four client histories while preparing for possible measles exposures over the coming year. Which client is most likely to have a fast, specific immune response if exposed to measles 1 year from now?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A client who received immune globulin containing measles antibodies yesterday",
+              "correct": false,
+              "rationale": "This client has measles specific protection now, but passive protection is temporary and creates no personal memory, so it will not last a year."
+            },
+            {
+              "id": "B",
+              "text": "A client whose skin becomes red and swollen within hours of every minor cut",
+              "correct": false,
+              "rationale": "A fast local reaction is inflammation, part of innate immunity. It is rapid but broad, not specific to measles, and creates no memory."
+            },
+            {
+              "id": "C",
+              "text": "A client who received a measles vaccine 1 year ago and has had no measles exposure since then",
+              "correct": true,
+              "rationale": "Vaccination gives artificial active immunity. The client produced the response and has memory for measles, which supports a faster, stronger response on future exposure."
+            },
+            {
+              "id": "D",
+              "text": "A 2 month old infant who received measles antibodies across the placenta from a parent who had measles as a child",
+              "correct": false,
+              "rationale": "Antibodies across the placenta give natural passive immunity: immediate but temporary, and the infant forms no memory of its own."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Passive immunity protects at once but fades and leaves no memory. Inflammation is fast but broad. Only active immunity creates the memory that gives a fast, specific response on a later exposure.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options give measles specific protection. The deciding cue is 1 year from now: immune globulin protects at once but is temporary and leaves no memory, so only the vaccinated client will make a fast, specific response then.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Reject the fast but broad response",
+                "detail": "Inflammation is innate and not specific."
+              },
+              {
+                "action": "Reject the passive options",
+                "detail": "Antibodies from another source fade and leave no memory."
+              },
+              {
+                "action": "Choose memory",
+                "detail": "The vaccinated client made their own response and has memory cells."
+              }
+            ],
+            "verdict": "The client vaccinated against measles 1 year ago."
+          },
+          "caseGroup": "ig16-case6",
+          "caseStep": 3,
+          "objective": "Distinguish active from passive immunity using examples",
+          "new": true
         }
       ]
     },
@@ -1706,6 +2156,449 @@
           "caseGroup": "ig19-case3",
           "caseStep": 2,
           "objective": "Differentiate inflammation from infection"
+        },
+        {
+          "id": "ig19-m09",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A client twisted the right knee stepping off a curb 1 day ago. The skin over the knee is intact. The knee is warm, red, and swollen, and the client rates the pain 5 of 10. Oral temperature is 36.8 °C (reference range 36.1 to 37.2 °C).\n\nThe findings at the right knee are best explained by [[1]].\n\nThe swelling at the knee develops because [[2]].\n\nOn reassessment, the nurse would treat [[3]] as a finding that requires follow up.",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "inflammation without infection, a protective response to the injury",
+                  "correct": true,
+                  "rationale": "Inflammation can occur after an injury without infection. A twisted knee with intact skin fits this."
+                },
+                {
+                  "id": "B",
+                  "text": "infection, because warmth, redness, and swelling are all present",
+                  "correct": false,
+                  "rationale": "Redness and swelling alone do not establish infection. Inflammation can occur without infection."
+                },
+                {
+                  "id": "C",
+                  "text": "inflammation caused by microorganisms that entered at the time of injury",
+                  "correct": false,
+                  "rationale": "Inflammation is the right idea, but the skin is intact and nothing in the stem shows invasion by microorganisms."
+                },
+                {
+                  "id": "D",
+                  "text": "an adaptive immune response directed at a specific antigen",
+                  "correct": false,
+                  "rationale": "Inflammation is part of innate immunity. It is a rapid, broad response that needs no prior exposure."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "fluid moves from the blood vessels into the tissue around the injury",
+                  "correct": true,
+                  "rationale": "In the vascular response, vessels dilate, blood flow increases, and fluid moves from the vessels into the tissue, causing swelling."
+                },
+                {
+                  "id": "B",
+                  "text": "microorganisms multiply in the tissue around the injury",
+                  "correct": false,
+                  "rationale": "This describes infection. Swelling after an injury comes from fluid leaving the vessels."
+                },
+                {
+                  "id": "C",
+                  "text": "blood vessels at the site narrow and hold fluid in the tissue",
+                  "correct": false,
+                  "rationale": "The vessels dilate in the vascular response. Narrowing does not explain swelling."
+                },
+                {
+                  "id": "D",
+                  "text": "scar tissue forms and replaces the damaged tissue",
+                  "correct": false,
+                  "rationale": "Scar formation belongs to tissue repair, the last stage. It does not cause the early swelling."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "redness that has spread beyond the edge marked yesterday",
+                  "correct": true,
+                  "rationale": "Findings are compared with baseline, and worsening is reported. Redness spreading beyond the marked edge is a change from baseline."
+                },
+                {
+                  "id": "B",
+                  "text": "warmth and swelling that are still present 1 day later",
+                  "correct": false,
+                  "rationale": "Warmth and swelling are cardinal signs of inflammation. Still being present 1 day after the injury is expected, not worsening."
+                },
+                {
+                  "id": "C",
+                  "text": "pain that is now 4 of 10",
+                  "correct": false,
+                  "rationale": "Pain was 5 of 10 at baseline. A lower rating is not a worsening finding."
+                },
+                {
+                  "id": "D",
+                  "text": "an oral temperature of 37.0 °C, up from 36.8 °C yesterday",
+                  "correct": false,
+                  "rationale": "Both readings are inside the stated reference range of 36.1 to 37.2 °C. A change inside the range is not worsening."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "A",
+            "3": "A"
+          },
+          "scoring": "0/1",
+          "takeaway": "Inflammation is a protective response that can follow an injury without infection. Swelling comes from fluid leaving dilated vessels, and only a change from baseline that shows worsening is followed up.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Every blank has an option that sounds clinical but adds something the stem does not say. Check each against the stem: intact skin, a clear injury, and a temperature inside the stated range.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the trigger",
+                "detail": "A twisted knee with intact skin points to inflammation without infection."
+              },
+              {
+                "action": "Explain the swelling",
+                "detail": "Fluid moves from dilated vessels into the tissue."
+              },
+              {
+                "action": "Judge the reassessment",
+                "detail": "Only the finding that has worsened from baseline needs follow up."
+              },
+              {
+                "action": "Rule out the expected",
+                "detail": "Warmth and swelling at day 1 are expected; a temperature change inside the reference range is not worsening."
+              }
+            ],
+            "verdict": "Inflammation without infection; fluid moves from the vessels into the tissue; redness that has spread beyond the marked edge."
+          },
+          "caseGroup": "ig19-case5",
+          "caseStep": 1,
+          "objective": "Differentiate inflammation from infection",
+          "new": true
+        },
+        {
+          "id": "ig19-m10",
+          "type": "matrix",
+          "scenario": "A nurse educator reviews findings from five clients with a new nurse. None of the clients has a temperature outside the reference range of 36.1 to 37.2 °C.",
+          "stem": "For each finding, indicate whether it is consistent with inflammation without infection or suggests infection.",
+          "columns": [
+            "Inflammation without infection",
+            "Suggests infection"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "A warm, swollen bruise on the left thigh 2 days after a fall, skin intact",
+              "answer": "Inflammation without infection",
+              "rationale": "Inflammation can follow an injury without infection, and the skin is intact."
+            },
+            {
+              "id": "r2",
+              "text": "Red, itchy skin on both hands after cleaning with a new chemical product without gloves, skin intact",
+              "answer": "Inflammation without infection",
+              "rationale": "Inflammation can follow exposure to an irritant. Redness alone does not establish infection."
+            },
+            {
+              "id": "r3",
+              "text": "A cut on the right index finger that is red, swollen, and now drains thick yellow fluid",
+              "answer": "Suggests infection",
+              "rationale": "Thick yellow drainage is pus. Pus at a site is a sign of local infection, not a finding of inflammation alone."
+            },
+            {
+              "id": "r4",
+              "text": "A blister on the right heel from new shoes, filled with clear fluid, covering skin unbroken",
+              "answer": "Inflammation without infection",
+              "rationale": "Blister formation is an example of inflammation without infection."
+            },
+            {
+              "id": "r5",
+              "text": "Redness around a sacral wound that has spread from 1 cm to 5 cm since yesterday, with pain rising from 3 to 6 of 10",
+              "answer": "Suggests infection",
+              "rationale": "Extended redness around a wound and rising pain are worsening findings that suggest infection, even with a temperature inside the reference range."
+            }
+          ],
+          "answer": {
+            "r1": "Inflammation without infection",
+            "r2": "Inflammation without infection",
+            "r3": "Suggests infection",
+            "r4": "Inflammation without infection",
+            "r5": "Suggests infection"
+          },
+          "scoring": "0/1",
+          "takeaway": "Inflammation can follow injury, an irritant, or infection. Redness and swelling alone do not establish infection, while pus or redness that spreads around a wound suggests it.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "A normal temperature is the trap: it is true for every client and settles nothing. Decide each row by what is present at the site and whether it has changed.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the trigger",
+                "detail": "A fall, a chemical, and new shoes are triggers that cause inflammation without infection."
+              },
+              {
+                "action": "Look for more than redness and swelling",
+                "detail": "Pus and spreading redness point toward infection."
+              },
+              {
+                "action": "Ignore the shared finding",
+                "detail": "The temperature is in range for all five clients, so it separates none of them."
+              }
+            ],
+            "verdict": "Rows 1, 2, and 4 are inflammation without infection. Rows 3 and 5 suggest infection."
+          },
+          "caseGroup": "ig19-case5",
+          "caseStep": 2,
+          "objective": "Differentiate inflammation from infection",
+          "new": true
+        },
+        {
+          "id": "ig19-m11",
+          "type": "ordered_response",
+          "stem": "A client admitted 2 days ago takes an immunosuppressant. The admission note records intact skin on the right forearm with no redness or swelling. Today the client reports a new painful, swollen area on the right forearm. Place the nurse's actions in the order they are performed.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Compare the findings with the right forearm findings recorded on admission",
+              "rationale": "Comparing with baseline follows the physical assessment, because the nurse needs today's findings to compare.",
+              "position": 3
+            },
+            {
+              "id": "B",
+              "text": "Ask when the area appeared and whether the right forearm was injured",
+              "rationale": "Assessment begins with symptom onset, recent injury, and illness history.",
+              "position": 1
+            },
+            {
+              "id": "C",
+              "text": "Document the change and report the new findings as a worsening from baseline",
+              "rationale": "Changes over time are documented and worsening is reported once the comparison shows it.",
+              "position": 4
+            },
+            {
+              "id": "D",
+              "text": "Assess warmth, color, swelling, pain, and use of the right hand and forearm",
+              "rationale": "The physical findings are gathered after the history so the nurse knows what to look for.",
+              "position": 2
+            }
+          ],
+          "answer": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Ask about onset and injury; assess warmth, color, swelling, pain, and function; compare with baseline; document and report worsening.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The report is tempting to move up because the client takes an immunosuppressant. A report needs findings and a comparison, so gather them first.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Start with the history",
+                "detail": "Ask about onset and injury."
+              },
+              {
+                "action": "Assess the site",
+                "detail": "Warmth, color, swelling, pain, and function of the right forearm."
+              },
+              {
+                "action": "Compare, then act",
+                "detail": "Compare with the admission note, then document and report."
+              }
+            ],
+            "verdict": "B, D, A, C."
+          },
+          "caseGroup": "ig19-case6",
+          "caseStep": 1,
+          "objective": "Connect immune responses with nursing assessment",
+          "new": true
+        },
+        {
+          "id": "ig19-m12",
+          "type": "sata",
+          "stem": "A nurse is planning closer assessment for clients on a medical unit whose immune protection may be reduced. Which clients does the nurse identify? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A 6 week old infant admitted with a feeding problem",
+              "correct": true,
+              "rationale": "Infants have immature immune systems."
+            },
+            {
+              "id": "B",
+              "text": "An 86 year old admitted after a fall who lives alone",
+              "correct": true,
+              "rationale": "Older adults face immunosenescence, which affects their ability to fight infections."
+            },
+            {
+              "id": "C",
+              "text": "A 34 year old with a sprained left ankle that is warm, red, and swollen",
+              "correct": false,
+              "rationale": "These are cardinal signs of inflammation after an injury. Inflammation is a protective response, not a factor that reduces immune protection."
+            },
+            {
+              "id": "D",
+              "text": "A 41 year old who takes a daily antirejection drug after a kidney transplant",
+              "correct": true,
+              "rationale": "An antirejection drug suppresses the immune system, and immunosuppressants can affect immune function."
+            },
+            {
+              "id": "E",
+              "text": "A 29 year old who received a measles vaccination 1 month ago",
+              "correct": false,
+              "rationale": "Vaccination produces artificial active immunity. It builds protection rather than reducing it."
+            },
+            {
+              "id": "F",
+              "text": "A 52 year old who has eaten less than half of each meal for 1 month",
+              "correct": true,
+              "rationale": "Malnutrition impairs immune cell function."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D",
+            "F"
+          ],
+          "takeaway": "Age and developmental stage, nutritional status, disease and overall health, medications, and environmental exposures affect immunity. Signs of inflammation and a recent vaccination do not reduce protection.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two distractors describe the immune system working: a swollen ankle and a recent vaccination. Ask whether each option lowers protection or shows it in action.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check age at both ends",
+                "detail": "An infant and an 86 year old both qualify."
+              },
+              {
+                "action": "Check medications and nutrition",
+                "detail": "An antirejection drug and poor intake both lower protection."
+              },
+              {
+                "action": "Name the drug's effect",
+                "detail": "An antirejection drug suppresses the immune system."
+              },
+              {
+                "action": "Reject the immune system at work",
+                "detail": "Inflammation and vaccination are protective responses."
+              }
+            ],
+            "verdict": "A, B, D, F."
+          },
+          "caseGroup": "ig19-case6",
+          "caseStep": 2,
+          "objective": "Connect immune responses with nursing assessment",
+          "new": true
+        },
+        {
+          "id": "ig19-x03",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A nurse receives report on four clients. The oral temperature reference range is 36.1 to 37.2 °C. Which client does the nurse assess first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A 34 year old with a sprained left ankle; redness is 8 cm across and pain is 6 of 10, both the same as yesterday",
+              "correct": false,
+              "rationale": "The redness is large, but it and the pain match yesterday. Unchanged cardinal signs after an injury fit inflammation without infection."
+            },
+            {
+              "id": "B",
+              "text": "A 58 year old with a right shin wound; redness grew from 2 to 3 cm and pain from 3 to 5 of 10 since yesterday",
+              "correct": true,
+              "rationale": "Redness and pain have both worsened since yesterday. A temperature is not needed before acting on a change at the site."
+            },
+            {
+              "id": "C",
+              "text": "A 78 year old with a right hand wound and dementia; oral temperature 37.4 °C and confusion, both unchanged since admission yesterday",
+              "correct": false,
+              "rationale": "The reading is above the reference range and the client is confused, which pulls hard. The deciding cue is that both findings are unchanged since admission."
+            },
+            {
+              "id": "D",
+              "text": "A 45 year old with a rash on both forearms after using a cleaning product; the rash is smaller than yesterday",
+              "correct": false,
+              "rationale": "Inflammation can follow an irritant, and a rash that is smaller than at baseline is not a worsening finding."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Priority goes to the client who has changed from baseline. A finding outside a range that has not changed is less urgent than a worsening one, and the nurse does not wait for fever.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options pull hard: the only temperature above the range belongs to an older, confused client, while the other client has a modest change. The deciding cue is \"unchanged since admission yesterday\" against \"since yesterday\": unchanged findings wait, worsening findings come first.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Compare each client with baseline",
+                "detail": "Ankle unchanged, temperature and confusion unchanged, rash smaller, shin wound worse."
+              },
+              {
+                "action": "Do not let one number decide",
+                "detail": "A temperature above range that has not changed is not new."
+              },
+              {
+                "action": "Choose the change",
+                "detail": "Assess the client whose findings have worsened."
+              }
+            ],
+            "verdict": "Assess the client whose shin wound redness and pain have worsened since yesterday."
+          },
+          "caseGroup": "ig19-case6",
+          "caseStep": 3,
+          "objective": "Connect immune responses with nursing assessment",
+          "new": true
         }
       ]
     },
@@ -2475,9 +3368,2493 @@
           "caseGroup": "ig31-case3",
           "caseStep": 2,
           "objective": "Explain the nurse's role in testing, treatment, and teaching"
+        },
+        {
+          "id": "ig31-m09",
+          "type": "matrix",
+          "scenario": "A client has cellulitis of the right leg with a draining wound, and the wound culture is positive for MRSA. A second client, in the next room, has a central venous catheter in the right chest and receives treatment that suppresses the immune system. The nurse cares for both clients today.",
+          "stem": "For each nursing action, indicate the link in the chain of infection that the action interrupts.",
+          "columns": [
+            "Agent and reservoir",
+            "Portal of exit",
+            "Method of transmission",
+            "Portal of entry",
+            "Susceptible host"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Giving the first client the prescribed antimicrobial for the MRSA cellulitis",
+              "answer": "Agent and reservoir",
+              "rationale": "Treating the infection acts on the organism where it lives, in the first client's wound."
+            },
+            {
+              "id": "r2",
+              "text": "Keeping the draining wound on the first client's right leg covered with an intact dressing",
+              "answer": "Portal of exit",
+              "rationale": "Organisms leave the reservoir through the wound. Containing the drainage closes that exit."
+            },
+            {
+              "id": "r3",
+              "text": "Performing hand hygiene after removing gloves in the first client's room",
+              "answer": "Method of transmission",
+              "rationale": "Hands carry organisms from one client to the next. Clean hands break that route, even though the second client is the one who will be touched next."
+            },
+            {
+              "id": "r4",
+              "text": "Using a blood pressure cuff kept only for the first client's room",
+              "answer": "Method of transmission",
+              "rationale": "Shared equipment carries organisms between clients. Dedicated equipment removes the vehicle."
+            },
+            {
+              "id": "r5",
+              "text": "Asking the provider whether the second client's central venous catheter is still needed",
+              "answer": "Portal of entry",
+              "rationale": "A central line bypasses the skin and gives organisms a direct path into the bloodstream. Removing an unneeded device closes that entry."
+            },
+            {
+              "id": "r6",
+              "text": "Offering the second client the recommended vaccines before discharge",
+              "answer": "Susceptible host",
+              "rationale": "Vaccination lowers the second client's risk for the infections the vaccines cover, which makes the host less susceptible."
+            }
+          ],
+          "answer": {
+            "r1": "Agent and reservoir",
+            "r2": "Portal of exit",
+            "r3": "Method of transmission",
+            "r4": "Method of transmission",
+            "r5": "Portal of entry",
+            "r6": "Susceptible host"
+          },
+          "scoring": "0/1",
+          "takeaway": "The chain runs agent and reservoir, portal of exit, method of transmission, portal of entry, susceptible host. Every infection control action works by breaking one link, and naming the link tells you why the action matters.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Follow the organism's path from the first client's wound to the second client. Ask where the organism is at the moment each action happens: still in the wound, leaving it, traveling, entering, or meeting a host.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Place the organism",
+                "detail": "It lives in the first client's wound: treating it acts on the agent and reservoir."
+              },
+              {
+                "action": "Find the exit",
+                "detail": "The draining wound; a covered dressing contains it."
+              },
+              {
+                "action": "Find the vehicles",
+                "detail": "Hands and the cuff both carry organisms between rooms."
+              },
+              {
+                "action": "Find the entry and the host",
+                "detail": "The central line is the entry. Vaccination changes the host."
+              }
+            ],
+            "verdict": "Agent and reservoir; portal of exit; transmission; transmission; portal of entry; susceptible host."
+          },
+          "caseGroup": "ig31-case5",
+          "caseStep": 1,
+          "objective": "Explain how infection spreads to a susceptible person",
+          "new": true
+        },
+        {
+          "id": "ig31-m11",
+          "type": "highlight",
+          "nursesNote": "0800, day 2 of admission for cellulitis of the right lower leg; wound culture positive for MRSA; receiving the prescribed antimicrobial. Redness now extends 3 cm beyond the skin marking drawn at admission. Right calf warm and swollen, unchanged since admission. Small amount of yellow drainage on the dressing, same as yesterday. Heart rate 108 beats per minute (reference 60 to 100), was 84 at admission. Respiratory rate 18 breaths per minute (reference 12 to 20), same as admission. Oral temperature 37.1 °C (reference 36.1 to 37.2 °C). Blood pressure 116/74 mm Hg (reference 90/60 to 120/80 mm Hg), same as admission. Asks the same question three times in 10 minutes; alert and oriented at admission.",
+          "stem": "Highlight the findings the nurse reports promptly.",
+          "segments": [
+            {
+              "id": "s1",
+              "text": "Redness now extends 3 cm beyond the skin marking drawn at admission",
+              "correct": true,
+              "rationale": "The infection is spreading past the border marked at admission while the client receives the antimicrobial. A worsening site is reported."
+            },
+            {
+              "id": "s2",
+              "text": "Right calf warm and swollen, unchanged since admission",
+              "correct": false,
+              "rationale": "Warmth and swelling are expected with cellulitis, and they match admission."
+            },
+            {
+              "id": "s3",
+              "text": "Small amount of yellow drainage on the dressing, same as yesterday",
+              "correct": false,
+              "rationale": "The drainage has not changed from yesterday."
+            },
+            {
+              "id": "s4",
+              "text": "Heart rate 108 beats per minute (reference 60 to 100), was 84 at admission",
+              "correct": true,
+              "rationale": "The heart rate is above the reference range and has risen from 84 at admission, a change in circulation in a client with an infection."
+            },
+            {
+              "id": "s5",
+              "text": "Respiratory rate 18 breaths per minute (reference 12 to 20), same as admission",
+              "correct": false,
+              "rationale": "The rate is within the reference range and matches admission."
+            },
+            {
+              "id": "s6",
+              "text": "Oral temperature 37.1 °C (reference 36.1 to 37.2 °C)",
+              "correct": false,
+              "rationale": "The reading is within the reference range. It is not a cue by itself, and it does not cancel the other changes, because the nurse does not rely on fever alone."
+            },
+            {
+              "id": "s7",
+              "text": "Blood pressure 116/74 mm Hg (reference 90/60 to 120/80 mm Hg), same as admission",
+              "correct": false,
+              "rationale": "The blood pressure is within the reference range and matches admission."
+            },
+            {
+              "id": "s8",
+              "text": "Asks the same question three times in 10 minutes; alert and oriented at admission",
+              "correct": true,
+              "rationale": "This is a new change in mental status compared with the admission baseline, a change that matters in a client with an infection."
+            }
+          ],
+          "answer": [
+            "s1",
+            "s4",
+            "s8"
+          ],
+          "format": "+/-",
+          "scoring": "+/-",
+          "takeaway": "Compare each finding with the client's baseline. A spreading site, a rising heart rate, and new confusion are reported even when the temperature is within range.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Sort every finding into changed or unchanged since admission. Expected findings of cellulitis that have not changed are not new cues, and a normal temperature does not cancel the findings that have changed.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Mark what changed",
+                "detail": "Redness past the marking, heart rate 84 to 108, new repeated questions."
+              },
+              {
+                "action": "Leave what matches baseline",
+                "detail": "Warmth and swelling, drainage, respiratory rate, blood pressure."
+              },
+              {
+                "action": "Do not lean on the temperature",
+                "detail": "37.1 °C neither adds a cue nor removes the others."
+              }
+            ],
+            "verdict": "s1, s4, s8."
+          },
+          "caseGroup": "ig31-case5",
+          "caseStep": 2,
+          "objective": "Assess for infection and recognize clinical deterioration",
+          "new": true
+        },
+        {
+          "id": "ig31-m10",
+          "type": "sata",
+          "stem": "A client with cellulitis of the right leg is being discharged with a dressing over a draining wound. The wound culture was positive for MRSA, and the client has a prescription for an oral antibiotic. The client lives with a partner and a 6 year old child. Which statements by the client indicate that the teaching has been effective? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"This germ spreads by touch, from the wound or from things the drainage has touched.\"",
+              "correct": true,
+              "rationale": "MRSA is spread by contact: touching the person, the wound, or contaminated items."
+            },
+            {
+              "id": "B",
+              "text": "\"Because this germ spreads by touch, my family only needs to clean their hands if they touch the wound itself.\"",
+              "correct": false,
+              "rationale": "Contact is the right route, but it is too narrow. Items the drainage has touched also spread MRSA, so hands are cleaned after touching those too."
+            },
+            {
+              "id": "C",
+              "text": "\"I will clean my hands after I touch the dressing, even if I wore gloves.\"",
+              "correct": true,
+              "rationale": "Hands are cleaned after gloves are removed, because gloves do not replace hand hygiene."
+            },
+            {
+              "id": "D",
+              "text": "\"When my hands look dirty after a dressing change, hand sanitizer is enough.\"",
+              "correct": false,
+              "rationale": "Cleaning the hands is right, but the method is wrong. Visibly soiled hands are washed with soap and water."
+            },
+            {
+              "id": "E",
+              "text": "\"I will take every dose of the antibiotic, even once my leg looks better.\"",
+              "correct": true,
+              "rationale": "The whole course is completed. Stopping early when the leg looks better leaves organisms behind."
+            },
+            {
+              "id": "F",
+              "text": "\"I will save any leftover pills in case my child catches a cold this winter.\"",
+              "correct": false,
+              "rationale": "Antibiotics do not treat viral infections such as a cold, unnecessary use adds to resistance, and leftover pills mean the course was not finished."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "E"
+          ],
+          "takeaway": "Teach MRSA as a contact organism: clean hands after touching the wound or dressing and after removing gloves, soap and water when hands are visibly soiled, finish the whole antibiotic course, and never use antibiotics for a viral illness.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two wrong statements have the right idea with one fact off: contact limited to the wound in one, the hand hygiene method in the other. Check the reach of contact, the method, and the antibiotic use in each statement.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check the reach of contact",
+                "detail": "Contact includes items the drainage touched, not only the wound."
+              },
+              {
+                "action": "Check the method",
+                "detail": "Visibly dirty hands need soap and water."
+              },
+              {
+                "action": "Check antibiotic use",
+                "detail": "Finish the course; a cold is viral."
+              }
+            ],
+            "verdict": "A, C, E."
+          },
+          "caseGroup": "ig31-case5",
+          "caseStep": 3,
+          "objective": "Explain the nurse's role in testing, treatment, and teaching",
+          "new": true
+        },
+        {
+          "id": "ig31-m12",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A client who is 84 years old has chronic kidney disease, receives immunosuppressive treatment, and has a central venous catheter in the right chest and an abdominal surgical incision from 3 months ago that is closed with no redness or drainage. The nurse identifies [[1]] as the factors that increase this client's risk for infection by lowering the body's defenses.\n\nThe nurse identifies [[2]] as the factor that bypasses the body's natural barriers.\n\nIf this client develops an infection, the nurse expects that [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "the client's age, the immunosuppressive treatment, and the central venous catheter",
+                  "correct": false,
+                  "rationale": "Age and the treatment lower immune status, but the catheter does not lower defenses. It bypasses the barriers, and chronic kidney disease is left out."
+                },
+                {
+                  "id": "B",
+                  "text": "the chronic kidney disease, the immunosuppressive treatment, and the abdominal incision",
+                  "correct": false,
+                  "rationale": "Chronic illness and the treatment lower immune status, but the incision is closed with no redness or drainage, so the skin barrier is intact, and age is left out."
+                },
+                {
+                  "id": "C",
+                  "text": "the client's age, the chronic kidney disease, and the immunosuppressive treatment",
+                  "correct": true,
+                  "rationale": "Age extremes, chronic illness, and immunosuppressive treatment all lower immune status."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "the abdominal incision",
+                  "correct": false,
+                  "rationale": "Broken skin gives direct access to pathogens, but this incision is closed with no redness or drainage."
+                },
+                {
+                  "id": "B",
+                  "text": "the central venous catheter",
+                  "correct": true,
+                  "rationale": "Invasive devices bypass natural barriers and give organisms a direct path into the bloodstream."
+                },
+                {
+                  "id": "C",
+                  "text": "the immunosuppressive treatment",
+                  "correct": false,
+                  "rationale": "The treatment raises risk by lowering immune status, not by bypassing a barrier."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "a fever will be the first sign, so the temperature is checked every 2 hours",
+                  "correct": false,
+                  "rationale": "Checking temperature is part of assessment, but fever is not relied on as the first or only sign."
+                },
+                {
+                  "id": "B",
+                  "text": "a fever may not appear, so changes in behavior and function from baseline matter",
+                  "correct": true,
+                  "rationale": "Immune status shapes the response. The nurse does not rely on fever alone and watches for changes from baseline."
+                },
+                {
+                  "id": "C",
+                  "text": "the white blood cell count will rise before other findings appear",
+                  "correct": false,
+                  "rationale": "A count is interpreted together with the assessment, and a client with low immune status may not mount the usual rise, so no single lab result is waited on."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "C",
+            "2": "B",
+            "3": "B"
+          },
+          "scoring": "0/1",
+          "takeaway": "Immune status drives infection risk: age extremes, chronic illness, and immunosuppressive treatment. Invasive devices and broken skin open a direct path in. In a client with low immune status, do not wait for a fever.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Sort the client's factors into two groups: those that weaken the defenses and those that open a path past them. A factor belongs in only one group. Then ask what weak defenses do to the signs you expect to see.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Defenses",
+                "detail": "Age 84, chronic kidney disease, and the treatment all lower immune status."
+              },
+              {
+                "action": "Barriers",
+                "detail": "The central line bypasses them. The incision is closed with no redness or drainage, so the skin is intact."
+              },
+              {
+                "action": "Expected findings",
+                "detail": "Fever may be absent, so compare with baseline. No single lab result replaces the assessment."
+              }
+            ],
+            "verdict": "Age, chronic kidney disease, and the treatment; the central venous catheter; fever may not appear."
+          },
+          "caseGroup": "ig31-case6",
+          "caseStep": 1,
+          "objective": "Identify patient factors that increase infection risk",
+          "new": true
+        },
+        {
+          "id": "ig31-x03",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A nurse reviews four clients at 1200. Reference ranges: oral temperature 36.1 to 37.2 °C, heart rate 60 to 100 beats per minute, respiratory rate 12 to 20 breaths per minute, urine output at least 30 mL per hour. Which client's findings fit sepsis rather than infection alone or an inflammatory response alone?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Acute pancreatitis, no source of infection found: oral temperature 38.4 °C, heart rate 112 beats per minute, respiratory rate 22 breaths per minute, alert, urine output 50 mL per hour",
+              "correct": false,
+              "rationale": "Temperature, heart rate, and respiratory rate are all outside the reference ranges, which is an inflammatory response. No infection has been found, and sepsis requires infection plus organ dysfunction."
+            },
+            {
+              "id": "B",
+              "text": "Urinary tract infection and dementia: oral temperature 38.1 °C, heart rate 96 beats per minute, respiratory rate 18 breaths per minute, confused as on admission, urine output 45 mL per hour",
+              "correct": false,
+              "rationale": "Infection with a fever is present, but the confusion matches the admission baseline, and the other findings are within range. No new organ dysfunction is shown."
+            },
+            {
+              "id": "C",
+              "text": "Cellulitis of the left leg, redness spread 2 cm since 0800: oral temperature 37.1 °C, heart rate 84 beats per minute, respiratory rate 16 breaths per minute, alert, urine output 50 mL per hour",
+              "correct": false,
+              "rationale": "The local infection is worsening, which raises the risk for sepsis, but every finding outside the leg is within range. No organ dysfunction is shown."
+            },
+            {
+              "id": "D",
+              "text": "Urinary tract infection: oral temperature 37.0 °C, heart rate 92 beats per minute, respiratory rate 20 breaths per minute, confused since 1000 after being alert, urine output 40 mL per hour",
+              "correct": true,
+              "rationale": "Infection plus a new change in mental status is evidence of organ dysfunction. Sepsis can be present without a fever or abnormal vital signs."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Sepsis is infection plus organ dysfunction, such as new confusion. An inflammatory response alone does not establish sepsis, and sepsis can occur without abnormal temperature, heart rate, or respiratory rate.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The client with the most abnormal numbers looks sickest, and the client with dementia also has an infection and confusion. The deciding cue is the word new: only one client's confusion began today after being alert.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Require infection",
+                "detail": "Pancreatitis with no infection found shows inflammation, not sepsis."
+              },
+              {
+                "action": "Look for organ dysfunction",
+                "detail": "Mental status, oxygenation, urine output."
+              },
+              {
+                "action": "Compare the two confused clients",
+                "detail": "One is confused as on admission. One became confused since 1000."
+              },
+              {
+                "action": "Do not stop at SIRS",
+                "detail": "Infection with a fever and fast heart rate meets SIRS but is not sepsis without new organ dysfunction."
+              },
+              {
+                "action": "Reject local worsening",
+                "detail": "Spreading redness alone with every other finding in range is not organ dysfunction."
+              }
+            ],
+            "verdict": "The client with a urinary tract infection and new confusion since 1000."
+          },
+          "caseGroup": "ig31-case6",
+          "caseStep": 2,
+          "objective": "Recognize early cues of sepsis and septic shock",
+          "new": true
         }
       ]
     }
   ],
-  "skills": []
+  "skills": [
+    {
+      "id": 1,
+      "title": "Cardiac Assessment",
+      "exam": "Exam 3",
+      "subtitle": "Pulse and apical pulse, cardiac monitoring, recording and reading a 12 lead ECG, heart sounds, and a heart failure home visit",
+      "questions": [
+        {
+          "id": "sk-cardiac-m01",
+          "type": "multiple_choice",
+          "stem": "A nurse needs an apical pulse on an adult client with large breasts before giving digoxin. The nurse palpates the left chest and cannot feel an impulse. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ask the client to lift the left breast, listen at the 5th intercostal space, left midclavicular line, and count for 1 full minute",
+              "correct": true,
+              "rationale": "The apical pulse is at the 5th intercostal space, left midclavicular line. A client with large breasts is asked to lift the breast. The impulse cannot be felt in every client, and the count is still made by listening for 1 full minute."
+            },
+            {
+              "id": "B",
+              "text": "Use the radial pulse instead, because the apical impulse cannot be felt, and count for 1 full minute",
+              "correct": false,
+              "rationale": "A full minute is right, but the site is wrong. An impulse that cannot be felt is not a reason to change sites, and the apical pulse is heard, not only felt."
+            },
+            {
+              "id": "C",
+              "text": "Place the diaphragm at the 2nd intercostal space to the right of the sternum and count for 1 full minute",
+              "correct": false,
+              "rationale": "A full minute with the diaphragm is right, but this is the aortic area. The apical pulse is at the 5th intercostal space, left midclavicular line."
+            },
+            {
+              "id": "D",
+              "text": "Ask the client to lift the left breast, listen at the 5th intercostal space, left midclavicular line, count 30 seconds, and double it",
+              "correct": false,
+              "rationale": "The site and the breast are handled correctly, but the apical pulse before digoxin is counted for 1 full minute."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "The apical pulse is at the 5th intercostal space, left midclavicular line. Listen with the diaphragm for 1 full minute. Ask a client with large breasts to lift the breast. Not feeling the impulse is not a reason to switch sites.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Each option gets something right, and two options match on site and breast. Check the site first, then the length of the count.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Fix the site",
+                "detail": "5th intercostal space, left midclavicular line."
+              },
+              {
+                "action": "Fix the count",
+                "detail": "1 full minute, by listening."
+              },
+              {
+                "action": "Deal with the tissue",
+                "detail": "The client lifts the breast."
+              },
+              {
+                "action": "Reject the switch to radial",
+                "detail": "An impulse that cannot be felt is common and expected in some clients."
+              }
+            ],
+            "verdict": "Have the client lift the breast, listen at the 5th intercostal space on the left midclavicular line, and count 1 full minute."
+          },
+          "caseGroup": "sk-cardiac-case1",
+          "caseStep": 1,
+          "objective": "Outline the location of different pulse points and the process for undertaking an accurate pulse assessment"
+        },
+        {
+          "id": "sk-cardiac-m02",
+          "type": "ordered_response",
+          "stem": "A nurse is locating the apical pulse on an adult client by landmarks. Place the steps in order.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Move just to the left of the sternum into the 2nd intercostal space",
+              "rationale": "The 2nd intercostal space lies just beside the angle of Louis, so it is the first space the nurse can name with certainty.",
+              "position": 3
+            },
+            {
+              "id": "B",
+              "text": "Find the sternal notch between the clavicles",
+              "rationale": "The sternal notch is the starting landmark.",
+              "position": 1
+            },
+            {
+              "id": "C",
+              "text": "Place the diaphragm and count for 1 full minute",
+              "rationale": "Listening comes after the site is found, and the count is a full minute.",
+              "position": 5
+            },
+            {
+              "id": "D",
+              "text": "Find the angle of Louis, the ridge on the sternum",
+              "rationale": "The angle of Louis is the next landmark below the notch.",
+              "position": 2
+            },
+            {
+              "id": "E",
+              "text": "Count down to the 5th intercostal space on the left midclavicular line",
+              "rationale": "From the 2nd space, the nurse counts down the spaces along the midclavicular line to the 5th.",
+              "position": 4
+            }
+          ],
+          "answer": [
+            "B",
+            "D",
+            "A",
+            "E",
+            "C"
+          ],
+          "scoring": "0/1",
+          "takeaway": "To find the apical pulse: sternal notch, angle of Louis, 2nd intercostal space just to the left, then down the midclavicular line to the 5th space, then listen for 1 full minute.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Start with the landmark that cannot be mistaken, the notch, and let each step name the next one. The space cannot be counted until the 2nd space has been found.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Start at the top",
+                "detail": "The sternal notch."
+              },
+              {
+                "action": "Find the ridge",
+                "detail": "The angle of Louis comes next, below the notch."
+              },
+              {
+                "action": "Name the first space",
+                "detail": "2nd intercostal space, just left of the angle of Louis."
+              },
+              {
+                "action": "Count down",
+                "detail": "Midclavicular line to the 5th space, then listen."
+              }
+            ],
+            "verdict": "Notch, angle of Louis, 2nd space, down the midclavicular line to the 5th space, listen for 1 full minute."
+          },
+          "caseGroup": "sk-cardiac-case1",
+          "caseStep": 2,
+          "objective": "Outline the location of different pulse points and the process for undertaking an accurate pulse assessment"
+        },
+        {
+          "id": "sk-cardiac-x01",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "Digoxin is due at 0900 for an adult client. The nurse listens at the 5th intercostal space on the left midclavicular line for 1 full minute and counts an apical pulse of 56 beats per minute, regular. Blood pressure is 118/72 mm Hg. The client is alert and says, \"My pulse is always in the fifties. My doctor knows about it.\" Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the digoxin, because the client has no symptoms and the provider is aware of the usual rate",
+              "correct": false,
+              "rationale": "The client's report and the lack of symptoms matter, but the rate is below the range wanted before digoxin. The nurse does not decide alone that a low rate is acceptable."
+            },
+            {
+              "id": "B",
+              "text": "Hold the digoxin and report the apical rate of 56 beats per minute now, with the client's statement about the usual rate",
+              "correct": true,
+              "rationale": "Before digoxin the heart rate should be within 60 to 100 beats per minute. At 56 beats per minute the dose is held, and the report gives the provider both the rate and the client's statement so that a decision can be made."
+            },
+            {
+              "id": "C",
+              "text": "Hold the digoxin, document the apical rate of 56 beats per minute, and recheck the apical pulse before the next scheduled dose",
+              "correct": false,
+              "rationale": "Holding is right, but a held dose and the reason are reported at the time. Whether a rate in the fifties is acceptable for this client is the provider's decision, and without a report the client simply misses the medication."
+            },
+            {
+              "id": "D",
+              "text": "Count the apical pulse for 1 more full minute, and give the digoxin if the second count is 60 beats per minute or more",
+              "correct": false,
+              "rationale": "The first count was already a full apical minute with a regular rhythm. A second count only looks for a number that permits the dose."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Count the apical pulse for 1 full minute before digoxin. The adult range wanted is 60 to 100 beats per minute. Below 60, hold the dose and report.",
+          "coverage": "Topic covered in the skill course. The detail tested is standard NCLEX teaching, not from the course.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two options hold the dose. The deciding cue is who may accept a rate below 60 beats per minute: the provider, today, not the nurse and not the next shift.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Find the number",
+                "detail": "Apical 56 beats per minute for a full minute."
+              },
+              {
+                "action": "Compare with the range",
+                "detail": "60 to 100 beats per minute before digoxin."
+              },
+              {
+                "action": "Weigh the client's statement",
+                "detail": "It is reported, not acted on alone."
+              },
+              {
+                "action": "Compare the two that hold",
+                "detail": "One reports now. One leaves the decision until the next dose."
+              }
+            ],
+            "verdict": "Hold the digoxin and report the rate with the client's statement."
+          },
+          "caseGroup": "sk-cardiac-case1",
+          "caseStep": 3,
+          "objective": "Outline the location of different pulse points and the process for undertaking an accurate pulse assessment"
+        },
+        {
+          "id": "sk-cardiac-m03",
+          "type": "multiple_choice",
+          "stem": "A client is to be placed on continuous cardiac monitoring. The client's chest is damp with sweat and has thick hair where the electrodes will go. The client is awake and able to answer questions. Which action does the nurse take to prepare the skin?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dry the skin and press the electrodes firmly over the hair, securing each one with tape",
+              "correct": false,
+              "rationale": "Drying is right, but hair still prevents good contact, and tape does not fix that."
+            },
+            {
+              "id": "B",
+              "text": "Explain the monitoring, shave the electrode sites with the client's consent, and apply the electrodes to the damp skin",
+              "correct": false,
+              "rationale": "Consent and hair removal are right, but the skin must be dry."
+            },
+            {
+              "id": "C",
+              "text": "Dry the skin, and with the client's consent shave the hair where the electrodes will be placed",
+              "correct": true,
+              "rationale": "Skin should be clean and dry with good contact. With the client's consent, chest hair may be shaved to allow contact."
+            },
+            {
+              "id": "D",
+              "text": "Dry the skin and shave the electrode sites, then explain to the client why the hair was removed",
+              "correct": false,
+              "rationale": "Both problems are solved, but consent comes before shaving. This client is awake and able to answer."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "For cardiac monitoring the skin must be clean and dry with good electrode contact. Chest hair may be shaved, with the client's consent.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Check three things in each option: dry skin, hair removed, and consent given first.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Name the two problems",
+                "detail": "Moisture and hair."
+              },
+              {
+                "action": "Drop options that leave one unsolved",
+                "detail": "Tape over hair, or damp skin."
+              },
+              {
+                "action": "Compare the two that solve both",
+                "detail": "Consent before shaving, or explanation after."
+              }
+            ],
+            "verdict": "Dry the skin and, with consent, remove hair at the electrode sites."
+          },
+          "caseGroup": "sk-cardiac-case2",
+          "caseStep": 1,
+          "objective": "Consider when cardiac monitoring may be used for a patient and how the clinician might apply this"
+        },
+        {
+          "id": "sk-cardiac-m04",
+          "type": "highlight",
+          "nursesNote": "1030, review of a 12 lead ECG recorded as a routine baseline: Calibration box is 2 large squares high and speed is 25 mm per second. One P wave comes before each QRS complex. PR interval is 7 small squares on every beat. QRS width is 2 small squares. R waves are evenly spaced, 4 large squares apart. ST segment is raised above the baseline in leads II, III and aVF.",
+          "stem": "Highlight the findings that are outside the expected range and must be reported.",
+          "segments": [
+            {
+              "id": "s1",
+              "text": "Calibration box is 2 large squares high and speed is 25 mm per second",
+              "correct": false,
+              "rationale": "This is the standard calibration: 1 millivolt equals 2 large squares, and the speed is 25 mm per second."
+            },
+            {
+              "id": "s2",
+              "text": "One P wave comes before each QRS complex",
+              "correct": false,
+              "rationale": "One P wave per QRS is the expected finding."
+            },
+            {
+              "id": "s3",
+              "text": "PR interval is 7 small squares on every beat",
+              "correct": true,
+              "rationale": "The PR interval should be 3 to 5 small squares. Consistently longer could indicate first degree heart block."
+            },
+            {
+              "id": "s4",
+              "text": "QRS width is 2 small squares",
+              "correct": false,
+              "rationale": "The QRS should be 3 small squares or less, so 2 small squares is within range."
+            },
+            {
+              "id": "s5",
+              "text": "R waves are evenly spaced, 4 large squares apart",
+              "correct": false,
+              "rationale": "The rhythm is regular, so 300 divided by 4 gives 75 beats per minute, within the adult range of 60 to 100 beats per minute."
+            },
+            {
+              "id": "s6",
+              "text": "ST segment is raised above the baseline in leads II, III and aVF",
+              "correct": true,
+              "rationale": "ST elevation could indicate myocardial infarction. Leads II, III and aVF look at the inferior wall of the heart."
+            }
+          ],
+          "answer": [
+            "s3",
+            "s6"
+          ],
+          "format": "+/-",
+          "scoring": "+/-",
+          "takeaway": "Read an ECG in order: clean trace, calibration, rhythm, one P per QRS, measurements (PR 3 to 5 small squares, QRS 3 or less, rate by the 300 rule), then scan for ST and T wave changes.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Take each line of the note as one of the six steps and test it against its normal. Two lines fail: one measurement and one finding from the scan.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check calibration",
+                "detail": "2 large squares and 25 mm per second: correct."
+              },
+              {
+                "action": "Check the measurements",
+                "detail": "PR 7 is long. QRS 2 is in range. 300 divided by 4 is 75 beats per minute."
+              },
+              {
+                "action": "Scan the leads",
+                "detail": "ST elevation in leads II, III and aVF needs review now."
+              }
+            ],
+            "verdict": "s3, s6."
+          },
+          "caseGroup": "sk-cardiac-case2",
+          "caseStep": 2,
+          "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient"
+        },
+        {
+          "id": "sk-cardiac-m05",
+          "type": "multiple_choice",
+          "stem": "A nurse records a 12 lead ECG on a client who has reported palpitations. The client was talking and shifting on the examination table during the recording, and the printout has a thick, wavy baseline in most leads. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Send the printout for interpretation with a note that the client was moving during the recording",
+              "correct": false,
+              "rationale": "A note is honest, but interference should be sorted at the point of recording. A poor trace can hide or mimic changes."
+            },
+            {
+              "id": "B",
+              "text": "Replace all of the electrodes with new ones and record the ECG again straight away",
+              "correct": false,
+              "rationale": "Recording again is right, but the cause is movement and talking. New electrodes do not remove it, and the second trace will look the same."
+            },
+            {
+              "id": "C",
+              "text": "Mark the rate from the R waves that can be seen and report the palpitations with that rate",
+              "correct": false,
+              "rationale": "Reporting palpitations is right, but a rate taken from a poor trace may be wrong, and the trace can be fixed now."
+            },
+            {
+              "id": "D",
+              "text": "Ask the client to lie still with the hands relaxed at the sides and not to talk, then record the ECG again",
+              "correct": true,
+              "rationale": "The first step in reading an ECG is a clean trace. Interference is fixed at the time of recording, so the cause is removed and the ECG is recorded again."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Step 1 of reading a 12 lead ECG is a clean trace. Fix interference at the point of recording and record again if in doubt.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options record again. Only one removes the cause stated in the stem, movement and talking.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Name the cause",
+                "detail": "Talking and moving during the recording."
+              },
+              {
+                "action": "Ask whether it can be fixed now",
+                "detail": "Yes: the client lies still and the ECG is repeated."
+              },
+              {
+                "action": "Drop the options that miss the cause",
+                "detail": "A note, an estimated rate, or new electrodes."
+              }
+            ],
+            "verdict": "Have the client lie still and quiet, and record again."
+          },
+          "caseGroup": "sk-cardiac-case2",
+          "caseStep": 3,
+          "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient"
+        },
+        {
+          "id": "sk-cardiac-x02",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client reports chest pain that began 20 minutes ago and rates it 6 of 10. A 12 lead ECG recorded 5 minutes ago shows a clean trace, correct calibration, and no ST elevation in any lead. The client still rates the pain 6 of 10. A colleague says, \"There is no ST elevation. Let the client rest.\" Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Record a second 12 lead ECG now so that two traces can be compared, then report the chest pain with both ECGs",
+              "correct": false,
+              "rationale": "Repeat ECGs are real practice, but the first trace is 5 minutes old, clean and correctly calibrated. A second recording delays the report of pain that has lasted 20 minutes."
+            },
+            {
+              "id": "B",
+              "text": "Stay with the client, measure pulse and blood pressure, and report the chest pain after reassessing it in 15 minutes",
+              "correct": false,
+              "rationale": "Staying and measuring are right, but the pain has already been reassessed and is unchanged at 6 of 10. Waiting 15 minutes delays the report."
+            },
+            {
+              "id": "C",
+              "text": "Report the ongoing chest pain and the ECG now, and ask a clinician competent in ECG interpretation to review it",
+              "correct": true,
+              "rationale": "A myocardial infarction can be present without ST elevation. The pain is unchanged, so the nurse reports now and has the ECG reviewed by a competent clinician."
+            },
+            {
+              "id": "D",
+              "text": "Check the lead placement and record the 12 lead ECG again, because the first one may have been inaccurate",
+              "correct": false,
+              "rationale": "The trace was clean and correctly calibrated. Nothing in the situation suggests a recording error, and repeating it delays the report."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "ST elevation could indicate myocardial infarction, but an infarction can be present without it. Ongoing chest pain is reported, and a competent clinician reviews the ECG.",
+          "coverage": "Topic covered in the skill course. The detail tested is standard NCLEX teaching, not from the course.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Three options do something useful before reporting. The deciding cues are that the pain is unchanged at 6 of 10 after 20 minutes and that the ECG is already clean and 5 minutes old, so nothing needs to come before the report.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Separate the ECG from the client",
+                "detail": "ECG: no ST elevation. Client: pain still 6 of 10."
+              },
+              {
+                "action": "Apply the rule",
+                "detail": "An infarction can be present without ST elevation."
+              },
+              {
+                "action": "Weigh the reasonable options",
+                "detail": "A repeat ECG and vital signs are useful, but not before the report."
+              },
+              {
+                "action": "Reject the repeat for error",
+                "detail": "Clean trace and correct calibration."
+              }
+            ],
+            "verdict": "Report the ongoing chest pain and the ECG now for review."
+          },
+          "caseGroup": "sk-cardiac-case2",
+          "caseStep": 4,
+          "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient"
+        },
+        {
+          "id": "sk-cardiac-m06",
+          "type": "matrix",
+          "scenario": "A home health nurse visits a 76 year old client with heart failure. The client's furosemide was increased from 40 mg to 80 mg once a day last week because of weight gain and swollen ankles. The client's spouse weighs the client every morning and keeps the record. The client also takes simvastatin 80 mg at night.",
+          "stem": "For each finding at today's visit, indicate whether it is an expected finding or requires follow-up.",
+          "columns": [
+            "Expected finding",
+            "Requires follow-up"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Weight is 2 kg lower than before the dose was increased",
+              "answer": "Expected finding",
+              "rationale": "The diuretic was increased to remove extra fluid. A lower weight shows it is working."
+            },
+            {
+              "id": "r2",
+              "text": "The client reports feeling light headed when standing up from the bed",
+              "answer": "Requires follow-up",
+              "rationale": "A doubled diuretic can remove too much fluid. Light headedness on standing is a new symptom that needs assessment and reporting."
+            },
+            {
+              "id": "r3",
+              "text": "Respiratory rate is 14 breaths per minute with an oxygen saturation of 97% and no increased shortness of breath",
+              "answer": "Expected finding",
+              "rationale": "These findings show no sign that fluid is affecting the breathing."
+            },
+            {
+              "id": "r4",
+              "text": "The client says the simvastatin has been skipped for the last 3 nights",
+              "answer": "Requires follow-up",
+              "rationale": "Medication adherence is part of the assessment. A missed medication is explored and addressed with the client."
+            },
+            {
+              "id": "r5",
+              "text": "Right radial pulse is 62 beats per minute and regular, the right hand is warm, and capillary refill is 2 seconds",
+              "answer": "Expected finding",
+              "rationale": "The rate is within 60 to 100 beats per minute, the rhythm is regular, and the limb is well perfused."
+            },
+            {
+              "id": "r6",
+              "text": "The spouse is tearful and says, \"I am not sleeping. I lie awake listening to the breathing.\"",
+              "answer": "Requires follow-up",
+              "rationale": "A holistic assessment includes the wellbeing of the family. A caregiver who is not sleeping needs attention and support."
+            }
+          ],
+          "answer": {
+            "r1": "Expected finding",
+            "r2": "Requires follow-up",
+            "r3": "Expected finding",
+            "r4": "Requires follow-up",
+            "r5": "Expected finding",
+            "r6": "Requires follow-up"
+          },
+          "scoring": "0/1",
+          "takeaway": "After a diuretic increase, a lower weight with a respiratory rate, oxygen saturation, pulse and capillary refill in range is expected. New light headedness on standing, missed medication, and a caregiver who is not sleeping each need follow-up.",
+          "coverage": "Topic covered in the skill course. The detail tested is standard NCLEX teaching, not from the course.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Sort the findings into what the dose was meant to achieve and what is new or going wrong. Follow-up is not only for abnormal vital signs: adherence and the caregiver count too.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the goal of the change",
+                "detail": "Less fluid: lower weight, less swelling."
+              },
+              {
+                "action": "Check breathing and perfusion",
+                "detail": "All in range."
+              },
+              {
+                "action": "Look beyond the vital signs",
+                "detail": "A new symptom, a missed medication, and a tearful caregiver."
+              }
+            ],
+            "verdict": "The lower weight, the breathing findings, and the right radial pulse findings are expected. Light headedness, skipped simvastatin, and the spouse's distress require follow-up."
+          },
+          "caseGroup": "sk-cardiac-case3",
+          "caseStep": 1,
+          "objective": "Interpret the findings from a patient assessment to identify the priorities for planning care"
+        },
+        {
+          "id": "sk-cardiac-m07",
+          "type": "multiple_choice",
+          "stem": "A home health nurse is beginning a visit with a 76 year old client with heart failure whose diuretic dose was increased last week. The nurse wants to learn how the client has been managing since the change. Which opening by the nurse is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"You have been taking the new dose every morning since it went up, haven't you?\"",
+              "correct": false,
+              "rationale": "This is a leading question. It invites the client to agree and makes a missed dose harder to admit."
+            },
+            {
+              "id": "B",
+              "text": "\"Tell me how things have been for you at home since your water pill was increased.\"",
+              "correct": true,
+              "rationale": "An open question lets the client describe what matters most, including problems the nurse did not think to ask about."
+            },
+            {
+              "id": "C",
+              "text": "\"How is your breathing today compared with last week?\"",
+              "correct": false,
+              "rationale": "This is open, but it covers one symptom on one day, not how the client has been managing since the change."
+            },
+            {
+              "id": "D",
+              "text": "\"What side effects have you noticed since your water pill was increased?\"",
+              "correct": false,
+              "rationale": "This is open in form, but it limits the answer to side effects and assumes there are some."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Open questions let the client tell the nurse how things are going. A leading question or a question limited to one topic narrows what the client will say.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Three options are questions the client can answer at length. Match each to the stated goal: how the client has been managing since the change.",
+          "elimination": {
+            "strategies": [
+              "Patient-centered option"
+            ],
+            "steps": [
+              {
+                "action": "Spot the leading question",
+                "detail": "\"Haven't you?\" invites agreement."
+              },
+              {
+                "action": "Spot the narrow questions",
+                "detail": "One asks only about breathing today."
+              },
+              {
+                "action": "Spot the assumption",
+                "detail": "One assumes side effects."
+              },
+              {
+                "action": "Keep the open question",
+                "detail": "\"Tell me how things have been.\""
+              }
+            ],
+            "verdict": "\"Tell me how things have been for you at home since your water pill was increased.\""
+          },
+          "caseGroup": "sk-cardiac-case3",
+          "caseStep": 2,
+          "objective": "Interpret the findings from a patient assessment to identify the priorities for planning care"
+        },
+        {
+          "id": "sk-cardiac-m08",
+          "type": "multiple_choice",
+          "stem": "A nurse is listening to the heart of a 76 year old client with heart failure. Respiratory rate is 14 breaths per minute, oxygen saturation is 97%, and the client reports no increased shortness of breath. At the 2nd intercostal space to the left of the sternum, the nurse hears the second heart sound as two close sounds when the client breathes in and as a single sound when the client breathes out. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Report the finding now as a new abnormal heart sound in a client with heart failure",
+              "correct": false,
+              "rationale": "Reporting is right for a new abnormal sound, but a second heart sound that splits only on inspiration is a normal finding."
+            },
+            {
+              "id": "B",
+              "text": "Move the stethoscope to the 5th intercostal space at the left midclavicular line, where the second heart sound is loudest",
+              "correct": false,
+              "rationale": "The second heart sound is loudest at the aortic and pulmonary areas, where the nurse already is. The mitral area is where the first heart sound is best heard."
+            },
+            {
+              "id": "C",
+              "text": "Document a murmur at the pulmonary area and ask for the client to be reviewed at the next routine visit",
+              "correct": false,
+              "rationale": "A murmur is an extra sound. Here the second heart sound itself divides, and only on breathing in, which is a normal finding and not a murmur."
+            },
+            {
+              "id": "D",
+              "text": "Document the second heart sound as split on inspiration and single on expiration, and continue the assessment",
+              "correct": true,
+              "rationale": "On inspiration more blood returns to the right side of the heart, so the pulmonary valve closes slightly after the aortic valve. This physiologic splitting of the second heart sound is expected."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "S2 is the aortic and pulmonary valves closing, loudest at the 2nd intercostal spaces. A split on inspiration that disappears on expiration is physiologic and expected.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "A client with heart failure and an unusual sound pulls toward reporting. The deciding detail is the timing: two sounds only on breathing in.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Name the sound",
+                "detail": "S2, heard at the pulmonary area."
+              },
+              {
+                "action": "Check the timing",
+                "detail": "Split on inspiration, single on expiration."
+              },
+              {
+                "action": "Apply the rule",
+                "detail": "Physiologic splitting is expected."
+              },
+              {
+                "action": "Check the site option",
+                "detail": "S2 is loudest at the base, not the apex."
+              }
+            ],
+            "verdict": "Document the split on inspiration and continue the assessment."
+          },
+          "caseGroup": "sk-cardiac-case3",
+          "caseStep": 3,
+          "objective": "Identify how to undertake cardiac auscultation and what these sounds represent in relation to the cardiac cycle"
+        },
+        {
+          "id": "sk-cardiac-m10",
+          "type": "sata",
+          "stem": "A client with an irregular left radial pulse of 104 beats per minute (expected adult range 60 to 100 beats per minute) is to start continuous cardiac monitoring with a 5 lead system. The client has heart failure and is awake. Which actions by the nurse are correct? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Select lead II for the monitor display, because its waveform is easily interpreted",
+              "correct": true,
+              "rationale": "Lead II is usually selected for monitoring because it is easily interpreted."
+            },
+            {
+              "id": "B",
+              "text": "Place the right arm electrode just below the right clavicle, near the right shoulder",
+              "correct": true,
+              "rationale": "The right arm electrode sits under the right clavicle near the shoulder, on the chest and inside the rib cage frame."
+            },
+            {
+              "id": "C",
+              "text": "Place the leg electrode on the left upper thigh, below the level of the umbilicus",
+              "correct": false,
+              "rationale": "The leg electrode is placed on the chest, at the lower edge of the left rib cage below the pectoral muscles, not on the limb."
+            },
+            {
+              "id": "D",
+              "text": "Place the chest electrode at the 4th intercostal space, left sternal margin",
+              "correct": false,
+              "rationale": "The space is right but the side is wrong. On a 5 lead system this electrode sits at the 4th intercostal space at the right sternal margin."
+            },
+            {
+              "id": "E",
+              "text": "Set the alarm limits according to this client's clinical condition",
+              "correct": true,
+              "rationale": "Alarm limits are set based on the client's clinical condition, so they warn of change that matters for this client."
+            },
+            {
+              "id": "F",
+              "text": "Leave the lower heart rate alarm at the unit default, because the client's rate is above the expected range",
+              "correct": false,
+              "rationale": "A rate above the range today does not make the lower limit irrelevant, and a default limit ignores the client's condition. Every alarm limit is set based on this client's clinical condition."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "E"
+          ],
+          "takeaway": "For continuous monitoring: lead II on display, electrodes on the chest within the rib cage frame, the 5th electrode at the 4th intercostal space at the right sternal margin, and alarm limits set to the client's condition.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Treat each statement on its own. For electrode positions, check two things: is it on the chest inside the rib cage frame, and is it on the correct side.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check the display lead",
+                "detail": "Lead II, easily interpreted: correct."
+              },
+              {
+                "action": "Check each electrode",
+                "detail": "Right arm under the right clavicle is correct. The leg electrode belongs on the lower left rib cage. The chest electrode belongs at the right sternal margin."
+              },
+              {
+                "action": "Check the alarms",
+                "detail": "Set to the client's condition, not left at default."
+              }
+            ],
+            "verdict": "A, B, E."
+          },
+          "caseGroup": "sk-cardiac-case4",
+          "caseStep": 1,
+          "objective": "Consider when cardiac monitoring may be used for a patient and how the clinician might apply this",
+          "new": true
+        },
+        {
+          "id": "sk-cardiac-m11",
+          "type": "ordered_response",
+          "stem": "A nurse is reviewing a newly recorded 12 lead ECG for a client admitted with palpitations. Place the steps in the order the nurse reviews the ECG.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Measure the PR interval and the QRS width, and calculate the heart rate",
+              "rationale": "Measurements come after the rhythm and the P to QRS relationship are known, because the method for the rate depends on whether the rhythm is regular.",
+              "position": 5
+            },
+            {
+              "id": "B",
+              "text": "Confirm that the trace is clean and free of interference",
+              "rationale": "A clean trace comes first. Interference can hide or mimic changes, and it is fixed at the time of recording.",
+              "position": 1
+            },
+            {
+              "id": "C",
+              "text": "Scan every lead for ST elevation, ST depression, T wave inversion and tall R waves",
+              "rationale": "Scanning the leads for changes is the last step.",
+              "position": 6
+            },
+            {
+              "id": "D",
+              "text": "Check that the calibration box is 2 large squares high and the speed is 25 mm per second",
+              "rationale": "Calibration is checked before any measurement, because every square counted depends on it.",
+              "position": 2
+            },
+            {
+              "id": "E",
+              "text": "Check that there is one P wave for every QRS complex",
+              "rationale": "This follows the rhythm check. More P waves than QRS complexes could indicate second or third degree heart block.",
+              "position": 4
+            },
+            {
+              "id": "F",
+              "text": "Look at the lead II rhythm strip to decide whether the rhythm is sinus",
+              "rationale": "The rhythm is judged from the rhythm strip, normally lead II, once the trace and calibration are confirmed.",
+              "position": 3
+            }
+          ],
+          "answer": [
+            "B",
+            "D",
+            "F",
+            "E",
+            "A",
+            "C"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Read a 12 lead ECG in six steps: clean trace, calibration, sinus rhythm, one P wave per QRS, measurements, then scan the leads.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Ask what each step depends on. Nothing can be read on a poor trace, nothing can be measured without correct calibration, and the rate method depends on whether the rhythm is regular.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Start with the trace",
+                "detail": "Clean first, then calibration."
+              },
+              {
+                "action": "Decide the rhythm",
+                "detail": "Lead II strip, then one P wave per QRS."
+              },
+              {
+                "action": "Measure",
+                "detail": "PR, QRS and rate."
+              },
+              {
+                "action": "Finish with the scan",
+                "detail": "ST and T wave changes, tall R waves."
+              }
+            ],
+            "verdict": "Clean trace, calibration, sinus rhythm, one P per QRS, measurements, scan the leads."
+          },
+          "caseGroup": "sk-cardiac-case4",
+          "caseStep": 2,
+          "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
+          "new": true
+        },
+        {
+          "id": "sk-cardiac-x03",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client on continuous cardiac monitoring reports palpitations. The nurse prints a lead II rhythm strip recorded at 25 mm per second. The spaces between R waves vary from 2 to 4 large squares with no pattern. The first two R waves are 3 large squares apart. The nurse counts 12 R waves within 30 large squares. The expected adult heart rate is 60 to 100 beats per minute. Which heart rate does the nurse record?",
+          "options": [
+            {
+              "id": "A",
+              "text": "120 beats per minute, by counting the 12 R waves in 30 large squares and multiplying by 10",
+              "correct": true,
+              "rationale": "With an irregular rhythm the rate is found by counting the R waves in 30 large squares, which is 6 seconds, and multiplying by 10. This gives 120 beats per minute, above the expected range."
+            },
+            {
+              "id": "B",
+              "text": "100 beats per minute, by dividing 300 by the 3 large squares between the first two R waves",
+              "correct": false,
+              "rationale": "The 300 rule is a correct method, but only for a regular rhythm. Here the spacing varies from 2 to 4 large squares, so one pair of R waves does not represent the rate, and the result falsely sits inside the expected range."
+            },
+            {
+              "id": "C",
+              "text": "75 beats per minute, by dividing 300 by the 4 large squares of the widest R to R space",
+              "correct": false,
+              "rationale": "The widest space gives the slowest beats only. With an irregular rhythm, no single R to R space gives the rate."
+            },
+            {
+              "id": "D",
+              "text": "110 beats per minute, by counting the 11 spaces between R waves in 30 large squares and multiplying by 10",
+              "correct": false,
+              "rationale": "The 6 second method and the multiplier are right, but the method counts R waves, not the spaces between them. 12 R waves have only 11 spaces, so this undercounts by 1 beat in every 6 seconds."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Use 300 divided by the large squares between R waves only when the rhythm is regular. When it is irregular, count the R waves in 30 large squares (6 seconds) and multiply by 10.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two methods are both correct ways to calculate a rate. The deciding cue is in the stem: the R to R spacing varies with no pattern, so the rhythm is irregular and only the 6 second count applies.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Judge regularity first",
+                "detail": "R to R spacing varies from 2 to 4 large squares: irregular."
+              },
+              {
+                "action": "Drop the single space methods",
+                "detail": "Any 300 rule answer uses one space that does not represent the rate."
+              },
+              {
+                "action": "Check the multiplier",
+                "detail": "30 large squares is 6 seconds, so multiply by 10."
+              },
+              {
+                "action": "Count R waves, not spaces",
+                "detail": "12 R waves times 10 is 120 beats per minute, above 60 to 100."
+              }
+            ],
+            "verdict": "120 beats per minute, from 12 R waves in 30 large squares multiplied by 10."
+          },
+          "caseGroup": "sk-cardiac-case4",
+          "caseStep": 3,
+          "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
+          "new": true
+        },
+        {
+          "id": "sk-cardiac-m12",
+          "type": "matrix",
+          "scenario": "A client with chest pain rated 7 of 10 has a 12 lead ECG recorded. While the nurse reports the chest pain, a clinician competent in ECG interpretation reviews the trace with the nurse. Each finding below is reviewed by lead group.",
+          "stem": "For each ECG finding, indicate the coronary artery that supplies the area of the heart those leads look at.",
+          "columns": [
+            "Right coronary artery",
+            "Left circumflex artery",
+            "Left anterior descending artery"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "ST elevation in leads II, III and aVF",
+              "answer": "Right coronary artery",
+              "rationale": "Leads II, III and aVF are the inferior leads, which look at the area supplied by the right coronary artery."
+            },
+            {
+              "id": "r2",
+              "text": "ST elevation in leads V3 and V4",
+              "answer": "Left anterior descending artery",
+              "rationale": "V3 and V4 are the anterior leads, which look at the area supplied by the left anterior descending artery."
+            },
+            {
+              "id": "r3",
+              "text": "ST elevation in leads I, aVL, V5 and V6",
+              "answer": "Left circumflex artery",
+              "rationale": "Leads I, aVL, V5 and V6 are the lateral leads, which look at the area supplied by the left circumflex artery."
+            },
+            {
+              "id": "r4",
+              "text": "ST elevation in leads V1 and V2",
+              "answer": "Left anterior descending artery",
+              "rationale": "V1 and V2 are the septal leads. Like the anterior leads, they look at the area supplied by the left anterior descending artery."
+            },
+            {
+              "id": "r5",
+              "text": "T wave inversion in leads V5 and V6",
+              "answer": "Left circumflex artery",
+              "rationale": "V5 and V6 are lateral leads, even though they are chest leads. The lateral group is supplied by the left circumflex artery."
+            }
+          ],
+          "answer": {
+            "r1": "Right coronary artery",
+            "r2": "Left anterior descending artery",
+            "r3": "Left circumflex artery",
+            "r4": "Left anterior descending artery",
+            "r5": "Left circumflex artery"
+          },
+          "scoring": "0/1",
+          "takeaway": "Inferior leads II, III and aVF: right coronary artery. Lateral leads I, aVL, V5 and V6: left circumflex. Septal V1 and V2 and anterior V3 and V4: left anterior descending.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Sort each finding by its leads, not by whether it is ST elevation, ST depression or T wave inversion. The type of change does not move the territory.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the group",
+                "detail": "II, III, aVF inferior. I, aVL, V5, V6 lateral. V1, V2 septal. V3, V4 anterior."
+              },
+              {
+                "action": "Match the artery",
+                "detail": "Inferior: right coronary. Lateral: circumflex. Septal and anterior: left anterior descending."
+              },
+              {
+                "action": "Watch the trap",
+                "detail": "V5 and V6 are chest leads but belong to the lateral group."
+              }
+            ],
+            "verdict": "II, III, aVF: right coronary. V3, V4 and V1, V2: left anterior descending. I, aVL, V5, V6 and V5, V6: left circumflex."
+          },
+          "caseGroup": "sk-cardiac-case4",
+          "caseStep": 4,
+          "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
+          "new": true
+        },
+        {
+          "id": "sk-cardiac-m09",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A nurse auscultates the heart of an adult client lying back with the diaphragm of the stethoscope. The nurse identifies the \"lub\" sound. This sound is produced by closure of [[1]].\n\nIt marks [[2]].\n\nThe nurse expects it to be loudest at [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "the aortic and pulmonary valves",
+                  "correct": false,
+                  "rationale": "Closure of the aortic and pulmonary valves produces the second heart sound, which is short and sharp."
+                },
+                {
+                  "id": "B",
+                  "text": "the mitral and tricuspid valves",
+                  "correct": true,
+                  "rationale": "The first heart sound is the atrioventricular valves, the mitral and tricuspid, closing."
+                },
+                {
+                  "id": "C",
+                  "text": "the mitral and aortic valves",
+                  "correct": false,
+                  "rationale": "Both are left sided valves, but they close at different times. The aortic valve closes with the pulmonary valve in the second heart sound."
+                },
+                {
+                  "id": "D",
+                  "text": "the tricuspid and pulmonary valves",
+                  "correct": false,
+                  "rationale": "Both are right sided valves, but the pulmonary valve closes in the second heart sound."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "the start of diastole",
+                  "correct": false,
+                  "rationale": "The second heart sound marks the start of diastole."
+                },
+                {
+                  "id": "B",
+                  "text": "atrial contraction at the end of diastole",
+                  "correct": false,
+                  "rationale": "Atrial contraction happens at the end of diastole, before the first heart sound. It does not produce the first heart sound."
+                },
+                {
+                  "id": "C",
+                  "text": "the start of systole",
+                  "correct": true,
+                  "rationale": "When the ventricles begin to contract, the atrioventricular valves close, so the first heart sound marks the start of systole."
+                },
+                {
+                  "id": "D",
+                  "text": "the end of systole",
+                  "correct": false,
+                  "rationale": "The end of systole is when the aortic and pulmonary valves close, producing the second heart sound."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "the 2nd intercostal space at the right upper sternal border",
+                  "correct": false,
+                  "rationale": "This is the aortic area, where the second heart sound is loudest."
+                },
+                {
+                  "id": "B",
+                  "text": "the 2nd intercostal space at the left upper sternal border",
+                  "correct": false,
+                  "rationale": "This is the pulmonary area, where the second heart sound is loudest."
+                },
+                {
+                  "id": "C",
+                  "text": "the 5th intercostal space near the left midclavicular line",
+                  "correct": true,
+                  "rationale": "This is the mitral area. The first heart sound is best heard at the mitral and tricuspid areas."
+                },
+                {
+                  "id": "D",
+                  "text": "the 4th intercostal space at the right sternal margin",
+                  "correct": false,
+                  "rationale": "This is not an auscultation area. The tricuspid area is beside the left lower sternal border."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "B",
+            "2": "C",
+            "3": "C"
+          },
+          "scoring": "0/1",
+          "takeaway": "S1 is the mitral and tricuspid valves closing at the start of systole, long and loud, best heard at the mitral and tricuspid areas. S2 is the aortic and pulmonary valves closing at the start of diastole, loudest at the 2nd intercostal spaces.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Fix the valves first. Once S1 is tied to the atrioventricular valves, the timing (they close as the ventricles contract) and the site (the lower areas named after those valves) follow.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Blank 1",
+                "detail": "The lub sound is the first heart sound: mitral and tricuspid closing."
+              },
+              {
+                "action": "Blank 2",
+                "detail": "These valves close as the ventricles contract: start of systole."
+              },
+              {
+                "action": "Blank 3",
+                "detail": "Loudest at the mitral area, 5th intercostal space near the left midclavicular line."
+              }
+            ],
+            "verdict": "Mitral and tricuspid valves; the start of systole; the 5th intercostal space near the left midclavicular line."
+          },
+          "caseGroup": "sk-cardiac-case5",
+          "caseStep": 1,
+          "objective": "Identify how to undertake cardiac auscultation and what these sounds represent in relation to the cardiac cycle",
+          "new": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Infusion Therapy",
+      "exam": "Exam 3",
+      "subtitle": "IV solution types, blood product safety, access devices and PICC teaching, delegation, and local and systemic complications",
+      "questions": [
+        {
+          "id": "sk-infusion-m01",
+          "type": "multiple_choice",
+          "stem": "A client is admitted after a fall with a head injury. Blood pressure is 96/58 mm Hg (reference 90/60 to 120/80 mm Hg), heart rate is 112 beats per minute (reference 60 to 100 beats per minute), and serum sodium is 140 mEq/L (reference 135 to 145 mEq/L). The provider orders 0.45% sodium chloride at 125 mL per hour. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Start the infusion at 125 mL per hour and check neurologic status every hour",
+              "correct": false,
+              "rationale": "Hourly neurologic checks are good care, but 0.45% sodium chloride is hypotonic. It moves water into cells, including brain cells, and it is contraindicated with head trauma and low blood pressure."
+            },
+            {
+              "id": "B",
+              "text": "Start the infusion at 75 mL per hour, a slower rate, until the provider rounds",
+              "correct": false,
+              "rationale": "A slower rate still moves water into brain cells. The problem is the type of fluid, not the speed."
+            },
+            {
+              "id": "C",
+              "text": "Hold the infusion and contact the provider to question the order before starting it",
+              "correct": true,
+              "rationale": "Hypotonic fluid is contraindicated with head trauma, raised pressure in the skull and low blood pressure. This client has a head injury, a blood pressure of 96/58 mm Hg with the diastolic below 60 mm Hg, and a heart rate of 112 beats per minute, so the order is questioned before it starts."
+            },
+            {
+              "id": "D",
+              "text": "Hang 0.9% sodium chloride at 125 mL per hour instead, since both are saline",
+              "correct": false,
+              "rationale": "An isotonic fluid may well be what this client needs, but the nurse cannot change the type of fluid without an order."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Hypotonic fluid (0.45% or 0.225% sodium chloride) moves water into cells. Do not give it with head trauma, raised pressure in the skull, low blood pressure or third spacing. Question the order before starting.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options give the ordered fluid and one changes it without an order. Ask what the fluid does once it is in the vein, then match that against the head injury.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Name the fluid",
+                "detail": "0.45% sodium chloride is hypotonic."
+              },
+              {
+                "action": "Say where the water goes",
+                "detail": "Into cells, including brain cells."
+              },
+              {
+                "action": "Match it to the client",
+                "detail": "Head injury and a diastolic pressure below 60 mm Hg: both are contraindications."
+              },
+              {
+                "action": "Stay in scope",
+                "detail": "Question the order. Do not swap fluids without one."
+              }
+            ],
+            "verdict": "Hold the hypotonic fluid and question the order."
+          },
+          "caseGroup": "sk-infusion-case1",
+          "caseStep": 1,
+          "objective": "IV Solution Types"
+        },
+        {
+          "id": "sk-infusion-m02",
+          "type": "matrix",
+          "scenario": "A nurse reviews the IV fluid orders for six clients on a medical surgical unit.",
+          "stem": "For each client, indicate whether the ordered fluid is appropriate or the order should be questioned.",
+          "columns": [
+            "Appropriate",
+            "Question the order"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "A client bleeding after a car crash, blood pressure 84/50 mm Hg (reference 90/60 to 120/80 mm Hg), ordered 0.9% sodium chloride",
+              "answer": "Appropriate",
+              "rationale": "Isotonic fluid stays in the vessels and is used for volume expansion and hemorrhage resuscitation."
+            },
+            {
+              "id": "r2",
+              "text": "A client with new confusion and serum sodium 118 mEq/L (reference 135 to 145 mEq/L), ordered 3% sodium chloride",
+              "answer": "Appropriate",
+              "rationale": "3% sodium chloride is the hypertonic fluid for severe hyponatremia. Sodium, neurologic status and fluid balance are watched closely."
+            },
+            {
+              "id": "r3",
+              "text": "A client with ascites from fluid shifting into the abdomen, ordered 0.45% sodium chloride",
+              "answer": "Question the order",
+              "rationale": "Third spacing is a contraindication to hypotonic fluid. More water would leave the vessels."
+            },
+            {
+              "id": "r4",
+              "text": "A client with blood glucose 48 mg/dL (reference 70 to 100 mg/dL), ordered D10W",
+              "answer": "Appropriate",
+              "rationale": "D10W is a hypertonic dextrose solution used for hypoglycemia."
+            },
+            {
+              "id": "r5",
+              "text": "A client with intracranial pressure 24 mm Hg (reference 5 to 15 mm Hg), ordered D5W as the continuous maintenance fluid",
+              "answer": "Question the order",
+              "rationale": "Once the body uses the dextrose, D5W leaves free water. It acts as a hypotonic fluid and moves water into brain cells."
+            },
+            {
+              "id": "r6",
+              "text": "A client about to receive packed red blood cells, ordered Lactated Ringer's to prime the blood tubing",
+              "answer": "Question the order",
+              "rationale": "Blood products run with 0.9% sodium chloride only."
+            }
+          ],
+          "answer": {
+            "r1": "Appropriate",
+            "r2": "Appropriate",
+            "r3": "Question the order",
+            "r4": "Appropriate",
+            "r5": "Question the order",
+            "r6": "Question the order"
+          },
+          "scoring": "0/1",
+          "takeaway": "Match the fluid to where the water goes. Isotonic stays in the vessels, hypertonic pulls water out of cells, hypotonic pushes water into cells. D5W behaves as hypotonic once the dextrose is used.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Judge each row on its own. For each fluid ask where the water goes, then ask whether that helps or harms this client.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Sort the fluids",
+                "detail": "0.9% isotonic. 3% and D10W hypertonic. 0.45% hypotonic. D5W acts as hypotonic once the dextrose is used."
+              },
+              {
+                "action": "Find the contraindications",
+                "detail": "Third spacing and raised intracranial pressure rule out hypotonic fluid."
+              },
+              {
+                "action": "Check the blood rule",
+                "detail": "0.9% sodium chloride only with blood."
+              }
+            ],
+            "verdict": "Appropriate: rows 1, 2 and 4. Question: rows 3, 5 and 6."
+          },
+          "caseGroup": "sk-infusion-case1",
+          "caseStep": 2,
+          "objective": "IV Solution Types"
+        },
+        {
+          "id": "sk-infusion-x01",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client with diabetic ketoacidosis arrived in the emergency department with blood pressure 82/50 mm Hg (reference 90/60 to 120/80 mm Hg) and received 2 L of 0.9% sodium chloride. On arrival to the unit, blood pressure is 118/72 mm Hg, heart rate is 92 beats per minute (reference 60 to 100 beats per minute), the client is alert and oriented, and serum sodium is 147 mEq/L (reference 135 to 145 mEq/L). The provider orders 0.45% sodium chloride at 150 mL per hour. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Question the order, because hypotonic fluid is contraindicated with low blood pressure",
+              "correct": false,
+              "rationale": "Low blood pressure is a contraindication while it is present. The blood pressure was 82/50 mm Hg in the emergency department and is now 118/72 mm Hg after 2 L of isotonic fluid."
+            },
+            {
+              "id": "B",
+              "text": "Start the infusion and monitor serum sodium, neurologic status and fluid balance",
+              "correct": true,
+              "rationale": "In diabetic ketoacidosis, hypotonic fluid follows the initial isotonic resuscitation. The blood pressure is in range, the client is alert and the sodium is high, so the order fits. Sodium, neurologic status and fluid balance are the checks."
+            },
+            {
+              "id": "C",
+              "text": "Ask the provider to change the order to Lactated Ringer's to protect the blood pressure",
+              "correct": false,
+              "rationale": "Isotonic fluid was the first step and the blood pressure has recovered. Lactated Ringer's does not give the cells the free water a sodium of 147 mEq/L calls for."
+            },
+            {
+              "id": "D",
+              "text": "Hold the infusion until a repeat serum sodium result comes back from the lab",
+              "correct": false,
+              "rationale": "The sodium is already known to be above range. Waiting delays the ordered next step of the fluid plan."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Diabetic ketoacidosis fluid plan: isotonic fluid first to restore volume, then hypotonic fluid once the blood pressure has recovered. Hypotonic fluid is unsafe while blood pressure is low.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options seem defensible: start the hypotonic fluid, or question it because of the emergency department blood pressure of 82/50 mm Hg. The deciding cue is the current blood pressure, 118/72 mm Hg.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Find where the client is in the plan",
+                "detail": "2 L of isotonic fluid already given."
+              },
+              {
+                "action": "Check the contraindication now",
+                "detail": "Blood pressure 118/72 mm Hg: no longer low."
+              },
+              {
+                "action": "Read the sodium",
+                "detail": "147 mEq/L: water is needed in the cells."
+              },
+              {
+                "action": "Reject the alternatives",
+                "detail": "Lactated Ringer's adds no free water. Waiting for a repeat sodium delays care."
+              }
+            ],
+            "verdict": "Start the hypotonic fluid and monitor sodium, neurologic status and fluid balance."
+          },
+          "caseGroup": "sk-infusion-case1",
+          "caseStep": 3,
+          "objective": "IV Solution Types"
+        },
+        {
+          "id": "sk-infusion-m03",
+          "type": "multiple_choice",
+          "stem": "A unit of packed red blood cells arrives on the unit for a client with hemoglobin 6.8 g/dL (reference 12 to 17.5 g/dL). Consent is on file, baseline vital signs are recorded, and two nurses have verified the unit at the bedside. The client has a 22 gauge IV in the left hand with Lactated Ringer's infusing. Which action does the nurse take next?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Start an 18 or 20 gauge IV and prime the blood tubing with 0.9% sodium chloride",
+              "correct": true,
+              "rationale": "Blood needs an 18 or 20 gauge catheter and 0.9% sodium chloride only. This solves both problems with the current line."
+            },
+            {
+              "id": "B",
+              "text": "Prime the blood tubing with 0.9% sodium chloride and run the unit through the 22 gauge IV",
+              "correct": false,
+              "rationale": "The solution is now right, but a 22 gauge catheter is smaller than the 18 to 20 gauge needed for blood."
+            },
+            {
+              "id": "C",
+              "text": "Run the unit through the existing line, since two nurses have already verified it",
+              "correct": false,
+              "rationale": "Verification is complete, but the line is the wrong size and Lactated Ringer's cannot run with blood."
+            },
+            {
+              "id": "D",
+              "text": "Keep the unit at the bedside until a new IV can be placed at the end of the shift",
+              "correct": false,
+              "rationale": "Packed red cells must be infused within 4 hours of issue. A new line is needed now, not later in the shift."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Every blood product needs two nurse verification, an 18 to 20 gauge catheter and 0.9% sodium chloride only. Packed red cells are infused within 4 hours of issue.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The verification is done, which makes using the current line tempting. Check two things in each option: the catheter size and the solution.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Check the gauge",
+                "detail": "22 gauge is too small. Blood needs 18 to 20."
+              },
+              {
+                "action": "Check the solution",
+                "detail": "Lactated Ringer's cannot run with blood."
+              },
+              {
+                "action": "Check the clock",
+                "detail": "4 hours from issue: do not wait until the end of the shift."
+              }
+            ],
+            "verdict": "New 18 or 20 gauge line, primed with 0.9% sodium chloride."
+          },
+          "caseGroup": "sk-infusion-case2",
+          "caseStep": 1,
+          "objective": "Safety Protocols"
+        },
+        {
+          "id": "sk-infusion-m04",
+          "type": "ordered_response",
+          "stem": "A nurse is preparing to give a unit of packed red blood cells. Baseline vital signs have been recorded. Place the steps in order.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Reassess vital signs 15 minutes after the transfusion starts",
+              "rationale": "The first reassessment is at 15 minutes, when a reaction is most likely to show.",
+              "position": 5
+            },
+            {
+              "id": "B",
+              "text": "Confirm that signed consent is on file",
+              "rationale": "Consent must be on file before the unit is picked up from the blood bank.",
+              "position": 1
+            },
+            {
+              "id": "C",
+              "text": "Check the unit against the identification band with a second nurse at the bedside",
+              "rationale": "Two licensed nurses verify the label, blood type, unit number and expiration date before the start.",
+              "position": 3
+            },
+            {
+              "id": "D",
+              "text": "Pick up the unit from the blood bank",
+              "rationale": "The unit is collected only after consent is confirmed.",
+              "position": 2
+            },
+            {
+              "id": "E",
+              "text": "Start the transfusion",
+              "rationale": "The unit starts after the bedside check.",
+              "position": 4
+            },
+            {
+              "id": "F",
+              "text": "Reassess vital signs every 30 to 60 minutes until the unit is complete",
+              "rationale": "After the 15 minute check, vital signs continue every 30 to 60 minutes and at completion.",
+              "position": 6
+            }
+          ],
+          "answer": [
+            "B",
+            "D",
+            "C",
+            "E",
+            "A",
+            "F"
+          ],
+          "scoring": "0/1",
+          "takeaway": "Blood order: consent on file, then pick up the unit, then two nurse bedside check, then start, then vital signs at 15 minutes, then every 30 to 60 minutes and at completion.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Anchor the first and last steps. Consent comes before the unit leaves the blood bank, and the 15 minute check can only come after the start.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Find the first step",
+                "detail": "Consent before the unit is retrieved."
+              },
+              {
+                "action": "Place the check",
+                "detail": "The second nurse check is at the bedside, before the start."
+              },
+              {
+                "action": "Finish with monitoring",
+                "detail": "Vital signs 15 minutes after the start, then every 30 to 60 minutes."
+              }
+            ],
+            "verdict": "Consent, pick up, two nurse check, start, recheck at 15 minutes, then every 30 to 60 minutes."
+          },
+          "caseGroup": "sk-infusion-case2",
+          "caseStep": 2,
+          "objective": "Safety Protocols"
+        },
+        {
+          "id": "sk-infusion-m05",
+          "type": "highlight",
+          "nursesNote": "0900, right forearm 20 gauge IV with 0.9% sodium chloride ordered at 100 mL per hour: Skin around the site is cool and pale. Edema extends 4 cm from the site. The drip rate has slowed. No blood return on aspiration. No redness or streak along the vein. Temperature is 36.8 °C (reference 36.1 to 37.2 °C). Capillary refill in the right fingers is 2 seconds (reference less than 3 seconds).",
+          "stem": "Highlight the findings that indicate infiltration.",
+          "segments": [
+            {
+              "id": "s1",
+              "text": "Skin around the site is cool and pale",
+              "correct": true,
+              "rationale": "Fluid in the tissue cools the skin and makes it pale: a sign of infiltration."
+            },
+            {
+              "id": "s2",
+              "text": "Edema extends 4 cm from the site",
+              "correct": true,
+              "rationale": "Fluid leaking into the tissue causes swelling around the site."
+            },
+            {
+              "id": "s3",
+              "text": "The drip rate has slowed",
+              "correct": true,
+              "rationale": "Fluid going into the tissue meets resistance, so the drip slows."
+            },
+            {
+              "id": "s4",
+              "text": "No blood return on aspiration",
+              "correct": true,
+              "rationale": "The catheter tip is no longer in the vein."
+            },
+            {
+              "id": "s5",
+              "text": "No redness or streak along the vein",
+              "correct": false,
+              "rationale": "Redness and a streak are signs of phlebitis. Their absence does not point to infiltration."
+            },
+            {
+              "id": "s6",
+              "text": "Temperature is 36.8 °C (reference 36.1 to 37.2 °C)",
+              "correct": false,
+              "rationale": "A normal temperature is not a sign of infiltration."
+            },
+            {
+              "id": "s7",
+              "text": "Capillary refill in the right fingers is 2 seconds (reference less than 3 seconds)",
+              "correct": false,
+              "rationale": "Normal capillary refill shows circulation beyond the site is intact. It is not a sign of infiltration."
+            }
+          ],
+          "answer": [
+            "s1",
+            "s2",
+            "s3",
+            "s4"
+          ],
+          "format": "+/-",
+          "scoring": "+/-",
+          "takeaway": "Infiltration: cool, pale skin, edema, a slowed drip and no blood return. Phlebitis: pain, redness, warmth, a streak and a cord along the vein.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Sort each finding into infiltration, phlebitis or normal. Only the infiltration findings are highlighted.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Picture fluid in the tissue",
+                "detail": "Cool, pale, swollen."
+              },
+              {
+                "action": "Check the flow",
+                "detail": "Slowed drip, no blood return."
+              },
+              {
+                "action": "Set aside the rest",
+                "detail": "No phlebitis signs, normal temperature, normal capillary refill."
+              }
+            ],
+            "verdict": "s1, s2, s3, s4."
+          },
+          "caseGroup": "sk-infusion-case3",
+          "caseStep": 1,
+          "objective": "Recognize Complications"
+        },
+        {
+          "id": "sk-infusion-x02",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client is receiving an IV antibiotic through a 20 gauge catheter in the left forearm. The nurse finds mild swelling at the site, redness and warmth along the vein, a red streak 3 cm above the site, and a firm cord when the vein is palpated. Pain at the site is 5 of 10. The infusion is running at the ordered rate and there is a blood return. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Flush the catheter with 0.9% sodium chloride, since the blood return shows it is still in the vein",
+              "correct": false,
+              "rationale": "The blood return rules out infiltration, but redness, warmth, a streak and a cord mean the vein wall is inflamed. The catheter does not stay."
+            },
+            {
+              "id": "B",
+              "text": "Stop the infusion, remove the catheter, elevate the left arm and apply a compress chosen for the antibiotic",
+              "correct": false,
+              "rationale": "This is the infiltration plan. Swelling is present, but the skin is warm and red with a streak and a cord, not cool and pale, and blood still returns. That points to phlebitis."
+            },
+            {
+              "id": "C",
+              "text": "Stop the infusion, remove the catheter, apply a warm moist compress and notify the provider",
+              "correct": true,
+              "rationale": "Redness, warmth, a streak and a palpable cord are phlebitis. The plan is stop, remove, warm moist compress, notify the provider and document the grade."
+            },
+            {
+              "id": "D",
+              "text": "Stop the infusion, keep the catheter for the next dose and apply a warm moist compress",
+              "correct": false,
+              "rationale": "The compress is right, but a catheter in an inflamed vein is removed, not saved."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Phlebitis: pain, redness, warmth, a streak and a palpable cord. Stop, remove the catheter, apply a warm moist compress, notify the provider and document the grade.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options stop and remove the catheter. The swelling suggests infiltration. The deciding cue is warm, red skin with a cord and a blood return, which means phlebitis, not the cool, pale skin of infiltration.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Name the complication",
+                "detail": "Red, warm, streak, cord: phlebitis."
+              },
+              {
+                "action": "Reject keeping the catheter",
+                "detail": "A blood return does not make an inflamed vein safe."
+              },
+              {
+                "action": "Compare the two removals",
+                "detail": "Warm moist compress and notify for phlebitis. Elevate and compress by solution for infiltration."
+              }
+            ],
+            "verdict": "Stop, remove, warm moist compress, notify the provider."
+          },
+          "caseGroup": "sk-infusion-case3",
+          "caseStep": 2,
+          "objective": "Recognize Complications"
+        },
+        {
+          "id": "sk-infusion-m08",
+          "type": "bowtie",
+          "scenario": "The tubing of a client's central line separates at the hub while the client is sitting up in a chair. Within a minute the client reports sudden shortness of breath and chest pain. Blood pressure is 82/48 mm Hg (reference 90/60 to 120/80 mm Hg), heart rate is 124 beats per minute (reference 60 to 100 beats per minute), and oxygen saturation is 86% (reference 95% to 100%). A churning sound is heard over the heart.",
+          "stem": "Complete the diagram by selecting 2 actions the nurse takes, the 1 condition the client is most likely experiencing, and 2 parameters the nurse monitors.",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Clamp the catheter",
+                  "correct": true,
+                  "rationale": "Clamping stops more air from entering the vein."
+                },
+                {
+                  "id": "B",
+                  "text": "Return the client to bed on the left side with the head down",
+                  "correct": true,
+                  "rationale": "Left lateral Trendelenburg traps the air in the right side of the heart, away from the lungs."
+                },
+                {
+                  "id": "C",
+                  "text": "Lay the client flat on the back with the legs raised",
+                  "correct": false,
+                  "rationale": "A shock position does not trap the air in the right side of the heart. The left side with the head down does."
+                },
+                {
+                  "id": "D",
+                  "text": "Flush the line with 0.9% sodium chloride",
+                  "correct": false,
+                  "rationale": "Flushing pushes more of what is in the line into the vein."
+                },
+                {
+                  "id": "E",
+                  "text": "Remove the central line",
+                  "correct": false,
+                  "rationale": "The line is clamped, not removed, in this emergency."
+                }
+              ]
+            },
+            "condition": {
+              "label": "The problem",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Air embolism",
+                  "correct": true,
+                  "rationale": "An open line, sudden shortness of breath, chest pain, low blood pressure and a churning sound over the heart."
+                },
+                {
+                  "id": "B",
+                  "text": "Speed shock",
+                  "correct": false,
+                  "rationale": "Speed shock follows a fast infusion, with flushing, headache and chest tightness. Nothing was infusing fast."
+                },
+                {
+                  "id": "C",
+                  "text": "Catheter related bloodstream infection",
+                  "correct": false,
+                  "rationale": "Infection brings fever and chills over time, not a sudden onset after a disconnection."
+                },
+                {
+                  "id": "D",
+                  "text": "Fluid overload",
+                  "correct": false,
+                  "rationale": "Fluid overload builds over hours of infusion. This began within a minute of the line opening."
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to monitor",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Oxygen saturation",
+                  "correct": true,
+                  "rationale": "86% shows the air is blocking blood flow to the lungs."
+                },
+                {
+                  "id": "B",
+                  "text": "Blood pressure",
+                  "correct": true,
+                  "rationale": "82/48 mm Hg shows the heart is struggling to pump."
+                },
+                {
+                  "id": "C",
+                  "text": "Temperature",
+                  "correct": false,
+                  "rationale": "Temperature does not track an air embolism."
+                },
+                {
+                  "id": "D",
+                  "text": "Appearance of the insertion site",
+                  "correct": false,
+                  "rationale": "The problem is in the heart and lungs, not at the skin."
+                },
+                {
+                  "id": "E",
+                  "text": "Urine specific gravity",
+                  "correct": false,
+                  "rationale": "This does not guide care in the next minutes."
+                }
+              ]
+            }
+          },
+          "answer": {
+            "actions": [
+              "A",
+              "B"
+            ],
+            "condition": [
+              "A"
+            ],
+            "parameters": [
+              "A",
+              "B"
+            ]
+          },
+          "scoring": "0/1",
+          "takeaway": "Air embolism: sudden shortness of breath, chest pain, low blood pressure and a churning murmur after air enters a line. Clamp the tubing, turn onto the left side head down, call rapid response and give 100% oxygen.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Link the timing to the event: an open central line, then sudden breathing and chest symptoms. Then choose actions that stop more air and keep the air away from the lungs.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the trigger",
+                "detail": "Central line open at the hub."
+              },
+              {
+                "action": "Name the problem",
+                "detail": "Sudden shortness of breath, chest pain, a churning sound."
+              },
+              {
+                "action": "Stop more air",
+                "detail": "Clamp."
+              },
+              {
+                "action": "Trap the air",
+                "detail": "Left side, head down."
+              },
+              {
+                "action": "Watch",
+                "detail": "Oxygen saturation and blood pressure."
+              }
+            ],
+            "verdict": "Clamp the catheter and turn onto the left side head down. Air embolism. Watch oxygen saturation and blood pressure."
+          },
+          "caseGroup": "sk-infusion-case3",
+          "caseStep": 3,
+          "objective": "Recognize Complications"
+        },
+        {
+          "id": "sk-infusion-m06",
+          "type": "sata",
+          "stem": "A nurse is teaching a client who is going home with a PICC in the left arm. The client's temperature at discharge is 36.8 °C (reference 36.1 to 37.2 °C). Which statements by the client show correct understanding? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"I will put a waterproof cover over the site when I shower.\"",
+              "correct": true,
+              "rationale": "Showering is allowed with a waterproof cover over the site."
+            },
+            {
+              "id": "B",
+              "text": "\"Once the site heals, I can swim laps at the pool again.\"",
+              "correct": false,
+              "rationale": "The arm is not submerged: no swimming and no baths while the PICC is in."
+            },
+            {
+              "id": "C",
+              "text": "\"No one should take my blood pressure on my left arm.\"",
+              "correct": true,
+              "rationale": "No blood pressure cuffs and no needle sticks on the PICC arm."
+            },
+            {
+              "id": "D",
+              "text": "\"If the flush is hard to push, I will push a little harder to clear it.\"",
+              "correct": false,
+              "rationale": "Resistance during a flush means stop and do not use the line. Force can break the catheter."
+            },
+            {
+              "id": "E",
+              "text": "\"I will call if my temperature reaches 38.2 °C.\"",
+              "correct": true,
+              "rationale": "A fever above 38 °C is a warning sign to report at once."
+            },
+            {
+              "id": "F",
+              "text": "\"I can carry my 20 lb laundry basket with my left arm.\"",
+              "correct": false,
+              "rationale": "Heavy lifting over 10 lb with the PICC arm is avoided."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "E"
+          ],
+          "takeaway": "PICC teaching: keep the dressing dry, shower with a cover, no swimming, no blood pressure cuff or needle sticks on that arm, nothing over 10 lb, never force a flush, and report a fever above 38 °C.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Treat each statement as true or false against the PICC rules: water, that arm, lifting, flushing and fever.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Water",
+                "detail": "Shower with a cover. No swimming."
+              },
+              {
+                "action": "That arm",
+                "detail": "No blood pressure cuff, no lifting over 10 lb."
+              },
+              {
+                "action": "Flushing",
+                "detail": "Resistance means stop."
+              },
+              {
+                "action": "Fever",
+                "detail": "Above 38 °C: call."
+              }
+            ],
+            "verdict": "A, C, E."
+          },
+          "caseGroup": "sk-infusion-case4",
+          "caseStep": 1,
+          "objective": "Vascular Access Devices"
+        },
+        {
+          "id": "sk-infusion-m07",
+          "type": "multiple_choice",
+          "stem": "A registered nurse is assigning work to a licensed practical nurse (LPN) and assistive personnel (AP) on a medical surgical unit. Which task is appropriate for the registered nurse to delegate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ask the LPN to hang a unit of platelets after the registered nurse has checked it",
+              "correct": false,
+              "rationale": "Starting any blood product stays with the registered nurse, even after the check."
+            },
+            {
+              "id": "B",
+              "text": "Ask the AP to look at a client's IV site and decide whether the catheter should come out",
+              "correct": false,
+              "rationale": "The AP can report how a site looks. Deciding what the finding means is the registered nurse's judgment."
+            },
+            {
+              "id": "C",
+              "text": "Ask the LPN to start a new heparin infusion for a client admitted an hour ago",
+              "correct": false,
+              "rationale": "Heparin is a high alert IV medication, which the registered nurse gives."
+            },
+            {
+              "id": "D",
+              "text": "Ask the LPN to flush the established IV line of a client ready for discharge",
+              "correct": true,
+              "rationale": "Flushing an established line is within the LPN's role, per the state practice act. The registered nurse stays accountable."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "The registered nurse keeps insertion, site selection, starting blood, high alert IV drugs, interpreting findings and teaching. The LPN can monitor sites, flush established lines and hang non high alert fluids. AP take vital signs and report what a site looks like.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Each option hands off a real task. Ask whether the task needs judgment, starts blood or involves a high alert drug.",
+          "elimination": {
+            "strategies": [
+              "Odd man wins"
+            ],
+            "steps": [
+              {
+                "action": "Check for blood",
+                "detail": "Platelets: registered nurse."
+              },
+              {
+                "action": "Check for judgment",
+                "detail": "Deciding a catheter comes out: registered nurse."
+              },
+              {
+                "action": "Check for high alert drugs",
+                "detail": "Heparin: registered nurse."
+              },
+              {
+                "action": "Keep the routine task",
+                "detail": "Flushing an established line: LPN."
+              }
+            ],
+            "verdict": "Delegate the flush of an established line to the LPN."
+          },
+          "caseGroup": "sk-infusion-case4",
+          "caseStep": 2,
+          "objective": "RN Responsibility & Delegation"
+        }
+      ]
+    }
+  ]
 }

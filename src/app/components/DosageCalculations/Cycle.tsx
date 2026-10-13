@@ -3,10 +3,10 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 import TypedText from "../Typed/TypedText";
 
 const HOLD = 2600;
-// Typed values stay up a little longer: the typing itself takes about a second.
+// Plain-text values stay up a little longer than the others.
 const HOLD_TYPED = 3600;
 
-// Where the values are plain text, each is typed in by TypedText (the one text
+// Where the values are plain text, each is faded in by TypedText (the one text
 // transition used across the site), and the line keeps the width of the
 // longest value so nothing around it shifts.
 const Typed = ({

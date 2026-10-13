@@ -2,11 +2,12 @@
 import { useEffect, useState } from "react";
 import TypedText from "../Typed/TypedText";
 
-// Cycles through a few labels in place, typing each in, for tiles/headings that
-// stand in for more than one source chapter (a combined deck). The label shown
-// comes from the clock, not from when each one mounted, so every Flash on the
-// page (a tile and the heading under it) always shows the same position.
-const STEP = 2600;
+// Cycles through a few labels in place (TypedText blurs and fades one out as the
+// next blurs and fades in over it), for tiles/headings that stand in for more than
+// one source chapter (a combined deck). The label shown comes from the clock,
+// not from when each one mounted, so every Flash on the page (a tile and the
+// heading under it) always shows the same position.
+const STEP = 2500;
 const slotNow = () => Math.floor(Date.now() / STEP);
 
 const Flash = ({

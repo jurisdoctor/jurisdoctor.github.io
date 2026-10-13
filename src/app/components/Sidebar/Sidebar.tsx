@@ -2,7 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { LuHome, LuCalculator, LuPill, LuMenu } from "react-icons/lu";
+import {
+  LuHome,
+  LuCalculator,
+  LuBookOpen,
+  LuPill,
+  LuMenu,
+} from "react-icons/lu";
 import { useState } from "react";
 import { SCROLL_TO } from "../ScrollReset";
 import ThemeToggle from "../ThemeToggle";
@@ -84,6 +90,18 @@ const Sidebar = () => {
                   className={`${navLink} ${path === "/dosage-calculations" ? "!text-[var(--accent-color)]" : ""}`}
                 >
                   <LuCalculator />
+                </Link>
+              </li>
+
+              <li className="nav__item">
+                <Link
+                  href="/n55"
+                  onClick={() => setToggle(false)}
+                  aria-label="N55"
+                  title="N55"
+                  className={`${navLink} ${path === "/n55" ? "!text-[var(--accent-color)]" : ""}`}
+                >
+                  <LuBookOpen />
                 </Link>
               </li>
 

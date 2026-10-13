@@ -452,6 +452,8 @@ const ChapterSet = ({
                     : `${labelFor(chapter)} · no questions yet`
                 }
                 className={`relative h-10 rounded-lg border-2 border-solid text-xs font-bold duration-300 ${
+                  here ? "tile-selected z-[1]" : ""
+                } ${
                   !count
                     ? "cursor-not-allowed border-transparent text-[#cfc9bb]"
                     : here
@@ -464,7 +466,11 @@ const ChapterSet = ({
                 } bg-[var(--body-color)]`}
               >
                 {fresh && (
-                  <Glow label="Has new questions" hue={hueOf(chapter.id)} />
+                  <Glow
+                    label="Has new questions"
+                    hue={hueOf(chapter.id)}
+                    edge={2}
+                  />
                 )}
                 <Fill {...progress} />
                 {chapter.members && chapter.members.length > 1 ? (
