@@ -167,7 +167,8 @@ button {
 }
 
 /* The open chapter tile (see Nclex/ChapterSet.tsx): it stays a little raised,
-   and springs up with a small bounce the moment it is picked. */
+   springs up with a bounce the moment it is picked, and then keeps bobbing
+   gently so it is clear which one is open. */
 .tile-selected {
   transform: scale(1.08);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
@@ -191,9 +192,21 @@ button {
   }
 }
 
+@keyframes tileBob {
+  0%,
+  100% {
+    transform: translateY(0) scale(1.08);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.08);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .tile-selected {
-    animation: tilePop 0.45s ease-out;
+    animation:
+      tilePop 0.45s ease-out,
+      tileBob 1.6s ease-in-out 0.45s infinite;
   }
 }
 
