@@ -10,6 +10,7 @@ import {
 } from "react";
 import { usePathname } from "next/navigation";
 import {
+  LuCalendarDays,
   LuCheck,
   LuChevronRight,
   LuPlus,
@@ -51,6 +52,8 @@ import {
 } from "./Patient";
 import Study from "./Study";
 import { SuggestModal } from "./Suggest";
+import MedOfTheDay from "./MedOfTheDay";
+import { dayKey, medOfTheDay } from "./Daily";
 import { GroupType, MedFile, MedType } from "./types";
 
 const calm = () =>
@@ -375,6 +378,9 @@ const Tray = ({
   </div>
 );
 
+// The day the medication-of-the-day popup was last closed ("2026-10-14").
+const DAILY_KEY = "meds:day:v1";
+
 const Medications = () => {
   const [guide, setGuide] = useState<MedFile | null>(null);
   const [failed, setFailed] = useState(false);
@@ -395,6 +401,14 @@ const Medications = () => {
   const [labs, setLabs] = useLabs();
   const [labsOpen, setLabsOpen] = useState(false);
   const [suggestOpen, setSuggestOpen] = useState(false);
+  // Medication of the day: shown once each day on entering the guide, once the
+  // guide has loaded. `?medday=2026-12-25` shows what a given day would bring
+  // (and shows it again), for checking ahead.
+  const [daily, setDaily] = useState<{
+    med: MedType;
+    date: Date;
+    preview: boolean;
+  } | null>(null);
   const patient = usePatient(labsOpen || route.compare === true);
 
   useEffect(() => {
@@ -405,6 +419,46 @@ const Medications = () => {
     return () => {
       alive = false;
     };
+  }, []);
+
+  useEffect(() => {
+    if (!guide) return;
+    let date = new Date();
+    let preview = false;
+    const asked = new URLSearchParams(window.location.search).get("medday");
+    const parsed = asked && /^\d{4}-\d{2}-\d{2}$/.test(asked) ? asked : null;
+    if (parsed) {
+      const [year, month, day] = parsed.split("-").map(Number);
+      date = new Date(year, month - 1, day);
+      preview = true;
+    }
+    try {
+      if (!preview && window.localStorage.getItem(DAILY_KEY) === dayKey(date)) {
+        return;
+      }
+    } catch {}
+    const med = medOfTheDay(guide.medications, date);
+    if (med) setDaily({ med, date, preview });
+  }, [guide]);
+
+  // The same popup on request, for today's medication.
+  const openDaily = () => {
+    if (!guide) return;
+    const date = new Date();
+    const med = medOfTheDay(guide.medications, date);
+    if (med) setDaily({ med, date, preview: false });
+  };
+
+  const closeDaily = useCallback(() => {
+    setDaily((current) => {
+      // Looking ahead at another day doesn't count as seeing today's.
+      if (current && !current.preview) {
+        try {
+          window.localStorage.setItem(DAILY_KEY, dayKey(new Date()));
+        } catch {}
+      }
+      return null;
+    });
   }, []);
 
   // The address is the single source of truth for where the learner is, so
@@ -604,6 +658,19 @@ const Medications = () => {
                     Flashcards
                   </button>
                 )}
+                <button
+                  type="button"
+                  onClick={openDaily}
+                  aria-label="Medication of the day"
+                  title="Medication of the day"
+                  className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
+                >
+                  <LuCalendarDays
+                    aria-hidden
+                    className="text-[var(--chip-blue-border)]"
+                  />
+                  MOD
+                </button>
                 <button
                   type="button"
                   onClick={openCompare}
@@ -881,6 +948,20 @@ const Medications = () => {
           )}
         </div>
       </section>
+
+      {daily && (
+        <MedOfTheDay
+          med={daily.med}
+          date={daily.date}
+          accent={accentFor(daily.med.group)}
+          onOpen={() => {
+            const id = daily.med.id;
+            closeDaily();
+            openMed(id);
+          }}
+          onClose={closeDaily}
+        />
+      )}
 
       {suggestOpen && <SuggestModal onClose={() => setSuggestOpen(false)} />}
 
