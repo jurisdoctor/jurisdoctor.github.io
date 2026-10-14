@@ -4,9 +4,9 @@
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
     "set": "Exam 3",
-    "notes": "Exam 3 practice questions for Iggy chapters 16, 19 and 31, ten per chapter, plus ten each for the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true were added in the latest update (5 each for chapters 16, 19, 31 and the Cardiac Assessment skill).",
-    "questionCount": 70,
-    "chapterQuestionCount": 45,
+    "notes": "Exam 3 practice questions for Iggy chapters 16, 19 and 31, ten per chapter, plus ten each for the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the latest additions (4 per section, addedBatch 2). Earlier additions carry addedBatch 1.",
+    "questionCount": 90,
+    "chapterQuestionCount": 57,
     "skillCount": 2,
     "chaptersIncluded": [
       1016,
@@ -22,13 +22,13 @@
       "skills"
     ],
     "questionTypes": {
-      "multiple_choice": 37,
-      "highlight": 6,
-      "cloze": 4,
-      "matrix": 8,
-      "sata": 6,
+      "multiple_choice": 43,
+      "highlight": 7,
+      "cloze": 9,
+      "matrix": 13,
+      "sata": 8,
       "ordered_response": 6,
-      "bowtie": 3
+      "bowtie": 4
     },
     "itemTypes": [
       "bowtie",
@@ -128,7 +128,7 @@
           1,
           2
         ],
-        "questionCount": 70
+        "questionCount": 90
       }
     ],
     "chapterGroups": [
@@ -157,24 +157,29 @@
       "questionIds": [],
       "caseStudyIds": []
     },
-    "difficultCount": 14,
+    "difficultCount": 19,
     "difficultIds": [
       "ig16-x01",
       "ig16-x02",
       "ig16-x03",
+      "ig16-x04",
       "ig19-x02",
       "ig19-x01",
       "ig19-x03",
+      "ig19-x04",
       "ig31-x01",
       "ig31-x02",
       "ig31-x03",
+      "ig31-x04",
       "sk-cardiac-x01",
       "sk-cardiac-x02",
       "sk-cardiac-x03",
+      "sk-cardiac-x04",
       "sk-infusion-x01",
-      "sk-infusion-x02"
+      "sk-infusion-x02",
+      "sk-infusion-x03"
     ],
-    "nclexCount": 33,
+    "nclexCount": 47,
     "nclexIds": [
       "ig16-m02",
       "ig16-m05",
@@ -182,6 +187,8 @@
       "ig16-m09",
       "ig16-m10",
       "ig16-m11",
+      "ig16-m13",
+      "ig16-m14",
       "ig19-m02",
       "ig19-m03",
       "ig19-m06",
@@ -190,6 +197,9 @@
       "ig19-m10",
       "ig19-m11",
       "ig19-m12",
+      "ig19-m13",
+      "ig19-m14",
+      "ig19-m15",
       "ig31-m03",
       "ig31-m04",
       "ig31-m05",
@@ -197,6 +207,9 @@
       "ig31-m11",
       "ig31-m10",
       "ig31-m12",
+      "ig31-m13",
+      "ig31-m14",
+      "ig31-m15",
       "sk-cardiac-m02",
       "sk-cardiac-m04",
       "sk-cardiac-m06",
@@ -204,33 +217,39 @@
       "sk-cardiac-m11",
       "sk-cardiac-m12",
       "sk-cardiac-m09",
+      "sk-cardiac-m13",
+      "sk-cardiac-m14",
+      "sk-cardiac-m15",
       "sk-infusion-m02",
       "sk-infusion-m04",
       "sk-infusion-m05",
       "sk-infusion-m08",
-      "sk-infusion-m06"
+      "sk-infusion-m06",
+      "sk-infusion-m09",
+      "sk-infusion-m10",
+      "sk-infusion-m11"
     ],
     "newIds": [
-      "ig16-m09",
-      "ig16-m10",
-      "ig16-m11",
-      "ig16-m12",
-      "ig16-x03",
-      "ig19-m09",
-      "ig19-m10",
-      "ig19-m11",
-      "ig19-m12",
-      "ig19-x03",
-      "ig31-m09",
-      "ig31-m11",
-      "ig31-m10",
-      "ig31-m12",
-      "ig31-x03",
-      "sk-cardiac-m10",
-      "sk-cardiac-m11",
-      "sk-cardiac-x03",
-      "sk-cardiac-m12",
-      "sk-cardiac-m09"
+      "ig16-m13",
+      "ig16-m14",
+      "ig16-m15",
+      "ig16-x04",
+      "ig19-m13",
+      "ig19-x04",
+      "ig19-m14",
+      "ig19-m15",
+      "ig31-m13",
+      "ig31-m14",
+      "ig31-m15",
+      "ig31-x04",
+      "sk-cardiac-m13",
+      "sk-cardiac-m14",
+      "sk-cardiac-m15",
+      "sk-cardiac-x04",
+      "sk-infusion-m09",
+      "sk-infusion-m10",
+      "sk-infusion-m11",
+      "sk-infusion-x03"
     ],
     "newCount": 20
   },
@@ -1051,7 +1070,8 @@
           "caseGroup": "ig16-case5",
           "caseStep": 1,
           "objective": "Identify the five cardinal signs of inflammation",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig16-m10",
@@ -1145,7 +1165,8 @@
           "caseGroup": "ig16-case5",
           "caseStep": 2,
           "objective": "Describe the three stages of the inflammatory response",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig16-m11",
@@ -1229,7 +1250,8 @@
           "caseGroup": "ig16-case6",
           "caseStep": 1,
           "objective": "Distinguish active from passive immunity using examples",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig16-m12",
@@ -1293,7 +1315,8 @@
           "caseGroup": "ig16-case6",
           "caseStep": 2,
           "objective": "Compare innate and adaptive immunity",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig16-x03",
@@ -1358,7 +1381,354 @@
           "caseGroup": "ig16-case6",
           "caseStep": 3,
           "objective": "Distinguish active from passive immunity using examples",
-          "new": true
+          "new": false,
+          "addedBatch": 1
+        },
+        {
+          "id": "ig16-m13",
+          "type": "matrix",
+          "scenario": "A nurse reviews immune events described in five client records.",
+          "stem": "For each event, indicate whether it is part of innate immunity or adaptive immunity.",
+          "columns": [
+            "Innate immunity",
+            "Adaptive immunity"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Neutrophils engulf bacteria at a splinter wound in the right thumb within hours of the injury",
+              "answer": "Innate immunity",
+              "rationale": "Phagocytosis by neutrophils is part of innate immunity: rapid, broad, and ready without prior exposure. Engulfing bacteria sounds targeted, but the same response meets any harmful material."
+            },
+            {
+              "id": "r2",
+              "text": "Plasma cells release antibodies that bind one specific antigen 2 weeks after a vaccine",
+              "answer": "Adaptive immunity",
+              "rationale": "B lymphocytes become antibody producing plasma cells when activated by an antigen. This is antibody mediated (humoral) immunity, part of the adaptive system."
+            },
+            {
+              "id": "r3",
+              "text": "T lymphocytes target lung cells that are infected with a virus",
+              "answer": "Adaptive immunity",
+              "rationale": "Cell mediated immunity uses T lymphocytes to target infected or abnormal cells. It is part of the adaptive system."
+            },
+            {
+              "id": "r4",
+              "text": "Redness and swelling develop at a vaccine injection site in the left upper arm within 6 hours",
+              "answer": "Innate immunity",
+              "rationale": "Inflammation is part of innate immunity, even when the trigger is a vaccine. The antibodies the vaccine is meant to produce come later, from the adaptive system."
+            },
+            {
+              "id": "r5",
+              "text": "A second exposure to a virus produces a faster, stronger response than the first exposure did",
+              "answer": "Adaptive immunity",
+              "rationale": "Memory cells that allow a faster, stronger response on a later exposure are the key feature of adaptive immunity. Innate responses do not build memory."
+            }
+          ],
+          "answer": {
+            "r1": "Innate immunity",
+            "r2": "Adaptive immunity",
+            "r3": "Adaptive immunity",
+            "r4": "Innate immunity",
+            "r5": "Adaptive immunity"
+          },
+          "scoring": "0/1",
+          "takeaway": "Innate immunity is present at birth, rapid, and broad, and it includes inflammation and phagocytosis by neutrophils and macrophages. Adaptive immunity develops through exposure to antigens, uses B and T lymphocytes, targets specific threats, and creates memory.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Sort by the response, not by the trigger. Inflammation and engulfing by phagocytes are innate, even at a vaccine site. B cells, plasma cells, antibodies, T cells, and memory are adaptive.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the response in each row",
+                "detail": "Phagocytosis, antibodies, T lymphocytes, inflammation, and memory."
+              },
+              {
+                "action": "Sort the innate rows",
+                "detail": "Neutrophils engulfing bacteria and redness with swelling at the injection site are innate."
+              },
+              {
+                "action": "Sort the lymphocytes",
+                "detail": "Plasma cells from B lymphocytes and T lymphocytes are adaptive."
+              },
+              {
+                "action": "Catch the trap row",
+                "detail": "The word vaccine pulls toward adaptive, but redness and swelling within hours are inflammation."
+              }
+            ],
+            "verdict": "Neutrophils engulfing bacteria and injection site inflammation: innate. Plasma cell antibodies, T lymphocytes, and a faster second response: adaptive."
+          },
+          "caseGroup": "ig16-case7",
+          "caseStep": 1,
+          "objective": "Compare innate and adaptive immunity",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "ig16-m14",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A client scraped the right knee on gravel 1 hour ago. The skin around the scrape is warm and red because [[1]].\n\nOver the next hours, white blood cells move through the vessel walls into the knee tissue. This is the [[2]].\n\nThe cells that engulf the harmful material and dead cells are [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "blood vessels at the site dilate and blood flow increases",
+                  "correct": true,
+                  "rationale": "In the vascular response, vessels dilate and blood flow to the area increases, which produces warmth and redness."
+                },
+                {
+                  "id": "B",
+                  "text": "fluid moves out of the vessels into the tissue",
+                  "correct": false,
+                  "rationale": "This is part of the vascular response, but it causes swelling, not warmth and redness."
+                },
+                {
+                  "id": "C",
+                  "text": "white blood cells gather in the tissue at the site",
+                  "correct": false,
+                  "rationale": "White blood cell migration is the cellular response. It does not produce the warmth and redness."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "vascular response",
+                  "correct": false,
+                  "rationale": "The vascular response is vessel dilation and fluid shift. White blood cells moving into the tissue comes next."
+                },
+                {
+                  "id": "B",
+                  "text": "cellular response",
+                  "correct": true,
+                  "rationale": "In the cellular response, white blood cells migrate through the vessel walls and engulf harmful material, dead cells, and pathogens."
+                },
+                {
+                  "id": "C",
+                  "text": "tissue repair stage",
+                  "correct": false,
+                  "rationale": "Tissue repair is healing by regeneration, scar formation, or both. It follows the cellular response."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "neutrophils and eosinophils",
+                  "correct": false,
+                  "rationale": "Neutrophils are phagocytes, but eosinophils defend against parasites and mediate allergic responses."
+                },
+                {
+                  "id": "B",
+                  "text": "basophils and macrophages",
+                  "correct": false,
+                  "rationale": "Macrophages are phagocytes, but basophils release histamine. They do not engulf material."
+                },
+                {
+                  "id": "C",
+                  "text": "neutrophils and macrophages",
+                  "correct": true,
+                  "rationale": "Phagocytosis, engulfing and digesting harmful material, is performed by neutrophils and macrophages."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "B",
+            "3": "C"
+          },
+          "scoring": "0/1",
+          "takeaway": "Vascular response: vessels dilate (warmth, redness) and fluid shifts out (swelling). Cellular response: white blood cells migrate in, and neutrophils and macrophages engulf harmful material. Tissue repair follows.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Tie each finding to its mechanism. Warmth and redness come from more blood flow, swelling from fluid leaving the vessels, and engulfing from phagocytes.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Blank 1",
+                "detail": "Warmth and redness mean more blood at the site. Fluid shift explains swelling instead."
+              },
+              {
+                "action": "Blank 2",
+                "detail": "White blood cells crossing the vessel walls into the tissue is the cellular response."
+              },
+              {
+                "action": "Blank 3",
+                "detail": "Each pair holds one phagocyte. Only neutrophils and macrophages are both phagocytes; eosinophils fight parasites and allergens, and basophils release histamine."
+              }
+            ],
+            "verdict": "Vessels dilate and blood flow increases; cellular response; neutrophils and macrophages."
+          },
+          "caseGroup": "ig16-case7",
+          "caseStep": 2,
+          "objective": "Describe the three stages of the inflammatory response",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "ig16-m15",
+          "type": "multiple_choice",
+          "stem": "A client sprained the left ankle 2 hours ago. The skin is intact. Left ankle circumference is 3 cm larger than the right, and the client rates the pain 5 of 10. The client asks, \"Why does my body make it swell like this? Isn't the swelling just more damage?\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"The swelling is damage from the injury itself. Your body starts its healing response once the swelling goes down.\"",
+              "correct": false,
+              "rationale": "Swelling is part of the body's response, not a separate injury, and the response does not wait for the swelling to resolve."
+            },
+            {
+              "id": "B",
+              "text": "\"Widened vessels let white blood cells crowd into the ankle tissue, and those cells are what make up the swelling.\"",
+              "correct": false,
+              "rationale": "White blood cells do migrate into the area in the cellular response, but the swelling comes from fluid moving out of the vessels."
+            },
+            {
+              "id": "C",
+              "text": "\"Widened vessels bring extra blood into the ankle, and the extra blood inside the vessels is what makes it swell.\"",
+              "correct": false,
+              "rationale": "Blood flow does increase, but that causes warmth and redness. The swelling is fluid that has moved out of the vessels into the tissue."
+            },
+            {
+              "id": "D",
+              "text": "\"Widened vessels let fluid move into the ankle tissue. The fluid causes the swelling and brings in immune cells.\"",
+              "correct": true,
+              "rationale": "In the vascular response, vessels dilate and fluid moves into the tissue, causing swelling and helping deliver immune cells to the injury."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "In the vascular response, vessels dilate and fluid moves from the vessels into the tissue. The fluid causes swelling and helps deliver immune cells to the injury.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Three options start with widened vessels. Ask what actually makes up the swelling: fluid in the tissue, blood in the vessels, or cells.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts",
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Name the stage",
+                "detail": "Two hours after a sprain, with swelling: the vascular response."
+              },
+              {
+                "action": "Reject blood inside the vessels",
+                "detail": "More blood flow explains warmth and redness, not swelling."
+              },
+              {
+                "action": "Reject swelling as damage",
+                "detail": "Swelling is part of the response, not a separate injury."
+              },
+              {
+                "action": "Compare the remaining widened vessel options",
+                "detail": "Swelling is fluid in the tissue, not white blood cells."
+              }
+            ],
+            "verdict": "Fluid from dilated vessels causes the swelling and helps bring immune cells in."
+          },
+          "caseGroup": "ig16-case8",
+          "caseStep": 1,
+          "objective": "Describe the three stages of the inflammatory response",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "ig16-x04",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client takes an immunosuppressant daily after a kidney transplant. The client has a 2 cm abrasion on the right shin from a fall 2 days ago. Findings: redness 0.2 cm from the wound edge, no swelling, pain 1 of 10, walks without a limp, oral temperature 36.9 °C (reference 36.1 to 37.2 °C). The client says, \"It barely looks irritated, so I can stop the daily wound checks you taught me.\" Which response by the nurse is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Your medication can hide signs of infection. Check the wound daily and report new or spreading redness, drainage, or pain, even without fever.\"",
+              "correct": true,
+              "rationale": "An immunosuppressant affects immune function, so the signs of inflammation and infection can be muted, and infection can be present without fever when immunity is decreased. Daily checks continue, and worsening local findings are reported."
+            },
+            {
+              "id": "B",
+              "text": "\"Keep checking the wound every day, and call the clinic if your temperature rises above 37.2 °C, since fever is the clearest sign of infection.\"",
+              "correct": false,
+              "rationale": "Daily checks are right, but this plan waits for fever. Infection can be present without fever, especially when immunity is decreased, as it is with this client's medication."
+            },
+            {
+              "id": "C",
+              "text": "\"These findings are mild and your temperature is in the reference range, so you can stop the checks once the redness fades.\"",
+              "correct": false,
+              "rationale": "For a client with a typical immune response, mild signs with a temperature in range are reassuring. This client's medication means mild signs cannot be taken at face value."
+            },
+            {
+              "id": "D",
+              "text": "\"Your medication lowers your immune response, so these mild findings mean an infection has already started in the wound.\"",
+              "correct": false,
+              "rationale": "The first half is right. Mild findings do not establish infection, and the nurse does not label a cause from these findings."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Medications that suppress immunity can blunt the cardinal signs, and infection can be present without fever when immunity is decreased. Teach daily checks and reporting of new or spreading local findings, not waiting for fever.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two options keep the daily checks. The deciding cue is the immunosuppressant: infection can be present without fever, so a plan that waits for fever can miss it.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Duplicate facts"
+            ],
+            "steps": [
+              {
+                "action": "Find the cue",
+                "detail": "Daily immunosuppressant after a transplant."
+              },
+              {
+                "action": "Reject stopping the checks",
+                "detail": "Mild findings are not reassuring when the immune response is muted."
+              },
+              {
+                "action": "Reject the overreach",
+                "detail": "Mild findings do not prove infection has started."
+              },
+              {
+                "action": "Compare the two daily check plans",
+                "detail": "One waits for fever; the other reports local changes even without fever."
+              }
+            ],
+            "verdict": "Check daily and report local changes even without fever."
+          },
+          "caseGroup": "ig16-case8",
+          "caseStep": 2,
+          "objective": "Identify the five cardinal signs of inflammation",
+          "new": true,
+          "addedBatch": 2
         }
       ]
     },
@@ -2292,7 +2662,8 @@
           "caseGroup": "ig19-case5",
           "caseStep": 1,
           "objective": "Differentiate inflammation from infection",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig19-m10",
@@ -2376,7 +2747,8 @@
           "caseGroup": "ig19-case5",
           "caseStep": 2,
           "objective": "Differentiate inflammation from infection",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig19-m11",
@@ -2446,7 +2818,8 @@
           "caseGroup": "ig19-case6",
           "caseStep": 1,
           "objective": "Connect immune responses with nursing assessment",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig19-m12",
@@ -2533,7 +2906,8 @@
           "caseGroup": "ig19-case6",
           "caseStep": 2,
           "objective": "Connect immune responses with nursing assessment",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig19-x03",
@@ -2598,7 +2972,454 @@
           "caseGroup": "ig19-case6",
           "caseStep": 3,
           "objective": "Connect immune responses with nursing assessment",
-          "new": true
+          "new": false,
+          "addedBatch": 1
+        },
+        {
+          "id": "ig19-m13",
+          "type": "matrix",
+          "scenario": "A nurse reviews findings for five clients on a medical unit. The oral temperature reference range is 36.1 to 37.2 °C.",
+          "stem": "For each finding, indicate whether it is best described as inflammation without infection, colonization, or infection.",
+          "columns": [
+            "Inflammation without infection",
+            "Colonization",
+            "Infection"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "A nasal swab taken on admission grows MRSA. The nose shows no redness, swelling, or drainage, and oral temperature is 36.8 °C.",
+              "answer": "Colonization",
+              "rationale": "Colonization means microorganisms are present in tissues without causing symptomatic disease. MRSA was found, but there are no signs at the site and the temperature is inside the range."
+            },
+            {
+              "id": "r2",
+              "text": "Sneezing, clear nasal drainage, and swollen nasal tissue return each spring when pollen counts rise. Oral temperature is 36.7 °C.",
+              "answer": "Inflammation without infection",
+              "rationale": "Inflammation can follow exposure to an irritant. Allergic rhinitis is an example of inflammation that occurs without infection."
+            },
+            {
+              "id": "r3",
+              "text": "A sore throat with swollen, tender lymph nodes in the neck. Oral temperature is 38.6 °C.",
+              "answer": "Infection",
+              "rationale": "Pharyngitis and lymphadenopathy often accompany infection, and a temperature above the reference range adds a sign of systemic involvement."
+            },
+            {
+              "id": "r4",
+              "text": "A urine culture from a long term urinary catheter grows bacteria. The urine is clear, the client reports no pain, and oral temperature is 36.9 °C.",
+              "answer": "Colonization",
+              "rationale": "Bacteria are present, but nothing in the stem shows symptomatic disease. An organism on a culture does not by itself establish infection."
+            },
+            {
+              "id": "r5",
+              "text": "A wound on the left lower leg has redness that spread from 2 to 6 cm since yesterday and pus on the dressing. The wound culture grows MRSA. Oral temperature is 37.0 °C.",
+              "answer": "Infection",
+              "rationale": "Spreading redness and pus are signs of local infection. A temperature inside the range does not rule infection out."
+            }
+          ],
+          "answer": {
+            "r1": "Colonization",
+            "r2": "Inflammation without infection",
+            "r3": "Infection",
+            "r4": "Colonization",
+            "r5": "Infection"
+          },
+          "scoring": "0/1",
+          "takeaway": "Finding an organism is not the same as infection. Colonization has an organism and no symptomatic disease; infection has an organism that multiplies and causes signs; inflammation can occur with no organism at all.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "MRSA appears twice and a normal temperature appears four times. Neither settles a row. Decide each row by whether the site shows signs of disease.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Separate organism from disease",
+                "detail": "Rows 1 and 4 have an organism and no signs: colonization."
+              },
+              {
+                "action": "Find the trigger without an organism",
+                "detail": "Row 2 follows pollen exposure: inflammation without infection."
+              },
+              {
+                "action": "Look for signs of disease",
+                "detail": "Row 3 has lymph node swelling and a temperature above range; row 5 has spreading redness and pus: infection."
+              }
+            ],
+            "verdict": "Rows 1 and 4 are colonization. Row 2 is inflammation without infection. Rows 3 and 5 are infection."
+          },
+          "caseGroup": "ig19-case7",
+          "caseStep": 1,
+          "objective": "Differentiate inflammation from infection",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "ig19-x04",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client was admitted yesterday with acute pancreatitis. Current findings: oral temperature 38.4 °C (reference range 36.1 to 37.2 °C), heart rate 112 beats/min (reference range 60 to 100 beats/min), respiratory rate 22 breaths/min (reference range 12 to 20 breaths/min), and white blood cell (WBC) count 13,500 per mm3 (reference range 5000 to 10,000 per mm3). No source of infection has been found. Blood cultures drawn on admission show no growth so far. The client is alert and oriented, as on admission, oxygen saturation is 97% (reference range 95 to 100%), and urine output is 60 mL/hr (reference range at least 30 mL/hr). A new nurse says, \"This meets SIRS criteria, so the client has sepsis.\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"SIRS criteria are met here, so sepsis is present and the antimicrobial is given within 1 hour.\"",
+              "correct": false,
+              "rationale": "SIRS describes a widespread inflammatory response and can occur with noninfectious causes such as pancreatitis. SIRS alone does not establish sepsis."
+            },
+            {
+              "id": "B",
+              "text": "\"This is widespread inflammation. Sepsis also needs infection with organ dysfunction, not shown here.\"",
+              "correct": true,
+              "rationale": "Sepsis requires infection plus organ dysfunction. Mentation matches admission, oxygen saturation and urine output are inside their ranges, and no infection source has been found."
+            },
+            {
+              "id": "C",
+              "text": "\"Sepsis can be ruled out, because no organism has been found in the client's blood cultures at this point.\"",
+              "correct": false,
+              "rationale": "An organism does not need to be found in the bloodstream for sepsis to be present. The diagnosis is clinical, based on signs of organ dysfunction."
+            },
+            {
+              "id": "D",
+              "text": "\"These findings point to early sepsis, because the respiratory rate of 22 breaths/min is now above 20 breaths/min.\"",
+              "correct": false,
+              "rationale": "A respiratory rate above 20 breaths/min is concerning and is trended. Alone it does not show organ dysfunction when mentation, oxygen saturation, and urine output are inside their ranges."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "SIRS is inflammation spread through the body, and pancreatitis can cause it without infection. Sepsis needs infection plus organ dysfunction, so look for new confusion, poor oxygenation, or falling urine output.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Option D is the pull: a respiratory rate above 20 breaths/min is a sepsis cue on the slides. The deciding cue is that every marker of organ function in the stem, mentation, oxygen saturation, and urine output, is at baseline or inside its range.",
+          "elimination": {
+            "strategies": [
+              "Eliminate absolutes",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the cause",
+                "detail": "Pancreatitis is a noninfectious cause of SIRS."
+              },
+              {
+                "action": "Drop the absolute",
+                "detail": "\"Ruled out\" ignores that sepsis is a clinical diagnosis."
+              },
+              {
+                "action": "Test for organ dysfunction",
+                "detail": "Mentation at baseline, oxygen saturation 97%, urine output 60 mL/hr: none shown."
+              },
+              {
+                "action": "Weigh the respiratory rate",
+                "detail": "It is concerning and is trended, but one number does not establish sepsis."
+              }
+            ],
+            "verdict": "SIRS alone is not sepsis; sepsis needs infection with organ dysfunction, and none is shown."
+          },
+          "caseGroup": "ig19-case7",
+          "caseStep": 2,
+          "objective": "Differentiate inflammation from infection",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "ig19-m14",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A client has a draining wound on the right foot that was cultured 3 days ago. Today the white blood cell (WBC) count is 16,800 per mm3 (reference range 5000 to 10,000 per mm3) and band neutrophils are 12% (reference range up to 5%). Oral temperature is 37.0 °C (reference range 36.1 to 37.2 °C).\n\nThe rise in band neutrophils shows [[1]].\n\nThis matters because [[2]].\n\nThe nurse uses these results by [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "the marrow releasing immature neutrophils because it cannot keep up with a continuing infection",
+                  "correct": true,
+                  "rationale": "A left shift means more immature band neutrophils are circulating because the marrow cannot keep up with a continuing infection."
+                },
+                {
+                  "id": "B",
+                  "text": "adaptive immunity forming memory cells that target the organism in the wound",
+                  "correct": false,
+                  "rationale": "Memory cells come from B and T lymphocytes. Band cells are immature neutrophils, part of innate defense."
+                },
+                {
+                  "id": "C",
+                  "text": "an allergic response, with cells that defend against parasites rising",
+                  "correct": false,
+                  "rationale": "Eosinophils rise in allergic responses and defend against parasites. The result given is bands, not eosinophils."
+                },
+                {
+                  "id": "D",
+                  "text": "the expected pattern of the tissue repair stage as the wound heals",
+                  "correct": false,
+                  "rationale": "Tissue repair is the last stage. A rise in immature neutrophils signals continuing infection, not repair."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "immature neutrophils cannot perform phagocytosis, so fewer cells can engulf the organism",
+                  "correct": true,
+                  "rationale": "Only mature neutrophils can phagocytose. More immature cells in circulation means less ability to engulf and destroy the organism, and a left shift is seen in sepsis."
+                },
+                {
+                  "id": "B",
+                  "text": "band neutrophils produce the antibodies that bind to the organism in the wound",
+                  "correct": false,
+                  "rationale": "Antibodies come from plasma cells, which develop from B lymphocytes. Neutrophils do not make antibodies."
+                },
+                {
+                  "id": "C",
+                  "text": "band neutrophils release histamine that dilates the vessels around the wound",
+                  "correct": false,
+                  "rationale": "Basophils and mast cells release histamine. This describes the vascular response, not a left shift."
+                },
+                {
+                  "id": "D",
+                  "text": "immature neutrophils live longer than mature ones and keep the response going",
+                  "correct": false,
+                  "rationale": "Nothing in the sources supports this. The concern with bands is that they cannot phagocytose."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "interpreting them together with the wound findings and the client's baseline",
+                  "correct": true,
+                  "rationale": "Results are interpreted together with the client's assessment and compared with baseline."
+                },
+                {
+                  "id": "B",
+                  "text": "waiting until the temperature rises above 37.2 °C before acting on them",
+                  "correct": false,
+                  "rationale": "Infection can be present without fever, and the nurse does not rely on fever alone."
+                },
+                {
+                  "id": "C",
+                  "text": "using the WBC count alone to decide whether an infection is present",
+                  "correct": false,
+                  "rationale": "The WBC count adds information about the immune response, but no single result replaces the assessment."
+                },
+                {
+                  "id": "D",
+                  "text": "repeating the count in 24 hours before reporting, because one result can be a laboratory error",
+                  "correct": false,
+                  "rationale": "A rise in bands signals that the marrow cannot keep up. Waiting a day to repeat the count delays the response, and the result is read with the wound findings now."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "A",
+            "3": "A"
+          },
+          "scoring": "0/1",
+          "takeaway": "A left shift means the marrow is sending out immature neutrophils that cannot phagocytose, a sign the body is losing ground to a continuing infection. Read the results now with the wound and the baseline, not alone, not by temperature, and not after a day of waiting.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Each wrong option in blanks 1 and 2 describes a real immune cell or stage, just not the band neutrophil. Match the result to the cell it names: bands are immature neutrophils.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the cell",
+                "detail": "Bands are immature neutrophils."
+              },
+              {
+                "action": "Recall what neutrophils do",
+                "detail": "Mature neutrophils engulf bacteria; immature ones cannot."
+              },
+              {
+                "action": "Reject the borrowed functions",
+                "detail": "Antibodies belong to plasma cells, histamine to basophils and mast cells, memory to lymphocytes."
+              },
+              {
+                "action": "Place the result in the assessment",
+                "detail": "Interpret with the wound findings and baseline, without waiting for fever."
+              }
+            ],
+            "verdict": "The marrow is releasing immature neutrophils for a continuing infection; immature cells cannot phagocytose; interpret with the wound findings and baseline."
+          },
+          "caseGroup": "ig19-case8",
+          "caseStep": 1,
+          "objective": "Connect immune responses with nursing assessment",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "ig19-m15",
+          "type": "bowtie",
+          "scenario": "A client was admitted 2 days ago with an infected wound on the left lower leg. At 0800 the client was alert and oriented, respiratory rate was 18 breaths/min, and heart rate was 88 beats/min. At 1400 the client is restless and asks where they are. Respiratory rate is 28 breaths/min (reference range 12 to 20 breaths/min), heart rate is 118 beats/min (reference range 60 to 100 beats/min), and urine output is 40 mL over the past 2 hours (reference range at least 30 mL/hr). Oral temperature is 37.1 °C (reference range 36.1 to 37.2 °C).",
+          "stem": "Complete the diagram by selecting 2 actions the nurse takes, the 1 condition the client is most likely experiencing, and 2 parameters the nurse monitors.",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Notify the provider or activate the rapid response process now",
+                  "correct": true,
+                  "rationale": "When sepsis is suspected, the nurse escalates immediately to the provider or the rapid response process."
+                },
+                {
+                  "id": "B",
+                  "text": "Reassess breathing, circulation, mental status, and vital signs",
+                  "correct": true,
+                  "rationale": "Reassessing breathing, circulation, mentation, and vital signs is an immediate action when sepsis is suspected."
+                },
+                {
+                  "id": "C",
+                  "text": "Recheck the temperature in 1 hour and escalate if it is above 37.2 °C",
+                  "correct": false,
+                  "rationale": "The nurse does not wait for fever. New confusion, a rising respiratory rate, and falling urine output are already present."
+                },
+                {
+                  "id": "D",
+                  "text": "Mark the edge of the wound redness and compare it at the next dressing change",
+                  "correct": false,
+                  "rationale": "Comparing the site with baseline is right in general, but the changes now are in breathing, mentation, and urine output, and they cannot wait."
+                }
+              ]
+            },
+            "condition": {
+              "label": "The problem",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Possible sepsis arising from the infected leg wound",
+                  "correct": true,
+                  "rationale": "An infected wound plus new confusion, a rising respiratory rate, and urine output below range are early cues of sepsis."
+                },
+                {
+                  "id": "B",
+                  "text": "Local wound infection without effects beyond the leg",
+                  "correct": false,
+                  "rationale": "The wound is infected, but new confusion and falling urine output show effects beyond the leg."
+                },
+                {
+                  "id": "C",
+                  "text": "Inflammation at the wound without any infection",
+                  "correct": false,
+                  "rationale": "The stem states the wound is infected, and the new findings are systemic."
+                },
+                {
+                  "id": "D",
+                  "text": "Anxiety about the hospital stay causing restlessness",
+                  "correct": false,
+                  "rationale": "Anxiety does not explain urine output below its reference range. New confusion is compared with the 0800 baseline and treated as a sepsis cue."
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to monitor",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Mental status compared with the 0800 baseline",
+                  "correct": true,
+                  "rationale": "Sudden changes in mental status may indicate sepsis and are compared with baseline behavior."
+                },
+                {
+                  "id": "B",
+                  "text": "Urine output each hour",
+                  "correct": true,
+                  "rationale": "Urine output is a key marker of adequate perfusion and is tracked during suspected sepsis."
+                },
+                {
+                  "id": "C",
+                  "text": "Oral temperature as the main sign of change",
+                  "correct": false,
+                  "rationale": "Temperature is one finding. The nurse judges the whole trend and does not rely on fever alone."
+                },
+                {
+                  "id": "D",
+                  "text": "Pain rating at the wound on the left lower leg",
+                  "correct": false,
+                  "rationale": "Pain at the site matters, but the key monitoring areas in suspected sepsis are alertness, blood pressure, perfusion, breathing, and urine output."
+                }
+              ]
+            }
+          },
+          "answer": {
+            "actions": [
+              "A",
+              "B"
+            ],
+            "condition": [
+              "A"
+            ],
+            "parameters": [
+              "A",
+              "B"
+            ]
+          },
+          "scoring": "0/1",
+          "takeaway": "Sepsis is an immune response to infection that has become uncontrolled and disrupts organ function. New confusion, faster breathing, and falling urine output are the early cues, and a temperature inside the range does not delay escalation.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The temperature inside the range is the trap. Name the condition from the changes since 0800: mentation, respiratory rate, heart rate, and urine output. Actions and parameters then follow from suspected sepsis.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Compare with 0800",
+                "detail": "Alert to restless and disoriented; respiratory rate 18 to 28; heart rate 88 to 118; urine output 20 mL/hr."
+              },
+              {
+                "action": "Name the condition",
+                "detail": "An infected wound with organ dysfunction cues points to possible sepsis."
+              },
+              {
+                "action": "Choose actions",
+                "detail": "Escalate now and reassess breathing, circulation, and mentation."
+              },
+              {
+                "action": "Choose parameters",
+                "detail": "Mentation against baseline and hourly urine output."
+              }
+            ],
+            "verdict": "Possible sepsis; escalate now and reassess breathing, circulation, mentation, and vital signs; monitor mental status against baseline and hourly urine output."
+          },
+          "caseGroup": "ig19-case8",
+          "caseStep": 2,
+          "objective": "Connect immune responses with nursing assessment",
+          "new": true,
+          "addedBatch": 2
         }
       ]
     },
@@ -2914,7 +3735,7 @@
             {
               "id": "C",
               "text": "Obtain the ordered specimens and check that the intravenous access works",
-              "rationale": "Ordered specimens are collected before the antimicrobial is started, and working access lets treatment begin without delay.",
+              "rationale": "Ordered specimens are collected before the antimicrobial is started when that does not delay it, and working access lets treatment begin without delay.",
               "position": 3
             },
             {
@@ -2931,7 +3752,7 @@
             "A"
           ],
           "scoring": "0/1",
-          "takeaway": "When sepsis is suspected: escalate immediately, reassess breathing, circulation, mentation, and vital signs, obtain ordered specimens and check intravenous access, then give prescribed treatment promptly and reassess.",
+          "takeaway": "When sepsis is suspected: escalate immediately, reassess breathing, circulation, mentation, and vital signs, obtain ordered specimens and check intravenous access, then give prescribed treatment promptly and reassess. Specimens come before the antimicrobial only when collecting them does not delay it.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
@@ -3335,7 +4156,7 @@
             }
           ],
           "answer": "A",
-          "takeaway": "Culture and susceptibility identifies the organism and guides treatment. Collect the specimen before the antimicrobial is started, and do not hold treatment for the result.",
+          "takeaway": "Culture and susceptibility identifies the organism and guides treatment. Collect the specimen before the antimicrobial is started when that causes no meaningful delay, and do not hold treatment for the result. In probable sepsis the antimicrobial is not delayed for cultures.",
           "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
           "coverageDetail": {
             "ppt": "partial",
@@ -3463,7 +4284,8 @@
           "caseGroup": "ig31-case5",
           "caseStep": 1,
           "objective": "Explain how infection spreads to a susceptible person",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig31-m11",
@@ -3558,7 +4380,8 @@
           "caseGroup": "ig31-case5",
           "caseStep": 2,
           "objective": "Assess for infection and recognize clinical deterioration",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig31-m10",
@@ -3640,7 +4463,8 @@
           "caseGroup": "ig31-case5",
           "caseStep": 3,
           "objective": "Explain the nurse's role in testing, treatment, and teaching",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig31-m12",
@@ -3755,7 +4579,8 @@
           "caseGroup": "ig31-case6",
           "caseStep": 1,
           "objective": "Identify patient factors that increase infection risk",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "ig31-x03",
@@ -3828,7 +4653,381 @@
           "caseGroup": "ig31-case6",
           "caseStep": 2,
           "objective": "Recognize early cues of sepsis and septic shock",
-          "new": true
+          "new": false,
+          "addedBatch": 1
+        },
+        {
+          "id": "ig31-m13",
+          "type": "matrix",
+          "scenario": "A nurse on a medical unit cares for several clients with infections during one shift.",
+          "stem": "For each situation, indicate the route by which the organism reaches the next person.",
+          "columns": [
+            "Contact",
+            "Droplet",
+            "Airborne"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "A client with a draining wound on the left leg sits in a wheelchair, and a second client uses the same wheelchair before it is cleaned",
+              "answer": "Contact",
+              "rationale": "The organism travels on a contaminated item. Shared equipment touched by wound drainage is a contact route."
+            },
+            {
+              "id": "r2",
+              "text": "A client with a respiratory infection coughs while a visitor sits at the bedside, and droplets reach the visitor's nose and mouth",
+              "answer": "Droplet",
+              "rationale": "Respiratory droplets reach the mucous membranes of a person nearby."
+            },
+            {
+              "id": "r3",
+              "text": "A client with a respiratory infection coughs into both hands, then presses the call light, which the nurse touches next without gloves",
+              "answer": "Contact",
+              "rationale": "The organism started in a cough, but it reached the nurse on a contaminated item. The route is the way it reaches the next person, and here that is touch."
+            },
+            {
+              "id": "r4",
+              "text": "A client with a cough leaves the room for a test. A staff member who enters 30 minutes later, touches nothing, and never meets the client develops the same infection",
+              "answer": "Airborne",
+              "rationale": "The client was gone and nothing was touched. Only particles that stay suspended in the air can explain the spread."
+            },
+            {
+              "id": "r5",
+              "text": "A client sneezes during an assessment, and droplets land in the nurse's eyes",
+              "answer": "Droplet",
+              "rationale": "The eyes are a mucous membrane. Droplets that reach a nearby person's mucous membranes spread by the droplet route."
+            },
+            {
+              "id": "r6",
+              "text": "A client with a respiratory infection is placed in a shared room. The roommate, whose bed is across the room and who never comes near the client or touches anything the client used, becomes ill with the same infection",
+              "answer": "Airborne",
+              "rationale": "Droplets travel short distances, and there was no contact. Spread across a room points to particles suspended in the air."
+            }
+          ],
+          "answer": {
+            "r1": "Contact",
+            "r2": "Droplet",
+            "r3": "Contact",
+            "r4": "Airborne",
+            "r5": "Droplet",
+            "r6": "Airborne"
+          },
+          "scoring": "0/1",
+          "takeaway": "Contact spreads by touching a person or a contaminated item, droplet by respiratory droplets reaching nearby mucous membranes, and airborne by particles that stay suspended in the air. Name the route by how the organism reaches the next person, not by where it came from.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "A cough does not make the route droplet. Ask how the organism reached the next person: by touch, by droplets at close range, or by particles still in the air.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Look for touch",
+                "detail": "The shared wheelchair and the call light are both contaminated items."
+              },
+              {
+                "action": "Look for close range and mucous membranes",
+                "detail": "The visitor's nose and mouth, the nurse's eyes."
+              },
+              {
+                "action": "Look for distance or time",
+                "detail": "A person who enters 30 minutes later and touches nothing, or one across the room who never comes near, points to airborne spread."
+              },
+              {
+                "action": "Watch the trap",
+                "detail": "The cough into the hands spreads by contact."
+              }
+            ],
+            "verdict": "Contact; droplet; contact; airborne; droplet; airborne."
+          },
+          "caseGroup": "ig31-case7",
+          "caseStep": 1,
+          "objective": "Explain how infection spreads to a susceptible person",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "ig31-m14",
+          "type": "sata",
+          "stem": "A client, 78 years old, is admitted from the emergency department with a cough and suspected pneumonia. The client lives at home with a family member. Oral temperature 37.0 °C (reference 36.1 to 37.2 °C), heart rate 96 beats per minute (reference 60 to 100 beats per minute), respiratory rate 24 breaths per minute (reference 12 to 20 breaths per minute), oxygen saturation 93% on room air (reference 95 to 100%). Which actions belong in the nurse's admission infection assessment? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ask when the cough started and how it has changed since then",
+              "correct": true,
+              "rationale": "Symptoms and their onset are part of the history in an infection assessment."
+            },
+            {
+              "id": "B",
+              "text": "Ask whether anyone the client lives or works with has been ill recently",
+              "correct": true,
+              "rationale": "Exposures are part of the history and can point to the source."
+            },
+            {
+              "id": "C",
+              "text": "Ask whether any devices are in place, such as a urinary catheter used at home",
+              "correct": true,
+              "rationale": "Devices are part of the history. They bypass natural barriers and can be a source of infection."
+            },
+            {
+              "id": "D",
+              "text": "Ask the family member how the client's alertness and activity compare with usual",
+              "correct": true,
+              "rationale": "Findings are compared with the client's baseline. Changes in behavior and function matter, and the family member knows what is usual."
+            },
+            {
+              "id": "E",
+              "text": "Obtain a sputum specimen for culture before finishing the history, so the organism is identified quickly",
+              "correct": false,
+              "rationale": "The nurse obtains ordered specimens. No culture has been ordered, and the history is part of the assessment, not a step to cut short."
+            },
+            {
+              "id": "F",
+              "text": "Record the oxygen saturation of 93% as expected for a client who is 78 years old",
+              "correct": false,
+              "rationale": "93% is below the reference range of 95 to 100%. Decreased oxygen saturation is a concerning cue, and age does not make it expected."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "takeaway": "The infection assessment gathers symptoms, onset, exposures, recent treatment, and devices; assesses overall appearance, the likely site, and respiratory status; and compares every finding with baseline. Do not rely on fever alone.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The two wrong options each sound like good practice: one rushes to identify the organism, and one explains a low value by age. Ask whether the specimen was ordered and whether the value is inside its reference range.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check the history items",
+                "detail": "Onset, exposures, and devices all belong."
+              },
+              {
+                "action": "Check the baseline item",
+                "detail": "Comparing with usual alertness and activity belongs."
+              },
+              {
+                "action": "Check the specimen option",
+                "detail": "No culture was ordered, and the history is not cut short."
+              },
+              {
+                "action": "Check the age option",
+                "detail": "93% is below 95 to 100%, whatever the age."
+              }
+            ],
+            "verdict": "A, B, C, D."
+          },
+          "caseGroup": "ig31-case7",
+          "caseStep": 2,
+          "objective": "Assess for infection and recognize clinical deterioration",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "ig31-m15",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A client has a draining wound on the left foot. The provider orders a wound culture and susceptibility, a complete blood count with differential, and an intravenous antimicrobial. The nurse explains that the culture and susceptibility test [[1]].\n\nThe nurse explains that the complete blood count with differential [[2]].\n\nOn day 2, the susceptibility report shows that the organism is resistant to the antimicrobial the client is receiving, and the next dose is due in 1 hour. The nurse [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "adds information about how the immune system is responding",
+                  "correct": false,
+                  "rationale": "This describes the complete blood count with differential, not the culture."
+                },
+                {
+                  "id": "B",
+                  "text": "identifies the organism and helps guide which antimicrobial is used",
+                  "correct": true,
+                  "rationale": "Culture and susceptibility identifies the organism and guides treatment."
+                },
+                {
+                  "id": "C",
+                  "text": "shows where in the body the infection has spread",
+                  "correct": false,
+                  "rationale": "Other tests and imaging may help locate an infection. The culture identifies the organism."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "adds information about the immune response, read together with the assessment",
+                  "correct": true,
+                  "rationale": "The complete blood count with differential adds information about the immune response, and results are interpreted together with the client's assessment."
+                },
+                {
+                  "id": "B",
+                  "text": "confirms the infection, so the wound assessment can be done less often",
+                  "correct": false,
+                  "rationale": "A lab result is read together with the assessment. It does not replace it."
+                },
+                {
+                  "id": "C",
+                  "text": "shows whether the infection has spread beyond the wound",
+                  "correct": false,
+                  "rationale": "Other tests and imaging may help locate an infection or assess its effects. The blood count adds information about the immune response."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "gives the next dose on time, because a missed dose lowers the drug level, and then reports the result",
+                  "correct": false,
+                  "rationale": "On time dosing matters, but this drug may not treat the organism. The provider needs the report before the dose so the order can change."
+                },
+                {
+                  "id": "B",
+                  "text": "holds the next dose and waits for the provider to see the report on rounds",
+                  "correct": false,
+                  "rationale": "Questioning the dose is right, but holding it without reporting leaves the client with no treatment and no new plan."
+                },
+                {
+                  "id": "C",
+                  "text": "reports the result to the provider before the next dose is due",
+                  "correct": true,
+                  "rationale": "The nurse supports appropriate antimicrobial use by following culture results, and the provider needs the result to change the treatment."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "B",
+            "2": "A",
+            "3": "C"
+          },
+          "scoring": "0/1",
+          "takeaway": "Culture and susceptibility identifies the organism and guides the antimicrobial choice. The complete blood count with differential adds information about the immune response. Read every result together with the assessment, and act on a susceptibility report that does not match the drug being given.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Match each test to the question it answers: which organism and which drug, or how the body is responding. For the last blank, look for the choice that both protects the client from an ineffective drug and gets a new plan.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Culture",
+                "detail": "Which organism, which drug."
+              },
+              {
+                "action": "Blood count with differential",
+                "detail": "How the immune system is responding, read with the assessment."
+              },
+              {
+                "action": "Resistance report",
+                "detail": "Do not give the dose first or hold it silently. Report before the dose is due."
+              }
+            ],
+            "verdict": "Identifies the organism and guides treatment; adds information about the immune response; reports the result before the next dose."
+          },
+          "caseGroup": "ig31-case8",
+          "caseStep": 1,
+          "objective": "Explain the nurse's role in testing, treatment, and teaching",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "ig31-x04",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client admitted with a urinary tract infection was alert at 0700 and is confused at 0900. Oral temperature 38.6 °C (reference 36.1 to 37.2 °C), heart rate 112 beats per minute (reference 60 to 100 beats per minute), respiratory rate 24 breaths per minute (reference 12 to 20 breaths per minute), blood pressure 112/70 mm Hg (reference 90/60 to 120/80 mm Hg). At 0915 the provider examines the client, documents probable sepsis without shock, and orders blood cultures and an intravenous antimicrobial. Facility policy states that laboratory staff draw blood cultures, and they report that they can reach the unit at 1115. The antimicrobial arrives at 0930, and the intravenous access works. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the antimicrobial at 1115 right after the laboratory staff draw the blood cultures",
+              "correct": false,
+              "rationale": "Specimens are obtained before the antimicrobial when that causes no delay, and 1115 is within 3 hours. The 3 hour window is for possible sepsis without shock. Probable sepsis calls for the antimicrobial immediately, ideally within 1 hour, and waiting for cultures until 1115 delays it 2 hours."
+            },
+            {
+              "id": "B",
+              "text": "Hold the antimicrobial, recheck vital signs every 30 minutes, and give it if the blood pressure falls",
+              "correct": false,
+              "rationale": "Rechecking vital signs is right, but waiting for a falling blood pressure waits for shock. The provider has documented probable sepsis, which calls for the antimicrobial now."
+            },
+            {
+              "id": "C",
+              "text": "Draw blood for culture from the existing intravenous line, then give the antimicrobial now",
+              "correct": false,
+              "rationale": "Getting the specimen first is the right idea, but facility policy assigns blood cultures to laboratory staff, and the existing line is not the way the specimen is obtained."
+            },
+            {
+              "id": "D",
+              "text": "Give the antimicrobial now, and have the blood cultures drawn when the laboratory staff arrive",
+              "correct": true,
+              "rationale": "For probable sepsis the antimicrobial is given immediately, ideally within 1 hour. Cultures come first only when drawing them delays the antimicrobial by no more than 45 minutes; here the delay would be 2 hours."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Probable or definite sepsis, or septic shock: give the antimicrobial immediately, ideally within 1 hour. Possible sepsis without shock: investigate rapidly and begin treatment within 3 hours if concern persists. Obtain cultures first only when that does not delay the antimicrobial.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "\"Without shock\" and the culture first habit both point toward waiting until 1115, which is still inside 3 hours. The deciding cue is the provider's word probable: the 3 hour window belongs only to possible sepsis without shock.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Find the category",
+                "detail": "The provider documented probable sepsis, not possible sepsis."
+              },
+              {
+                "action": "Apply the time frame",
+                "detail": "Probable sepsis: antimicrobial immediately, ideally within 1 hour."
+              },
+              {
+                "action": "Weigh the culture habit",
+                "detail": "Cultures first is right only when it causes no delay. A 2 hour wait is a delay."
+              },
+              {
+                "action": "Reject waiting for shock",
+                "detail": "A falling blood pressure is not required to act."
+              },
+              {
+                "action": "Reject the shortcut",
+                "detail": "Policy assigns blood cultures to laboratory staff."
+              }
+            ],
+            "verdict": "Give the antimicrobial now and draw cultures when the laboratory staff arrive."
+          },
+          "caseGroup": "ig31-case8",
+          "caseStep": 2,
+          "objective": "Describe immediate nursing actions when sepsis is suspected",
+          "new": true,
+          "addedBatch": 2
         }
       ]
     }
@@ -4636,7 +5835,8 @@
           "caseGroup": "sk-cardiac-case4",
           "caseStep": 1,
           "objective": "Consider when cardiac monitoring may be used for a patient and how the clinician might apply this",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "sk-cardiac-m11",
@@ -4724,7 +5924,8 @@
           "caseGroup": "sk-cardiac-case4",
           "caseStep": 2,
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "sk-cardiac-x03",
@@ -4793,7 +5994,8 @@
           "caseGroup": "sk-cardiac-case4",
           "caseStep": 3,
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "sk-cardiac-m12",
@@ -4876,7 +6078,8 @@
           "caseGroup": "sk-cardiac-case4",
           "caseStep": 4,
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
-          "new": true
+          "new": false,
+          "addedBatch": 1
         },
         {
           "id": "sk-cardiac-m09",
@@ -5009,7 +6212,374 @@
           "caseGroup": "sk-cardiac-case5",
           "caseStep": 1,
           "objective": "Identify how to undertake cardiac auscultation and what these sounds represent in relation to the cardiac cycle",
-          "new": true
+          "new": false,
+          "addedBatch": 1
+        },
+        {
+          "id": "sk-cardiac-m13",
+          "type": "sata",
+          "stem": "A 12 lead ECG is ordered for an adult client whose left radial pulse is 112 beats per minute and irregular (expected adult range 60 to 100 beats per minute). The client is awake, able to answer questions, and has not had an ECG before. Which actions does the nurse take while preparing the client and placing the electrodes? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Confirm the client's name and date of birth before starting",
+              "correct": true,
+              "rationale": "Identity is confirmed with the name and date of birth before the recording, so the trace belongs to the right client."
+            },
+            {
+              "id": "B",
+              "text": "Ask whether the client has any chest pain at this moment",
+              "correct": true,
+              "rationale": "The course lists asking about chest pain as part of preparing for the recording, and chest pain is one of the listed reasons for a 12 lead ECG."
+            },
+            {
+              "id": "C",
+              "text": "Ask the client to sit upright on the edge of the bed with the hands resting in the lap",
+              "correct": false,
+              "rationale": "Relaxed hands are right, but the position is wrong. The client lies back on the bed with the hands relaxed and flat at the sides, which reduces movement interference."
+            },
+            {
+              "id": "D",
+              "text": "Place the 4 limb electrodes on the chest inside the rib cage frame, as for continuous monitoring",
+              "correct": false,
+              "rationale": "Inside the rib cage frame is the placement for continuous monitoring. For a 12 lead ECG the 4 limb electrodes go on the wrists and ankles."
+            },
+            {
+              "id": "E",
+              "text": "Palpate the chest to locate the landmarks for the chest electrodes",
+              "correct": true,
+              "rationale": "The chest is palpated to find the landmarks for the chest electrodes, so each one is placed accurately."
+            },
+            {
+              "id": "F",
+              "text": "Apply the electrodes first, then explain the procedure and gain consent before pressing record",
+              "correct": false,
+              "rationale": "Explanation and consent are right, but they come before the client is touched. This client is awake and able to answer."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "E"
+          ],
+          "takeaway": "Before a 12 lead ECG: confirm name and date of birth, explain and gain consent, ask about chest pain, have the client lie back with the hands relaxed flat at the sides, palpate the chest for landmarks, and place the limb electrodes on the wrists and ankles.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Check each option for the one detail that is off: the position, the limb electrode site, or the point at which consent is gained.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Identity and consent",
+                "detail": "Name and date of birth first; consent before touching the client."
+              },
+              {
+                "action": "Ask about symptoms",
+                "detail": "Chest pain now is asked about."
+              },
+              {
+                "action": "Position",
+                "detail": "Lying back, hands relaxed flat at the sides, not sitting."
+              },
+              {
+                "action": "Electrode sites",
+                "detail": "Chest landmarks by palpation; limb electrodes on wrists and ankles, not the chest."
+              }
+            ],
+            "verdict": "A, B, E."
+          },
+          "caseGroup": "sk-cardiac-case6",
+          "caseStep": 1,
+          "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "sk-cardiac-m14",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A nurse reviews the lead II rhythm strip of an adult client with a regular heart rate of 78 beats per minute (expected adult range 60 to 100 beats per minute). Each QRS complex points upward from the baseline. In lead II, the positive electrode is the [[1]].\n\nThe upright QRS shows that the depolarization wave is traveling [[2]].\n\nIf a depolarization wave traveled at right angles to lead II, the nurse would expect [[3]] in that lead.",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Left leg electrode",
+                  "correct": true,
+                  "rationale": "Lead II runs from the right arm, which is negative, to the left leg, which is positive."
+                },
+                {
+                  "id": "B",
+                  "text": "Right arm electrode",
+                  "correct": false,
+                  "rationale": "The right arm electrode is part of lead II, but it is the negative electrode."
+                },
+                {
+                  "id": "C",
+                  "text": "Left arm electrode",
+                  "correct": false,
+                  "rationale": "The left arm electrode is not one of the two electrodes that form lead II."
+                },
+                {
+                  "id": "D",
+                  "text": "Right leg electrode",
+                  "correct": false,
+                  "rationale": "The right leg electrode is neutral. It is not the positive electrode for any lead."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "From the upper right of the heart toward the lower left",
+                  "correct": true,
+                  "rationale": "Lead II runs from the right arm (negative) to the left leg (positive), so a wave moving down and to the left travels toward the positive electrode and deflects up."
+                },
+                {
+                  "id": "B",
+                  "text": "From the lower left of the heart toward the upper right",
+                  "correct": false,
+                  "rationale": "This is movement toward the negative electrode, which deflects down."
+                },
+                {
+                  "id": "C",
+                  "text": "From left to right across the top of the heart",
+                  "correct": false,
+                  "rationale": "This runs nearly at right angles to lead II and produces little or no deflection."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "No deflection",
+                  "correct": true,
+                  "rationale": "A wave moving perpendicular to a lead produces no deflection in that lead."
+                },
+                {
+                  "id": "B",
+                  "text": "A small positive deflection",
+                  "correct": false,
+                  "rationale": "A positive deflection needs movement toward the positive electrode. A wave at right angles moves neither toward nor away from it."
+                },
+                {
+                  "id": "C",
+                  "text": "A negative deflection",
+                  "correct": false,
+                  "rationale": "A negative deflection needs movement away from the positive electrode. A wave at right angles moves neither toward nor away from it."
+                },
+                {
+                  "id": "D",
+                  "text": "A deflection the same size as the QRS",
+                  "correct": false,
+                  "rationale": "Deflection size is proportional to the wave seen by that lead. A wave at right angles produces none."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "A",
+            "3": "A"
+          },
+          "scoring": "0/1",
+          "takeaway": "Lead II: right arm negative, left leg positive, right leg neutral. A wave toward the positive electrode deflects up, away deflects down, at right angles gives no deflection, and the size is proportional.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Fix the electrodes of lead II first. Once the positive electrode is known, the direction of each deflection follows from where the wave is moving relative to it.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Blank 1",
+                "detail": "Lead II: right arm negative, left leg positive."
+              },
+              {
+                "action": "Blank 2",
+                "detail": "Upright means toward the positive electrode, so the wave runs from upper right to lower left."
+              },
+              {
+                "action": "Blank 3",
+                "detail": "At right angles: neither toward nor away, so no deflection."
+              }
+            ],
+            "verdict": "Left leg electrode; from the upper right of the heart toward the lower left; no deflection."
+          },
+          "caseGroup": "sk-cardiac-case6",
+          "caseStep": 2,
+          "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "sk-cardiac-m15",
+          "type": "matrix",
+          "scenario": "A nurse auscultates the heart of an adult client lying back. The apical pulse is 72 beats per minute and regular (expected adult range 60 to 100 beats per minute). The nurse hears a long, loud first sound followed by a short, sharp second sound at each beat and relates each event below to the cardiac cycle.",
+          "stem": "For each event, indicate the phase of the cardiac cycle in which it occurs.",
+          "columns": [
+            "Systole",
+            "Diastole"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "The mitral and tricuspid valves are open",
+              "answer": "Diastole",
+              "rationale": "The mitral and tricuspid valves close at the start of systole. They are open during diastole, while the relaxed ventricles fill."
+            },
+            {
+              "id": "r2",
+              "text": "The atria contract to complete ventricular filling",
+              "answer": "Diastole",
+              "rationale": "Atrial contraction happens at the end of diastole, before the first heart sound. It is a contraction, but it is not systole."
+            },
+            {
+              "id": "r3",
+              "text": "The aortic and pulmonary valves are open",
+              "answer": "Systole",
+              "rationale": "During systole the ventricles contract and the aortic and pulmonary valves open to let blood leave the heart."
+            },
+            {
+              "id": "r4",
+              "text": "The left ventricle pumps oxygen rich blood into the systemic circuit",
+              "answer": "Systole",
+              "rationale": "Blood leaves the left ventricle for the body when the ventricles contract, which is systole."
+            },
+            {
+              "id": "r5",
+              "text": "The phase that begins as the short, sharp second sound is heard",
+              "answer": "Diastole",
+              "rationale": "The second heart sound is the aortic and pulmonary valves closing, which marks the start of diastole."
+            }
+          ],
+          "answer": {
+            "r1": "Diastole",
+            "r2": "Diastole",
+            "r3": "Systole",
+            "r4": "Systole",
+            "r5": "Diastole"
+          },
+          "scoring": "0/1",
+          "takeaway": "Systole: ventricles contract, aortic and pulmonary valves open, blood ejected. Diastole: ventricles relax and fill, with atrial contraction at the end. S2 marks the start of diastole.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Classify each event by what the ventricles are doing, not by whether something is contracting. The atria contract while the ventricles are still in diastole.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Anchor on the ventricles",
+                "detail": "Contracting is systole; relaxed and filling is diastole."
+              },
+              {
+                "action": "Watch the trap",
+                "detail": "Atrial contraction is the end of diastole."
+              },
+              {
+                "action": "Use the sounds",
+                "detail": "The second sound is the aortic and pulmonary valves closing, so diastole begins."
+              }
+            ],
+            "verdict": "Open mitral and tricuspid valves and atrial contraction are diastole. Open aortic and pulmonary valves and ejection to the body are systole. The second sound starts diastole."
+          },
+          "caseGroup": "sk-cardiac-case7",
+          "caseStep": 1,
+          "objective": "Identify how to undertake cardiac auscultation and what these sounds represent in relation to the cardiac cycle",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "sk-cardiac-x04",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "An adult client was admitted 2 days ago with pneumonia. The right radial pulse has been documented at 64 to 70 beats per minute, regular, at every check since admission. At 1400 the nurse finds: right radial pulse 98 beats per minute, regular (expected adult range 60 to 100 beats per minute); oxygen saturation 95% on room air (expected 95% to 100%); capillary refill in the right hand 2 seconds (expected 2 seconds or less); blood pressure 116/72 mm Hg (expected adult range below 120/80 mm Hg). Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Document the findings as within the expected ranges and recheck them at the next scheduled set of observations",
+              "correct": false,
+              "rationale": "Each value sits inside its expected range, but the pulse has risen by 28 to 34 beats per minute from this client's own documented rate. Pulse assessment gives a baseline so that change can be identified, and waiting hides that change."
+            },
+            {
+              "id": "B",
+              "text": "Reassess the client now, including the respiratory rate, and report the rise from the client's usual pulse rate",
+              "correct": true,
+              "rationale": "The pulse has risen from 64 to 70 beats per minute at every check to 98 beats per minute. A change from the client's own baseline is acted on even when the number is still in range, so the nurse reassesses and reports it."
+            },
+            {
+              "id": "C",
+              "text": "Recount the right radial pulse, and document the result as within range if it is again below 100 beats per minute",
+              "correct": false,
+              "rationale": "Rechecking is reasonable, but the plan accepts any rate below 100 beats per minute. It still compares the pulse only with the adult range, not with this client's rate of 64 to 70 beats per minute."
+            },
+            {
+              "id": "D",
+              "text": "Apply oxygen at 2 L per minute, because the saturation is at the lower limit of the expected range",
+              "correct": false,
+              "rationale": "The saturation of 95% is within the expected range, and starting oxygen treats one number before the client has been reassessed. The finding that has changed is the pulse."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Pulse is assessed alongside oxygen saturation, blood pressure and capillary refill, and it gives a baseline of what is usual for the client. A clear change from that baseline needs action even when every value is still within the expected range.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options are defensible because every value is in range. The deciding cue in the stem is the documented rate of 64 to 70 beats per minute at every check since admission.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Compare with the ranges",
+                "detail": "Every value is within its expected range."
+              },
+              {
+                "action": "Compare with the client",
+                "detail": "Pulse 98 against a usual 64 to 70 beats per minute: a clear change."
+              },
+              {
+                "action": "Reject the range only options",
+                "detail": "Documenting, or recounting against 100 beats per minute, ignores the baseline."
+              },
+              {
+                "action": "Reject treating one number",
+                "detail": "Oxygen for a saturation inside the range skips reassessment."
+              }
+            ],
+            "verdict": "Reassess now and report the rise from the client's usual pulse rate."
+          },
+          "caseGroup": "sk-cardiac-case7",
+          "caseStep": 2,
+          "objective": "Outline the location of different pulse points and the process for undertaking an accurate pulse assessment",
+          "new": true,
+          "addedBatch": 2
         }
       ]
     },
@@ -5853,6 +7423,400 @@
           "caseGroup": "sk-infusion-case4",
           "caseStep": 2,
           "objective": "RN Responsibility & Delegation"
+        },
+        {
+          "id": "sk-infusion-m09",
+          "type": "matrix",
+          "scenario": "A nurse on a medical surgical unit reviews the access plans for six adult clients. No ordered drug is a vesicant unless the row says so.",
+          "stem": "For each client, indicate the least invasive access device that fits the therapy.",
+          "columns": [
+            "Short peripheral IV",
+            "Midline catheter",
+            "Central line"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "A client needs 0.9% sodium chloride for 2 days after a minor surgery",
+              "answer": "Short peripheral IV",
+              "rationale": "Short term isotonic fluid can run through a short peripheral IV. Nothing about this therapy calls for a longer device."
+            },
+            {
+              "id": "r2",
+              "text": "A client will go home on a non vesicant IV antibiotic for 3 weeks",
+              "answer": "Midline catheter",
+              "rationale": "Therapy longer than 6 days warrants a midline or PICC. A midline can dwell up to 4 weeks and suits non vesicant antibiotics, so it is the less invasive choice. A PICC would work but is more than this therapy needs."
+            },
+            {
+              "id": "r3",
+              "text": "A client needs total parenteral nutrition for 6 weeks",
+              "answer": "Central line",
+              "rationale": "Total parenteral nutrition requires central access. A midline is not used for it, however long it can dwell."
+            },
+            {
+              "id": "r4",
+              "text": "A client will receive a vesicant chemotherapy drug every 3 weeks for 6 months",
+              "answer": "Central line",
+              "rationale": "Vesicants require central access. Long term intermittent therapy like this is where an implanted port fits."
+            },
+            {
+              "id": "r5",
+              "text": "A client in the intensive care unit needs a continuous vasopressor infusion that is expected to last several days",
+              "answer": "Central line",
+              "rationale": "A midline is not used for continuous vasopressors. Over several days a continuous vasopressor needs central access."
+            },
+            {
+              "id": "r6",
+              "text": "A client needs an IV analgesic for 2 weeks, and the forearm veins are scarred from repeated sticks",
+              "answer": "Midline catheter",
+              "rationale": "Two weeks is longer than 6 days, analgesics are a listed midline use, and one midline spares the scarred veins from repeated short peripheral sticks. A midline is inserted in an upper arm vein, above the scarred forearm veins."
+            }
+          ],
+          "answer": {
+            "r1": "Short peripheral IV",
+            "r2": "Midline catheter",
+            "r3": "Central line",
+            "r4": "Central line",
+            "r5": "Central line",
+            "r6": "Midline catheter"
+          },
+          "scoring": "0/1",
+          "takeaway": "Choose access by duration and solution. Short term isotonic fluid: short peripheral IV. Non vesicant therapy longer than 6 days, up to 4 weeks: midline. Vesicants, total parenteral nutrition, continuous vasopressors or long term therapy: central line.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Ask two questions for each row: how long, and what is going in. A vesicant or total parenteral nutrition sends the row straight to a central line, and a midline is never used for a continuous vasopressor.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Screen the solution first",
+                "detail": "Vesicant chemotherapy, total parenteral nutrition and a vasopressor running for several days need a central line."
+              },
+              {
+                "action": "Then check duration",
+                "detail": "2 days of isotonic fluid fits a short peripheral IV."
+              },
+              {
+                "action": "Pick the least invasive device for the rest",
+                "detail": "3 weeks of an antibiotic and 2 weeks of an analgesic are non vesicant and under 4 weeks: midline."
+              }
+            ],
+            "verdict": "Short peripheral IV: row 1. Midline: rows 2 and 6. Central line: rows 3, 4 and 5."
+          },
+          "caseGroup": "sk-infusion-case5",
+          "caseStep": 1,
+          "objective": "Vascular Access Devices",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "sk-infusion-m10",
+          "type": "highlight",
+          "nursesNote": "1030. Client is 84 years old with lymphedema of the left arm after a left mastectomy. Ordered: 0.9% sodium chloride at 75 mL per hour for 2 days. Peripheral IV insertion by a student nurse, observed by the registered nurse: Selected a 22 gauge catheter. Chose a soft, straight cephalic vein in the right forearm. Scrubbed the site with chlorhexidine using a back and forth motion for 30 seconds. Fanned the site with a hand to speed drying. Palpated the vein again after the prep to confirm the location. During advancement the client reported a sudden shooting pain into the right thumb, and the student finished advancing and secured the catheter. Listed a left dorsal hand vein as the backup site. Documented site, gauge, number of attempts and skin condition.",
+          "stem": "Highlight the actions that require follow up by the registered nurse.",
+          "segments": [
+            {
+              "id": "s1",
+              "text": "Selected a 22 gauge catheter",
+              "correct": false,
+              "rationale": "A 22 to 24 gauge catheter is recommended for older adults with fragile veins and is enough for maintenance fluid."
+            },
+            {
+              "id": "s2",
+              "text": "Chose a soft, straight cephalic vein in the right forearm",
+              "correct": false,
+              "rationale": "A soft, straight forearm vein on the arm without lymphedema is the preferred choice."
+            },
+            {
+              "id": "s3",
+              "text": "Scrubbed the site with chlorhexidine using a back and forth motion for 30 seconds",
+              "correct": false,
+              "rationale": "Chlorhexidine applied with a back and forth scrub for at least 30 seconds is the correct prep."
+            },
+            {
+              "id": "s4",
+              "text": "Fanned the site with a hand to speed drying",
+              "correct": true,
+              "rationale": "The antiseptic must air dry completely. Fanning, blotting or wiping is not done."
+            },
+            {
+              "id": "s5",
+              "text": "Palpated the vein again after the prep to confirm the location",
+              "correct": true,
+              "rationale": "Touching the cleansed site again with unsterile fingers contaminates it and cancels the prep."
+            },
+            {
+              "id": "s6",
+              "text": "During advancement the client reported a sudden shooting pain into the right thumb, and the student finished advancing and secured the catheter",
+              "correct": true,
+              "rationale": "Shooting pain, burning, numbness or tingling during insertion signals nerve injury. Insertion stops immediately, the catheter is removed and neurologic function is assessed."
+            },
+            {
+              "id": "s7",
+              "text": "Listed a left dorsal hand vein as the backup site",
+              "correct": true,
+              "rationale": "The left arm is the lymphedema arm after mastectomy, which is avoided. Dorsal hand veins are also avoided in older adults when possible."
+            },
+            {
+              "id": "s8",
+              "text": "Documented site, gauge, number of attempts and skin condition",
+              "correct": false,
+              "rationale": "These are required elements of insertion documentation, and skin condition is documented before and after every access attempt in older adults."
+            }
+          ],
+          "answer": [
+            "s4",
+            "s5",
+            "s6",
+            "s7"
+          ],
+          "format": "+/-",
+          "scoring": "+/-",
+          "takeaway": "Air dry the chlorhexidine without fanning, never touch the site again after prep, stop at once for shooting pain or tingling during insertion, and avoid the arm on the mastectomy side and the dorsal hand in older adults.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Read each action against three checklists: the skin prep steps, the sites to avoid and the nerve injury signs. Highlight only what breaks a rule.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check the prep",
+                "detail": "Scrub for 30 seconds is right. Fanning and touching the site again are wrong."
+              },
+              {
+                "action": "Check the sites",
+                "detail": "Right forearm is right. Left arm and dorsal hand are wrong for this client."
+              },
+              {
+                "action": "Check the response to symptoms",
+                "detail": "Shooting pain during advancement means stop, not finish."
+              },
+              {
+                "action": "Keep what is correct",
+                "detail": "22 gauge and complete documentation need no follow up."
+              }
+            ],
+            "verdict": "s4, s5, s6, s7."
+          },
+          "caseGroup": "sk-infusion-case5",
+          "caseStep": 2,
+          "objective": "Safety Protocols",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "sk-infusion-m11",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A client in the intensive care unit has had a nontunneled central line in the right internal jugular vein for 6 days. Oral temperature is 38.6 °C (reference 36.1 to 37.2 °C), heart rate is 118 beats per minute (reference 60 to 100 beats per minute), and blood pressure is 86/50 mm Hg (reference 90/60 to 120/80 mm Hg). The client has shaking chills and is newly disoriented to time. Lungs are clear, the urine is clear, and the insertion site has no redness or drainage. The infusion is running by pump at the ordered rate.\n\nThe client's findings are most consistent with [[1]].\n\nThe nurse anticipates [[2]] as the initial treatment.\n\nIf a new nontunneled central line is needed, the site the prevention bundle prefers when possible is the [[3]] vein.",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Catheter related bloodstream infection",
+                  "correct": true,
+                  "rationale": "Fever, chills, low blood pressure and altered mental status with no other source in a client with a central line point to a catheter related bloodstream infection. The clear lungs, clear urine and clean site rule out other sources."
+                },
+                {
+                  "id": "B",
+                  "text": "Phlebitis at the insertion site",
+                  "correct": false,
+                  "rationale": "Phlebitis shows at the vein: redness, warmth, a streak or a cord. The site has no redness."
+                },
+                {
+                  "id": "C",
+                  "text": "Speed shock from the infusion",
+                  "correct": false,
+                  "rationale": "Speed shock follows a rapid infusion, with flushing, headache and chest tightness. The pump is running at the ordered rate."
+                },
+                {
+                  "id": "D",
+                  "text": "Air embolism through the catheter",
+                  "correct": false,
+                  "rationale": "Air embolism brings sudden shortness of breath and chest pain. It does not bring fever and chills."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Two sets of blood cultures and IV antibiotics",
+                  "correct": true,
+                  "rationale": "Treatment is blood cultures twice, IV antibiotics, and catheter removal if needed."
+                },
+                {
+                  "id": "B",
+                  "text": "One set of blood cultures and IV antibiotics",
+                  "correct": false,
+                  "rationale": "Antibiotics are right, but blood cultures are drawn twice, not once."
+                },
+                {
+                  "id": "C",
+                  "text": "A warm moist compress over the insertion site",
+                  "correct": false,
+                  "rationale": "This is a phlebitis intervention. The infection here is in the bloodstream, not at the vein wall."
+                },
+                {
+                  "id": "D",
+                  "text": "A slower infusion rate set on the pump",
+                  "correct": false,
+                  "rationale": "Slowing the rate prevents speed shock. It does nothing for an infection."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Subclavian",
+                  "correct": true,
+                  "rationale": "The bundle prefers the subclavian site over the internal jugular or femoral site when possible."
+                },
+                {
+                  "id": "B",
+                  "text": "Internal jugular",
+                  "correct": false,
+                  "rationale": "The bundle ranks the internal jugular below the subclavian site."
+                },
+                {
+                  "id": "C",
+                  "text": "Femoral",
+                  "correct": false,
+                  "rationale": "The femoral site carries the highest infection risk of the three."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "A",
+            "3": "A"
+          },
+          "scoring": "0/1",
+          "takeaway": "Catheter related bloodstream infection: fever, chills, hypotension and altered mental status with no other source. Draw blood cultures twice, start IV antibiotics and remove the catheter if needed. Prevent it with hand hygiene, maximal barriers, chlorhexidine prep, the subclavian site when possible and a daily review of whether the line is still needed.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "First rule out every other source the stem hands you: lungs, urine, site and rate. What is left with a central line is the bloodstream infection. Then match each treatment option to the complication it belongs to.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Rule out other sources",
+                "detail": "Clear lungs, clear urine, clean site: the line is the source."
+              },
+              {
+                "action": "Rule out the look alikes",
+                "detail": "No redness for phlebitis, ordered rate for speed shock, no sudden breathing change for air embolism."
+              },
+              {
+                "action": "Count the cultures",
+                "detail": "Twice, not once."
+              },
+              {
+                "action": "Rank the sites",
+                "detail": "Subclavian preferred, femoral highest risk."
+              }
+            ],
+            "verdict": "Catheter related bloodstream infection. Two sets of blood cultures and IV antibiotics. Subclavian."
+          },
+          "caseGroup": "sk-infusion-case6",
+          "caseStep": 1,
+          "objective": "Recognize Complications",
+          "new": true,
+          "addedBatch": 2
+        },
+        {
+          "id": "sk-infusion-x03",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "An 87 year old client receiving hospice care in a long term care facility has had poor oral intake for 3 days. The client is alert and oriented, blood pressure is 108/66 mm Hg (reference 90/60 to 120/80 mm Hg), heart rate is 96 beats per minute (reference 60 to 100 beats per minute), and the oral mucous membranes are dry. The provider orders fluid replacement. Three peripheral IV attempts with a vein illumination device have failed. Ultrasound guided insertion is not available at the facility and would require transfer to the hospital. The hospice plan of care documents the client's wish to avoid hospital transfer. Which route does the nurse recommend to the provider?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Subcutaneous infusion into the abdomen at a rate of about 1 mL per minute",
+              "correct": true,
+              "rationale": "Subcutaneous infusion is used for mild to moderate dehydration in older and palliative clients and is avoided only in severe dehydration or shock. The abdomen is a common site and about 1 mL per minute is the maximum rate. It needs no transfer."
+            },
+            {
+              "id": "B",
+              "text": "Transfer to the hospital for ultrasound guided IV insertion, the standard for difficult access",
+              "correct": false,
+              "rationale": "Ultrasound is the standard for difficult access, but it requires a transfer the client has declined, and mild to moderate dehydration in a palliative client can be treated subcutaneously."
+            },
+            {
+              "id": "C",
+              "text": "Subcutaneous infusion into the thigh at a rate of about 5 mL per minute",
+              "correct": false,
+              "rationale": "The route and site are right, but about 1 mL per minute is the maximum rate for subcutaneous infusion."
+            },
+            {
+              "id": "D",
+              "text": "Intraosseous access in the proximal tibia, since it delivers all IV fluids",
+              "correct": false,
+              "rationale": "Intraosseous access does deliver all IV fluids when IV access fails, but it is for emergencies such as cardiac arrest or trauma and is limited to 24 hours. This client is alert with a blood pressure in range."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "When IV access fails, match the alternative to the client's goals and urgency. Ultrasound guided insertion is the standard for difficult access. Subcutaneous infusion (hypodermoclysis) suits mild to moderate dehydration in older or palliative clients at about 1 mL per minute and is avoided in severe dehydration or shock. Intraosseous access is for emergencies and is limited to 24 hours.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options are defensible: ultrasound guided IV insertion, the standard for difficult access, and subcutaneous infusion. The deciding cue is the documented wish to avoid hospital transfer, with findings that show neither severe dehydration nor shock.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Judge the urgency",
+                "detail": "Alert, blood pressure 108/66 mm Hg, heart rate 96 beats per minute: not shock, not an emergency."
+              },
+              {
+                "action": "Honor the plan of care",
+                "detail": "Ultrasound requires a hospital transfer the client has declined."
+              },
+              {
+                "action": "Reject the emergency route",
+                "detail": "Intraosseous access is for cardiac arrest, trauma or pediatric emergencies and lasts 24 hours at most."
+              },
+              {
+                "action": "Compare the two subcutaneous options",
+                "detail": "Same route, but the rate limit is about 1 mL per minute, not 5."
+              }
+            ],
+            "verdict": "Subcutaneous infusion into the abdomen at about 1 mL per minute."
+          },
+          "caseGroup": "sk-infusion-case6",
+          "caseStep": 2,
+          "objective": "Apply Clinical Judgment",
+          "new": true,
+          "addedBatch": 2
         }
       ]
     }
