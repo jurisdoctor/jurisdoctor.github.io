@@ -4,6 +4,7 @@ import { LuChevronDown, LuCheck, LuLock } from "react-icons/lu";
 import { useSaved } from "../DosageCalculations/Saved";
 import { ResultType } from "../Nclex/ChapterSet";
 import Quiz from "../Nclex/Quiz";
+import Certificate from "./Certificate";
 import RevealBox from "../Reveal";
 import {
   Checklist,
@@ -66,18 +67,19 @@ const Finale = ({
   state: ProgressType;
   onReview: () => void;
 }) => {
-  const when = state.doneAt
-    ? new Date(state.doneAt).toLocaleDateString(undefined, {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })
-    : "";
+  const when = (
+    state.doneAt ? new Date(state.doneAt) : new Date()
+  ).toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   const habit = state.d.exit?.habit as string | undefined;
   const first = (state.name || "").trim().split(" ")[0];
 
   return (
     <div>
+      <Certificate name={state.name} when={when} habit={habit} />
       <h2 className="mb-1 text-2xl font-bold text-[var(--title-color)]">
         You did it{first ? `, ${first}` : ""}! 🎉
       </h2>
@@ -124,7 +126,7 @@ const Finale = ({
         <ul className="grid gap-y-2 text-sm text-[var(--text-color)]">
           {REFERENCES.map((reference, index) => (
             <li key={index} className="flex items-start gap-x-3">
-              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--chip-blue-border)] bg-transparent text-[10px] font-bold text-[var(--chip-blue-border)]">
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--chip-blue-border)] bg-transparent text-[10px] font-bold text-[var(--chip-blue-border)] leading-none">
                 {index + 1}
               </span>
               <span className="leading-relaxed">{reference}</span>
@@ -264,7 +266,7 @@ const Pharm = () => {
                 key={itemIndex}
                 className="flex items-start gap-x-3 text-[var(--text-color)]"
               >
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--chip-blue-border)] bg-transparent text-[10px] font-bold text-[var(--chip-blue-border)]">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--chip-blue-border)] bg-transparent text-[10px] font-bold text-[var(--chip-blue-border)] leading-none">
                   {block.ordered ? itemIndex + 1 : "✓"}
                 </span>
                 <span className="leading-relaxed">{item}</span>
@@ -442,6 +444,8 @@ const Pharm = () => {
                 }))
               }
               onMove={() => {}}
+              finalRedoOnly
+              jumpToAnswer={false}
               // Every question must be solved to pass, so a partial redo
               // (clearing just one question) would leave stale results from
               // a prior failed attempt sitting behind it — clear the whole
@@ -520,7 +524,7 @@ const Pharm = () => {
               className="hidden w-full items-center justify-between gap-x-3 rounded-lg px-3 py-2.5 text-left text-sm duration-150 xl:flex"
             >
               <span className="flex min-w-0 items-center gap-x-3">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--chip-blue)] text-[11px] font-bold text-[var(--title-color)]">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--chip-blue)] text-[11px] font-bold text-[var(--title-color)] leading-none">
                   {i + 1}
                 </span>
                 <span className="truncate font-bold text-[var(--title-color)]">
@@ -562,7 +566,7 @@ const Pharm = () => {
                             : "cursor-not-allowed text-[var(--muted-color)] opacity-50"
                       }`}
                     >
-                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--body-color)] text-[11px]">
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--body-color)] text-[11px] leading-none">
                         {!unlocked ? (
                           <LuLock />
                         ) : complete ? (

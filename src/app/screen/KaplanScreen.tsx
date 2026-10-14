@@ -10,7 +10,7 @@ const KaplanScreen = () => {
       <Sidebar />
 
       <main className="ml-20 lg:ml-0">
-        <Gate what="Kaplan questions" picker={false}>
+        <Gate what="Kaplan questions">
           <Nclex kind="kaplan" />
         </Gate>
       </main>

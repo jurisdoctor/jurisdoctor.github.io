@@ -107,7 +107,7 @@ const Option = ({
             multi ? "rounded-md" : "rounded-full"
           } ${badge}`}
         >
-          {option.id}
+          {option.id.toUpperCase()}
         </span>
 
         <span className="min-w-0 flex-1 leading-7">
@@ -197,6 +197,8 @@ const Quiz = ({
   onRedo,
   starred,
   onStar,
+  finalRedoOnly = false,
+  jumpToAnswer = true,
 }: {
   label: string;
   questions: QuestionType[];
@@ -216,6 +218,13 @@ const Quiz = ({
   // get no star button.
   starred?: Record<string, true>;
   onStar?: (id: string) => void;
+  // A short check (the Pharm course's three questions) is retaken as a whole,
+  // and only when it wasn't aced: no Redo on each question, and none on the
+  // score screen after a perfect run.
+  finalRedoOnly?: boolean;
+  // Whether answering scrolls the rationale into view. The Pharm course turns
+  // this off: the learner stays where they are and reads on at their own pace.
+  jumpToAnswer?: boolean;
 }) => {
   const [at, setAt] = useState(start);
   const [chosen, setChosen] = useState<string[]>([]);
@@ -233,12 +242,12 @@ const Quiz = ({
   // questions, so bring it into view; moving on or redoing pops back to the
   // top so the next question is read from the start.
   useEffect(() => {
-    if (!answered) return;
+    if (!answered || !jumpToAnswer) return;
     answerRef.current?.scrollIntoView({
       behavior: calm() ? "auto" : "smooth",
       block: "start",
     });
-  }, [answered]);
+  }, [answered, jumpToAnswer]);
 
   const right = questions.filter(
     (entry) => results[entry.id] === "solved",
@@ -335,9 +344,11 @@ const Quiz = ({
           </span>{" "}
           ({pct}%)
         </p>
-        <button type="button" onClick={again} className={button}>
-          Redo
-        </button>
+        {(!finalRedoOnly || right < asked) && (
+          <button type="button" onClick={again} className={button}>
+            Redo
+          </button>
+        )}
       </div>
     );
   }
@@ -628,9 +639,11 @@ const Quiz = ({
             >
               {at + 1 >= questions.length ? "See score" : "Next question"}
             </button>
-            <button type="button" onClick={redoQuestion} className={ghost}>
-              Redo
-            </button>
+            {!finalRedoOnly && (
+              <button type="button" onClick={redoQuestion} className={ghost}>
+                Redo
+              </button>
+            )}
 
             {staged && !correct && (
               <span className="text-sm text-[var(--muted-color)]">

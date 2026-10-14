@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { ReactNode, useEffect, useRef, useState } from "react";
-import { EXAM_KEY, EXAMS, EXAM_TITLES, ExamId, isExamId } from "./Bank";
 
 const KEY = "nclex:unlocked";
 const DIGEST =
@@ -26,42 +25,28 @@ const hash = async (word: string) => {
 };
 
 // Also guards the Kaplan page: same password and the same "unlocked" mark, so
-// opening one opens the other. The exam picker is only for the NCLEX bank,
-// which is the one whose saved exam choice it sets.
+// opening one opens the other. Nothing about the exams is shown until the
+// password is right; the exam is picked on the page itself after that.
 const Gate = ({
   children,
   what = "question bank",
-  picker = true,
 }: {
   children: ReactNode;
   what?: string;
-  picker?: boolean;
 }) => {
   const [open, setOpen] = useState(false);
   const [ready, setReady] = useState(false);
   const [word, setWord] = useState("");
   const [wrong, setWrong] = useState(0);
-  const [exam, setExam] = useState<ExamId>("exam1");
   const cardRef = useRef<HTMLFormElement>(null);
   const router = useRouter();
 
   useEffect(() => {
     try {
       if (window.localStorage.getItem(KEY) === DIGEST) setOpen(true);
-      const saved = window.localStorage.getItem(EXAM_KEY);
-      if (saved && isExamId(JSON.parse(saved))) {
-        setExam(JSON.parse(saved));
-      }
     } catch {}
     setReady(true);
   }, []);
-
-  const pick = (next: ExamId) => {
-    setExam(next);
-    try {
-      window.localStorage.setItem(EXAM_KEY, JSON.stringify(next));
-    } catch {}
-  };
 
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -109,26 +94,6 @@ const Gate = ({
         <p className="mb-6 text-sm text-[var(--muted-color)]">
           Password for the {what}. Ask me if you don&apos;t have it.
         </p>
-
-        {picker && (
-          <div className="mb-4 inline-flex gap-x-1 rounded-md bg-[var(--body-color)] p-1">
-            {EXAMS.map((entry) => (
-              <button
-                key={entry}
-                type="button"
-                onClick={() => pick(entry)}
-                aria-pressed={exam === entry}
-                className={`rounded-md px-5 py-2 text-sm font-bold duration-300 ${
-                  exam === entry
-                    ? "bg-[var(--container-color)] text-[var(--title-color)] shadow-lg"
-                    : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
-                }`}
-              >
-                {EXAM_TITLES[entry]}
-              </button>
-            ))}
-          </div>
-        )}
 
         <input
           type="password"

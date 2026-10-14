@@ -146,52 +146,52 @@ export const STEPS: Step[] = [
           {
             emoji: "🪪",
             title: "Two identifiers",
-            back: "Two identifiers, every time: name + date of birth, armband to MAR.",
+            back: "Two identifiers, every time: name + date of birth, armband to MAR",
           },
           {
             emoji: "🔁",
             title: "Three checks",
-            back: "Three checks: pull → prepare → bedside.",
+            back: "Three checks: pull → prepare → bedside",
           },
           {
             emoji: "🫘",
             title: "Liver & kidneys",
-            back: "Weak liver or kidneys = drug builds up → watch for toxicity.",
+            back: "Weak liver or kidneys = drug builds up → watch for toxicity",
           },
           {
             emoji: "🩺",
             title: "Check before you give",
-            back: "Know the check before you give: HR and BP, RR and sedation, glucose, labs.",
+            back: "Know the check before you give: HR and BP, RR and sedation, glucose, labs",
           },
           {
             emoji: "✋",
             title: "When in doubt",
-            back: "When in doubt, hold and clarify. Asking is safe; guessing is not.",
+            back: "When in doubt, hold and clarify. Asking is safe; guessing is not",
           },
           {
             emoji: "⚠️",
             title: "High-alert meds",
-            back: '"I Hate Other Pain" = Insulin, Heparin, Opioids, Potassium.',
+            back: '"I Hate Other Pain" = Insulin, Heparin, Opioids, Potassium',
           },
           {
             emoji: "🤧",
             title: "Allergies",
-            back: 'Ask "What happened?" Anaphylaxis → stop the drug, call for help, epinephrine.',
+            back: 'Ask "What happened?" Anaphylaxis → stop the drug, call for help, epinephrine',
           },
           {
             emoji: "🔒",
             title: "Controlled substances",
-            back: "Lock, count, witness every waste.",
+            back: "Lock, count, witness every waste",
           },
           {
             emoji: "⬛",
             title: "Black box",
-            back: "Black box = the drug's biggest risk. Watch for it and teach it.",
+            back: "Black box = the drug's biggest risk. Watch for it and teach it",
           },
           {
             emoji: "📲",
             title: "Scanner alerts",
-            back: "Scanner alert = STOP. Find out why. Chart after giving, never before.",
+            back: "Scanner alert = STOP. Find out why. Chart after giving, never before",
           },
         ],
       },
@@ -456,7 +456,7 @@ export const STEPS: Step[] = [
       {
         type: "sort",
         id: "pd-sort",
-        q: "Your patient got morphine. Sort each finding.",
+        q: "Your patient received morphine. Sort each finding.",
         buckets: ["Therapeutic", "Side effect", "Adverse effect"],
         items: [
           {
@@ -737,22 +737,22 @@ export const STEPS: Step[] = [
           {
             emoji: "I",
             title: "Insulin",
-            back: "Danger: hypoglycemia. Safeguard: check glucose, insulin type and concentration, vial open date; second-nurse check.",
+            back: "Danger: hypoglycemia. Safeguard: check glucose, insulin type and concentration, vial open date; second-nurse check",
           },
           {
             emoji: "H",
             title: "Heparin & anticoagulants",
-            back: "Danger: bleeding. Safeguard: check aPTT/INR and platelets; watch for bleeding.",
+            back: "Danger: bleeding. Safeguard: check aPTT/INR and platelets; watch for bleeding",
           },
           {
             emoji: "O",
             title: "Opioids",
-            back: "Danger: respiratory depression. Safeguard: RR, sedation, SpO2; naloxone ready.",
+            back: "Danger: respiratory depression. Safeguard: RR, sedation, SpO2; naloxone ready",
           },
           {
             emoji: "P",
             title: "Potassium, concentrated IV",
-            back: "Danger: deadly heart rhythms. Safeguard: never IV push; premixed bag on a pump.",
+            back: "Danger: deadly heart rhythms. Safeguard: never IV push; premixed bag on a pump",
           },
         ],
       },

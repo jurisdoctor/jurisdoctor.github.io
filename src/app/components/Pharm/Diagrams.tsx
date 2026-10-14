@@ -1,5 +1,34 @@
 "use client";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
+
+// There is no liver emoji, so this one is drawn: the same size as the emoji
+// beside it, in the same flat, rounded style.
+const Liver = () => (
+  <svg
+    role="img"
+    aria-label="Liver"
+    viewBox="0 0 32 32"
+    className="block h-[1.25em] w-[1.25em]"
+  >
+    <path
+      d="M2 12.5C2 8 8.5 5 16 5c9 0 14 4 14 9.5C30 21.500 24 27 17 27c-4 0-6-2-9-4C4 21 2 17 2 12.500z"
+      fill="#b5483a"
+    />
+    <path
+      d="M16 5c9 0 14 4 14 9.500C30 21.500 24 27 17 27c3-4 5-9 4-14-.5-3-2.500-6-5-8z"
+      fill="#9a3a2e"
+    />
+    <path
+      d="M13 8c1 4 2.500 8 6 13"
+      fill="none"
+      stroke="#7a2a20"
+      strokeWidth="1.600"
+      strokeLinecap="round"
+    />
+    <ellipse cx="9" cy="11" rx="3.500" ry="2" fill="#d46a58" opacity="0.7" />
+    <circle cx="19" cy="25" r="2.200" fill="#5aa84a" />
+  </svg>
+);
 
 const Stop = ({
   n,
@@ -8,15 +37,17 @@ const Stop = ({
   sub,
 }: {
   n: number;
-  emoji: string;
+  emoji: ReactNode;
   title: string;
   sub: string;
 }) => (
   <div className="flex min-w-[7.5rem] flex-1 flex-col items-center gap-y-1 rounded-xl bg-[var(--body-color)] p-4 text-center">
-    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--chip-blue-border)] text-xs font-bold text-white">
+    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--chip-blue-border)] text-xs font-bold text-white leading-none">
       {n}
     </span>
-    <span className="text-2xl">{emoji}</span>
+    <span className="flex h-8 items-center justify-center text-2xl">
+      {emoji}
+    </span>
     <span className="font-bold text-[var(--title-color)]">{title}</span>
     <span className="text-xs text-[var(--muted-color)]">{sub}</span>
   </div>
@@ -26,7 +57,7 @@ export const RoadTrip = () => (
   <div className="flex flex-wrap gap-3 rounded-xl bg-[var(--container-color)] p-4">
     <Stop n={1} emoji="🚪" title="Absorption" sub="getting in" />
     <Stop n={2} emoji="🩸" title="Distribution" sub="getting around" />
-    <Stop n={3} emoji="🧪" title="Metabolism" sub="breaking down" />
+    <Stop n={3} emoji={<Liver />} title="Metabolism" sub="breaking down" />
     <Stop n={4} emoji="🚽" title="Excretion" sub="getting out" />
   </div>
 );
@@ -134,17 +165,17 @@ export const TherapeuticWindow = () => {
           style={{ bottom: `${level}%` }}
         />
 
-        <div className="absolute inset-x-0 top-0 flex h-1/3 items-start justify-center pt-2">
+        <div className="absolute inset-x-0 top-0 flex h-1/3 items-center justify-center">
           <span className="rounded bg-[var(--body-color)] px-1.5 py-0.5 text-center text-[10px] font-bold leading-tight text-[var(--title-color)] shadow-md">
             Toxic
           </span>
         </div>
-        <div className="absolute inset-x-0 top-1/3 flex h-1/3 items-start justify-center pt-2">
+        <div className="absolute inset-x-0 top-1/3 flex h-1/3 items-center justify-center">
           <span className="rounded bg-[var(--body-color)] px-1.5 py-0.5 text-center text-[10px] font-bold leading-tight text-[var(--title-color)] shadow-md">
             Therapeutic window
           </span>
         </div>
-        <div className="absolute inset-x-0 bottom-0 flex h-1/3 items-start justify-center pt-2">
+        <div className="absolute inset-x-0 bottom-0 flex h-1/3 items-center justify-center">
           <span className="rounded bg-[var(--body-color)] px-1.5 py-0.5 text-center text-[10px] font-bold leading-tight text-[var(--title-color)] shadow-md">
             Too low
           </span>

@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import {
   LuHome,
   LuCalculator,
-  LuBookOpen,
+  LuGraduationCap,
   LuPill,
   LuMenu,
 } from "react-icons/lu";
@@ -95,13 +95,13 @@ const Sidebar = () => {
 
               <li className="nav__item">
                 <Link
-                  href="/n55"
+                  href="/pharm"
                   onClick={() => setToggle(false)}
-                  aria-label="N55"
-                  title="N55"
-                  className={`${navLink} ${path === "/n55" ? "!text-[var(--accent-color)]" : ""}`}
+                  aria-label="Pharm"
+                  title="Pharm"
+                  className={`${navLink} ${path.startsWith("/pharm") ? "!text-[var(--accent-color)]" : ""}`}
                 >
-                  <LuBookOpen />
+                  <LuGraduationCap />
                 </Link>
               </li>
 

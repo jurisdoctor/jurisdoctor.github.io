@@ -109,12 +109,15 @@ export const Mcq = ({
               type="button"
               disabled={ok}
               onClick={() => pick(index)}
-              className={`rounded-xl border border-solid p-3 text-left duration-200 disabled:cursor-default ${
+              className={`rounded-xl border border-solid p-3 text-left duration-200 ${
                 isRight
                   ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)] text-[var(--title-color)]"
                   : isWrong
                     ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
-                    : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
+                    : ok
+                      ? // Answered: the others stay put, dimmed, and don't react.
+                        "cursor-not-allowed border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] opacity-40"
+                      : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
               }`}
             >
               {option}
