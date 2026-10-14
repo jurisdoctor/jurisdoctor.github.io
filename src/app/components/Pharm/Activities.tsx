@@ -39,10 +39,13 @@ export const NameField = ({
   value,
   onChange,
   ok,
+  locked = false,
 }: {
   value: string;
   onChange: (value: string) => void;
   ok: boolean;
+  // Once the certificate has been issued the name can't be changed.
+  locked?: boolean;
 }) => (
   <ActivityShell label="Your turn" done={ok}>
     <label
@@ -60,8 +63,17 @@ export const NameField = ({
       placeholder="First and last name"
       value={value}
       onChange={(event) => onChange(event.target.value)}
-      className="w-full rounded-xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-4 py-2.5 text-[var(--title-color)] outline-none focus:border-[var(--chip-blue-border)]"
+      readOnly={locked}
+      aria-readonly={locked}
+      className={`w-full rounded-xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-4 py-2.5 text-[var(--title-color)] outline-none focus:border-[var(--chip-blue-border)] ${
+        locked ? "cursor-not-allowed opacity-60" : ""
+      }`}
     />
+    {locked && (
+      <p className="mt-2 text-sm text-[var(--muted-color)]">
+        🔒 Locked: your certificate has been issued under this name.
+      </p>
+    )}
   </ActivityShell>
 );
 

@@ -27,6 +27,9 @@ interface ProgressType {
   max: number;
   d: Record<string, any>;
   doneAt: string | null;
+  // The name the certificate was issued under, fixed at the moment the course
+  // was finished. Older saves without one fall back to `name`.
+  certName?: string;
 }
 
 const KEY = "pharm:progress:v2";
@@ -75,11 +78,12 @@ const Finale = ({
     day: "numeric",
   });
   const habit = state.d.exit?.habit as string | undefined;
-  const first = (state.name || "").trim().split(" ")[0];
+  const issuedTo = (state.certName ?? state.name ?? "").trim();
+  const first = issuedTo.split(" ")[0];
 
   return (
     <div>
-      <Certificate name={state.name} when={when} habit={habit} />
+      <Certificate name={issuedTo} when={when} habit={habit} />
       <h2 className="mb-1 text-2xl font-bold text-[var(--title-color)]">
         You did it{first ? `, ${first}` : ""}! 🎉
       </h2>
@@ -99,7 +103,7 @@ const Finale = ({
           Pharmacology Crash Course 1 · awarded to
         </p>
         <p className="mt-2 text-lg font-bold text-[var(--title-color)]">
-          {state.name || "Student"}
+          {issuedTo || "Student"}
         </p>
         <p className="mt-1 text-sm text-[var(--muted-color)]">{when}</p>
       </div>
@@ -126,7 +130,7 @@ const Finale = ({
         <ul className="grid gap-y-2 text-sm text-[var(--text-color)]">
           {REFERENCES.map((reference, index) => (
             <li key={index} className="flex items-start gap-x-3">
-              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--chip-blue-border)] bg-transparent text-[10px] font-bold text-[var(--chip-blue-border)] leading-none">
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--chip-blue-border)] bg-transparent text-[10px] font-bold leading-none text-[var(--chip-blue-border)]">
                 {index + 1}
               </span>
               <span className="leading-relaxed">{reference}</span>
@@ -215,13 +219,18 @@ const Pharm = () => {
       max: Math.max(prev.max, i + 1),
       doneAt:
         finishing && !prev.doneAt ? new Date().toISOString() : prev.doneAt,
+      certName: finishing && !prev.doneAt ? prev.name.trim() : prev.certName,
     }));
     scrollTop();
   };
 
   const confirmReset = () => {
     if (
-      window.confirm("Reset all progress and answers? This cannot be undone.")
+      window.confirm(
+        state.doneAt
+          ? "Reset everything? This erases your certificate and all your progress, and you would have to complete the whole course again to earn a new one."
+          : "Reset all progress and answers? This cannot be undone.",
+      )
     ) {
       setState(fresh());
     }
@@ -266,7 +275,7 @@ const Pharm = () => {
                 key={itemIndex}
                 className="flex items-start gap-x-3 text-[var(--text-color)]"
               >
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--chip-blue-border)] bg-transparent text-[10px] font-bold text-[var(--chip-blue-border)] leading-none">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--chip-blue-border)] bg-transparent text-[10px] font-bold leading-none text-[var(--chip-blue-border)]">
                   {block.ordered ? itemIndex + 1 : "✓"}
                 </span>
                 <span className="leading-relaxed">{item}</span>
@@ -324,7 +333,11 @@ const Pharm = () => {
           <NameField
             key={key}
             value={state.name}
-            onChange={(name) => patch({ name })}
+            // Once the course is finished the name is locked: the certificate
+            // was issued under it, and going back to change it would let one
+            // run through the course print certificates for anyone.
+            onChange={(name) => patch((prev) => (prev.doneAt ? {} : { name }))}
+            locked={!!state.doneAt}
             ok={blockDone(block, state.d, state.name)}
           />
         );
@@ -524,7 +537,7 @@ const Pharm = () => {
               className="hidden w-full items-center justify-between gap-x-3 rounded-lg px-3 py-2.5 text-left text-sm duration-150 xl:flex"
             >
               <span className="flex min-w-0 items-center gap-x-3">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--chip-blue)] text-[11px] font-bold text-[var(--title-color)] leading-none">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--chip-blue)] text-[11px] font-bold leading-none text-[var(--title-color)]">
                   {i + 1}
                 </span>
                 <span className="truncate font-bold text-[var(--title-color)]">
