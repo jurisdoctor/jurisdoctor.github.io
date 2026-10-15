@@ -1,11 +1,11 @@
-import { LuRocket, LuCoffee, LuDumbbell } from "react-icons/lu";
+import { PiRocketLaunch, PiCoffee, PiBarbell } from "react-icons/pi";
 import { FaYelp } from "react-icons/fa";
 import Reveal from "../Reveal";
 
 const STATS = [
-  { Icon: LuRocket, value: "217", label: "Projects Completed" },
-  { Icon: LuCoffee, value: "1992", label: "Energy Drinks" },
-  { Icon: LuDumbbell, value: "1035", label: "1000lb Club" },
+  { Icon: PiRocketLaunch, value: "217", label: "Projects Completed" },
+  { Icon: PiCoffee, value: "1992", label: "Energy Drinks" },
+  { Icon: PiBarbell, value: "1035", label: "1000lb Club" },
   { Icon: FaYelp, value: "5", label: "Yelp Elite Years" },
 ];
 

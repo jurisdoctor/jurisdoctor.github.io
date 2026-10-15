@@ -30,6 +30,7 @@ const About = () => {
         <Reveal
           delay={180}
           data-shapes-safe
+          data-tilt
           className="before:border-y-solid before:border-r-solid relative grid grid-cols-2 items-start gap-x-7 rounded-xl bg-[var(--container-color)] p-7 shadow-xl before:absolute before:left-[-0.93rem] before:top-[20%] before:h-0 before:w-0 before:border-y-[10px] before:border-r-[15px] before:border-y-transparent before:border-r-[var(--container-color)] before:content-[''] xl:before:left-[49%] xl:before:top-[-20px] xl:before:border-x-[10px] xl:before:border-x-transparent xl:before:border-b-[var(--container-color)] md:grid-cols-1 md:gap-y-7 md:before:left-[47%]"
         >
           <div className="md:text-center">

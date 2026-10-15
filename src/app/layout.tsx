@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LavaBackground from "./components/LavaBackground";
+import TiltEffect from "./components/Tilt/TiltEffect";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default function RootLayout({
       </head>
       <body>
         <LavaBackground />
+        <TiltEffect />
         {children}
       </body>
     </html>

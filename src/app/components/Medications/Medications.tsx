@@ -9,17 +9,18 @@ import {
   useState,
 } from "react";
 import { usePathname } from "next/navigation";
+import { flushSync } from "react-dom";
 import {
-  LuCalendarDays,
-  LuCheck,
-  LuChevronRight,
-  LuPlus,
-  LuMessageSquarePlus,
-  LuLayers,
-  LuNetwork,
-  LuSearch,
-  LuX,
-} from "react-icons/lu";
+  PiCalendarBlank,
+  PiCheckBold,
+  PiCaretRightBold,
+  PiPlusBold,
+  PiChatCircleText,
+  PiStack,
+  PiGraph,
+  PiMagnifyingGlass,
+  PiXBold,
+} from "react-icons/pi";
 import { useSaved } from "../DosageCalculations/Saved";
 import Shapes from "../Home/Shapes";
 import { flameHueAt } from "../Nclex/FlamePalette";
@@ -118,7 +119,7 @@ const MedRow = ({
   pickedFull: boolean;
   onPick: () => void;
 }) => (
-  <div className="relative h-full">
+  <div className="relative h-full" data-tilt data-med-card={med.id}>
     <button
       type="button"
       onClick={() => onOpen(med.id)}
@@ -170,7 +171,7 @@ const MedRow = ({
           </span>
         )}
       </span>
-      <LuChevronRight
+      <PiCaretRightBold
         aria-hidden
         className="shrink-0 self-center text-[var(--muted-color)] duration-300 group-hover:translate-x-0.5 group-hover:text-[var(--title-color)]"
       />
@@ -200,7 +201,7 @@ const MedRow = ({
           : "border-[var(--muted-color)] bg-[var(--container-color)] text-[var(--title-color)] hover:scale-105 hover:border-[var(--title-color)]"
       }`}
     >
-      {picked ? <LuCheck size={16} /> : <LuPlus size={18} />}
+      {picked ? <PiCheckBold size={16} /> : <PiPlusBold size={18} />}
     </button>
   </div>
 );
@@ -222,6 +223,8 @@ const GroupCard = ({
     type="button"
     onClick={onPick}
     aria-pressed={selected}
+    data-tilt
+    data-group-card={group.name}
     className={`flex h-full items-center gap-x-4 rounded-2xl border-2 border-solid px-5 py-4 text-left duration-300 ${
       selected
         ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] shadow-lg"
@@ -256,9 +259,9 @@ const GroupCard = ({
       </span>
     </span>
     {selected ? (
-      <LuX aria-hidden className="shrink-0 text-[var(--muted-color)]" />
+      <PiXBold aria-hidden className="shrink-0 text-[var(--muted-color)]" />
     ) : (
-      <LuChevronRight
+      <PiCaretRightBold
         aria-hidden
         className="shrink-0 text-[var(--muted-color)]"
       />
@@ -281,6 +284,7 @@ const GroupTag = ({
     type="button"
     onClick={onClear}
     aria-pressed
+    data-group-tag
     aria-label={`${group.name} selected. Show all categories`}
     title="Show all categories"
     className="group inline-flex max-w-full items-center gap-x-3 rounded-md border-2 border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] py-2 pl-5 pr-2.5 shadow-lg duration-300 hover:bg-[var(--chip-blue)]"
@@ -297,7 +301,7 @@ const GroupTag = ({
       {group.count} {group.count === 1 ? "medication" : "medications"}
     </span>
     <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--body-color)] text-[var(--muted-color)] duration-300 group-hover:text-[var(--title-color)]">
-      <LuX aria-hidden size={16} />
+      <PiXBold aria-hidden size={16} />
     </span>
   </button>
 );
@@ -337,7 +341,7 @@ const Tray = ({
     >
       <div className="flex min-w-0 flex-1 basis-[18rem] flex-wrap items-center gap-2">
         <span className="mr-1 flex items-center gap-x-2 text-sm font-bold text-[var(--title-color)]">
-          <LuNetwork aria-hidden className="text-[var(--chip-blue-border)]" />
+          <PiGraph aria-hidden className="text-[var(--chip-blue-border)]" />
           {meds.length}/{MAX_COMPARE}
         </span>
         {meds.map((med) => (
@@ -352,7 +356,7 @@ const Tray = ({
               aria-label={`Remove ${med.generic}`}
               className="flex h-6 w-6 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--body-color)] hover:text-[var(--title-color)]"
             >
-              <LuX size={14} />
+              <PiXBold size={14} />
             </button>
           </span>
         ))}
@@ -377,6 +381,89 @@ const Tray = ({
     </div>
   </div>
 );
+
+// The footer card at the very bottom of every page of the guide, as wide as the
+// content above it and sitting against the bottom edge of the page: how far to
+// trust the guide, and where its information comes from.
+const SourcesNote = ({ clearTray }: { clearTray: boolean }) => {
+  const link =
+    "underline decoration-[var(--muted-color)] underline-offset-2 duration-300 hover:text-[var(--title-color)]";
+  const card = useRef<HTMLDivElement>(null);
+  const skirt = useRef<HTMLDivElement>(null);
+
+  // Pulling the page up past its end (the elastic bounce on a trackpad or a
+  // phone) slides the page up and shows what is behind it. The skirt is a strip
+  // pinned to the bottom of the window, as wide as the card and the card's own
+  // color, so what that bounce shows under the card is more card. It sits
+  // behind the card (the card hides it), and is only switched on once the page
+  // is scrolled to its end, so it never shows anywhere else.
+  useEffect(() => {
+    const place = () => {
+      const strip = skirt.current;
+      const box = card.current?.getBoundingClientRect();
+      if (!strip || !box) return;
+      strip.style.left = `${box.left}px`;
+      strip.style.width = `${box.width}px`;
+      const root = document.documentElement;
+      const atEnd =
+        window.scrollY + window.innerHeight >= root.scrollHeight - 2;
+      strip.style.display = atEnd ? "block" : "none";
+    };
+    place();
+    window.addEventListener("scroll", place, { passive: true });
+    window.addEventListener("resize", place);
+    // The page grows as the guide loads and as lists change.
+    const watcher = new ResizeObserver(place);
+    watcher.observe(document.body);
+    return () => {
+      window.removeEventListener("scroll", place);
+      window.removeEventListener("resize", place);
+      watcher.disconnect();
+    };
+  }, []);
+
+  return (
+    <footer className="relative z-10 mx-auto mt-auto w-full max-w-[1080px] px-10 md:px-6">
+      <div
+        ref={skirt}
+        aria-hidden
+        className="pointer-events-none fixed bottom-0 -z-[1] hidden h-20 border-x border-solid border-[var(--border-color)] bg-[var(--container-color)]"
+      />
+      <div
+        ref={card}
+        className={`rounded-b-none rounded-t-xl border border-b-0 border-solid border-[var(--border-color)] bg-[var(--container-color)] px-6 pt-5 text-center text-sm leading-relaxed text-[var(--muted-color)] shadow-[0_-8px_24px_rgba(0,0,0,0.25)] ${
+          clearTray ? "pb-32" : "pb-5"
+        }`}
+      >
+        <p>
+          Use this as reference. Priority order: LexiComp, Davis&apos; Drug
+          Guide, and then <em>this</em>.
+        </p>
+        <p className="mt-1">
+          This uses information from:{" "}
+          <a
+            href="https://www.drugs.com/pro/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={link}
+          >
+            Drugs.com
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://dailymed.nlm.nih.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={link}
+          >
+            DailyMed
+          </a>
+          .
+        </p>
+      </div>
+    </footer>
+  );
+};
 
 // The day the medication-of-the-day popup was last closed ("2026-10-14").
 const DAILY_KEY = "meds:day:v1";
@@ -482,14 +569,136 @@ const Medications = () => {
     return () => window.removeEventListener("popstate", read);
   }, [guide, pathname]);
 
+  // The route the page is showing right now, readable from inside `go`.
+  const shown = useRef(route);
+  shown.current = route;
+
+  // Moves to another route. With `animate`:
+  //  - a medication opens as one motion: the card you pressed turns into the
+  //    medication's big card, which opens out from where the card was;
+  //  - a category card grows into the category's tag (and back), as a view
+  //    transition;
+  //  - everything else (leaving a medication, hopping to the next one) just
+  //    changes, with the page's own quick fade.
+  // Leaving a medication used to be a view transition too, but the picture it
+  // takes of a tall medication page made the move stutter and left a ghost of
+  // the old page behind. Browsers without view transitions, and visitors who
+  // asked for less motion, just get the move.
   const go = useCallback(
-    (next: RouteType) => {
+    (next: RouteType, animate = false, alongside?: () => void) => {
       if (!guide) return;
       const path = pathOf(next);
-      if (window.location.pathname.replace(/\/$/, "") !== path) {
-        window.history.pushState(null, "", path);
+      // `alongside` is anything else that changes with the page (clearing the
+      // search): it has to happen in the same step, or the card being pressed
+      // would already be gone when the motion starts.
+      const commit = () => {
+        alongside?.();
+        if (window.location.pathname.replace(/\/$/, "") !== path) {
+          window.history.pushState(null, "", path);
+        }
+        setRoute(parsePath(path, guide));
+      };
+
+      const here = shown.current;
+      const find = (selector: string | null) =>
+        selector ? document.querySelector<HTMLElement>(selector) : null;
+
+      // A medication's card -> the medication.
+      if (animate && !calm() && next.med && !here.med) {
+        const pressed = find(`[data-med-card="${next.med}"]`);
+        if (pressed) {
+          const from = pressed.getBoundingClientRect();
+          // A copy of the card stays where it was, fading out, while the new
+          // page opens out from the same spot.
+          const copy = pressed.cloneNode(true) as HTMLElement;
+          copy.removeAttribute("data-tilt");
+          copy.removeAttribute("data-tilting");
+          copy.removeAttribute("data-med-card");
+          copy.setAttribute("aria-hidden", "true");
+          Object.assign(copy.style, {
+            position: "fixed",
+            left: `${from.left}px`,
+            top: `${from.top}px`,
+            width: `${from.width}px`,
+            height: `${from.height}px`,
+            margin: "0",
+            zIndex: "40",
+            pointerEvents: "none",
+            transform: "none",
+            transition: "none",
+          });
+          document.body.appendChild(copy);
+
+          flushSync(commit);
+          top.current?.scrollIntoView({ behavior: "auto", block: "start" });
+
+          const open = find("[data-med-header]");
+          if (open) {
+            const to = open.getBoundingClientRect();
+            const inset = (px: number) => `${Math.max(0, px).toFixed(1)}px`;
+            const start = `inset(${inset(from.top - to.top)} ${inset(to.right - from.right)} ${inset(to.bottom - from.bottom)} ${inset(from.left - to.left)} round 8px)`;
+            open.animate(
+              [{ clipPath: start }, { clipPath: "inset(0px round 6px)" }],
+              { duration: 520, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
+            );
+          }
+          copy
+            .animate([{ opacity: 1 }, { opacity: 0 }], {
+              duration: 240,
+              easing: "ease-out",
+              fill: "forwards",
+            })
+            .finished.finally(() => copy.remove());
+          return;
+        }
       }
-      setRoute(parsePath(path, guide));
+
+      // A category card <-> the category's tag, as a view transition.
+      const doc = document as Document & {
+        startViewTransition?: (update: () => void) => {
+          finished: Promise<void>;
+        };
+      };
+      const group = (name: string) =>
+        `[data-group-card="${name.replace(/(["\\])/g, "\\$1")}"]`;
+      let before: string | null = null;
+      let after: string | null = null;
+      if (!next.med && !here.med) {
+        if (next.group && !here.group) {
+          before = group(next.group);
+          after = "[data-group-tag]";
+        } else if (here.group && !next.group) {
+          before = "[data-group-tag]";
+          after = group(here.group);
+        }
+      }
+      if (!animate || !doc.startViewTransition || calm() || !before) {
+        commit();
+        return;
+      }
+
+      const name = (el: HTMLElement | null, on: boolean) =>
+        on
+          ? el?.style.setProperty("view-transition-name", "med-open")
+          : el?.style.removeProperty("view-transition-name");
+
+      const from = find(before);
+      name(from, true);
+      document.documentElement.classList.add("vt-active");
+      let to: HTMLElement | null = null;
+      const transition = doc.startViewTransition(() => {
+        name(from, false);
+        flushSync(commit);
+        // Start the new page at the top at once, so the thing it grows into is
+        // where the motion is aimed.
+        top.current?.scrollIntoView({ behavior: "auto", block: "start" });
+        to = find(after);
+        name(to, true);
+      });
+      transition.finished.finally(() => {
+        document.documentElement.classList.remove("vt-active");
+        name(to, false);
+      });
     },
     [guide],
   );
@@ -541,16 +750,13 @@ const Medications = () => {
   const openMed = (id: string) => {
     const target = guide?.medications.find((entry) => entry.id === id);
     if (!target) return;
-    setQuery("");
-    go({ group: target.group, med: id });
+    go({ group: target.group, med: id }, true, () => setQuery(""));
   };
   const openGroup = (name: string) => {
-    setQuery("");
-    go({ group: name, med: null });
+    go({ group: name, med: null }, true, () => setQuery(""));
   };
   const openRoot = () => {
-    setQuery("");
-    go(ROOT);
+    go(ROOT, true, () => setQuery(""));
   };
 
   // Saved ids can outlive an edit to the guide, so only keep real ones.
@@ -630,14 +836,16 @@ const Medications = () => {
   };
 
   return (
-    <>
+    // A full-height column, so the footer card sits against the bottom edge of
+    // the page even when there is little above it.
+    <div className="flex min-h-screen flex-col">
       {/* A sibling of the section, not a child: see Nclex.tsx for why a
           `fixed` layer can't live inside an element that animates in. */}
       <div className="pointer-events-none fixed inset-y-0 left-20 right-0 -z-[5] overflow-hidden lg:left-0">
         <Shapes />
       </div>
 
-      <section className="relative mx-auto max-w-[1080px] animate-fadeIn px-10 pb-24 pt-28 lg:pt-12 md:px-6">
+      <section className="relative mx-auto w-full max-w-[1080px] flex-1 animate-fadeIn px-10 pb-12 pt-28 lg:pt-12 md:px-6">
         <div ref={top} className="relative z-10 scroll-mt-6">
           <div className="mb-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-3 lg:justify-center">
             <h1 className="ml-3.5 text-4xl font-bold lg:ml-0 lg:text-center">
@@ -651,7 +859,7 @@ const Medications = () => {
                     onClick={openStudy}
                     className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
                   >
-                    <LuLayers
+                    <PiStack
                       aria-hidden
                       className="text-[var(--chip-blue-border)]"
                     />
@@ -665,7 +873,7 @@ const Medications = () => {
                   title="Medication of the day"
                   className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
                 >
-                  <LuCalendarDays
+                  <PiCalendarBlank
                     aria-hidden
                     className="text-[var(--chip-blue-border)]"
                   />
@@ -676,7 +884,7 @@ const Medications = () => {
                   onClick={openCompare}
                   className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
                 >
-                  <LuNetwork
+                  <PiGraph
                     aria-hidden
                     className="text-[var(--chip-blue-border)]"
                   />
@@ -693,7 +901,7 @@ const Medications = () => {
                   aria-label="Suggest a medication"
                   className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
                 >
-                  <LuMessageSquarePlus
+                  <PiChatCircleText
                     aria-hidden
                     className="text-[var(--chip-blue-border)]"
                   />
@@ -726,7 +934,7 @@ const Medications = () => {
                   {crumbs.map((crumb, index) => (
                     <Fragment key={crumb.label}>
                       {index > 0 && (
-                        <LuChevronRight
+                        <PiCaretRightBold
                           aria-hidden
                           className="text-[var(--muted-color)]"
                         />
@@ -754,7 +962,7 @@ const Medications = () => {
 
               {!med && !route.compare && !route.study && (
                 <div className="relative mb-4">
-                  <LuSearch
+                  <PiMagnifyingGlass
                     aria-hidden
                     className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
                   />
@@ -782,7 +990,7 @@ const Medications = () => {
                       aria-label="Clear search"
                       className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--body-color)] hover:text-[var(--title-color)]"
                     >
-                      <LuX />
+                      <PiXBold />
                     </button>
                   )}
                 </div>
@@ -949,6 +1157,12 @@ const Medications = () => {
         </div>
       </section>
 
+      {guide && (
+        <SourcesNote
+          clearTray={pickedMeds.length > 0 && !route.compare && !route.study}
+        />
+      )}
+
       {daily && (
         <MedOfTheDay
           med={daily.med}
@@ -983,7 +1197,7 @@ const Medications = () => {
           onOpen={openCompare}
         />
       )}
-    </>
+    </div>
   );
 };
 

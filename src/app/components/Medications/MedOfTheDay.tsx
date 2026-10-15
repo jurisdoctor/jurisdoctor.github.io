@@ -1,7 +1,7 @@
 "use client";
 import { CSSProperties, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { LuX } from "react-icons/lu";
+import { PiXBold } from "react-icons/pi";
 import { Critical, Headline } from "./Emphasis";
 import { shortName } from "./Interactions";
 import { MedType } from "./types";
@@ -73,7 +73,7 @@ const MedOfTheDay = ({
             aria-label="Close"
             className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--body-color)] hover:text-[var(--title-color)]"
           >
-            <LuX />
+            <PiXBold />
           </button>
         </div>
 

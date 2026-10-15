@@ -1,6 +1,11 @@
 "use client";
 import { CSSProperties, ReactNode } from "react";
-import { LuArrowLeft, LuArrowRight, LuCheck, LuPlus } from "react-icons/lu";
+import {
+  PiArrowLeft,
+  PiArrowRight,
+  PiCheckBold,
+  PiPlusBold,
+} from "react-icons/pi";
 import { Critical, Headline } from "./Emphasis";
 import {
   GroupItem,
@@ -474,6 +479,7 @@ const MedDetail = ({
     return (
       <section
         key={section.id}
+        data-tilt
         className={
           danger
             ? "rounded-2xl border-2 border-solid border-[var(--primary-color)] bg-[var(--container-color)] p-5 [background-image:linear-gradient(color-mix(in_srgb,var(--primary-color)_8%,transparent),color-mix(in_srgb,var(--primary-color)_8%,transparent))] sm:p-4"
@@ -508,7 +514,12 @@ const MedDetail = ({
         } as CSSProperties
       }
     >
-      <div className="overflow-hidden rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] shadow-xl">
+      <div
+        // The whole card the medication's card opens into (see go() in
+        // Medications.tsx), banner and all.
+        data-med-header
+        className="overflow-hidden rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] shadow-xl"
+      >
         <header
           className="relative px-7 pb-6 pt-7 sm:px-5 sm:pb-5 sm:pt-5"
           style={{
@@ -541,7 +552,7 @@ const MedDetail = ({
                 : "border-[var(--title-color)] bg-[var(--container-color)] text-[var(--title-color)] hover:scale-105"
             }`}
           >
-            {picked ? <LuCheck size={22} /> : <LuPlus size={24} />}
+            {picked ? <PiCheckBold size={22} /> : <PiPlusBold size={24} />}
           </button>
 
           <p
@@ -659,16 +670,20 @@ const MedDetail = ({
 
       <nav
         aria-label={`More in ${med.group}`}
-        className="mt-2 flex flex-wrap items-center justify-between gap-3 sm:justify-center"
+        // Three columns with the middle one centered on the card, so "Back to"
+        // stays in the middle whether or not there is a previous or next one.
+        // On a narrow screen "Back to" gets a row of its own, centered, with
+        // the previous and next ones under it.
+        className="mt-2 grid grid-cols-[1fr_auto_1fr] items-center gap-3 sm:grid-cols-2"
       >
         {neighbours.prev ? (
           <button
             type="button"
             onClick={() => onOpen(neighbours.prev!.id)}
             title="Previous medication"
-            className={step}
+            className={`${step} min-w-0 max-w-full justify-self-start`}
           >
-            <LuArrowLeft
+            <PiArrowLeft
               aria-hidden
               className="shrink-0 text-[var(--muted-color)]"
             />
@@ -681,7 +696,7 @@ const MedDetail = ({
         <button
           type="button"
           onClick={onBack}
-          className="rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-6 py-2.5 text-sm font-bold text-[var(--primary-color)] duration-300 hover:bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
+          className="justify-self-center rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-6 py-2.5 text-sm font-bold text-[var(--primary-color)] duration-300 hover:bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] sm:order-first sm:col-span-2"
         >
           Back to {med.group}
         </button>
@@ -691,10 +706,10 @@ const MedDetail = ({
             type="button"
             onClick={() => onOpen(neighbours.next!.id)}
             title="Next medication"
-            className={step}
+            className={`${step} min-w-0 max-w-full justify-self-end sm:col-start-2`}
           >
             <span className="truncate">{neighbours.next.generic}</span>
-            <LuArrowRight
+            <PiArrowRight
               aria-hidden
               className="shrink-0 text-[var(--muted-color)]"
             />

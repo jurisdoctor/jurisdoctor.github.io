@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { LuStar } from "react-icons/lu";
+import { PiStar, PiStarFill } from "react-icons/pi";
 import Bowtie from "./Bowtie";
 import { ResultType } from "./ChapterSet";
 import Cloze from "./Cloze";
@@ -446,11 +446,11 @@ const Quiz = ({
                   : "hover:text-[hsl(43,100%,55%)]"
               }`}
             >
-              <LuStar
-                className="block"
-                size={20}
-                fill={starred?.[question.id] ? "currentColor" : "none"}
-              />
+              {starred?.[question.id] ? (
+                <PiStarFill className="block" size={20} />
+              ) : (
+                <PiStar className="block" size={20} />
+              )}
             </button>
           )}
         </span>

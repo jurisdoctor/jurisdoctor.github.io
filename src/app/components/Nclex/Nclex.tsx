@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, useCallback, useEffect, useMemo, useState } from "react";
-import { LuChevronDown } from "react-icons/lu";
+import { PiCaretDownBold } from "react-icons/pi";
 import Shapes from "../Home/Shapes";
 import { useSaved } from "../DosageCalculations/Saved";
 import {
@@ -685,7 +685,7 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
                   </option>
                 ))}
               </select>
-              <LuChevronDown
+              <PiCaretDownBold
                 aria-hidden
                 className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
               />

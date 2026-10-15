@@ -1,7 +1,7 @@
 "use client";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { LuCheck, LuX } from "react-icons/lu";
+import { PiCheckBold, PiXBold } from "react-icons/pi";
 import { isAcceptable } from "./Moderate";
 
 // Where suggestions go. The site is a static page with no server of its own,
@@ -123,7 +123,7 @@ export const SuggestModal = ({ onClose }: { onClose: () => void }) => {
               aria-label="Close"
               className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--body-color)] hover:text-[var(--title-color)]"
             >
-              <LuX />
+              <PiXBold />
             </button>
           )}
         </div>
@@ -149,7 +149,7 @@ export const SuggestModal = ({ onClose }: { onClose: () => void }) => {
         ) : status === "sent" || status === "local" ? (
           <div className="py-6 text-center">
             <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(0,212,127,0.18)] text-[rgb(0,212,127)]">
-              <LuCheck aria-hidden />
+              <PiCheckBold aria-hidden />
             </span>
             <p className="font-bold text-[var(--title-color)]">
               Got it, thank you.

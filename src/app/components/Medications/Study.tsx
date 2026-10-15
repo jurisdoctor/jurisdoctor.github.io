@@ -8,7 +8,7 @@ import {
   useState,
 } from "react";
 import { createPortal } from "react-dom";
-import { LuCheck, LuSearch, LuX } from "react-icons/lu";
+import { PiCheckBold, PiMagnifyingGlass, PiXBold } from "react-icons/pi";
 import { useSaved } from "../DosageCalculations/Saved";
 import {
   Card,
@@ -415,7 +415,7 @@ const Session = ({
           title="End session (Esc)"
           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--container-color)] hover:text-[var(--title-color)]"
         >
-          <LuX size={22} />
+          <PiXBold size={22} />
         </button>
         <div className="min-w-0 flex-1">
           <div
@@ -584,7 +584,7 @@ const Row = ({
           : "border-[var(--border-color)]"
       }`}
     >
-      {on && <LuCheck size={14} strokeWidth={3} />}
+      {on && <PiCheckBold size={14} />}
     </span>
     <span className="min-w-0 flex-1">
       <span className="block font-bold text-[var(--title-color)]">
@@ -891,7 +891,7 @@ const Study = ({
         {prefs.scope === "pick" && (
           <div className="mt-4 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-3">
             <div className="relative mb-3">
-              <LuSearch
+              <PiMagnifyingGlass
                 aria-hidden
                 className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
               />
@@ -944,7 +944,7 @@ const Study = ({
                       />
                       <span className="min-w-0 truncate">{med.generic}</span>
                       {on && (
-                        <LuCheck
+                        <PiCheckBold
                           aria-hidden
                           className="ml-auto shrink-0"
                           size={14}

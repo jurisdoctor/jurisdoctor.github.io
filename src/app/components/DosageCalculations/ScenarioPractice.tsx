@@ -1,6 +1,6 @@
 "use client";
 import { Fragment, RefObject, useEffect, useRef, useState } from "react";
-import { LuChevronDown } from "react-icons/lu";
+import { PiCaretDownBold } from "react-icons/pi";
 import { numeric } from "./Data";
 import ProblemSet, { MARKS } from "./ProblemSet";
 import { useSaved } from "./Saved";
@@ -619,7 +619,7 @@ const ScenarioPractice = () => {
                 }`}
               >
                 Problem set
-                <LuChevronDown
+                <PiCaretDownBold
                   className={`duration-300 ${open ? "rotate-180" : ""}`}
                 />
               </button>

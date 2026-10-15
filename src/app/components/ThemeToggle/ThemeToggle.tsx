@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { LuMoon, LuSun } from "react-icons/lu";
+import { PiMoon, PiSun } from "react-icons/pi";
 
 type Theme = "light" | "dark";
 
@@ -39,7 +39,7 @@ const ThemeToggle = () => {
       }
       className="text-xl text-[var(--title-color)] duration-300 hover:text-[var(--accent-color)]"
     >
-      {theme === "dark" ? <LuSun /> : <LuMoon />}
+      {theme === "dark" ? <PiSun /> : <PiMoon />}
     </button>
   );
 };

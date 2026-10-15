@@ -2,14 +2,14 @@
 import { ReactNode, useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import {
-  LuCheck,
-  LuChevronDown,
-  LuHeartPulse,
-  LuAlertOctagon,
-  LuSearch,
-  LuAlertTriangle,
-  LuX,
-} from "react-icons/lu";
+  PiCheckBold,
+  PiCaretDownBold,
+  PiHeartbeat,
+  PiWarningOctagon,
+  PiMagnifyingGlass,
+  PiWarning,
+  PiXBold,
+} from "react-icons/pi";
 import { useSaved } from "../DosageCalculations/Saved";
 import TypedText from "../Typed/TypedText";
 import { search } from "./Data";
@@ -57,9 +57,9 @@ const TONE: Record<Verdict, { color: string; wash: string }> = {
 };
 
 const ICON: Record<Verdict, ReactNode> = {
-  do_not_give: <LuAlertOctagon aria-hidden />,
-  caution: <LuAlertTriangle aria-hidden />,
-  treats_this: <LuCheck aria-hidden />,
+  do_not_give: <PiWarningOctagon aria-hidden />,
+  caution: <PiWarning aria-hidden />,
+  treats_this: <PiCheckBold aria-hidden />,
 };
 
 const freshLabs = (): Labs => ({});
@@ -163,7 +163,7 @@ const LabSelect = ({
             </option>
           ))}
         </select>
-        <LuChevronDown
+        <PiCaretDownBold
           aria-hidden
           className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
         />
@@ -252,7 +252,7 @@ const Reading = ({
           </span>
         </span>
         <span className="flex h-[1.7rem] shrink-0 items-center">
-          <LuChevronDown
+          <PiCaretDownBold
             aria-hidden
             className={`text-[var(--muted-color)] duration-300 ${open ? "rotate-180" : ""}`}
           />
@@ -394,7 +394,7 @@ const PairRow = ({
           )}
         </span>
         <span className="flex h-[1.7rem] shrink-0 items-center">
-          <LuChevronDown
+          <PiCaretDownBold
             aria-hidden
             className={`text-[var(--muted-color)] duration-300 ${open ? "rotate-180" : ""}`}
           />
@@ -554,7 +554,7 @@ export const PatientModal = ({
             aria-label="Close"
             className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--body-color)] hover:text-[var(--title-color)]"
           >
-            <LuX />
+            <PiXBold />
           </button>
         </div>
 
@@ -623,7 +623,7 @@ export const PatientBar = ({
   return (
     <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-4">
       <span className="flex items-center gap-x-2 text-sm font-bold text-[var(--title-color)]">
-        <LuHeartPulse aria-hidden className="text-[var(--chip-blue-border)]" />
+        <PiHeartbeat aria-hidden className="text-[var(--chip-blue-border)]" />
         Test patient
       </span>
       {active.length === 0 ? (

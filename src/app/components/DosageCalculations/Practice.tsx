@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import { LuChevronDown } from "react-icons/lu";
+import { PiCaretDownBold } from "react-icons/pi";
 import { FamilyType, Ladders, Mixes, numeric, Rules, RuleType } from "./Data";
 import ProblemSet from "./ProblemSet";
 import { useSaved } from "./Saved";
@@ -349,7 +349,7 @@ const Practice = () => {
                 }`}
               >
                 Problem set
-                <LuChevronDown
+                <PiCaretDownBold
                   className={`duration-300 ${open ? "rotate-180" : ""}`}
                 />
               </button>

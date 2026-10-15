@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, useRef, useState } from "react";
-import { LuChevronDown, LuCheck, LuLock } from "react-icons/lu";
+import { PiCaretDownBold, PiCheckBold, PiLock } from "react-icons/pi";
 import { useSaved } from "../DosageCalculations/Saved";
 import { ResultType } from "../Nclex/ChapterSet";
 import Quiz from "../Nclex/Quiz";
@@ -544,7 +544,7 @@ const Pharm = () => {
                   {step.title}
                 </span>
               </span>
-              <LuChevronDown
+              <PiCaretDownBold
                 className={`shrink-0 text-[var(--muted-color)] duration-150 ${navOpen ? "rotate-180" : ""}`}
               />
             </button>
@@ -581,9 +581,9 @@ const Pharm = () => {
                     >
                       <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--body-color)] text-[11px] leading-none">
                         {!unlocked ? (
-                          <LuLock />
+                          <PiLock />
                         ) : complete ? (
-                          <LuCheck className="text-[rgb(0,212,127)]" />
+                          <PiCheckBold className="text-[rgb(0,212,127)]" />
                         ) : (
                           index + 1
                         )}

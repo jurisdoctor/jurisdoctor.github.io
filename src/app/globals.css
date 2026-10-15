@@ -588,3 +588,86 @@ button {
     color: #4a4658;
   }
 }
+
+/* A card that tips toward the mouse (see Tilt/TiltEffect.tsx): mark it with
+   `data-tilt`. The effect sets --tilt-x, --tilt-y and --tilt-s on it. */
+[data-tilt] {
+  transition: transform 0.15s ease-out;
+}
+
+/* Only while it is being tipped, so a card at rest carries no transform at
+   all (nothing to blur its text or hold its own stacking context). */
+[data-tilt][data-tilting] {
+  transform: perspective(900px) rotateX(var(--tilt-x, 0deg))
+    rotateY(var(--tilt-y, 0deg)) scale(var(--tilt-s, 1));
+}
+
+/* A medication card (or a category card) opening into its page (see go() in
+   Medications.tsx): the card grows into the page's big card, the way a
+   card is opened, while the rest of the page fades over. The contents of
+   both are kept at their own size and cropped by the growing box, not stretched
+   with it, and the box keeps rounded corners the whole way. */
+::view-transition-group(med-open) {
+  animation-duration: 0.55s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: 8px;
+  overflow: clip;
+}
+
+::view-transition-image-pair(med-open) {
+  border-radius: 8px;
+  overflow: clip;
+}
+
+::view-transition-old(med-open),
+::view-transition-new(med-open) {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  object-position: top left;
+  mix-blend-mode: normal;
+}
+
+/* The box is cut out of the page's own picture, so the page has a hole where it
+   sits. The old picture stays until the new one has covered it (and the box has
+   a solid fill behind both); if the old faded out first, the hole would show as
+   a flash of black. */
+::view-transition-group(med-open) {
+  background: var(--container-color);
+}
+
+::view-transition-old(med-open) {
+  animation: none;
+}
+
+::view-transition-new(med-open) {
+  animation: vt-fade-in 0.35s ease 0.05s both;
+}
+
+/* The page around it: the new one fades in over the old one, which stays put
+   underneath until it is covered. (If the old page faded out first there would
+   be a moment with nothing in between, a flash of the bare dark background.) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  animation: none;
+}
+
+::view-transition-new(root) {
+  animation: vt-fade-in 0.4s ease both;
+}
+
+@keyframes vt-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+  }
+}

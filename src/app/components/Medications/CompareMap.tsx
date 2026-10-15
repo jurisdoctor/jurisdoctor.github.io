@@ -10,7 +10,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { LuX } from "react-icons/lu";
+import { PiXBold } from "react-icons/pi";
 import {
   COLORS,
   IndexType,
@@ -474,7 +474,7 @@ const CompareMap = ({
                 aria-label={`Remove ${med.generic}`}
                 className="flex h-6 w-6 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--body-color)] hover:text-[var(--title-color)]"
               >
-                <LuX size={14} />
+                <PiXBold size={14} />
               </button>
             </span>
           ))}

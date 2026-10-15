@@ -41,8 +41,11 @@ const Stop = ({
   title: string;
   sub: string;
 }) => (
-  <div className="flex min-w-[7.5rem] flex-1 flex-col items-center gap-y-1 rounded-xl bg-[var(--body-color)] p-4 text-center">
-    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--chip-blue-border)] text-xs font-bold text-white leading-none">
+  <div
+    data-tilt
+    className="flex min-w-[7.5rem] flex-1 flex-col items-center gap-y-1 rounded-xl bg-[var(--body-color)] p-4 text-center"
+  >
+    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--chip-blue-border)] text-xs font-bold leading-none text-white">
       {n}
     </span>
     <span className="flex h-8 items-center justify-center text-2xl">

@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
-import { LuChevronDown, LuStar } from "react-icons/lu";
+import { PiCaretDownBold, PiStar, PiStarFill } from "react-icons/pi";
 import Flash from "./Flash";
 import Glow from "./Glow";
 import { flameHueAt } from "./FlamePalette";
@@ -405,7 +405,7 @@ const ChapterSet = ({
                   </option>
                 ))}
               </select>
-              <LuChevronDown
+              <PiCaretDownBold
                 aria-hidden
                 className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
               />
@@ -565,10 +565,9 @@ const ChapterSet = ({
                     </span>
                   )}
                   {starred?.[question.id] && (
-                    <LuStar
+                    <PiStarFill
                       aria-label="Favorite"
                       size={11}
-                      fill="currentColor"
                       className="pointer-events-none absolute -bottom-1 -left-1 text-[hsl(43,100%,55%)]"
                     />
                   )}

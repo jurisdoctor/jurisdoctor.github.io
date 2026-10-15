@@ -3,12 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
-  LuHome,
-  LuCalculator,
-  LuGraduationCap,
-  LuPill,
-  LuMenu,
-} from "react-icons/lu";
+  PiHouse,
+  PiCalculator,
+  PiGraduationCap,
+  PiPill,
+  PiList,
+} from "react-icons/pi";
 import { useState } from "react";
 import { SCROLL_TO } from "../ScrollReset";
 import ThemeToggle from "../ThemeToggle";
@@ -80,7 +80,7 @@ const Sidebar = () => {
                   onClick={(e) => scrollToSection(e, "home")}
                   className={navLink}
                 >
-                  <LuHome />
+                  <PiHouse />
                 </Link>
               </li>
               <li className="nav__item">
@@ -89,7 +89,7 @@ const Sidebar = () => {
                   onClick={() => setToggle(false)}
                   className={`${navLink} ${path === "/dosage-calculations" ? "!text-[var(--accent-color)]" : ""}`}
                 >
-                  <LuCalculator />
+                  <PiCalculator />
                 </Link>
               </li>
 
@@ -101,7 +101,7 @@ const Sidebar = () => {
                   title="Pharm"
                   className={`${navLink} ${path.startsWith("/pharm") ? "!text-[var(--accent-color)]" : ""}`}
                 >
-                  <LuGraduationCap />
+                  <PiGraduationCap />
                 </Link>
               </li>
 
@@ -113,7 +113,7 @@ const Sidebar = () => {
                   title="Drug guide"
                   className={`${navLink} ${path.startsWith("/medications") ? "!text-[var(--accent-color)]" : ""}`}
                 >
-                  <LuPill />
+                  <PiPill />
                 </Link>
               </li>
             </ul>
@@ -129,7 +129,7 @@ const Sidebar = () => {
         className={toggle ? `${navToggle} lg:left-[110px]` : `${navToggle}`}
         onClick={() => setToggle(!toggle)}
       >
-        <LuMenu />
+        <PiList />
       </div>
     </>
   );

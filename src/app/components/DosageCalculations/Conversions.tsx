@@ -26,7 +26,7 @@ const Table = ({
   <div className="mb-10 break-inside-avoid md:mb-7">
     <h3 className="mb-4 ml-3.5 text-xl lg:ml-0 lg:text-center">{title}</h3>
 
-    <div className={tableCard}>
+    <div className={tableCard} data-tilt>
       {headers && (
         <div className="mb-2 grid grid-cols-[1fr_auto_1fr] items-center gap-x-4 sm:hidden">
           <span className="text-right text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
@@ -66,7 +66,7 @@ const Conversions = () => {
 
       <Reflow className="mb-4 columns-[26rem] gap-7 md:gap-4">
         {Prefixes.map((prefix) => (
-          <div key={prefix.name} className={card}>
+          <div key={prefix.name} className={card} data-tilt>
             <h3 className="text-xl">{prefix.name}</h3>
             <span className="text-sm text-[var(--muted-color)]">
               {prefix.meaning}

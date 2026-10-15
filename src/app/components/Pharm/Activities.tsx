@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, useMemo, useState } from "react";
-import { LuCheck } from "react-icons/lu";
+import { PiCheckBold } from "react-icons/pi";
 import { shuffled } from "../Nclex/Questions";
 
 type Setter<T> = (value: T | ((prev: T | undefined) => T)) => void;
@@ -27,7 +27,7 @@ const ActivityShell = ({
       </span>
       {done && (
         <span className="flex items-center gap-x-1 text-xs font-bold text-[rgb(0,212,127)]">
-          <LuCheck /> Done
+          <PiCheckBold /> Done
         </span>
       )}
     </div>
@@ -259,7 +259,7 @@ export const FlipCards = ({
                 >
                   {seen.includes(index) && (
                     <span className="absolute right-1.5 top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[rgb(0,212,127)] text-white">
-                      <LuCheck size={10} />
+                      <PiCheckBold size={10} />
                     </span>
                   )}
                   <span className="text-2xl">{item.emoji}</span>

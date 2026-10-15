@@ -51,6 +51,7 @@ const Resume = () => {
           <div
             key={`education-${tab}`}
             data-shapes-safe
+            data-tilt
             className={`relative grid animate-fadeIn rounded-xl bg-[var(--container-color)] p-7 shadow-2xl ${
               tab === "education" ? "" : "lg:hidden"
             }`}
@@ -74,6 +75,7 @@ const Resume = () => {
           <div
             key={`experience-${tab}`}
             data-shapes-safe
+            data-tilt
             className={`relative grid animate-fadeIn rounded-xl bg-[var(--container-color)] p-7 shadow-2xl ${
               tab === "experience" ? "" : "lg:hidden"
             }`}

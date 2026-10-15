@@ -26,11 +26,11 @@ const Home = () => {
         <div data-shapes-safe className="z-10 max-w-[540px] text-center">
           <Reveal>
             <img
-              className="mx-auto mb-6 h-auto max-w-full rounded-full"
-              src="/assets/cat.gif"
+              className="mx-auto mb-6 h-[125px] w-[125px] max-w-full rounded-full object-cover"
+              src="/assets/cat-knight.webp"
               width={125}
               height={125}
-              alt="Picture of the author"
+              alt="A kitten in a tiny suit of armor, holding up a sword"
             />
           </Reveal>
           <Reveal delay={120} as="h1" className="text-2xl font-bold">
