@@ -242,7 +242,9 @@ const PairBody = ({
         </div>
       )}
 
-      {!full && (
+      {/* "No known interaction" pairs have no explanation to open (they are not
+          in the list below the map), so there is nothing to tap through to. */}
+      {!full && line.status !== "ok" && (
         <p className="text-xs italic text-[var(--muted-color)]">
           {rules.length > shown.length
             ? `+${rules.length - shown.length} more · `
@@ -412,6 +414,25 @@ const CompareMap = ({
       event.preventDefault();
     }
     event.stopPropagation();
+    // A pair with no known interaction has no block below to go to, so a click
+    // leaves its card alone: it stays while the mouse is on the line. Where
+    // there is no mouse to keep it up (a finger, the keyboard), it is pinned in
+    // place until the map's background or another line is pressed.
+    const line = byKey.get(key);
+    if (line?.status === "ok") {
+      if (!hover) {
+        if ("clientX" in event) {
+          setPinned({ key, ...where(event) });
+        } else {
+          const width = box.current?.clientWidth ?? W;
+          const height = box.current?.clientHeight ?? H;
+          const mx = line.a.x + (line.b.x - line.a.x) * line.t;
+          const my = line.a.y + (line.b.y - line.a.y) * line.t;
+          setPinned({ key, x: (mx / W) * width, y: (my / H) * height });
+        }
+      }
+      return;
+    }
     // The popup is a quick peek; the full text reads better in its block
     // below, so a click takes you there, and the popup goes away rather than
     // staying stuck on the map. The block flashes briefly so you can see which
