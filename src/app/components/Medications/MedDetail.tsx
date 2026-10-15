@@ -387,7 +387,7 @@ const Effects = ({
 );
 
 // Below the card, the sections that add to it: why this drug, what rules it
-// out, how you know it's working, and the safety flags. The data also has
+// out, how you know it's working, the safety flags, and the labs to watch. The data also has
 // "interactions" and "notes" sections; they are left off the page on purpose
 // (interactions live in the Interaction check).
 // (Name, indication, action, classes and side effects are already on the card.)
@@ -395,6 +395,7 @@ const ROWS: string[][] = [
   ["why", "working"],
   ["contraindications", "cautions"],
   ["safety"],
+  ["monitoring"],
   ["nursing"],
 ];
 

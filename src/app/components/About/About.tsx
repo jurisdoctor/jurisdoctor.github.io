@@ -16,10 +16,18 @@ const About = () => {
         about
       </Reveal>
 
-      <div className="grid grid-cols-[3fr_9fr] gap-x-7 xl:grid-cols-[720px] xl:justify-center xl:gap-x-[1.875rem] md:grid-cols-[320px] xs:grid-cols-1">
-        <Reveal delay={80}>
+      <div // The picture is exactly its own width, and picture and card together sit
+        // in the middle of the page (not hard against the right edge).
+        className="grid grid-cols-[125px_minmax(0,760px)] justify-center gap-x-7 xl:grid-cols-[720px] xl:gap-x-[1.875rem] md:grid-cols-[320px] xs:grid-cols-1"
+      >
+        {/* Pushed against the card (its right edge, where the card's little arrow
+            points back at it), not left in the middle of its column. */}
+        <Reveal
+          delay={80}
+          className="flex items-start justify-end xl:justify-center"
+        >
           <img
-            className="h-auto max-w-full rounded-full align-middle xl:justify-self-center"
+            className="h-auto max-w-full rounded-full align-middle"
             src="/assets/cat-scuba.gif"
             width={125}
             height={125}
@@ -37,7 +45,7 @@ const About = () => {
             <p className="mb-4">
               I write software and study math, and lately a lot of nursing,
               which is why half of this site is dosage drills and drug cards. I
-              build the tools I wish I had while I&apos;m studying.
+              am building tools to help my cohort study!
             </p>
             <DownloadCVButton />
           </div>
