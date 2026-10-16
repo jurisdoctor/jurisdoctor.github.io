@@ -56,6 +56,29 @@ export interface FlashcardType {
   nursing_considerations: string[];
 }
 
+export interface CondensedStep {
+  cjmm_step: number;
+  cjmm: string;
+  do: string;
+  why: string;
+}
+
+export interface CondensedType {
+  name: string;
+  class: string;
+  hook: string;
+  the_one_thing: string;
+  before_you_give: string;
+  watch_for: string[];
+  considerations: CondensedStep[];
+  worst_case: string[];
+  high_alert: boolean;
+  antidote: string;
+  level: string;
+  working: string;
+  nclex: boolean;
+}
+
 export interface MedType {
   id: string;
   generic: string;
@@ -75,6 +98,7 @@ export interface MedType {
   flashcard: FlashcardType;
   sections: SectionType[];
   tags: string[];
+  condensed: CondensedType;
   nclex: boolean;
 }
 

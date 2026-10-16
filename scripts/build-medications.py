@@ -21,7 +21,7 @@ KEEP = (
     "id", "generic", "pronunciation", "brand", "group", "drug_class", "subclass",
     "highlight", "quick", "why_this_one", "use", "working_because",
     "high_alert", "black_box", "antidote", "sections", "must_check",
-    "tags", "nclex",
+    "tags", "nclex", "condensed",
 )
 slim = []
 for med in guide["medications"]:

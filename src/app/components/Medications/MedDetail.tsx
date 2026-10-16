@@ -8,6 +8,7 @@ import {
 } from "react-icons/pi";
 import { Critical, Headline } from "./Emphasis";
 import {
+  CondensedType,
   GroupItem,
   LinkItem,
   MedType,
@@ -287,9 +288,17 @@ const Linked = ({
 // name, trade name, indication, action, classes, side effects and nursing
 // considerations, each as a labelled row. Everything on it is a value from
 // the data. The group's color tints the header and the labels.
-const Label = ({ children }: { children: ReactNode }) => (
+const Label = ({
+  children,
+  small = false,
+}: {
+  children: ReactNode;
+  small?: boolean;
+}) => (
   <span
-    className="inline-flex w-fit items-center rounded-xl px-3.5 py-1.5 text-sm font-bold"
+    className={`inline-flex w-fit items-center rounded-xl font-bold ${
+      small ? "px-3 py-1 text-xs" : "px-3.5 py-1.5 text-sm"
+    }`}
     style={{
       color: "var(--accent-ink)",
       background: "color-mix(in srgb, var(--accent) 20%, transparent)",
@@ -299,14 +308,121 @@ const Label = ({ children }: { children: ReactNode }) => (
   </span>
 );
 
-const Row = ({ label, children }: { label: string; children: ReactNode }) => (
-  <div className="grid grid-cols-[11.5rem_1fr] items-baseline gap-x-6 gap-y-2 border-t border-solid border-[var(--border-color)] px-7 py-4 first:border-t-0 sm:grid-cols-1 sm:px-5">
-    <Label>{label}</Label>
-    <div className="min-w-0 text-lg leading-snug text-[var(--title-color)] sm:text-base">
+const Row = ({
+  label,
+  children,
+  dense = false,
+}: {
+  label: string;
+  children: ReactNode;
+  dense?: boolean;
+}) => (
+  <div
+    className={`grid items-baseline gap-y-2 border-t border-solid border-[var(--border-color)] first:border-t-0 sm:grid-cols-1 ${
+      dense
+        ? "grid-cols-[8.5rem_1fr] gap-x-4 px-6 py-3 sm:px-4"
+        : "grid-cols-[11.5rem_1fr] gap-x-6 px-7 py-4 sm:px-5"
+    }`}
+  >
+    <Label small={dense}>{label}</Label>
+    <div
+      className={`min-w-0 leading-snug text-[var(--title-color)] ${
+        dense ? "text-base sm:text-sm" : "text-lg sm:text-base"
+      }`}
+    >
       {children}
     </div>
   </div>
 );
+
+const Condensed = ({ card }: { card: CondensedType }) => {
+  const steps = Array.from(
+    card.considerations.reduce((map, item) => {
+      const list = map.get(item.cjmm_step) ?? [];
+      list.push(item);
+      return map.set(item.cjmm_step, list);
+    }, new Map<number, CondensedType["considerations"]>()),
+  ).sort((a, b) => a[0] - b[0]);
+
+  return (
+    <div>
+      <Row dense label="Class">
+        {card.class}
+      </Row>
+      <Row dense label="What it does">
+        <span className="font-bold">{card.hook}</span>
+      </Row>
+      <Row dense label="The one thing">
+        <Critical text={card.the_one_thing} className="text-base sm:text-sm" />
+      </Row>
+      {card.before_you_give && (
+        <Row dense label="Before you give">
+          {card.before_you_give}
+        </Row>
+      )}
+      {card.watch_for.length > 0 && (
+        <Row dense label="Watch for">
+          <Bullets items={card.watch_for} />
+        </Row>
+      )}
+      {card.worst_case.length > 0 && (
+        <Row dense label="Worst case">
+          <div className="font-bold text-[var(--primary-color)]">
+            <Bullets items={card.worst_case} />
+          </div>
+        </Row>
+      )}
+      {card.antidote && (
+        <Row dense label="Antidote">
+          {card.antidote}
+        </Row>
+      )}
+      {card.level && (
+        <Row dense label="Level">
+          {card.level}
+        </Row>
+      )}
+      {card.working && (
+        <Row dense label="Working when">
+          {card.working}
+        </Row>
+      )}
+      {steps.length > 0 && (
+        <div className="border-t border-solid border-[var(--border-color)] px-6 py-4 sm:px-4">
+          <Label small>Nursing, step by step</Label>
+          <div className="mt-4 grid gap-y-4">
+            {steps.map(([number, items]) => (
+              <div key={number}>
+                <p className="mb-2text-xs font-bold uppercase tracking-wide text-[var(--accent-ink)]">
+                  {items[0].cjmm}
+                </p>
+                <ul className="grid gap-y-2.5">
+                  {items.map((item, position) => (
+                    <li key={position} className="flex gap-x-3">
+                      <span
+                        aria-hidden
+                        className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full"
+                        style={{ background: "var(--accent)" }}
+                      />
+                      <span className="min-w-0 text-base leading-snug sm:text-sm">
+                        <span className="font-bold text-[var(--title-color)]">
+                          {item.do}
+                        </span>
+                        <span className="mt-0.5 block text-sm text-[var(--muted-color)] sm:text-xs">
+                          {item.why}
+                        </span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 // "Contraindicated: ...", "Antidote: ..." and "BLACK BOX: ..." keep their
 // text exactly; only the lead-in is picked out.
@@ -399,6 +515,7 @@ const MedDetail = ({
   pickedFull,
   onPick,
   accent,
+  nclex,
 }: {
   med: MedType;
   neighbours: { prev: MedType | null; next: MedType | null };
@@ -408,6 +525,7 @@ const MedDetail = ({
   pickedFull: boolean;
   onPick: () => void;
   accent: string;
+  nclex: boolean;
 }) => {
   const byId = new Map(med.sections.map((section) => [section.id, section]));
   const flash = med.flashcard;
@@ -499,7 +617,9 @@ const MedDetail = ({
     >
       <div className="overflow-hidden rounded-xl bg-[var(--container-color)] shadow-xl">
         <header
-          className="relative px-7 pb-6 pt-7 sm:px-5 sm:pb-5 sm:pt-5"
+          className={`relative sm:px-5 sm:pb-5 sm:pt-5 ${
+            nclex ? "px-6 pb-4 pt-5" : "px-7 pb-6 pt-7"
+          }`}
           style={{
             background:
               "linear-gradient(135deg, color-mix(in srgb, var(--accent) 34%, var(--container-color)) 0%, color-mix(in srgb, var(--accent) 8%, var(--container-color)) 100%)",
@@ -538,7 +658,11 @@ const MedDetail = ({
             {med.group}
           </p>
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 pr-14">
-            <h2 className="text-5xl font-bold tracking-tight text-[var(--title-color)] sm:text-4xl">
+            <h2
+              className={`font-bold tracking-tight text-[var(--title-color)] sm:text-3xl ${
+                nclex ? "text-4xl" : "text-5xl sm:text-4xl"
+              }`}
+            >
               {card.name}
             </h2>
             <span className="text-lg italic text-[var(--text-color)]">
@@ -560,7 +684,7 @@ const MedDetail = ({
           )}
         </header>
 
-        {med.highlight.critical && (
+        {!nclex && med.highlight.critical && (
           <div className="crit-glow border-y border-solid border-[var(--primary-color)] bg-[var(--container-color)] px-7 py-4 [background-image:linear-gradient(color-mix(in_srgb,var(--primary-color)_10%,transparent),color-mix(in_srgb,var(--primary-color)_10%,transparent))] sm:px-5">
             <p className="mb-1 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
               Do not miss
@@ -572,77 +696,82 @@ const MedDetail = ({
           </div>
         )}
 
-        <div>
-          <Row label="Name">
-            <span className="font-bold">{card.name}</span>
-          </Row>
-          <Row label="Trade name">{card.trade_name}</Row>
-          <Row label="Indication">
-            <span className="font-bold">
-              <Headline text={card.indication} />
-            </span>
-          </Row>
-          {card.action && <Row label="Action">{card.action}</Row>}
-          <Row label="Therapeutic class">{card.therapeutic_class}</Row>
-          <Row label="Pharmacologic class">{card.pharmacologic_class}</Row>
-          {(card.serious.length > 0 || card.common.length > 0) && (
-            <Row label="Side effects">
-              <div className="grid gap-y-5">
-                {card.serious.length > 0 && (
-                  <Effects
-                    label="Serious"
-                    lines={card.serious}
-                    tone="serious"
-                  />
-                )}
-                {card.common.length > 0 && (
-                  <Effects label="Common" lines={card.common} tone="common" />
-                )}
-              </div>
+        {nclex ? (
+          <Condensed card={med.condensed} />
+        ) : (
+          <div>
+            <Row label="Name">
+              <span className="font-bold">{card.name}</span>
             </Row>
-          )}
-          {card.nursing.length > 0 && (
-            <div className="border-t border-solid border-[var(--border-color)] px-7 py-5 sm:px-5">
-              <Label>Nursing considerations</Label>
-              <ul className="mt-4 grid gap-y-3">
-                {card.nursing.map((line, position) => (
-                  <li
-                    key={position}
-                    className="flex gap-x-3 text-lg leading-snug text-[var(--text-color)] sm:text-base"
-                  >
-                    <span
-                      aria-hidden
-                      className="mt-[0.6em] h-2 w-2 shrink-0 rounded-full"
-                      style={{ background: "var(--accent)" }}
+            <Row label="Trade name">{card.trade_name}</Row>
+            <Row label="Indication">
+              <span className="font-bold">
+                <Headline text={card.indication} />
+              </span>
+            </Row>
+            {card.action && <Row label="Action">{card.action}</Row>}
+            <Row label="Therapeutic class">{card.therapeutic_class}</Row>
+            <Row label="Pharmacologic class">{card.pharmacologic_class}</Row>
+            {(card.serious.length > 0 || card.common.length > 0) && (
+              <Row label="Side effects">
+                <div className="grid gap-y-5">
+                  {card.serious.length > 0 && (
+                    <Effects
+                      label="Serious"
+                      lines={card.serious}
+                      tone="serious"
                     />
-                    <span className="min-w-0">
-                      <Consideration line={line} />
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
+                  )}
+                  {card.common.length > 0 && (
+                    <Effects label="Common" lines={card.common} tone="common" />
+                  )}
+                </div>
+              </Row>
+            )}
+            {card.nursing.length > 0 && (
+              <div className="border-t border-solid border-[var(--border-color)] px-7 py-5 sm:px-5">
+                <Label>Nursing considerations</Label>
+                <ul className="mt-4 grid gap-y-3">
+                  {card.nursing.map((line, position) => (
+                    <li
+                      key={position}
+                      className="flex gap-x-3 text-lg leading-snug text-[var(--text-color)] sm:text-base"
+                    >
+                      <span
+                        aria-hidden
+                        className="mt-[0.6em] h-2 w-2 shrink-0 rounded-full"
+                        style={{ background: "var(--accent)" }}
+                      />
+                      <span className="min-w-0">
+                        <Consideration line={line} />
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
-      {ROWS.map((ids) => {
-        const present = ids.flatMap((id) => {
-          const section = byId.get(id);
-          return section ? [section] : [];
-        });
-        if (!present.length) return null;
-        return present.length > 1 ? (
-          <div
-            key={ids.join("+")}
-            className="grid grid-cols-2 gap-4 lg:grid-cols-1"
-          >
-            {present.map(sectionCard)}
-          </div>
-        ) : (
-          sectionCard(present[0])
-        );
-      })}
+      {!nclex &&
+        ROWS.map((ids) => {
+          const present = ids.flatMap((id) => {
+            const section = byId.get(id);
+            return section ? [section] : [];
+          });
+          if (!present.length) return null;
+          return present.length > 1 ? (
+            <div
+              key={ids.join("+")}
+              className="grid grid-cols-2 gap-4 lg:grid-cols-1"
+            >
+              {present.map(sectionCard)}
+            </div>
+          ) : (
+            sectionCard(present[0])
+          );
+        })}
 
       <nav
         aria-label={`More in ${med.group}`}
