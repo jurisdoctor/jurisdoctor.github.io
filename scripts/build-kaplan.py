@@ -1,20 +1,4 @@
 #!/usr/bin/env python3
-"""Convert a Kaplan export (kaplan.json) into the question-bank files the site
-reads (src/app/components/Nclex/kaplan/examN.json) plus a manifest listing
-which exams exist.
-
-    python3 scripts/build-kaplan.py /Users/tom/Downloads/kaplan.json
-
-The export is {"Exam 4": [question, ...], ...}. Each question carries numbered
-options ("1".."4"), a numeric answer (or a list for select-all), a rationale per
-option, a topic, a client-need category and a decision-tree step. They become
-the site's own question shape: lettered options with a rationale each, topics
-as the groups (shown as the "Topics" picker), the decision-tree step as the
-Strategy line and the client need as the italic note under it.
-
-Running it again with a file that has more exams (or newer versions of the
-same ones) adds or replaces those exams and leaves the others alone.
-"""
 import json
 import re
 import sys

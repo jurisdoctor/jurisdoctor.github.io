@@ -14,10 +14,6 @@ export const useSaved = <T>(
 ) => {
   const [value, setValue] = useState<T>(fresh);
   const [ready, setReady] = useState(false);
-  // Callers pass `valid` inline, so it is a new function on every render. Keep
-  // it in a ref: listing it as a dependency re-ran the read below after each
-  // change, and the read put the older stored value back over the new one
-  // before the write could land, so the value flipped back and forth for good.
   const validRef = useRef(valid);
   validRef.current = valid;
 

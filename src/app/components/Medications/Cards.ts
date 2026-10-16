@@ -1,10 +1,6 @@
 import { IndexType, keyOf, LABELS, PairType } from "./Interactions";
 import { GroupType, MedType } from "./types";
 
-// Flashcards are assembled from fields that already exist in the data. A card
-// is never made for a field that is empty or null, and no drug content is
-// written here: every front and back is a value from the file, unchanged.
-
 export type CardKind =
   | "headline"
   | "brand"
@@ -104,17 +100,13 @@ export interface Block {
 }
 
 export interface Card {
-  // Results are saved under this: "{medication id}:{card type}", or
-  // "{a}+{b}:interaction" for a pair.
   key: string;
   kind: CardKind;
   medId: string;
   group: string;
-  // Front: a small question, then the subject in large type.
   prompt: string;
   subject: string;
   options?: string[];
-  // Back
   answer?: string;
   blocks: Block[];
 }
@@ -133,7 +125,6 @@ export const shuffle = <T>(items: T[]): T[] => {
   return out;
 };
 
-// ---------------------------------------------------------- per-drug cards
 // Whether this medication can make a card of this kind (its field isn't empty).
 export const supports = (med: MedType, kind: CardKind): boolean => {
   switch (kind) {
@@ -253,7 +244,6 @@ export const makeCard = (
         ...common,
         prompt: "Serious side effects?",
         subject: med.generic,
-        // The whole list, always: nothing is cut off or hidden behind a toggle.
         blocks: [
           {
             lines: med.flashcard?.side_effects?.serious ?? [],
@@ -301,7 +291,6 @@ export const makeCard = (
   }
 };
 
-// ------------------------------------------------------- interaction cards
 const WEIGHT = { avoid: 4, high: 2, moderate: 1 } as const;
 const CAP = 12;
 
@@ -326,8 +315,6 @@ export const planInteractions = (
   selected.forEach(() => {
     possible += total - 1;
   });
-  // pairs touching the selection that were not flagged (an upper bound that
-  // is plenty: a sample is drawn from it)
   const safeCount = Math.max(0, possible - flagged.length * 2);
   const perHalf = Math.min(CAP, flagged.length, safeCount);
   return { flagged, safeCount, perHalf };
@@ -383,8 +370,6 @@ export const interactionCards = (
   if (perHalf === 0) return [];
   const byId = new Map(all.map((med) => [med.id, med]));
 
-  // Weighted draw without replacement: avoid pairs come up far more often
-  // than moderate ones.
   const picked = flagged
     .map((pair) => ({
       pair,
@@ -398,7 +383,6 @@ export const interactionCards = (
     pairCard(byId.get(pair.a)!, byId.get(pair.b)!, pair, index),
   );
 
-  // The other half: two drugs that do not appear together in pairs[].
   const chosen = Array.from(selected);
   const seen = new Set<string>();
   let guard = 0;
@@ -429,7 +413,6 @@ export const cardForPairKey = (
   return pairCard(first, second, index.pairs.get(keyOf(a, b)), index);
 };
 
-// ------------------------------------------------------------- group colors
 export const groupIndex = (groups: GroupType[], name: string) =>
   Math.max(
     0,

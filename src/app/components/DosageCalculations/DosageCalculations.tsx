@@ -6,8 +6,6 @@ import ScenarioPractice from "./ScenarioPractice";
 const DosageCalculations = () => {
   return (
     <>
-      {/* A sibling of the section, not a child: see Nclex.tsx for why a
-          `fixed` layer can't live inside an element that animates in. */}
       <div className="pointer-events-none fixed inset-y-0 left-20 right-0 -z-[5] overflow-hidden lg:left-0">
         <Shapes />
       </div>

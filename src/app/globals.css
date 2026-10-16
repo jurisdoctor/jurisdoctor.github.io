@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 :root {
-  /* ======== Colors ======== */
-  /* Vibrant on near-black: orange for actions and "selected", deep purple
-     for chips, yellow for the chosen edge, hover and highlights, green for
-     correct only. Dark is the default; light is the opt-in override below. */
   --primary-color: #ff5722;
   --on-primary: #fff;
   --accent-color: #ffeb3b;
@@ -19,8 +15,6 @@
   --icon-muted-color: hsl(0, 0%, 42%);
   --border-color: hsl(0, 0%, 22%);
   --scroll-icon-color: hsl(0, 0%, 70%);
-  /* "Chip" surfaces: badges, pills, selected/chosen states, case-study
-     banners. Deep purple, with a bright yellow edge on a chosen thing. */
   --chip-blue: #673ab7;
   --chip-blue-soft: hsl(262, 40%, 22%);
   --chip-blue-border: #ffeb3b;
@@ -30,9 +24,6 @@
   --glass-bg: hsl(0, 0%, 14%);
   --glass-bg-soft: hsl(0, 0%, 11%);
   --glass-border: hsl(0, 0%, 23%);
-  /* The lava lamp's blobs and the floating shapes, in this theme's colors. */
-  /* Danger and warning, for things that are out of range: over the normal range
-     is danger, under it is a warning. */
   --danger-color: #ff5722;
   --warning-color: #ffeb3b;
   --lava-1: #ff5722;
@@ -94,6 +85,7 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html[data-theme="light"] {
@@ -135,9 +127,6 @@ button {
   outline: none;
 }
 
-/* Flicker layered on top of the gradient's rotation, like flame does —
-   slightly irregular timing (not a clean sine wave) so it doesn't read as a
-   uniform pulse. */
 @keyframes glowFlicker {
   0%,
   100% {
@@ -166,9 +155,6 @@ button {
   }
 }
 
-/* The open chapter tile (see Nclex/ChapterSet.tsx): it stays a little raised,
-   springs up with a bounce the moment it is picked, and then keeps bobbing
-   gently so it is clear which one is open. */
 .tile-selected {
   transform: scale(1.08);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
@@ -202,16 +188,19 @@ button {
   }
 }
 
+.crumb-bounce {
+  transform: scale(1.08);
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .tile-selected {
+  .tile-selected,
+  .crumb-bounce {
     animation:
-      tilePop 0.45s ease-out,
-      tileBob 1.6s ease-in-out 0.45s infinite;
+      tilePop 0.36s ease-out,
+      tileBob 1.28s ease-in-out 0.36s infinite;
   }
 }
 
-/* Interaction map (see Medications/CompareMap.tsx): lines draw themselves in,
-   one after another, so the web builds up instead of appearing at once. */
 @media (prefers-reduced-motion: no-preference) {
   .map-line {
     animation: lineDraw 0.7s ease-out var(--line-delay, 0s) backwards;
@@ -221,9 +210,6 @@ button {
   }
 }
 
-/* Flashcards (see Medications/Study.tsx): the card turns edge-on, the other
-   face is swapped in, and it turns back. The answer is not in the page until
-   the swap, so there is nothing to peek at. */
 @media (prefers-reduced-motion: no-preference) {
   .flip-out {
     animation: flipOut 0.16s ease-in forwards;
@@ -259,8 +245,6 @@ button {
   }
 }
 
-/* The block a clicked map line jumps to: a glow in the line's color that
-   fades, so the eye finds it after the scroll. */
 @media (prefers-reduced-motion: no-preference) {
   .pair-flash {
     animation: pairFlash 1.6s ease-out;
@@ -288,11 +272,6 @@ button {
   }
 }
 
-/* Drug guide emphasis (see Medications/Emphasis.tsx). The key line comes in
-   with a soft blur-to-sharp fade, then a band of color keeps flowing through
-   the letters; the critical-warning dot pulses outward like a beacon. Without
-   motion the text just sits there in its flowing-gradient colors, still
-   readable. */
 .hl-flow {
   background-image: linear-gradient(
     90deg,
@@ -377,13 +356,6 @@ button {
   }
 }
 
-/* Slow drifting blur blobs, like a lava lamp — see LavaBackground.tsx. Each
-   blob sets its own --x1..--x3/--y1..--y3 waypoints (in vw/vh, so the
-   travel is page-scale, not relative to the blob's own small box) and
-   shares this one keyframe definition instead of each needing its own. */
-/* How big the lava lamp's blobs are, as a share of their full size: on a phone
-   they are scaled down so the screen holds several blobs, not one giant one.
-   Read by LavaBackground (the blob boxes) and LavaCanvas (the iPhone version). */
 :root {
   --lava-scale: 1;
 }
@@ -422,17 +394,10 @@ button {
   }
 }
 
-/* The metaball "goo" merge: a heavy blur softens each blob's edge, then the
-   color-matrix sharpens alpha back up past a threshold — anywhere two blurred
-   edges overlap enough, they fuse into one shape instead of just
-   alpha-blending, which is what makes it read as a lava lamp. */
 .lava-goo {
   filter: url(#lava-goo-filter);
 }
 
-/* On iPhones and iPads the SVG goo filter is skipped (see layout.tsx), so the
-   lava lamp is drawn on a canvas instead (LavaCanvas.tsx): the blob elements
-   and the filter step out of the way and the canvas shows. */
 :root.no-goo .lava-goo {
   filter: none;
 }
@@ -443,8 +408,6 @@ button {
   display: block;
 }
 
-/* The printable certificate (see Pharm/Certificate.tsx): never shown on screen.
-   Printing hides the whole page and gives the certificate a landscape sheet. */
 .cert-print {
   display: none;
 }
@@ -589,85 +552,11 @@ button {
   }
 }
 
-/* A card that tips toward the mouse (see Tilt/TiltEffect.tsx): mark it with
-   `data-tilt`. The effect sets --tilt-x, --tilt-y and --tilt-s on it. */
 [data-tilt] {
   transition: transform 0.15s ease-out;
 }
 
-/* Only while it is being tipped, so a card at rest carries no transform at
-   all (nothing to blur its text or hold its own stacking context). */
 [data-tilt][data-tilting] {
   transform: perspective(900px) rotateX(var(--tilt-x, 0deg))
     rotateY(var(--tilt-y, 0deg)) scale(var(--tilt-s, 1));
-}
-
-/* A medication card (or a category card) opening into its page (see go() in
-   Medications.tsx): the card grows into the page's big card, the way a
-   card is opened, while the rest of the page fades over. The contents of
-   both are kept at their own size and cropped by the growing box, not stretched
-   with it, and the box keeps rounded corners the whole way. */
-::view-transition-group(med-open) {
-  animation-duration: 0.55s;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  border-radius: 8px;
-  overflow: clip;
-}
-
-::view-transition-image-pair(med-open) {
-  border-radius: 8px;
-  overflow: clip;
-}
-
-::view-transition-old(med-open),
-::view-transition-new(med-open) {
-  width: 100%;
-  height: 100%;
-  object-fit: none;
-  object-position: top left;
-  mix-blend-mode: normal;
-}
-
-/* The box is cut out of the page's own picture, so the page has a hole where it
-   sits. The old picture stays until the new one has covered it (and the box has
-   a solid fill behind both); if the old faded out first, the hole would show as
-   a flash of black. */
-::view-transition-group(med-open) {
-  background: var(--container-color);
-}
-
-::view-transition-old(med-open) {
-  animation: none;
-}
-
-::view-transition-new(med-open) {
-  animation: vt-fade-in 0.35s ease 0.05s both;
-}
-
-/* The page around it: the new one fades in over the old one, which stays put
-   underneath until it is covered. (If the old page faded out first there would
-   be a moment with nothing in between, a flash of the bare dark background.) */
-::view-transition-old(root),
-::view-transition-new(root) {
-  mix-blend-mode: normal;
-}
-
-::view-transition-old(root) {
-  animation: none;
-}
-
-::view-transition-new(root) {
-  animation: vt-fade-in 0.4s ease both;
-}
-
-@keyframes vt-fade-out {
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes vt-fade-in {
-  from {
-    opacity: 0;
-  }
 }

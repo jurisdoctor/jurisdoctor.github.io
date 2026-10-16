@@ -8,13 +8,6 @@ import Reveal from "../Reveal";
 const Home = () => {
   return (
     <>
-      {/* Shapes used to live inside the hero section below, but that
-          section is overflow-hidden (to stop its own decorative elements
-          from causing horizontal scroll) and only min-h-screen tall, so any
-          shape that wandered or got attracted near its edge was invisibly
-          clipped there. Hoisting it into its own fixed, unclipped layer —
-          left-20 matches the sidebar's width, same as the NCLEX page's
-          version of this fix — lets shapes roam the full viewport instead. */}
       <div className="pointer-events-none fixed inset-y-0 left-20 right-0 -z-[5] overflow-hidden lg:left-0">
         <Shapes />
       </div>

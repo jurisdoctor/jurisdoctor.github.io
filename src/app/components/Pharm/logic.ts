@@ -49,7 +49,8 @@ export const blockDone = (
         block.items.every((field) =>
           field.rating
             ? !!d[field.key]
-            : typeof d[field.key] === "string" && d[field.key].trim().length >= 3,
+            : typeof d[field.key] === "string" &&
+              d[field.key].trim().length >= 3,
         )
       );
     }
@@ -68,8 +69,5 @@ export const blockDone = (
 
 export const stepTasks = (step: Step) => step.blocks.filter(isActivity);
 
-export const stepDone = (
-  step: Step,
-  data: Record<string, any>,
-  name: string,
-) => stepTasks(step).every((block) => blockDone(block, data, name));
+export const stepDone = (step: Step, data: Record<string, any>, name: string) =>
+  stepTasks(step).every((block) => blockDone(block, data, name));

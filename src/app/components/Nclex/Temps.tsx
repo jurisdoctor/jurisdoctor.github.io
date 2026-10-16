@@ -1,14 +1,6 @@
 import { ReactNode } from "react";
 import Flash from "./Flash";
 
-// Question text writes temperatures as "38.6 C" (or, once, "104 F (40 C)").
-// Rather than showing one scale or both side by side, each one is rendered as
-// a Flash that alternates between the Fahrenheit and Celsius values in place,
-// so a learner sees both without the line getting longer.
-//
-// Only plausible body/ambient temperatures are touched (C 30–45, F 86–113),
-// and a number has to stand alone before the unit, so "A1C 7.4%",
-// "hepatitis C" and "vitamin C" are never matched.
 const NUMBER = String.raw`\d+(?:\.\d+)?`;
 const TEMP = new RegExp(
   String.raw`(^|[^\w.])(?:(${NUMBER})\s?°?\s?F\s?\(\s?(${NUMBER})\s?°?\s?C\s?\)|(\d{2,3}(?:\.\d+)?)\s?°?\s?([CF])\b(?!-))`,
@@ -50,7 +42,6 @@ export const withTemps = (text: string): ReactNode => {
     parts.push(text.slice(last, start));
     parts.push(
       <Flash
-        // eslint-disable-next-line react/no-array-index-key
         key={`${match.index}-${whole}`}
         items={items}
         className="whitespace-nowrap"

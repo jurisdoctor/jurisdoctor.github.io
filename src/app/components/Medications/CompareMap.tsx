@@ -28,11 +28,8 @@ import {
 } from "./Interactions";
 import { MedType } from "./types";
 
-// ---------------------------------------------------------------- geometry
 const NODE_H = 38;
 
-// Two canvases: a wide one for laptops, and a tall, narrow one for phones, so
-// the labels stay a readable size instead of shrinking with the screen.
 const WIDE = { W: 900, H: 560, rx: 335, ry: 200, maxW: 214, font: 15 };
 const NARROW = { W: 400, H: 560, rx: 110, ry: 215, maxW: 140, font: 13 };
 type Dims = typeof WIDE;
@@ -54,8 +51,6 @@ const layout = (meds: MedType[], dims: Dims): NodeType[] => {
     const fit = Math.floor((dims.maxW - 24) / perChar);
     const label = full.length > fit ? `${full.slice(0, fit - 1)}…` : full;
     const w = Math.min(dims.maxW, Math.max(84, 30 + label.length * perChar));
-    // Two sit side by side, one sits in the middle, and the rest go round an
-    // ellipse (wider than tall, to match the page) starting from the top.
     const angle =
       count === 2
         ? index === 0
@@ -80,12 +75,9 @@ interface LineType {
   status: Status;
   tone: Tone;
   pair?: PairType;
-  // Where the badge sits along the line. Even-sided rings send several
-  // lines through the exact middle, so the badges are spread along them.
   t: number;
 }
 
-// ----------------------------------------------------------- text content
 const Badge = ({ status }: { status: Status }) => {
   const tone = toneOf(status);
   return (
@@ -167,8 +159,6 @@ const PairBody = ({
           ))}
         </>
       ) : (
-        // One block per rule, with room between the title, the explanation
-        // and the "Watch" line, and a divider when a pair has several rules.
         <div className="grid gap-y-5">
           {shown.map((rule, position) => {
             const def = index.rules.get(rule.rule);
@@ -190,9 +180,6 @@ const PairBody = ({
                   )}
                 </p>
                 {def?.brief ? (
-                  // The rule written for the bedside: the action first (it is
-                  // what this card is for), then what happens and what to
-                  // watch. The pair's own explanation follows in full view.
                   <>
                     <p className="text-sm leading-relaxed text-[var(--title-color)]">
                       <span className="mr-1.5 text-[11px] font-bold uppercase tracking-wide text-[var(--primary-color)]">
@@ -242,8 +229,6 @@ const PairBody = ({
         </div>
       )}
 
-      {/* "No known interaction" pairs have no explanation to open (they are not
-          in the list below the map), so there is nothing to tap through to. */}
       {!full && line.status !== "ok" && (
         <p className="text-xs italic text-[var(--muted-color)]">
           {rules.length > shown.length
@@ -266,7 +251,6 @@ const jumpTo = (element: Element | null) =>
     block: "center",
   });
 
-// ------------------------------------------------------------------- view
 const CompareMap = ({
   meds,
   onRemove,
@@ -278,7 +262,6 @@ const CompareMap = ({
   onRemove: (id: string) => void;
   onClear: () => void;
   onOpen: (id: string) => void;
-  // Shown under the map and its verdict, above the list of every combination.
   between?: ReactNode;
 }) => {
   const [index, setIndex] = useState<IndexType | null>(null);
@@ -288,7 +271,6 @@ const CompareMap = ({
     x: number;
     y: number;
   } | null>(null);
-  // Which block in the list to flash after a click on a line.
   const [flashKey, setFlashKey] = useState<string | null>(null);
   const flashTimer = useRef(0);
   useEffect(() => () => window.clearTimeout(flashTimer.current), []);
@@ -347,7 +329,6 @@ const CompareMap = ({
     return out;
   }, [index, nodes]);
 
-  // A change to who is in the list invalidates anything pinned or hovered.
   useEffect(() => {
     setHover(null);
     setPinned(null);
@@ -363,9 +344,6 @@ const CompareMap = ({
     return c;
   }, [lines]);
 
-  // Only the pairs with something to say: a combination with no known
-  // interaction is already visible as a green line on the map and in the count
-  // above, and listing each one buries the ones that matter.
   const sorted = useMemo(
     () =>
       lines
@@ -385,10 +363,6 @@ const CompareMap = ({
       : { x: 0, y: 0 };
   };
 
-  // Back up to the map, with this pair's card open again where its badge sits.
-  // It stays until you click the map's background or another line. The card
-  // is placed by the room on screen, so it is placed again once the page has
-  // finished scrolling up.
   const [, replace] = useState(0);
   const showOnMap = (key: string) => {
     const line = byKey.get(key);
@@ -414,10 +388,6 @@ const CompareMap = ({
       event.preventDefault();
     }
     event.stopPropagation();
-    // A pair with no known interaction has no block below to go to, so a click
-    // leaves its card alone: it stays while the mouse is on the line. Where
-    // there is no mouse to keep it up (a finger, the keyboard), it is pinned in
-    // place until the map's background or another line is pressed.
     const line = byKey.get(key);
     if (line?.status === "ok") {
       if (!hover) {
@@ -433,10 +403,6 @@ const CompareMap = ({
       }
       return;
     }
-    // The popup is a quick peek; the full text reads better in its block
-    // below, so a click takes you there, and the popup goes away rather than
-    // staying stuck on the map. The block flashes briefly so you can see which
-    // one you came to.
     setPinned(null);
     setHover(null);
     setFlashKey(key);
@@ -458,7 +424,6 @@ const CompareMap = ({
 
   return (
     <div className="grid gap-y-5">
-      {/* Who is being compared */}
       <section className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-5 sm:p-4">
         <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
           <h2 className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
@@ -513,7 +478,6 @@ const CompareMap = ({
 
       {meds.length >= 2 && (
         <>
-          {/* The map */}
           <section className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-3 sm:p-1">
             <div ref={box} className="relative">
               <svg
@@ -523,7 +487,6 @@ const CompareMap = ({
                 aria-label="Interaction map. Each line joins two medications."
                 onClick={() => setPinned(null)}
               >
-                {/* lines */}
                 {lines.map((line, i) => {
                   const dim =
                     (focusNode &&
@@ -569,7 +532,6 @@ const CompareMap = ({
                           } as CSSProperties
                         }
                       />
-                      {/* a wide, invisible stroke so a thin line is easy to hit */}
                       <line
                         x1={line.a.x}
                         y1={line.a.y}
@@ -602,9 +564,6 @@ const CompareMap = ({
                   );
                 })}
 
-                {/* The badges are drawn in a second pass, after every line, so
-                    a line that crosses another line's badge always passes
-                    behind it. */}
                 {lines.map((line) => {
                   const dim =
                     (focusNode &&
@@ -624,8 +583,6 @@ const CompareMap = ({
                       }}
                       pointerEvents="none"
                     >
-                      {/* a badge with a different shape per state, so the
-                          colors are never the only clue */}
                       <circle
                         cx={mx}
                         cy={my}
@@ -657,7 +614,6 @@ const CompareMap = ({
                   );
                 })}
 
-                {/* medications */}
                 {nodes.map((node) => {
                   const lit = focusNode === node.med.id;
                   const faded = focusNode && !lit;
@@ -706,12 +662,10 @@ const CompareMap = ({
                 })}
               </svg>
 
-              {/* hover / pinned popup */}
               {active &&
                 activeLine &&
                 index &&
                 (() => {
-                  // Room above and below the line, in screen pixels.
                   const top = box.current?.getBoundingClientRect().top ?? 0;
                   const spaceAbove = top + active.y - 18 - 12;
                   const spaceBelow =
@@ -733,8 +687,6 @@ const CompareMap = ({
                         bottom: below
                           ? undefined
                           : (box.current?.clientHeight ?? H) - active.y + 18,
-                        // Never taller than the room on its side of the line: a
-                        // card that would run off the screen is cut off instead.
                         maxHeight: Math.max(
                           140,
                           below ? spaceBelow : spaceAbove,
@@ -760,7 +712,6 @@ const CompareMap = ({
             </p>
           </section>
 
-          {/* Verdict + legend */}
           <section className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 sm:px-4">
             <p className="font-bold text-[var(--title-color)]">
               {!index
@@ -796,7 +747,6 @@ const CompareMap = ({
 
           {between}
 
-          {/* Everything, in words: works without a mouse, and on a phone */}
           {index && sorted.length > 0 && (
             <section className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-5 sm:p-4">
               <h2 className="mb-4 text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">

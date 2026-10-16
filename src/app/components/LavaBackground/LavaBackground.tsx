@@ -10,8 +10,6 @@ interface Blob {
   left: string;
   duration: string;
   delay: string;
-  // Waypoints in vw/vh, so the drift is page-scale rather than relative to
-  // the blob's own small box — this is what makes it travel, not just jiggle.
   x1: string;
   y1: string;
   x2: string;
@@ -115,17 +113,6 @@ const LavaBackground = () => {
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden [transform:translateZ(0)]"
       aria-hidden
     >
-      {/* feColorMatrix alpha row (18 -8): opaque where blurred alpha is already
-        high, transparent below the threshold, which is what turns a soft
-        blurred overlap into one fused blob instead of a hazy double-blur.
-        The filter region (x/y/width/height) is set explicitly and generously
-        (but not more: on a tall phone at 3x pixel density, a region twice the
-        screen in each direction is taller than WebKit's largest filter
-        texture, and the whole blur is silently skipped, leaving hard-edged
-        circles) — mobile WebKit clips an SVG filter to its default, much tighter
-        region (-10%/120%), cutting the blur off before it reaches a
-        neighboring blob, so nothing ever merges there even though the exact
-        same markup goo's together fine on desktop. */}
       <svg className="absolute h-0 w-0">
         <filter
           id="lava-goo-filter"
@@ -143,23 +130,6 @@ const LavaBackground = () => {
         </filter>
       </svg>
 
-      {/* The merge filter and the blend mode are kept on two separate nested
-        layers rather than one element — Safari's handling of `filter` and
-        `mix-blend-mode` together on the same box is inconsistent (one of
-        the two silently stops applying on some versions), but each on its
-        own box composites reliably everywhere. Opacity sits on the inner
-        (filtered) layer, after the goo filter composites the blobs into
-        fused shapes — putting it on each blob instead would feed low-alpha
-        color into the filter's threshold math and break the merge. It's a
-        theme-aware CSS var (see globals.css): a light background needs
-        noticeably more pigment than a dark one for the same blobs to read
-        at all, so this can't be one fixed value for both themes.
-        translateZ(0) forces this onto its own single GPU layer — without
-        it, Safari can split a full-viewport `fixed` element with a blend
-        mode into separate render tiles, and the blend doesn't composite
-        identically across the seam between them, showing up as a visible
-        hard line (most often right at the fold where the browser's own
-        viewport-height tile boundary falls). */}
       <div className="absolute inset-0 [mix-blend-mode:var(--lava-blend)] [transform:translateZ(0)]">
         <div
           className="lava-goo absolute inset-0 duration-1000"

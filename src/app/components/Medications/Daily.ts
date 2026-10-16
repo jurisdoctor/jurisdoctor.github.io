@@ -1,18 +1,5 @@
 import { MedType } from "./types";
 
-// Medication of the day. Nothing is stored or scheduled: the pick for any date
-// is worked out from the date alone, so every device shows the same medication
-// on the same day and nothing has to be deployed to change it.
-//
-// The medications are dealt out in cycles. Each cycle is a fresh random order
-// of the whole list (every medication once, so no repeats until all have been
-// shown), made from a fixed seed so it is always the same order, and arranged so
-// two days in a row never come from the same category, including across the
-// join between one cycle and the next.
-//
-// Adding or removing medications changes the list, so the order after that
-// change is a different random order.
-
 const DAY_MS = 86_400_000;
 
 // Whole days since 1 Jan 1970 by the calendar date on this device, so the
@@ -88,14 +75,9 @@ const arrange = (meds: MedType[], cycle: number, after: string | null) => {
 
 export const medOfTheDay = (meds: MedType[], date: Date): MedType | null => {
   if (!meds.length) return null;
-  // The same list in the same order no matter how the file is arranged.
   const base = [...meds].sort((a, b) => a.id.localeCompare(b.id));
   const day = dayNumber(date);
   const cycle = Math.floor(day / base.length);
-  // Each cycle starts away from where the one before it ended, so they are
-  // built one after another from the very first (about a hundred of them since
-  // 1970, which takes a few milliseconds). Starting anywhere else would give
-  // different orders on different days.
   let last: string | null = null;
   let order: MedType[] = [];
   for (let k = 0; k <= cycle; k++) {

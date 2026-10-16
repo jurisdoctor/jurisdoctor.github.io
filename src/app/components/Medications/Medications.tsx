@@ -9,7 +9,6 @@ import {
   useState,
 } from "react";
 import { usePathname } from "next/navigation";
-import { flushSync } from "react-dom";
 import {
   PiCalendarBlank,
   PiCheckBold,
@@ -63,7 +62,6 @@ const calm = () =>
 
 // Wraps the part of `text` that matches what was typed.
 const Marked = ({ text, query }: { text: string; query: string }) => {
-  // With a comma-separated search, the first of the terms found is marked.
   const lower = text.toLowerCase();
   const term = termsOf(query).find((entry) =>
     lower.includes(entry.toLowerCase()),
@@ -119,11 +117,11 @@ const MedRow = ({
   pickedFull: boolean;
   onPick: () => void;
 }) => (
-  <div className="relative h-full" data-tilt data-med-card={med.id}>
+  <div className="relative h-full" data-tilt>
     <button
       type="button"
       onClick={() => onOpen(med.id)}
-      className="group flex h-full w-full items-start gap-x-4 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 text-left duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg sm:px-4"
+      className="group flex h-full w-full items-start gap-x-4 rounded-xl bg-[var(--container-color)] px-5 py-4 text-left shadow-xl duration-300 hover:shadow-2xl sm:px-4"
     >
       <span
         aria-hidden
@@ -176,8 +174,6 @@ const MedRow = ({
         className="shrink-0 self-center text-[var(--muted-color)] duration-300 group-hover:translate-x-0.5 group-hover:text-[var(--title-color)]"
       />
     </button>
-    {/* Beside the card, not inside it: a button can't hold a button. Adds this
-      medication to (or takes it off) the interaction check without opening it. */}
     <button
       type="button"
       onClick={onPick}
@@ -224,11 +220,10 @@ const GroupCard = ({
     onClick={onPick}
     aria-pressed={selected}
     data-tilt
-    data-group-card={group.name}
-    className={`flex h-full items-center gap-x-4 rounded-2xl border-2 border-solid px-5 py-4 text-left duration-300 ${
+    className={`flex h-full items-center gap-x-4 rounded-xl px-5 py-4 text-left shadow-xl duration-300 ${
       selected
-        ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] shadow-lg"
-        : "border-[var(--border-color)] bg-[var(--container-color)] hover:border-[var(--chip-blue-border)] hover:shadow-lg"
+        ? "bg-[var(--chip-blue-soft)]"
+        : "bg-[var(--container-color)] hover:shadow-2xl"
     }`}
   >
     <span
@@ -237,10 +232,6 @@ const GroupCard = ({
       style={{ background: accentOf(index) }}
     />
     <span className="min-w-0 flex-1">
-      {/* A name of several words wraps onto the next line like any text. Only
-          a single word too long for the card ("Immunosuppressants") is cut
-          with an ellipsis, so each word is its own box that can be cut. The
-          full name is in the tooltip. */}
       <span
         title={group.name}
         className="block text-lg font-bold leading-tight text-[var(--title-color)]"
@@ -269,42 +260,76 @@ const GroupCard = ({
   </button>
 );
 
-// The category you picked, shown as one clean pill above its medications.
-// Clicking it clears the pick and brings the other categories back.
-const GroupTag = ({
-  group,
-  index,
-  onClear,
+// Narrows a category's medications by what they are for. One at a time:
+// pressing the lit one (or "All") lets the rest back in.
+const ClassFilter = ({
+  classes,
+  total,
+  picked,
+  onPick,
+  labelOf,
+  accent,
 }: {
-  group: GroupType;
-  index: number;
-  onClear: () => void;
-}) => (
-  <button
-    type="button"
-    onClick={onClear}
-    aria-pressed
-    data-group-tag
-    aria-label={`${group.name} selected. Show all categories`}
-    title="Show all categories"
-    className="group inline-flex max-w-full items-center gap-x-3 rounded-md border-2 border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] py-2 pl-5 pr-2.5 shadow-lg duration-300 hover:bg-[var(--chip-blue)]"
-  >
-    <span
-      aria-hidden
-      className="h-2.5 w-2.5 shrink-0 rounded-full"
-      style={{ background: accentOf(index) }}
-    />
-    <span className="min-w-0 truncate text-base font-bold text-[var(--title-color)]">
-      {group.name}
-    </span>
-    <span className="shrink-0 whitespace-nowrap text-sm text-[var(--muted-color)]">
-      {group.count} {group.count === 1 ? "medication" : "medications"}
-    </span>
-    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--body-color)] text-[var(--muted-color)] duration-300 group-hover:text-[var(--title-color)]">
-      <PiXBold aria-hidden size={16} />
-    </span>
-  </button>
-);
+  classes: [string, number][];
+  total: number;
+  picked: string | null;
+  onPick: (name: string | null) => void;
+  labelOf: Record<string, string>;
+  accent: string;
+}) => {
+  const chip =
+    "inline-flex items-center gap-x-1.5 rounded-md border border-solid px-3 py-1.5 text-sm font-bold duration-300";
+  const lit = {
+    borderColor: accent,
+    background: `color-mix(in srgb, ${accent} 18%, transparent)`,
+  };
+  return (
+    <div
+      role="group"
+      aria-label="Filter by type of medication"
+      className="flex flex-wrap items-center gap-2"
+    >
+      <button
+        type="button"
+        onClick={() => onPick(null)}
+        aria-pressed={picked === null}
+        style={picked === null ? lit : undefined}
+        className={`${chip} text-[var(--title-color)] ${
+          picked === null
+            ? ""
+            : "border-[var(--border-color)] bg-[var(--container-color)] hover:border-[var(--chip-blue-border)]"
+        }`}
+      >
+        All
+        <span className="text-xs font-normal text-[var(--muted-color)]">
+          {total}
+        </span>
+      </button>
+      {classes.map(([name, count]) => {
+        const on = picked === name;
+        return (
+          <button
+            key={name}
+            type="button"
+            onClick={() => onPick(on ? null : name)}
+            aria-pressed={on}
+            style={on ? lit : undefined}
+            className={`${chip} ${
+              on
+                ? "text-[var(--title-color)]"
+                : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)] hover:text-[var(--title-color)]"
+            }`}
+          >
+            <span>{labelOf[name] ?? name}</span>
+            <span className="text-xs font-normal text-[var(--muted-color)]">
+              {count}
+            </span>
+          </button>
+        );
+      })}
+    </div>
+  );
+};
 
 const Empty = ({ children }: { children: ReactNode }) => (
   <div className="rounded-2xl bg-[var(--container-color)] p-7 text-center text-[var(--muted-color)]">
@@ -312,8 +337,6 @@ const Empty = ({ children }: { children: ReactNode }) => (
   </div>
 );
 
-// Flashcard study mode is built (Study.tsx, Cards.ts) but switched off for now.
-// Flip this to bring back its button and its "#/study" page.
 const FLASHCARDS = false;
 
 const freshList = (): string[] => [];
@@ -391,12 +414,6 @@ const SourcesNote = ({ clearTray }: { clearTray: boolean }) => {
   const card = useRef<HTMLDivElement>(null);
   const skirt = useRef<HTMLDivElement>(null);
 
-  // Pulling the page up past its end (the elastic bounce on a trackpad or a
-  // phone) slides the page up and shows what is behind it. The skirt is a strip
-  // pinned to the bottom of the window, as wide as the card and the card's own
-  // color, so what that bounce shows under the card is more card. It sits
-  // behind the card (the card hides it), and is only switched on once the page
-  // is scrolled to its end, so it never shows anywhere else.
   useEffect(() => {
     const place = () => {
       const strip = skirt.current;
@@ -412,7 +429,6 @@ const SourcesNote = ({ clearTray }: { clearTray: boolean }) => {
     place();
     window.addEventListener("scroll", place, { passive: true });
     window.addEventListener("resize", place);
-    // The page grows as the guide loads and as lists change.
     const watcher = new ResizeObserver(place);
     watcher.observe(document.body);
     return () => {
@@ -427,11 +443,11 @@ const SourcesNote = ({ clearTray }: { clearTray: boolean }) => {
       <div
         ref={skirt}
         aria-hidden
-        className="pointer-events-none fixed bottom-0 -z-[1] hidden h-20 border-x border-solid border-[var(--border-color)] bg-[var(--container-color)]"
+        className="pointer-events-none fixed bottom-0 -z-[1] hidden h-20 bg-[var(--container-color)]"
       />
       <div
         ref={card}
-        className={`rounded-b-none rounded-t-xl border border-b-0 border-solid border-[var(--border-color)] bg-[var(--container-color)] px-6 pt-5 text-center text-sm leading-relaxed text-[var(--muted-color)] shadow-[0_-8px_24px_rgba(0,0,0,0.25)] ${
+        className={`rounded-b-none rounded-t-xl bg-[var(--container-color)] px-6 pt-5 text-center text-sm leading-relaxed text-[var(--muted-color)] shadow-[0_-8px_24px_rgba(0,0,0,0.25)] ${
           clearTray ? "pb-32" : "pb-5"
         }`}
       >
@@ -465,15 +481,12 @@ const SourcesNote = ({ clearTray }: { clearTray: boolean }) => {
   );
 };
 
-// The day the medication-of-the-day popup was last closed ("2026-10-14").
 const DAILY_KEY = "meds:day:v1";
 
 const Medications = () => {
   const [guide, setGuide] = useState<MedFile | null>(null);
   const [failed, setFailed] = useState(false);
   const [route, setRoute] = useState<RouteType>(ROOT);
-  // Next tells us when the address changes by any route other than our own
-  // pushState: the sidebar's link back to /medications, for one.
   const pathname = usePathname();
   const [query, setQuery] = useState("");
   const [picked, setPicked] = useSaved<string[]>(
@@ -483,14 +496,9 @@ const Medications = () => {
   );
   const top = useRef<HTMLDivElement>(null);
   const first = useRef(true);
-  // The test patient: labs and vitals kept on the device, edited in a window,
-  // and read against the medications picked on the interaction check.
   const [labs, setLabs] = useLabs();
   const [labsOpen, setLabsOpen] = useState(false);
   const [suggestOpen, setSuggestOpen] = useState(false);
-  // Medication of the day: shown once each day on entering the guide, once the
-  // guide has loaded. `?medday=2026-12-25` shows what a given day would bring
-  // (and shows it again), for checking ahead.
   const [daily, setDaily] = useState<{
     med: MedType;
     date: Date;
@@ -538,7 +546,6 @@ const Medications = () => {
 
   const closeDaily = useCallback(() => {
     setDaily((current) => {
-      // Looking ahead at another day doesn't count as seeing today's.
       if (current && !current.preview) {
         try {
           window.localStorage.setItem(DAILY_KEY, dayKey(new Date()));
@@ -548,14 +555,9 @@ const Medications = () => {
     });
   }, []);
 
-  // The address is the single source of truth for where the learner is, so
-  // the browser's back/forward buttons walk the same path as the breadcrumb.
-  // We move with history.pushState rather than a Next navigation: the page
-  // stays mounted, so the guide doesn't reload on every click.
   useEffect(() => {
     if (!guide) return;
     const read = () => {
-      // Links from before the address had real paths ("/medications#/x/y").
       const legacy = window.location.hash.replace(/^#/, "");
       if (legacy.startsWith("/")) {
         const old = parsePath(`${BASE}${legacy}`, guide);
@@ -569,142 +571,21 @@ const Medications = () => {
     return () => window.removeEventListener("popstate", read);
   }, [guide, pathname]);
 
-  // The route the page is showing right now, readable from inside `go`.
-  const shown = useRef(route);
-  shown.current = route;
-
-  // Moves to another route. With `animate`:
-  //  - a medication opens as one motion: the card you pressed turns into the
-  //    medication's big card, which opens out from where the card was;
-  //  - a category card grows into the category's tag (and back), as a view
-  //    transition;
-  //  - everything else (leaving a medication, hopping to the next one) just
-  //    changes, with the page's own quick fade.
-  // Leaving a medication used to be a view transition too, but the picture it
-  // takes of a tall medication page made the move stutter and left a ghost of
-  // the old page behind. Browsers without view transitions, and visitors who
-  // asked for less motion, just get the move.
+  // Moves to another route. `alongside` is anything else that changes with the
+  // page (clearing the search), done in the same step.
   const go = useCallback(
-    (next: RouteType, animate = false, alongside?: () => void) => {
+    (next: RouteType, alongside?: () => void) => {
       if (!guide) return;
       const path = pathOf(next);
-      // `alongside` is anything else that changes with the page (clearing the
-      // search): it has to happen in the same step, or the card being pressed
-      // would already be gone when the motion starts.
-      const commit = () => {
-        alongside?.();
-        if (window.location.pathname.replace(/\/$/, "") !== path) {
-          window.history.pushState(null, "", path);
-        }
-        setRoute(parsePath(path, guide));
-      };
-
-      const here = shown.current;
-      const find = (selector: string | null) =>
-        selector ? document.querySelector<HTMLElement>(selector) : null;
-
-      // A medication's card -> the medication.
-      if (animate && !calm() && next.med && !here.med) {
-        const pressed = find(`[data-med-card="${next.med}"]`);
-        if (pressed) {
-          const from = pressed.getBoundingClientRect();
-          // A copy of the card stays where it was, fading out, while the new
-          // page opens out from the same spot.
-          const copy = pressed.cloneNode(true) as HTMLElement;
-          copy.removeAttribute("data-tilt");
-          copy.removeAttribute("data-tilting");
-          copy.removeAttribute("data-med-card");
-          copy.setAttribute("aria-hidden", "true");
-          Object.assign(copy.style, {
-            position: "fixed",
-            left: `${from.left}px`,
-            top: `${from.top}px`,
-            width: `${from.width}px`,
-            height: `${from.height}px`,
-            margin: "0",
-            zIndex: "40",
-            pointerEvents: "none",
-            transform: "none",
-            transition: "none",
-          });
-          document.body.appendChild(copy);
-
-          flushSync(commit);
-          top.current?.scrollIntoView({ behavior: "auto", block: "start" });
-
-          const open = find("[data-med-header]");
-          if (open) {
-            const to = open.getBoundingClientRect();
-            const inset = (px: number) => `${Math.max(0, px).toFixed(1)}px`;
-            const start = `inset(${inset(from.top - to.top)} ${inset(to.right - from.right)} ${inset(to.bottom - from.bottom)} ${inset(from.left - to.left)} round 8px)`;
-            open.animate(
-              [{ clipPath: start }, { clipPath: "inset(0px round 6px)" }],
-              { duration: 520, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
-            );
-          }
-          copy
-            .animate([{ opacity: 1 }, { opacity: 0 }], {
-              duration: 240,
-              easing: "ease-out",
-              fill: "forwards",
-            })
-            .finished.finally(() => copy.remove());
-          return;
-        }
+      alongside?.();
+      if (window.location.pathname.replace(/\/$/, "") !== path) {
+        window.history.pushState(null, "", path);
       }
-
-      // A category card <-> the category's tag, as a view transition.
-      const doc = document as Document & {
-        startViewTransition?: (update: () => void) => {
-          finished: Promise<void>;
-        };
-      };
-      const group = (name: string) =>
-        `[data-group-card="${name.replace(/(["\\])/g, "\\$1")}"]`;
-      let before: string | null = null;
-      let after: string | null = null;
-      if (!next.med && !here.med) {
-        if (next.group && !here.group) {
-          before = group(next.group);
-          after = "[data-group-tag]";
-        } else if (here.group && !next.group) {
-          before = "[data-group-tag]";
-          after = group(here.group);
-        }
-      }
-      if (!animate || !doc.startViewTransition || calm() || !before) {
-        commit();
-        return;
-      }
-
-      const name = (el: HTMLElement | null, on: boolean) =>
-        on
-          ? el?.style.setProperty("view-transition-name", "med-open")
-          : el?.style.removeProperty("view-transition-name");
-
-      const from = find(before);
-      name(from, true);
-      document.documentElement.classList.add("vt-active");
-      let to: HTMLElement | null = null;
-      const transition = doc.startViewTransition(() => {
-        name(from, false);
-        flushSync(commit);
-        // Start the new page at the top at once, so the thing it grows into is
-        // where the motion is aimed.
-        top.current?.scrollIntoView({ behavior: "auto", block: "start" });
-        to = find(after);
-        name(to, true);
-      });
-      transition.finished.finally(() => {
-        document.documentElement.classList.remove("vt-active");
-        name(to, false);
-      });
+      setRoute(parsePath(path, guide));
     },
     [guide],
   );
 
-  // Each step down or back up starts at the top of the page, not wherever
-  // the previous list was scrolled to.
   useEffect(() => {
     if (first.current) {
       first.current = false;
@@ -716,30 +597,78 @@ const Medications = () => {
     });
   }, [route.group, route.med]);
 
-  const group = useMemo(
-    () => guide?.groups.find((entry) => entry.name === route.group) ?? null,
-    [guide, route.group],
+  const nclexCount = useMemo(
+    () => (guide ? guide.medications.filter((entry) => entry.nclex).length : 0),
+    [guide],
   );
-  const groupIndex = guide && group ? guide.groups.indexOf(group) : -1;
+  const [nclexSaved, setNclexSaved] = useSaved<boolean>(
+    "meds:nclex:v1",
+    () => false,
+    (value) => typeof value === "boolean",
+  );
+  const nclexOnly = nclexSaved && nclexCount > 0;
+  const scope = useMemo(() => {
+    if (!guide) return null;
+    if (!nclexOnly) {
+      return { meds: guide.medications, groups: guide.groups };
+    }
+    const meds = guide.medications.filter((entry) => entry.nclex);
+    const wanted = new Set(meds.map((entry) => entry.id));
+    const groups = guide.groups
+      .map((entry) => {
+        const ids = entry.medication_ids.filter((id) => wanted.has(id));
+        return { ...entry, medication_ids: ids, count: ids.length };
+      })
+      .filter((entry) => entry.count > 0);
+    return { meds, groups };
+  }, [guide, nclexOnly]);
+  const group = useMemo(
+    () =>
+      scope?.groups.find((entry) => entry.name === route.group) ??
+      guide?.groups.find((entry) => entry.name === route.group) ??
+      null,
+    [scope, guide, route.group],
+  );
+  const groupIndex =
+    guide && group
+      ? guide.groups.findIndex((entry) => entry.name === group.name)
+      : -1;
   const med = useMemo(
     () => guide?.medications.find((entry) => entry.id === route.med) ?? null,
     [guide, route.med],
   );
   const inGroup = useMemo(
     () =>
-      guide && group
-        ? guide.medications.filter((entry) => entry.group === group.name)
+      scope && group
+        ? scope.meds.filter((entry) => entry.group === group.name)
         : [],
-    [guide, group],
+    [scope, group],
   );
 
-  const matches = useMemo(
-    () => (guide ? search(group ? inGroup : guide.medications, query) : []),
-    [guide, group, inGroup, query],
-  );
+  const [classPick, setClassPick] = useState<string | null>(null);
+  useEffect(() => setClassPick(null), [route.group]);
+  const classes = useMemo(() => {
+    const counts = new Map<string, number>();
+    inGroup.forEach((entry) =>
+      new Set(entry.tags).forEach((tag) =>
+        counts.set(tag, (counts.get(tag) ?? 0) + 1),
+      ),
+    );
+    const list = Array.from(counts.entries())
+      .filter(([, count]) => count >= 2 && count < inGroup.length)
+      .map(([tag, count]): [string, number] => [tag, count])
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    return list.length >= 2 ? list : [];
+  }, [inGroup]);
+  const matches = useMemo(() => {
+    const found = scope ? search(group ? inGroup : scope.meds, query) : [];
+    return group && classPick
+      ? found.filter((entry) => entry.tags.includes(classPick))
+      : found;
+  }, [scope, group, inGroup, query, classPick]);
   const matchedGroups = useMemo(
-    () => (guide ? searchGroups(guide.groups, query) : []),
-    [guide, query],
+    () => (scope ? searchGroups(scope.groups, query) : []),
+    [scope, query],
   );
 
   const accentFor = (name: string) =>
@@ -750,16 +679,15 @@ const Medications = () => {
   const openMed = (id: string) => {
     const target = guide?.medications.find((entry) => entry.id === id);
     if (!target) return;
-    go({ group: target.group, med: id }, true, () => setQuery(""));
+    go({ group: target.group, med: id }, () => setQuery(""));
   };
   const openGroup = (name: string) => {
-    go({ group: name, med: null }, true, () => setQuery(""));
+    go({ group: name, med: null }, () => setQuery(""));
   };
   const openRoot = () => {
-    go(ROOT, true, () => setQuery(""));
+    go(ROOT, () => setQuery(""));
   };
 
-  // Saved ids can outlive an edit to the guide, so only keep real ones.
   const pickedMeds = useMemo(
     () =>
       guide
@@ -836,11 +764,7 @@ const Medications = () => {
   };
 
   return (
-    // A full-height column, so the footer card sits against the bottom edge of
-    // the page even when there is little above it.
     <div className="flex min-h-screen flex-col">
-      {/* A sibling of the section, not a child: see Nclex.tsx for why a
-          `fixed` layer can't live inside an element that animates in. */}
       <div className="pointer-events-none fixed inset-y-0 left-20 right-0 -z-[5] overflow-hidden lg:left-0">
         <Shapes />
       </div>
@@ -849,7 +773,14 @@ const Medications = () => {
         <div ref={top} className="relative z-10 scroll-mt-6">
           <div className="mb-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-3 lg:justify-center">
             <h1 className="ml-3.5 text-4xl font-bold lg:ml-0 lg:text-center">
-              <TypedText text="Agave's Lab" typeOnMount />
+              <button
+                type="button"
+                onClick={openRoot}
+                aria-label="Agave's Lab, back to all categories"
+                className="cursor-pointer rounded-md text-left duration-300 hover:opacity-80 lg:text-center"
+              >
+                <TypedText text="Agave's Lab" typeOnMount />
+              </button>
             </h1>
             {guide && !route.compare && !route.study && (
               <div className="flex flex-wrap items-center gap-2 lg:justify-center">
@@ -912,7 +843,9 @@ const Medications = () => {
           </div>
           <p className="mb-3 ml-3.5 text-[var(--text-color)] lg:ml-0 lg:text-center">
             {guide
-              ? `${guide.stats.medications} drugs in ${guide.stats.groups} categories, and the one reason to reach for each.`
+              ? nclexOnly && scope
+                ? `${scope.meds.length} NCLEX drugs in ${scope.groups.length} categories, and the one reason to reach for each.`
+                : `${guide.stats.medications} drugs in ${guide.stats.groups} categories, and the one reason to reach for each.`
               : " "}
           </p>
 
@@ -950,7 +883,7 @@ const Medications = () => {
                       ) : (
                         <span
                           aria-current="page"
-                          className="px-2 py-1 font-bold text-[var(--title-color)]"
+                          className="crumb-bounce inline-block px-2 py-1 font-bold text-[var(--title-color)]"
                         >
                           {crumb.label}
                         </span>
@@ -961,36 +894,53 @@ const Medications = () => {
               )}
 
               {!med && !route.compare && !route.study && (
-                <div className="relative mb-4">
-                  <PiMagnifyingGlass
-                    aria-hidden
-                    className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
-                  />
-                  <input
-                    type="text"
-                    inputMode="search"
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    placeholder={
-                      group
-                        ? `Search ${group.name}…`
-                        : "Search drugs, brands, classes…"
-                    }
-                    aria-label={
-                      group ? `Search ${group.name}` : "Search medications"
-                    }
-                    autoComplete="off"
-                    spellCheck={false}
-                    className="h-12 w-full rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] pl-12 pr-12 text-base text-[var(--title-color)] outline-none duration-300 placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
-                  />
-                  {query && (
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="relative min-w-0 flex-1">
+                    <PiMagnifyingGlass
+                      aria-hidden
+                      className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-[var(--muted-color)]"
+                    />
+                    <input
+                      type="text"
+                      inputMode="search"
+                      value={query}
+                      onChange={(event) => setQuery(event.target.value)}
+                      placeholder={
+                        group
+                          ? `Search ${group.name}…`
+                          : "Search drugs, brands, classes…"
+                      }
+                      aria-label={
+                        group ? `Search ${group.name}` : "Search medications"
+                      }
+                      autoComplete="off"
+                      spellCheck={false}
+                      className="h-12 w-full rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] pl-12 pr-12 text-base text-[var(--title-color)] outline-none duration-300 placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
+                    />
+                    {query && (
+                      <button
+                        type="button"
+                        onClick={() => setQuery("")}
+                        aria-label="Clear search"
+                        className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--body-color)] hover:text-[var(--title-color)]"
+                      >
+                        <PiXBold />
+                      </button>
+                    )}
+                  </div>
+                  {nclexCount > 0 && (
                     <button
                       type="button"
-                      onClick={() => setQuery("")}
-                      aria-label="Clear search"
-                      className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:bg-[var(--body-color)] hover:text-[var(--title-color)]"
+                      onClick={() => setNclexSaved(!nclexOnly)}
+                      aria-pressed={nclexOnly}
+                      title={`Only the ${nclexCount} medications on your course list`}
+                      className={`inline-flex h-12 shrink-0 items-center rounded-md border border-solid px-6 text-sm font-bold duration-300 ${
+                        nclexOnly
+                          ? "tile-selected border-[var(--chip-blue-border)] bg-[var(--chip-blue)] text-[var(--title-color)]"
+                          : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)] hover:text-[var(--title-color)]"
+                      }`}
                     >
-                      <PiXBold />
+                      NCLEX
                     </button>
                   )}
                 </div>
@@ -1049,17 +999,25 @@ const Medications = () => {
                   />
                 ) : group ? (
                   <div className="flex flex-col gap-y-4">
-                    <div className="flex">
-                      <GroupTag
-                        group={group}
-                        index={groupIndex}
-                        onClear={openRoot}
+                    {classes.length > 0 && (
+                      <ClassFilter
+                        classes={classes}
+                        total={inGroup.length}
+                        picked={classPick}
+                        onPick={setClassPick}
+                        labelOf={guide.filters.label_of}
+                        accent={accentOf(groupIndex)}
                       />
-                    </div>
+                    )}
                     {matches.length === 0 ? (
                       <Empty>
-                        No medication in {group.name} matches &ldquo;{query}
-                        &rdquo;.
+                        {query.trim()
+                          ? `No medication in ${group.name} matches "${query}"${
+                              classPick
+                                ? ` among the ${(guide.filters.label_of[classPick] ?? classPick).toLowerCase()} drugs`
+                                : ""
+                            }.`
+                          : `No ${classPick ? (guide.filters.label_of[classPick] ?? classPick).toLowerCase() : "medication"} in ${group.name}.`}
                       </Empty>
                     ) : (
                       <div className="grid grid-cols-3 gap-3 lg:grid-cols-1">
@@ -1095,7 +1053,9 @@ const Medications = () => {
                             <GroupCard
                               key={entry.name}
                               group={entry}
-                              index={guide.groups.indexOf(entry)}
+                              index={guide.groups.findIndex(
+                                (one) => one.name === entry.name,
+                              )}
                               query={query}
                               selected={false}
                               onPick={() => openGroup(entry.name)}
@@ -1139,11 +1099,13 @@ const Medications = () => {
                   </div>
                 ) : (
                   <div className="grid grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] gap-3">
-                    {guide.groups.map((entry, index) => (
+                    {(scope?.groups ?? guide.groups).map((entry) => (
                       <GroupCard
                         key={entry.name}
                         group={entry}
-                        index={index}
+                        index={guide.groups.findIndex(
+                          (one) => one.name === entry.name,
+                        )}
                         query=""
                         selected={false}
                         onPick={() => openGroup(entry.name)}

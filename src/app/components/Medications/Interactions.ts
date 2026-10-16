@@ -1,7 +1,6 @@
 import { MedType } from "./types";
 
 export type Level = "avoid" | "high" | "moderate";
-// What two medications look like side by side: nothing known, or a level.
 export type Status = "ok" | Level;
 
 export interface RuleDef {
@@ -11,9 +10,6 @@ export interface RuleDef {
   mechanism: string;
   watch: string;
   exam: string;
-  // The rule in three short parts for someone at the bedside: what happens
-  // (one line), what to do (the part to read first) and what to watch for.
-  // `mechanism` stays whole beside it, so nothing is lost.
   brief?: { result: string; do: string; watch: string };
 }
 
@@ -36,7 +32,6 @@ export interface InteractionFile {
   severity_key: Record<Level, string>;
   rules: RuleDef[];
   pairs: PairType[];
-  // Medications with no interactions inside this guide, and why.
   clean: Record<string, string>;
   clean_note: string;
 }
@@ -68,8 +63,6 @@ export const indexOf = (file: InteractionFile): IndexType => ({
 export const statusOf = (index: IndexType, a: string, b: string): Status =>
   index.pairs.get(keyOf(a, b))?.severity ?? "ok";
 
-// Red = avoid or high risk, amber = manageable with care, green = nothing
-// known between the two within this guide.
 export type Tone = "green" | "amber" | "red";
 
 export const toneOf = (status: Status): Tone =>
@@ -88,7 +81,6 @@ export const LABELS: Record<Status, string> = {
   avoid: "Avoid",
 };
 
-// Worst first, so a list of pairs reads from "do not" down to "fine".
 export const ORDER: Record<Status, number> = {
   avoid: 0,
   high: 1,

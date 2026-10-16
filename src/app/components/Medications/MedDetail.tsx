@@ -16,12 +16,7 @@ import {
   StepItem,
 } from "./types";
 
-// The page is drawn from the medication's own `sections` array: the data says
-// which sections exist, in what order, and how each is laid out (see
-// types.ts). Nothing here writes drug content.
-
-const plain =
-  "rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-5 sm:p-4";
+const plain = "rounded-xl bg-[var(--container-color)] p-5 shadow-xl sm:p-4";
 
 const Heading = ({
   children,
@@ -316,8 +311,6 @@ const Row = ({ label, children }: { label: string; children: ReactNode }) => (
 // "Contraindicated: ...", "Antidote: ..." and "BLACK BOX: ..." keep their
 // text exactly; only the lead-in is picked out.
 const Consideration = ({ line }: { line: string }) => {
-  // A lead-in is one of the named ones, or an ALL-CAPS label such as
-  // "VITALS BEFORE AND AFTER:" or "RESPIRATORY RATE BEFORE AND AFTER:".
   const match = line.match(
     /^(BLACK BOX|HIGH ALERT|Contraindicated|Antidote|[A-Z][A-Z ]{2,}[A-Z]):\s*(.*)$/,
   );
@@ -386,11 +379,6 @@ const Effects = ({
   </div>
 );
 
-// Below the card, the sections that add to it: why this drug, what rules it
-// out, how you know it's working, the safety flags, and the labs to watch. The data also has
-// "interactions" and "notes" sections; they are left off the page on purpose
-// (interactions live in the Interaction check).
-// (Name, indication, action, classes and side effects are already on the card.)
 const ROWS: string[][] = [
   ["why", "working"],
   ["contraindications", "cautions"],
@@ -416,18 +404,12 @@ const MedDetail = ({
   neighbours: { prev: MedType | null; next: MedType | null };
   onOpen: (id: string) => void;
   onBack: () => void;
-  // Whether this medication is on the interaction-check list, whether the
-  // list is full, and the toggle.
   picked: boolean;
   pickedFull: boolean;
   onPick: () => void;
-  // The color of this drug's group.
   accent: string;
 }) => {
   const byId = new Map(med.sections.map((section) => [section.id, section]));
-  // The card reads the medication's `flashcard` block. If a field is ever
-  // missing from the data, the page falls back to the same fact from another
-  // field (or leaves the row out) rather than failing to draw.
   const flash = med.flashcard;
   const card = {
     name: flash?.name ?? med.generic,
@@ -515,12 +497,7 @@ const MedDetail = ({
         } as CSSProperties
       }
     >
-      <div
-        // The whole card the medication's card opens into (see go() in
-        // Medications.tsx), banner and all.
-        data-med-header
-        className="overflow-hidden rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] shadow-xl"
-      >
+      <div className="overflow-hidden rounded-xl bg-[var(--container-color)] shadow-xl">
         <header
           className="relative px-7 pb-6 pt-7 sm:px-5 sm:pb-5 sm:pt-5"
           style={{
@@ -528,8 +505,6 @@ const MedDetail = ({
               "linear-gradient(135deg, color-mix(in srgb, var(--accent) 34%, var(--container-color)) 0%, color-mix(in srgb, var(--accent) 8%, var(--container-color)) 100%)",
           }}
         >
-          {/* Adds this medication to the list used by the interaction check.
-              Top right of the card; a check shows once it's on the list. */}
           <button
             type="button"
             onClick={onPick}
@@ -671,10 +646,6 @@ const MedDetail = ({
 
       <nav
         aria-label={`More in ${med.group}`}
-        // Three columns with the middle one centered on the card, so "Back to"
-        // stays in the middle whether or not there is a previous or next one.
-        // On a narrow screen "Back to" gets a row of its own, centered, with
-        // the previous and next ones under it.
         className="mt-2 grid grid-cols-[1fr_auto_1fr] items-center gap-3 sm:grid-cols-2"
       >
         {neighbours.prev ? (

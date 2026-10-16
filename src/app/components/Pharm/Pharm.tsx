@@ -27,8 +27,6 @@ interface ProgressType {
   max: number;
   d: Record<string, any>;
   doneAt: string | null;
-  // The name the certificate was issued under, fixed at the moment the course
-  // was finished. Older saves without one fall back to `name`.
   certName?: string;
 }
 
@@ -167,10 +165,6 @@ const Pharm = () => {
   const setData = (id: string, value: any) => {
     setState((prev) => {
       const resolved = typeof value === "function" ? value(prev.d[id]) : value;
-      // Quiz.tsx fires onMove(at) from a [at, onMove] effect, so a fresh
-      // onMove closure on every render would otherwise retrigger the effect
-      // forever. Bailing out when nothing actually changed keeps setState
-      // from handing back a new object every time and breaks that loop.
       if (resolved === prev.d[id]) return prev;
       return { ...prev, d: { ...prev.d, [id]: resolved } };
     });
@@ -333,9 +327,6 @@ const Pharm = () => {
           <NameField
             key={key}
             value={state.name}
-            // Once the course is finished the name is locked: the certificate
-            // was issued under it, and going back to change it would let one
-            // run through the course print certificates for anyone.
             onChange={(name) => patch((prev) => (prev.doneAt ? {} : { name }))}
             locked={!!state.doneAt}
             ok={blockDone(block, state.d, state.name)}
@@ -443,11 +434,6 @@ const Pharm = () => {
               key={block.id}
               label={block.label}
               questions={block.questions}
-              // Quiz's own "again" (the completion-screen Redo) resets back
-              // to this prop, not to 0 — it must stay fixed at the real
-              // start, never tracked live from onMove, or a finished quiz's
-              // last-viewed question becomes the redo target instead of
-              // question 1.
               start={0}
               results={results}
               onResult={(id, correct) =>
@@ -459,10 +445,6 @@ const Pharm = () => {
               onMove={() => {}}
               finalRedoOnly
               jumpToAnswer={false}
-              // Every question must be solved to pass, so a partial redo
-              // (clearing just one question) would leave stale results from
-              // a prior failed attempt sitting behind it — clear the whole
-              // set for a clean restart.
               onRedo={() => setData(block.id, {})}
             />
           </div>
@@ -526,11 +508,6 @@ const Pharm = () => {
           className="flex items-start gap-8 xl:flex-col xl:gap-6"
         >
           <nav className="sticky top-8 w-72 shrink-0 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] p-4 shadow-xl backdrop-blur-xl xl:static xl:w-full">
-            {/* Only shown once the layout has stacked (xl: and below) —
-                side-by-side on desktop there's room for the full step list
-                always open, but stacked on top of the content on tablet and
-                phone, 24 steps of outline is a lot to scroll past just to
-                reach the lesson. Collapsed by default there, tap to open. */}
             <button
               type="button"
               onClick={() => setNavOpen((open) => !open)}

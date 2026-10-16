@@ -327,9 +327,6 @@ const ChapterSet = ({
     begin(chapter);
   };
 
-  // A chapter's flame color follows its place in the chapter list, so it's
-  // stable across renders and the same for the chapter's own tile and for
-  // every new question inside it.
   const flameIndex = new Map(
     chapters.map((chapter, index) => [chapter.id, index] as const),
   );
@@ -428,9 +425,6 @@ const ChapterSet = ({
             const here = open === chapter.id;
             const progress = progressOf(chapter.id);
             const wet = progress.solved + progress.missed > 0;
-            // A question keeps its new/dailySet flag from the data after it's
-            // answered, so exclude anything already answered — otherwise a
-            // chapter would keep glowing for content that's actually done.
             const fresh = chapter.questions.some(
               (question) =>
                 (question.new || question.dailySet) && !results[question.id],
@@ -524,11 +518,6 @@ const ChapterSet = ({
             </span>
           </div>
 
-          {/* On small screens a big set (the New section runs 200+ tiles)
-              would push everything else a few screens down, so the grid
-              scrolls inside itself instead. The p-2/-m-2 pair gives the
-              scroll box room for the flame ring and 💀 that stick out past
-              each tile, which overflow clipping would otherwise cut off. */}
           <div className="-m-2 grid grid-cols-[repeat(auto-fill,minmax(2.5rem,1fr))] gap-2 p-2 md:max-h-[45dvh] md:overflow-y-auto md:overscroll-contain">
             {shown.questions.map((question, index) => {
               const state = results[question.id];

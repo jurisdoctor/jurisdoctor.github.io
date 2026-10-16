@@ -1,16 +1,8 @@
 "use client";
 import { useEffect } from "react";
 
-// Makes every element marked `data-tilt` tip toward the mouse, like pressing a
-// corner of a pane of glass, and ease back flat when the mouse leaves. One
-// listener for the whole page, so a card only has to carry the attribute (its
-// look is in globals.css). It reacts to a real mouse only: a finger has no
-// hover, and visitors who asked for less motion get none.
-//
-// The bigger the card, the less it tips and grows, so a wide panel moves as
-// little at its edges as a small tile does.
-const MAX_TILT = 5; // degrees, for a card up to REFERENCE pixels across
-const LIFT = 0.02; // how much a card of that size grows
+const MAX_TILT = 5;
+const LIFT = 0.02;
 const REFERENCE = 320;
 
 // Letting go only drops the attribute: the card eases back to no transform,

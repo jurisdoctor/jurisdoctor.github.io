@@ -1,12 +1,3 @@
-// A light check on what people type into the Suggest window: cursing, slurs,
-// insults, threats and links are turned away before anything is sent. It runs
-// in the browser, so it keeps honest mistakes and casual trolling out of the
-// inbox; it is not a security boundary (anyone determined can skip it, and the
-// form service does its own spam filtering on top).
-
-// Words that are ordinary in a drug guide and that a profanity list would
-// otherwise catch: anatomy, routes and body-system terms ("vaginal cream",
-// "anal fissure", "analgesic", "sex hormone").
 const MEDICAL =
   /\b(anal|analges\w*|anus|vagin\w*|sex\w*|semen|penis|penile|rectal|rectum|breast\w*|nipple\w*|testic\w*|erectile|genital\w*|intercourse|urethra\w*)\b/gi;
 
@@ -28,9 +19,6 @@ const squash = (text: string) =>
     .replace(/[^a-z\s]/g, " ")
     .replace(/(.)\1+/g, "$1");
 
-// Insults and harassment the profanity list does not cover. Matched as whole
-// words, so an ordinary word that merely contains one never trips it. Words
-// that are also everyday medical language (fat, gross, hate...) are left out.
 const INSULTS = [
   "loser",
   "losers",
@@ -73,7 +61,6 @@ const INSULTS = [
 ];
 const INSULT = new RegExp(`\\b(${INSULTS.map(squash).join("|")})\\b`);
 
-// Threats and "go away" phrases.
 const PHRASES = [
   "shut up",
   "kill yourself",

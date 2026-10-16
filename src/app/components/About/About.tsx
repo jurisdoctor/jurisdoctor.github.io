@@ -16,12 +16,7 @@ const About = () => {
         about
       </Reveal>
 
-      <div // The picture is exactly its own width, and picture and card together sit
-        // in the middle of the page (not hard against the right edge).
-        className="grid grid-cols-[125px_minmax(0,760px)] justify-center gap-x-7 xl:grid-cols-[720px] xl:gap-x-[1.875rem] md:grid-cols-[320px] xs:grid-cols-1"
-      >
-        {/* Pushed against the card (its right edge, where the card's little arrow
-            points back at it), not left in the middle of its column. */}
+      <div className="grid grid-cols-[125px_minmax(0,760px)] justify-center gap-x-7 xl:grid-cols-[720px] xl:gap-x-[1.875rem] md:grid-cols-[320px] xs:grid-cols-1">
         <Reveal
           delay={80}
           className="flex items-start justify-end xl:justify-center"

@@ -25,10 +25,6 @@ import {
 import { IndexType, indexOf, loadInteractions } from "./Interactions";
 import { GroupType, MedFile, MedType } from "./types";
 
-// A study mode, not a reference page: pick a deck, flip, grade yourself, and
-// whatever you miss comes back sooner. Every card is assembled from fields in
-// the data (see Cards.ts); nothing is written here.
-
 type Scope = "all" | "groups" | "pick";
 type Order = "shuffled" | "sequential";
 
@@ -82,7 +78,6 @@ const clock = (ms: number) => {
 const btn =
   "rounded-md px-6 py-3 text-base font-bold leading-4 duration-300 disabled:cursor-not-allowed disabled:opacity-40";
 
-// ----------------------------------------------------------------- the card
 const Chip = ({ group, accent }: { group: string; accent: string }) => (
   <span className="inline-flex max-w-full items-center gap-x-2 rounded-md bg-[var(--body-color)] px-3 py-1 text-xs font-bold text-[var(--muted-color)]">
     <span
@@ -158,7 +153,6 @@ const Back = ({ card, pick }: { card: Card; pick: string | null }) => (
   </div>
 );
 
-// ---------------------------------------------------------------- the session
 interface Tally {
   got: number;
   shaky: number;
@@ -217,7 +211,6 @@ const Session = ({
       if (result !== "got") {
         setWeak((prev) => {
           const next = new Map(prev);
-          // "missed" outranks "shaky" if a card is graded both ways.
           if (next.get(card.key) !== "missed") next.set(card.key, result);
           return next;
         });
@@ -273,7 +266,6 @@ const Session = ({
   const attempts = tally.got + tally.shaky + tally.missed;
   const percent = attempts ? Math.round((tally.got / attempts) * 100) : 0;
 
-  // ------------------------------------------------------------- end screen
   if (done) {
     const byGroup = groups
       .map((group) => ({
@@ -404,7 +396,6 @@ const Session = ({
     );
   }
 
-  // ----------------------------------------------------------- study screen
   return (
     <div className="mx-auto flex min-h-full w-full max-w-[46rem] flex-col px-5 pb-6 pt-4 sm:px-3">
       <div className="flex items-center gap-x-4">
@@ -551,7 +542,6 @@ const Session = ({
   );
 };
 
-// -------------------------------------------------------------------- setup
 const Row = ({
   on,
   onToggle,
@@ -698,8 +688,6 @@ const Study = ({
   const weak = (key: string) =>
     grades[key] === "missed" || grades[key] === "shaky";
 
-  // How many cards of each kind the current drug choice supports, counted the
-  // same way the deck is built so the number shown is the deck you get.
   const counts = useMemo(() => {
     const out = {} as Record<CardKind, number | null>;
     KINDS.forEach(({ kind }) => {
@@ -730,7 +718,6 @@ const Study = ({
       ).length;
     });
     return out;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inScope, index, onlyWeak, grades, chosen, meds]);
 
   const total = KINDS.reduce(
@@ -751,7 +738,6 @@ const Study = ({
       }),
     );
     return n;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inScope, grades]);
 
   const build = (): Card[] => {
@@ -817,10 +803,6 @@ const Study = ({
     );
   }, [meds, find]);
 
-  // The whole screen is the session while one runs: nothing else shows.
-  // It is drawn straight into <body>: the page section animates in and so
-  // carries a transform, and a `fixed` element inside a transformed one is
-  // sized to that element instead of the screen.
   if (session) {
     return createPortal(
       <div className="fixed inset-0 z-40 overflow-y-auto bg-[var(--body-color)]">

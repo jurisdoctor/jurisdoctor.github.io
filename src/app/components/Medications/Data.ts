@@ -14,18 +14,10 @@ export const slugOf = (name: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
-// Where the learner is: nothing picked (every category), a category, or one
-// medication (which always belongs to a category). Kept in the address —
-// "/medications/blood-pressure/amlodipine" — so the browser's back button, a
-// refresh and a shared link all land in the same place. Every one of these
-// addresses is also built as a real page (see app/medications/[[...path]]),
-// so a refresh or a pasted link works on the static host too.
 export interface RouteType {
   group: string | null;
   med: string | null;
-  // The interaction map ("/medications/compare"): not under any category.
   compare?: boolean;
-  // Flashcard study mode ("/medications/study").
   study?: boolean;
 }
 
@@ -58,8 +50,6 @@ export const parsePath = (pathname: string, guide: MedFile): RouteType => {
   const med = medId
     ? guide.medications.find((entry) => entry.id === medId)
     : undefined;
-  // A medication decides its own category, so a stale or edited group in the
-  // link can't put it under the wrong one.
   if (med) return { group: med.group, med: med.id };
 
   const group = groupSlug
@@ -110,9 +100,6 @@ const rankOne = (med: MedType, query: string): number | null => {
 export const rankOf = (med: MedType, query: string): number | null => {
   const terms = termsOf(query);
   if (!terms.length) return 0;
-  // A list of names is a list of medications, so each term only matches a
-  // medication's own name (generic or brand), not drugs that merely mention it
-  // in a description; a single search keeps looking everywhere.
   const ranks = terms
     .map((term) => rankOne(med, term))
     .filter(
@@ -122,10 +109,6 @@ export const rankOf = (med: MedType, query: string): number | null => {
   return ranks.length ? Math.min(...ranks) : null;
 };
 
-// Mentions in a description (the last kind of match) are only for searches
-// that are not a medication's name: "seizure" should find the drugs that treat
-// it, but "digoxin" should find digoxin, not every card that happens to
-// mention it.
 const MENTION = 6;
 const NAME = 3;
 

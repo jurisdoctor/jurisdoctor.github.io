@@ -69,14 +69,7 @@ export const shuffled = <T>(items: T[], seed: string) => {
 export interface QuestionType {
   id: string;
   ordinal?: number;
-  // A hash of everything about the question except id/ordinal/new/dailySet,
-  // so a saved result can be told apart from one left over from a since-
-  // edited version of the same id. See contentHashOf.
   contentHash?: string;
-  // Set only on questions surfaced in the New bucket: the id of the chapter
-  // they actually belong to, so the client can graduate an answered one
-  // back into its own chapter immediately instead of waiting for a future
-  // drop to clear the new/dailySet flag.
   homeChapterId?: string;
   type?: string;
   new?: boolean;
@@ -106,9 +99,6 @@ export interface QuestionType {
   answer: string | string[];
   takeaway: string;
   strategy?: string;
-  // Where the material is taught (lecture slides, which reading), shown in
-  // italics under the takeaway. coverageDetail is the same fact in
-  // structured form; neither is part of the question's content.
   coverage?: string;
   coverageDetail?: {
     ppt?: string;
@@ -240,11 +230,7 @@ export interface ChapterType {
   title: string;
   subtitle?: string;
   questions: QuestionType[];
-  // Present when this tile combines several source chapters into one deck
-  // (e.g. a PPT deck that covers Potter 42 and Iggy 13 together).
   members?: ChapterMemberType[];
-  // Overrides the tile's displayed number, for groups whose id is synthetic
-  // (the Favorites tab prefixes ids by source tab to keep them unique).
   numberLabel?: string;
 }
 
@@ -405,10 +391,6 @@ const clean = (question: QuestionType): QuestionType => ({
   })),
 });
 
-// id/ordinal are the lookup key and a rebuild artifact, not content; new/
-// dailySet/difficulty are drop metadata that toggle on their own, not an
-// edit to the question itself. Sorting keys keeps the hash stable
-// regardless of property insertion order.
 const CONTENT_HASH_OMIT = new Set([
   "id",
   "ordinal",
@@ -456,10 +438,6 @@ export interface DerivedBank {
   AllSkillQuestions: QuestionType[];
   AllCaseQuestions: QuestionType[];
   AllJudgmentQuestions: QuestionType[];
-  // Every question's contentHash, by id, across the whole exam (chapters —
-  // before the case/judgment/fresh splits carve them up — plus skills), so a
-  // saved result can be checked against the version of the question it was
-  // actually earned on.
   ContentHashes: Record<string, string>;
   Course: string;
   Textbook: string;
@@ -502,9 +480,6 @@ export const buildBank = (
         members: entry.members,
         title: entry.title,
         subtitle: entry.subtitle,
-        // Difficult questions are pulled to the end, in their original
-        // relative order (Array.sort is stable), so the 💀 marks sit together
-        // as one block of tiles instead of being scattered mid-chapter.
         questions: [...own, ...join]
           .sort((a, b) => difficultRank(a) - difficultRank(b))
           .map((question, index) => ({
@@ -527,8 +502,6 @@ export const buildBank = (
     ),
   }));
 
-  // Grouped by chapter rather than by clinical-judgment step: the step is
-  // the answer, so a step-named group would hand over every answer inside it.
   const Judgment: ChapterType[] = banked
     .map((chapter) => ({
       ...chapter,
@@ -538,9 +511,6 @@ export const buildBank = (
     }))
     .filter((chapter) => chapter.questions.length > 0);
 
-  // Fresh (new/dailySet) questions stay in their own chapter, where the tile
-  // glows until they're answered (see ChapterSet) — there is no separate
-  // "New" bucket to move them in and out of.
   const Chapters: ChapterType[] = readyForChapters.map((chapter) => ({
     ...chapter,
     questions: chapter.questions.map((question, index) => ({

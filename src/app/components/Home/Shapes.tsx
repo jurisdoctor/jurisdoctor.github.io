@@ -3,35 +3,18 @@
 import { useEffect, useRef, useState } from "react";
 import { CONSTELLATIONS } from "./Constellations";
 
-// The shapes wander on their own, and every so often they gather into a
-// constellation somewhere on the screen: the twelve zodiac signs plus a few
-// more (Ophiuchus, Orion, the Big Dipper...), each coming up once in a random
-// order before any repeats. A different set of shapes drifts into the star
-// positions, sways a little, and thin lines join the stars the way the
-// constellation is drawn, with its name under it. Only as many shapes as it has
-// stars are used; the rest shrink away until it breaks up. A few seconds later
-// the shapes drift off to wander again as the lines fade, and then the next one
-// forms. Nothing follows the pointer.
 type Mode = "idle" | "attracted";
 
-// At IDLE_EASE, a shape is ~95% of the way to its target after ~1.4s — the
-// retarget window has to stay shorter than that, or it visibly finishes
-// easing and sits still for whatever's left before the next retarget.
 const SEGMENT_MIN_MS = 900;
 const SEGMENT_MAX_MS = 1700;
 const WANDER_RADIUS = 170;
 const IDLE_EASE = 0.045;
-// Constellation: how fast a shape eases to its star (per 60th of a second), how
-// wide the pattern is (a share of the window, capped), how strong the lines
-// are, how fast they fade in and out, and how far a shape sways around its star.
 const ATTRACT_EASE = 0.07;
 const PATTERN_MAX = 460;
 const PATTERN_SHARE = 0.5;
 const LINE_OPACITY = 0.6;
 const LINE_FADE = 0.08;
 const SWAY = 4;
-// How long the shapes wander between signs (a random time in this range), and
-// how long a sign holds before it breaks up.
 const WANDER_MIN_MS = 2000;
 const WANDER_MAX_MS = 2000;
 const HOLD_MS = 4000;
@@ -43,13 +26,10 @@ interface ShapeState {
   curX: number;
   curY: number;
   scale: number;
-  // Called in with no star to take: faded out until released.
   spare: boolean;
   targetX: number;
   targetY: number;
   nextRetarget: number;
-  // Constellation: this shape's spot relative to the center, and where it
-  // is in its sway.
   spotX: number;
   spotY: number;
   phase: number;
@@ -87,9 +67,6 @@ const randomWanderTarget = () => ({
   y: (Math.random() * 2 - 1) * WANDER_RADIUS,
 });
 
-// How many shapes there are, and where each sits on this visit: rolled fresh
-// every time the page opens, anywhere on the screen, so the arrangement is
-// never the same twice (the way the lava lamp's blobs start somewhere new).
 const COUNT = 11;
 const rollSpots = () =>
   Array.from({ length: COUNT }, () => ({
@@ -98,8 +75,6 @@ const rollSpots = () =>
   }));
 
 const Shapes = () => {
-  // Null until the browser has rolled them, so the page the server sends and
-  // the first paint agree; the shapes are hidden until then.
   const [spots, setSpots] = useState<{ left: number; top: number }[] | null>(
     null,
   );
@@ -110,7 +85,6 @@ const Shapes = () => {
   const lineRefs = useRef<(SVGLineElement | null)[]>([]);
   const labelRef = useRef<SVGTextElement>(null);
   const mode = useRef<Mode>("idle");
-  // Where the current constellation is centered, in viewport space.
   const center = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -141,14 +115,6 @@ const Shapes = () => {
             }
           );
         }
-        // Clear any transform before measuring, so the rect reflects the
-        // shape's untransformed CSS anchor position, not wherever it last
-        // drifted to. Measured in viewport space, matching the constellation
-        // center (viewport coordinates too) — every mount point for this component is
-        // a `fixed` layer that doesn't scroll with the page, so adding
-        // scrollX/scrollY here would offset the anchor by however far the
-        // page had scrolled, throwing the "move toward the center" math off
-        // by exactly that amount instead of keeping it accurate.
         el.style.transform = "";
         const rect = el.getBoundingClientRect();
         const anchorX = rect.left + rect.width / 2;
@@ -179,9 +145,6 @@ const Shapes = () => {
     const setMode = (next: Mode) => {
       if (mode.current === next) return;
       mode.current = next;
-      // Every call picks a constellation, turns it a little, and deals the
-      // shapes out to its stars at random, so it is never the same twice. The
-      // shapes with no star hang round the outside of it.
       if (next === "attracted") {
         const all = states.current;
         const sky = nextSky();
@@ -209,8 +172,6 @@ const Shapes = () => {
           shape.spotY = x * Math.sin(turn) + y * Math.cos(turn);
           shape.phase = Math.random() * Math.PI * 2;
         });
-        // Only as many shapes as the constellation has stars are called in;
-        // the rest shrink away where they are, and grow back once released.
         all.forEach((shape) => {
           shape.spare = true;
         });
@@ -224,8 +185,6 @@ const Shapes = () => {
             (((Math.max(...ys) - Math.min(...ys)) / span) * size) / 2 + 40,
         };
       }
-      // Leaving it, every shape picks a fresh place to wander to at once,
-      // rather than waiting out a timer from before it was called in.
       if (next === "idle") {
         states.current.forEach((state) => {
           state.nextRetarget = 0;
@@ -233,11 +192,7 @@ const Shapes = () => {
       }
     };
 
-    // The cycle: wander for a while, then form a sign somewhere on screen
-    // (kept clear of the edges so it fits), hold it, break it up, repeat.
     let cycle = 0;
-    // Every constellation comes up once, in a fresh random order, before any
-    // repeats (and the first of a new round is never the one just shown).
     let bag: typeof CONSTELLATIONS = [];
     let last: (typeof CONSTELLATIONS)[number] | null = null;
     const nextSky = () => {
@@ -260,8 +215,6 @@ const Shapes = () => {
       const height = box?.height ?? window.innerHeight;
       const room =
         Math.min(PATTERN_MAX, window.innerWidth * PATTERN_SHARE) / 2 + 50;
-      // The shapes sit behind the page, so try a handful of places and take
-      // the one with the least text and cards in the way.
       let best = { x: left + width / 2, y: top + height / 2 };
       let fewest = Infinity;
       for (let attempt = 0; attempt < 14; attempt++) {
@@ -292,18 +245,11 @@ const Shapes = () => {
 
     const lines = lineRefs.current;
     let lineAlpha = 0;
-    // The lines only light once the shapes have (nearly) reached their stars,
-    // so they never stretch across the screen while the shapes are still on
-    // their way.
     let lit = false;
     let raf = 0;
     let lastFrame = performance.now();
     const tick = () => {
       const now = performance.now();
-      // The easing is per 60th of a second, scaled by how long the frame
-      // really took, so the shapes cover the same ground in the same time on a
-      // phone running at 30 frames a second as on a laptop at 120. (Easing
-      // once per frame made them crawl wherever the page was drawing slowly.)
       const frames = Math.min((now - lastFrame) / (1000 / 60), 4);
       lastFrame = now;
       const attracted = mode.current === "attracted";
@@ -313,12 +259,9 @@ const Shapes = () => {
         if (!state.el) return;
 
         if (attracted && state.spare) {
-          // No star: stay put while shrinking away.
           state.targetX = state.curX;
           state.targetY = state.curY;
         } else if (attracted) {
-          // Head for this shape's own spot, swaying a touch so the sky is
-          // never quite still.
           const t = now / 1000;
           state.targetX =
             center.current.x -
@@ -350,17 +293,12 @@ const Shapes = () => {
         }
         state.curX += (state.targetX - state.curX) * ease;
         state.curY += (state.targetY - state.curY) * ease;
-        // Shapes without a star shrink to nothing as they fade, and return at
-        // full size once the sign breaks up.
         const wanted = attracted && state.spare ? 0 : 1;
         state.scale += (wanted - state.scale) * ease;
         state.el.style.opacity = state.scale.toFixed(3);
         state.el.style.transform = `translate(${state.curX.toFixed(2)}px, ${state.curY.toFixed(2)}px) scale(${state.scale.toFixed(3)})`;
       });
 
-      // The lines run along the constellation's edges, and fade in and out
-      // with the call. They are drawn in the layer's own space, which is not
-      // always the window's (the question banks' layer starts after the sidebar).
       if (!attracted) lit = false;
       else if (farthest < 40) lit = true;
       lineAlpha +=
@@ -414,7 +352,6 @@ const Shapes = () => {
       ref={containerRef}
       className="pointer-events-none absolute left-0 top-0 z-0 h-full w-full"
     >
-      {/* constellation lines, one for each edge, and its name */}
       <svg
         className="absolute left-0 top-0 h-full w-full"
         xmlns="http://www.w3.org/2000/svg"
@@ -478,7 +415,6 @@ const Shapes = () => {
         />
       </svg>
 
-      {/* ring */}
       <svg
         ref={ref(2)}
         width="26"
@@ -524,7 +460,6 @@ const Shapes = () => {
         />
       </svg>
 
-      {/* plus */}
       <svg
         ref={ref(4)}
         width="22"
@@ -544,7 +479,6 @@ const Shapes = () => {
         />
       </svg>
 
-      {/* zigzag */}
       <svg
         ref={ref(5)}
         width="40"
@@ -567,7 +501,6 @@ const Shapes = () => {
         />
       </svg>
 
-      {/* hexagon */}
       <svg
         ref={ref(6)}
         width="26"
@@ -612,7 +545,6 @@ const Shapes = () => {
         />
       </svg>
 
-      {/* rotated square */}
       <svg
         ref={ref(8)}
         width="28"
@@ -637,7 +569,6 @@ const Shapes = () => {
         />
       </svg>
 
-      {/* diagonal dot cluster */}
       <svg
         ref={ref(9)}
         width="30"
@@ -657,7 +588,6 @@ const Shapes = () => {
         </g>
       </svg>
 
-      {/* star */}
       <svg
         ref={ref(10)}
         width="26"

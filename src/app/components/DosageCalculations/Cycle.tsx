@@ -3,7 +3,6 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 import TypedText from "../Typed/TypedText";
 
 const HOLD = 2600;
-// Plain-text values stay up a little longer than the others.
 const HOLD_TYPED = 3600;
 
 // Where the values are plain text, each is faded in by TypedText (the one text
@@ -46,8 +45,6 @@ const Cycle = ({
   className?: string;
 }) => {
   const [at, setAt] = useState(0);
-  // The one that just left, so it lifts away while the next rises in from
-  // below, instead of the two swapping with a jump.
   const left = useRef(-1);
   const plain = options.every((option) => typeof option === "string");
 

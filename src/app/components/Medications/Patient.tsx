@@ -41,9 +41,6 @@ import {
 } from "./PatientLogic";
 import { MedFile, MedType } from "./types";
 
-// Verdict colors are semantic and used for nothing else on this page: crimson
-// is "do not give", amber "caution", green "this drug is part of the
-// treatment". Green has to read as positive, not as a third kind of warning.
 const TONE: Record<Verdict, { color: string; wash: string }> = {
   do_not_give: {
     color: "hsl(348, 83%, 56%)",
@@ -118,7 +115,6 @@ const Panel = ({
   </div>
 );
 
-// ------------------------------------------------------------ 1. labs
 const LabSelect = ({
   param,
   file,
@@ -132,13 +128,10 @@ const LabSelect = ({
 }) => {
   const info = file.doc.parameters[param];
   const states = file.doc.states.filter((entry) => entry.param === param);
-  // A value saved back when there was a baseline option reads as the state.
   const current = value.replace(/:base$/, "");
   const chosen = states.find((entry) => entry.id === current);
   if (!info || states.length === 0) return null;
 
-  // "3.5 to 5.0 mEq/L" when the range is a plain span of numbers; otherwise
-  // the unit goes in brackets so it never reads as part of a sentence.
   const range = !info.unit
     ? info.normal
     : /^[\d.]+ to [\d.]+$/.test(info.normal)
@@ -177,7 +170,6 @@ const LabSelect = ({
                   ? chosen.bound.charAt(0).toUpperCase() + chosen.bound.slice(1)
                   : chosen.label
                 : `Normal: ${range}`,
-              // Over the normal range reads as danger, under it as a warning.
               className: chosen
                 ? `font-bold ${
                     chosen.dir === "high"
@@ -197,7 +189,6 @@ const LabSelect = ({
   );
 };
 
-// ------------------------------------------------------- 3a. readings
 interface RowType {
   med: MedType;
   entry: DrugStateType;
@@ -327,7 +318,6 @@ const Reading = ({
   );
 };
 
-// ---------------------------------------------------- 3b. interactions
 const SEVERITY_LABEL: Record<Level, string> = {
   avoid: "Avoid",
   high: "High risk",
@@ -403,7 +393,6 @@ const PairRow = ({
 
       {open && (
         <div className="grid gap-y-3 px-4 pb-4 text-sm">
-          {/* What to do about it, from each rule involved (said once per rule). */}
           {Array.from(
             new Set([
               ...pair.entries.map(({ item }) => item.rule),
@@ -460,7 +449,6 @@ const PairRow = ({
   );
 };
 
-// -------------------------------------------------------------- loading
 // The test patient's data (about 900 KB) and the interaction file are only
 // fetched once something needs them: the labs window opening, or the
 // interaction check being on screen.
@@ -490,7 +478,6 @@ export const usePatient = (enabled: boolean) => {
 export const useLabs = () =>
   useSaved<Labs>("meds:patient:labs:v1", freshLabs, validLabs);
 
-// ------------------------------------------------------------- the window
 // Labs and vitals, in a window over whatever page the learner is on.
 // Portaled to <body>: the page sections animate in and keep a transform, which
 // would otherwise make a "fixed" window size itself to the section.
@@ -604,7 +591,6 @@ export const PatientModal = ({
   );
 };
 
-// ---------------------------------------------- shown above the comparison
 // What the test patient currently is, with a way to change it.
 export const PatientBar = ({
   file,
@@ -668,7 +654,6 @@ export const PatientBar = ({
   );
 };
 
-// ---------------------------------------- the comparison, read through them
 // For the medications being compared: each one's reading under the labs that
 // are set (grouped by verdict), then each pair among them as this patient
 // would have it. Pairs and drugs outside the list never appear here.

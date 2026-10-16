@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["selector", '[data-theme="dark"]'],
+  future: { hoverOnlyWhenSupported: true },
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,26 +11,18 @@ const config: Config = {
   theme: {
     screens: {
       "2xl": { max: "1535px" },
-      // => @media (max-width: 1535px) { ... }
 
       xl: { max: "1279px" },
-      // => @media (max-width: 1279px) { ... }
 
       lg: { max: "1023px" },
-      // => @media (max-width: 1023px) { ... }
 
       md: { max: "767px" },
-      // => @media (max-width: 767px) { ... }
 
       sm: { max: "576px" },
-      // => @media (max-width: 576px) { ... }
 
       xs: { max: "350px" },
-      // => @media (max-width: 576px) { ... }
     },
     extend: {
-      // Two corner sizes site-wide (6px for small controls, 8px for panels and
-      // cards) and flat, low shadows. "full" is kept for real circles only.
       borderRadius: {
         DEFAULT: "6px",
         sm: "3px",
@@ -80,7 +73,6 @@ const config: Config = {
           "0%": { transform: "scaleX(0)" },
           "100%": { transform: "scaleX(1)" },
         },
-        // slides in under the digit you round at, holds, clears, repeats
         mark: {
           "0%": { transform: "scaleX(0)", opacity: "1" },
           "30%": { transform: "scaleX(1)", opacity: "1" },
@@ -89,7 +81,6 @@ const config: Config = {
           "89%": { transform: "scaleX(0)", opacity: "0" },
           "100%": { transform: "scaleX(0)", opacity: "0" },
         },
-        // draws through, holds, clears, then does it again
         strike: {
           "0%": { width: "0%", opacity: "1" },
           "30%": { width: "100%", opacity: "1" },
@@ -102,8 +93,6 @@ const config: Config = {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(400%)" },
         },
-        // A plain, quick fade: no sliding. The one entrance used for sections,
-        // cards, panels and answer reveals across the site.
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },

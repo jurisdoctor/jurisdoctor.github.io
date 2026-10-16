@@ -4,12 +4,6 @@ import { createPortal } from "react-dom";
 import { PiCheckBold, PiXBold } from "react-icons/pi";
 import { isAcceptable } from "./Moderate";
 
-// Where suggestions go. The site is a static page with no server of its own,
-// so Web3Forms forwards each one to the inbox it was set up with. The access
-// key is public by design: it can only send mail to that one inbox, and the
-// form is restricted to the site's own address on their side. Left empty, the
-// window still opens but says suggestions aren't connected instead of
-// pretending to send.
 const ENDPOINT = "https://api.web3forms.com/submit";
 export const SUGGEST_KEY = "02962e0d-4c68-437a-806d-b750a7e0ed0e";
 
@@ -32,7 +26,6 @@ const isLocal = () =>
 export const SuggestModal = ({ onClose }: { onClose: () => void }) => {
   const [medication, setMedication] = useState("");
   const [note, setNote] = useState("");
-  // A field real people never see or fill; a bot that fills every field does.
   const [trap, setTrap] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const input = useRef<HTMLInputElement>(null);
@@ -206,7 +199,6 @@ export const SuggestModal = ({ onClose }: { onClose: () => void }) => {
               />
             </label>
 
-            {/* The trap: hidden from people and from screen readers. */}
             <input
               type="text"
               tabIndex={-1}

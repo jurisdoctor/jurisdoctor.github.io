@@ -26,8 +26,6 @@ const Glow = ({
   hue?: number;
   edge?: number;
 }) => {
-  // Where the ring runs, in from the tile's outer edge, and its corner radius
-  // (the tiles are rounded to 6px).
   const inset = edge ? edge / 2 : 1;
   const radius = 6 - inset;
   const uid = useId();

@@ -1,17 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-// Text that fades itself. When the text it is given changes, the old text blurs
-// and fades out while the new text blurs and fades in over it; with
-// `typeOnMount` the first text fades in as well, which is what page headings
-// use. This is the one text transition used across the site (the name is left
-// over from when it typed each letter).
-//
-// The words are also laid out unseen in the same space (the longest of this
-// text and everything in `reserve`), so the box keeps its size and nothing
-// around it shifts while the text changes. Screen readers get the finished
-// text, not the fading layers; with reduced motion on, text just changes.
-
 export interface Segment {
   text: string;
   className?: string;
@@ -51,7 +40,6 @@ const TypedText = ({
     typeof window !== "undefined" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Every piece of text on screen: the newest one and any still fading out.
   const [layers, setLayers] = useState<Layer[]>([
     { id: 0, segments: target, shown: !typeOnMount },
   ]);
@@ -75,7 +63,6 @@ const TypedText = ({
       setLayers((all) => all.map((one) => ({ ...one, shown: true })));
     }
     return () => pending.forEach((timer) => window.clearTimeout(timer));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -88,9 +75,6 @@ const TypedText = ({
       ]);
       return;
     }
-    // The old text starts leaving, the new text is added hidden and then shown
-    // a moment later (so it has something to fade in from), and old layers are
-    // dropped once they are gone.
     lastId.current += 1;
     const id = lastId.current;
     setLayers((all) => [

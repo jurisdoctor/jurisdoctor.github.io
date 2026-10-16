@@ -19,7 +19,6 @@ const Certificate = ({
     <div className="cert-print" aria-hidden>
       <div className="cert-frame">
         <div className="cert-inner">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/assets/logo.svg" alt="" className="cert-logo" />
           <p className="cert-kicker">Certificate of completion</p>
           <h1 className="cert-title">Medication Safety Foundations</h1>

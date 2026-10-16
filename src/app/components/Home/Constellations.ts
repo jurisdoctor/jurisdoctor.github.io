@@ -1,8 +1,3 @@
-// The twelve zodiac constellations, then a few more well-known ones (they get
-// a plain star for a glyph), drawn as a flat sky chart: each star is [x, y] (x to the
-// right, y down, roughly 0 to 1) and each edge joins two stars by index. They
-// are simplified to the stars that make the shape recognizable, and none has
-// more stars than the page has shapes.
 export interface Constellation {
   name: string;
   glyph: string;
@@ -90,14 +85,14 @@ export const CONSTELLATIONS: Constellation[] = [
     name: "Leo",
     glyph: "♌",
     stars: [
-      [0.05, 0.85], // Regulus
-      [0.1, 0.6], // Eta
-      [0.22, 0.4], // Algieba
-      [0.2, 0.18], // Adhafera
-      [0.34, 0.05], // Rasalas
-      [0.6, 0.3], // Zosma
-      [0.6, 0.66], // Chertan
-      [1.0, 0.5], // Denebola
+      [0.05, 0.85],
+      [0.1, 0.6],
+      [0.22, 0.4],
+      [0.2, 0.18],
+      [0.34, 0.05],
+      [0.6, 0.3],
+      [0.6, 0.66],
+      [1.0, 0.5],
     ],
     edges: [
       [0, 1],
@@ -153,15 +148,15 @@ export const CONSTELLATIONS: Constellation[] = [
     name: "Scorpio",
     glyph: "♏",
     stars: [
-      [0.0, 0.0], // Graffias
-      [0.12, 0.2], // Dschubba
-      [0.1, 0.42], // Pi
-      [0.32, 0.38], // Antares
-      [0.5, 0.52], // Tau
-      [0.6, 0.72], // Epsilon
-      [0.75, 0.9], // Mu
-      [0.95, 0.85], // Shaula
-      [1.0, 0.65], // Sargas
+      [0.0, 0.0],
+      [0.12, 0.2],
+      [0.1, 0.42],
+      [0.32, 0.38],
+      [0.5, 0.52],
+      [0.6, 0.72],
+      [0.75, 0.9],
+      [0.95, 0.85],
+      [1.0, 0.65],
     ],
     edges: [
       [0, 1],

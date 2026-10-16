@@ -1,15 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-// The lava lamp, drawn on the GPU for iPhones and iPads. The usual version
-// blurs the blobs with an SVG filter and then sharpens the alpha so touching
-// blobs fuse into one shape; Apple's browser engine silently skips that filter
-// at this size. A fragment shader does the same two steps for every pixel at
-// the screen's own resolution, in floating point: each blob is a soft disc,
-// the discs are laid over one another, and the combined alpha is pushed
-// through a narrow ramp. Working per pixel in floats is what keeps the rim
-// smooth: an 8-bit canvas with a steep curve turns into visible stair-steps.
-
 export interface LavaBlob {
   color: string;
   size: number;
@@ -25,14 +16,13 @@ export interface LavaBlob {
   y3: string;
 }
 
-// Where a blob begins on this visit (see LavaBackground).
 export interface LavaStart {
-  phase: number; // 0-1: how far along its drift
-  jx: number; // nudge off its usual spot, % of the screen's width
-  jy: number; // and of its height
+  phase: number;
+  jx: number;
+  jy: number;
 }
 
-const SOFT = 30; // half the width of a disc's soft rim, in CSS pixels, at full size
+const SOFT = 30;
 
 const VERTEX = `
 attribute vec2 a;
@@ -143,7 +133,6 @@ const LavaCanvas = ({
     const canvas = ref.current;
     if (!canvas) return;
     const root = document.documentElement;
-    // Only where the SVG version is skipped (marked by layout.tsx).
     if (!root.classList.contains("no-goo")) return;
     if (!starts) return;
 
@@ -162,7 +151,6 @@ const LavaCanvas = ({
     if (!gl.getProgramParameter(program, gl.LINK_STATUS)) return giveUp();
     gl.useProgram(program);
 
-    // One triangle that covers the whole screen.
     const buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
     gl.bufferData(
@@ -199,11 +187,9 @@ const LavaCanvas = ({
     const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let vw = 0;
     let vh = 0;
-    // The blobs' size relative to full (see --lava-scale in globals.css).
     let shrink = 1;
     const LEVELS = [1.5, 1, 0.75, 0.5];
     let level = 0;
-    // Whether to draw less often still, once the density can go no lower.
     let every = 30;
     const fit = () => {
       shrink =
@@ -212,9 +198,6 @@ const LavaCanvas = ({
       gl.uniform1f(uSoft, SOFT * shrink);
       vw = window.innerWidth;
       vh = window.innerHeight;
-      // How many canvas pixels per screen pixel: the screen's own at first (up
-      // to 1.5), and fewer if the page turns out to be running slowly (see the
-      // loop below). Soft blobs lose nothing visible at a lower density.
       const density = Math.min(window.devicePixelRatio || 1, LEVELS[level]);
       canvas.width = Math.round(vw * density);
       canvas.height = Math.round(vh * density);
@@ -244,10 +227,6 @@ const LavaCanvas = ({
     let average = 16;
     let counted = 0;
     const loop = (now: number) => {
-      // Watch how long frames really take. If the page is struggling (under
-      // about 38 a second, smoothed), the lava steps down a notch: fewer
-      // pixels, then, at the bottom, fewer redraws, so it never drags the
-      // shapes and the page itself down with it.
       if (before && !document.hidden) {
         average = average * 0.9 + (now - before) * 0.1;
         counted += 1;
@@ -263,7 +242,6 @@ const LavaCanvas = ({
         }
       }
       before = now;
-      // About 30 frames a second is plenty for a drift this slow.
       if (!document.hidden && now - last > every) {
         last = now;
         draw(now);
@@ -271,7 +249,6 @@ const LavaCanvas = ({
       if (!calm) raf = requestAnimationFrame(loop);
     };
     raf = requestAnimationFrame(loop);
-    // Once even when still, so reduced motion shows the picture.
     if (calm) draw(0);
 
     return () => {

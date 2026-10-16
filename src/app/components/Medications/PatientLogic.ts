@@ -1,12 +1,9 @@
 import { keyOf, Level } from "./Interactions";
 
-// ------------------------------------------------------------------ data
 export type Verdict = "do_not_give" | "caution" | "treats_this";
 
 export interface ParamType {
   label: string;
-  // Not uniform (calcium is mg/dL, the other electrolytes mEq/L, osmolarity
-  // mOsm/L, kidney function has none), so it is always read from here.
   unit: string;
   normal: string;
 }
@@ -16,14 +13,10 @@ export interface StateType {
   label: string;
   param: string;
   dir: string;
-  // The edge of the normal range this state is past ("under 90 mm Hg"); there
-  // is none for kidney or liver function.
   bound?: string | null;
 }
 
 export interface BaselineType {
-  // False when there is no safe version of this state as a long-standing
-  // normal (K 6.2, a low glucose, a high osmolarity, a long QT).
   possible: boolean;
   warning: string;
   changes?: string;
@@ -41,8 +34,6 @@ export interface PatientDoc {
   not_a_calculator: string;
   baseline_note: string;
   verdict_key: Record<Verdict, string>;
-  // The sentence for a pair where both drugs, or one of them, are already a
-  // hold in this patient before the interaction is considered.
   held_note: { both: string; one: string; how?: string };
   parameters: Record<string, ParamType>;
   states: StateType[];
@@ -70,8 +61,6 @@ export interface InPatientType {
   normally: Level;
   direct: boolean;
   why: string;
-  // The names of the drugs held on the acute reading alone. Not used to decide
-  // what is held (see readPairs); the verdicts themselves are.
   held_acute?: string[];
 }
 
@@ -85,10 +74,6 @@ export interface PatientFile {
 export const loadPatient = (): Promise<PatientFile> =>
   import("./patient.json").then((mod) => mod.default as unknown as PatientFile);
 
-// ------------------------------------------------------------- selections
-// One value per parameter, so Low and High of the same lab can never both be
-// on: "" is normal, "k_low" is that state, "k_low:base" is the same value as
-// this patient's own long-standing baseline.
 export type Labs = Record<string, string>;
 
 export const PARAM_ORDER = [
@@ -134,16 +119,9 @@ export const activeOf = (labs: Labs, doc: PatientDoc): ActiveType[] =>
     const state = doc.states.find(
       (entry) => entry.id === stateIdOf(choice) && entry.param === param,
     );
-    // The baseline option is gone from the page; a value saved with it before
-    // simply reads as the plain state.
     return state ? [{ state, baseline: false }] : [];
   });
 
-// When a state is the patient's baseline AND the drug's entry has a baseline
-// reading, that reading replaces the normal one for display and grouping. The
-// normal one is kept so the page can show "If this were NEW instead". With no
-// baseline reading the verdict does not change, which is deliberate: for most
-// drugs chronicity does not alter the answer.
 export interface EffectiveType extends ReadingType {
   chronic: boolean;
 }
@@ -169,15 +147,12 @@ export const VERDICT_LABEL: Record<Verdict, string> = {
   treats_this: "Treats this",
 };
 
-// ---------------------------------------------------------- interactions
 const SEVERITY_RANK: Record<Level, number> = { avoid: 0, high: 1, moderate: 2 };
 
 export interface PairReading {
   key: string;
   a: string;
   b: string;
-  // What the pair is rated here: the patient's reading where a set state
-  // covers it, otherwise the pair's own rating.
   severity: Level;
   normally: Level;
   shifted: boolean;
@@ -234,7 +209,6 @@ export const readPairs = (
       const entries = active.flatMap(({ state }) =>
         (covers[state.id] ?? []).map((item) => ({ state, item })),
       );
-      // The worst rating any set state gives it.
       const severity = entries.reduce<Level>(
         (worst, { item }) =>
           SEVERITY_RANK[item.severity_here] < SEVERITY_RANK[worst]
@@ -255,9 +229,6 @@ export const readPairs = (
       });
     }
   }
-  // Pairs where a drug is already a hold first, then direct before indirect
-  // (an indirect spotlight can cover hundreds of pairs and would bury the few
-  // actually about the lab that was set), then by severity, then by name.
   return out.sort(
     (x, y) =>
       Number(!!y.heldNote) - Number(!!x.heldNote) ||

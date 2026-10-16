@@ -44,7 +44,6 @@ export const NameField = ({
   value: string;
   onChange: (value: string) => void;
   ok: boolean;
-  // Once the certificate has been issued the name can't be changed.
   locked?: boolean;
 }) => (
   <ActivityShell label="Your turn" done={ok}>
@@ -127,8 +126,7 @@ export const Mcq = ({
                   : isWrong
                     ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
                     : ok
-                      ? // Answered: the others stay put, dimmed, and don't react.
-                        "cursor-not-allowed border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] opacity-40"
+                      ? "cursor-not-allowed border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] opacity-40"
                       : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
               }`}
             >

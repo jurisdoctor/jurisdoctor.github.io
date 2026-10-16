@@ -1,7 +1,12 @@
 import { ReactNode } from "react";
 import { QuestionType } from "../Nclex/Questions";
 
-export type CalloutTone = "tip" | "critical" | "idea" | "takeaway" | "reference";
+export type CalloutTone =
+  | "tip"
+  | "critical"
+  | "idea"
+  | "takeaway"
+  | "reference";
 
 export type Block =
   | { type: "heading"; text: string }

@@ -48,9 +48,6 @@ export const loadBank = (exam: ExamId): Promise<DerivedBank> => {
   return promise;
 };
 
-// The Kaplan question set (route /kaplan) is a separate bank with its own
-// exams. scripts/build-kaplan.py writes each exam's file and keeps the
-// manifest, so adding or replacing an exam is a data change only.
 export interface KaplanExamType {
   id: string;
   title: string;

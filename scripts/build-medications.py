@@ -1,25 +1,4 @@
 #!/usr/bin/env python3
-"""Turn the full medications.json export into the two files the site ships.
-
-    python3 scripts/build-medications.py ~/Downloads/medications.json
-
-The full export also carries the study-card editing log (`corrections`, plus
-the file-level `source` and `conventions`), per-card `interaction_tags`, and
-flat copies of what `sections` already lays out. Those are for whoever
-maintains the data, or are duplicates, so they are left out of what the site
-serves:
-
-  src/app/components/Medications/medications.json   the guide itself
-  src/app/components/Medications/interactions.json  the interaction map data,
-                                                    loaded only on that page
-  src/app/components/Medications/patient.json       the Test Patient data (the
-                                                    18 lab states, each drug's
-                                                    reading under them, and how
-                                                    each pair changes), loaded
-                                                    only on that page
-
-Keep the full export somewhere safe (e.g. the nclex-bank folder).
-"""
 import json
 import sys
 from pathlib import Path
@@ -31,22 +10,22 @@ full = json.loads(src.read_text(encoding="utf8"))
 inter = full["interactions"]
 
 guide = {k: full[k] for k in ("schema_version", "generated", "stats", "groups", "medications")}
+guide["filters"] = {
+    "families": full["filters"]["families"],
+    "label_of": full["filters"]["label_of"],
+}
+guide["course_list"] = full["course_list"]
 guide["stats"] = {k: v for k, v in guide["stats"].items() if k != "corrections_applied"}
 
-# Everything the pages and the flashcards read; everything else is dropped.
-# The per-section content (action, contraindications, side effects, nursing,
-# ...) is already laid out in `sections`, so the older flat copies of it are
-# not shipped a second time.
 KEEP = (
     "id", "generic", "pronunciation", "brand", "group", "drug_class", "subclass",
     "highlight", "quick", "why_this_one", "use", "working_because",
     "high_alert", "black_box", "antidote", "sections", "must_check",
+    "tags", "nclex",
 )
 slim = []
 for med in guide["medications"]:
     kept = {k: med[k] for k in KEEP}
-    # The medication card on the page is drawn from `flashcard`, and the
-    # flashcards read its serious side effects, so it ships whole.
     kept["flashcard"] = med["flashcard"]
     slim.append(kept)
 guide["medications"] = slim
@@ -85,11 +64,6 @@ def dump(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf8")
     print(f"{path.name}: {path.stat().st_size // 1024} KB")
 
-# The Test Patient feature: `patient_states` (the document) plus, per drug, its
-# own `patient_states` entries and, per pair, `in_patient`. They are kept in
-# their own file, not in the two above, because they are large (about 900 KB)
-# and only that page needs them. Pairs are keyed "a|b" with the ids sorted,
-# the same key the interaction map uses.
 patient = {
     "doc": full["patient_states"],
     "meds": {

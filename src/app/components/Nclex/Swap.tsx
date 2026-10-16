@@ -23,12 +23,7 @@ const Swap = ({
 
     const node = ref.current;
     if (!node || calm()) return;
-    // A view transition is already animating this change.
-    if (document.documentElement.classList.contains("vt-active")) return;
 
-    // Options are real tap targets mid-flight during this fade-in. A fast
-    // touch near an edge can hit-test against the in-between transform and
-    // land on the wrong one, so block input until they're settled.
     node.style.pointerEvents = "none";
     const animation = node.animate([{ opacity: 0 }, { opacity: 1 }], {
       duration: 250,

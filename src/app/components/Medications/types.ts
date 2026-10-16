@@ -1,7 +1,5 @@
 export interface HighlightType {
-  // What the drug is for, in a few words ("↓ BP and heart rate").
   headline: string;
-  // The one thing not to miss, when there is one.
   critical: string | null;
 }
 
@@ -13,19 +11,10 @@ export interface QuickType {
 }
 
 export interface WhyType {
-  // Why you'd reach for this drug over the others in its group: the whole
-  // answer as one sentence, and the same answer split into its separate points.
   text: string;
   points: string[];
 }
 
-// The page for each medication is laid out in the data itself, as an ordered
-// list of sections. Each has a type that says how to draw it:
-//   pairs    label/value rows
-//   list     plain bullets
-//   steps    a bullet plus an indented rationale line
-//   grouped  sub-headings inside one card (Serious / Common side effects)
-//   linked   interaction rows; `with_id` links to another medication
 export interface PairItem {
   label: string;
   value: string;
@@ -83,10 +72,10 @@ export interface MedType {
   high_alert: boolean;
   black_box: string[];
   antidote: string | null;
-  // The condensed card for this drug: what the medication card on the page
-  // shows, and what the flashcards read.
   flashcard: FlashcardType;
   sections: SectionType[];
+  tags: string[];
+  nclex: boolean;
 }
 
 export interface GroupType {
@@ -95,10 +84,17 @@ export interface GroupType {
   medication_ids: string[];
 }
 
+export interface FilterFamily {
+  family: string;
+  tags: { tag: string; label: string; count: number }[];
+}
+
 export interface MedFile {
   schema_version: string;
   generated: string;
   stats: Record<string, number>;
   groups: GroupType[];
   medications: MedType[];
+  filters: { families: FilterFamily[]; label_of: Record<string, string> };
+  course_list: { count: number; what_it_is: string };
 }

@@ -206,24 +206,10 @@ const Quiz = ({
   results: Record<string, ResultType>;
   onResult: (id: string, correct: boolean) => void;
   onMove: (at: number) => void;
-  // Fired only by the explicit Redo actions (the per-question Redo button,
-  // and the completed-run Redo), not by Next's own internal clear() —
-  // Next's move is already covered by onMove, and re-running this check at
-  // the moment Next fires would see the question being left, not the one
-  // being entered, and could yank it out from under its own just-submitted
-  // feedback. Passed the index being redone, since "again" resets to
-  // `start` rather than the current position.
   onRedo?: (at: number) => void;
-  // Favorites. Both are optional so other users of Quiz (the Pharm course)
-  // get no star button.
   starred?: Record<string, true>;
   onStar?: (id: string) => void;
-  // A short check (the Pharm course's three questions) is retaken as a whole,
-  // and only when it wasn't aced: no Redo on each question, and none on the
-  // score screen after a perfect run.
   finalRedoOnly?: boolean;
-  // Whether answering scrolls the rationale into view. The Pharm course turns
-  // this off: the learner stays where they are and reads on at their own pace.
   jumpToAnswer?: boolean;
 }) => {
   const [at, setAt] = useState(start);
@@ -238,9 +224,6 @@ const Quiz = ({
     typeof window !== "undefined" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Answering reveals the takeaway/rationale below the fold on longer
-  // questions, so bring it into view; moving on or redoing pops back to the
-  // top so the next question is read from the start.
   useEffect(() => {
     if (!answered || !jumpToAnswer) return;
     answerRef.current?.scrollIntoView({
@@ -394,10 +377,6 @@ const Quiz = ({
       <div className="mb-3 flex items-center justify-between gap-x-4">
         <span className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2">
           <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
-            {/* Under the Incomplete lens, at+1 is a position in a pool that
-                shrinks as items are solved, so it drifts from the number on
-                the tile the learner actually clicked. ordinal is the
-                question's own stable number, so show that instead. */}
             {question.ordinal ?? at + 1} of {questions.length}
           </span>
           {multi && (

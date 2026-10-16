@@ -8,23 +8,10 @@ export const metadata: Metadata = {
   description: "site de tom",
 };
 
-// Dark is the default theme (see globals.css), so only an explicit stored
-// choice of "light" needs an attribute before paint — anything else (no
-// choice yet, or a stored "dark") already renders correctly with no
-// attribute at all, so there's nothing to flash.
-// Apple's browsers (every browser on an iPhone or iPad, Chrome included, runs
-// WebKit) skip the SVG blur the lava lamp background is built on when it is
-// this big, leaving hard-edged circles. Marked here, before paint, so the
-// background is drawn on a canvas there instead (see LavaCanvas.tsx). Adding
-// ?lava=canvas to any address forces that on any device, to look at it.
 const WEBKIT_SCRIPT = `(function(){try{var u=navigator.userAgent;if(/iP(hone|ad|od)/.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1)||/[?&]lava=canvas/.test(location.search)){document.documentElement.classList.add("no-goo");}}catch(e){}})();`;
 
 const THEME_SCRIPT = `(function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();`;
 
-// GitHub's own "Enforce HTTPS" toggle has knocked this domain's TLS offline
-// at their edge each time it was switched on, so the upgrade from http to
-// https is done here instead. Scoped to the real domain so localhost and the
-// github.io fallback are never redirected.
 const HTTPS_SCRIPT = `(function(){if(location.protocol==="http:"&&/(^|\\.)icutom\\.com$/.test(location.hostname)){location.replace("https://"+location.host+location.pathname+location.search+location.hash);}})();`;
 
 export default function RootLayout({
@@ -36,11 +23,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: HTTPS_SCRIPT }} />
-        {/* Google Sans was only made public under the SIL Open Font License
-            in December 2025, after this project's installed Next.js 14 last
-            synced its bundled next/font/google family list — so it isn't
-            importable through next/font yet, even though it's live on
-            Google's own CDN. Loaded as a plain stylesheet link instead. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

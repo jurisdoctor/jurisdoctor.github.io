@@ -90,19 +90,12 @@ const TITLES: Record<SectionType, string> = {
   favorites: "Favorites",
 };
 
-// Which question set a page shows. "nclex" is the original bank; "kaplan"
-// is the Kaplan set at /kaplan. Everything saved on the device is prefixed
-// with `scope`, so the two never share progress, favorites or tab choice
-// (the NCLEX keys keep their original "nclex:" names).
 export type SetKind = "nclex" | "kaplan";
 
 interface SetType {
   scope: string;
   examKey: string;
   heading: Segment[];
-  // Per-set wording for a tab, what its groups are called, and how a group
-  // is picked, where it differs from the defaults (the Kaplan set has no
-  // chapters or skills, just topics, which use the skills picker).
   names: Partial<Record<SectionType, string>>;
   nouns: Partial<Record<SectionType, string>>;
   picks: Partial<Record<SectionType, string>>;
@@ -184,9 +177,6 @@ const ExamView = ({
       }),
     [setStars],
   );
-  // Favorites saved against questions a later question drop removed would
-  // inflate the count (and keep an empty tab alive), so only count the ones
-  // that still exist.
   const known = useMemo(
     () =>
       new Set(
@@ -198,12 +188,6 @@ const ExamView = ({
   );
   const starCount = Object.keys(stars).filter((id) => known.has(id)).length;
 
-  // Favorites only gets a tab while there is something in it. Two cases keep
-  // it around past that: before the saved stars have loaded (otherwise a
-  // saved Favorites tab would be bumped to Chapters for a frame and the
-  // choice overwritten), and after un-starring the last one while still
-  // looking at the tab, so the page doesn't change under the learner — it
-  // goes as soon as they move to another tab.
   const [favoritesSeen, setFavoritesSeen] = useState(false);
   useEffect(() => {
     if (view.section === "favorites" && starCount > 0) setFavoritesSeen(true);
@@ -213,7 +197,6 @@ const ExamView = ({
     starCount > 0 ||
     (view.section === "favorites" && (!starsReady || favoritesSeen));
 
-  // Only offer tabs this exam actually has content for.
   const available = useMemo(
     () =>
       SECTIONS.filter((entry) => {
@@ -242,8 +225,6 @@ const ExamView = ({
   useEffect(() => {
     if (section && section !== view.section) {
       setSection(section);
-      // A run that belonged to the tab being left (e.g. Favorites, once it
-      // empties and goes away) has nothing to show on the new one.
       setStarted(null);
       setDeck([]);
     }
@@ -256,12 +237,6 @@ const ExamView = ({
     setResults((prev) => ({ ...prev, [id]: correct ? "solved" : "missed" }));
   }, []);
 
-  // A question keeps its id across data drops even when its content is
-  // edited, so a saved result can go stale without ever looking invalid.
-  // Once both stores have loaded, drop the mark for any id whose content
-  // hash no longer matches what it was last time, then record the new
-  // baseline. First run ever (hashes still empty) sees nothing stale and
-  // just establishes the baseline, so no one's existing progress is wiped.
   useEffect(() => {
     if (!resultsReady || !hashesReady) return;
     const current = bank.ContentHashes;
@@ -278,11 +253,6 @@ const ExamView = ({
     setHashes(current);
   }, [bank, resultsReady, hashesReady]);
 
-  // Favorites is a view across every other tab: each starred question is
-  // gathered back under the chapter, skill, case or judgment group it came
-  // from. The ids are prefixed by tab because the tabs reuse ids (a chapter
-  // and its judgment group share one), and the label each came from is
-  // kept so the tile and heading still read as "Chapter 27 · ..." etc.
   const { favoriteGroups, favoriteLabels } = useMemo(() => {
     const groupsOut: ChapterType[] = [];
     const labels = new Map<string, string>();
@@ -435,9 +405,6 @@ const ExamView = ({
     setPass((prev) => prev + 1);
   };
 
-  // Switching tabs starts the new tab's questions right away. The tab's own
-  // groups only exist once the section has actually changed, so the swap
-  // just records where it is going and the effect below starts the run.
   const [arriving, setArriving] = useState<SectionType | null>(null);
   const swap = (next: SectionType) => {
     setSection(next);
@@ -583,12 +550,6 @@ const ExamView = ({
                 label
               )}
             </h3>
-            {/* Keyed by the actual question id, not started.at: under the
-                Incomplete lens the pool shrinks as items are solved, so
-                "the next question" often lands back at index 0. Keying on
-                that raw index let two different questions share a key,
-                which kept Quiz mounted and leaked its answered/chosen state
-                from the old question onto the new one. */}
             <Quiz
               key={`${section}-${lens}-${String(pick)}-${deck[started.at]?.id}-${pass}`}
               label={label}
@@ -617,8 +578,6 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
     () => (kind === "nclex" ? "exam1" : ""),
     (value) => typeof value === "string",
   );
-  // A saved exam that isn't (or is no longer) in the list falls back to the
-  // first one rather than leaving the page empty.
   const exam =
     exams.find((entry) => entry.id === saved)?.id ?? exams[0]?.id ?? "";
   const examTitle = exams.find((entry) => entry.id === exam)?.title ?? "";
@@ -651,14 +610,6 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
 
   return (
     <>
-      {/* This layer must stay a sibling of the section below, not a child:
-        the section runs animate-fadeIn with fill-mode "both", which leaves a
-        transform on it permanently, and any element with a transform becomes
-        the containing block for its `fixed` descendants. Nested inside, this
-        "fixed" layer was really sized to the section's own box — 1080px wide
-        and only as tall as the content — so shapes hit an invisible wall at
-        its edges instead of roaming the viewport. left-20 matches the
-        sidebar's own width (see Sidebar.tsx's "ml-20 lg:ml-0" convention). */}
       <div className="pointer-events-none fixed inset-y-0 left-20 right-0 -z-[5] overflow-hidden lg:left-0">
         <Shapes />
       </div>
