@@ -24,13 +24,13 @@ const config: Config = {
     },
     extend: {
       borderRadius: {
-        DEFAULT: "6px",
-        sm: "3px",
-        md: "6px",
-        lg: "6px",
-        xl: "8px",
-        "2xl": "8px",
-        "3xl": "8px",
+        DEFAULT: "1.5px",
+        sm: "1px",
+        md: "1.5px",
+        lg: "1.5px",
+        xl: "1.5px",
+        "2xl": "1.5px",
+        "3xl": "1.5px",
       },
       boxShadow: {
         md: "0 1px 2px rgba(0,0,0,0.22)",

@@ -325,7 +325,7 @@ const Session = ({
               {byGroup.map(({ group, rows }) => (
                 <div
                   key={group.name}
-                  className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-4"
+                  className="rounded-2xl bg-[var(--container-color)] p-4"
                 >
                   <div className="mb-2 flex items-center justify-between gap-x-3">
                     <Chip group={group.name} accent={accentFor(group.name)} />
@@ -387,7 +387,7 @@ const Session = ({
           <button
             type="button"
             onClick={() => onFinish(null)}
-            className={`${btn} border border-solid border-[var(--border-color)] bg-[var(--container-color)] text-[var(--title-color)] hover:border-[var(--chip-blue-border)]`}
+            className={`${btn} border border-solid border-transparent bg-[var(--container-color)] text-[var(--title-color)] hover:border-[var(--chip-blue-border)]`}
           >
             Back to setup
           </button>
@@ -437,7 +437,7 @@ const Session = ({
           key={`${card.key}-${total - queue.length}-${queue.length}`}
           className={`w-full ${turn === "out" ? "flip-out" : turn === "in" ? "flip-in" : "animate-fadeIn"}`}
         >
-          <div className="rounded-3xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-8 shadow-2xl sm:p-5">
+          <div className="rounded-3xl bg-[var(--container-color)] p-8 shadow-2xl sm:p-5">
             <div className="mb-5 flex items-center justify-between gap-x-3">
               <Chip group={card.group} accent={accentFor(card.group)} />
               <span className="shrink-0 text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
@@ -469,7 +469,7 @@ const Session = ({
                           className={`w-full rounded-xl border-2 border-solid px-4 py-3 text-left text-lg font-bold duration-300 ${
                             pick === option
                               ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
-                              : "border-[var(--border-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
+                              : "border-transparent text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
                           }`}
                         >
                           {option}
@@ -563,7 +563,7 @@ const Row = ({
     className={`flex w-full items-center gap-x-3 rounded-xl border-2 border-solid px-4 py-3 text-left duration-300 ${
       on
         ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
-        : "border-[var(--border-color)] bg-[var(--container-color)] opacity-70 hover:opacity-100"
+        : "border-transparent bg-[var(--container-color)] opacity-70 hover:opacity-100"
     }`}
   >
     <span
@@ -852,7 +852,7 @@ const Study = ({
                   className={`inline-flex items-center gap-x-2 rounded-md border-2 border-solid px-4 py-2 text-sm font-bold duration-300 ${
                     on
                       ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
-                      : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
+                      : "border-transparent bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
                   }`}
                 >
                   <span
@@ -871,7 +871,7 @@ const Study = ({
         )}
 
         {prefs.scope === "pick" && (
-          <div className="mt-4 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-3">
+          <div className="mt-4 rounded-2xl bg-[var(--container-color)] p-3">
             <div className="relative mb-3">
               <PiMagnifyingGlass
                 aria-hidden
@@ -884,7 +884,7 @@ const Study = ({
                 placeholder="Find a drug…"
                 aria-label="Find a drug"
                 autoComplete="off"
-                className="h-11 w-full rounded-md border border-solid border-[var(--border-color)] bg-[var(--body-color)] pl-11 pr-4 text-[var(--title-color)] outline-none placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
+                className="h-11 w-full rounded-md border border-solid border-transparent bg-[var(--body-color)] pl-11 pr-4 text-[var(--title-color)] outline-none placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
               />
             </div>
             <div className="mb-2 flex items-center justify-between px-1 text-sm">
@@ -1007,7 +1007,7 @@ const Study = ({
         </div>
       </section>
 
-      <div className="sticky bottom-4 z-10 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-4 shadow-2xl">
+      <div className="sticky bottom-4 z-10 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 rounded-2xl bg-[var(--container-color)] p-4 shadow-2xl">
         <p className="text-[var(--text-color)]">
           <span className="text-2xl font-bold text-[var(--title-color)]">
             {total}

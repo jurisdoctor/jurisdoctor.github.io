@@ -79,9 +79,7 @@ const Card = ({
   children: ReactNode;
   className?: string;
 }) => (
-  <div
-    className={`rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-5 ${className}`}
-  >
+  <div className={`rounded-2xl bg-[var(--container-color)] p-5 ${className}`}>
     {children}
   </div>
 );
@@ -147,7 +145,7 @@ const LabSelect = ({
         <select
           value={chosen ? current : ""}
           onChange={(event) => onChange(event.target.value)}
-          className="h-11 w-full cursor-pointer appearance-none rounded-md border border-solid border-[var(--border-color)] bg-[var(--body-color)] pl-4 pr-10 text-sm font-bold text-[var(--title-color)] outline-none duration-300 focus:border-[var(--chip-blue-border)]"
+          className="h-11 w-full cursor-pointer appearance-none rounded-md border border-solid border-transparent bg-[var(--body-color)] pl-4 pr-10 text-sm font-bold text-[var(--title-color)] outline-none duration-300 focus:border-[var(--chip-blue-border)]"
         >
           <option value="">Normal</option>
           {states.map((entry) => (
@@ -353,7 +351,7 @@ const PairRow = ({
   const ruleName = (id: string) => index.rules.get(id)?.name ?? id;
 
   return (
-    <li className="rounded-md border border-solid border-[var(--border-color)] bg-[var(--body-color)]">
+    <li className="rounded-md bg-[var(--body-color)]">
       <button
         type="button"
         aria-expanded={open}
@@ -526,7 +524,7 @@ export const PatientModal = ({
         aria-modal="true"
         aria-label="Test patient: labs and vitals"
         onClick={(event) => event.stopPropagation()}
-        className="m-auto w-full max-w-[56rem] animate-fadeIn rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-6 shadow-2xl md:p-4"
+        className="m-auto w-full max-w-[56rem] animate-fadeIn rounded-2xl bg-[var(--container-color)] p-6 shadow-2xl md:p-4"
       >
         <div className="mb-4 flex items-start justify-between gap-x-4">
           <div>
@@ -607,7 +605,7 @@ export const PatientBar = ({
   const pending = !file && Object.keys(labs).length > 0;
 
   return (
-    <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-4">
+    <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-2xl bg-[var(--container-color)] p-4">
       <span className="flex items-center gap-x-2 text-sm font-bold text-[var(--title-color)]">
         <PiHeartbeat aria-hidden className="text-[var(--chip-blue-border)]" />
         Test patient
@@ -645,7 +643,7 @@ export const PatientBar = ({
         <button
           type="button"
           onClick={onEdit}
-          className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--body-color)] px-4 py-2 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)]"
+          className="inline-flex items-center gap-x-2 rounded-md border border-solid border-transparent bg-[var(--body-color)] px-4 py-2 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)]"
         >
           {active.length > 0 ? "Edit labs" : "Set labs"}
         </button>
@@ -713,7 +711,7 @@ export const PatientReadings = ({
 
   return (
     <div className="grid gap-y-8">
-      <section className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-5 sm:p-4">
+      <section className="rounded-2xl bg-[var(--container-color)] p-5 sm:p-4">
         <Heading>This patient&apos;s medications</Heading>
         {rows.length === 0 ? (
           <p className="text-[var(--muted-color)]">
@@ -755,7 +753,7 @@ export const PatientReadings = ({
       </section>
 
       {meds.length > 1 && pairs.length > 0 && (
-        <section className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-5 sm:p-4">
+        <section className="rounded-2xl bg-[var(--container-color)] p-5 sm:p-4">
           <Heading>Interactions, as this patient would have them</Heading>
           <ul className="grid gap-y-2">
             {pairs.map((pair) => (

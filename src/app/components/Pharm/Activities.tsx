@@ -17,8 +17,8 @@ const ActivityShell = ({
   <div
     className={`rounded-lg border border-l-4 border-solid bg-[var(--body-color)] p-5 duration-300 ${
       done
-        ? "border-[var(--border-color)] border-l-[rgb(0,212,127)]"
-        : "border-[var(--border-color)] border-l-[var(--chip-blue-border)]"
+        ? "border-transparent border-l-[rgb(0,212,127)]"
+        : "border-transparent border-l-[var(--chip-blue-border)]"
     }`}
   >
     <div className="mb-3 flex items-center justify-between gap-x-3">
@@ -64,7 +64,7 @@ export const NameField = ({
       onChange={(event) => onChange(event.target.value)}
       readOnly={locked}
       aria-readonly={locked}
-      className={`w-full rounded-xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-4 py-2.5 text-[var(--title-color)] outline-none focus:border-[var(--chip-blue-border)] ${
+      className={`w-full rounded-xl border border-solid border-transparent bg-[var(--container-color)] px-4 py-2.5 text-[var(--title-color)] outline-none focus:border-[var(--chip-blue-border)] ${
         locked ? "cursor-not-allowed opacity-60" : ""
       }`}
     />
@@ -126,8 +126,8 @@ export const Mcq = ({
                   : isWrong
                     ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
                     : ok
-                      ? "cursor-not-allowed border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] opacity-40"
-                      : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
+                      ? "cursor-not-allowed border-transparent bg-[var(--container-color)] text-[var(--text-color)] opacity-40"
+                      : "border-transparent bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
               }`}
             >
               {option}
@@ -177,7 +177,7 @@ export const Reveal = ({
         onChange={(event) =>
           setData((prev) => ({ ...prev, text: event.target.value }))
         }
-        className="w-full rounded-xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-3 text-[var(--text-color)] outline-none focus:border-[var(--chip-blue-border)]"
+        className="w-full rounded-xl border border-solid border-transparent bg-[var(--container-color)] p-3 text-[var(--text-color)] outline-none focus:border-[var(--chip-blue-border)]"
       />
       {shown ? (
         <>
@@ -251,8 +251,8 @@ export const FlipCards = ({
                 <div
                   className={`absolute inset-0 flex flex-col items-center justify-center gap-y-1 rounded-lg border border-solid p-3 text-center [backface-visibility:hidden] ${
                     seen.includes(index)
-                      ? "border-[var(--border-color)] bg-[rgba(0,212,127,0.05)]"
-                      : "border-[var(--border-color)] bg-[var(--container-color)]"
+                      ? "border-transparent bg-[rgba(0,212,127,0.05)]"
+                      : "border-transparent bg-[var(--container-color)]"
                   }`}
                 >
                   {seen.includes(index) && (
@@ -318,7 +318,7 @@ export const SortActivity = ({
             className={`rounded-xl border border-solid p-3 ${
               state[index]
                 ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.08)]"
-                : "border-[var(--border-color)] bg-[var(--container-color)]"
+                : "border-transparent bg-[var(--container-color)]"
             }`}
           >
             <p className="mb-2 text-[var(--text-color)]">{item.text}</p>
@@ -443,7 +443,7 @@ export const OrderActivity = ({
           ) : (
             <div
               key={position}
-              className="rounded-xl border border-dashed border-[var(--border-color)] p-3 text-[var(--muted-color)]"
+              className="rounded-xl bg-[var(--body-color)] p-3 text-[var(--muted-color)]"
             >
               Tap an item below
             </div>
@@ -458,7 +458,7 @@ export const OrderActivity = ({
               key={index}
               type="button"
               onClick={() => add(index)}
-              className="rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-3 py-1.5 text-sm text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
+              className="rounded-md border border-solid border-transparent bg-[var(--container-color)] px-3 py-1.5 text-sm text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
             >
               {text}
             </button>
@@ -554,7 +554,7 @@ export const Fields = ({
                     className={`flex h-9 w-9 items-center justify-center rounded-full border border-solid font-bold duration-150 ${
                       state[field.key] === n
                         ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-border)] text-white"
-                        : "border-[var(--border-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
+                        : "border-transparent bg-[var(--body-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
                     }`}
                   >
                     {n}
@@ -566,7 +566,7 @@ export const Fields = ({
                 rows={2}
                 value={(state[field.key] as string) ?? ""}
                 onChange={(event) => set(field.key, event.target.value)}
-                className="w-full rounded-xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-3 text-[var(--text-color)] outline-none focus:border-[var(--chip-blue-border)]"
+                className="w-full rounded-xl border border-solid border-transparent bg-[var(--container-color)] p-3 text-[var(--text-color)] outline-none focus:border-[var(--chip-blue-border)]"
               />
             )}
           </div>
@@ -648,7 +648,7 @@ export const ReadinessQuiz = ({
                       ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
                       : state === "selected"
                         ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
-                        : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]";
+                        : "border-transparent bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]";
 
                 return (
                   <button

@@ -1623,7 +1623,7 @@ export const STEPS: Step[] = [
               ["BP 132/80", false],
             ]}
           >
-            <div className="overflow-x-auto rounded-xl border border-[var(--border-color)]">
+            <div className="overflow-x-auto rounded-xl">
               <table className="w-full min-w-[22rem] border-collapse text-left text-sm">
                 <thead>
                   <tr className="bg-[var(--chip-blue-soft)]">

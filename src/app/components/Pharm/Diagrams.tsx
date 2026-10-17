@@ -89,7 +89,7 @@ const FlowNode = ({
         ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
         : tone === "clarify"
           ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
-          : "border-[var(--border-color)] bg-[var(--body-color)]";
+          : "border-transparent bg-[var(--body-color)]";
   return (
     <div
       className={`rounded-xl border border-solid px-4 py-2.5 text-center text-sm font-semibold text-[var(--title-color)] ${toneClass}`}
@@ -223,7 +223,7 @@ export const PatientChart = ({
   pills: [string, boolean][];
   children: React.ReactNode;
 }) => (
-  <div className="rounded-xl border border-solid border-[var(--border-color)] bg-[var(--body-color)] p-5">
+  <div className="rounded-xl bg-[var(--body-color)] p-5">
     <div className="mb-3 flex items-center gap-x-3">
       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--chip-blue)] text-xl">
         {emoji}

@@ -2192,21 +2192,21 @@
               "options": [
                 {
                   "id": "A",
+                  "text": "Report the wound to the provider today as infected",
+                  "correct": false,
+                  "rationale": "Redness of 1 cm that is unchanged from admission does not establish infection."
+                },
+                {
+                  "id": "B",
                   "text": "Compare the wound findings with the admission baseline at each assessment",
                   "correct": true,
                   "rationale": "The findings match baseline now. Comparing over time is how a change will be recognized in a client whose protection is reduced."
                 },
                 {
-                  "id": "B",
+                  "id": "C",
                   "text": "Arrange a review of the client's intake of protein, vitamins, and minerals",
                   "correct": true,
                   "rationale": "The client eats one quarter of each meal. Adequate protein, vitamins, and minerals support immune responses and wound healing."
-                },
-                {
-                  "id": "C",
-                  "text": "Report the wound to the provider today as infected",
-                  "correct": false,
-                  "rationale": "Redness of 1 cm that is unchanged from admission does not establish infection."
                 },
                 {
                   "id": "D",
@@ -2258,9 +2258,9 @@
                 },
                 {
                   "id": "B",
-                  "text": "Pain rating and ability to walk on the left leg",
-                  "correct": true,
-                  "rationale": "Pain and functional ability are assessed and compared with baseline."
+                  "text": "Size of the redness alone, measured once a day",
+                  "correct": false,
+                  "rationale": "Redness is one of several findings, and this client's history calls for closer assessment, not less."
                 },
                 {
                   "id": "C",
@@ -2270,24 +2270,24 @@
                 },
                 {
                   "id": "D",
-                  "text": "Size of the redness alone, measured once a day",
-                  "correct": false,
-                  "rationale": "Redness is one of several findings, and this client's history calls for closer assessment, not less."
+                  "text": "Pain rating and ability to walk on the left leg",
+                  "correct": true,
+                  "rationale": "Pain and functional ability are assessed and compared with baseline."
                 }
               ]
             }
           },
           "answer": {
             "actions": [
-              "A",
-              "B"
+              "B",
+              "C"
             ],
             "condition": [
               "A"
             ],
             "parameters": [
               "A",
-              "B"
+              "D"
             ]
           },
           "scoring": "0/1",
@@ -4673,15 +4673,15 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Notify the provider of the troponin result now",
-                  "correct": true,
-                  "rationale": "A troponin I above 0.03 ng/mL indicates myocardial injury or infarction and is reported at once."
+                  "text": "Wait for the repeat troponin before reporting the first result",
+                  "correct": false,
+                  "rationale": "Repeat testing is planned, but a value this far above the reference is reported now, not after the next result."
                 },
                 {
                   "id": "B",
-                  "text": "Obtain a 12 lead ECG",
+                  "text": "Notify the provider of the troponin result now",
                   "correct": true,
-                  "rationale": "Troponin is evaluated together with the symptoms and ECG changes, and a 12 lead ECG is obtained for chest pain."
+                  "rationale": "A troponin I above 0.03 ng/mL indicates myocardial injury or infarction and is reported at once."
                 },
                 {
                   "id": "C",
@@ -4691,15 +4691,15 @@
                 },
                 {
                   "id": "D",
-                  "text": "Wait for the repeat troponin before reporting the first result",
-                  "correct": false,
-                  "rationale": "Repeat testing is planned, but a value this far above the reference is reported now, not after the next result."
-                },
-                {
-                  "id": "E",
                   "text": "Walk the client to the restroom before testing begins",
                   "correct": false,
                   "rationale": "Activity raises the heart's oxygen demand in a client with ongoing chest pressure and evidence of injury."
+                },
+                {
+                  "id": "E",
+                  "text": "Obtain a 12 lead ECG",
+                  "correct": true,
+                  "rationale": "Troponin is evaluated together with the symptoms and ECG changes, and a 12 lead ECG is obtained for chest pain."
                 }
               ]
             },
@@ -4709,9 +4709,9 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Myocardial injury",
-                  "correct": true,
-                  "rationale": "Troponin is a heart muscle protein released into the blood when heart muscle is injured. A value above the reference with ongoing chest pressure points to myocardial injury."
+                  "text": "Orthostatic hypotension",
+                  "correct": false,
+                  "rationale": "No positional blood pressure change is described, and the pressure is above normal."
                 },
                 {
                   "id": "B",
@@ -4727,9 +4727,9 @@
                 },
                 {
                   "id": "D",
-                  "text": "Orthostatic hypotension",
-                  "correct": false,
-                  "rationale": "No positional blood pressure change is described, and the pressure is above normal."
+                  "text": "Myocardial injury",
+                  "correct": true,
+                  "rationale": "Troponin is a heart muscle protein released into the blood when heart muscle is injured. A value above the reference with ongoing chest pressure points to myocardial injury."
                 }
               ]
             },
@@ -4745,36 +4745,36 @@
                 },
                 {
                   "id": "B",
+                  "text": "Location of the point of maximal impulse",
+                  "correct": false,
+                  "rationale": "The point of maximal impulse is part of the physical assessment but does not track acute injury."
+                },
+                {
+                  "id": "C",
                   "text": "Chest pressure rating",
                   "correct": true,
                   "rationale": "The pain rating tracks whether the ischemic pain continues or eases."
                 },
                 {
-                  "id": "C",
+                  "id": "D",
                   "text": "Total cholesterol level",
                   "correct": false,
                   "rationale": "Cholesterol guides long term risk reduction, not the course of acute injury."
-                },
-                {
-                  "id": "D",
-                  "text": "Location of the point of maximal impulse",
-                  "correct": false,
-                  "rationale": "The point of maximal impulse is part of the physical assessment but does not track acute injury."
                 }
               ]
             }
           },
           "answer": {
             "actions": [
-              "A",
-              "B"
+              "B",
+              "E"
             ],
             "condition": [
-              "A"
+              "D"
             ],
             "parameters": [
               "A",
-              "B"
+              "C"
             ]
           },
           "scoring": "0/1",
@@ -5606,33 +5606,33 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Place the client in high Fowler's position",
-                  "correct": true,
-                  "rationale": "High Fowler's eases dyspnea and helps lung expansion."
-                },
-                {
-                  "id": "B",
-                  "text": "Apply oxygen as prescribed and titrate to the SpO2",
-                  "correct": true,
-                  "rationale": "Oxygen treats the hypoxemia."
-                },
-                {
-                  "id": "C",
-                  "text": "Lower the head of the bed and raise the legs",
-                  "correct": false,
-                  "rationale": "Lying flat worsens pulmonary congestion and dyspnea, and the blood pressure of 158/94 mm Hg gives no reason to raise the legs."
-                },
-                {
-                  "id": "D",
                   "text": "Give the scheduled oral diuretic now, ahead of its due time",
                   "correct": false,
                   "rationale": "Fluid removal is the right direction, but the nurse does not change the timing without a prescription, and positioning and oxygen treat the hypoxemia now."
                 },
                 {
-                  "id": "E",
+                  "id": "B",
                   "text": "Have the client cough and deep breathe, then recheck the lungs in 30 minutes",
                   "correct": false,
                   "rationale": "Useful for routine gas exchange, but waiting 30 minutes with SpO2 86% and pink, frothy sputum delays emergency care."
+                },
+                {
+                  "id": "C",
+                  "text": "Apply oxygen as prescribed and titrate to the SpO2",
+                  "correct": true,
+                  "rationale": "Oxygen treats the hypoxemia."
+                },
+                {
+                  "id": "D",
+                  "text": "Place the client in high Fowler's position",
+                  "correct": true,
+                  "rationale": "High Fowler's eases dyspnea and helps lung expansion."
+                },
+                {
+                  "id": "E",
+                  "text": "Lower the head of the bed and raise the legs",
+                  "correct": false,
+                  "rationale": "Lying flat worsens pulmonary congestion and dyspnea, and the blood pressure of 158/94 mm Hg gives no reason to raise the legs."
                 }
               ]
             },
@@ -5642,15 +5642,15 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Acute pulmonary edema",
-                  "correct": true,
-                  "rationale": "Sudden dyspnea, SpO2 86%, crackles halfway up both lungs, and pink, frothy sputum indicate pulmonary edema from left sided failure."
+                  "text": "Worsening chronic left sided heart failure",
+                  "correct": false,
+                  "rationale": "The findings are left sided, but the sudden onset, crackles halfway up both lungs, and pink, frothy sputum mark acute pulmonary edema, an emergency."
                 },
                 {
                   "id": "B",
-                  "text": "Worsening right sided heart failure",
-                  "correct": false,
-                  "rationale": "Right sided failure backs blood into the systemic veins, causing edema, JVD, and ascites. These findings are in the lungs."
+                  "text": "Acute pulmonary edema",
+                  "correct": true,
+                  "rationale": "Sudden dyspnea, SpO2 86%, crackles halfway up both lungs, and pink, frothy sputum indicate pulmonary edema from left sided failure."
                 },
                 {
                   "id": "C",
@@ -5660,9 +5660,9 @@
                 },
                 {
                   "id": "D",
-                  "text": "Worsening chronic left sided heart failure",
+                  "text": "Worsening right sided heart failure",
                   "correct": false,
-                  "rationale": "The findings are left sided, but the sudden onset, crackles halfway up both lungs, and pink, frothy sputum mark acute pulmonary edema, an emergency."
+                  "rationale": "Right sided failure backs blood into the systemic veins, causing edema, JVD, and ascites. These findings are in the lungs."
                 }
               ]
             },
@@ -5672,9 +5672,9 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "SpO2",
-                  "correct": true,
-                  "rationale": "Shows whether oxygen therapy is reversing the hypoxemia."
+                  "text": "Abdominal girth",
+                  "correct": false,
+                  "rationale": "Measures ascites from systemic congestion, which is not the current problem."
                 },
                 {
                   "id": "B",
@@ -5684,9 +5684,9 @@
                 },
                 {
                   "id": "C",
-                  "text": "Abdominal girth",
+                  "text": "Oral temperature",
                   "correct": false,
-                  "rationale": "Measures ascites from systemic congestion, which is not the current problem."
+                  "rationale": "The problem is fluid in the lungs, and temperature does not track it."
                 },
                 {
                   "id": "D",
@@ -5696,24 +5696,24 @@
                 },
                 {
                   "id": "E",
-                  "text": "Oral temperature",
-                  "correct": false,
-                  "rationale": "The problem is fluid in the lungs, and temperature does not track it."
+                  "text": "SpO2",
+                  "correct": true,
+                  "rationale": "Shows whether oxygen therapy is reversing the hypoxemia."
                 }
               ]
             }
           },
           "answer": {
             "actions": [
-              "A",
-              "B"
+              "C",
+              "D"
             ],
             "condition": [
-              "A"
+              "B"
             ],
             "parameters": [
-              "A",
-              "B"
+              "B",
+              "E"
             ]
           },
           "scoring": "0/1",
@@ -7120,21 +7120,21 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Apply oxygen as indicated by the saturation",
-                  "correct": true,
-                  "rationale": "Oxygen is given as indicated. The saturation of 91% is below the reference of 95 to 100%."
+                  "text": "Give a prescribed intravenous antihypertensive as a rapid push to reach 140/90 mm Hg",
+                  "correct": false,
+                  "rationale": "Intravenous antihypertensives are a priority, but a rapid drop lowers the pressure too fast and can cause cerebral ischemia, myocardial infarction or kidney injury."
                 },
                 {
                   "id": "B",
-                  "text": "Measure the blood pressure at frequent intervals",
-                  "correct": true,
-                  "rationale": "Frequent blood pressure monitoring is a priority in hypertensive crisis."
-                },
-                {
-                  "id": "C",
                   "text": "Give the stopped oral drug to bring the pressure below 130/80 mm Hg within 1 hour",
                   "correct": false,
                   "rationale": "The pressure must be lowered gradually. Too rapid lowering can decrease perfusion and cause cerebral ischemia, myocardial infarction or kidney injury."
+                },
+                {
+                  "id": "C",
+                  "text": "Apply oxygen as indicated by the saturation",
+                  "correct": true,
+                  "rationale": "Oxygen is given as indicated. The saturation of 91% is below the reference of 95 to 100%."
                 },
                 {
                   "id": "D",
@@ -7144,9 +7144,9 @@
                 },
                 {
                   "id": "E",
-                  "text": "Give a prescribed intravenous antihypertensive as a rapid push to reach 140/90 mm Hg",
-                  "correct": false,
-                  "rationale": "Intravenous antihypertensives are a priority, but a rapid drop lowers the pressure too fast and can cause cerebral ischemia, myocardial infarction or kidney injury."
+                  "text": "Measure the blood pressure at frequent intervals",
+                  "correct": true,
+                  "rationale": "Frequent blood pressure monitoring is a priority in hypertensive crisis."
                 }
               ]
             },
@@ -7162,15 +7162,15 @@
                 },
                 {
                   "id": "B",
-                  "text": "Stage 2 hypertension",
-                  "correct": false,
-                  "rationale": "Stage 2 starts at 140/90 mm Hg, but this client's pressure is above 180/120 mm Hg and the client has symptoms."
-                },
-                {
-                  "id": "C",
                   "text": "Orthostatic hypotension",
                   "correct": false,
                   "rationale": "Orthostatic hypotension is a drop in pressure on standing. This pressure is extremely high."
+                },
+                {
+                  "id": "C",
+                  "text": "Stage 2 hypertension",
+                  "correct": false,
+                  "rationale": "Stage 2 starts at 140/90 mm Hg, but this client's pressure is above 180/120 mm Hg and the client has symptoms."
                 },
                 {
                   "id": "D",
@@ -7192,21 +7192,21 @@
                 },
                 {
                   "id": "B",
-                  "text": "Chest pain and heart rhythm",
-                  "correct": true,
-                  "rationale": "Cardiovascular status is assessed because the heart is a target organ."
-                },
-                {
-                  "id": "C",
                   "text": "Blood glucose before each meal",
                   "correct": false,
                   "rationale": "Nothing in the stem points to a glucose problem."
                 },
                 {
-                  "id": "D",
+                  "id": "C",
                   "text": "Weight each morning",
                   "correct": false,
                   "rationale": "Daily weight tracks fluid over days. It does not catch the acute complications of a crisis."
+                },
+                {
+                  "id": "D",
+                  "text": "Chest pain and heart rhythm",
+                  "correct": true,
+                  "rationale": "Cardiovascular status is assessed because the heart is a target organ."
                 },
                 {
                   "id": "E",
@@ -7219,15 +7219,15 @@
           },
           "answer": {
             "actions": [
-              "A",
-              "B"
+              "C",
+              "E"
             ],
             "condition": [
               "A"
             ],
             "parameters": [
               "A",
-              "B"
+              "D"
             ]
           },
           "scoring": "0/1",
@@ -7837,12 +7837,12 @@
         {
           "id": "ig31-m03",
           "type": "highlight",
-          "nursesNote": "1400, day 2 of admission for pneumonia: Restless and pulling at bed linen, calm and alert at 1000. Respiratory rate 26 breaths per minute, was 18 at 1000. Oxygen saturation 95% on room air, same as at 1000. Oral temperature 37.1 °C. Urine output 25 mL per hour, was 60 mL per hour at 1000. Productive cough, unchanged since admission.",
+          "nursesNote": "1400, day 2 of admission for pneumonia: Restless and pulling at bed linen, was calm and alert at 1000. Respiratory rate 26 breaths per minute, was 18 at 1000. Oxygen saturation 95% on room air, same as at 1000. Oral temperature 37.1 °C. Urine output 25 mL per hour, was 60 mL per hour at 1000. Productive cough, unchanged since admission.",
           "stem": "Highlight the findings that suggest possible sepsis.",
           "segments": [
             {
               "id": "s1",
-              "text": "Restless and pulling at bed linen, calm and alert at 1000",
+              "text": "Restless and pulling at bed linen, was calm and alert at 1000",
               "correct": true,
               "rationale": "A new change in mental status in a client with an infection is an early cue of sepsis."
             },
@@ -7996,15 +7996,15 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Notify the provider or activate the rapid response process now",
-                  "correct": true,
-                  "rationale": "When sepsis is suspected, the nurse escalates immediately."
-                },
-                {
-                  "id": "B",
                   "text": "Reassess breathing, circulation, mentation, and vital signs",
                   "correct": true,
                   "rationale": "The nurse reassesses these while help is on the way."
+                },
+                {
+                  "id": "B",
+                  "text": "Encourage oral fluids and reassess urine output at the end of the shift",
+                  "correct": false,
+                  "rationale": "Supporting hydration is appropriate in general, but it is not a response to a falling urine output with other cues of sepsis."
                 },
                 {
                   "id": "C",
@@ -8014,9 +8014,9 @@
                 },
                 {
                   "id": "D",
-                  "text": "Encourage oral fluids and reassess urine output at the end of the shift",
-                  "correct": false,
-                  "rationale": "Supporting hydration is appropriate in general, but it is not a response to a falling urine output with other cues of sepsis."
+                  "text": "Notify the provider or activate the rapid response process now",
+                  "correct": true,
+                  "rationale": "When sepsis is suspected, the nurse escalates immediately."
                 }
               ]
             },
@@ -8026,27 +8026,27 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Possible sepsis",
-                  "correct": true,
-                  "rationale": "A client with an infection has a new mental status change, a faster heart rate, a respiratory rate above 20, and decreased urine output."
+                  "text": "Inflammation without infection",
+                  "correct": false,
+                  "rationale": "The client has a known infection, and the findings show body systems working worse than at baseline."
                 },
                 {
                   "id": "B",
-                  "text": "Expected course of pneumonia",
-                  "correct": false,
-                  "rationale": "New restlessness and a fall in urine output are changes from baseline, not expected findings."
-                },
-                {
-                  "id": "C",
                   "text": "Anxiety about the hospital stay",
                   "correct": false,
                   "rationale": "Restlessness with faster breathing and less urine in a client with an infection is not treated as anxiety."
                 },
                 {
+                  "id": "C",
+                  "text": "Possible sepsis",
+                  "correct": true,
+                  "rationale": "A client with an infection has a new mental status change, a faster heart rate, a respiratory rate above 20, and decreased urine output."
+                },
+                {
                   "id": "D",
-                  "text": "Inflammation without infection",
+                  "text": "Expected course of pneumonia",
                   "correct": false,
-                  "rationale": "The client has a known infection, and the findings show body systems working worse than at baseline."
+                  "rationale": "New restlessness and a fall in urine output are changes from baseline, not expected findings."
                 }
               ]
             },
@@ -8056,9 +8056,9 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Mental status compared with the 1000 baseline",
-                  "correct": true,
-                  "rationale": "Mental status moving toward baseline is a marker of improvement."
+                  "text": "Oral temperature every 4 hours as the main measure",
+                  "correct": false,
+                  "rationale": "Temperature is trended, but the nurse does not rely on it alone. Mentation and urine output show perfusion."
                 },
                 {
                   "id": "B",
@@ -8068,15 +8068,15 @@
                 },
                 {
                   "id": "C",
-                  "text": "Amount and color of sputum",
-                  "correct": false,
-                  "rationale": "Sputum describes the pneumonia. It does not show whether perfusion is improving."
+                  "text": "Mental status compared with the 1000 baseline",
+                  "correct": true,
+                  "rationale": "Mental status moving toward baseline is a marker of improvement."
                 },
                 {
                   "id": "D",
-                  "text": "Oral temperature every 4 hours as the main measure",
+                  "text": "Amount and color of sputum",
                   "correct": false,
-                  "rationale": "Temperature is trended, but the nurse does not rely on it alone. Mentation and urine output show perfusion."
+                  "rationale": "Sputum describes the pneumonia. It does not show whether perfusion is improving."
                 }
               ]
             }
@@ -8084,14 +8084,14 @@
           "answer": {
             "actions": [
               "A",
-              "B"
+              "D"
             ],
             "condition": [
-              "A"
+              "C"
             ],
             "parameters": [
-              "A",
-              "B"
+              "B",
+              "C"
             ]
           },
           "scoring": "0/1",
@@ -9812,33 +9812,33 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Obtain a 12 lead ECG",
-                  "correct": true,
-                  "rationale": "The 12 lead ECG is a core diagnostic test for coronary artery disease and acute coronary syndrome."
-                },
-                {
-                  "id": "B",
                   "text": "Draw blood for a troponin level as prescribed",
                   "correct": true,
                   "rationale": "Troponin T and I are the preferred biomarkers for acute myocardial infarction."
                 },
                 {
-                  "id": "C",
+                  "id": "B",
                   "text": "Obtain a chest X ray to look for pulmonary congestion",
                   "correct": false,
                   "rationale": "A chest X ray is a CAD diagnostic, but the lungs are clear in both bases, so it does not answer the question this presentation raises."
                 },
                 {
-                  "id": "D",
-                  "text": "Draw a B type natriuretic peptide level to assess for heart failure",
-                  "correct": false,
-                  "rationale": "BNP points to ventricular stretch and fluid overload. Clear lungs and no edema do not suggest heart failure; ischemia is the problem."
-                },
-                {
-                  "id": "E",
+                  "id": "C",
                   "text": "Teach a low sodium diet before discharge",
                   "correct": false,
                   "rationale": "Diet teaching is part of risk reduction, but it does not address pressure at rest happening now."
+                },
+                {
+                  "id": "D",
+                  "text": "Obtain a 12 lead ECG",
+                  "correct": true,
+                  "rationale": "The 12 lead ECG is a core diagnostic test for coronary artery disease and acute coronary syndrome."
+                },
+                {
+                  "id": "E",
+                  "text": "Draw a B type natriuretic peptide level to assess for heart failure",
+                  "correct": false,
+                  "rationale": "BNP points to ventricular stretch and fluid overload. Clear lungs and no edema do not suggest heart failure; ischemia is the problem."
                 }
               ]
             },
@@ -9848,27 +9848,27 @@
               "options": [
                 {
                   "id": "A",
+                  "text": "Left sided heart failure",
+                  "correct": false,
+                  "rationale": "Left sided failure causes pulmonary congestion with crackles. The lungs are clear in both bases."
+                },
+                {
+                  "id": "B",
                   "text": "Acute coronary syndrome",
                   "correct": true,
                   "rationale": "Pressure at rest, 7 of 10, with diaphoresis and dyspnea in a client with known coronary artery disease fits an acute coronary syndrome."
                 },
                 {
-                  "id": "B",
+                  "id": "C",
                   "text": "Chronic angina with a predictable pattern",
                   "correct": false,
                   "rationale": "Predictable angina comes with exertion and ends with rest. This pressure began while lying on the sofa."
                 },
                 {
-                  "id": "C",
+                  "id": "D",
                   "text": "Hypertensive crisis",
                   "correct": false,
                   "rationale": "Hypertensive crisis is a blood pressure of 180/120 mm Hg or higher. This reading is 156/92 mm Hg."
-                },
-                {
-                  "id": "D",
-                  "text": "Left sided heart failure",
-                  "correct": false,
-                  "rationale": "Left sided failure causes pulmonary congestion with crackles. The lungs are clear in both bases."
                 }
               ]
             },
@@ -9878,33 +9878,33 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Chest pain intensity",
-                  "correct": true,
-                  "rationale": "Pain intensity shows whether ischemia is continuing or easing with treatment."
-                },
-                {
-                  "id": "B",
-                  "text": "Heart rhythm on the cardiac monitor",
-                  "correct": true,
-                  "rationale": "Ischemic muscle is irritable, and a heart rate of 106 beats per minute is already above range."
-                },
-                {
-                  "id": "C",
-                  "text": "Daily weight",
-                  "correct": false,
-                  "rationale": "Daily weight tracks fluid in heart failure. Lungs are clear and there is no edema."
-                },
-                {
-                  "id": "D",
                   "text": "Orthostatic blood pressure",
                   "correct": false,
                   "rationale": "Orthostatic checks are a hypertension and medication assessment. Standing a client with active ischemia raises demand and is not the priority."
                 },
                 {
-                  "id": "E",
+                  "id": "B",
                   "text": "Capillary blood glucose",
                   "correct": false,
                   "rationale": "Nothing in the scenario points to a glucose problem; pain and rhythm show whether ischemia continues."
+                },
+                {
+                  "id": "C",
+                  "text": "Heart rhythm on the cardiac monitor",
+                  "correct": true,
+                  "rationale": "Ischemic muscle is irritable, and a heart rate of 106 beats per minute is already above range."
+                },
+                {
+                  "id": "D",
+                  "text": "Daily weight",
+                  "correct": false,
+                  "rationale": "Daily weight tracks fluid in heart failure. Lungs are clear and there is no edema."
+                },
+                {
+                  "id": "E",
+                  "text": "Chest pain intensity",
+                  "correct": true,
+                  "rationale": "Pain intensity shows whether ischemia is continuing or easing with treatment."
                 }
               ]
             }
@@ -9912,14 +9912,14 @@
           "answer": {
             "actions": [
               "A",
-              "B"
+              "D"
             ],
             "condition": [
-              "A"
+              "B"
             ],
             "parameters": [
-              "A",
-              "B"
+              "C",
+              "E"
             ]
           },
           "scoring": "0/1",
@@ -12403,33 +12403,33 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Clamp the catheter",
-                  "correct": true,
-                  "rationale": "Clamping stops more air from entering the vein."
-                },
-                {
-                  "id": "B",
                   "text": "Return the client to bed on the left side with the head down",
                   "correct": true,
                   "rationale": "Left lateral Trendelenburg traps the air in the right side of the heart, away from the lungs."
                 },
                 {
-                  "id": "C",
+                  "id": "B",
                   "text": "Lay the client flat on the back with the legs raised",
                   "correct": false,
                   "rationale": "A shock position does not trap the air in the right side of the heart. The left side with the head down does."
                 },
                 {
-                  "id": "D",
-                  "text": "Flush the line with 0.9% sodium chloride",
-                  "correct": false,
-                  "rationale": "Flushing pushes more of what is in the line into the vein."
+                  "id": "C",
+                  "text": "Clamp the catheter",
+                  "correct": true,
+                  "rationale": "Clamping stops more air from entering the vein."
                 },
                 {
-                  "id": "E",
+                  "id": "D",
                   "text": "Remove the central line",
                   "correct": false,
                   "rationale": "The line is clamped, not removed, in this emergency."
+                },
+                {
+                  "id": "E",
+                  "text": "Flush the line with 0.9% sodium chloride",
+                  "correct": false,
+                  "rationale": "Flushing pushes more of what is in the line into the vein."
                 }
               ]
             },
@@ -12439,27 +12439,27 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Air embolism",
-                  "correct": true,
-                  "rationale": "An open line, sudden shortness of breath, chest pain, low blood pressure and a churning sound over the heart."
+                  "text": "Fluid overload",
+                  "correct": false,
+                  "rationale": "Fluid overload builds over hours of infusion. This began within a minute of the line opening."
                 },
                 {
                   "id": "B",
-                  "text": "Speed shock",
-                  "correct": false,
-                  "rationale": "Speed shock follows a fast infusion, with flushing, headache and chest tightness. Nothing was infusing fast."
-                },
-                {
-                  "id": "C",
                   "text": "Catheter related bloodstream infection",
                   "correct": false,
                   "rationale": "Infection brings fever and chills over time, not a sudden onset after a disconnection."
                 },
                 {
-                  "id": "D",
-                  "text": "Fluid overload",
+                  "id": "C",
+                  "text": "Speed shock",
                   "correct": false,
-                  "rationale": "Fluid overload builds over hours of infusion. This began within a minute of the line opening."
+                  "rationale": "Speed shock follows a fast infusion, with flushing, headache and chest tightness. Nothing was infusing fast."
+                },
+                {
+                  "id": "D",
+                  "text": "Air embolism",
+                  "correct": true,
+                  "rationale": "An open line, sudden shortness of breath, chest pain, low blood pressure and a churning sound over the heart."
                 }
               ]
             },
@@ -12469,9 +12469,9 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Oxygen saturation",
-                  "correct": true,
-                  "rationale": "86% shows the air is blocking blood flow to the lungs."
+                  "text": "Urine specific gravity",
+                  "correct": false,
+                  "rationale": "This does not guide care in the next minutes."
                 },
                 {
                   "id": "B",
@@ -12493,9 +12493,9 @@
                 },
                 {
                   "id": "E",
-                  "text": "Urine specific gravity",
-                  "correct": false,
-                  "rationale": "This does not guide care in the next minutes."
+                  "text": "Oxygen saturation",
+                  "correct": true,
+                  "rationale": "86% shows the air is blocking blood flow to the lungs."
                 }
               ]
             }
@@ -12503,14 +12503,14 @@
           "answer": {
             "actions": [
               "A",
-              "B"
+              "C"
             ],
             "condition": [
-              "A"
+              "D"
             ],
             "parameters": [
-              "A",
-              "B"
+              "B",
+              "E"
             ]
           },
           "scoring": "0/1",

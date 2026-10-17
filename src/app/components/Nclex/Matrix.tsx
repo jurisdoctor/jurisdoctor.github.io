@@ -141,7 +141,7 @@ const Matrix = ({
   return (
     <div className="mb-6">
       {!answered && question.note && (
-        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#cfc9bb] p-4 text-sm text-[var(--muted-color)]">
+        <p className="mb-4 rounded-2xl bg-[var(--body-color)] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}

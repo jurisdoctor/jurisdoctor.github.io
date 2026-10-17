@@ -294,7 +294,7 @@ const ClassFilter = ({
         className={`${chip} text-[var(--title-color)] ${
           picked === null
             ? ""
-            : "border-[var(--border-color)] bg-[var(--container-color)] hover:border-[var(--chip-blue-border)]"
+            : "border-transparent bg-[var(--container-color)] hover:border-[var(--chip-blue-border)]"
         }`}
       >
         All
@@ -314,7 +314,7 @@ const ClassFilter = ({
             className={`${chip} ${
               on
                 ? "text-[var(--title-color)]"
-                : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)] hover:text-[var(--title-color)]"
+                : "border-transparent bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)] hover:text-[var(--title-color)]"
             }`}
           >
             <span>{labelOf[name] ?? name}</span>
@@ -357,7 +357,7 @@ const Tray = ({
     <div
       role="region"
       aria-label="Medications picked for the interaction check"
-      className="pointer-events-auto flex max-h-[40dvh] w-full max-w-[52rem] animate-fadeIn flex-wrap items-center gap-x-4 gap-y-3 overflow-y-auto rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-3 shadow-2xl"
+      className="pointer-events-auto flex max-h-[40dvh] w-full max-w-[52rem] animate-fadeIn flex-wrap items-center gap-x-4 gap-y-3 overflow-y-auto rounded-2xl bg-[var(--container-color)] p-3 shadow-2xl"
     >
       <div className="flex min-w-0 flex-1 basis-[18rem] flex-wrap items-center gap-2">
         <span className="mr-1 flex items-center gap-x-2 text-sm font-bold text-[var(--title-color)]">
@@ -742,7 +742,7 @@ const Medications = () => {
                   <button
                     type="button"
                     onClick={openStudy}
-                    className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
+                    className="inline-flex items-center gap-x-2 rounded-md border border-solid border-transparent bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
                   >
                     <PiStack
                       aria-hidden
@@ -754,7 +754,7 @@ const Medications = () => {
                 <button
                   type="button"
                   onClick={openCompare}
-                  className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
+                  className="inline-flex items-center gap-x-2 rounded-md border border-solid border-transparent bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
                 >
                   <PiGraph
                     aria-hidden
@@ -771,7 +771,7 @@ const Medications = () => {
                   type="button"
                   onClick={() => setSuggestOpen(true)}
                   aria-label="Suggest a medication"
-                  className="inline-flex items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
+                  className="inline-flex items-center gap-x-2 rounded-md border border-solid border-transparent bg-[var(--container-color)] px-5 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)] hover:shadow-lg"
                 >
                   <PiChatCircleText
                     aria-hidden
@@ -856,7 +856,7 @@ const Medications = () => {
                       }
                       autoComplete="off"
                       spellCheck={false}
-                      className="h-12 w-full rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] pl-12 pr-12 text-base text-[var(--title-color)] outline-none duration-300 placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
+                      className="h-12 w-full rounded-md border border-solid border-transparent bg-[var(--container-color)] pl-12 pr-12 text-base text-[var(--title-color)] outline-none duration-300 placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
                     />
                     {query && (
                       <button
@@ -878,7 +878,7 @@ const Medications = () => {
                       className={`inline-flex h-12 shrink-0 items-center rounded-md border border-solid px-6 text-sm font-bold duration-300 ${
                         nclexOnly
                           ? "tile-selected border-[var(--chip-blue-border)] bg-[var(--chip-blue)] text-[var(--title-color)]"
-                          : "border-[var(--border-color)] bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)] hover:text-[var(--title-color)]"
+                          : "border-transparent bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)] hover:text-[var(--title-color)]"
                       }`}
                     >
                       NCLEX

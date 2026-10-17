@@ -323,7 +323,7 @@ const Practice = () => {
   const button =
     "inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg";
   const ghost =
-    "inline-block rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)]";
+    "inline-block rounded-md border-[1px] border-solid border-transparent bg-[color-mix(in_srgb,var(--primary-color)_16%,transparent)] px-8 py-3 font-bold leading-4 text-[var(--primary-color)]";
   return (
     <section className="mb-8" id="practice">
       <h2 className="relative mb-8 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center">

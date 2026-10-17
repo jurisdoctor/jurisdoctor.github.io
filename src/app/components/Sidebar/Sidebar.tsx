@@ -34,7 +34,7 @@ const Sidebar = () => {
     "text-2xl font-bold text-[var(--title-color)] duration-300 hover:text-[var(--accent-color)]";
   const sectionHref = (id: string) => (onLanding ? `#${id}` : `/#${id}`);
   const navToggle =
-    "fixed left-[1.875rem] top-5 z-10 hidden h-[40px] w-[45px] cursor-pointer items-center justify-center border-[1px] border-solid border-[var(--border-color)] bg-[var(--body-color)] lg:flex rounded-lg duration-300 shadow-md";
+    "fixed left-[1.875rem] top-5 z-10 hidden h-[40px] w-[45px] cursor-pointer items-center justify-center bg-[var(--body-color)] lg:flex rounded-lg duration-300 shadow-md";
   const aside =
     "l-0 t-0 fixed z-10 flex min-h-[100dvh] w-20 flex-col justify-between border-r border-solid border-[var(--border-color)] bg-[var(--body-color)] p-6 lg:left-[-80px] duration-300";
   return (

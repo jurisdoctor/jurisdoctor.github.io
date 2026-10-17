@@ -51,7 +51,7 @@ const valid = (saved: ProgressType) =>
 const button =
   "inline-block rounded-xl border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg duration-200 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none disabled:hover:brightness-100";
 const ghost =
-  "inline-block rounded-xl border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)] duration-200 hover:bg-[var(--primary-color)] hover:text-[var(--on-primary)] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-[var(--primary-color)]";
+  "inline-block rounded-xl border-[1px] border-solid border-transparent bg-[color-mix(in_srgb,var(--primary-color)_16%,transparent)] px-8 py-3 font-bold leading-4 text-[var(--primary-color)] duration-200 hover:bg-[var(--primary-color)] hover:text-[var(--on-primary)] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-[var(--primary-color)]";
 
 const calloutClass: Record<string, string> = {
   tip: "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]",
@@ -281,10 +281,7 @@ const Pharm = () => {
 
       case "table":
         return (
-          <div
-            key={key}
-            className="overflow-x-auto rounded-lg border border-[var(--border-color)]"
-          >
+          <div key={key} className="overflow-x-auto rounded-lg">
             <table className="w-full min-w-[480px] border-collapse text-left text-sm">
               <thead>
                 <tr className="bg-[var(--chip-blue-soft)]">
@@ -462,7 +459,7 @@ const Pharm = () => {
         ) : (
           <div
             key={key}
-            className="rounded-xl border border-dashed border-[var(--border-color)] p-4 text-sm text-[var(--muted-color)]"
+            className="rounded-xl bg-[var(--body-color)] p-4 text-sm text-[var(--muted-color)]"
           >
             🔒 Finish the activities above to see the facilitator&apos;s answer.
           </div>
@@ -507,7 +504,7 @@ const Pharm = () => {
           delay={140}
           className="flex items-start gap-8 xl:flex-col xl:gap-6"
         >
-          <nav className="sticky top-8 w-72 shrink-0 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] p-4 shadow-xl backdrop-blur-xl xl:static xl:w-full">
+          <nav className="sticky top-8 w-72 shrink-0 rounded-xl bg-[var(--glass-bg)] p-4 shadow-xl backdrop-blur-xl xl:static xl:w-full">
             <button
               type="button"
               onClick={() => setNavOpen((open) => !open)}
@@ -581,7 +578,7 @@ const Pharm = () => {
             </div>
           </nav>
 
-          <div className="min-w-0 flex-1 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] p-7 shadow-xl backdrop-blur-xl xl:w-full sm:p-4">
+          <div className="min-w-0 flex-1 rounded-xl bg-[var(--glass-bg)] p-7 shadow-xl backdrop-blur-xl xl:w-full sm:p-4">
             {step.final ? (
               <Finale state={state} onReview={() => go(1)} />
             ) : (

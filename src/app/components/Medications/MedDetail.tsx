@@ -504,7 +504,7 @@ const ROWS: string[][] = [
 ];
 
 const step =
-  "inline-flex max-w-[16rem] items-center gap-x-2 rounded-md border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-4 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)]";
+  "inline-flex max-w-[16rem] items-center gap-x-2 rounded-md border border-solid border-transparent bg-[var(--container-color)] px-4 py-2.5 text-sm font-bold text-[var(--title-color)] duration-300 hover:border-[var(--chip-blue-border)]";
 
 const MedDetail = ({
   med,
@@ -797,7 +797,7 @@ const MedDetail = ({
         <button
           type="button"
           onClick={onBack}
-          className="justify-self-center rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-6 py-2.5 text-sm font-bold text-[var(--primary-color)] duration-300 hover:bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] sm:order-first sm:col-span-2"
+          className="justify-self-center rounded-md border-[1px] border-solid border-transparent bg-[color-mix(in_srgb,var(--primary-color)_16%,transparent)] px-6 py-2.5 text-sm font-bold text-[var(--primary-color)] duration-300 hover:bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] sm:order-first sm:col-span-2"
         >
           Back to {med.group}
         </button>

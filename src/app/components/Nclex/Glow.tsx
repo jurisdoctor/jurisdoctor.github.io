@@ -27,7 +27,7 @@ const Glow = ({
   edge?: number;
 }) => {
   const inset = edge ? edge / 2 : 1;
-  const radius = 6 - inset;
+  const radius = Math.max(0, 1.5 - inset);
   const uid = useId();
   const filterId = `${uid}-blur`;
   const gradientId = `${uid}-flame`;

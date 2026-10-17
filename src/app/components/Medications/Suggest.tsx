@@ -97,7 +97,7 @@ export const SuggestModal = ({ onClose }: { onClose: () => void }) => {
         aria-modal="true"
         aria-label="Suggest a medication"
         onClick={(event) => event.stopPropagation()}
-        className="m-auto w-full max-w-[28rem] animate-fadeIn rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-6 shadow-2xl md:p-4"
+        className="m-auto w-full max-w-[28rem] animate-fadeIn rounded-2xl bg-[var(--container-color)] p-6 shadow-2xl md:p-4"
       >
         <div
           className={`flex items-start gap-x-4 ${
@@ -178,7 +178,7 @@ export const SuggestModal = ({ onClose }: { onClose: () => void }) => {
                 maxLength={120}
                 required
                 autoComplete="off"
-                className="h-11 w-full rounded-md border border-solid border-[var(--border-color)] bg-[var(--body-color)] px-4 text-[var(--title-color)] outline-none duration-300 placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
+                className="h-11 w-full rounded-md border border-solid border-transparent bg-[var(--body-color)] px-4 text-[var(--title-color)] outline-none duration-300 placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
               />
             </label>
 
@@ -195,7 +195,7 @@ export const SuggestModal = ({ onClose }: { onClose: () => void }) => {
                 rows={3}
                 maxLength={600}
                 placeholder="Something missing from the guide? Tell me about it."
-                className="w-full resize-none rounded-md border border-solid border-[var(--border-color)] bg-[var(--body-color)] px-4 py-3 text-[var(--title-color)] outline-none duration-300 placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
+                className="w-full resize-none rounded-md border border-solid border-transparent bg-[var(--body-color)] px-4 py-3 text-[var(--title-color)] outline-none duration-300 placeholder:text-[var(--muted-color)] focus:border-[var(--chip-blue-border)]"
               />
             </label>
 

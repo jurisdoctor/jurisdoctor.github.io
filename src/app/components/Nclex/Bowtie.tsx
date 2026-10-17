@@ -79,7 +79,7 @@ const Slot = ({
         ? "border-dashed border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
         : active
           ? "border-dashed border-[var(--chip-blue-border)] bg-[var(--body-color)]"
-          : "border-dashed border-[#cfc9bb] bg-[var(--body-color)]";
+          : "border-transparent bg-[var(--body-color)]";
 
   return (
     <button

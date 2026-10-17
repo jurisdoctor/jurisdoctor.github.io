@@ -424,7 +424,7 @@ const CompareMap = ({
 
   return (
     <div className="grid gap-y-5">
-      <section className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-5 sm:p-4">
+      <section className="rounded-2xl bg-[var(--container-color)] p-5 sm:p-4">
         <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
           <h2 className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             Comparing {meds.length}{" "}
@@ -478,7 +478,7 @@ const CompareMap = ({
 
       {meds.length >= 2 && (
         <>
-          <section className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-3 sm:p-1">
+          <section className="rounded-2xl bg-[var(--container-color)] p-3 sm:p-1">
             <div ref={box} className="relative">
               <svg
                 viewBox={`0 0 ${W} ${H}`}
@@ -712,7 +712,7 @@ const CompareMap = ({
             </p>
           </section>
 
-          <section className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] px-5 py-4 sm:px-4">
+          <section className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 rounded-2xl bg-[var(--container-color)] px-5 py-4 sm:px-4">
             <p className="font-bold text-[var(--title-color)]">
               {!index
                 ? "Checking…"
@@ -748,7 +748,7 @@ const CompareMap = ({
           {between}
 
           {index && sorted.length > 0 && (
-            <section className="rounded-2xl border border-solid border-[var(--border-color)] bg-[var(--container-color)] p-5 sm:p-4">
+            <section className="rounded-2xl bg-[var(--container-color)] p-5 sm:p-4">
               <h2 className="mb-4 text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
                 Interactions
               </h2>

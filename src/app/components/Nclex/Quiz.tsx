@@ -185,7 +185,7 @@ const Aside = ({
 const button =
   "inline-block rounded-md border-[1px] border-solid border-transparent bg-[var(--primary-color)] px-8 py-3 font-bold leading-4 text-[var(--on-primary)] shadow-lg disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none";
 const ghost =
-  "inline-block rounded-md border-[1px] border-solid border-[var(--primary-color)] bg-transparent px-8 py-3 font-bold leading-4 text-[var(--primary-color)]";
+  "inline-block rounded-md border-[1px] border-solid border-transparent bg-[color-mix(in_srgb,var(--primary-color)_16%,transparent)] px-8 py-3 font-bold leading-4 text-[var(--primary-color)]";
 
 const Quiz = ({
   label,
@@ -442,7 +442,7 @@ const Quiz = ({
       )}
 
       {question.nursesNote && (
-        <div className="mb-4 rounded-2xl border-2 border-solid border-[#e4dfd3] p-5">
+        <div className="mb-4 rounded-2xl p-5">
           <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             Nurses note
           </span>

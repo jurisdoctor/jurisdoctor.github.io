@@ -79,7 +79,7 @@ const Matching = ({
   return (
     <div className="mb-6">
       {!answered && question.note && (
-        <p className="mb-4 rounded-2xl border-2 border-dashed border-[#cfc9bb] p-4 text-sm text-[var(--muted-color)]">
+        <p className="mb-4 rounded-2xl bg-[var(--body-color)] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}
@@ -110,7 +110,7 @@ const Matching = ({
                 value={chosen ?? ""}
                 onChange={(event) => assign(item.id, event.target.value)}
                 aria-label={`Term for ${item.text.slice(0, 40)}`}
-                className="w-full rounded-xl border-2 border-solid border-[#cfc9bb] bg-[var(--container-color)] p-3 text-sm text-[var(--text-color)] outline-none disabled:opacity-70"
+                className="w-full rounded-xl bg-[var(--container-color)] p-3 text-sm text-[var(--text-color)] outline-none disabled:opacity-70"
               >
                 <option value="">Choose a term</option>
                 {deck.map((term) => (
