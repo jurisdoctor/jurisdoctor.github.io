@@ -4,9 +4,9 @@
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
     "set": "Exam 3",
-    "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30 and 32, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 7): 5 per chapter, all hard. Every lecture topic has at least one question (batch 6); questions that revisit a topic are hard (difficulty \"difficult\"). NGN style items (matrix, cloze, highlight, bowtie, ordered response) are kept near 15% of each section.",
-    "questionCount": 251,
-    "chapterQuestionCount": 218,
+    "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30 and 32, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 7): 5 per chapter group (16 and 19 together; 29, 30 and 32 together), all hard. Every lecture topic has at least one question (batch 6); questions that revisit a topic are hard (difficulty \"difficult\"). NGN style items (matrix, cloze, highlight, bowtie, ordered response) are kept near 15% of each section.",
+    "questionCount": 241,
+    "chapterQuestionCount": 208,
     "skillCount": 2,
     "chaptersIncluded": [
       1016,
@@ -26,9 +26,9 @@
       "skills"
     ],
     "questionTypes": {
-      "multiple_choice": 168,
+      "multiple_choice": 159,
       "highlight": 9,
-      "matrix": 11,
+      "matrix": 10,
       "sata": 47,
       "ordered_response": 2,
       "cloze": 7,
@@ -136,7 +136,7 @@
           1,
           2
         ],
-        "questionCount": 251
+        "questionCount": 241
       }
     ],
     "chapterGroups": [
@@ -183,7 +183,7 @@
       "questionIds": [],
       "caseStudyIds": []
     },
-    "difficultCount": 99,
+    "difficultCount": 93,
     "difficultIds": [
       "ig16-x01",
       "ig16-m06",
@@ -238,21 +238,18 @@
       "ig29-m14",
       "ig29-x04",
       "ig29-x06",
-      "ig29-x08",
       "ig29-x05",
-      "ig29-m20",
-      "ig29-x07",
       "ig30-x01",
       "ig30-x02",
       "ig30-m09",
       "ig30-x03",
+      "ig30-m11",
+      "ig30-m12",
       "ig30-m16",
       "ig30-x04",
-      "ig30-x05",
-      "ig30-x06",
+      "ig30-m20",
+      "ig30-m21",
       "ig30-x07",
-      "ig30-x08",
-      "ig30-x09",
       "ig31-x01",
       "ig31-m05",
       "ig31-x02",
@@ -274,9 +271,6 @@
       "ig32-x04",
       "ig32-m20",
       "ig32-x05",
-      "ig32-x08",
-      "ig32-x06",
-      "ig32-x07",
       "sk-cardiac-x01",
       "sk-cardiac-x02",
       "sk-cardiac-x03",
@@ -285,7 +279,7 @@
       "sk-infusion-x02",
       "sk-infusion-x03"
     ],
-    "nclexCount": 36,
+    "nclexCount": 35,
     "nclexIds": [
       "ig16-m02",
       "ig16-m07",
@@ -304,7 +298,6 @@
       "ig29-m02",
       "ig29-m06",
       "ig29-m16",
-      "ig29-m20",
       "ig30-m05",
       "ig30-m10",
       "ig30-m16",
@@ -336,27 +329,17 @@
       "ig27-x07",
       "ig27-x08",
       "ig29-x06",
-      "ig29-x08",
       "ig29-x05",
-      "ig29-m20",
-      "ig29-x07",
-      "ig30-x05",
-      "ig30-x06",
       "ig30-x07",
-      "ig30-x08",
-      "ig30-x09",
       "ig31-x07",
       "ig31-x08",
       "ig31-x09",
       "ig31-x10",
       "ig31-x11",
       "ig32-m20",
-      "ig32-x05",
-      "ig32-x08",
-      "ig32-x06",
-      "ig32-x07"
+      "ig32-x05"
     ],
-    "newCount": 30,
+    "newCount": 20,
     "ngnIds": [
       "ig16-m02",
       "ig16-m07",
@@ -375,7 +358,6 @@
       "ig29-m02",
       "ig29-m06",
       "ig29-m16",
-      "ig29-m20",
       "ig30-m05",
       "ig30-m10",
       "ig30-m16",
@@ -395,7 +377,7 @@
       "sk-infusion-m02",
       "sk-infusion-m08"
     ],
-    "ngnCount": 36,
+    "ngnCount": 35,
     "ngnTypes": [
       "bowtie",
       "cloze",
@@ -9777,78 +9759,6 @@
           "addedBatch": 7
         },
         {
-          "id": "ig29-x08",
-          "type": "multiple_choice",
-          "difficulty": "difficult",
-          "stem": "A client with right sided heart failure takes a prescribed diuretic each morning at 0800. The client has 2+ pitting edema in both ankles each evening, and 1+ edema in both ankles on waking. For 2 weeks, the client has woken 3 times each night to urinate and passes less urine during the day. The client asks, \"Is my water pill keeping me up at night?\" Which response by the nurse is accurate?",
-          "options": [
-            {
-              "id": "A",
-              "text": "\"Yes. The pill keeps working through the night, so ask your provider about taking half of it at bedtime.\"",
-              "correct": false,
-              "rationale": "Night urination after a diuretic is a common concern, which makes this tempting. The diuretic is taken at 0800, and moving a dose to bedtime would make night urination worse. The overnight drop in ankle edema points to fluid returning from the legs."
-            },
-            {
-              "id": "B",
-              "text": "\"Probably not. Lying down lets fluid in your legs move back into your blood, and the kidneys remove it.\"",
-              "correct": true,
-              "rationale": "With the legs raised in bed, fluid from the swollen tissues returns to the circulation and the kidneys excrete it, so the client urinates at night. The deciding cue is the 0800 dose, with ankle edema that is smaller each morning."
-            },
-            {
-              "id": "C",
-              "text": "\"Probably not. Waking to urinate means your kidneys are failing, so your provider will need to stop the pill.\"",
-              "correct": false,
-              "rationale": "Kidney failure is not the explanation for night urination with edema that falls overnight. Stopping a prescribed diuretic would let fluid build up."
-            },
-            {
-              "id": "D",
-              "text": "\"Yes. Stop drinking anything after lunch, and the night urination will go away within a few days.\"",
-              "correct": false,
-              "rationale": "Night urination here comes from fluid returning from the legs, not from evening drinks, and the diuretic is not the cause given the morning dose."
-            }
-          ],
-          "answer": "B",
-          "takeaway": "Nocturia is a finding of right sided failure: at rest and lying flat, fluid in the dependent tissues returns to the circulation and the kidneys excrete it, so the client wakes to urinate while passing less urine during the day.",
-          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
-          "coverageDetail": {
-            "ppt": "partial",
-            "reading": [
-              "Iggy"
-            ],
-            "readingChecked": true
-          },
-          "strategy": "Two answers are defensible: the diuretic, or fluid shifting at night. The time of the dose and the overnight drop in ankle edema decide it.",
-          "elimination": {
-            "strategies": [
-              "Opposite pair, look closely"
-            ],
-            "steps": [
-              {
-                "action": "Read the dose time",
-                "detail": "The diuretic is taken at 0800, not in the evening."
-              },
-              {
-                "action": "Read the edema pattern",
-                "detail": "Edema is 2+ each evening and 1+ each morning, so fluid leaves the legs overnight."
-              },
-              {
-                "action": "Name the mechanism",
-                "detail": "Fluid returns to the circulation when the legs are raised, and the kidneys excrete it."
-              },
-              {
-                "action": "Reject the rest",
-                "detail": "A bedtime dose worsens it; kidney failure and evening drinks do not fit."
-              }
-            ],
-            "verdict": "Fluid from the legs returns to the blood at rest and is excreted at night."
-          },
-          "caseGroup": "ig29-case10",
-          "caseStep": 2,
-          "objective": "Differentiate left and right sided heart failure and identify their key clinical findings.",
-          "new": true,
-          "addedBatch": 7
-        },
-        {
           "id": "ig29-x05",
           "type": "multiple_choice",
           "difficulty": "difficult",
@@ -9916,171 +9826,6 @@
           },
           "caseGroup": "ig29-case10",
           "caseStep": 3,
-          "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
-          "new": true,
-          "addedBatch": 7
-        },
-        {
-          "id": "ig29-m20",
-          "type": "matrix",
-          "scenario": "A clinic nurse reviews telephone reports from six clients with heart failure. Each client weighs each morning after voiding, on the same home scale, in similar clothing.",
-          "stem": "For each report, indicate whether the client should call the clinic today or continue home monitoring.",
-          "columns": [
-            "Call the clinic today",
-            "Continue home monitoring"
-          ],
-          "rows": [
-            {
-              "id": "r1",
-              "text": "Weight 172.5 lb this morning, was 170 lb yesterday morning; breathing and ankles unchanged",
-              "answer": "Call the clinic today",
-              "rationale": "A gain of 2.5 lb in 24 hours falls in the 2 to 3 lb in 24 hours range that is reported, even with no new symptoms."
-            },
-            {
-              "id": "r2",
-              "text": "Weight up 1 lb each morning for 5 days in a row, 175 lb today, was 170 lb 5 days ago",
-              "answer": "Call the clinic today",
-              "rationale": "No single day reached 2 lb, which makes this look safe. The total is 5 lb in less than 1 week, which meets the weekly reporting rule."
-            },
-            {
-              "id": "r3",
-              "text": "Weight 171.5 lb this morning, was 170 lb yesterday morning; breathing and ankles unchanged",
-              "answer": "Continue home monitoring",
-              "rationale": "A gain of 1.5 lb in 24 hours is below the 2 to 3 lb daily threshold, and no other finding has changed. The client keeps weighing daily."
-            },
-            {
-              "id": "r4",
-              "text": "Weight up 4 lb over the last 7 days, never more than 1 lb in a day; breathing, ankles, and walking distance unchanged",
-              "answer": "Continue home monitoring",
-              "rationale": "The total is 4 lb in 1 week, below the 5 lb weekly threshold, and no single day reached 2 lb. No other reportable finding is present, so the client keeps monitoring and calls if the total reaches 5 lb."
-            },
-            {
-              "id": "r5",
-              "text": "Weight unchanged for 1 week; now short of breath while sitting and watching television",
-              "answer": "Call the clinic today",
-              "rationale": "Weight alone would suggest no problem. New dyspnea at rest is reported regardless of weight."
-            },
-            {
-              "id": "r6",
-              "text": "Weight 168 lb this morning, was 170 lb yesterday morning, after the diuretic dose was raised; ankle swelling less",
-              "answer": "Continue home monitoring",
-              "rationale": "A loss of 2 lb after a dose increase, with less ankle swelling, is the expected response to diuresis. The reporting rule is for weight gain."
-            }
-          ],
-          "answer": {
-            "r1": "Call the clinic today",
-            "r2": "Call the clinic today",
-            "r3": "Continue home monitoring",
-            "r4": "Continue home monitoring",
-            "r5": "Call the clinic today",
-            "r6": "Continue home monitoring"
-          },
-          "scoring": "0/1",
-          "takeaway": "Clients with heart failure report a weight gain of 2 to 3 lb in 24 hours or 5 lb in 1 week, plus increased edema, worsening dyspnea, reduced activity tolerance, and new dyspnea or chest pain at rest.",
-          "coverage": "Covered in Lecture PPT.",
-          "coverageDetail": {
-            "ppt": "full",
-            "reading": [],
-            "readingChecked": false
-          },
-          "strategy": "Check each report against both weight rules: the daily total and the weekly total. Then check for any reportable symptom, which overrides an unchanged weight.",
-          "elimination": {
-            "strategies": [
-              "Treat each option as true or false"
-            ],
-            "steps": [
-              {
-                "action": "Apply the daily rule",
-                "detail": "2.5 lb in 24 hours is reported; 1.5 lb is not."
-              },
-              {
-                "action": "Apply the weekly rule",
-                "detail": "5 lb over 5 days is reported even though no day reached 2 lb; 4 lb in a week is not."
-              },
-              {
-                "action": "Check symptoms",
-                "detail": "New dyspnea at rest is reported whatever the weight."
-              },
-              {
-                "action": "Read the direction",
-                "detail": "A 2 lb loss after a dose increase is the expected response."
-              }
-            ],
-            "verdict": "Call: 2.5 lb in 24 hours; 5 lb over 5 days; dyspnea at rest. Continue: 1.5 lb in 24 hours; 4 lb in 1 week; 2 lb loss."
-          },
-          "caseGroup": "ig29-case11",
-          "caseStep": 1,
-          "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
-          "difficulty": "difficult",
-          "new": true,
-          "addedBatch": 7
-        },
-        {
-          "id": "ig29-x07",
-          "type": "multiple_choice",
-          "difficulty": "difficult",
-          "stem": "A client with chronic heart failure is at a clinic visit. The client becomes short of breath climbing one flight of stairs, and it resolves within 2 minutes of rest. This same pattern has been recorded at every visit for the past 4 months. Weight is unchanged for 2 weeks on the same home scale, there is no edema in either ankle, and the client sleeps on 1 pillow. The client says, \"I do all my housework at once in the morning so I can rest all afternoon, but by noon I am exhausted.\" Which response by the nurse is appropriate?",
-          "options": [
-            {
-              "id": "A",
-              "text": "\"Since you are exhausted by noon, stay in bed most of the day so that your heart can rest.\"",
-              "correct": false,
-              "rationale": "Heart failure teaching is to balance activity with rest, not to stay in bed. Prolonged bed rest is not the goal."
-            },
-            {
-              "id": "B",
-              "text": "\"Being exhausted by noon is reduced activity tolerance, so I will report it to your provider today.\"",
-              "correct": false,
-              "rationale": "Reduced activity tolerance is a reportable finding, which makes this defensible. The cue is the same stair pattern for 4 months: tolerance has not dropped, and the tiredness comes from doing every task at once."
-            },
-            {
-              "id": "C",
-              "text": "\"Push through the tiredness each morning, because daily hard work is what makes the heart muscle stronger.\"",
-              "correct": false,
-              "rationale": "Pushing through fatigue raises the workload on a failing heart. Activity is balanced with rest."
-            },
-            {
-              "id": "D",
-              "text": "\"Try spreading the housework across the day, with rest between tasks, instead of doing it all at once.\"",
-              "correct": true,
-              "rationale": "Balancing activity with rest lowers the workload at any one time. The stair pattern has not changed in 4 months, and weight, edema, and sleep position show no worsening, so teaching about pacing fits."
-            }
-          ],
-          "answer": "D",
-          "takeaway": "Teach the client with heart failure to balance activity with rest. A drop in activity tolerance from the client's own baseline is reported; fatigue from clustering all tasks together is managed by spacing them with rest.",
-          "coverage": "Covered in Lecture PPT.",
-          "coverageDetail": {
-            "ppt": "full",
-            "reading": [],
-            "readingChecked": false
-          },
-          "strategy": "Two options take the fatigue seriously. Compare the stair pattern with the past visits: if tolerance has not changed, pacing is the answer, not a report.",
-          "elimination": {
-            "strategies": [
-              "Opposite pair, look closely"
-            ],
-            "steps": [
-              {
-                "action": "Find the baseline",
-                "detail": "Dyspnea on one flight that resolves in 2 minutes, unchanged for 4 months."
-              },
-              {
-                "action": "Check for worsening",
-                "detail": "Weight, edema, and pillows show no change."
-              },
-              {
-                "action": "Reject the extremes",
-                "detail": "Bed rest and pushing through both miss the balance of activity and rest."
-              },
-              {
-                "action": "Choose pacing",
-                "detail": "Spread tasks across the day with rest between them."
-              }
-            ],
-            "verdict": "Balance activity with rest; activity tolerance has not dropped."
-          },
-          "caseGroup": "ig29-case11",
-          "caseStep": 2,
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
           "new": true,
           "addedBatch": 7
@@ -11157,130 +10902,144 @@
         {
           "id": "ig30-m11",
           "type": "multiple_choice",
-          "stem": "A client, 63 years old, has type 2 diabetes, smokes 1 pack a day, and has a low density lipoprotein level of 168 mg/dL and a blood pressure of 146/90 mm Hg. The client asks how these problems lead to coronary artery disease. Which sequence of events is correct?",
+          "difficulty": "difficult",
+          "stem": "A client, 59 years old, has type 2 diabetes and smokes 1 pack a day. Coronary CT angiography shows a fibrous plaque narrowing one coronary artery. The client walks 3 km each morning with no chest pressure, dyspnea or fatigue. During an exercise stress test, the client reaches the target heart rate of 142 beats per minute with no chest pressure and no ECG signs of ischemia. The client asks how far the disease has progressed. Which description by the nurse is most accurate?",
           "options": [
             {
               "id": "A",
-              "text": "Lipid enters the wall and is oxidized, the lining is injured, a fibrous plaque forms, a fatty streak forms, the artery narrows, ischemia",
+              "text": "Endothelial injury from diabetes and smoking has begun, but no plaque has formed in the wall yet",
               "correct": false,
-              "rationale": "Two errors. Diabetes, smoking and high pressure injure the inner lining first, before low density lipoprotein enters the wall, and the fatty streak forms before collagen grows over it to make the fibrous plaque."
+              "rationale": "Diabetes and smoking do injure the endothelium, but the scan already shows a fibrous plaque, so the process is past the first step."
             },
             {
               "id": "B",
-              "text": "The lining is injured, lipid enters the wall and is oxidized, a fibrous plaque forms, a fatty streak forms, the artery narrows, ischemia",
+              "text": "A fatty streak has formed in the wall but has not yet become a fibrous plaque that narrows the artery",
               "correct": false,
-              "rationale": "The fatty streak comes before the fibrous plaque. Macrophages gather around the oxidized lipid to form the streak, and collagen then grows over it to form the plaque."
+              "rationale": "The fatty streak comes before the fibrous plaque. The scan shows a fibrous plaque that already narrows the artery, so this stage has passed."
             },
             {
               "id": "C",
-              "text": "The lining is injured, a fatty streak forms, lipid enters the wall and is oxidized, a fibrous plaque forms, the artery narrows, ischemia",
-              "correct": false,
-              "rationale": "The fatty streak forms when macrophages gather around lipid that has already entered the wall and been oxidized, so lipid entry comes first."
+              "text": "The plaque narrows the artery, but supply still meets demand at peak exertion, so there is no ischemia",
+              "correct": true,
+              "rationale": "Narrowing restricts flow, but ischemia begins only when oxygen delivery falls short of demand. Reaching the target heart rate with no chest pressure and no ECG signs of ischemia shows the narrowed artery still meets demand."
             },
             {
               "id": "D",
-              "text": "The lining is injured, lipid enters the wall and is oxidized, a fatty streak forms, a fibrous plaque forms, the artery narrows, ischemia",
-              "correct": true,
-              "rationale": "Endothelial injury from diabetes, smoking and high pressure starts the process. Low density lipoprotein enters the wall and is oxidized, macrophages form a fatty streak, collagen forms a fibrous plaque, the plaque narrows the coronary artery, and less oxygen reaches the heart muscle."
+              "text": "Silent ischemia is present, since some clients have ischemia with no chest pressure or any other symptoms",
+              "correct": false,
+              "rationale": "Silent ischemia is real, and diabetes makes it tempting here. But the stress test found no ECG signs of ischemia at the target heart rate, so there is no ischemia, silent or otherwise, to explain."
             }
           ],
-          "answer": "D",
-          "takeaway": "Atherosclerosis leads to coronary artery disease in four stages: endothelial injury, plaque formation (low density lipoprotein enters the wall, is oxidized and attracts macrophages, forming a fatty streak and then a fibrous plaque), coronary narrowing, and ischemia. Plaque rupture with a clot can then cause an acute coronary syndrome.",
+          "answer": "C",
+          "takeaway": "Atherosclerosis moves through endothelial injury, plaque formation (fatty streak, then fibrous plaque), coronary narrowing, and then ischemia when reduced oxygen delivery falls short of the heart's demand. A plaque can narrow an artery before it causes ischemia; ischemia is defined by the shortfall, not by the plaque.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Follow the lipid: the lining is injured first, then low density lipoprotein gets in, then cells gather around it, then the plaque narrows the artery, and only then does the muscle run short of oxygen. Check every link in order.",
+          "strategy": "Two later stages are defensible: narrowing, and silent ischemia. Silent ischemia is possible in any client, so look for the finding that tests the shortfall directly: the stress test at peak exertion.",
           "elimination": {
             "strategies": [
-              "Priority key word"
+              "Assessment before intervention",
+              "Opposite pair, look closely"
             ],
             "steps": [
               {
-                "action": "Find the start",
-                "detail": "Injury to the lining comes first. Eliminate A."
+                "action": "Place the plaque",
+                "detail": "A fibrous plaque that narrows the artery: past injury and past the fatty streak. Eliminate A and B."
               },
               {
-                "action": "Follow the lipid",
-                "detail": "Lipid enters before the fatty streak can form. Eliminate C."
+                "action": "Weigh silent ischemia",
+                "detail": "No symptoms alone would not rule it out."
               },
               {
-                "action": "Streak before plaque",
-                "detail": "Collagen grows over the fatty streak to form the fibrous plaque. Eliminate B, which also fails this check along with A."
+                "action": "Use the deciding test",
+                "detail": "At the target heart rate of 142 beats per minute, no ECG signs of ischemia: supply still meets demand."
+              },
+              {
+                "action": "Choose the stage",
+                "detail": "Narrowing without ischemia."
               }
             ],
-            "verdict": "D. Injury, lipid entry and oxidation, fatty streak, fibrous plaque, narrowing, ischemia."
+            "verdict": "C. The plaque narrows the artery, but supply still meets demand, so ischemia has not developed."
           },
           "caseGroup": "ig30-case5",
           "caseStep": 1,
           "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "hardenedBatch": 8
         },
         {
           "id": "ig30-m12",
           "type": "multiple_choice",
-          "stem": "A client with coronary artery disease has had chest pressure only while climbing stairs for 1 year, relieved within minutes by rest. Today the client comes to the emergency department with chest pressure that began while reading in a chair and has lasted 40 minutes, rated 8 of 10, with diaphoresis. Blood pressure 154/92 mm Hg, heart rate 108 beats per minute. Which change in the coronary artery best explains the new pattern?",
+          "difficulty": "difficult",
+          "stem": "A client, 66 years old, has had chest pressure only after climbing 4 flights of stairs for 2 years, always relieved within 5 minutes of rest. Over the past 3 days, the pressure comes on after half a flight and takes 15 minutes of rest to ease. The client has had no pressure while at rest. Blood pressure 138/84 mm Hg in the left arm, heart rate 84 beats per minute, pain 0 of 10 now. Which change in the coronary artery best explains the new pattern?",
           "options": [
             {
               "id": "A",
-              "text": "The plaque has grown slowly, narrowing the artery a little more each month",
+              "text": "The plaque has slowly grown and narrowed the artery further, so less exertion now outstrips the supply",
               "correct": false,
-              "rationale": "Slow narrowing produces the predictable pattern with exertion that the client had for a year. It does not explain sudden pressure at rest."
+              "rationale": "Plaque growth does lower the exertion needed to cause ischemia, which makes this defensible. But growth is gradual over months, and this change came over 3 days after 2 years of the same pattern."
             },
             {
               "id": "B",
-              "text": "The arteriole walls have thickened from long periods of high blood pressure",
+              "text": "Ischemia has become infarction, so part of the heart muscle can no longer use the oxygen it gets",
               "correct": false,
-              "rationale": "Thickening of the arteriole walls is how primary hypertension damages organs over time. It does not explain a sudden change."
+              "rationale": "Infarction is muscle death from prolonged severe ischemia. Pressure that eases with rest and is 0 of 10 now shows reversible ischemia, not a pattern explained by dead muscle."
             },
             {
               "id": "C",
-              "text": "The plaque has narrowed the artery past a critical point, so flow is now too low even at rest",
+              "text": "The blood pressure of 138/84 mm Hg has raised the heart's demand above what the artery supplies",
               "correct": false,
-              "rationale": "Narrowing builds over months. It would not jump suddenly from a year of pressure with stairs to 40 minutes of pressure at rest with diaphoresis."
+              "rationale": "Higher pressure adds to the heart's work, but this reading does not explain a sudden drop from 4 flights to half a flight in 3 days."
             },
             {
               "id": "D",
-              "text": "A plaque has ruptured, and a clot has formed on it that is blocking flow",
+              "text": "A plaque has likely ruptured and a partial clot narrows the artery, so less exertion causes pressure",
               "correct": true,
-              "rationale": "Plaque rupture and thrombosis can cause an acute coronary syndrome or acute myocardial infarction. Pressure at rest lasting 40 minutes with diaphoresis fits a sudden blockage."
+              "rationale": "Plaque rupture with thrombosis can cause an acute coronary syndrome. A clot that partly blocks flow narrows the artery within days, so angina that is suddenly worse, with less exertion and longer to ease, fits rupture even without pressure at rest."
             }
           ],
           "answer": "D",
-          "takeaway": "Plaque that narrows a coronary artery causes ischemia with exertion. When plaque ruptures, a clot forms quickly and can cause an acute coronary syndrome or a myocardial infarction, so pressure that begins at rest and lasts is a sudden, not a gradual, change.",
+          "takeaway": "Plaque rupture and thrombosis turn chronic coronary narrowing into an acute coronary syndrome. Unstable angina is new, worsening, or at rest, so angina that suddenly needs much less exertion and takes longer to ease is unstable even before any pressure at rest appears, and it needs urgent evaluation.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Every option describes something real in atherosclerosis. Pick the one whose speed matches the stem: a year of exertional pressure, then sudden pressure at rest.",
+          "strategy": "Two options explain why less exertion now causes pressure: further plaque growth, or a partial clot on a ruptured plaque. Both narrow the artery. Let the speed decide: 2 years unchanged, then much worse in 3 days.",
           "elimination": {
             "strategies": [
-              "Odd man wins"
+              "Opposite pair, look closely",
+              "Priority key word"
             ],
             "steps": [
               {
                 "action": "Compare the patterns",
-                "detail": "A year of pressure with stairs, now 40 minutes at rest."
+                "detail": "4 flights and 5 minutes of rest for 2 years; half a flight and 15 minutes of rest over the past 3 days."
               },
               {
-                "action": "Match the speed",
-                "detail": "Slow growth and wall thickening are gradual. Critical narrowing builds over months and would not jump suddenly from stair pressure to 40 minutes at rest."
+                "action": "Reject the distractors",
+                "detail": "Pressure ends with rest, so not infarction. A reading of 138/84 mm Hg does not explain a change this sudden."
               },
               {
-                "action": "Choose the sudden event",
-                "detail": "Rupture with a clot."
+                "action": "Weigh the pair",
+                "detail": "Growth and a partial clot both narrow the artery; growth takes months."
+              },
+              {
+                "action": "Choose by speed",
+                "detail": "Worse within 3 days points to rupture with a clot, even without pressure at rest."
               }
             ],
-            "verdict": "A plaque has ruptured and a clot is blocking flow."
+            "verdict": "D. A ruptured plaque with a partial clot."
           },
           "caseGroup": "ig30-case5",
           "caseStep": 2,
           "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "hardenedBatch": 8
         },
         {
           "id": "ig30-m13",
@@ -11928,297 +11687,159 @@
         {
           "id": "ig30-m20",
           "type": "multiple_choice",
-          "stem": "A client, 64 years old, has type 2 diabetes and smokes. The health record lists both arteriosclerosis and atherosclerosis. The client asks, \"Are those two words for the same thing?\" Which response by the nurse is accurate?",
+          "difficulty": "difficult",
+          "stem": "A client, 46 years old, has had systemic lupus erythematosus for 12 years. The client has never smoked and has no diabetes. Blood pressure 118/76 mm Hg in the right arm, LDL cholesterol 94 mg/dL. Coronary CT angiography shows plaque inside the wall of a coronary artery, and the record now lists atherosclerosis. The client says, \"I thought hardening of the arteries just comes with getting older, and I have none of the usual causes.\" Which response by the nurse is most accurate?",
           "options": [
             {
               "id": "A",
-              "text": "\"Yes. Both mean the artery wall stiffens with age, and neither involves any buildup inside the wall.\"",
+              "text": "\"Hardening of the arteries is common as people age, so this plaque is most likely an expected change for you.\"",
               "correct": false,
-              "rationale": "Arteriosclerosis is thickening and hardening of the arterial wall, but atherosclerosis specifically involves plaque in the wall."
+              "rationale": "Plain hardening of the wall is often linked with age, which makes this tempting. But the scan shows plaque inside the wall, and plaque from lipid laden macrophages is what makes it atherosclerosis, a disease process with risk factors, not an expected change at 46."
             },
             {
               "id": "B",
-              "text": "\"No. Atherosclerosis is one form of hardening of the arteries, in which blood clots stick to the inner lining and harden into plaque.\"",
-              "correct": false,
-              "rationale": "One form of arteriosclerosis is correct, but the plaque forms from lipid laden macrophages building up in the wall, not from clots. A clot can form later if a plaque ruptures."
+              "text": "\"Plaque inside the wall is the atherosclerosis type, and an autoimmune disease like lupus is a risk factor.\"",
+              "correct": true,
+              "rationale": "Atherosclerosis is a form of arteriosclerosis in which lipid laden macrophages build up in the wall and form plaque. Autoimmunity is a listed risk factor, along with diabetes, smoking, dyslipidemia and hypertension, so 12 years of lupus explains plaque in a client with no other risk factors."
             },
             {
               "id": "C",
-              "text": "\"No. Atherosclerosis is stretching and thinning of the artery wall from high pressure, and arteriosclerosis is the plaque.\"",
+              "text": "\"Your lupus caused the hardening directly, so it is a separate disease from the plaque that narrows heart arteries.\"",
               "correct": false,
-              "rationale": "This reverses the terms and the process. Atherosclerosis is the plaque forming type, and the wall thickens rather than thins."
+              "rationale": "The link to lupus is the right idea, but the conclusion is off. Lupus raises the risk of the same atherosclerosis process that narrows coronary arteries; it is not a separate disease."
             },
             {
               "id": "D",
-              "text": "\"No. Atherosclerosis is one form of hardening of the arteries, in which fat filled immune cells build up in the wall and form plaque.\"",
-              "correct": true,
-              "rationale": "Atherosclerosis is a form of arteriosclerosis: the wall thickens and hardens as lipid laden macrophages accumulate and plaque develops. Diabetes and smoking are both risk factors."
+              "text": "\"Plaque forms only when cholesterol is high, so the scan should be repeated before any teaching is done.\"",
+              "correct": false,
+              "rationale": "High LDL is one risk factor, not a requirement. Endothelial injury from other causes can start the process, so an LDL of 94 mg/dL does not make the scan wrong."
             }
           ],
-          "answer": "D",
-          "takeaway": "Atherosclerosis is a form of arteriosclerosis: thickening and hardening of the arterial wall from lipid laden macrophages and plaque. Risk factors are diabetes, smoking, hyperlipidemia or dyslipidemia, hypertension, and autoimmunity.",
+          "answer": "B",
+          "takeaway": "Atherosclerosis is the form of arteriosclerosis defined by plaque from lipid laden macrophages in the arterial wall. Its risk factors are diabetes, smoking, hyperlipidemia or dyslipidemia, hypertension and autoimmunity, so a long standing autoimmune disease can explain plaque when the other risk factors are absent.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Two options agree it is one form of hardening of the arteries. Read on to what forms the plaque: fat filled cells in the wall, not clots on the lining.",
+          "strategy": "Two responses sound reasonable: hardening that comes with age, and an autoimmune risk factor. Let the scan decide. Plaque inside the wall is atherosclerosis, and the only listed risk factor the client has is the lupus.",
           "elimination": {
             "strategies": [
-              "Opposite pair, look closely"
+              "Opposite pair, look closely",
+              "Odd man wins"
             ],
             "steps": [
               {
-                "action": "Relate the terms",
-                "detail": "Atherosclerosis is one form of arteriosclerosis."
+                "action": "Read the finding",
+                "detail": "Plaque inside the coronary artery wall: that is atherosclerosis, not simple hardening."
               },
               {
-                "action": "Reject the same thing",
-                "detail": "Atherosclerosis involves plaque; plain stiffening does not."
+                "action": "Check the risk factors",
+                "detail": "Never smoked, no diabetes, blood pressure 118/76 mm Hg, LDL 94 mg/dL. The one listed risk factor left is autoimmunity: 12 years of lupus."
               },
               {
-                "action": "Reject the reversal",
-                "detail": "The wall thickens, and atherosclerosis is the plaque type."
+                "action": "Reject the aging answer",
+                "detail": "Calling plaque an expected change ignores the finding and the risk factor."
               },
               {
-                "action": "Compare the pair",
-                "detail": "Plaque comes from lipid laden macrophages, not clots."
+                "action": "Reject the other two",
+                "detail": "High LDL is not required for plaque, and lupus feeds the same process, not a separate disease."
               }
             ],
-            "verdict": "One form of hardening of the arteries, with plaque from fat filled cells in the wall."
+            "verdict": "B. Plaque in the wall is atherosclerosis, and lupus is an autoimmune risk factor."
           },
           "caseGroup": "ig30-case9",
           "caseStep": 1,
           "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
-          "addedBatch": 6
+          "addedBatch": 6,
+          "hardenedBatch": 8
         },
         {
           "id": "ig30-m21",
           "type": "sata",
-          "stem": "A client, 61 years old, has a coronary artery narrowed by plaque and asks why chest pressure comes on while climbing stairs. Which statements by the nurse are accurate? Select all that apply.",
+          "stem": "A client, 61 years old, has had chest pressure with climbing stairs, and at times with emotional upset, for 2 years from a coronary artery narrowed by plaque. Today, while seated during a heated argument, the client felt the same pressure, 4 of 10, which ended within 3 minutes after the argument stopped. Heart rate was 70 beats per minute before the argument and 114 beats per minute during it. Now heart rate is 72 beats per minute and pain is 0 of 10. The frequency, intensity and length of episodes match the past 2 years. The client asks, \"I was sitting down, so does this mean my heart disease suddenly got worse?\" Which statements by the nurse are accurate? Select all that apply.",
           "options": [
             {
               "id": "A",
-              "text": "\"The plaque takes up space inside the artery, so less blood can reach your heart muscle.\"",
+              "text": "\"The argument raised your heart rate and your heart's need for oxygen, much like climbing stairs does.\"",
               "correct": true,
-              "rationale": "Coronary narrowing restricts blood flow to the myocardium."
+              "rationale": "Emotional stress raises heart rate and myocardial oxygen demand. The rise from 70 to 114 beats per minute shows the demand went up even though the client was seated."
             },
             {
               "id": "B",
-              "text": "\"Climbing stairs makes your heart work harder, and its need for oxygen can outgrow what the narrowed artery delivers.\"",
-              "correct": true,
-              "rationale": "Exertion raises myocardial oxygen demand; a narrowed artery cannot increase flow enough, so ischemia develops."
+              "text": "\"Because the pressure began while you were sitting, this was pressure at rest and points to a new clot on the plaque.\"",
+              "correct": false,
+              "rationale": "Pressure at rest is a warning sign, which makes this tempting. But the client was not at rest in terms of demand: heart rate was 114 beats per minute during the argument, and the episode matched a 2 year pattern of pressure with exertion or stress."
             },
             {
               "id": "C",
-              "text": "\"The pressure is a sign that your heart muscle is getting less oxygen than it needs.\"",
+              "text": "\"Your narrowed artery could not raise its flow enough to meet that higher need.\"",
               "correct": true,
-              "rationale": "Ischemia is reduced oxygen delivery relative to the muscle's need, and chest pressure is its main manifestation."
+              "rationale": "Plaque narrows the artery and restricts flow, so when demand rises, oxygen delivery falls short and ischemia causes the pressure."
             },
             {
               "id": "D",
-              "text": "\"Each episode means a small part of your heart muscle has died and cannot recover.\"",
-              "correct": false,
-              "rationale": "Ischemia from narrowing is reversible when demand falls. Death of heart muscle is infarction, which usually follows plaque rupture and thrombosis."
+              "text": "\"When the argument ended, your heart's need for oxygen fell back within what the artery can supply.\"",
+              "correct": true,
+              "rationale": "As heart rate returned to 72 beats per minute, demand fell, delivery matched it again, and the pressure ended within 3 minutes."
             },
             {
               "id": "E",
-              "text": "\"A narrowed artery causes chest pressure only once a clot has fully blocked it.\"",
+              "text": "\"Emotional stress causes this pressure on its own, so the plaque played no part today.\"",
               "correct": false,
-              "rationale": "Narrowing alone causes ischemia when demand rises. A clot on a ruptured plaque causes an acute coronary syndrome, which is a different event."
+              "rationale": "Stress raised demand, but the pressure came from a narrowed artery that could not meet it. Without the narrowing, the same rise in demand would not cause ischemia."
             },
             {
               "id": "F",
-              "text": "\"Resting makes the problem worse, because a slower heart pushes less blood through the narrowed artery.\"",
+              "text": "\"Any pressure brought on by stress is unstable angina and needs the same urgent evaluation as pressure at rest.\"",
               "correct": false,
-              "rationale": "Rest lowers the heart's oxygen demand, which brings demand back within what the narrowed artery can supply."
+              "rationale": "Angina that is predictable with exertion or stress and relieved by rest is the chronic pattern. Unstable angina is new, worsening, or at rest, and nothing here is new or worse."
             }
           ],
           "answer": [
             "A",
-            "B",
-            "C"
+            "C",
+            "D"
           ],
-          "takeaway": "Plaque narrows the coronary artery and restricts flow. When exertion or stress raises demand, oxygen delivery falls short and ischemia results; rest lowers demand. A clot on a ruptured plaque is the separate event behind an acute coronary syndrome.",
+          "takeaway": "Chronic angina is predictable with exertion or stress and ends when demand falls. Emotional stress raises heart rate and oxygen demand even while seated, so pressure during an argument that matches the usual pattern is not pressure at rest. Unstable angina is new, worsening, or at rest.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Treat ischemia as a mismatch between supply and demand. True statements explain the supply limit or the demand rise; false ones confuse ischemia with infarction or a clot.",
+          "strategy": "Sitting sounds like rest, and rest pain is the classic warning, so two answers pull in opposite directions. Let the heart rate decide: 114 beats per minute during the argument means demand was high, and the episode matched a 2 year pattern.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
             ],
             "steps": [
               {
-                "action": "Supply",
-                "detail": "Plaque narrows the lumen and restricts flow."
+                "action": "Define rest by demand",
+                "detail": "Heart rate rose from 70 to 114 beats per minute during the argument: demand was raised, so this was not rest."
               },
               {
-                "action": "Demand",
-                "detail": "Stairs raise the oxygen need above what the artery delivers."
+                "action": "Check the pattern",
+                "detail": "Same frequency, intensity and length as the past 2 years: not new and not worsening."
               },
               {
-                "action": "Define ischemia",
-                "detail": "Less oxygen than the muscle needs."
+                "action": "Supply and demand",
+                "detail": "Stress raised demand, the narrowed artery could not raise supply, and calming lowered demand. A, C and D are true."
               },
               {
-                "action": "Reject the confusions",
-                "detail": "Muscle death is infarction; a full clot is an acute coronary syndrome; rest lowers demand."
+                "action": "Reject the traps",
+                "detail": "Not a new clot, not stress alone without the plaque, and not unstable angina."
               }
             ],
-            "verdict": "A, B, C."
+            "verdict": "A, C, D."
           },
           "caseGroup": "ig30-case9",
           "caseStep": 2,
           "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
-          "addedBatch": 6
-        },
-        {
-          "id": "ig30-x05",
-          "type": "multiple_choice",
           "difficulty": "difficult",
-          "stem": "A client, 59 years old, started lisinopril for hypertension 2 weeks ago. The client calls the clinic at 1100 and says, \"I have had a dry, tickly cough for a week. Since about 1000 my lips have felt puffy and my tongue feels thick.\" Blood pressure at home this morning was 128/80 mm Hg in the right arm. Which response by the nurse is appropriate?",
-          "options": [
-            {
-              "id": "A",
-              "text": "\"A dry cough is a common effect of this drug. Keep taking it, and we will discuss another drug at your visit next week.\"",
-              "correct": false,
-              "rationale": "The dry cough is a common adverse effect of ACE inhibitors and is reported so another drug can be considered, which makes this defensible for the cough alone. It ignores the swelling of the lips and tongue, which threatens the airway."
-            },
-            {
-              "id": "B",
-              "text": "\"Call emergency services now. Swelling of your lips and tongue can block your airway.\"",
-              "correct": true,
-              "rationale": "The deciding cue is the puffy lips and thick tongue that began an hour ago. Swelling of the face, lips, and tongue is a known reaction to ACE inhibitors, and a swelling tongue can block the airway. Airway comes first."
-            },
-            {
-              "id": "C",
-              "text": "\"Skip today's dose, take an antihistamine, and call back this afternoon if the swelling has not gone down.\"",
-              "correct": false,
-              "rationale": "Waiting several hours with a swelling tongue delays airway protection. An antihistamine is not a decision the nurse makes over the phone here."
-            },
-            {
-              "id": "D",
-              "text": "\"Your blood pressure is well controlled, so the swelling is not from the drug. Check it again tomorrow morning.\"",
-              "correct": false,
-              "rationale": "A controlled blood pressure says nothing about an adverse reaction. Swelling of the lips and tongue after starting an ACE inhibitor is a drug reaction until proven otherwise."
-            }
-          ],
-          "answer": "B",
-          "takeaway": "ACE inhibitors commonly cause a dry cough, which is reported so another drug may be prescribed. Swelling of the lips, tongue, or throat is an airway emergency. Assess each drug for its specific adverse effects.",
-          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
-          "coverageDetail": {
-            "ppt": "partial",
-            "reading": [
-              "standard teaching"
-            ],
-            "readingChecked": true
-          },
-          "strategy": "Two options respond to a real drug effect. The cough is common and is reported; swelling of the lips and tongue threatens the airway, and airway comes first.",
-          "elimination": {
-            "strategies": [
-              "Apply the ABCs",
-              "Opposite pair, look closely"
-            ],
-            "steps": [
-              {
-                "action": "Separate the two findings",
-                "detail": "A week of dry cough, and an hour of puffy lips and a thick tongue."
-              },
-              {
-                "action": "Rank by ABCs",
-                "detail": "Lip and tongue swelling threatens the airway."
-              },
-              {
-                "action": "Reject the delays",
-                "detail": "Waiting until next week or this afternoon leaves the airway at risk."
-              },
-              {
-                "action": "Reject the false reassurance",
-                "detail": "Blood pressure control does not rule out a drug reaction."
-              }
-            ],
-            "verdict": "Swelling of the lips and tongue threatens the airway: emergency care now."
-          },
-          "caseGroup": "ig30-case10",
-          "caseStep": 1,
-          "objective": "Describe lifestyle changes and common medication classes used to manage hypertension.",
-          "new": true,
-          "addedBatch": 7
-        },
-        {
-          "id": "ig30-x06",
-          "type": "multiple_choice",
-          "difficulty": "difficult",
-          "stem": "A client, 64 years old, has had primary hypertension for 15 years. The client has never smoked, does not have diabetes, and has a low density lipoprotein level of 94 mg/dL. Serum creatinine is 1.8 mg/dL, was 1.0 mg/dL 5 years ago. The kidney biopsy report reads \"medial hyperplasia of the arterioles; no atheroma.\" The client asks how high blood pressure damaged the kidneys. Which response by the nurse is accurate?",
-          "options": [
-            {
-              "id": "A",
-              "text": "\"High pressure injured the artery lining, and fat then built up into plaque that blocked the small kidney arteries.\"",
-              "correct": false,
-              "rationale": "Hypertension does injure the endothelium and can lead to atherosclerosis, which makes this defensible. The biopsy cue rules it out: the report states no atheroma (plaque), and the low density lipoprotein level is 94 mg/dL."
-            },
-            {
-              "id": "B",
-              "text": "\"High pressure stretched the small kidney arteries until they became thin and weak, so they leak blood into the urine.\"",
-              "correct": false,
-              "rationale": "Hyperplasia means the walls are thicker, not thinner. Stretching and thinning describes an aneurysm, not the arteriole change of primary hypertension."
-            },
-            {
-              "id": "C",
-              "text": "\"High pressure made your kidneys hold on to sodium and water, and the extra fluid filled up and swelled the kidney tissue.\"",
-              "correct": false,
-              "rationale": "Sodium and water retention raises blood pressure, but it does not explain thickened arteriole walls or the loss of kidney function."
-            },
-            {
-              "id": "D",
-              "text": "\"High pressure thickened the muscle in the walls of the small arteries, narrowing them so less blood reached the kidneys.\"",
-              "correct": true,
-              "rationale": "Primary hypertension causes medial hyperplasia, a thickening of the middle muscle layer of the arterioles. The narrowed vessels reduce perfusion of the kidneys, and the rising creatinine shows the damage."
-            }
-          ],
-          "answer": "D",
-          "takeaway": "In primary hypertension, medial hyperplasia thickens the walls of the arterioles. The narrowed vessels reduce organ perfusion, which is how persistent hypertension damages target organs such as the kidneys.",
-          "coverage": "Covered in Lecture PPT.",
-          "coverageDetail": {
-            "ppt": "full",
-            "reading": [],
-            "readingChecked": false
-          },
-          "strategy": "Two options describe real ways hypertension harms arteries. The biopsy report of medial hyperplasia with no atheroma decides between thickening and atherosclerosis.",
-          "elimination": {
-            "strategies": [
-              "Opposite pair, look closely"
-            ],
-            "steps": [
-              {
-                "action": "Read the biopsy",
-                "detail": "Medial hyperplasia of the arterioles, no atheroma."
-              },
-              {
-                "action": "Name the change",
-                "detail": "Medial hyperplasia of the arterioles in primary hypertension."
-              },
-              {
-                "action": "Weigh the near miss",
-                "detail": "Plaque from endothelial injury does happen, but this biopsy shows none."
-              },
-              {
-                "action": "Reject the rest",
-                "detail": "The walls are not thinned, and fluid retention does not thicken arterioles."
-              }
-            ],
-            "verdict": "Thickened arteriole walls narrowed the vessels and reduced blood flow to the kidneys."
-          },
-          "caseGroup": "ig30-case10",
-          "caseStep": 2,
-          "objective": "Differentiate primary and secondary hypertension and identify major risk factors.",
-          "new": true,
-          "addedBatch": 7
+          "addedBatch": 6,
+          "hardenedBatch": 8
         },
         {
           "id": "ig30-x07",
@@ -12288,147 +11909,6 @@
           "caseGroup": "ig30-case10",
           "caseStep": 3,
           "objective": "Recognize common manifestations, complications, and priority nursing assessments for hypertension.",
-          "new": true,
-          "addedBatch": 7
-        },
-        {
-          "id": "ig30-x08",
-          "type": "multiple_choice",
-          "difficulty": "difficult",
-          "stem": "A client, 42 years old, has systemic lupus erythematosus, diagnosed 8 years ago. The client has never smoked and does not have diabetes. Blood pressure is 118/76 mm Hg in the right arm, and the low density lipoprotein level is 96 mg/dL. The client says, \"My blood pressure and cholesterol are good, so I have no reason to worry about plaque in my arteries.\" Which response by the nurse is accurate?",
-          "options": [
-            {
-              "id": "A",
-              "text": "\"That is right. Plaque builds only when cholesterol is high, so your arteries are protected for now.\"",
-              "correct": false,
-              "rationale": "Atherosclerosis has several risk factors, not cholesterol alone, and autoimmunity is one of them."
-            },
-            {
-              "id": "B",
-              "text": "\"Your blood pressure and cholesterol lower your risk, so plaque is a concern only if you start smoking.\"",
-              "correct": false,
-              "rationale": "Without the lupus, this would be a fair statement, because the client has none of the other listed risk factors. Autoimmune disease is itself a risk factor, so the risk is not limited to smoking."
-            },
-            {
-              "id": "C",
-              "text": "\"Those numbers help, but lupus is itself a risk factor for plaque, so screening matters.\"",
-              "correct": true,
-              "rationale": "Lupus is an autoimmune disease, and the deciding cue is that disease. Risk factors for atherosclerosis include diabetes, smoking, dyslipidemia, hypertension, and autoimmunity, so this client has a risk factor even with good blood pressure and cholesterol."
-            },
-            {
-              "id": "D",
-              "text": "\"Your risk is high because lupus raises cholesterol, and the plaque forms from that extra cholesterol.\"",
-              "correct": false,
-              "rationale": "The low density lipoprotein level is 96 mg/dL, so raised cholesterol is not the link. Autoimmunity is listed as its own risk factor."
-            }
-          ],
-          "answer": "C",
-          "takeaway": "Risk factors for atherosclerosis are diabetes, smoking, hyperlipidemia or dyslipidemia, hypertension, and autoimmunity. A client with an autoimmune disease carries risk even with good blood pressure and lipids.",
-          "coverage": "Covered in Lecture PPT.",
-          "coverageDetail": {
-            "ppt": "full",
-            "reading": [],
-            "readingChecked": false
-          },
-          "strategy": "Two options agree that the client's numbers help. The lupus in the stem, an autoimmune disease, decides which one is complete.",
-          "elimination": {
-            "strategies": [
-              "Opposite pair, look closely",
-              "Eliminate absolutes"
-            ],
-            "steps": [
-              {
-                "action": "List the risk factors",
-                "detail": "Diabetes, smoking, dyslipidemia, hypertension, and autoimmunity."
-              },
-              {
-                "action": "Find the one present",
-                "detail": "Lupus is an autoimmune disease."
-              },
-              {
-                "action": "Reject the absolutes",
-                "detail": "Plaque does not build only with high cholesterol, and risk is not limited to smoking."
-              },
-              {
-                "action": "Reject the wrong link",
-                "detail": "The low density lipoprotein level is 96 mg/dL, so cholesterol is not the path."
-              }
-            ],
-            "verdict": "Autoimmunity is a risk factor for atherosclerosis on its own."
-          },
-          "caseGroup": "ig30-case11",
-          "caseStep": 1,
-          "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
-          "new": true,
-          "addedBatch": 7
-        },
-        {
-          "id": "ig30-x09",
-          "type": "multiple_choice",
-          "difficulty": "difficult",
-          "stem": "A client, 51 years old, has hypertension with readings averaging 136/86 mm Hg in the right arm over 3 visits. Body mass index is 24 kg/m2. The client follows a DASH style eating plan, has 4 glasses of wine with dinner each evening, reads labels and keeps sodium to 1500 mg a day, walks 40 minutes 5 days a week, and does not smoke. Which teaching by the nurse addresses the risk factor most likely contributing to this client's blood pressure?",
-          "options": [
-            {
-              "id": "A",
-              "text": "\"Cut your sodium further, to below 1000 mg a day, because salt is the most common cause of high pressure.\"",
-              "correct": false,
-              "rationale": "The client already follows a DASH style plan with 1500 mg of sodium a day. Further cuts are not where the remaining risk lies."
-            },
-            {
-              "id": "B",
-              "text": "\"Add strength training on the other 2 days, because more activity is the change that lowers pressure most.\"",
-              "correct": false,
-              "rationale": "Increasing activity is a listed lifestyle change and lowers blood pressure, which makes this defensible. The client already walks 40 minutes 5 days a week, so more activity misses the risk factor that is present."
-            },
-            {
-              "id": "C",
-              "text": "\"Lose about 10 lb, because even a small weight loss brings blood pressure down in most people.\"",
-              "correct": false,
-              "rationale": "Weight reduction is recommended when indicated. A body mass index of 24 kg/m2 does not call for weight loss."
-            },
-            {
-              "id": "D",
-              "text": "\"Limit alcohol, because regular drinking with dinner can raise your blood pressure.\"",
-              "correct": true,
-              "rationale": "The deciding cue is 4 glasses of wine with dinner every evening. Excessive alcohol is a modifiable risk factor, and limiting alcohol is a listed lifestyle change. Every other listed change is already in place."
-            }
-          ],
-          "answer": "D",
-          "takeaway": "Lifestyle changes for hypertension are reduce sodium, DASH style eating, weight reduction if indicated, increase activity, stop smoking, limit alcohol, and manage stress. Match the teaching to the risk factor the client actually has.",
-          "coverage": "Covered in Lecture PPT.",
-          "coverageDetail": {
-            "ppt": "full",
-            "reading": [],
-            "readingChecked": false
-          },
-          "strategy": "Several options name real lifestyle changes. Check each against what the client already does; the one risk factor left in the stem decides it.",
-          "elimination": {
-            "strategies": [
-              "Opposite pair, look closely"
-            ],
-            "steps": [
-              {
-                "action": "List what is in place",
-                "detail": "DASH style eating, 1500 mg of sodium, 40 minutes of walking 5 days a week, no smoking, body mass index 24 kg/m2."
-              },
-              {
-                "action": "Find the gap",
-                "detail": "4 glasses of wine with dinner each evening is excessive alcohol."
-              },
-              {
-                "action": "Weigh the near miss",
-                "detail": "More activity helps, but the client is already active."
-              },
-              {
-                "action": "Reject the rest",
-                "detail": "Sodium is already limited, and weight loss is not indicated."
-              }
-            ],
-            "verdict": "Limit alcohol; every other listed change is already in place."
-          },
-          "caseGroup": "ig30-case11",
-          "caseStep": 2,
-          "objective": "Describe lifestyle changes and common medication classes used to manage hypertension.",
           "new": true,
           "addedBatch": 7
         }
@@ -17216,217 +16696,6 @@
             "verdict": "Obtain a 12 lead ECG; glucose 138 mg/dL rules out the other explanation."
           },
           "caseGroup": "ig32-case9",
-          "caseStep": 2,
-          "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
-          "new": true,
-          "addedBatch": 7
-        },
-        {
-          "id": "ig32-x08",
-          "type": "multiple_choice",
-          "difficulty": "difficult",
-          "stem": "A client with coronary artery disease has had chest pressure for 2 years only with brisk walking, in a predictable pattern that ends with rest. The client calls the clinic at 0900. At 0600, the client woke while lying in bed with the same chest pressure, which lasted 15 minutes and went away without nitroglycerin. The client has had no pressure since 0615. Home readings at 0855: blood pressure 132/80 mm Hg, heart rate 76 beats per minute. Which response by the nurse is appropriate?",
-          "options": [
-            {
-              "id": "A",
-              "text": "\"Since it went away on its own and your readings are good, write it in a diary and bring it to next week's visit.\"",
-              "correct": false,
-              "rationale": "The pressure has stopped and the readings are reassuring, which makes this tempting. It misses the change in pattern: the pressure came while lying in bed, not with exertion."
-            },
-            {
-              "id": "B",
-              "text": "\"Take one nitroglycerin tablet now to prevent another episode, then call back in 1 hour to tell us how you feel.\"",
-              "correct": false,
-              "rationale": "Nitroglycerin treats pressure that is present. Taking it while pain free and waiting an hour delays evaluation of a new pattern."
-            },
-            {
-              "id": "C",
-              "text": "\"Avoid brisk walking today, and call us back if the next episode lasts longer than 30 minutes.\"",
-              "correct": false,
-              "rationale": "Limiting exertion does not address pressure that began at rest, and waiting for a longer episode delays evaluation."
-            },
-            {
-              "id": "D",
-              "text": "\"Pressure that began at rest needs urgent evaluation, even though it stopped. Go to the emergency department now.\"",
-              "correct": true,
-              "rationale": "The deciding cue is that the pressure began while lying in bed. Angina that is new, worsening, or at rest is unstable and needs urgent evaluation, even after it ends."
-            }
-          ],
-          "answer": "D",
-          "takeaway": "Chronic angina in a predictable pattern comes with exertion and is relieved by rest or nitrates. Unstable angina is new, worsening, or at rest, and it needs urgent evaluation even when the pressure has stopped.",
-          "coverage": "Covered in Lecture PPT.",
-          "coverageDetail": {
-            "ppt": "full",
-            "reading": [],
-            "readingChecked": false
-          },
-          "strategy": "Two options weigh the same call: the pressure ended and readings are good, or the pressure began at rest. Where the pressure started, not whether it stopped, decides it.",
-          "elimination": {
-            "strategies": [
-              "Opposite pair, look closely"
-            ],
-            "steps": [
-              {
-                "action": "Find the baseline",
-                "detail": "Two years of pressure only with brisk walking that ends with rest."
-              },
-              {
-                "action": "Find the change",
-                "detail": "Pressure at 0600 while lying in bed."
-              },
-              {
-                "action": "Name it",
-                "detail": "Pressure at rest is unstable angina."
-              },
-              {
-                "action": "Reject the delays",
-                "detail": "A diary, a nitroglycerin trial, or waiting for a longer episode all postpone evaluation."
-              }
-            ],
-            "verdict": "Pressure that began at rest is unstable and needs urgent evaluation, even after it stops."
-          },
-          "caseGroup": "ig32-case9",
-          "caseStep": 3,
-          "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
-          "new": true,
-          "addedBatch": 7
-        },
-        {
-          "id": "ig32-x06",
-          "type": "multiple_choice",
-          "difficulty": "difficult",
-          "stem": "A client, 54 years old, has a fasting blood glucose of 112 mg/dL and was told at this visit of insulin resistance. The client does not have diabetes. Blood pressure 124/78 mm Hg in the right arm, low density lipoprotein 98 mg/dL, body mass index 24 kg/m2, and the client has never smoked. The client says, \"I do not have diabetes, so my blood sugar is not a heart risk for me.\" Which response by the nurse is accurate?",
-          "options": [
-            {
-              "id": "A",
-              "text": "\"That is right. Blood sugar becomes a heart risk only once diabetes is diagnosed, so we will recheck it in a year.\"",
-              "correct": false,
-              "rationale": "This treats diabetes as the only glucose related risk. Insulin resistance is itself listed as a risk factor for coronary artery disease."
-            },
-            {
-              "id": "B",
-              "text": "\"Your blood pressure and cholesterol lower your risk, so the main thing is to make sure you never start smoking.\"",
-              "correct": false,
-              "rationale": "Without the insulin resistance, this would be a fair statement, because the client has none of the other listed modifiable risk factors. It ignores the risk factor found at this visit."
-            },
-            {
-              "id": "C",
-              "text": "\"Insulin resistance is a risk you cannot change, so the focus should be on your blood pressure and cholesterol.\"",
-              "correct": false,
-              "rationale": "Diabetes and insulin resistance are modifiable risk factors. Calling it fixed removes the client's chance to lower the risk."
-            },
-            {
-              "id": "D",
-              "text": "\"Insulin resistance is a heart risk by itself, and it is one you can change, even without diabetes.\"",
-              "correct": true,
-              "rationale": "The deciding cue is the new finding of insulin resistance. Diabetes and insulin resistance are listed together as modifiable risk factors for coronary artery disease, so this client has a risk factor that can be changed."
-            }
-          ],
-          "answer": "D",
-          "takeaway": "Modifiable risk factors for coronary artery disease are dyslipidemia, hypertension, cigarette smoking, diabetes and insulin resistance, obesity and a sedentary lifestyle, and an atherogenic diet. Insulin resistance counts even before diabetes develops.",
-          "coverage": "Covered in Lecture PPT.",
-          "coverageDetail": {
-            "ppt": "full",
-            "reading": [],
-            "readingChecked": false
-          },
-          "strategy": "Two options praise the client's good values. The insulin resistance named in the stem decides which statement is complete.",
-          "elimination": {
-            "strategies": [
-              "Opposite pair, look closely",
-              "Eliminate absolutes"
-            ],
-            "steps": [
-              {
-                "action": "List the modifiable factors",
-                "detail": "Dyslipidemia, hypertension, smoking, diabetes and insulin resistance, obesity and inactivity, atherogenic diet."
-              },
-              {
-                "action": "Find the one present",
-                "detail": "Insulin resistance, with a fasting glucose of 112 mg/dL."
-              },
-              {
-                "action": "Reject the absolute",
-                "detail": "Risk does not start only at diagnosis of diabetes."
-              },
-              {
-                "action": "Reject the wrong category",
-                "detail": "Insulin resistance is modifiable, not fixed."
-              }
-            ],
-            "verdict": "Insulin resistance is a modifiable risk factor for coronary artery disease even without diabetes."
-          },
-          "caseGroup": "ig32-case10",
-          "caseStep": 1,
-          "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
-          "new": true,
-          "addedBatch": 7
-        },
-        {
-          "id": "ig32-x07",
-          "type": "multiple_choice",
-          "difficulty": "difficult",
-          "stem": "A client with coronary artery disease and chronic angina started a beta blocker 4 weeks ago. Before the drug, heart rate rose to 122 beats per minute during the daily walk, and angina came on with 4 of 7 walks. This week, heart rate during the walk peaks at 98 beats per minute, and angina came on with 1 of 7 walks. Resting blood pressure is 122/76 mm Hg in the right arm. The client asks, \"Is this pill opening up my heart arteries?\" Which response by the nurse is accurate?",
-          "options": [
-            {
-              "id": "A",
-              "text": "\"Yes. It relaxes the narrowed heart arteries, so more blood reaches your heart muscle while you walk.\"",
-              "correct": false,
-              "rationale": "Widening vessels to improve flow describes nitrates and calcium channel blockers. The heart rate change is the cue that this drug works by lowering demand."
-            },
-            {
-              "id": "B",
-              "text": "\"No. It slows your heart during your walk, so your heart muscle needs less oxygen than before.\"",
-              "correct": true,
-              "rationale": "The deciding cue is the peak heart rate, 98 beats per minute now and 122 before the drug. Beta blockers reduce myocardial oxygen demand by slowing the heart, so the narrowed artery can keep up more often."
-            },
-            {
-              "id": "C",
-              "text": "\"No. It thins your blood so that clots cannot form on the plaque inside your heart arteries.\"",
-              "correct": false,
-              "rationale": "Preventing clots on plaque is the role of antiplatelet therapy, a different treatment."
-            },
-            {
-              "id": "D",
-              "text": "\"Yes. Over time it dissolves the plaque, which is why your angina keeps getting less frequent.\"",
-              "correct": false,
-              "rationale": "No drug in the treatment plan removes plaque; reducing risk factors slows its growth. Opening a blocked artery requires revascularization."
-            }
-          ],
-          "answer": "B",
-          "takeaway": "Treatment of coronary artery disease aims to improve coronary flow, reduce myocardial oxygen demand, and prevent complications. Beta blockers lower demand by slowing the heart; nitrates and calcium channel blockers widen vessels; antiplatelet therapy prevents clots.",
-          "coverage": "Covered in Lecture PPT.",
-          "coverageDetail": {
-            "ppt": "full",
-            "reading": [],
-            "readingChecked": false
-          },
-          "strategy": "Two options are defensible goals of angina treatment: more supply or less demand. The change in peak heart rate during the walk shows which one this drug is doing.",
-          "elimination": {
-            "strategies": [
-              "Opposite pair, look closely"
-            ],
-            "steps": [
-              {
-                "action": "Read the trend",
-                "detail": "Peak heart rate 122 before the drug, 98 now, with fewer episodes."
-              },
-              {
-                "action": "Match the mechanism",
-                "detail": "Slowing the heart reduces oxygen demand."
-              },
-              {
-                "action": "Weigh the near miss",
-                "detail": "Widening arteries is the action of nitrates and calcium channel blockers."
-              },
-              {
-                "action": "Reject the rest",
-                "detail": "Clot prevention is antiplatelet therapy; no drug dissolves plaque."
-              }
-            ],
-            "verdict": "The beta blocker lowers oxygen demand by slowing the heart; it does not open the arteries."
-          },
-          "caseGroup": "ig32-case10",
           "caseStep": 2,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
           "new": true,
