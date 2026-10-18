@@ -4,9 +4,9 @@
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
     "set": "Exam 3",
-    "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30 and 32, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 6), written so every lecture topic has at least one question. Questions that revisit a topic already covered are hard (difficulty \"difficult\"); those rewritten to hard carry hardenedBatch 6. NGN style items (matrix, cloze, highlight, bowtie, ordered response) are kept near 15% of each section.",
-    "questionCount": 221,
-    "chapterQuestionCount": 188,
+    "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30 and 32, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 7): 5 per chapter, all hard. Every lecture topic has at least one question (batch 6); questions that revisit a topic are hard (difficulty \"difficult\"). NGN style items (matrix, cloze, highlight, bowtie, ordered response) are kept near 15% of each section.",
+    "questionCount": 251,
+    "chapterQuestionCount": 218,
     "skillCount": 2,
     "chaptersIncluded": [
       1016,
@@ -26,12 +26,12 @@
       "skills"
     ],
     "questionTypes": {
-      "multiple_choice": 142,
+      "multiple_choice": 168,
       "highlight": 9,
-      "matrix": 9,
+      "matrix": 11,
       "sata": 47,
       "ordered_response": 2,
-      "cloze": 5,
+      "cloze": 7,
       "bowtie": 7
     },
     "itemTypes": [
@@ -136,7 +136,7 @@
           1,
           2
         ],
-        "questionCount": 221
+        "questionCount": 251
       }
     ],
     "chapterGroups": [
@@ -183,7 +183,7 @@
       "questionIds": [],
       "caseStudyIds": []
     },
-    "difficultCount": 69,
+    "difficultCount": 99,
     "difficultIds": [
       "ig16-x01",
       "ig16-m06",
@@ -198,6 +198,9 @@
       "ig16-m18",
       "ig16-x05",
       "ig16-x06",
+      "ig16-x07",
+      "ig16-x08",
+      "ig16-m25",
       "ig19-m03",
       "ig19-x02",
       "ig19-m04",
@@ -216,10 +219,17 @@
       "ig19-m21",
       "ig19-m22",
       "ig19-m20",
+      "ig19-x07",
+      "ig19-x08",
       "ig27-x01",
       "ig27-x02",
       "ig27-x03",
       "ig27-x04",
+      "ig27-x05",
+      "ig27-m25",
+      "ig27-x06",
+      "ig27-x07",
+      "ig27-x08",
       "ig29-x01",
       "ig29-m06",
       "ig29-x03",
@@ -227,12 +237,22 @@
       "ig29-x02",
       "ig29-m14",
       "ig29-x04",
+      "ig29-x06",
+      "ig29-x08",
+      "ig29-x05",
+      "ig29-m20",
+      "ig29-x07",
       "ig30-x01",
       "ig30-x02",
       "ig30-m09",
       "ig30-x03",
       "ig30-m16",
       "ig30-x04",
+      "ig30-x05",
+      "ig30-x06",
+      "ig30-x07",
+      "ig30-x08",
+      "ig30-x09",
       "ig31-x01",
       "ig31-m05",
       "ig31-x02",
@@ -241,12 +261,22 @@
       "ig31-x05",
       "ig31-m22",
       "ig31-x06",
+      "ig31-x07",
+      "ig31-x08",
+      "ig31-x09",
+      "ig31-x10",
+      "ig31-x11",
       "ig32-x03",
       "ig32-x02",
       "ig32-x01",
       "ig32-m12",
       "ig32-m14",
       "ig32-x04",
+      "ig32-m20",
+      "ig32-x05",
+      "ig32-x08",
+      "ig32-x06",
+      "ig32-x07",
       "sk-cardiac-x01",
       "sk-cardiac-x02",
       "sk-cardiac-x03",
@@ -255,12 +285,13 @@
       "sk-infusion-x02",
       "sk-infusion-x03"
     ],
-    "nclexCount": 32,
+    "nclexCount": 36,
     "nclexIds": [
       "ig16-m02",
       "ig16-m07",
       "ig16-m10",
       "ig16-m22",
+      "ig16-m25",
       "ig19-m03",
       "ig19-m06",
       "ig19-m09",
@@ -269,9 +300,11 @@
       "ig27-m10",
       "ig27-m16",
       "ig27-m23",
+      "ig27-m25",
       "ig29-m02",
       "ig29-m06",
       "ig29-m16",
+      "ig29-m20",
       "ig30-m05",
       "ig30-m10",
       "ig30-m16",
@@ -284,6 +317,7 @@
       "ig32-m02",
       "ig32-m07",
       "ig32-m16",
+      "ig32-m20",
       "sk-cardiac-m02",
       "sk-cardiac-m04",
       "sk-cardiac-m06",
@@ -291,37 +325,44 @@
       "sk-infusion-m08"
     ],
     "newIds": [
-      "ig16-m23",
-      "ig16-m24",
-      "ig27-m17",
-      "ig27-m18",
-      "ig27-m19",
-      "ig27-m20",
-      "ig27-m21",
-      "ig27-m22",
-      "ig27-m23",
-      "ig27-m24",
-      "ig29-m17",
-      "ig29-m18",
-      "ig29-m19",
-      "ig30-m17",
-      "ig30-m18",
-      "ig30-m19",
-      "ig30-m20",
-      "ig30-m21",
-      "ig31-m23",
-      "ig31-m24",
-      "ig31-m25",
-      "ig32-m17",
-      "ig32-m18",
-      "ig32-m19"
+      "ig16-x07",
+      "ig16-x08",
+      "ig16-m25",
+      "ig19-x07",
+      "ig19-x08",
+      "ig27-x05",
+      "ig27-m25",
+      "ig27-x06",
+      "ig27-x07",
+      "ig27-x08",
+      "ig29-x06",
+      "ig29-x08",
+      "ig29-x05",
+      "ig29-m20",
+      "ig29-x07",
+      "ig30-x05",
+      "ig30-x06",
+      "ig30-x07",
+      "ig30-x08",
+      "ig30-x09",
+      "ig31-x07",
+      "ig31-x08",
+      "ig31-x09",
+      "ig31-x10",
+      "ig31-x11",
+      "ig32-m20",
+      "ig32-x05",
+      "ig32-x08",
+      "ig32-x06",
+      "ig32-x07"
     ],
-    "newCount": 24,
+    "newCount": 30,
     "ngnIds": [
       "ig16-m02",
       "ig16-m07",
       "ig16-m10",
       "ig16-m22",
+      "ig16-m25",
       "ig19-m03",
       "ig19-m06",
       "ig19-m09",
@@ -330,9 +371,11 @@
       "ig27-m10",
       "ig27-m16",
       "ig27-m23",
+      "ig27-m25",
       "ig29-m02",
       "ig29-m06",
       "ig29-m16",
+      "ig29-m20",
       "ig30-m05",
       "ig30-m10",
       "ig30-m16",
@@ -345,13 +388,14 @@
       "ig32-m02",
       "ig32-m07",
       "ig32-m16",
+      "ig32-m20",
       "sk-cardiac-m02",
       "sk-cardiac-m04",
       "sk-cardiac-m06",
       "sk-infusion-m02",
       "sk-infusion-m08"
     ],
-    "ngnCount": 32,
+    "ngnCount": 36,
     "ngnTypes": [
       "bowtie",
       "cloze",
@@ -2554,7 +2598,6 @@
           "caseGroup": "ig16-case13",
           "caseStep": 1,
           "objective": "Compare innate and adaptive immunity",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -2643,8 +2686,241 @@
           "caseGroup": "ig16-case13",
           "caseStep": 2,
           "objective": "Compare innate and adaptive immunity",
-          "new": true,
           "addedBatch": 6
+        },
+        {
+          "id": "ig16-x07",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "Testing shows that a client's own immune cells are attacking the healthy tissue that lines both knee joints. Cultures of fluid from both knees grew no microorganisms, and the client has had no recent injury. The client asks, \"Why would my immune system go after my own knees?\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Your knees were injured, and your immune cells are clearing damaged tissue, which is the expected response.\"",
+              "correct": false,
+              "rationale": "Inflammation does follow injury and helps remove damaged tissue, so this sounds right. But the stem states the client has had no recent injury, and the tissue under attack is healthy, not damaged."
+            },
+            {
+              "id": "B",
+              "text": "\"Swelling in your knees means an infection is present, and your immune cells are fighting it off.\"",
+              "correct": false,
+              "rationale": "Inflammation can occur without infection, and the cultures grew no microorganisms. Swelling alone does not establish infection."
+            },
+            {
+              "id": "C",
+              "text": "\"Your immune cells found foreign material in your knees, and attacking it is the expected response.\"",
+              "correct": false,
+              "rationale": "Recognition of foreign material does start an immune response, so this sounds right. But the stem states the cells are attacking healthy tissue and the cultures grew nothing, so there is no foreign target. The tissue under attack is self."
+            },
+            {
+              "id": "D",
+              "text": "\"Self tolerance usually stops attacks on healthy tissue, and here your cells treat it as non self.\"",
+              "correct": true,
+              "rationale": "The immune system normally distinguishes the body's cells from foreign substances, and self tolerance prevents attacks against healthy tissue. An attack on healthy joint tissue with no microorganism present means the client's own tissue is being treated as non self."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "The immune system separates self from non self, and self tolerance keeps it from attacking healthy tissue. When immune cells attack healthy tissue and no foreign material is found, self tolerance has failed and self is being treated as non self.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "C and D both describe immune cells responding to something they treat as non self. The cue that decides is \"healthy tissue\" with cultures that grew no microorganisms: there is no foreign material, so the target is self, and only D explains why self is being attacked.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Name the target",
+                "detail": "The stem says the cells attack the client's own healthy tissue."
+              },
+              {
+                "action": "Check for a foreign trigger",
+                "detail": "Cultures grew no microorganisms and there was no injury."
+              },
+              {
+                "action": "Reject the infection option",
+                "detail": "Swelling alone does not establish infection."
+              },
+              {
+                "action": "Reject the injury option",
+                "detail": "The stem states no recent injury, and the tissue attacked is healthy."
+              },
+              {
+                "action": "Settle C versus D",
+                "detail": "With no foreign material, the attack on self points to a failure of self tolerance."
+              }
+            ],
+            "verdict": "Self tolerance usually prevents attacks on healthy tissue; here the client's tissue is being treated as non self."
+          },
+          "caseGroup": "ig16-case14",
+          "caseStep": 1,
+          "objective": "Compare innate and adaptive immunity",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig16-x08",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client has an inherited condition that causes low levels of complement. Antibody levels from childhood vaccines are in the expected range. Two hours ago the client cut the right palm on a metal edge, and bacteria of a type the client has never been exposed to or vaccinated against entered the cut. Which statement by the nurse about the next few hours is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Your vaccine antibodies will bind these bacteria, so your low complement level will not slow clearing them.\"",
+              "correct": false,
+              "rationale": "Antibodies bind specific antigens. The client was never exposed to or vaccinated against these bacteria, so the vaccine antibodies do not target them."
+            },
+            {
+              "id": "B",
+              "text": "\"Low complement mainly weakens your memory cells, so only a second exposure to these bacteria will be affected.\"",
+              "correct": false,
+              "rationale": "Memory cells belong to adaptive immunity. Complement is a group of proteins that strengthens defense and supports removal of invaders now, not memory for later."
+            },
+            {
+              "id": "C",
+              "text": "\"Removal of these bacteria may be slower, because complement strengthens the innate defense that is acting now.\"",
+              "correct": true,
+              "rationale": "Innate immunity gives an immediate, broad defense without prior exposure, and complement is one of its proteins. With low complement, removal of the bacteria in the first hours is less efficient."
+            },
+            {
+              "id": "D",
+              "text": "\"Removal of these bacteria should be at the usual pace, because complement acts only once antibodies have formed.\"",
+              "correct": false,
+              "rationale": "This links complement to antibodies, which sounds plausible. But complement is part of the innate defense, and with no prior exposure the client has no antibodies against these bacteria in the first hours; adaptive responses take time to develop."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Complement is a group of innate proteins that strengthens defense and supports removal of invaders. In the first hours after a new exposure, protection comes from innate immunity, so a low complement level slows removal of the bacteria right away.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "C and D both tie the effect to how complement works. The cue that decides is \"never been exposed to or vaccinated against\" within 2 hours: no specific antibodies exist yet, so the defense acting now is innate, and complement strengthens it.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Place the timing",
+                "detail": "Two hours after a first exposure, adaptive immunity has not developed yet."
+              },
+              {
+                "action": "Reject the vaccine option",
+                "detail": "Antibodies are specific, and none target these bacteria."
+              },
+              {
+                "action": "Reject the memory option",
+                "detail": "Complement works in the current response, not in immune memory."
+              },
+              {
+                "action": "Settle C versus D",
+                "detail": "Complement strengthens innate defense, which is the defense acting in the first hours."
+              }
+            ],
+            "verdict": "Removal of the bacteria may be slower, because complement strengthens the innate defense acting now."
+          },
+          "caseGroup": "ig16-case14",
+          "caseStep": 2,
+          "objective": "Compare innate and adaptive immunity",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig16-m25",
+          "type": "matrix",
+          "scenario": "A nurse reviews immune events described in the records of five clients.",
+          "stem": "For each immune event, indicate whether it is part of antibody mediated (humoral) immunity or cell mediated immunity.",
+          "columns": [
+            "Antibody mediated (humoral) immunity",
+            "Cell mediated immunity"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Immune cells destroy liver cells in the client's own body that a virus has infected",
+              "answer": "Cell mediated immunity",
+              "rationale": "Cell mediated immunity involves T lymphocytes and targets infected or abnormal cells. A virus is foreign, but the target here is the client's own infected cells, which points to cell mediated immunity."
+            },
+            {
+              "id": "r2",
+              "text": "Immunoglobulins bind a bacterial toxin circulating in the blood and neutralize it",
+              "answer": "Antibody mediated (humoral) immunity",
+              "rationale": "Antibodies (immunoglobulins) bind to specific antigens and neutralize or remove foreign material. Free toxin in the blood is a target for antibodies."
+            },
+            {
+              "id": "r3",
+              "text": "Immune cells recognize abnormal cells in a growing tumor in the left lung and target them",
+              "answer": "Cell mediated immunity",
+              "rationale": "Cell mediated immunity targets abnormal cells. Tumor cells are the client's own cells that have become abnormal."
+            },
+            {
+              "id": "r4",
+              "text": "Activated B lymphocytes develop into plasma cells in a lymph node 5 days after a vaccine",
+              "answer": "Antibody mediated (humoral) immunity",
+              "rationale": "B lymphocytes differentiate into antibody producing plasma cells when activated by antigens. This is the humoral response."
+            },
+            {
+              "id": "r5",
+              "text": "Antibodies received as immune globulin 1 day ago bind a virus in the blood before it enters body cells",
+              "answer": "Antibody mediated (humoral) immunity",
+              "rationale": "The antibodies came from another source, but they still act by binding a specific antigen and neutralizing it. The virus is free in the blood and has not entered cells, so antibodies, not T lymphocytes, act on it."
+            }
+          ],
+          "answer": {
+            "r1": "Cell mediated immunity",
+            "r2": "Antibody mediated (humoral) immunity",
+            "r3": "Cell mediated immunity",
+            "r4": "Antibody mediated (humoral) immunity",
+            "r5": "Antibody mediated (humoral) immunity"
+          },
+          "scoring": "0/1",
+          "takeaway": "Humoral immunity uses B lymphocytes, plasma cells, and antibodies that bind antigens free in the body. Cell mediated immunity uses T lymphocytes that target the body's own cells once they are infected or abnormal. Ask where the target is: free in the blood or inside a body cell.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Several rows involve a virus, which tempts one column for all of them. The cue in each row is where the target sits: a virus free in the blood is an antibody target, while a body cell the virus has infected is a cell mediated target.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the target in each row",
+                "detail": "Free toxin or virus in the blood, or the client's own infected or abnormal cells."
+              },
+              {
+                "action": "Assign free targets",
+                "detail": "Antibodies bind specific antigens and neutralize them: rows 2 and 5."
+              },
+              {
+                "action": "Assign cell targets",
+                "detail": "T lymphocytes target infected or abnormal cells: rows 1 and 3."
+              },
+              {
+                "action": "Assign the B lymphocyte step",
+                "detail": "B lymphocytes becoming plasma cells is the humoral response: row 4."
+              }
+            ],
+            "verdict": "Rows 1 and 3 are cell mediated; rows 2, 4, and 5 are antibody mediated (humoral)."
+          },
+          "caseGroup": "ig16-case14",
+          "caseStep": 3,
+          "objective": "Compare innate and adaptive immunity",
+          "difficulty": "difficult",
+          "new": true,
+          "addedBatch": 7
         }
       ]
     },
@@ -4871,6 +5147,146 @@
           "difficulty": "difficult",
           "addedBatch": 5,
           "hardenedBatch": 6
+        },
+        {
+          "id": "ig19-x07",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A parent brings a 3 week old infant who is breastfed to a clinic. The parent had a contagious viral illness as a child and recovered. An older sibling at home developed the same illness yesterday. The parent says, \"My breast milk passes my antibodies to the baby, so the baby is protected the way I am.\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"The antibodies in your breast milk give the baby lasting immunity that builds memory over time.\"",
+              "correct": false,
+              "rationale": "Antibodies passed through breast milk are natural passive immunity. Passive immunity is temporary and does not create personal immune memory."
+            },
+            {
+              "id": "B",
+              "text": "\"Breast milk carries no antibodies, so the baby gets no protection against the illness from you.\"",
+              "correct": false,
+              "rationale": "Maternal antibodies are transferred through the placenta and through breast milk. The baby does receive some protection."
+            },
+            {
+              "id": "C",
+              "text": "\"Your antibodies give the baby temporary protection, so the baby's risk is the same as yours.\"",
+              "correct": false,
+              "rationale": "The first half is accurate: natural passive immunity is immediate and temporary. But the parent has active immunity with memory from recovering from the illness, and a 3 week old infant has an immature immune system, so the risks are not the same."
+            },
+            {
+              "id": "D",
+              "text": "\"Your antibodies give the baby temporary protection, but the baby's own immune system is immature.\"",
+              "correct": true,
+              "rationale": "Natural passive immunity gives immediate but temporary protection without memory. Infants have immature immune systems, so the infant still needs closer assessment after this exposure."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Antibodies from breast milk give an infant natural passive immunity: immediate, temporary, and without memory. Age is a factor that affects immunity, and infants have immature immune systems, so the history of an exposure calls for closer assessment of the infant.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "C and D both describe the breast milk antibodies correctly. The cue that decides is \"3 week old\": infants have immature immune systems, while the parent has lasting active immunity from recovering, so the baby is not protected the way the parent is.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Classify the protection",
+                "detail": "Antibodies through breast milk are natural passive immunity."
+              },
+              {
+                "action": "Reject the lasting option",
+                "detail": "Passive immunity is temporary and creates no memory."
+              },
+              {
+                "action": "Reject the no protection option",
+                "detail": "Maternal antibodies do pass through breast milk."
+              },
+              {
+                "action": "Settle C versus D",
+                "detail": "The infant's age means an immature immune system, so the risk is not equal to the parent's."
+              }
+            ],
+            "verdict": "The antibodies give temporary protection, but the 3 week old infant's immune system is immature."
+          },
+          "caseGroup": "ig19-case15",
+          "caseStep": 1,
+          "objective": "Connect immune responses with nursing assessment",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig19-x08",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client reports a warm, red, swollen left knee and rates the pain 6 of 10. The skin over the knee is intact, and oral temperature is 36.8 °C. The client first noticed the swelling this morning on waking, and no one has examined the knee before today. The client has not described any activity before the swelling appeared. Which question does the nurse ask first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Have you taken anything for the pain today, and did it help at all?\"",
+              "correct": false,
+              "rationale": "A medication history is part of the assessment, but it does not help tell whether the knee findings came from an injury or an infection."
+            },
+            {
+              "id": "B",
+              "text": "\"Is the knee more swollen now than it was when you first noticed it?\"",
+              "correct": false,
+              "rationale": "Comparing findings over time matters, and this sounds like the baseline rule. But the swelling was first noticed only this morning, no one has examined the knee, and nothing was measured then, so a comparison gives little to act on. What caused the inflammation is still unknown, and that is the gap to fill first."
+            },
+            {
+              "id": "C",
+              "text": "\"Did you injure, twist, or strain the knee before the swelling started?\"",
+              "correct": true,
+              "rationale": "Onset is already known, so the next history item is recent injury. Inflammation can occur after an injury without infection, so the answer helps separate inflammation from injury from inflammation with infection."
+            },
+            {
+              "id": "D",
+              "text": "\"Has anyone you live with been sick with an infection in the past week?\"",
+              "correct": false,
+              "rationale": "Exposure history is reviewed, but it comes after recent injury. Warmth, redness, and swelling alone do not establish infection, so the nurse first asks about what could have caused the inflammation."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "When a joint is warm, red, and swollen, the nurse asks about symptom onset and recent injury; when onset is already known, recent injury comes next. Inflammation can occur without infection, so injury history helps separate the two before later findings are compared with a baseline.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "B and C are both sound assessment questions. The cue that decides is \"first noticed the swelling this morning, and no one has examined the knee before today\": no earlier exam exists to compare with and the cause is still unknown, so asking about recent injury comes first.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Look for a baseline",
+                "detail": "The swelling was first noticed this morning and no earlier exam exists."
+              },
+              {
+                "action": "Reject the comparison for now",
+                "detail": "With no earlier exam, B adds little until the cause is explored."
+              },
+              {
+                "action": "Rank the history questions",
+                "detail": "Onset is known; recent injury comes before medication and exposure history."
+              },
+              {
+                "action": "Tie it to the goal",
+                "detail": "Injury history helps tell inflammation without infection from infection."
+              }
+            ],
+            "verdict": "Ask about recent injury first."
+          },
+          "caseGroup": "ig19-case15",
+          "caseStep": 2,
+          "objective": "Differentiate inflammation from infection",
+          "new": true,
+          "addedBatch": 7
         }
       ]
     },
@@ -6542,7 +6958,6 @@
           "caseGroup": "ig27-case8",
           "caseStep": 1,
           "objective": "Review the basic anatomy, blood flow, and valves of the heart.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -6609,7 +7024,6 @@
           "caseGroup": "ig27-case8",
           "caseStep": 2,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -6697,7 +7111,6 @@
           "caseGroup": "ig27-case8",
           "caseStep": 3,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -6768,7 +7181,6 @@
           "caseGroup": "ig27-case9",
           "caseStep": 1,
           "objective": "Describe the basic functions of the arterial and venous systems.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -6839,7 +7251,6 @@
           "caseGroup": "ig27-case9",
           "caseStep": 2,
           "objective": "Describe the basic functions of the arterial and venous systems.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -6910,7 +7321,6 @@
           "caseGroup": "ig27-case9",
           "caseStep": 3,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -7004,7 +7414,6 @@
           "caseGroup": "ig27-case10",
           "caseStep": 1,
           "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -7071,8 +7480,416 @@
           "caseGroup": "ig27-case10",
           "caseStep": 2,
           "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
-          "new": true,
           "addedBatch": 6
+        },
+        {
+          "id": "ig27-x05",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 24 years old, is seen for a physical before joining a running club. The client runs 5 km three times each week and reports no shortness of breath, chest pain, or swelling. Heart rate 58 beats per minute and regular, blood pressure 114/70 mm Hg in the right arm, lungs clear in all fields. With the bell at the apex, the nurse hears a soft, low pitched extra sound just after S2, during rapid ventricular filling. Which action by the nurse is most appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Record an S3 that may be a normal finding at this age, and complete the assessment",
+              "correct": true,
+              "rationale": "An S3 is heard during rapid ventricular filling and may be normal in clients younger than 35 years. At 24 years, with no symptoms and clear lungs, the nurse records it and finishes the assessment."
+            },
+            {
+              "id": "B",
+              "text": "Report an S3 to the provider now, because it may signal decreased ventricular compliance",
+              "correct": false,
+              "rationale": "This is the right meaning of an S3 in an older adult. The client's age of 24 years is the cue that changes the interpretation: under 35 years an S3 may be normal."
+            },
+            {
+              "id": "C",
+              "text": "Record an S4 caused by a stiff ventricle from regular endurance running",
+              "correct": false,
+              "rationale": "An S4 is heard during atrial contraction, just before S1. This sound falls just after S2, during ventricular filling, so it is an S3."
+            },
+            {
+              "id": "D",
+              "text": "Report a pericardial friction rub, because it is often transient and may be missed later",
+              "correct": false,
+              "rationale": "A friction rub is a scratchy sound from an inflamed pericardium. This is a soft, low pitched sound tied to ventricular filling, not a rub."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "An S3 occurs during rapid ventricular filling, just after S2. It may be normal in clients younger than 35 years; in older adults it may indicate decreased ventricular compliance or heart failure.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Name the sound by its timing first: just after S2 is S3, just before S1 is S4. Then let the age decide what the S3 means.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Time the sound",
+                "detail": "Just after S2, during rapid filling, is an S3. The S4 and rub options are out."
+              },
+              {
+                "action": "Compare the two S3 options",
+                "detail": "One records it, one reports it as decreased compliance."
+              },
+              {
+                "action": "Apply the cue",
+                "detail": "At 24 years with no symptoms and clear lungs, an S3 may be normal, so the nurse records it."
+              }
+            ],
+            "verdict": "A. Record an S3 that may be normal at this age and complete the assessment."
+          },
+          "caseGroup": "ig27-case11",
+          "caseStep": 1,
+          "objective": "Perform a focused cardiovascular history and physical assessment.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig27-m25",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A client, 68 years old, had rheumatic fever as a child. With the client turned toward the left side, the nurse hears a low pitched rumbling sound at the apex that begins after S2 and continues until just before the next S1. The sound is not heard in the neck or the left axilla. The nurse identifies this as [[1]].\n\nThe sound is produced by [[2]].\n\nIn the record, the nurse describes the sound by [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "An S3 gallop from rapid ventricular filling",
+                  "correct": false,
+                  "rationale": "An S3 is a single short sound just after S2. This sound lasts through the interval from S2 to the next S1, which makes it a murmur."
+                },
+                {
+                  "id": "B",
+                  "text": "A diastolic murmur",
+                  "correct": true,
+                  "rationale": "A murmur heard between S2 and S1 is diastolic. The sound continues across that whole interval, so it is a murmur rather than a single extra sound."
+                },
+                {
+                  "id": "C",
+                  "text": "A systolic murmur",
+                  "correct": false,
+                  "rationale": "A systolic murmur falls between S1 and S2. This sound begins after S2 and ends before S1."
+                },
+                {
+                  "id": "D",
+                  "text": "A pericardial friction rub",
+                  "correct": false,
+                  "rationale": "A rub is a scratchy sound from an inflamed pericardium. This sound is a low pitched rumble at the apex."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Movement of an inflamed pericardium against the heart",
+                  "correct": false,
+                  "rationale": "That produces a pericardial friction rub, which is scratchy and often transient."
+                },
+                {
+                  "id": "B",
+                  "text": "Blood filling a stiff ventricle during atrial contraction",
+                  "correct": false,
+                  "rationale": "That produces an S4, a brief sound just before S1, not a sound lasting across diastole."
+                },
+                {
+                  "id": "C",
+                  "text": "Turbulent blood flow in or near the heart",
+                  "correct": true,
+                  "rationale": "Murmurs are whooshing or swishing sounds from turbulent flow in or near the heart."
+                },
+                {
+                  "id": "D",
+                  "text": "Closure of the aortic and pulmonic valves",
+                  "correct": false,
+                  "rationale": "Closure of the semilunar valves produces S2. The murmur starts after S2."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Location, timing, radiation, and quality",
+                  "correct": true,
+                  "rationale": "Murmurs are described by location, timing, radiation, and quality. Here: apex, diastolic, no radiation to the neck or axilla, low pitched rumble."
+                },
+                {
+                  "id": "B",
+                  "text": "Location, timing, and a grade from I to VI",
+                  "correct": false,
+                  "rationale": "Grading is done by the provider; the nurse is not expected to grade murmurs. Radiation and quality are also left out."
+                },
+                {
+                  "id": "C",
+                  "text": "Rate, rhythm, location, and pulse deficit",
+                  "correct": false,
+                  "rationale": "These describe the heart rate and rhythm, not a murmur. Timing, radiation, and quality are missing."
+                },
+                {
+                  "id": "D",
+                  "text": "Timing and radiation only, since location is always the apex",
+                  "correct": false,
+                  "rationale": "Murmurs can be loudest at any valve area, so location is always part of the description."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "B",
+            "2": "C",
+            "3": "A"
+          },
+          "scoring": "0/1",
+          "takeaway": "A murmur between S2 and S1 is diastolic; between S1 and S2 it is systolic. Murmurs come from turbulent flow and are described by location, timing, radiation, and quality.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "A single extra sound and a murmur can sit in the same part of the cycle. Duration decides: a murmur fills the interval, a gallop is one brief sound.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Place the sound",
+                "detail": "After S2 until the next S1 is diastole."
+              },
+              {
+                "action": "Separate murmur from gallop",
+                "detail": "The sound continues across the interval, so it is a murmur, not an S3."
+              },
+              {
+                "action": "Name the cause",
+                "detail": "Turbulent flow produces murmurs."
+              },
+              {
+                "action": "Choose the description",
+                "detail": "Location, timing, radiation, and quality."
+              }
+            ],
+            "verdict": "1: a diastolic murmur. 2: turbulent blood flow in or near the heart. 3: location, timing, radiation, and quality."
+          },
+          "caseGroup": "ig27-case11",
+          "caseStep": 2,
+          "objective": "Perform a focused cardiovascular history and physical assessment.",
+          "difficulty": "difficult",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig27-x06",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 72 years old, with heart failure received 2 L of intravenous fluid between 0800 and 1200 for dehydration. At 0800 blood pressure was 118/72 mm Hg and the lungs were clear. At 1200 blood pressure is 96/60 mm Hg, heart rate is 114 beats per minute, an S3 is heard at the apex, and crackles are heard in both lung bases. Which explanation of the change in blood pressure is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Preload rose, so the stretched fibers contracted harder, and the pressure fell from vessel dilation",
+              "correct": false,
+              "rationale": "Within limits, more filling does make the muscle contract more forcefully. The cue is the failing heart that now has crackles and an S3: the filling has gone past that limit, and the pressure fell because output fell."
+            },
+            {
+              "id": "B",
+              "text": "Preload fell, because fluid moved into the lungs and less blood returned to the left ventricle",
+              "correct": false,
+              "rationale": "Crackles show fluid backing up behind the left ventricle, which means the ventricle is overfilled, not underfilled."
+            },
+            {
+              "id": "C",
+              "text": "Preload rose past the point where stretch helps, so the overfilled ventricle ejected less blood",
+              "correct": true,
+              "rationale": "Preload is the fiber stretch at the end of diastole. Within limits, more stretch raises stroke volume, but excessive filling in a failing heart lowers cardiac output, so blood pressure falls and the heart rate rises."
+            },
+            {
+              "id": "D",
+              "text": "Afterload rose, because the extra fluid narrowed the arteries and raised resistance to ejection",
+              "correct": false,
+              "rationale": "Afterload is the resistance the ventricle pumps against. Added fluid volume acts on filling, which is preload, and the blood pressure fell rather than rose."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Preload is the stretch of the ventricular fibers at the end of diastole. Within limits, more filling strengthens contraction; excessive filling, especially in a failing heart, lowers cardiac output.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two options agree that preload rose. Decide whether the stretch still helps: a falling blood pressure with new crackles and an S3 in heart failure says the ventricle is overfilled.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Name the factor",
+                "detail": "Added fluid volume changes filling, which is preload. The afterload option is out."
+              },
+              {
+                "action": "Check the direction",
+                "detail": "Crackles mean blood is backing up, so preload rose. The falling preload option is out."
+              },
+              {
+                "action": "Apply the cue",
+                "detail": "In a failing heart with crackles and an S3, the extra stretch no longer helps; output and pressure fell."
+              }
+            ],
+            "verdict": "C. Preload rose past the point where stretch helps, so the overfilled ventricle ejected less blood."
+          },
+          "caseGroup": "ig27-case11",
+          "caseStep": 3,
+          "objective": "Explain cardiac output, stroke volume, preload, afterload, and mean arterial pressure.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig27-x07",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 66 years old, returns to the unit at 1030 after a transesophageal echocardiogram. The throat was sprayed with a local anesthetic before the probe was passed. The client is alert and oriented, blood pressure 128/78 mm Hg and heart rate 76 beats per minute, the same as before the test, and oxygen saturation 97% on room air. The client says, \"My mouth is so dry. Can I have some water now?\" Which action by the nurse is most appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Check the gag and swallow reflexes before giving any water",
+              "correct": true,
+              "rationale": "The anesthetic spray numbs the throat, so the gag and swallow reflexes may not have returned. Fluids before they return can be aspirated, so the nurse checks them first."
+            },
+            {
+              "id": "B",
+              "text": "Give small sips of water, because the client is alert and vital signs are unchanged",
+              "correct": false,
+              "rationale": "Alertness and unchanged vital signs show the sedation has worn off. The throat spray is the cue: the gag reflex may still be absent even in an alert client."
+            },
+            {
+              "id": "C",
+              "text": "Give ice chips instead of water, because they melt slowly and are safer",
+              "correct": false,
+              "rationale": "Ice chips melt into water and carry the same aspiration risk while the throat is numb."
+            },
+            {
+              "id": "D",
+              "text": "Keep the client on nothing by mouth until the provider writes a diet order",
+              "correct": false,
+              "rationale": "Recovery of the gag reflex, not a new order, determines when oral intake can resume after the procedure."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "After a transesophageal echocardiogram, care is like that after an upper endoscopy. The throat is numbed, so the nurse confirms the gag and swallow reflexes have returned before any oral intake.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "An alert client with normal vital signs looks ready to drink. Ask what the procedure did to the throat: the local anesthetic is the cue.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Find the risk",
+                "detail": "The anesthetic spray suppresses the gag reflex, which creates an aspiration risk."
+              },
+              {
+                "action": "Compare water and the reflex check",
+                "detail": "Alertness rules out sedation as a barrier, but not a numb throat."
+              },
+              {
+                "action": "Choose",
+                "detail": "Assess the gag and swallow reflexes before any fluid."
+              }
+            ],
+            "verdict": "A. Check the gag and swallow reflexes before giving any water."
+          },
+          "caseGroup": "ig27-case12",
+          "caseStep": 1,
+          "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig27-x08",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 70 years old, is scheduled for a cardiac MRI at 1400 to evaluate ventricular function. The client had a permanent pacemaker placed in the left upper chest 6 years ago, reports feeling anxious in small spaces, and is wearing a wedding ring and a wristwatch. Which action by the nurse is most important before the scan?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ask the provider for a prescribed antianxiety drug, since the client feels anxious in small spaces",
+              "correct": false,
+              "rationale": "Anxiety in small spaces is a real concern during a 15 to 60 minute scan, and the nurse can address it. It does not threaten the client's heart rhythm."
+            },
+            {
+              "id": "B",
+              "text": "Remove the wedding ring and the wristwatch, and check for metal fasteners on the clothing",
+              "correct": false,
+              "rationale": "All metal objects are removed before an MRI, so this is part of the preparation. It is not the most important step for this client."
+            },
+            {
+              "id": "C",
+              "text": "Report the pacemaker to the provider and the MRI team to confirm the device is compatible",
+              "correct": true,
+              "rationale": "The magnetic field can deactivate a pacemaker. Some newer machines allow scanning, but the team must confirm this before the client enters the scanner."
+            },
+            {
+              "id": "D",
+              "text": "Explain that the scan is painless and that the client must lie still while it is in progress",
+              "correct": false,
+              "rationale": "Teaching about the scan is appropriate, but it does not address the device in the left upper chest."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Before an MRI the nurse removes all metal objects and screens for implanted devices. A pacemaker or implanted defibrillator can be deactivated by the magnetic field, so the team must confirm the device is compatible.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Several options are correct preparation. Rank them by harm: a device that keeps the heart beating outranks jewelry and anxiety.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "List the issues",
+                "detail": "Pacemaker, anxiety in small spaces, ring and watch."
+              },
+              {
+                "action": "Rank by harm",
+                "detail": "A deactivated pacemaker can stop effective heart rhythm; jewelry and anxiety cannot."
+              },
+              {
+                "action": "Choose",
+                "detail": "Report the pacemaker so compatibility is confirmed before the scan."
+              }
+            ],
+            "verdict": "C. Report the pacemaker to confirm the device is compatible with the MRI."
+          },
+          "caseGroup": "ig27-case12",
+          "caseStep": 2,
+          "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
+          "new": true,
+          "addedBatch": 7
         }
       ]
     },
@@ -8747,7 +9564,6 @@
           "caseGroup": "ig29-case9",
           "caseStep": 1,
           "objective": "Differentiate left and right sided heart failure and identify their key clinical findings.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -8819,7 +9635,6 @@
           "caseGroup": "ig29-case9",
           "caseStep": 2,
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -8889,8 +9704,386 @@
           "caseGroup": "ig29-case9",
           "caseStep": 3,
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
-          "new": true,
           "addedBatch": 6
+        },
+        {
+          "id": "ig29-x06",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client with heart failure reports nausea and has eaten half of each meal for 1 week. The client takes no digoxin. Neck veins are distended with the head of the bed at 45 degrees, and there is 2+ pitting edema in both ankles. Abdominal girth is 102 cm, was 96 cm 1 week ago, and the liver edge is felt below the right rib margin. Hands and feet are warm bilaterally, and urine output was 1500 mL over the last 24 hours. Blood pressure 132/80 mm Hg, heart rate 84 beats per minute. Which explanation of the nausea is most accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Blood backing up into the systemic veins is congesting the liver and gut, causing the nausea and poor appetite.",
+              "correct": true,
+              "rationale": "The neck vein distention, ankle edema, growing girth, and enlarged liver are systemic venous congestion. Congestion of the liver and gut causes anorexia and nausea in right sided failure. Warm hands and feet and 1500 mL of urine show that blood flow to the organs is holding up."
+            },
+            {
+              "id": "B",
+              "text": "Low cardiac output is reducing blood flow to the stomach and bowel, which causes the nausea and poor appetite.",
+              "correct": false,
+              "rationale": "Decreased cardiac output is a real cause of organ dysfunction in heart failure, which makes this tempting. Here the perfusion findings argue against it: hands and feet are warm and urine output is 1500 mL in 24 hours."
+            },
+            {
+              "id": "C",
+              "text": "Fluid in the lungs is lowering the oxygen that reaches the stomach, which causes the nausea and poor appetite.",
+              "correct": false,
+              "rationale": "Pulmonary congestion produces dyspnea, orthopnea, crackles, and cough. The stem describes no lung findings, and the gut findings follow the systemic veins."
+            },
+            {
+              "id": "D",
+              "text": "The sodium restriction is making food taste bland, which is the main reason the client eats less.",
+              "correct": false,
+              "rationale": "A bland diet may lower appetite, but it does not explain a growing girth, an enlarged liver, and distended neck veins, which point to venous congestion."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "In right sided failure, blood backs up into the systemic veins: neck vein distention, dependent edema, ascites, an enlarged liver, and anorexia and nausea from liver and gut congestion. Low output shows up as cool extremities, low urine output, and confusion.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options blame the heart for the nausea. Check the perfusion findings: warm hands and feet and a normal urine output mean blood is reaching the organs, so the cause is congestion, not low output.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Group the findings",
+                "detail": "Neck veins, ankle edema, girth, and liver all point to systemic venous congestion."
+              },
+              {
+                "action": "Check perfusion",
+                "detail": "Warm hands and feet and 1500 mL of urine in 24 hours argue against low cardiac output."
+              },
+              {
+                "action": "Reject the lung cause",
+                "detail": "No lung findings are described."
+              },
+              {
+                "action": "Reject the diet cause",
+                "detail": "Diet does not explain the liver and girth changes."
+              }
+            ],
+            "verdict": "Liver and gut congestion from right sided failure; perfusion findings are intact."
+          },
+          "caseGroup": "ig29-case10",
+          "caseStep": 1,
+          "objective": "Differentiate left and right sided heart failure and identify their key clinical findings.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig29-x08",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client with right sided heart failure takes a prescribed diuretic each morning at 0800. The client has 2+ pitting edema in both ankles each evening, and 1+ edema in both ankles on waking. For 2 weeks, the client has woken 3 times each night to urinate and passes less urine during the day. The client asks, \"Is my water pill keeping me up at night?\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Yes. The pill keeps working through the night, so ask your provider about taking half of it at bedtime.\"",
+              "correct": false,
+              "rationale": "Night urination after a diuretic is a common concern, which makes this tempting. The diuretic is taken at 0800, and moving a dose to bedtime would make night urination worse. The overnight drop in ankle edema points to fluid returning from the legs."
+            },
+            {
+              "id": "B",
+              "text": "\"Probably not. Lying down lets fluid in your legs move back into your blood, and the kidneys remove it.\"",
+              "correct": true,
+              "rationale": "With the legs raised in bed, fluid from the swollen tissues returns to the circulation and the kidneys excrete it, so the client urinates at night. The deciding cue is the 0800 dose, with ankle edema that is smaller each morning."
+            },
+            {
+              "id": "C",
+              "text": "\"Probably not. Waking to urinate means your kidneys are failing, so your provider will need to stop the pill.\"",
+              "correct": false,
+              "rationale": "Kidney failure is not the explanation for night urination with edema that falls overnight. Stopping a prescribed diuretic would let fluid build up."
+            },
+            {
+              "id": "D",
+              "text": "\"Yes. Stop drinking anything after lunch, and the night urination will go away within a few days.\"",
+              "correct": false,
+              "rationale": "Night urination here comes from fluid returning from the legs, not from evening drinks, and the diuretic is not the cause given the morning dose."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Nocturia is a finding of right sided failure: at rest and lying flat, fluid in the dependent tissues returns to the circulation and the kidneys excrete it, so the client wakes to urinate while passing less urine during the day.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two answers are defensible: the diuretic, or fluid shifting at night. The time of the dose and the overnight drop in ankle edema decide it.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Read the dose time",
+                "detail": "The diuretic is taken at 0800, not in the evening."
+              },
+              {
+                "action": "Read the edema pattern",
+                "detail": "Edema is 2+ each evening and 1+ each morning, so fluid leaves the legs overnight."
+              },
+              {
+                "action": "Name the mechanism",
+                "detail": "Fluid returns to the circulation when the legs are raised, and the kidneys excrete it."
+              },
+              {
+                "action": "Reject the rest",
+                "detail": "A bedtime dose worsens it; kidney failure and evening drinks do not fit."
+              }
+            ],
+            "verdict": "Fluid from the legs returns to the blood at rest and is excreted at night."
+          },
+          "caseGroup": "ig29-case10",
+          "caseStep": 2,
+          "objective": "Differentiate left and right sided heart failure and identify their key clinical findings.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig29-x05",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client with heart failure has received a prescribed intravenous diuretic for 3 days. Weight is 6 lb lower than on admission on the same scale. Crackles are no longer heard in either lung base, and there is no edema in either ankle. Serum creatinine is 2.1 mg/dL today, was 1.1 mg/dL on admission. Blood urea nitrogen is 48 mg/dL today, was 22 mg/dL on admission. The next diuretic dose is due at 1000. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Documents that the diuretic is meeting its goal of removing fluid, and gives the 1000 dose as prescribed.",
+              "correct": false,
+              "rationale": "Clear lungs, no ankle edema, and 6 lb of weight loss do show that congestion has been relieved, which makes this tempting. It ignores the creatinine, which has nearly doubled since admission."
+            },
+            {
+              "id": "B",
+              "text": "Requests a larger diuretic dose, because rising creatinine and blood urea nitrogen show fluid overload is worsening.",
+              "correct": false,
+              "rationale": "Every congestion finding has resolved, so fluid overload is not worsening. A larger dose would remove more fluid and reduce kidney perfusion further."
+            },
+            {
+              "id": "C",
+              "text": "Reports the creatinine and blood urea nitrogen trend to the provider before giving the 1000 dose.",
+              "correct": true,
+              "rationale": "The deciding cue is the creatinine, 2.1 mg/dL now and 1.1 mg/dL on admission, with a rising blood urea nitrogen. Impaired kidney perfusion raises both values. With the congestion already relieved, the provider needs this before more fluid is removed."
+            },
+            {
+              "id": "D",
+              "text": "Encourages 3 L of oral fluid today to protect the kidneys, and gives the 1000 dose as prescribed.",
+              "correct": false,
+              "rationale": "Pushing fluids in a client with heart failure is not an independent nursing decision and works against the treatment plan. The rising values need to reach the provider."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Electrolytes, blood urea nitrogen, and creatinine are monitored in heart failure. Poor kidney perfusion raises blood urea nitrogen and creatinine, so a rising creatinine during diuresis is reported even when the lungs and ankles are clear.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two options read the trend: one sees the clear lungs and gives the dose, the other sees the creatinine. A value that nearly doubled since admission decides it.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Weigh the congestion findings",
+                "detail": "Clear lungs, no edema, and weight loss show the fluid goal has been met."
+              },
+              {
+                "action": "Read the kidney trend",
+                "detail": "Creatinine rose from 1.1 to 2.1 mg/dL and blood urea nitrogen from 22 to 48 mg/dL since admission."
+              },
+              {
+                "action": "Reject more diuresis",
+                "detail": "Overload is not worsening; more fluid removal lowers kidney perfusion."
+              },
+              {
+                "action": "Reject pushing fluids",
+                "detail": "This is not an independent action in heart failure."
+              }
+            ],
+            "verdict": "Report the rising creatinine and blood urea nitrogen before the next dose."
+          },
+          "caseGroup": "ig29-case10",
+          "caseStep": 3,
+          "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig29-m20",
+          "type": "matrix",
+          "scenario": "A clinic nurse reviews telephone reports from six clients with heart failure. Each client weighs each morning after voiding, on the same home scale, in similar clothing.",
+          "stem": "For each report, indicate whether the client should call the clinic today or continue home monitoring.",
+          "columns": [
+            "Call the clinic today",
+            "Continue home monitoring"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Weight 172.5 lb this morning, was 170 lb yesterday morning; breathing and ankles unchanged",
+              "answer": "Call the clinic today",
+              "rationale": "A gain of 2.5 lb in 24 hours falls in the 2 to 3 lb in 24 hours range that is reported, even with no new symptoms."
+            },
+            {
+              "id": "r2",
+              "text": "Weight up 1 lb each morning for 5 days in a row, 175 lb today, was 170 lb 5 days ago",
+              "answer": "Call the clinic today",
+              "rationale": "No single day reached 2 lb, which makes this look safe. The total is 5 lb in less than 1 week, which meets the weekly reporting rule."
+            },
+            {
+              "id": "r3",
+              "text": "Weight 171.5 lb this morning, was 170 lb yesterday morning; breathing and ankles unchanged",
+              "answer": "Continue home monitoring",
+              "rationale": "A gain of 1.5 lb in 24 hours is below the 2 to 3 lb daily threshold, and no other finding has changed. The client keeps weighing daily."
+            },
+            {
+              "id": "r4",
+              "text": "Weight up 4 lb over the last 7 days, never more than 1 lb in a day; breathing, ankles, and walking distance unchanged",
+              "answer": "Continue home monitoring",
+              "rationale": "The total is 4 lb in 1 week, below the 5 lb weekly threshold, and no single day reached 2 lb. No other reportable finding is present, so the client keeps monitoring and calls if the total reaches 5 lb."
+            },
+            {
+              "id": "r5",
+              "text": "Weight unchanged for 1 week; now short of breath while sitting and watching television",
+              "answer": "Call the clinic today",
+              "rationale": "Weight alone would suggest no problem. New dyspnea at rest is reported regardless of weight."
+            },
+            {
+              "id": "r6",
+              "text": "Weight 168 lb this morning, was 170 lb yesterday morning, after the diuretic dose was raised; ankle swelling less",
+              "answer": "Continue home monitoring",
+              "rationale": "A loss of 2 lb after a dose increase, with less ankle swelling, is the expected response to diuresis. The reporting rule is for weight gain."
+            }
+          ],
+          "answer": {
+            "r1": "Call the clinic today",
+            "r2": "Call the clinic today",
+            "r3": "Continue home monitoring",
+            "r4": "Continue home monitoring",
+            "r5": "Call the clinic today",
+            "r6": "Continue home monitoring"
+          },
+          "scoring": "0/1",
+          "takeaway": "Clients with heart failure report a weight gain of 2 to 3 lb in 24 hours or 5 lb in 1 week, plus increased edema, worsening dyspnea, reduced activity tolerance, and new dyspnea or chest pain at rest.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Check each report against both weight rules: the daily total and the weekly total. Then check for any reportable symptom, which overrides an unchanged weight.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Apply the daily rule",
+                "detail": "2.5 lb in 24 hours is reported; 1.5 lb is not."
+              },
+              {
+                "action": "Apply the weekly rule",
+                "detail": "5 lb over 5 days is reported even though no day reached 2 lb; 4 lb in a week is not."
+              },
+              {
+                "action": "Check symptoms",
+                "detail": "New dyspnea at rest is reported whatever the weight."
+              },
+              {
+                "action": "Read the direction",
+                "detail": "A 2 lb loss after a dose increase is the expected response."
+              }
+            ],
+            "verdict": "Call: 2.5 lb in 24 hours; 5 lb over 5 days; dyspnea at rest. Continue: 1.5 lb in 24 hours; 4 lb in 1 week; 2 lb loss."
+          },
+          "caseGroup": "ig29-case11",
+          "caseStep": 1,
+          "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
+          "difficulty": "difficult",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig29-x07",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client with chronic heart failure is at a clinic visit. The client becomes short of breath climbing one flight of stairs, and it resolves within 2 minutes of rest. This same pattern has been recorded at every visit for the past 4 months. Weight is unchanged for 2 weeks on the same home scale, there is no edema in either ankle, and the client sleeps on 1 pillow. The client says, \"I do all my housework at once in the morning so I can rest all afternoon, but by noon I am exhausted.\" Which response by the nurse is appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Since you are exhausted by noon, stay in bed most of the day so that your heart can rest.\"",
+              "correct": false,
+              "rationale": "Heart failure teaching is to balance activity with rest, not to stay in bed. Prolonged bed rest is not the goal."
+            },
+            {
+              "id": "B",
+              "text": "\"Being exhausted by noon is reduced activity tolerance, so I will report it to your provider today.\"",
+              "correct": false,
+              "rationale": "Reduced activity tolerance is a reportable finding, which makes this defensible. The cue is the same stair pattern for 4 months: tolerance has not dropped, and the tiredness comes from doing every task at once."
+            },
+            {
+              "id": "C",
+              "text": "\"Push through the tiredness each morning, because daily hard work is what makes the heart muscle stronger.\"",
+              "correct": false,
+              "rationale": "Pushing through fatigue raises the workload on a failing heart. Activity is balanced with rest."
+            },
+            {
+              "id": "D",
+              "text": "\"Try spreading the housework across the day, with rest between tasks, instead of doing it all at once.\"",
+              "correct": true,
+              "rationale": "Balancing activity with rest lowers the workload at any one time. The stair pattern has not changed in 4 months, and weight, edema, and sleep position show no worsening, so teaching about pacing fits."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Teach the client with heart failure to balance activity with rest. A drop in activity tolerance from the client's own baseline is reported; fatigue from clustering all tasks together is managed by spacing them with rest.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options take the fatigue seriously. Compare the stair pattern with the past visits: if tolerance has not changed, pacing is the answer, not a report.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Find the baseline",
+                "detail": "Dyspnea on one flight that resolves in 2 minutes, unchanged for 4 months."
+              },
+              {
+                "action": "Check for worsening",
+                "detail": "Weight, edema, and pillows show no change."
+              },
+              {
+                "action": "Reject the extremes",
+                "detail": "Bed rest and pushing through both miss the balance of activity and rest."
+              },
+              {
+                "action": "Choose pacing",
+                "detail": "Spread tasks across the day with rest between them."
+              }
+            ],
+            "verdict": "Balance activity with rest; activity tolerance has not dropped."
+          },
+          "caseGroup": "ig29-case11",
+          "caseStep": 2,
+          "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
+          "new": true,
+          "addedBatch": 7
         }
       ]
     },
@@ -10571,7 +11764,6 @@
           "caseGroup": "ig30-case8",
           "caseStep": 1,
           "objective": "Explain the basic mechanisms that regulate blood pressure and contribute to hypertension.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -10641,7 +11833,6 @@
           "caseGroup": "ig30-case8",
           "caseStep": 2,
           "objective": "Differentiate primary and secondary hypertension and identify major risk factors.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -10732,7 +11923,6 @@
           "caseGroup": "ig30-case8",
           "caseStep": 3,
           "objective": "Recognize common manifestations, complications, and priority nursing assessments for hypertension.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -10801,7 +11991,6 @@
           "caseGroup": "ig30-case9",
           "caseStep": 1,
           "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -10886,8 +12075,362 @@
           "caseGroup": "ig30-case9",
           "caseStep": 2,
           "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
-          "new": true,
           "addedBatch": 6
+        },
+        {
+          "id": "ig30-x05",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 59 years old, started lisinopril for hypertension 2 weeks ago. The client calls the clinic at 1100 and says, \"I have had a dry, tickly cough for a week. Since about 1000 my lips have felt puffy and my tongue feels thick.\" Blood pressure at home this morning was 128/80 mm Hg in the right arm. Which response by the nurse is appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"A dry cough is a common effect of this drug. Keep taking it, and we will discuss another drug at your visit next week.\"",
+              "correct": false,
+              "rationale": "The dry cough is a common adverse effect of ACE inhibitors and is reported so another drug can be considered, which makes this defensible for the cough alone. It ignores the swelling of the lips and tongue, which threatens the airway."
+            },
+            {
+              "id": "B",
+              "text": "\"Call emergency services now. Swelling of your lips and tongue can block your airway.\"",
+              "correct": true,
+              "rationale": "The deciding cue is the puffy lips and thick tongue that began an hour ago. Swelling of the face, lips, and tongue is a known reaction to ACE inhibitors, and a swelling tongue can block the airway. Airway comes first."
+            },
+            {
+              "id": "C",
+              "text": "\"Skip today's dose, take an antihistamine, and call back this afternoon if the swelling has not gone down.\"",
+              "correct": false,
+              "rationale": "Waiting several hours with a swelling tongue delays airway protection. An antihistamine is not a decision the nurse makes over the phone here."
+            },
+            {
+              "id": "D",
+              "text": "\"Your blood pressure is well controlled, so the swelling is not from the drug. Check it again tomorrow morning.\"",
+              "correct": false,
+              "rationale": "A controlled blood pressure says nothing about an adverse reaction. Swelling of the lips and tongue after starting an ACE inhibitor is a drug reaction until proven otherwise."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "ACE inhibitors commonly cause a dry cough, which is reported so another drug may be prescribed. Swelling of the lips, tongue, or throat is an airway emergency. Assess each drug for its specific adverse effects.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two options respond to a real drug effect. The cough is common and is reported; swelling of the lips and tongue threatens the airway, and airway comes first.",
+          "elimination": {
+            "strategies": [
+              "Apply the ABCs",
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Separate the two findings",
+                "detail": "A week of dry cough, and an hour of puffy lips and a thick tongue."
+              },
+              {
+                "action": "Rank by ABCs",
+                "detail": "Lip and tongue swelling threatens the airway."
+              },
+              {
+                "action": "Reject the delays",
+                "detail": "Waiting until next week or this afternoon leaves the airway at risk."
+              },
+              {
+                "action": "Reject the false reassurance",
+                "detail": "Blood pressure control does not rule out a drug reaction."
+              }
+            ],
+            "verdict": "Swelling of the lips and tongue threatens the airway: emergency care now."
+          },
+          "caseGroup": "ig30-case10",
+          "caseStep": 1,
+          "objective": "Describe lifestyle changes and common medication classes used to manage hypertension.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig30-x06",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 64 years old, has had primary hypertension for 15 years. The client has never smoked, does not have diabetes, and has a low density lipoprotein level of 94 mg/dL. Serum creatinine is 1.8 mg/dL, was 1.0 mg/dL 5 years ago. The kidney biopsy report reads \"medial hyperplasia of the arterioles; no atheroma.\" The client asks how high blood pressure damaged the kidneys. Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"High pressure injured the artery lining, and fat then built up into plaque that blocked the small kidney arteries.\"",
+              "correct": false,
+              "rationale": "Hypertension does injure the endothelium and can lead to atherosclerosis, which makes this defensible. The biopsy cue rules it out: the report states no atheroma (plaque), and the low density lipoprotein level is 94 mg/dL."
+            },
+            {
+              "id": "B",
+              "text": "\"High pressure stretched the small kidney arteries until they became thin and weak, so they leak blood into the urine.\"",
+              "correct": false,
+              "rationale": "Hyperplasia means the walls are thicker, not thinner. Stretching and thinning describes an aneurysm, not the arteriole change of primary hypertension."
+            },
+            {
+              "id": "C",
+              "text": "\"High pressure made your kidneys hold on to sodium and water, and the extra fluid filled up and swelled the kidney tissue.\"",
+              "correct": false,
+              "rationale": "Sodium and water retention raises blood pressure, but it does not explain thickened arteriole walls or the loss of kidney function."
+            },
+            {
+              "id": "D",
+              "text": "\"High pressure thickened the muscle in the walls of the small arteries, narrowing them so less blood reached the kidneys.\"",
+              "correct": true,
+              "rationale": "Primary hypertension causes medial hyperplasia, a thickening of the middle muscle layer of the arterioles. The narrowed vessels reduce perfusion of the kidneys, and the rising creatinine shows the damage."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "In primary hypertension, medial hyperplasia thickens the walls of the arterioles. The narrowed vessels reduce organ perfusion, which is how persistent hypertension damages target organs such as the kidneys.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options describe real ways hypertension harms arteries. The biopsy report of medial hyperplasia with no atheroma decides between thickening and atherosclerosis.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Read the biopsy",
+                "detail": "Medial hyperplasia of the arterioles, no atheroma."
+              },
+              {
+                "action": "Name the change",
+                "detail": "Medial hyperplasia of the arterioles in primary hypertension."
+              },
+              {
+                "action": "Weigh the near miss",
+                "detail": "Plaque from endothelial injury does happen, but this biopsy shows none."
+              },
+              {
+                "action": "Reject the rest",
+                "detail": "The walls are not thinned, and fluid retention does not thicken arterioles."
+              }
+            ],
+            "verdict": "Thickened arteriole walls narrowed the vessels and reduced blood flow to the kidneys."
+          },
+          "caseGroup": "ig30-case10",
+          "caseStep": 2,
+          "objective": "Differentiate primary and secondary hypertension and identify major risk factors.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig30-x07",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 68 years old, with hypertension is in a clinic exam room. At 0950, blood pressure was 170/100 mm Hg in the right arm, and the client was speaking clearly with equal hand grips. At 1010, blood pressure is 174/104 mm Hg in the right arm and 172/102 mm Hg in the left arm. The client's speech is now slurred, and the right hand grip is weaker than the left; both began 10 minutes ago. Which action does the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Activates the emergency response for a possible stroke and notes 1000 as the time the symptoms began.",
+              "correct": true,
+              "rationale": "The deciding cue is the new slurred speech and right sided weakness that began at 1000. Stroke is a major complication of hypertension, and new neurologic changes need emergency evaluation whatever the exact reading. The time of onset guides treatment."
+            },
+            {
+              "id": "B",
+              "text": "Has the client rest quietly for 5 minutes, then repeats the reading, because it is below the crisis level.",
+              "correct": false,
+              "rationale": "Without the neurologic change, a reading below the crisis level would allow a calm recheck, which makes this tempting. A new deficit is an emergency, and waiting to recheck delays care."
+            },
+            {
+              "id": "C",
+              "text": "Gives the client's scheduled oral antihypertensive early so the pressure falls before the provider arrives.",
+              "correct": false,
+              "rationale": "Lowering the pressure without evaluation and a prescription is not the first action, and rapid lowering can reduce perfusion to the brain."
+            },
+            {
+              "id": "D",
+              "text": "Measures orthostatic blood pressure to find out whether the weakness comes from a drop on standing.",
+              "correct": false,
+              "rationale": "Orthostatic readings would delay care and are unsafe with new weakness. The findings point to the brain, not to a drop on standing."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Persistent hypertension damages the brain, and stroke is a major complication. New neurologic changes in a client with hypertension are an emergency even when the reading is below the crisis level.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options look reasonable when only the number is read. The new slurred speech and one sided weakness decide it: neurologic change outranks the threshold.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Compare 0950 with 1010",
+                "detail": "Speech clear and grips equal at 0950; slurred speech and a weaker right grip now."
+              },
+              {
+                "action": "Name the complication",
+                "detail": "New neurologic deficit in hypertension: possible stroke."
+              },
+              {
+                "action": "Reject the recheck",
+                "detail": "A number below the crisis level does not outweigh a new deficit."
+              },
+              {
+                "action": "Reject the drug and the orthostatics",
+                "detail": "Both delay emergency care and may lower brain perfusion."
+              }
+            ],
+            "verdict": "New slurred speech and right sided weakness: emergency response for a possible stroke."
+          },
+          "caseGroup": "ig30-case10",
+          "caseStep": 3,
+          "objective": "Recognize common manifestations, complications, and priority nursing assessments for hypertension.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig30-x08",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 42 years old, has systemic lupus erythematosus, diagnosed 8 years ago. The client has never smoked and does not have diabetes. Blood pressure is 118/76 mm Hg in the right arm, and the low density lipoprotein level is 96 mg/dL. The client says, \"My blood pressure and cholesterol are good, so I have no reason to worry about plaque in my arteries.\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"That is right. Plaque builds only when cholesterol is high, so your arteries are protected for now.\"",
+              "correct": false,
+              "rationale": "Atherosclerosis has several risk factors, not cholesterol alone, and autoimmunity is one of them."
+            },
+            {
+              "id": "B",
+              "text": "\"Your blood pressure and cholesterol lower your risk, so plaque is a concern only if you start smoking.\"",
+              "correct": false,
+              "rationale": "Without the lupus, this would be a fair statement, because the client has none of the other listed risk factors. Autoimmune disease is itself a risk factor, so the risk is not limited to smoking."
+            },
+            {
+              "id": "C",
+              "text": "\"Those numbers help, but lupus is itself a risk factor for plaque, so screening matters.\"",
+              "correct": true,
+              "rationale": "Lupus is an autoimmune disease, and the deciding cue is that disease. Risk factors for atherosclerosis include diabetes, smoking, dyslipidemia, hypertension, and autoimmunity, so this client has a risk factor even with good blood pressure and cholesterol."
+            },
+            {
+              "id": "D",
+              "text": "\"Your risk is high because lupus raises cholesterol, and the plaque forms from that extra cholesterol.\"",
+              "correct": false,
+              "rationale": "The low density lipoprotein level is 96 mg/dL, so raised cholesterol is not the link. Autoimmunity is listed as its own risk factor."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Risk factors for atherosclerosis are diabetes, smoking, hyperlipidemia or dyslipidemia, hypertension, and autoimmunity. A client with an autoimmune disease carries risk even with good blood pressure and lipids.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options agree that the client's numbers help. The lupus in the stem, an autoimmune disease, decides which one is complete.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely",
+              "Eliminate absolutes"
+            ],
+            "steps": [
+              {
+                "action": "List the risk factors",
+                "detail": "Diabetes, smoking, dyslipidemia, hypertension, and autoimmunity."
+              },
+              {
+                "action": "Find the one present",
+                "detail": "Lupus is an autoimmune disease."
+              },
+              {
+                "action": "Reject the absolutes",
+                "detail": "Plaque does not build only with high cholesterol, and risk is not limited to smoking."
+              },
+              {
+                "action": "Reject the wrong link",
+                "detail": "The low density lipoprotein level is 96 mg/dL, so cholesterol is not the path."
+              }
+            ],
+            "verdict": "Autoimmunity is a risk factor for atherosclerosis on its own."
+          },
+          "caseGroup": "ig30-case11",
+          "caseStep": 1,
+          "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig30-x09",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 51 years old, has hypertension with readings averaging 136/86 mm Hg in the right arm over 3 visits. Body mass index is 24 kg/m2. The client follows a DASH style eating plan, has 4 glasses of wine with dinner each evening, reads labels and keeps sodium to 1500 mg a day, walks 40 minutes 5 days a week, and does not smoke. Which teaching by the nurse addresses the risk factor most likely contributing to this client's blood pressure?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Cut your sodium further, to below 1000 mg a day, because salt is the most common cause of high pressure.\"",
+              "correct": false,
+              "rationale": "The client already follows a DASH style plan with 1500 mg of sodium a day. Further cuts are not where the remaining risk lies."
+            },
+            {
+              "id": "B",
+              "text": "\"Add strength training on the other 2 days, because more activity is the change that lowers pressure most.\"",
+              "correct": false,
+              "rationale": "Increasing activity is a listed lifestyle change and lowers blood pressure, which makes this defensible. The client already walks 40 minutes 5 days a week, so more activity misses the risk factor that is present."
+            },
+            {
+              "id": "C",
+              "text": "\"Lose about 10 lb, because even a small weight loss brings blood pressure down in most people.\"",
+              "correct": false,
+              "rationale": "Weight reduction is recommended when indicated. A body mass index of 24 kg/m2 does not call for weight loss."
+            },
+            {
+              "id": "D",
+              "text": "\"Limit alcohol, because regular drinking with dinner can raise your blood pressure.\"",
+              "correct": true,
+              "rationale": "The deciding cue is 4 glasses of wine with dinner every evening. Excessive alcohol is a modifiable risk factor, and limiting alcohol is a listed lifestyle change. Every other listed change is already in place."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Lifestyle changes for hypertension are reduce sodium, DASH style eating, weight reduction if indicated, increase activity, stop smoking, limit alcohol, and manage stress. Match the teaching to the risk factor the client actually has.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Several options name real lifestyle changes. Check each against what the client already does; the one risk factor left in the stem decides it.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "List what is in place",
+                "detail": "DASH style eating, 1500 mg of sodium, 40 minutes of walking 5 days a week, no smoking, body mass index 24 kg/m2."
+              },
+              {
+                "action": "Find the gap",
+                "detail": "4 glasses of wine with dinner each evening is excessive alcohol."
+              },
+              {
+                "action": "Weigh the near miss",
+                "detail": "More activity helps, but the client is already active."
+              },
+              {
+                "action": "Reject the rest",
+                "detail": "Sodium is already limited, and weight loss is not indicated."
+              }
+            ],
+            "verdict": "Limit alcohol; every other listed change is already in place."
+          },
+          "caseGroup": "ig30-case11",
+          "caseStep": 2,
+          "objective": "Describe lifestyle changes and common medication classes used to manage hypertension.",
+          "new": true,
+          "addedBatch": 7
         }
       ]
     },
@@ -13117,7 +14660,6 @@
           "caseGroup": "ig31-case13",
           "caseStep": 1,
           "objective": "Explain how infection spreads to a susceptible person",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -13182,7 +14724,6 @@
           "caseGroup": "ig31-case13",
           "caseStep": 2,
           "objective": "Recognize early cues of sepsis and septic shock",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -13274,8 +14815,339 @@
           "caseGroup": "ig31-case13",
           "caseStep": 3,
           "objective": "Recognize early cues of sepsis and septic shock",
-          "new": true,
           "addedBatch": 6
+        },
+        {
+          "id": "ig31-x07",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 45 years old, is admitted with a cough for 6 weeks, night sweats, and weight loss of 5 kg. The provider documents suspected pulmonary tuberculosis and orders sputum specimens. The client coughs often and is waiting in a private room with the door closed. Which precautions does the nurse prepare?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Move the client to an airborne infection isolation room, and wear a fitted respirator to enter",
+              "correct": true,
+              "rationale": "Tuberculosis spreads by particles that stay suspended in the air, so an airborne infection isolation room and respiratory protection are needed, along with standard precautions."
+            },
+            {
+              "id": "B",
+              "text": "Keep the private room with the door closed, and wear a surgical mask within 1 meter of the client",
+              "correct": false,
+              "rationale": "A mask and placement in a private room fit droplet precautions, where large droplets reach nearby mucous membranes. The suspected tuberculosis is the cue: its particles remain in the air, so a closed door and a surgical mask are not enough."
+            },
+            {
+              "id": "C",
+              "text": "Keep the private room, and wear a gown and gloves for all contact with the client",
+              "correct": false,
+              "rationale": "Gown and gloves interrupt contact spread from wounds or shared equipment. They do not protect against particles in the air."
+            },
+            {
+              "id": "D",
+              "text": "Wait for the sputum results, and use standard precautions until tuberculosis is confirmed",
+              "correct": false,
+              "rationale": "Precautions start when the infection is suspected. Waiting for results leaves staff and other clients exposed to the air in the room."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Droplet precautions use a mask and patient placement; airborne precautions use an airborne infection isolation room and respiratory protection. Choose by how the organism travels, and start them when infection is suspected.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Both a mask and a respirator protect the airway. Decide by the route: particles that stay suspended in the air need an airborne room.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Name the route",
+                "detail": "Suspected pulmonary tuberculosis spreads by particles suspended in air."
+              },
+              {
+                "action": "Compare the two airway options",
+                "detail": "Droplet precautions use a mask; airborne precautions use a special room and a respirator."
+              },
+              {
+                "action": "Check the timing",
+                "detail": "Precautions begin on suspicion, so waiting for results is out."
+              }
+            ],
+            "verdict": "A. Airborne infection isolation room and a fitted respirator."
+          },
+          "caseGroup": "ig31-case14",
+          "caseStep": 1,
+          "objective": "Select standard and transmission-based precautions",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig31-x08",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A nurse is assigned a client, 77 years old, transferred from another hospital this morning. The transfer record shows a urine culture positive for CRE 5 days ago. The nurse cared for a client with MRSA yesterday using gown and gloves on contact precautions. Which action does the nurse take before entering the room?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Enter using yesterday's MRSA routine without checking, because all resistant organisms share one plan",
+              "correct": false,
+              "rationale": "Gown and gloves are likely part of the plan, but VRE and CRE require checking organism specific precautions before care; resistant organisms are not all handled identically."
+            },
+            {
+              "id": "B",
+              "text": "Wait to start added precautions until this hospital repeats the urine culture and reports it",
+              "correct": false,
+              "rationale": "The positive culture from 5 days ago is enough to act on. Waiting leaves other clients exposed."
+            },
+            {
+              "id": "C",
+              "text": "Wear a mask and eye protection, because resistant organisms spread through the air",
+              "correct": false,
+              "rationale": "CRE spreads by contact with the client and the environment, not through the air."
+            },
+            {
+              "id": "D",
+              "text": "Check the facility guidance for CRE precautions, and add what it lists to standard precautions",
+              "correct": true,
+              "rationale": "VRE and CRE require checking organism specific precautions before care. For CRE this is typically contact precautions, gown and gloves, in addition to standard precautions."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "MRSA, VRE, and CRE are resistant organisms, but VRE and CRE require checking the facility's organism specific precautions before care. Standard precautions continue for every client.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Reusing a routine that worked yesterday sounds efficient. The cue is the organism named: CRE means check the specific guidance before care rather than copy the MRSA routine.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Name the organism",
+                "detail": "CRE, carbapenem resistant Enterobacterales."
+              },
+              {
+                "action": "Compare the two contact options",
+                "detail": "Reusing the MRSA routine assumes the precautions are identical; checking the guidance confirms what to add to standard precautions."
+              },
+              {
+                "action": "Reject the rest",
+                "detail": "Waiting for a new culture and airborne protection do not fit."
+              }
+            ],
+            "verdict": "D. Check the facility guidance for CRE precautions and add what it lists to standard precautions."
+          },
+          "caseGroup": "ig31-case14",
+          "caseStep": 2,
+          "objective": "Select standard and transmission-based precautions",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig31-x09",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client with confirmed C. difficile used a bedside commode, which will now go to the equipment room for another client. A client with MRSA used the same model of commode on another unit last week. The unit stocks a standard disinfectant wipe and a sporicidal cleaning agent. Which action does the nurse take with the commode?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Clean the commode with the sporicidal agent before it is used for another client",
+              "correct": true,
+              "rationale": "C. difficile spores persist in the environment and standard disinfectants may not kill them, so shared equipment is cleaned with a sporicidal agent."
+            },
+            {
+              "id": "B",
+              "text": "Clean the commode with the standard disinfectant wipe, as for the commode used with MRSA",
+              "correct": false,
+              "rationale": "A standard disinfectant is appropriate for many organisms, including MRSA. The C. difficile diagnosis is the cue: its spores may survive standard disinfectants."
+            },
+            {
+              "id": "C",
+              "text": "Rinse the commode with soap and water, because soap removes spores from hands",
+              "correct": false,
+              "rationale": "Soap and water is used for hand hygiene when facility policy indicates it. It does not replace sporicidal cleaning of equipment."
+            },
+            {
+              "id": "D",
+              "text": "Clean the commode with alcohol based sanitizer, and let it dry before it is used",
+              "correct": false,
+              "rationale": "Alcohol does not reliably kill C. difficile spores, which is why sporicidal agents are used."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "C. difficile spores persist in the environment and standard disinfectants may not be effective. Enhanced contact precautions include dedicated or appropriately cleaned equipment and sporicidal environmental cleaning.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Both wipes are real cleaning products. The organism decides: spores need a sporicidal agent.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Name the organism",
+                "detail": "C. difficile forms spores."
+              },
+              {
+                "action": "Compare the two products",
+                "detail": "A standard disinfectant may not kill spores; a sporicidal agent does."
+              },
+              {
+                "action": "Reject the hand hygiene products",
+                "detail": "Soap and alcohol sanitizer are hand hygiene, not equipment cleaning."
+              }
+            ],
+            "verdict": "A. Clean the commode with the sporicidal agent."
+          },
+          "caseGroup": "ig31-case14",
+          "caseStep": 3,
+          "objective": "Select standard and transmission-based precautions",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig31-x10",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 34 years old, is seen in the clinic with a sore throat, runny nose, and cough for 2 days. Oral temperature 37.6 °C, respiratory rate 16 breaths per minute, oxygen saturation 98% on room air. The provider diagnoses a viral upper respiratory infection and prescribes rest and fluids. The client says, \"Last time I got an antibiotic and felt better in 3 days. Can I get one just to be safe?\" Which response by the nurse is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"I will let the provider know you are concerned, since your temperature is slightly raised.\"",
+              "correct": false,
+              "rationale": "This sounds like advocacy, but a temperature of 37.6 °C fits a viral upper respiratory infection, the diagnosis is already made, and teaching why an antibiotic will not help is the nurse's role here."
+            },
+            {
+              "id": "B",
+              "text": "\"Your oxygen level and breathing rate are normal, so you do not need any treatment at all.\"",
+              "correct": false,
+              "rationale": "Rest and fluids are prescribed treatment. The response also dismisses the client's question instead of teaching."
+            },
+            {
+              "id": "C",
+              "text": "\"An antibiotic from last time would work if you have any left over at home.\"",
+              "correct": false,
+              "rationale": "Leftover antibiotics should not be used, and an antibiotic would not act on a viral infection."
+            },
+            {
+              "id": "D",
+              "text": "\"Antibiotics do not treat viruses, and using one without need helps resistant germs grow.\"",
+              "correct": true,
+              "rationale": "Antibiotics do not treat viral infections, and unnecessary use contributes to resistance. The response teaches the reason in plain language."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Antibiotics do not treat viral infections, and unnecessary use contributes to antimicrobial resistance. The nurse supports appropriate antimicrobial use through teaching.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Passing the concern to the provider sounds like advocacy. The diagnosis in the stem decides: a viral infection is not treated with an antibiotic, so the nurse teaches instead.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Find the diagnosis",
+                "detail": "Viral upper respiratory infection."
+              },
+              {
+                "action": "Compare the two that answer the request",
+                "detail": "Relaying the concern defers a question the nurse can answer; explaining why an antibiotic will not help teaches the client."
+              },
+              {
+                "action": "Reject the rest",
+                "detail": "Dismissing all treatment and using leftover pills are both wrong."
+              }
+            ],
+            "verdict": "D. Explain that antibiotics do not treat viruses and unneeded use helps resistant germs grow."
+          },
+          "caseGroup": "ig31-case15",
+          "caseStep": 1,
+          "objective": "Explain the nurse's role in testing, treatment, and teaching",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig31-x11",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 80 years old, had an indwelling urinary catheter placed on admission for a fracture of the left hip. On day 5 the client has cloudy urine, and the urine culture grows an organism from the client's own bowel. The family asks, \"Since the germ came from the client's own body, did this infection have anything to do with the hospital care?\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"No, because an organism from the client's own body is not a healthcare associated infection.\"",
+              "correct": false,
+              "rationale": "This is the common belief, but healthcare associated infections can come from the client's own organisms or from an outside source."
+            },
+            {
+              "id": "B",
+              "text": "\"Yes, because the germ must have been carried in on a caregiver's hands to cause the infection.\"",
+              "correct": false,
+              "rationale": "An outside source is possible, but the culture shows an organism from the client's own bowel."
+            },
+            {
+              "id": "C",
+              "text": "\"Yes, it developed during care, and the catheter gave the client's own germs a path in.\"",
+              "correct": true,
+              "rationale": "The infection developed on day 5 of care, after the catheter was placed. Organisms for a healthcare associated infection may come from the client, and the catheter bypasses natural barriers."
+            },
+            {
+              "id": "D",
+              "text": "\"No, because a urinary tract infection at this age comes from a weak immune system.\"",
+              "correct": false,
+              "rationale": "Age extremes raise risk, but the catheter placed in the hospital created a direct path for the organism."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "A healthcare associated infection develops during healthcare delivery. The organism may come from the client or an outside source, and invasive devices such as urinary catheters create a path past natural barriers.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The source of the organism sounds like it decides. The cue that decides is when and how the infection developed: on day 5, after a catheter placed during care.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Find the timing",
+                "detail": "The infection appeared on day 5, after the catheter was placed."
+              },
+              {
+                "action": "Compare the yes and no answers",
+                "detail": "Healthcare associated infections can come from the client's own organisms."
+              },
+              {
+                "action": "Pick the yes that fits",
+                "detail": "The culture names the client's bowel organism, not a caregiver's hands; the catheter gave it a path."
+              }
+            ],
+            "verdict": "C. Yes, it developed during care, and the catheter gave the client's own germs a path in."
+          },
+          "caseGroup": "ig31-case15",
+          "caseStep": 2,
+          "objective": "Explain how infection spreads to a susceptible person",
+          "new": true,
+          "addedBatch": 7
         }
       ]
     },
@@ -15014,7 +16886,6 @@
           "caseGroup": "ig32-case8",
           "caseStep": 1,
           "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -15083,7 +16954,6 @@
           "caseGroup": "ig32-case8",
           "caseStep": 2,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
-          "new": true,
           "addedBatch": 6
         },
         {
@@ -15155,8 +17025,412 @@
           "caseGroup": "ig32-case8",
           "caseStep": 3,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
-          "new": true,
           "addedBatch": 6
+        },
+        {
+          "id": "ig32-m20",
+          "type": "cloze",
+          "stem": "Complete each sentence by selecting from the choices below.",
+          "sentence": "A client with coronary artery disease had chest pressure that began at 0700 while sitting in a chair and ended at 0730. A 12 lead ECG at 0715 showed ST depression. Troponin I was 0.01 ng/mL at 0720 and 0.01 ng/mL at 1320. The client is most likely experiencing [[1]].\n\nThe finding that decides between the two acute coronary syndromes is [[2]].\n\nThe nurse explains that the heart muscle [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Chronic angina with a predictable pattern",
+                  "correct": false,
+                  "rationale": "Chronic angina in a predictable pattern comes with exertion and is relieved by rest or nitrates. Pressure that began while sitting is at rest, so it does not fit that pattern."
+                },
+                {
+                  "id": "B",
+                  "text": "Unstable angina",
+                  "correct": true,
+                  "rationale": "Pressure at rest is an acute coronary syndrome, and troponin I that has not risen across draws 6 hours apart means no detectable muscle death. That fits unstable angina."
+                },
+                {
+                  "id": "C",
+                  "text": "Acute myocardial infarction",
+                  "correct": false,
+                  "rationale": "Rest pain and ST depression make this tempting. An infarction releases troponin from dying muscle, and the troponin I did not rise between 0720 and 1320."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Chest pressure that began while sitting in a chair",
+                  "correct": false,
+                  "rationale": "Pressure at rest separates an acute coronary syndrome from chronic angina with a predictable pattern, but both unstable angina and infarction can begin at rest."
+                },
+                {
+                  "id": "B",
+                  "text": "ST depression on the 0715 ECG",
+                  "correct": false,
+                  "rationale": "ST depression shows ischemia. It can appear with unstable angina and with an infarction, so it does not decide between them."
+                },
+                {
+                  "id": "C",
+                  "text": "Troponin I unchanged between 0720 and 1320",
+                  "correct": true,
+                  "rationale": "Troponin is the preferred marker for myocardial infarction. A level that stays the same 6 hours later shows no detectable cell death, which separates unstable angina from infarction."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Had less oxygen than it needed, without detectable cell death, so the injury can reverse",
+                  "correct": true,
+                  "rationale": "Unstable angina is reversible myocardial ischemia: oxygen delivery fell short, but the muscle did not die."
+                },
+                {
+                  "id": "B",
+                  "text": "Has a small area of permanent cell death that will form a scar",
+                  "correct": false,
+                  "rationale": "Permanent cell death describes an infarction, which would raise troponin."
+                },
+                {
+                  "id": "C",
+                  "text": "Received all the oxygen it needed, so the pressure came from another cause",
+                  "correct": false,
+                  "rationale": "ST depression during the pressure shows ischemia. The muscle was short of oxygen."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "B",
+            "2": "C",
+            "3": "A"
+          },
+          "scoring": "0/1",
+          "takeaway": "Chronic angina is predictable with exertion. Unstable angina is new, worsening, or at rest and is reversible ischemia. Myocardial infarction is muscle death, and troponin T and I are the preferred markers that separate the two acute coronary syndromes.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Rest pain and ST depression narrow it to an acute coronary syndrome but cannot choose between the two. Read the two troponin values 6 hours apart: unchanged troponin means no detectable muscle death.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Place the pain",
+                "detail": "Pressure while sitting rules out a predictable exertional pattern."
+              },
+              {
+                "action": "Weigh the ECG",
+                "detail": "ST depression shows ischemia in either syndrome."
+              },
+              {
+                "action": "Read the troponin trend",
+                "detail": "0.01 ng/mL at 0720 and at 1320: no rise."
+              },
+              {
+                "action": "Name the outcome",
+                "detail": "Reversible ischemia without cell death."
+              }
+            ],
+            "verdict": "Unstable angina; troponin I unchanged between 0720 and 1320; less oxygen without detectable cell death, so the injury can reverse."
+          },
+          "caseGroup": "ig32-case9",
+          "caseStep": 1,
+          "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
+          "difficulty": "difficult",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig32-x05",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 77 years old, has coronary artery disease and type 2 diabetes. At 1300 the client walked the length of the hallway without shortness of breath. At 1400, while sitting in a chair, the client becomes tired, sweaty, and short of breath, and denies any chest pain or pressure. Heart rate 108 beats per minute, blood pressure 146/88 mm Hg, respiratory rate 24 breaths per minute, SpO2 94% on room air. Capillary blood glucose 138 mg/dL. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Gives 15 g of fast acting carbohydrate, since sweating and fatigue in diabetes point to a low blood glucose.",
+              "correct": false,
+              "rationale": "Sweating and fatigue in a client with diabetes do raise concern for low glucose, which makes this tempting. The capillary blood glucose of 138 mg/dL rules it out."
+            },
+            {
+              "id": "B",
+              "text": "Obtains a 12 lead ECG, since these findings at rest may be ischemia without chest pain.",
+              "correct": true,
+              "rationale": "The deciding cue is the glucose of 138 mg/dL, which removes the other explanation. Some clients have atypical or silent ischemia, with dyspnea, sweating, and fatigue instead of chest pain, and older adults with diabetes are among them. A 12 lead ECG looks for ischemia."
+            },
+            {
+              "id": "C",
+              "text": "Has the client rest for 30 minutes and then reassesses, since there is no chest pain or pressure.",
+              "correct": false,
+              "rationale": "Waiting assumes ischemia always causes chest pain. New symptoms at rest need evaluation now."
+            },
+            {
+              "id": "D",
+              "text": "Coaches slow, deep breathing for anxiety and stays with the client until the symptoms pass.",
+              "correct": false,
+              "rationale": "Nothing in the stem points to anxiety. Attributing new dyspnea, sweating, and tachycardia to anxiety delays evaluation for ischemia."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Chest discomfort may come with dyspnea, diaphoresis, pallor, fatigue, or weakness, and some clients have atypical or silent ischemia. New findings at rest in a client with coronary artery disease are evaluated with a 12 lead ECG even without chest pain.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options explain sweating and fatigue in an older adult with diabetes: low glucose or ischemia. The glucose value in the stem decides it.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely",
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Compare 1300 with 1400",
+                "detail": "No dyspnea walking at 1300; dyspnea, sweating, and fatigue at rest at 1400."
+              },
+              {
+                "action": "Test the competing cause",
+                "detail": "Glucose 138 mg/dL rules out low glucose."
+              },
+              {
+                "action": "Name the concern",
+                "detail": "Ischemia without chest pain."
+              },
+              {
+                "action": "Reject the delays",
+                "detail": "Waiting and coaching for anxiety both postpone evaluation."
+              }
+            ],
+            "verdict": "Obtain a 12 lead ECG; glucose 138 mg/dL rules out the other explanation."
+          },
+          "caseGroup": "ig32-case9",
+          "caseStep": 2,
+          "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig32-x08",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client with coronary artery disease has had chest pressure for 2 years only with brisk walking, in a predictable pattern that ends with rest. The client calls the clinic at 0900. At 0600, the client woke while lying in bed with the same chest pressure, which lasted 15 minutes and went away without nitroglycerin. The client has had no pressure since 0615. Home readings at 0855: blood pressure 132/80 mm Hg, heart rate 76 beats per minute. Which response by the nurse is appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Since it went away on its own and your readings are good, write it in a diary and bring it to next week's visit.\"",
+              "correct": false,
+              "rationale": "The pressure has stopped and the readings are reassuring, which makes this tempting. It misses the change in pattern: the pressure came while lying in bed, not with exertion."
+            },
+            {
+              "id": "B",
+              "text": "\"Take one nitroglycerin tablet now to prevent another episode, then call back in 1 hour to tell us how you feel.\"",
+              "correct": false,
+              "rationale": "Nitroglycerin treats pressure that is present. Taking it while pain free and waiting an hour delays evaluation of a new pattern."
+            },
+            {
+              "id": "C",
+              "text": "\"Avoid brisk walking today, and call us back if the next episode lasts longer than 30 minutes.\"",
+              "correct": false,
+              "rationale": "Limiting exertion does not address pressure that began at rest, and waiting for a longer episode delays evaluation."
+            },
+            {
+              "id": "D",
+              "text": "\"Pressure that began at rest needs urgent evaluation, even though it stopped. Go to the emergency department now.\"",
+              "correct": true,
+              "rationale": "The deciding cue is that the pressure began while lying in bed. Angina that is new, worsening, or at rest is unstable and needs urgent evaluation, even after it ends."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Chronic angina in a predictable pattern comes with exertion and is relieved by rest or nitrates. Unstable angina is new, worsening, or at rest, and it needs urgent evaluation even when the pressure has stopped.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options weigh the same call: the pressure ended and readings are good, or the pressure began at rest. Where the pressure started, not whether it stopped, decides it.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Find the baseline",
+                "detail": "Two years of pressure only with brisk walking that ends with rest."
+              },
+              {
+                "action": "Find the change",
+                "detail": "Pressure at 0600 while lying in bed."
+              },
+              {
+                "action": "Name it",
+                "detail": "Pressure at rest is unstable angina."
+              },
+              {
+                "action": "Reject the delays",
+                "detail": "A diary, a nitroglycerin trial, or waiting for a longer episode all postpone evaluation."
+              }
+            ],
+            "verdict": "Pressure that began at rest is unstable and needs urgent evaluation, even after it stops."
+          },
+          "caseGroup": "ig32-case9",
+          "caseStep": 3,
+          "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig32-x06",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 54 years old, has a fasting blood glucose of 112 mg/dL and was told at this visit of insulin resistance. The client does not have diabetes. Blood pressure 124/78 mm Hg in the right arm, low density lipoprotein 98 mg/dL, body mass index 24 kg/m2, and the client has never smoked. The client says, \"I do not have diabetes, so my blood sugar is not a heart risk for me.\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"That is right. Blood sugar becomes a heart risk only once diabetes is diagnosed, so we will recheck it in a year.\"",
+              "correct": false,
+              "rationale": "This treats diabetes as the only glucose related risk. Insulin resistance is itself listed as a risk factor for coronary artery disease."
+            },
+            {
+              "id": "B",
+              "text": "\"Your blood pressure and cholesterol lower your risk, so the main thing is to make sure you never start smoking.\"",
+              "correct": false,
+              "rationale": "Without the insulin resistance, this would be a fair statement, because the client has none of the other listed modifiable risk factors. It ignores the risk factor found at this visit."
+            },
+            {
+              "id": "C",
+              "text": "\"Insulin resistance is a risk you cannot change, so the focus should be on your blood pressure and cholesterol.\"",
+              "correct": false,
+              "rationale": "Diabetes and insulin resistance are modifiable risk factors. Calling it fixed removes the client's chance to lower the risk."
+            },
+            {
+              "id": "D",
+              "text": "\"Insulin resistance is a heart risk by itself, and it is one you can change, even without diabetes.\"",
+              "correct": true,
+              "rationale": "The deciding cue is the new finding of insulin resistance. Diabetes and insulin resistance are listed together as modifiable risk factors for coronary artery disease, so this client has a risk factor that can be changed."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Modifiable risk factors for coronary artery disease are dyslipidemia, hypertension, cigarette smoking, diabetes and insulin resistance, obesity and a sedentary lifestyle, and an atherogenic diet. Insulin resistance counts even before diabetes develops.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options praise the client's good values. The insulin resistance named in the stem decides which statement is complete.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely",
+              "Eliminate absolutes"
+            ],
+            "steps": [
+              {
+                "action": "List the modifiable factors",
+                "detail": "Dyslipidemia, hypertension, smoking, diabetes and insulin resistance, obesity and inactivity, atherogenic diet."
+              },
+              {
+                "action": "Find the one present",
+                "detail": "Insulin resistance, with a fasting glucose of 112 mg/dL."
+              },
+              {
+                "action": "Reject the absolute",
+                "detail": "Risk does not start only at diagnosis of diabetes."
+              },
+              {
+                "action": "Reject the wrong category",
+                "detail": "Insulin resistance is modifiable, not fixed."
+              }
+            ],
+            "verdict": "Insulin resistance is a modifiable risk factor for coronary artery disease even without diabetes."
+          },
+          "caseGroup": "ig32-case10",
+          "caseStep": 1,
+          "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
+          "new": true,
+          "addedBatch": 7
+        },
+        {
+          "id": "ig32-x07",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client with coronary artery disease and chronic angina started a beta blocker 4 weeks ago. Before the drug, heart rate rose to 122 beats per minute during the daily walk, and angina came on with 4 of 7 walks. This week, heart rate during the walk peaks at 98 beats per minute, and angina came on with 1 of 7 walks. Resting blood pressure is 122/76 mm Hg in the right arm. The client asks, \"Is this pill opening up my heart arteries?\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Yes. It relaxes the narrowed heart arteries, so more blood reaches your heart muscle while you walk.\"",
+              "correct": false,
+              "rationale": "Widening vessels to improve flow describes nitrates and calcium channel blockers. The heart rate change is the cue that this drug works by lowering demand."
+            },
+            {
+              "id": "B",
+              "text": "\"No. It slows your heart during your walk, so your heart muscle needs less oxygen than before.\"",
+              "correct": true,
+              "rationale": "The deciding cue is the peak heart rate, 98 beats per minute now and 122 before the drug. Beta blockers reduce myocardial oxygen demand by slowing the heart, so the narrowed artery can keep up more often."
+            },
+            {
+              "id": "C",
+              "text": "\"No. It thins your blood so that clots cannot form on the plaque inside your heart arteries.\"",
+              "correct": false,
+              "rationale": "Preventing clots on plaque is the role of antiplatelet therapy, a different treatment."
+            },
+            {
+              "id": "D",
+              "text": "\"Yes. Over time it dissolves the plaque, which is why your angina keeps getting less frequent.\"",
+              "correct": false,
+              "rationale": "No drug in the treatment plan removes plaque; reducing risk factors slows its growth. Opening a blocked artery requires revascularization."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Treatment of coronary artery disease aims to improve coronary flow, reduce myocardial oxygen demand, and prevent complications. Beta blockers lower demand by slowing the heart; nitrates and calcium channel blockers widen vessels; antiplatelet therapy prevents clots.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options are defensible goals of angina treatment: more supply or less demand. The change in peak heart rate during the walk shows which one this drug is doing.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Read the trend",
+                "detail": "Peak heart rate 122 before the drug, 98 now, with fewer episodes."
+              },
+              {
+                "action": "Match the mechanism",
+                "detail": "Slowing the heart reduces oxygen demand."
+              },
+              {
+                "action": "Weigh the near miss",
+                "detail": "Widening arteries is the action of nitrates and calcium channel blockers."
+              },
+              {
+                "action": "Reject the rest",
+                "detail": "Clot prevention is antiplatelet therapy; no drug dissolves plaque."
+              }
+            ],
+            "verdict": "The beta blocker lowers oxygen demand by slowing the heart; it does not open the arteries."
+          },
+          "caseGroup": "ig32-case10",
+          "caseStep": 2,
+          "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
+          "new": true,
+          "addedBatch": 7
         }
       ]
     }
