@@ -140,7 +140,7 @@ const Shapes = () => {
     measure();
     window.addEventListener("resize", measure);
 
-    let plan = { name: "", edges: [] as [number, number][], labelDrop: 0 };
+    let plan = { name: "", edges: [] as [number, number][] };
 
     const setMode = (next: Mode) => {
       if (mode.current === next) return;
@@ -181,8 +181,6 @@ const Shapes = () => {
         plan = {
           name: `${sky.glyph}\uFE0E  ${sky.name}`,
           edges: sky.edges.map(([a, b]) => [order[a], order[b]]),
-          labelDrop:
-            (((Math.max(...ys) - Math.min(...ys)) / span) * size) / 2 + 40,
         };
       }
       if (next === "idle") {
@@ -324,12 +322,10 @@ const Shapes = () => {
       const label = labelRef.current;
       if (label) {
         if (label.textContent !== plan.name) label.textContent = plan.name;
-        label.setAttribute("x", (center.current.x - offX).toFixed(1));
-        label.setAttribute(
-          "y",
-          (center.current.y - offY + plan.labelDrop).toFixed(1),
-        );
-        label.style.opacity = (lineAlpha * 0.7).toFixed(3);
+        label.setAttribute("x", ((origin?.width ?? 0) - 32).toFixed(1));
+        label.setAttribute("y", "48");
+        const flash = 0.65 + 0.35 * Math.sin(performance.now() / 260);
+        label.style.opacity = (lineAlpha * flash).toFixed(3);
       }
 
       raf = requestAnimationFrame(tick);
@@ -368,9 +364,9 @@ const Shapes = () => {
         ))}
         <text
           ref={labelRef}
-          textAnchor="middle"
+          textAnchor="end"
           style={{ fill: "var(--shape-b)", opacity: 0 }}
-          fontSize="13"
+          fontSize="16"
           letterSpacing="3"
         />
       </svg>

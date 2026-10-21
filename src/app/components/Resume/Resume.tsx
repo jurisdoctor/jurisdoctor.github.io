@@ -19,7 +19,7 @@ const Resume = () => {
 
   return (
     <section
-      className="resume mx-auto max-w-[1080px] px-10 pb-28 pt-28 lg:pt-12 md:px-6"
+      className="resume mx-auto max-w-[1080px] px-10 pb-12 pt-28 lg:pt-12 md:px-6"
       id="resume"
     >
       <Reveal

@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import { PiCheckBold, PiXBold } from "react-icons/pi";
 import { isAcceptable } from "./Moderate";
 
-const ENDPOINT = "https://api.web3forms.com/submit";
+export const ENDPOINT = "https://api.web3forms.com/submit";
 export const SUGGEST_KEY = "02962e0d-4c68-437a-806d-b750a7e0ed0e";
 
 type Status =
