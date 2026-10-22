@@ -4,9 +4,9 @@
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
     "set": "Exam 3",
-    "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30 and 32, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 7): 5 per chapter group (16 and 19 together; 29, 30 and 32 together), all hard. Every lecture topic has at least one question (batch 6); questions that revisit a topic are hard (difficulty \"difficult\"). NGN style items (matrix, cloze, highlight, bowtie, ordered response) are kept near 15% of each section.",
-    "questionCount": 241,
-    "chapterQuestionCount": 208,
+    "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30, 32, 58 and 59, Potter chapter 46, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 9): 10 each for Urinary Elimination (Potter 46), Urinary Conditions (Iggy 58) and Kidney Conditions (Iggy 59). Every lecture topic has at least one question; questions that revisit a topic are hard (difficulty \"difficult\"). NGN style items (matrix, cloze, highlight, bowtie, ordered response) are kept near 15% of each section.",
+    "questionCount": 271,
+    "chapterQuestionCount": 238,
     "skillCount": 2,
     "chaptersIncluded": [
       1016,
@@ -15,7 +15,10 @@
       1029,
       1030,
       1031,
-      1032
+      1032,
+      2046,
+      1058,
+      1059
     ],
     "skillsIncluded": [
       1,
@@ -26,10 +29,10 @@
       "skills"
     ],
     "questionTypes": {
-      "multiple_choice": 159,
-      "highlight": 9,
-      "matrix": 10,
-      "sata": 47,
+      "multiple_choice": 178,
+      "highlight": 10,
+      "matrix": 13,
+      "sata": 54,
       "ordered_response": 2,
       "cloze": 7,
       "bowtie": 7
@@ -130,13 +133,16 @@
           1029,
           1030,
           1031,
-          1032
+          1032,
+          2046,
+          1058,
+          1059
         ],
         "skills": [
           1,
           2
         ],
-        "questionCount": 241
+        "questionCount": 271
       }
     ],
     "chapterGroups": [
@@ -174,6 +180,30 @@
           1030,
           1032
         ]
+      },
+      {
+        "id": "urinary-elimination",
+        "title": "Urinary Elimination",
+        "exam": "Exam 3",
+        "chapters": [
+          2046
+        ]
+      },
+      {
+        "id": "urinary-conditions",
+        "title": "Urinary Conditions",
+        "exam": "Exam 3",
+        "chapters": [
+          1058
+        ]
+      },
+      {
+        "id": "kidney-conditions",
+        "title": "Kidney Conditions",
+        "exam": "Exam 3",
+        "chapters": [
+          1059
+        ]
       }
     ],
     "currentDailySet": {
@@ -183,7 +213,7 @@
       "questionIds": [],
       "caseStudyIds": []
     },
-    "difficultCount": 93,
+    "difficultCount": 99,
     "difficultIds": [
       "ig16-x01",
       "ig16-m06",
@@ -271,6 +301,12 @@
       "ig32-x04",
       "ig32-m20",
       "ig32-x05",
+      "p46-x01",
+      "p46-x02",
+      "ig58-x01",
+      "ig58-x02",
+      "ig59-x02",
+      "ig59-x01",
       "sk-cardiac-x01",
       "sk-cardiac-x02",
       "sk-cardiac-x03",
@@ -279,7 +315,7 @@
       "sk-infusion-x02",
       "sk-infusion-x03"
     ],
-    "nclexCount": 35,
+    "nclexCount": 39,
     "nclexIds": [
       "ig16-m02",
       "ig16-m07",
@@ -311,6 +347,10 @@
       "ig32-m07",
       "ig32-m16",
       "ig32-m20",
+      "p46-m05",
+      "ig58-m03",
+      "ig58-m05",
+      "ig59-m04",
       "sk-cardiac-m02",
       "sk-cardiac-m04",
       "sk-cardiac-m06",
@@ -318,28 +358,38 @@
       "sk-infusion-m08"
     ],
     "newIds": [
-      "ig16-x07",
-      "ig16-x08",
-      "ig16-m25",
-      "ig19-x07",
-      "ig19-x08",
-      "ig27-x05",
-      "ig27-m25",
-      "ig27-x06",
-      "ig27-x07",
-      "ig27-x08",
-      "ig29-x06",
-      "ig29-x05",
-      "ig30-x07",
-      "ig31-x07",
-      "ig31-x08",
-      "ig31-x09",
-      "ig31-x10",
-      "ig31-x11",
-      "ig32-m20",
-      "ig32-x05"
+      "p46-m01",
+      "p46-m02",
+      "p46-x01",
+      "p46-m03",
+      "p46-m04",
+      "p46-m05",
+      "p46-m06",
+      "p46-m07",
+      "p46-m08",
+      "p46-x02",
+      "ig58-m01",
+      "ig58-m02",
+      "ig58-m03",
+      "ig58-m04",
+      "ig58-x01",
+      "ig58-m05",
+      "ig58-m06",
+      "ig58-m07",
+      "ig58-m08",
+      "ig58-x02",
+      "ig59-m01",
+      "ig59-m02",
+      "ig59-m03",
+      "ig59-m04",
+      "ig59-m05",
+      "ig59-x02",
+      "ig59-m06",
+      "ig59-m07",
+      "ig59-x01",
+      "ig59-m08"
     ],
-    "newCount": 20,
+    "newCount": 30,
     "ngnIds": [
       "ig16-m02",
       "ig16-m07",
@@ -371,13 +421,17 @@
       "ig32-m07",
       "ig32-m16",
       "ig32-m20",
+      "p46-m05",
+      "ig58-m03",
+      "ig58-m05",
+      "ig59-m04",
       "sk-cardiac-m02",
       "sk-cardiac-m04",
       "sk-cardiac-m06",
       "sk-infusion-m02",
       "sk-infusion-m08"
     ],
-    "ngnCount": 35,
+    "ngnCount": 39,
     "ngnTypes": [
       "bowtie",
       "cloze",
@@ -2741,7 +2795,6 @@
           "caseGroup": "ig16-case14",
           "caseStep": 1,
           "objective": "Compare innate and adaptive immunity",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -2813,7 +2866,6 @@
           "caseGroup": "ig16-case14",
           "caseStep": 2,
           "objective": "Compare innate and adaptive immunity",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -2901,7 +2953,6 @@
           "caseStep": 3,
           "objective": "Compare innate and adaptive immunity",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 7
         }
       ]
@@ -5197,7 +5248,6 @@
           "caseGroup": "ig19-case15",
           "caseStep": 1,
           "objective": "Connect immune responses with nursing assessment",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -5267,7 +5317,6 @@
           "caseGroup": "ig19-case15",
           "caseStep": 2,
           "objective": "Differentiate inflammation from infection",
-          "new": true,
           "addedBatch": 7
         }
       ]
@@ -7527,7 +7576,6 @@
           "caseGroup": "ig27-case11",
           "caseStep": 1,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -7666,7 +7714,6 @@
           "caseStep": 2,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -7734,7 +7781,6 @@
           "caseGroup": "ig27-case11",
           "caseStep": 3,
           "objective": "Explain cardiac output, stroke volume, preload, afterload, and mean arterial pressure.",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -7802,7 +7848,6 @@
           "caseGroup": "ig27-case12",
           "caseStep": 1,
           "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -7870,7 +7915,6 @@
           "caseGroup": "ig27-case12",
           "caseStep": 2,
           "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
-          "new": true,
           "addedBatch": 7
         }
       ]
@@ -9755,7 +9799,6 @@
           "caseGroup": "ig29-case10",
           "caseStep": 1,
           "objective": "Differentiate left and right sided heart failure and identify their key clinical findings.",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -9827,7 +9870,6 @@
           "caseGroup": "ig29-case10",
           "caseStep": 3,
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
-          "new": true,
           "addedBatch": 7
         }
       ]
@@ -11909,7 +11951,6 @@
           "caseGroup": "ig30-case10",
           "caseStep": 3,
           "objective": "Recognize common manifestations, complications, and priority nursing assessments for hypertension.",
-          "new": true,
           "addedBatch": 7
         }
       ]
@@ -14362,7 +14403,6 @@
           "caseGroup": "ig31-case14",
           "caseStep": 1,
           "objective": "Select standard and transmission-based precautions",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -14428,7 +14468,6 @@
           "caseGroup": "ig31-case14",
           "caseStep": 2,
           "objective": "Select standard and transmission-based precautions",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -14494,7 +14533,6 @@
           "caseGroup": "ig31-case14",
           "caseStep": 3,
           "objective": "Select standard and transmission-based precautions",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -14560,7 +14598,6 @@
           "caseGroup": "ig31-case15",
           "caseStep": 1,
           "objective": "Explain the nurse's role in testing, treatment, and teaching",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -14626,7 +14663,6 @@
           "caseGroup": "ig31-case15",
           "caseStep": 2,
           "objective": "Explain how infection spreads to a susceptible person",
-          "new": true,
           "addedBatch": 7
         }
       ]
@@ -16627,7 +16663,6 @@
           "caseStep": 1,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 7
         },
         {
@@ -16698,8 +16733,2320 @@
           "caseGroup": "ig32-case9",
           "caseStep": 2,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
-          "new": true,
           "addedBatch": 7
+        }
+      ]
+    },
+    {
+      "id": 2046,
+      "chapterNumber": 46,
+      "source": "Potter",
+      "title": "Urinary Elimination",
+      "exam": "Exam 3",
+      "group": "urinary-elimination",
+      "questions": [
+        {
+          "id": "p46-m01",
+          "type": "multiple_choice",
+          "stem": "A client, 68 years old, had surgery on the right hip under general anesthesia. The client last voided 300 mL at 0600, before surgery, and has not voided since. At 1400 the client reports lower abdominal pressure, 5 of 10. Intravenous intake since 0600 has been 1,400 mL. Which action should the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Insert a straight catheter to drain the bladder and measure the volume",
+              "correct": false,
+              "rationale": "Catheterization may be needed, but it is an invasive intervention taken before the nurse knows whether the bladder is full. A catheter is used only after the indication is confirmed and alternatives are considered."
+            },
+            {
+              "id": "B",
+              "text": "Palpate above the symphysis pubis and obtain a bladder scan",
+              "correct": true,
+              "rationale": "The client has not voided for 8 hours after anesthesia and reports lower abdominal pressure. The nurse assesses bladder fullness and obtains a bladder scan to find out how much urine the bladder holds before choosing an intervention."
+            },
+            {
+              "id": "C",
+              "text": "Give 480 mL of oral fluid over the next hour to stimulate voiding",
+              "correct": false,
+              "rationale": "The client has already received 1,400 mL of fluid. Lack of fluid is not the problem, and more volume adds to a bladder that may not be emptying."
+            },
+            {
+              "id": "D",
+              "text": "Report urinary retention to the provider and request an indwelling catheter",
+              "correct": false,
+              "rationale": "Retention has not been confirmed yet. An indwelling catheter also carries a risk of catheter associated infection, so the nurse gathers bladder data first."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "When retention is suspected, the nurse assesses the last void, symptoms, and output, then obtains a bladder scan when indicated. Assessment comes before catheterization or a report.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Three options act on retention as if it were confirmed. Find the option that confirms it first.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Identify the cue",
+                "detail": "No void for 8 hours after anesthesia, with lower abdominal pressure."
+              },
+              {
+                "action": "Sort the options",
+                "detail": "Catheterizing, adding fluid, and reporting retention all act before the bladder volume is known."
+              },
+              {
+                "action": "Choose",
+                "detail": "Palpate the bladder and obtain a bladder scan."
+              }
+            ],
+            "verdict": "B. Palpate above the symphysis pubis and obtain a bladder scan."
+          },
+          "caseGroup": "p46-case1",
+          "caseStep": 1,
+          "objective": "Assess patterns & concerning changes",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "p46-m02",
+          "type": "multiple_choice",
+          "stem": "A client, 68 years old, had surgery on the right hip under general anesthesia 9 hours ago. A bladder scan at 1500 shows 650 mL of urine. The client says, \"I feel like I have to go, but nothing comes out. Why is that happening?\" Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"The kidneys slow urine production for a day after anesthesia, so your bladder is nearly empty.\"",
+              "correct": false,
+              "rationale": "The bladder scan shows 650 mL, so the bladder is not empty. The kidneys filter blood and produce urine; the problem here is emptying, not production."
+            },
+            {
+              "id": "B",
+              "text": "\"The tubes from your kidneys swell after surgery and hold the urine back before it reaches the bladder.\"",
+              "correct": false,
+              "rationale": "The ureters carry urine to the bladder, and the scan shows 650 mL already in the bladder. The urine has arrived; it is not leaving."
+            },
+            {
+              "id": "C",
+              "text": "\"Your bladder muscle is weak after surgery, so the sphincter has to tighten to push the urine out.\"",
+              "correct": false,
+              "rationale": "The bladder muscle does contract to empty the bladder, but the sphincter relaxes to let urine leave. A sphincter that tightens holds urine in."
+            },
+            {
+              "id": "D",
+              "text": "\"Anesthesia can slow the nerve signals that make the bladder muscle contract and the sphincter relax.\"",
+              "correct": true,
+              "rationale": "Urination depends on nerve signals about bladder fullness, contraction of the bladder muscle, and relaxation of the sphincter. Anesthesia is a non obstructive cause of retention because it interferes with that coordinated nerve and muscle function."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Urine collects in the bladder, nerve signals report fullness, the bladder muscle contracts, and the sphincter relaxes. Anesthesia can disrupt this nerve and muscle coordination and cause non obstructive retention.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options name the bladder muscle and the sphincter. Check what each structure actually does during voiding.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Use the scan",
+                "detail": "650 mL in the bladder rules out low production and a ureter blockage."
+              },
+              {
+                "action": "Compare the two muscle options",
+                "detail": "The sphincter must relax, not tighten, for urine to leave."
+              },
+              {
+                "action": "Choose",
+                "detail": "Anesthesia slows the nerve signals that coordinate contraction and relaxation."
+              }
+            ],
+            "verdict": "D. Anesthesia can slow the nerve signals that make the bladder muscle contract and the sphincter relax."
+          },
+          "caseGroup": "p46-case1",
+          "caseStep": 2,
+          "objective": "Explain urinary system functions",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "p46-x01",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 70 years old, had surgery on the right hip 2 days ago. The order reads: perform straight catheterization if the postvoid residual is greater than 300 mL. The assistive personnel helped the client void 150 mL at 1000 and performed a bladder scan at 1045, which showed 380 mL. The client reports no abdominal pressure. Which action by the nurse is most appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Perform the straight catheterization, because the residual is greater than 300 mL",
+              "correct": false,
+              "rationale": "The order would apply to a residual of 380 mL. The cue is the timing: the scan was done 45 minutes after the void, so the kidneys kept filling the bladder and the number does not reflect what was left after voiding."
+            },
+            {
+              "id": "B",
+              "text": "Record 380 mL as the postvoid residual and plan the next scan for 1400",
+              "correct": false,
+              "rationale": "Recording the value treats the scan as valid. A scan done 45 minutes after voiding does not measure the residual, so it cannot be recorded as one."
+            },
+            {
+              "id": "C",
+              "text": "Have the client void again and repeat the scan within 5 to 15 minutes after that void",
+              "correct": true,
+              "rationale": "A postvoid residual is accurate only when it is measured within 5 to 15 minutes after the client voids. The 1045 scan was done 45 minutes after the void, so the nurse obtains a valid measurement before acting on the order."
+            },
+            {
+              "id": "D",
+              "text": "Report a postvoid residual of 380 mL to the provider and request an indwelling catheter",
+              "correct": false,
+              "rationale": "This treats the 380 mL as a true residual, and an indwelling catheter adds infection risk. The measurement must be repeated at the correct time first."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Measure a postvoid residual within 5 to 15 minutes after the client voids. A scan done later includes newly produced urine and overstates what the bladder failed to empty.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Potter).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Potter"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two options act on the order. Before using a number, check whether it was measured correctly: the 45 minute delay decides.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Check the timing",
+                "detail": "Void at 1000, scan at 1045: 45 minutes apart."
+              },
+              {
+                "action": "Judge the value",
+                "detail": "A scan that late includes new urine, so 380 mL is not a valid residual."
+              },
+              {
+                "action": "Choose",
+                "detail": "Repeat the void and scan within 5 to 15 minutes, then apply the order."
+              }
+            ],
+            "verdict": "C. Have the client void again and repeat the scan within 5 to 15 minutes after that void."
+          },
+          "caseGroup": "p46-case1",
+          "caseStep": 3,
+          "objective": "Assess patterns & concerning changes",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "p46-m03",
+          "type": "multiple_choice",
+          "stem": "A nurse inserts an indwelling urinary catheter for a client, 59 years old, with acute urinary retention. Urine flows into the tubing, and the nurse advances the catheter as the procedure requires. As the nurse injects sterile water into the balloon port, the client cries out with sudden pain, 8 of 10, and the nurse feels resistance. Which action should the nurse take next?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Stop, let the water return, advance the catheter farther, and reinflate",
+              "correct": true,
+              "rationale": "Sudden pain and resistance mean the balloon may be inflating in the urethra. The nurse stops, lets the fluid return, advances the catheter farther into the bladder, and reinflates."
+            },
+            {
+              "id": "B",
+              "text": "Finish injecting the full volume quickly so the balloon seats inside the bladder",
+              "correct": false,
+              "rationale": "Continuing to inflate a balloon that may be in the urethra can injure the urethra. Pain and resistance are signals to stop."
+            },
+            {
+              "id": "C",
+              "text": "Leave the balloon partly inflated and secure the catheter to the upper thigh",
+              "correct": false,
+              "rationale": "An underinflated balloon can become distorted and damage the bladder, and the catheter may still sit in the urethra."
+            },
+            {
+              "id": "D",
+              "text": "Remove the catheter now and report the sudden pain to the provider",
+              "correct": false,
+              "rationale": "Removal and a report are the steps if pain continues after the catheter is repositioned. The first step is to deflate, advance, and reinflate."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "If the client reports sudden pain or the nurse feels resistance during balloon inflation, stop, let the fluid return, advance the catheter, and reinflate. If pain continues, remove the catheter and notify the provider.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Potter).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Potter"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two options stop inflating. Ask which one corrects the likely cause before giving up on the catheter.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Identify the cue",
+                "detail": "Sudden pain and resistance during inflation suggest the balloon is in the urethra."
+              },
+              {
+                "action": "Rule out continuing",
+                "detail": "Finishing the injection or leaving it partly inflated both risk injury."
+              },
+              {
+                "action": "Compare the stop options",
+                "detail": "Removal is for pain that continues; repositioning comes first."
+              }
+            ],
+            "verdict": "A. Stop, let the water return, advance the catheter farther, and reinflate."
+          },
+          "caseGroup": "p46-case2",
+          "caseStep": 1,
+          "objective": "Describe specimen collection & catheter care",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "p46-m04",
+          "type": "sata",
+          "stem": "An assistive personnel cares for a client, 80 years old, who has an indwelling urinary catheter. Which actions by the assistive personnel require the nurse to intervene? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hangs the drainage bag on the bed frame below the level of the bladder",
+              "correct": false,
+              "rationale": "Keeping the bag below the bladder lets urine drain by gravity and prevents backflow. No correction is needed."
+            },
+            {
+              "id": "B",
+              "text": "Sets the drainage bag on the floor while repositioning the client",
+              "correct": true,
+              "rationale": "The bag must stay off the floor. Contact with the floor contaminates the bag and its emptying spout."
+            },
+            {
+              "id": "C",
+              "text": "Disconnects the catheter from the tubing to empty the bag faster",
+              "correct": true,
+              "rationale": "Separating the catheter from the tubing opens the closed drainage system and lets organisms in. The bag is emptied through its spout."
+            },
+            {
+              "id": "D",
+              "text": "Places the drainage bag on the client's lap during the transfer to a chair",
+              "correct": true,
+              "rationale": "On the lap, the bag sits above the bladder, so urine can flow back into the bladder."
+            },
+            {
+              "id": "E",
+              "text": "Coils the extra tubing on the mattress so that it has no kinks",
+              "correct": false,
+              "rationale": "Tubing free of kinks keeps urine flowing. No correction is needed."
+            },
+            {
+              "id": "F",
+              "text": "Leaves the tubing under the client's right thigh after turning the client",
+              "correct": true,
+              "rationale": "Lying on the tubing compresses it and blocks drainage. The tubing must stay free of kinks and pressure."
+            }
+          ],
+          "answer": [
+            "B",
+            "C",
+            "D",
+            "F"
+          ],
+          "takeaway": "Routine indwelling catheter care: hand hygiene before all care, a closed drainage system, tubing free of kinks, and the bag below the bladder and off the floor.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Test each action against the four routine care rules: hand hygiene, closed system, no kinks, bag below the bladder and off the floor.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check the bag position",
+                "detail": "Bed frame below the bladder is correct; the floor and the lap are not."
+              },
+              {
+                "action": "Check the system",
+                "detail": "Disconnecting the catheter breaks the closed system."
+              },
+              {
+                "action": "Check the tubing",
+                "detail": "Coiled tubing with no kinks is correct; tubing under the thigh is compressed."
+              }
+            ],
+            "verdict": "B, C, D, F."
+          },
+          "caseGroup": "p46-case2",
+          "caseStep": 2,
+          "objective": "Describe specimen collection & catheter care",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "p46-m05",
+          "type": "matrix",
+          "scenario": "A client, 66 years old, had an indwelling urinary catheter removed at 0600 after 3 days. The nurse reviews the findings recorded between 0600 and 1400.",
+          "stem": "For each finding, indicate whether it is expected after catheter removal or requires follow up.",
+          "columns": [
+            "Expected",
+            "Requires follow up"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Mild burning with the first void at 0930",
+              "answer": "Expected",
+              "rationale": "Mild burning or discomfort with the first voids after removal comes from urethral irritation and soon subsides."
+            },
+            {
+              "id": "r2",
+              "text": "Voided 320 mL of clear, pale yellow urine at 0930",
+              "answer": "Expected",
+              "rationale": "A void of 320 mL of clear urine within a few hours shows the bladder is filling and emptying after removal."
+            },
+            {
+              "id": "r3",
+              "text": "Voids of 40 mL at 1130, 1200, and 1230, with a feeling of incomplete emptying",
+              "answer": "Requires follow up",
+              "rationale": "Small, frequent voids with a sensation of incomplete emptying can mean retention. The nurse assesses for bladder distention and obtains a bladder scan."
+            },
+            {
+              "id": "r4",
+              "text": "Oral temperature 38.5 °C at 1300, was 36.8 °C at 0600, with pain in the right flank",
+              "answer": "Requires follow up",
+              "rationale": "Any client whose catheter was recently removed is at risk for urinary tract infection. A new fever with flank pain may mean an upper urinary tract infection."
+            },
+            {
+              "id": "r5",
+              "text": "Burning with every void through 1400, rated 6 of 10",
+              "answer": "Requires follow up",
+              "rationale": "Burning with the first few voids is expected, but burning that continues with every void may mean infection."
+            },
+            {
+              "id": "r6",
+              "text": "Drinking 240 mL of fluid every 2 hours as taught",
+              "answer": "Expected",
+              "rationale": "Maintaining fluid intake after removal is part of the teaching, and it supports normal urine output."
+            }
+          ],
+          "answer": {
+            "r1": "Expected",
+            "r2": "Expected",
+            "r3": "Requires follow up",
+            "r4": "Requires follow up",
+            "r5": "Requires follow up",
+            "r6": "Expected"
+          },
+          "scoring": "0/1",
+          "takeaway": "After catheter removal, expect mild burning with the first voids. Evaluate for retention (small, frequent voids, incomplete emptying) and for infection (fever, flank pain, continued painful voiding).",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Potter).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Potter"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Separate the first void from the pattern. A brief symptom at the first void is expected; the same symptom that persists, or a new systemic sign, needs follow up.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Sort by timing",
+                "detail": "Burning at the first void is expected; burning with every void through 1400 is not."
+              },
+              {
+                "action": "Look for retention",
+                "detail": "Three voids of 40 mL with incomplete emptying need a bladder assessment."
+              },
+              {
+                "action": "Look for infection",
+                "detail": "A new temperature of 38.5 °C with right flank pain needs follow up."
+              },
+              {
+                "action": "Confirm the expected findings",
+                "detail": "A 320 mL clear void and intake as taught show the plan working."
+              }
+            ],
+            "verdict": "Expected: rows 1, 2, 6. Requires follow up: rows 3, 4, 5."
+          },
+          "caseGroup": "p46-case2",
+          "caseStep": 3,
+          "objective": "Evaluate nursing care outcomes",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "p46-m06",
+          "type": "multiple_choice",
+          "stem": "A client, 31 years old, comes to the clinic and reports that urine has leaked twice in 2 days before the client reached the toilet. The client also reports burning with each void, voiding every 30 to 45 minutes, and lower abdominal discomfort, 4 of 10. The bladder is not palpable above the symphysis pubis. The urine in the collection cup is cloudy with a strong odor. Which problem do these findings most likely indicate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Urgency incontinence from a bladder that contracts without warning",
+              "correct": false,
+              "rationale": "Leakage with a sudden urge fits urgency incontinence. The burning, the cloudy urine with a strong odor, and the frequency point to an infection as the cause."
+            },
+            {
+              "id": "B",
+              "text": "A urinary tract infection causing urgency and frequent voiding",
+              "correct": true,
+              "rationale": "Burning with urination, urgency, frequent voiding, lower abdominal discomfort, and a change in urine appearance are the signs of a urinary tract infection. The urgency explains the leakage."
+            },
+            {
+              "id": "C",
+              "text": "Stress incontinence from weak pelvic floor muscles",
+              "correct": false,
+              "rationale": "Stress incontinence is leakage with coughing, sneezing, or activity. The client leaks with urgency, not with effort."
+            },
+            {
+              "id": "D",
+              "text": "Chronic urinary retention with leakage from an overfull bladder",
+              "correct": false,
+              "rationale": "Retention can cause small voids and leakage, but the bladder is not palpable, and the client reports no feeling of incomplete emptying."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "A urinary tract infection presents with burning or pain with urination, urgency or frequency, lower abdominal discomfort, and possible changes in urine appearance.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Leakage pulls toward an incontinence type. Ask which problem explains every finding, including the burning and the cloudy urine.",
+          "elimination": {
+            "strategies": [
+              "Global or umbrella option"
+            ],
+            "steps": [
+              {
+                "action": "List the cues",
+                "detail": "Burning, urgency with leakage, frequency, lower abdominal discomfort, cloudy urine with odor."
+              },
+              {
+                "action": "Test the incontinence types",
+                "detail": "Urgency incontinence explains the leakage but not the burning or the urine change; stress incontinence has the wrong trigger."
+              },
+              {
+                "action": "Test retention",
+                "detail": "No palpable bladder and no incomplete emptying."
+              },
+              {
+                "action": "Choose",
+                "detail": "A urinary tract infection explains all the findings."
+              }
+            ],
+            "verdict": "B. A urinary tract infection causing urgency and frequent voiding."
+          },
+          "caseGroup": "p46-case3",
+          "caseStep": 1,
+          "objective": "Differentiate retention, infection, incontinence",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "p46-m07",
+          "type": "multiple_choice",
+          "stem": "A nurse teaches a client, 31 years old, how to collect a clean voided urine specimen for culture at the clinic at 1100. Which statement by the client indicates correct understanding?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"I will start my stream in the toilet and then move the cup into the stream.\"",
+              "correct": true,
+              "rationale": "The first part of the stream flushes organisms from the urethral opening. The specimen is caught from the middle of the stream, and the cup is removed before the flow stops."
+            },
+            {
+              "id": "B",
+              "text": "\"I will catch the very first part of the stream, because that urine has been in the bladder longest.\"",
+              "correct": false,
+              "rationale": "The first urine carries organisms from the urethral opening and contaminates the culture. The first part goes into the toilet."
+            },
+            {
+              "id": "C",
+              "text": "\"I will clean the area with the towelette, void into the toilet hat, and pour it into the cup.\"",
+              "correct": false,
+              "rationale": "Cleansing is correct, but a toilet hat is not sterile. Pouring from it contaminates the specimen."
+            },
+            {
+              "id": "D",
+              "text": "\"I will hold the lid by its inside surface so that my fingers stay off the outside of the cup.\"",
+              "correct": false,
+              "rationale": "The inside of the lid and the cup must not be touched. The client handles only the outside surfaces."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "For a clean voided specimen, cleanse the urethral opening, start the stream into the toilet, collect from the middle of the stream, and touch only the outside of the cup and lid.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Potter).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Potter"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Find the step each wrong statement contaminates: the first stream, a nonsterile container, or the inside of the lid.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check the stream",
+                "detail": "The first urine flushes the opening, so it is not collected."
+              },
+              {
+                "action": "Check the container",
+                "detail": "A toilet hat is not sterile."
+              },
+              {
+                "action": "Check handling",
+                "detail": "Only outside surfaces are touched."
+              },
+              {
+                "action": "Choose",
+                "detail": "Start in the toilet, then move the cup into the stream."
+              }
+            ],
+            "verdict": "A. Start the stream in the toilet and then move the cup into the stream."
+          },
+          "caseGroup": "p46-case3",
+          "caseStep": 2,
+          "objective": "Describe specimen collection & catheter care",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "p46-m08",
+          "type": "sata",
+          "stem": "A client, 84 years old, lives in a long term care facility, walks with a walker, and needs help to reach the bathroom. Urine has leaked twice this week. Which actions by the nurse support the client's dignity and independence? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ask the client about the usual times of voiding at home",
+              "correct": true,
+              "rationale": "Asking about the usual routine lets the plan follow the client's own pattern."
+            },
+            {
+              "id": "B",
+              "text": "Explain each step of perineal care before uncovering the client",
+              "correct": true,
+              "rationale": "Explaining care before exposing or touching the client respects the client's privacy and gives the client control."
+            },
+            {
+              "id": "C",
+              "text": "Place an absorbent product on the client at all times so staff can change it on rounds",
+              "correct": false,
+              "rationale": "This replaces toileting with containment for staff convenience. The client can walk with help and needs access to the toilet, not a product worn at all times."
+            },
+            {
+              "id": "D",
+              "text": "Use a bedpan at night instead of the commode the client prefers, to save staff time",
+              "correct": false,
+              "rationale": "The client's preferred toileting method is supported when it is safe. Saving staff time is not a reason to override it."
+            },
+            {
+              "id": "E",
+              "text": "Ask the client to pull up the pants as able after toileting",
+              "correct": true,
+              "rationale": "Encouraging participation in self care supports independence."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "E"
+          ],
+          "takeaway": "Dignity in elimination care: ask about the usual routine, explain before exposing or touching, provide privacy and respectful language, support the preferred toileting method when safe, and encourage self care.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Mark each action true or false by asking whose need it serves: the client's routine, privacy, and independence, or staff convenience.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check routine and privacy",
+                "detail": "Asking about home voiding times and explaining before uncovering are correct."
+              },
+              {
+                "action": "Check independence",
+                "detail": "Having the client pull up the pants encourages self care."
+              },
+              {
+                "action": "Reject convenience actions",
+                "detail": "A product worn at all times and a bedpan in place of the preferred commode serve staff, not the client."
+              }
+            ],
+            "verdict": "A, B, E."
+          },
+          "caseGroup": "p46-case4",
+          "caseStep": 1,
+          "objective": "Select dignity supporting interventions",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "p46-x02",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 79 years old, has weakness of the left arm and leg after a stroke. The client uses the call light as soon as the urge to void begins. Urine leaks while the client waits 10 to 15 minutes for help walking to the bathroom. When staff help the client onto the toilet within 5 minutes of the urge, no leakage occurs and each void is 250 to 300 mL. Which intervention best addresses the cause of the leakage?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Begin bladder training to lengthen the time between voids",
+              "correct": false,
+              "rationale": "Bladder training fits urgency incontinence, and leakage after an urge looks like that pattern. The cue is that no leakage occurs when the client reaches the toilet within 5 minutes; the bladder holds urine, but the trip takes too long."
+            },
+            {
+              "id": "B",
+              "text": "Teach pelvic floor muscle exercises to strengthen control of urine flow",
+              "correct": false,
+              "rationale": "Pelvic floor training fits stress incontinence, which is leakage with coughing, sneezing, or activity. That is not this client's pattern."
+            },
+            {
+              "id": "C",
+              "text": "Insert an indwelling catheter to keep the perineal skin dry",
+              "correct": false,
+              "rationale": "A catheter adds infection risk and does not address the cause. The client recognizes the urge and voids normal volumes."
+            },
+            {
+              "id": "D",
+              "text": "Place a commode on the right side of the bed and schedule toileting",
+              "correct": true,
+              "rationale": "The client recognizes the urge but leaks while waiting for help to walk, which is functional incontinence. A commode on the stronger right side and scheduled toileting improve access to the toilet."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Functional incontinence is leakage because the client has difficulty reaching or using the toilet. Care improves access, such as a bedside commode, and schedules regular toileting assistance.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Leakage after an urge points to two types. Decide by what happens when the toilet is reached quickly: no leakage within 5 minutes means the barrier is access, not the bladder.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Identify the pattern",
+                "detail": "The client feels the urge and calls, then leaks while waiting for help to walk."
+              },
+              {
+                "action": "Apply the cue",
+                "detail": "No leakage when on the toilet within 5 minutes, with voids of 250 to 300 mL, rules out a bladder that cannot hold urine."
+              },
+              {
+                "action": "Match the care to the cause",
+                "detail": "Functional incontinence needs better access and scheduled toileting."
+              }
+            ],
+            "verdict": "D. Place a commode on the right side of the bed and schedule toileting."
+          },
+          "caseGroup": "p46-case4",
+          "caseStep": 2,
+          "objective": "Differentiate retention, infection, incontinence",
+          "new": true,
+          "addedBatch": 9
+        }
+      ]
+    },
+    {
+      "id": 1058,
+      "chapterNumber": 58,
+      "source": "Iggy",
+      "title": "Urinary Conditions",
+      "exam": "Exam 3",
+      "group": "urinary-conditions",
+      "questions": [
+        {
+          "id": "ig58-m01",
+          "type": "sata",
+          "stem": "A client, 81 years old, lives alone and reports wetting the underwear on the way to the bathroom 2 or 3 times a week. The client drinks about 600 mL of fluid a day \"so I do not have accidents,\" and the urine is dark amber. The last bowel movement was 4 days ago. The bathroom is at the end of a dim hallway with a rug and stacked boxes along the wall. The client walks with a cane in the right hand. Which recommendations support normal urinary elimination for this client? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wear absorbent briefs during the day in place of walking to the bathroom",
+              "correct": false,
+              "rationale": "Briefs used in place of toileting leave urine against the skin and do nothing to remove the contributors named. The client can still walk to the bathroom with a cane once the path is safe."
+            },
+            {
+              "id": "B",
+              "text": "Spread fluid intake through the day, aiming for urine that is light yellow",
+              "correct": true,
+              "rationale": "The kidneys need enough fluid to produce dilute urine. Dark amber urine at 600 mL a day is concentrated, and concentrated urine irritates the bladder and raises the risk of infection. Restricting fluid does not prevent leakage."
+            },
+            {
+              "id": "C",
+              "text": "Wait until the urge is strong before walking to the bathroom",
+              "correct": false,
+              "rationale": "Waiting for a strong urge leaves less time to reach the toilet. With a long walk and a cane, the client needs more time, not less."
+            },
+            {
+              "id": "D",
+              "text": "Light the hallway and clear the rug and boxes from the path",
+              "correct": true,
+              "rationale": "Poor lighting, clutter and an inaccessible bathroom are environmental barriers to reaching the toilet in time, and they add fall risk for a client who walks with a cane."
+            },
+            {
+              "id": "E",
+              "text": "Stop drinking fluids after the noon meal to prevent leakage",
+              "correct": false,
+              "rationale": "Fluid is limited only in the 2 to 4 hours before bed, not for the whole afternoon. The client is already taking in too little fluid for dilute urine."
+            },
+            {
+              "id": "F",
+              "text": "Add fiber and fluid to reestablish regular bowel movements",
+              "correct": true,
+              "rationale": "Constipation places pressure on the bladder and urethra and contributes to incontinence. No bowel movement for 4 days is a reversible contributor."
+            }
+          ],
+          "answer": [
+            "B",
+            "D",
+            "F"
+          ],
+          "takeaway": "Normal elimination depends on enough fluid for dilute urine, regular bowel movements, and a safe, short path to the toilet. Fluid restriction, constipation, limited mobility and environmental barriers all work against continence.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Sort each option by whether it removes a contributor named in the stem: low fluid, constipation, or a long dim cluttered path.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Match options to cues",
+                "detail": "Dark amber urine, no bowel movement for 4 days, a dim cluttered hallway and a cane are each a contributor."
+              },
+              {
+                "action": "Keep what removes a contributor",
+                "detail": "Fluid spread through the day, bowel regularity, and a clear lit path."
+              },
+              {
+                "action": "Reject what adds risk",
+                "detail": "Waiting for a strong urge, briefs in place of toileting, and stopping fluid at noon add risk."
+              }
+            ],
+            "verdict": "B, D, F."
+          },
+          "caseGroup": "ig58-case1",
+          "caseStep": 1,
+          "objective": "Explain urinary system functions and factors that support normal elimination",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig58-m02",
+          "type": "multiple_choice",
+          "stem": "A resident of a long term care facility, 86 years old, has moderate dementia and is incontinent of urine 4 to 6 times a day. The resident does not recognize the need to void, cannot follow instructions to delay voiding, and walks to the bathroom with the help of 1 staff member. A 3 day bladder diary shows voiding about every 2 hours while awake. Which toileting program does the nurse place in the plan of care?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bladder training, with voiding every 45 minutes and the urge suppressed between intervals",
+              "correct": false,
+              "rationale": "Bladder training depends on a client who is alert, aware of bladder fullness and able to resist the urge. This resident cannot follow instructions to delay voiding."
+            },
+            {
+              "id": "B",
+              "text": "Scheduled toileting, with staff assisting the resident to the toilet every 2 hours",
+              "correct": true,
+              "rationale": "Scheduled toileting relies on a time schedule set from the voiding pattern and does not require the resident to sense fullness or delay voiding. The diary supports a 2 hour interval, and the goal is to reach the toilet before leakage."
+            },
+            {
+              "id": "C",
+              "text": "Absorbent briefs changed every 2 hours, so the resident is not walked to the bathroom",
+              "correct": false,
+              "rationale": "Briefs used in place of timed toileting undermine the program and leave urine on the skin. They also lead residents to get up alone, a common cause of falls."
+            },
+            {
+              "id": "D",
+              "text": "Prompted voiding alone, with the resident expected to ask staff for help when the urge comes",
+              "correct": false,
+              "rationale": "Prompted voiding supplements scheduled toileting by prompting the resident to ask for help. Used alone, it fails for a resident who does not recognize the need to void."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Match the toileting program to cognition. Bladder training needs an alert client who can suppress the urge. Scheduled toileting works on a timed interval set from the voiding diary and suits cognitive impairment, with prompted voiding added as a supplement.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Prompted voiding is the right idea with one thing off: it depends on the resident asking. The cue that decides is that the resident does not recognize the need to void.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the limit",
+                "detail": "The resident does not sense fullness and cannot delay voiding."
+              },
+              {
+                "action": "Reject bladder training",
+                "detail": "It requires suppressing the urge between intervals."
+              },
+              {
+                "action": "Reject prompted voiding alone",
+                "detail": "It depends on the resident asking for help."
+              },
+              {
+                "action": "Reject briefs",
+                "detail": "Briefs replace toileting and harm skin and safety."
+              }
+            ],
+            "verdict": "B. Scheduled toileting every 2 hours with staff assistance."
+          },
+          "caseGroup": "ig58-case1",
+          "caseStep": 2,
+          "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig58-m03",
+          "type": "matrix",
+          "scenario": "A client, 74 years old, has urge incontinence. The provider is choosing between an antimuscarinic drug, oxybutynin, and mirabegron. The nurse prepares teaching and monitoring points for each drug.",
+          "stem": "For each item, indicate the drug it applies to.",
+          "columns": [
+            "Antimuscarinic",
+            "Mirabegron"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Reduces involuntary bladder contractions",
+              "answer": "Antimuscarinic",
+              "rationale": "Antimuscarinics block the nerve signals that trigger involuntary contractions of the bladder."
+            },
+            {
+              "id": "r2",
+              "text": "Relaxes the detrusor muscle by stimulating beta 3 receptors",
+              "answer": "Mirabegron",
+              "rationale": "Mirabegron relaxes the bladder muscle while urine is stored, which increases bladder capacity."
+            },
+            {
+              "id": "r3",
+              "text": "Report new forgetfulness or confusion",
+              "answer": "Antimuscarinic",
+              "rationale": "Cognitive effects are an antimuscarinic side effect and are a particular concern in older adults, so they are monitored closely."
+            },
+            {
+              "id": "r4",
+              "text": "Report straining to void or a feeling that the bladder is not empty",
+              "answer": "Antimuscarinic",
+              "rationale": "Antimuscarinics can cause urinary retention, which shows as straining or incomplete emptying."
+            },
+            {
+              "id": "r5",
+              "text": "Check the blood pressure at follow up visits",
+              "answer": "Mirabegron",
+              "rationale": "Mirabegron can raise blood pressure, so blood pressure is monitored while the client takes it."
+            },
+            {
+              "id": "r6",
+              "text": "Use sugarless hard candy for dry mouth and add fiber for constipation",
+              "answer": "Antimuscarinic",
+              "rationale": "Dry mouth and constipation are expected antimuscarinic side effects managed with these measures."
+            }
+          ],
+          "answer": {
+            "r1": "Antimuscarinic",
+            "r2": "Mirabegron",
+            "r3": "Antimuscarinic",
+            "r4": "Antimuscarinic",
+            "r5": "Mirabegron",
+            "r6": "Antimuscarinic"
+          },
+          "scoring": "0/1",
+          "takeaway": "Antimuscarinics reduce involuntary bladder contractions and cause dry mouth, constipation, urinary retention and cognitive effects. Mirabegron relaxes the bladder during storage and requires blood pressure monitoring.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Learn one unique point for mirabegron, blood pressure. Antimuscarinic side effects follow the drying, slowing pattern: dry mouth, constipation, retention, confusion.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Anchor mirabegron",
+                "detail": "Beta 3 relaxation of the detrusor and blood pressure."
+              },
+              {
+                "action": "Anchor antimuscarinics",
+                "detail": "Fewer involuntary contractions with dry mouth, constipation, retention and cognitive effects."
+              },
+              {
+                "action": "Sort the rest",
+                "detail": "Every drying or slowing side effect belongs to the antimuscarinic."
+              }
+            ],
+            "verdict": "Mirabegron: beta 3 relaxation of the detrusor and blood pressure. Antimuscarinic: involuntary contractions, confusion, retention, dry mouth and constipation."
+          },
+          "caseGroup": "ig58-case1",
+          "caseStep": 3,
+          "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig58-m04",
+          "type": "multiple_choice",
+          "stem": "A client, 52 years old, leaks urine when coughing or lifting and starts pelvic floor muscle training. At a follow up visit 2 weeks later, the nurse evaluates the client's understanding. Which statement shows the client is performing the exercises correctly?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"I hold the squeeze as long as I can and try not to let the muscles relax between squeezes.\"",
+              "correct": false,
+              "rationale": "Training is a controlled contraction followed by complete relaxation. Holding without relaxing fatigues the muscle and is not the method."
+            },
+            {
+              "id": "B",
+              "text": "\"I do the squeezes only on days when the leaking is worse, so the muscles get a rest.\"",
+              "correct": false,
+              "rationale": "Pelvic floor training needs consistent, regular practice over time. Practicing only on bad days does not build strength."
+            },
+            {
+              "id": "C",
+              "text": "\"I tighten the muscles that stop my stream, relax them fully, and practice when not urinating.\"",
+              "correct": true,
+              "rationale": "Correct muscle identification is essential, and stopping the stream once helps find the muscles. Each controlled contraction is followed by complete relaxation, and practice happens outside of urination."
+            },
+            {
+              "id": "D",
+              "text": "\"I practice by stopping and starting my stream every time I urinate, so I never forget to do them.\"",
+              "correct": false,
+              "rationale": "Stopping the stream is a way to identify the muscles, not the exercise itself. Practice is done outside of urination."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Pelvic floor training: identify the correct muscles, contract with control, relax completely, practice outside of urination, and keep practicing regularly over time on an individualized plan.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Option D is the right idea with one thing off: stopping the stream identifies the muscles, but practice happens outside of urination.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check relaxation",
+                "detail": "Option A skips complete relaxation."
+              },
+              {
+                "action": "Check consistency",
+                "detail": "Option B practices only on bad days."
+              },
+              {
+                "action": "Check timing",
+                "detail": "Option D practices during urination."
+              },
+              {
+                "action": "Keep the full method",
+                "detail": "Option C identifies, contracts, relaxes and practices outside of urination."
+              }
+            ],
+            "verdict": "C. Tighten the identified muscles, relax fully, and practice while not urinating."
+          },
+          "caseGroup": "ig58-case2",
+          "caseStep": 1,
+          "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig58-x01",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 70 years old, with diabetic neuropathy reports leaking small amounts of urine many times a day and night for 3 weeks, with a weak stream and a feeling of urgency. The client began a new antimuscarinic drug for urgency 4 weeks ago. Intake over the last 24 hours was 2000 mL, and the measured voided output was 700 mL. The lower abdomen is firm above the pubic bone. A bladder scan right after the client voided shows 450 mL. Which conclusion does the nurse draw?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The leakage is urge incontinence from involuntary bladder contractions, so the antimuscarinic dose needs to increase",
+              "correct": false,
+              "rationale": "Urgency and frequent leakage fit urge incontinence, and that is the reason the drug was started. The postvoid volume of 450 mL shows the bladder is not emptying, and an antimuscarinic adds to retention."
+            },
+            {
+              "id": "B",
+              "text": "The leakage is from a weak pelvic floor, so pelvic floor muscle training is the first step",
+              "correct": false,
+              "rationale": "Pelvic floor weakness causes leakage with coughing or lifting. It does not explain 450 mL left in the bladder after voiding."
+            },
+            {
+              "id": "C",
+              "text": "The low output reflects reduced kidney production, so oral fluid intake needs to increase",
+              "correct": false,
+              "rationale": "The urine is being made; it is staying in the bladder, as the firm lower abdomen and 450 mL scan show. More fluid adds to a bladder that is not emptying."
+            },
+            {
+              "id": "D",
+              "text": "The leakage is from incomplete emptying, with urinary retention that the antimuscarinic may be worsening",
+              "correct": true,
+              "rationale": "Leakage can occur with incomplete emptying. A postvoid volume of 450 mL, output far below intake, and a firm suprapubic area point to retention. Diabetic neuropathy and the antimuscarinic are both contributors."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Leakage does not always mean an overactive bladder. When output is well below intake and the bladder holds a large volume right after voiding, the leakage comes from incomplete emptying, and antimuscarinics, which cause retention, can make it worse.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Urge incontinence and retention are both defensible from the reported urgency and frequent leakage. The cue that decides is the 450 mL bladder scan taken right after voiding.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Find the measured cue",
+                "detail": "450 mL remains in the bladder right after voiding."
+              },
+              {
+                "action": "Compare the two leakage types",
+                "detail": "Involuntary contractions empty the bladder; a full bladder after voiding means it is not emptying."
+              },
+              {
+                "action": "Check the contributors",
+                "detail": "Diabetic neuropathy and an antimuscarinic both promote retention."
+              },
+              {
+                "action": "Reject the rest",
+                "detail": "Pelvic floor weakness and low kidney output do not explain a full bladder."
+              }
+            ],
+            "verdict": "D. Leakage from incomplete emptying, with retention the antimuscarinic may be worsening."
+          },
+          "caseGroup": "ig58-case2",
+          "caseStep": 2,
+          "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig58-m05",
+          "type": "highlight",
+          "nursesNote": "1015. Client is 34 years old. Oral temperature 37.0 °C. Has type 1 diabetes. Denies flank pain and denies chills. Reports burning during voiding since yesterday. Drank 1800 mL of fluid yesterday. Voids small amounts every 30 to 45 minutes and feels a sudden need to void. Reports no change in vision. Urine is pink tinged. Reports aching above the pubic bone, 4 of 10.",
+          "stem": "Highlight the findings that are cues for a lower urinary tract infection, including risk factors.",
+          "segments": [
+            {
+              "id": "s1",
+              "text": "Oral temperature 37.0 °C",
+              "correct": false,
+              "rationale": "The temperature is within the expected range. Fever would suggest spread beyond the bladder."
+            },
+            {
+              "id": "s2",
+              "text": "Has type 1 diabetes",
+              "correct": true,
+              "rationale": "Diabetes and reduced immunity are risk factors for urinary infection."
+            },
+            {
+              "id": "s3",
+              "text": "Denies flank pain and denies chills",
+              "correct": false,
+              "rationale": "Flank pain and chills point to the kidney. Their absence fits a lower urinary infection."
+            },
+            {
+              "id": "s4",
+              "text": "Reports burning during voiding since yesterday",
+              "correct": true,
+              "rationale": "Dysuria, a stinging or burning pain during voiding, is a hallmark of cystitis."
+            },
+            {
+              "id": "s5",
+              "text": "Drank 1800 mL of fluid yesterday",
+              "correct": false,
+              "rationale": "This intake is adequate and is not a cue for infection."
+            },
+            {
+              "id": "s6",
+              "text": "Voids small amounts every 30 to 45 minutes and feels a sudden need to void",
+              "correct": true,
+              "rationale": "Frequency and urgency, often with small amounts, are signs of cystitis."
+            },
+            {
+              "id": "s7",
+              "text": "Reports no change in vision",
+              "correct": false,
+              "rationale": "Vision is unrelated to the urinary findings."
+            },
+            {
+              "id": "s8",
+              "text": "Urine is pink tinged",
+              "correct": true,
+              "rationale": "Hematuria, with pink, red or tea colored urine, warrants evaluation and occurs with cystitis."
+            },
+            {
+              "id": "s9",
+              "text": "Reports aching above the pubic bone, 4 of 10",
+              "correct": true,
+              "rationale": "Suprapubic discomfort is a sign of bladder inflammation."
+            }
+          ],
+          "answer": [
+            "s2",
+            "s4",
+            "s6",
+            "s8",
+            "s9"
+          ],
+          "format": "+/-",
+          "scoring": "+/-",
+          "takeaway": "Cystitis presents with dysuria, urgency and frequency in small amounts, suprapubic discomfort and hematuria. Diabetes raises infection risk. Fever, chills and flank pain suggest the infection has spread to the kidney.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Read each phrase against the cystitis signs and the infection risk factors. Leave expected and absent findings unhighlighted.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the risk factor",
+                "detail": "Type 1 diabetes."
+              },
+              {
+                "action": "Find the cystitis signs",
+                "detail": "Burning, small frequent voids with urgency, pink urine, suprapubic aching."
+              },
+              {
+                "action": "Leave the rest",
+                "detail": "Normal temperature, no flank pain or chills, adequate intake and normal vision."
+              }
+            ],
+            "verdict": "s2, s4, s6, s8, s9."
+          },
+          "caseGroup": "ig58-case3",
+          "caseStep": 1,
+          "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig58-m06",
+          "type": "multiple_choice",
+          "stem": "A client, 41 years old, was seen in the clinic yesterday for dysuria and urgency. The urinalysis showed nitrites and white blood cells, a clean catch specimen was sent for culture and susceptibility, and the client started an oral antibiotic at 1600 yesterday. Today at 1100 the culture reports Escherichia coli resistant to the prescribed antibiotic and susceptible to 2 other antibiotics. The client reports dysuria 5 of 10, was 6 of 10 yesterday at 1500. Which action does the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Report the susceptibility result to the provider so the antibiotic can be matched to the organism",
+              "correct": true,
+              "rationale": "Culture identifies the organism, and susceptibility testing guides the antibiotic choice. An organism resistant to the current drug will not be treated by it, so the result is reported."
+            },
+            {
+              "id": "B",
+              "text": "Tell the client that dysuria has decreased, so the current antibiotic is working and is continued",
+              "correct": false,
+              "rationale": "Pain dropping from 6 of 10 to 5 of 10 in less than a day is not evidence that the drug works. The culture shows the organism is resistant to it."
+            },
+            {
+              "id": "C",
+              "text": "Repeat the urinalysis to confirm the infection before any change in the antibiotic is considered",
+              "correct": false,
+              "rationale": "The infection is already supported by symptoms, urinalysis and culture. Repeating the urinalysis delays effective treatment."
+            },
+            {
+              "id": "D",
+              "text": "Request phenazopyridine for the dysuria and continue the current antibiotic until the course ends",
+              "correct": false,
+              "rationale": "Phenazopyridine relieves discomfort but does not treat infection. Continuing a drug the organism resists leaves the infection untreated."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Urinalysis suggests infection; culture identifies the organism; susceptibility testing guides antibiotic choice. Results are interpreted together with the symptoms, and a resistant organism means the antibiotic needs to change.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "A small drop in pain is tempting evidence. The culture result outweighs it because it shows the drug cannot kill this organism.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Name the result",
+                "detail": "The organism is resistant to the current antibiotic."
+              },
+              {
+                "action": "Reject the reassurance",
+                "detail": "A 1 point drop in pain does not override resistance."
+              },
+              {
+                "action": "Reject the delay",
+                "detail": "Repeating the urinalysis adds no new information."
+              },
+              {
+                "action": "Reject comfort alone",
+                "detail": "Phenazopyridine treats discomfort, not infection."
+              }
+            ],
+            "verdict": "A. Report the susceptibility result so the antibiotic can be changed."
+          },
+          "caseGroup": "ig58-case3",
+          "caseStep": 2,
+          "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig58-m07",
+          "type": "sata",
+          "stem": "A client, 27 years old, is diagnosed with cystitis and is prescribed an oral antibiotic for 5 days and phenazopyridine for 2 days. The client has no known kidney or heart disease and no fluid restriction. Which actions does the nurse include in the plan of care? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Confirm the client's drug allergies before the first antibiotic dose",
+              "correct": true,
+              "rationale": "Allergies are checked before any antibiotic, because antibiotic allergies are common and change the drug choice."
+            },
+            {
+              "id": "B",
+              "text": "Teach the client to expect orange or red urine while taking phenazopyridine",
+              "correct": true,
+              "rationale": "Phenazopyridine turns the urine orange or red. Knowing this ahead prevents alarm."
+            },
+            {
+              "id": "C",
+              "text": "Teach the client to stop the antibiotic once the burning has ended",
+              "correct": false,
+              "rationale": "The full course is taken exactly as prescribed even when symptoms end early, to prevent recurrence and resistance. Adverse effects are reported rather than handled by stopping the drug."
+            },
+            {
+              "id": "D",
+              "text": "Teach the client to report fever, flank pain or vomiting right away",
+              "correct": true,
+              "rationale": "Fever, flank pain, vomiting or worsening symptoms suggest the infection is spreading upward and need immediate reporting."
+            },
+            {
+              "id": "E",
+              "text": "Explain that phenazopyridine treats the infection while the antibiotic eases the pain",
+              "correct": false,
+              "rationale": "The roles are reversed. Phenazopyridine relieves discomfort but does not treat infection; the antibiotic treats the infection."
+            },
+            {
+              "id": "F",
+              "text": "Encourage regular fluid intake and emptying the bladder regularly",
+              "correct": true,
+              "rationale": "With no fluid restriction, appropriate hydration and regular bladder emptying flush bacteria from the bladder."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D",
+            "F"
+          ],
+          "takeaway": "Cystitis care: check allergies before antibiotics, monitor for improvement and adverse effects, encourage fluids within limits, and give ordered pain relief. Teach the full course, report adverse effects rather than stop, and report fever, flank pain, vomiting or worsening at once. Phenazopyridine turns urine orange or red and does not treat infection.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Each wrong option has the client stopping a drug or misreading what phenazopyridine does. Keep the options that complete treatment and report danger signs.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Keep safety before dosing",
+                "detail": "Allergy check before the antibiotic."
+              },
+              {
+                "action": "Keep correct drug teaching",
+                "detail": "Orange or red urine with phenazopyridine; complete the antibiotic course."
+              },
+              {
+                "action": "Keep the warning signs",
+                "detail": "Fever, flank pain or vomiting are reported right away."
+              },
+              {
+                "action": "Reject stopping or reversed roles",
+                "detail": "Stopping when the burning ends, and calling phenazopyridine a treatment, are errors."
+              }
+            ],
+            "verdict": "A, B, D, F."
+          },
+          "caseGroup": "ig58-case3",
+          "caseStep": 3,
+          "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig58-m08",
+          "type": "sata",
+          "stem": "A client, 84 years old, was admitted 3 days ago and has an indwelling urinary catheter placed in the emergency department for accurate output measurement. The client now drinks fluids well and walks to the chair with assistance. The perineal skin is red with no open areas. The provider has ordered a urine culture. Which actions does the nurse take? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Review with the provider today whether the catheter is still indicated",
+              "correct": true,
+              "rationale": "Necessity is reviewed daily and the catheter is removed promptly. The original reason, accurate output measurement, may no longer apply."
+            },
+            {
+              "id": "B",
+              "text": "Collect the culture specimen from the sampling port using aseptic technique",
+              "correct": true,
+              "rationale": "A proper specimen comes from the sampling port without opening the closed system, so the result reflects the bladder and not the bag."
+            },
+            {
+              "id": "C",
+              "text": "Pour the culture specimen from the drainage bag into a sterile container",
+              "correct": false,
+              "rationale": "Urine in the bag has been standing and is not a proper specimen. Specimens are collected properly so they can be interpreted."
+            },
+            {
+              "id": "D",
+              "text": "Disconnect the catheter from the tubing to obtain a fresh specimen",
+              "correct": false,
+              "rationale": "The closed drainage system is maintained. Disconnecting opens a route for bacteria."
+            },
+            {
+              "id": "E",
+              "text": "Hang the drainage bag below the bladder and off the floor during walks",
+              "correct": true,
+              "rationale": "The bag stays below the bladder and off the floor so urine drains away from the bladder and the bag is not contaminated."
+            },
+            {
+              "id": "F",
+              "text": "Cleanse the reddened perineal skin gently and keep it dry, with privacy during care",
+              "correct": true,
+              "rationale": "Skin protection and dignity are part of catheter care: gentle cleansing keeps the irritated skin intact, and privacy preserves dignity."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "E",
+            "F"
+          ],
+          "takeaway": "CAUTI prevention: use an indwelling catheter only for an appropriate indication, keep the drainage system closed and the tubing unobstructed, keep the bag below the bladder and off the floor, and review necessity daily and remove promptly. Collect specimens properly and protect skin and dignity.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "The specimen options test the closed system. Keep the port with aseptic technique; reject the bag and the disconnection.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check necessity",
+                "detail": "The reason for the catheter may have ended, so review it today."
+              },
+              {
+                "action": "Check the specimen",
+                "detail": "Port with aseptic technique, not the bag or a disconnection."
+              },
+              {
+                "action": "Check drainage",
+                "detail": "Bag below the bladder and off the floor."
+              },
+              {
+                "action": "Check skin and dignity",
+                "detail": "Gentle cleansing, dry skin and privacy."
+              }
+            ],
+            "verdict": "A, B, E, F."
+          },
+          "caseGroup": "ig58-case4",
+          "caseStep": 1,
+          "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig58-x02",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A resident of a long term care facility, 88 years old, became confused this morning, was alert and oriented to person and place at 2000 yesterday. A new sleeping medication was started at 2100 yesterday. Oral temperature is 36.8 °C, heart rate 78 beats per minute, and blood pressure 128/76 mm Hg. The resident has no dysuria, no new urgency or frequency, and no suprapubic or flank pain. A urine culture sent 2 days ago grew bacteria. A family member asks the nurse to request an antibiotic for a urinary infection. Which response does the nurse make?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"A culture alone does not show infection, so I will check other causes, like the new sleeping medication.\"",
+              "correct": true,
+              "rationale": "Bacteria in urine without attributable infection symptoms is asymptomatic bacteriuria, and confusion alone does not establish a urinary infection. The nurse assesses other causes; a sleeping medication started the night before is a likely one."
+            },
+            {
+              "id": "B",
+              "text": "\"Confusion is a common sign of urinary infection in older adults, so I will ask the provider for the antibiotic now.\"",
+              "correct": false,
+              "rationale": "Confusion can accompany infection in older adults, which makes this tempting. A positive culture with no urinary or systemic findings does not establish infection, and most asymptomatic bacteriuria in older adults does not require antibiotics."
+            },
+            {
+              "id": "C",
+              "text": "\"The culture result means an infection is present, so the provider will order an antibiotic.\"",
+              "correct": false,
+              "rationale": "A positive culture alone does not establish symptomatic infection. Results are matched with clinical findings."
+            },
+            {
+              "id": "D",
+              "text": "\"I will repeat the urine culture, and if it grows bacteria again, an antibiotic will be started.\"",
+              "correct": false,
+              "rationale": "A second positive culture still shows only bacteria in the urine. Treatment depends on infection symptoms, not on culture results."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "In older adults, bacteria in the urine without urinary or systemic findings is asymptomatic bacteriuria and usually is not treated. Confusion or falls alone do not establish a urinary infection; assess other causes and look for urinary or systemic findings.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Both the antibiotic request and the search for other causes are defensible, because confusion can signal infection in older adults. The cue that decides is the absence of any urinary or systemic findings, with a sleeping medication started the night before.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "List the findings",
+                "detail": "New confusion, normal vital signs, no urinary symptoms, positive culture."
+              },
+              {
+                "action": "Apply the rule",
+                "detail": "A positive culture plus confusion alone is not a urinary infection."
+              },
+              {
+                "action": "Find the other cause",
+                "detail": "A new sleeping medication started at 2100 yesterday."
+              },
+              {
+                "action": "Reject the culture based options",
+                "detail": "Treating or repeating the culture ignores the missing symptoms."
+              }
+            ],
+            "verdict": "A. The culture alone does not show infection; assess other causes, including the new sleeping medication."
+          },
+          "caseGroup": "ig58-case4",
+          "caseStep": 2,
+          "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
+          "new": true,
+          "addedBatch": 9
+        }
+      ]
+    },
+    {
+      "id": 1059,
+      "chapterNumber": 59,
+      "source": "Iggy",
+      "title": "Kidney Conditions",
+      "exam": "Exam 3",
+      "group": "kidney-conditions",
+      "questions": [
+        {
+          "id": "ig59-m01",
+          "type": "multiple_choice",
+          "stem": "A client, 34 years old, reports burning with urination and urgency for 4 days. Today the client has shaking chills, nausea, and pain in the right flank rated 7 of 10. Oral temperature 39.1 °C, heart rate 112 beats per minute, respiratory rate 24 breaths per minute. Light percussion over the right costovertebral angle reproduces the pain. Which interpretation of these findings by the nurse is most accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cystitis, because burning and urgency place the infection in the bladder",
+              "correct": false,
+              "rationale": "Burning and urgency are lower tract symptoms and can be present in pyelonephritis too. Cystitis does not explain shaking chills, a temperature of 39.1 °C, and right flank pain with costovertebral angle tenderness."
+            },
+            {
+              "id": "B",
+              "text": "Pyelonephritis, because the fever, chills, and right flank tenderness show kidney spread",
+              "correct": true,
+              "rationale": "Fever and shaking chills signal that infection has spread beyond the lower tract, and flank pain with costovertebral angle tenderness is the hallmark of kidney involvement. Nausea, tachycardia, and tachypnea are associated findings, and dysuria and urgency may still be present."
+            },
+            {
+              "id": "C",
+              "text": "Acute glomerulonephritis, because the kidney is involved and the heart rate is elevated",
+              "correct": false,
+              "rationale": "Glomerulonephritis presents with cola colored urine, facial and peripheral edema, elevated blood pressure, and decreased urine output. None of those findings are described, and fever with flank tenderness points to infection."
+            },
+            {
+              "id": "D",
+              "text": "Urinary retention, because urgency with flank pain points to a bladder that is not emptying",
+              "correct": false,
+              "rationale": "Retention causes a distended bladder and incomplete emptying. It does not explain fever, shaking chills, and costovertebral angle tenderness."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Lower tract symptoms (dysuria, urgency) can occur in both cystitis and pyelonephritis. Fever with chills and flank pain with costovertebral angle tenderness are what move the infection up to the kidney.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Sort the findings into local bladder symptoms and systemic or kidney findings. The option that accounts for every finding wins.",
+          "elimination": {
+            "strategies": [
+              "Odd man wins",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Group the cues",
+                "detail": "Burning and urgency are lower tract; chills, 39.1 °C, and right flank tenderness are systemic and kidney findings."
+              },
+              {
+                "action": "Find the hallmark",
+                "detail": "Costovertebral angle tenderness points to the kidney."
+              },
+              {
+                "action": "Reject the partial answer",
+                "detail": "Cystitis explains only the burning and urgency."
+              },
+              {
+                "action": "Reject the other kidney problem",
+                "detail": "Glomerulonephritis needs edema, high blood pressure, and cola colored urine, which are absent."
+              }
+            ],
+            "verdict": "Pyelonephritis."
+          },
+          "caseGroup": "ig59-case1",
+          "caseStep": 1,
+          "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis.",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig59-m02",
+          "type": "sata",
+          "stem": "A client, 46 years old, is admitted with right flank pain rated 8 of 10, right costovertebral angle tenderness, oral temperature 39.3 °C, heart rate 116 beats per minute, and blood pressure 104/64 mm Hg. A stone in the right ureter was removed 2 months ago. Which diagnostic tests does the nurse anticipate? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A 24 hour urine collection for total protein",
+              "correct": false,
+              "rationale": "Measuring urine protein levels belongs to the workup for glomerulonephritis, where damaged glomeruli leak protein. It does not identify the organism or the spread of a kidney infection."
+            },
+            {
+              "id": "B",
+              "text": "Urinalysis and urine culture with susceptibility testing",
+              "correct": true,
+              "rationale": "Urinalysis shows findings such as white blood cells and nitrites, and the culture identifies the organism. Susceptibility testing guides the antibiotic choice."
+            },
+            {
+              "id": "C",
+              "text": "Blood cultures",
+              "correct": true,
+              "rationale": "Blood cultures are drawn when sepsis is a risk. A temperature of 39.3 °C, a heart rate of 116 beats per minute, and a blood pressure of 104/64 mm Hg raise that risk."
+            },
+            {
+              "id": "D",
+              "text": "Imaging of the kidneys and ureters",
+              "correct": true,
+              "rationale": "Imaging is used when obstruction or complications are suspected. A stone removed from the right ureter 2 months ago makes obstruction on the painful side a real concern."
+            },
+            {
+              "id": "E",
+              "text": "Serum creatinine and electrolytes",
+              "correct": true,
+              "rationale": "Kidney function tests and electrolytes show whether the infection is affecting kidney function and give a baseline to trend."
+            }
+          ],
+          "answer": [
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "takeaway": "The pyelonephritis workup has four parts: urinalysis and urine culture, blood cultures when sepsis is a risk, kidney function tests and electrolytes, and imaging when obstruction or a complication is suspected.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Match each test to a question the nurse needs answered: which organism, has it reached the blood, how are the kidneys working, and is something blocking flow. A test that answers none of these is out.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Identify the organism",
+                "detail": "Urinalysis and culture with susceptibility testing."
+              },
+              {
+                "action": "Check for spread",
+                "detail": "Fever, tachycardia, and a blood pressure of 104/64 mm Hg justify blood cultures."
+              },
+              {
+                "action": "Check kidney function",
+                "detail": "Creatinine and electrolytes."
+              },
+              {
+                "action": "Look for obstruction",
+                "detail": "The recent ureteral stone justifies imaging."
+              },
+              {
+                "action": "Reject the other disease's test",
+                "detail": "Urine protein measurement is a glomerulonephritis test."
+              }
+            ],
+            "verdict": "B, C, D, E."
+          },
+          "caseGroup": "ig59-case1",
+          "caseStep": 2,
+          "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings.",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig59-m03",
+          "type": "multiple_choice",
+          "stem": "A client, 29 years old, is going home with a 10 day course of an oral antibiotic for pyelonephritis. On day 3 the oral temperature is 37.0 °C and flank pain is 1 of 10. Which statement by the client indicates a need for further teaching?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"I will drink the amount of fluid you told me to drink each day.\"",
+              "correct": false,
+              "rationale": "Taking the prescribed fluid intake is part of the plan. This statement is correct."
+            },
+            {
+              "id": "B",
+              "text": "\"I will keep my appointment for a repeat urine test after I finish all the pills.\"",
+              "correct": false,
+              "rationale": "Follow up testing confirms the infection has cleared. This statement is correct."
+            },
+            {
+              "id": "C",
+              "text": "\"If the pills upset my stomach, I will stop them and call if the fever returns.\"",
+              "correct": true,
+              "rationale": "Adverse effects are reported to the provider rather than handled by stopping the drug, and the full course is completed even when the client feels better on day 3. Stopping early risks a return of the kidney infection."
+            },
+            {
+              "id": "D",
+              "text": "\"If I get chills or the pain in my side comes back, I will call right away.\"",
+              "correct": false,
+              "rationale": "Fever, chills, or worsening symptoms are reported promptly. This statement is correct."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Pyelonephritis teaching: complete the full antibiotic course, report adverse effects instead of stopping, report fever, chills, or worsening, take the prescribed fluids, and keep follow up testing.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "In a need for further teaching item, look for the statement with one wrong step hidden inside a correct one. Calling about fever is right; stopping the drug on its own is not.",
+          "elimination": {
+            "strategies": [
+              "Negative polarity",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Flip the question",
+                "detail": "Find the statement that is wrong."
+              },
+              {
+                "action": "Check each step",
+                "detail": "Fluids, follow up testing, and calling about chills or pain are all correct."
+              },
+              {
+                "action": "Spot the hidden error",
+                "detail": "Stopping the antibiotic for stomach upset abandons the full course."
+              },
+              {
+                "action": "Confirm",
+                "detail": "Adverse effects are reported, not treated by stopping."
+              }
+            ],
+            "verdict": "The client who plans to stop the antibiotic for stomach upset needs more teaching."
+          },
+          "caseGroup": "ig59-case1",
+          "caseStep": 3,
+          "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan.",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig59-m04",
+          "type": "matrix",
+          "scenario": "A client, 67 years old, weighing 70 kg, was admitted at 0800 with pyelonephritis and started on IV antibiotics. The nurse reassesses the client at 1600.",
+          "stem": "For each finding at 1600, indicate whether it is expected with pyelonephritis or signals progression toward sepsis.",
+          "columns": [
+            "Expected with pyelonephritis",
+            "Signals progression toward sepsis"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Confused about the date and place, was oriented at 0800",
+              "answer": "Signals progression toward sepsis",
+              "rationale": "New confusion is the first warning sign in the progression from urinary infection to sepsis."
+            },
+            {
+              "id": "r2",
+              "text": "Right flank pain 6 of 10 with right costovertebral angle tenderness, was 7 of 10 at 0800",
+              "answer": "Expected with pyelonephritis",
+              "rationale": "Flank pain with costovertebral angle tenderness is the hallmark of pyelonephritis, and the pain has not grown worse since 0800."
+            },
+            {
+              "id": "r3",
+              "text": "Blood pressure 88/52 mm Hg, was 126/78 mm Hg at 0800",
+              "answer": "Signals progression toward sepsis",
+              "rationale": "Hypotension with poor perfusion is the next stage of the progression to sepsis."
+            },
+            {
+              "id": "r4",
+              "text": "Respiratory rate 30 breaths per minute, was 20 at 0800, and urine output 60 mL over the past 4 hours",
+              "answer": "Signals progression toward sepsis",
+              "rationale": "Rapid breathing and decreased urine output are late signs of sepsis. An output of 60 mL in 4 hours in a client weighing 70 kg is about 0.2 mL/kg per hour."
+            },
+            {
+              "id": "r5",
+              "text": "Burning and urgency with each void",
+              "answer": "Expected with pyelonephritis",
+              "rationale": "Dysuria and urgency may be present with pyelonephritis because the infection usually ascends from the bladder."
+            },
+            {
+              "id": "r6",
+              "text": "Nausea with one episode of vomiting",
+              "answer": "Expected with pyelonephritis",
+              "rationale": "Nausea and vomiting are associated findings in pyelonephritis."
+            }
+          ],
+          "answer": {
+            "r1": "Signals progression toward sepsis",
+            "r2": "Expected with pyelonephritis",
+            "r3": "Signals progression toward sepsis",
+            "r4": "Signals progression toward sepsis",
+            "r5": "Expected with pyelonephritis",
+            "r6": "Expected with pyelonephritis"
+          },
+          "scoring": "0/1",
+          "takeaway": "The progression from urinary infection to sepsis runs from new confusion, to hypotension and poor perfusion, to rapid breathing and decreased urine output. Flank pain, dysuria, and nausea belong to the kidney infection itself.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Ask whether each finding is the kidney infection itself or a sign that the infection is now affecting the brain, circulation, lungs, or kidney output. Changes from the 0800 baseline are the cues.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Anchor on the disease",
+                "detail": "Flank pain, costovertebral angle tenderness, dysuria, urgency, and nausea are pyelonephritis findings."
+              },
+              {
+                "action": "Look for systemic change",
+                "detail": "New confusion, a fall in blood pressure from 126/78 to 88/52 mm Hg, a respiratory rate rising to 30, and 60 mL of urine in 4 hours."
+              },
+              {
+                "action": "Recall the order",
+                "detail": "Confusion, then hypotension and poor perfusion, then rapid breathing and low urine output."
+              }
+            ],
+            "verdict": "Expected: flank pain with tenderness, burning and urgency, nausea. Sepsis progression: new confusion, hypotension, rapid breathing with low urine output."
+          },
+          "caseGroup": "ig59-case2",
+          "caseStep": 1,
+          "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig59-m05",
+          "type": "multiple_choice",
+          "stem": "A client, 72 years old, weighing 80 kg, is on day 2 of IV antibiotics for pyelonephritis. Serum creatinine 2.2 mg/dL, was 1.1 mg/dL on admission. BUN 40 mg/dL, was 20 mg/dL on admission. Urine output 100 mL over the past 6 hours. Lungs are clear and there is no edema. Which interpretation by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Kidney function is declining, because creatinine and BUN both doubled as urine output fell",
+              "correct": true,
+              "rationale": "Creatinine is excreted only by the kidneys, so a creatinine that doubles reflects about a 50% loss of filtration. When BUN and creatinine rise together and output falls to about 0.2 mL/kg per hour, the kidneys themselves are failing to clear waste."
+            },
+            {
+              "id": "B",
+              "text": "Fluid volume deficit is the cause, because the BUN rises when a client is dehydrated",
+              "correct": false,
+              "rationale": "Dehydration does raise the BUN, but it raises the BUN faster than the creatinine. Here both values doubled at the same rate, which points to kidney dysfunction rather than low blood volume."
+            },
+            {
+              "id": "C",
+              "text": "The infection is resolving, because a lower urine output means less fluid lost by the kidneys",
+              "correct": false,
+              "rationale": "Falling urine output on day 2 is a warning sign, not a sign of recovery. Response to treatment is judged by fever, pain, and kidney function trends."
+            },
+            {
+              "id": "D",
+              "text": "Fluid overload has developed, because low urine output always produces crackles and edema",
+              "correct": false,
+              "rationale": "The lungs are clear and there is no edema. Low output can lead to fluid retention, but it does not always produce it, and the creatinine trend is the cue being tested."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Rising creatinine with falling urine output means kidney dysfunction. When BUN and creatinine rise together, the cause is the kidney itself, not dehydration.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Use creatinine as the kidney specific value. Then check whether the BUN rose alone or alongside the creatinine.",
+          "elimination": {
+            "strategies": [
+              "Eliminate absolutes",
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Read creatinine first",
+                "detail": "2.2 mg/dL from 1.1 mg/dL is a doubling."
+              },
+              {
+                "action": "Compare with BUN",
+                "detail": "BUN also doubled, so the ratio is unchanged."
+              },
+              {
+                "action": "Calculate output",
+                "detail": "100 mL over 6 hours in 80 kg is about 0.2 mL/kg per hour."
+              },
+              {
+                "action": "Reject the extras",
+                "detail": "An absolute about edema and a claim of recovery do not fit the data."
+              }
+            ],
+            "verdict": "Kidney function is declining."
+          },
+          "caseGroup": "ig59-case2",
+          "caseStep": 2,
+          "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig59-x02",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 58 years old, with pyelonephritis has vomited 6 times in 2 days and has dry oral mucosa. BUN 36 mg/dL, was 15 mg/dL on admission 2 days ago. Serum creatinine 0.9 mg/dL, was 0.9 mg/dL on admission. Urine is dark amber, 180 mL over the past 8 hours. Which interpretation by the nurse is most accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Reduced blood volume is raising the BUN, because the creatinine has not changed",
+              "correct": true,
+              "rationale": "Dehydration concentrates the blood and raises the BUN faster than the creatinine. Creatinine is excreted only by the kidneys, and an unchanged value of 0.9 mg/dL shows filtration has not fallen. Vomiting, dry mucosa, and dark amber urine fit fluid loss."
+            },
+            {
+              "id": "B",
+              "text": "Kidney tissue damage from the infection is raising the BUN and lowering urine output",
+              "correct": false,
+              "rationale": "Pyelonephritis can damage the kidney, and the output is low. But kidney damage raises creatinine along with BUN, and the creatinine is unchanged at 0.9 mg/dL."
+            },
+            {
+              "id": "C",
+              "text": "Fever is breaking down muscle, so the creatinine will rise to match the BUN within a day",
+              "correct": false,
+              "rationale": "No fever is described, and nothing in the data predicts a creatinine rise. The pattern of a high BUN with unchanged creatinine fits fluid loss."
+            },
+            {
+              "id": "D",
+              "text": "Kidney function cannot be judged until a 24 hour urine protein result is available",
+              "correct": false,
+              "rationale": "Serum creatinine already gives a kidney function value. Urine protein measurement is used in glomerulonephritis and is not needed to interpret this pattern."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "BUN rises with dehydration as well as with kidney dysfunction. Creatinine is the kidney specific value: a high BUN with an unchanged creatinine points to low blood volume, while both rising together points to the kidney.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two options explain the high BUN and low output. The unchanged creatinine decides it, because kidney damage would raise creatinine too.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the trend",
+                "detail": "BUN 15 to 36 mg/dL; creatinine 0.9 to 0.9 mg/dL."
+              },
+              {
+                "action": "Use creatinine as the kidney marker",
+                "detail": "No change means filtration has not fallen."
+              },
+              {
+                "action": "Match the history",
+                "detail": "Vomiting 6 times, dry mucosa, and dark amber urine fit fluid loss."
+              },
+              {
+                "action": "Reject the rest",
+                "detail": "No fever is described, and urine protein is not needed."
+              }
+            ],
+            "verdict": "Reduced blood volume is raising the BUN."
+          },
+          "caseGroup": "ig59-case2",
+          "caseStep": 3,
+          "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings.",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig59-m06",
+          "type": "multiple_choice",
+          "stem": "A client, 19 years old, was treated for a sore throat 2 weeks ago. Today the client reports puffy eyelids each morning and urine the color of cola. Blood pressure 164/98 mm Hg, was 118/72 mm Hg at a clinic visit 1 month ago. Oral temperature 37.1 °C. Urine output 400 mL over the past 24 hours. There is no flank pain and no costovertebral angle tenderness. Which interpretation by the nurse is most accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pyelonephritis, because blood in the urine shows infection has reached the kidneys",
+              "correct": false,
+              "rationale": "Pyelonephritis is a kidney infection with fever, chills, and flank pain with costovertebral angle tenderness. The temperature is 37.1 °C and there is no flank tenderness."
+            },
+            {
+              "id": "B",
+              "text": "Cystitis, because dark urine and reduced voiding point to inflammation of the bladder",
+              "correct": false,
+              "rationale": "Cystitis causes dysuria, urgency, frequency, and suprapubic discomfort. It does not cause facial edema, a new blood pressure of 164/98 mm Hg, or a fall in urine output."
+            },
+            {
+              "id": "C",
+              "text": "Urinary retention, because low output with swelling shows urine held in the bladder",
+              "correct": false,
+              "rationale": "Retention holds urine in the bladder but does not cause cola colored urine, eyelid edema, or hypertension."
+            },
+            {
+              "id": "D",
+              "text": "Acute glomerulonephritis, because injured glomeruli leak blood and retain fluid",
+              "correct": true,
+              "rationale": "Glomerulonephritis may follow a bacterial infection. Damaged glomeruli leak blood into the urine, giving cola or tea colored urine, and reduced filtration causes fluid retention with facial edema, elevated blood pressure, and decreased urine output."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Glomerulonephritis cues: cola or tea colored urine, facial and peripheral edema, elevated blood pressure, and decreased urine output, often after a recent infection. Fever and flank pain point instead to pyelonephritis.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two options name the kidney. Decide between them by asking whether the picture is infection (fever, flank pain) or fluid retention with blood in the urine (edema, hypertension, low output).",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely",
+              "Odd man wins"
+            ],
+            "steps": [
+              {
+                "action": "Note the history",
+                "detail": "A sore throat 2 weeks ago can precede glomerulonephritis."
+              },
+              {
+                "action": "Group the cues",
+                "detail": "Cola colored urine, eyelid edema, new hypertension, and 400 mL in 24 hours."
+              },
+              {
+                "action": "Rule out infection of the kidney",
+                "detail": "Temperature 37.1 °C and no costovertebral angle tenderness."
+              },
+              {
+                "action": "Rule out bladder causes",
+                "detail": "Cystitis and retention do not cause edema or hypertension."
+              }
+            ],
+            "verdict": "Acute glomerulonephritis."
+          },
+          "caseGroup": "ig59-case3",
+          "caseStep": 1,
+          "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis.",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig59-m07",
+          "type": "sata",
+          "stem": "A client, 24 years old, has acute glomerulonephritis. Results today: urinalysis with protein 3+, many red blood cells, and negative nitrites; serum creatinine 2.0 mg/dL, was 0.8 mg/dL 2 weeks ago; serum potassium 5.8 mEq/L; hemoglobin 13.6 g/dL. Which results does the nurse interpret as evidence of glomerular injury or reduced kidney filtration? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Protein 3+ in the urine",
+              "correct": true,
+              "rationale": "Damaged glomeruli leak protein into the urine, so protein on the urinalysis is a direct sign of glomerular injury."
+            },
+            {
+              "id": "B",
+              "text": "Negative nitrites in the urine",
+              "correct": false,
+              "rationale": "Nitrites point to bacteria in the urine. A negative result says nothing about the glomeruli."
+            },
+            {
+              "id": "C",
+              "text": "Serum creatinine 2.0 mg/dL, was 0.8 mg/dL 2 weeks ago",
+              "correct": true,
+              "rationale": "Creatinine is cleared by the kidneys, so a rise from 0.8 to 2.0 mg/dL shows reduced filtration."
+            },
+            {
+              "id": "D",
+              "text": "Hemoglobin 13.6 g/dL",
+              "correct": false,
+              "rationale": "This value does not reflect glomerular leakage or filtration."
+            },
+            {
+              "id": "E",
+              "text": "Many red blood cells in the urine",
+              "correct": true,
+              "rationale": "Damaged glomeruli also leak blood, which is why the urine can look cola or tea colored."
+            },
+            {
+              "id": "F",
+              "text": "Serum potassium 5.8 mEq/L",
+              "correct": true,
+              "rationale": "When filtration and urine output fall, the kidneys excrete less potassium, so the serum level rises. Electrolytes are checked for this reason."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          "takeaway": "The glomerulonephritis workup is urinalysis for protein and blood, urine protein levels, creatinine, and electrolytes. Protein and blood show leaky glomeruli; creatinine and potassium show reduced filtration.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "For each result ask two questions: is it abnormal, and does it come from the glomerulus leaking or from the kidney filtering less? Only results that answer yes to both are selected.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Leakage",
+                "detail": "Protein 3+ and many red blood cells."
+              },
+              {
+                "action": "Filtration",
+                "detail": "Creatinine up from 0.8 to 2.0 mg/dL and potassium 5.8 mEq/L."
+              },
+              {
+                "action": "Reject the infection marker",
+                "detail": "Negative nitrites relate to bacteria, not the glomerulus."
+              },
+              {
+                "action": "Reject the unrelated value",
+                "detail": "Hemoglobin does not measure kidney filtration."
+              }
+            ],
+            "verdict": "A, C, E, F."
+          },
+          "caseGroup": "ig59-case3",
+          "caseStep": 2,
+          "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings.",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig59-x01",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "A client, 52 years old, with acute glomerulonephritis is on a prescribed fluid and sodium restriction. Findings at 1200: blood pressure 166/100 mm Hg, was 168/102 mm Hg at 0800; urine output 25 mL per hour, was 25 mL per hour at 0800 when it was reported to the provider; weight 74.2 kg, was 73.9 kg yesterday; crackles in both lower lobes with a respiratory rate of 28 breaths per minute, lungs were clear with a respiratory rate of 18 breaths per minute at 0800. Which finding does the nurse report to the provider immediately?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Blood pressure 166/100 mm Hg, was 168/102 mm Hg at 0800",
+              "correct": false,
+              "rationale": "Elevated blood pressure is an expected cue in glomerulonephritis, and it has not risen since 0800."
+            },
+            {
+              "id": "B",
+              "text": "Crackles in both lower lobes, respirations 28 breaths per minute",
+              "correct": true,
+              "rationale": "Reduced filtration causes fluid retention, and fluid in the lungs is the dangerous form of it. Crackles and a respiratory rate rising from 18 to 28 since 0800 are new and show respiratory distress, which is reported immediately."
+            },
+            {
+              "id": "C",
+              "text": "Urine output 25 mL per hour, unchanged since it was reported at 0800",
+              "correct": false,
+              "rationale": "Decreased urine output signals kidney dysfunction and is a serious finding, but it is unchanged since 0800 and the provider already knows it."
+            },
+            {
+              "id": "D",
+              "text": "Weight 74.2 kg this morning, was 73.9 kg yesterday morning",
+              "correct": false,
+              "rationale": "Daily weight tracks fluid retention, and the trend is documented. A gain of 0.3 kg in a day is not the most urgent change here."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Report respiratory distress or worsening kidney function immediately. A finding that is new since the last assessment outranks a serious finding that is unchanged and already reported.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Both the low urine output and the crackles are reportable. The cue that decides is the 0800 comparison: output is unchanged and the provider already knows; the crackles are new and affect breathing.",
+          "elimination": {
+            "strategies": [
+              "Apply the ABCs",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Compare to 0800",
+                "detail": "Blood pressure and urine output are unchanged; the lungs have changed."
+              },
+              {
+                "action": "Check who already knows",
+                "detail": "Urine output was reported at 0800."
+              },
+              {
+                "action": "Apply breathing first",
+                "detail": "New crackles with a rising respiratory rate threaten oxygenation."
+              },
+              {
+                "action": "Weigh the daily weight",
+                "detail": "A 0.3 kg gain is documented for the trend."
+              }
+            ],
+            "verdict": "New crackles with a respiratory rate of 28."
+          },
+          "caseGroup": "ig59-case3",
+          "caseStep": 3,
+          "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
+          "new": true,
+          "addedBatch": 9
+        },
+        {
+          "id": "ig59-m08",
+          "type": "multiple_choice",
+          "stem": "A client, 31 years old, is going home with acute glomerulonephritis, a prescribed sodium restriction, and a fluid allowance of 1000 mL per day. Which statement by the client shows correct understanding of the care plan?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"I will weigh myself once a week and call if my weight goes up.\"",
+              "correct": false,
+              "rationale": "Weight is the right measure, but it is checked daily, not weekly. A weekly weight misses fluid gained over a few days."
+            },
+            {
+              "id": "B",
+              "text": "\"I will drink extra water to flush out my kidneys while they heal.\"",
+              "correct": false,
+              "rationale": "Reduced filtration causes fluid retention, so the prescribed fluid limit is followed. Extra water adds to the fluid overload."
+            },
+            {
+              "id": "C",
+              "text": "\"I will call right away if I am short of breath or need more pillows to sleep.\"",
+              "correct": true,
+              "rationale": "Respiratory distress signals fluid in the lungs and is reported immediately. Needing more pillows to breathe while lying down is a practical sign the client can recognize."
+            },
+            {
+              "id": "D",
+              "text": "\"I can go back to using regular salt once the puffiness around my eyes is gone.\"",
+              "correct": false,
+              "rationale": "The sodium restriction is part of the prescribed plan and is not stopped on the client's own judgment when the edema goes down."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Glomerulonephritis home care: follow the prescribed fluid, sodium, and dietary limits, weigh daily, take medications as ordered, and report respiratory distress or worsening kidney function immediately.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Check each statement against the plan. The weekly weight option is the right idea with the wrong frequency.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the plan",
+                "detail": "Fluid and sodium limits, daily weight, report breathing changes."
+              },
+              {
+                "action": "Reject the near miss",
+                "detail": "Weighing is correct, but weekly is not daily."
+              },
+              {
+                "action": "Reject plan violations",
+                "detail": "Extra water and resuming salt break the restrictions."
+              },
+              {
+                "action": "Select the warning sign",
+                "detail": "Shortness of breath is reported right away."
+              }
+            ],
+            "verdict": "The client who will call right away for shortness of breath understands the plan."
+          },
+          "caseGroup": "ig59-case3",
+          "caseStep": 4,
+          "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan.",
+          "new": true,
+          "addedBatch": 9
         }
       ]
     }
