@@ -4,7 +4,7 @@
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
     "set": "Exam 3",
-    "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30, 32, 45, 58 and 59, Potter chapter 46, Enteral Nutrition, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 11): written so every PowerPoint concept in each chapter or chapter group has a question, all application level clinical judgment items with a \"cjmm\" field. Questions that revisit a covered topic are hard (difficulty \"difficult\"). NGN style items (matrix, cloze, highlight, bowtie, ordered response) are kept near 15% of each section.",
+    "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30, 32, 45, 58 and 59, Potter chapter 46, Enteral Nutrition, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 11): written so every PowerPoint concept in each chapter or chapter group has a question, all application level clinical judgment items with a \"cjmm\" field. Questions that revisit a covered topic are hard (difficulty \"difficult\"). NGN style items (matrix, cloze, highlight, bowtie, ordered response) are kept near 15% of each section. Stems were trimmed (trimmedBatch 12) so client scenario details appear only where the question needs them.",
     "questionCount": 428,
     "chapterQuestionCount": 395,
     "skillCount": 2,
@@ -894,7 +894,7 @@
         {
           "id": "ig16-m04",
           "type": "multiple_choice",
-          "stem": "A client has never had a certain infectious disease and has never been vaccinated against it. The client was exposed to the disease this morning. Immune globulin is ordered. The client says, \"I would rather have the vaccine today instead. I heard it lasts longer.\" Which response by the nurse is accurate?",
+          "stem": "A client with no immunity to an infectious disease was exposed to it this morning, and immune globulin is ordered. The client says, \"I would rather have the vaccine. I heard it lasts longer.\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -952,12 +952,13 @@
           },
           "caseGroup": "ig16-case2",
           "caseStep": 1,
-          "objective": "Distinguish active from passive immunity using examples"
+          "objective": "Distinguish active from passive immunity using examples",
+          "trimmedBatch": 12
         },
         {
           "id": "ig16-m05",
           "type": "multiple_choice",
-          "stem": "A client with no prior immunity to a disease was exposed to it and received immune globulin 1 hour ago. The client asks, \"What kind of protection did that shot give me, and is it enough?\" Which response by the nurse is accurate?",
+          "stem": "A client received immune globulin after an exposure and asks, \"What kind of protection did that shot give me, and is it enough?\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -1016,7 +1017,8 @@
           },
           "caseGroup": "ig16-case2",
           "caseStep": 2,
-          "objective": "Distinguish active from passive immunity using examples"
+          "objective": "Distinguish active from passive immunity using examples",
+          "trimmedBatch": 12
         },
         {
           "id": "ig16-m06",
@@ -1154,7 +1156,7 @@
         {
           "id": "ig16-m08",
           "type": "multiple_choice",
-          "stem": "A client twisted the right ankle 1 hour ago and has never injured it before. The right ankle is already warm and swollen. The client asks, \"How can my body react this fast to something it has never dealt with?\" Which explanation by the nurse is accurate?",
+          "stem": "A client twisted an ankle 1 hour ago, has never injured it before, and it is already warm and swollen. The client asks how the body can react this fast. Which explanation by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -1212,7 +1214,8 @@
           },
           "caseGroup": "ig16-case3",
           "caseStep": 1,
-          "objective": "Compare innate and adaptive immunity"
+          "objective": "Compare innate and adaptive immunity",
+          "trimmedBatch": 12
         },
         {
           "id": "ig16-m07",
@@ -1858,7 +1861,7 @@
         {
           "id": "ig16-m15",
           "type": "multiple_choice",
-          "stem": "A client sprained the left ankle 2 hours ago. The skin is intact. Left ankle circumference is 3 cm larger than the right, and the client rates the pain 5 of 10. The client asks, \"Why does my body make it swell like this? Isn't the swelling just more damage?\" Which response by the nurse is accurate?",
+          "stem": "A client with a swollen, newly sprained ankle asks, \"Isn't the swelling just more damage?\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -1902,7 +1905,7 @@
             "steps": [
               {
                 "action": "Name the stage",
-                "detail": "Two hours after a sprain, with swelling: the vascular response."
+                "detail": "A new sprain with swelling: the vascular response."
               },
               {
                 "action": "Reject blood inside the vessels",
@@ -1922,7 +1925,8 @@
           "caseGroup": "ig16-case8",
           "caseStep": 1,
           "objective": "Describe the three stages of the inflammatory response",
-          "addedBatch": 2
+          "addedBatch": 2,
+          "trimmedBatch": 12
         },
         {
           "id": "ig16-x04",
@@ -1999,7 +2003,7 @@
         {
           "id": "ig16-m16",
           "type": "multiple_choice",
-          "stem": "A client has a splinter wound in the left index finger that was removed 4 hours ago. Bacteria entered the wound, and the cellular response is underway. White blood cells have crossed the vessel walls into the finger tissue, and a neutrophil has recognized the bacteria as harmful material. Which event occurs next?",
+          "stem": "During the cellular response to bacteria in a wound, white blood cells have crossed into the tissue and a neutrophil has recognized the bacteria as harmful. Which event occurs next?",
           "options": [
             {
               "id": "A",
@@ -2063,7 +2067,8 @@
           "caseGroup": "ig16-case9",
           "caseStep": 1,
           "objective": "Describe the three stages of the inflammatory response",
-          "addedBatch": 4
+          "addedBatch": 4,
+          "trimmedBatch": 12
         },
         {
           "id": "ig16-m17",
@@ -2512,7 +2517,7 @@
         {
           "id": "ig16-m20",
           "type": "sata",
-          "stem": "A client had a splinter removed from the right thumb 6 hours ago. Bacteria entered the wound. The thumb is warm, red, and swollen, and the client asks how the body is clearing the bacteria. Which statements by the nurse are accurate? Select all that apply.",
+          "stem": "A client with a splinter wound asks how the body clears the bacteria that entered it. Which statements by the nurse are accurate? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -2592,7 +2597,8 @@
           "caseGroup": "ig16-case12",
           "caseStep": 1,
           "objective": "Describe the three stages of the inflammatory response",
-          "addedBatch": 5
+          "addedBatch": 5,
+          "trimmedBatch": 12
         },
         {
           "id": "ig16-m22",
@@ -3187,7 +3193,7 @@
         {
           "id": "ig16-m27",
           "type": "multiple_choice",
-          "stem": "A client, 46 years old, is offered a vaccine that contains an inactivated virus. The client has never had the illness the vaccine prevents. The client says, \"I do not want the shot. My neighbor got sick for a week after one, and I cannot miss work.\" The nurse teaches the client how the vaccine works. Which statement by the client shows correct understanding of the teaching?",
+          "stem": "The nurse teaches a client how a vaccine that contains an inactivated virus works. Which statement by the client shows correct understanding of the teaching?",
           "options": [
             {
               "id": "A",
@@ -3248,7 +3254,8 @@
           "objective": "Distinguish active from passive immunity using examples",
           "cjmm": "Evaluate outcomes",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         }
       ]
     },
@@ -3326,7 +3333,7 @@
         {
           "id": "ig19-m02",
           "type": "sata",
-          "stem": "An 81 year old client is admitted with a wound on the left lower leg. The nurse reviews the history to identify factors that may affect the client's immune protection. Which information does the nurse review for this purpose? Select all that apply.",
+          "stem": "The nurse reviews a client's history to identify factors that may affect immune protection. Which information does the nurse review for this purpose? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -3401,7 +3408,8 @@
           },
           "caseGroup": "ig19-case1",
           "caseStep": 2,
-          "objective": "Connect immune responses with nursing assessment"
+          "objective": "Connect immune responses with nursing assessment",
+          "trimmedBatch": 12
         },
         {
           "id": "ig19-m03",
@@ -5797,7 +5805,7 @@
           "id": "ig27-x01",
           "type": "multiple_choice",
           "difficulty": "difficult",
-          "stem": "A client, 79 years old, has been on bed rest for 3 days and takes a diuretic. Before the first walk to the bathroom, the nurse checks orthostatic vital signs. After 3 minutes supine: blood pressure 134/82 mm Hg, heart rate 70 beats per minute. After 1 minute standing: blood pressure 118/70 mm Hg, heart rate 80 beats per minute. Normal blood pressure is below 120/80 mm Hg, and the reference range for heart rate is 60 to 100 beats per minute. The client reports no dizziness. How does the nurse interpret these findings?",
+          "stem": "A client, 79 years old, has been on bed rest for 3 days and takes a diuretic. Before the first walk to the bathroom, the nurse checks orthostatic vital signs. After 3 minutes supine: blood pressure 134/82 mm Hg, heart rate 70 beats per minute. After 1 minute standing: blood pressure 118/70 mm Hg, heart rate 80 beats per minute. The client reports no dizziness. How does the nurse interpret these findings?",
           "options": [
             {
               "id": "A",
@@ -5868,7 +5876,7 @@
         {
           "id": "ig27-m03",
           "type": "sata",
-          "stem": "A client, 58 years old, comes to the clinic for a cardiovascular risk assessment. Which findings are modifiable risk factors for cardiovascular disease? Select all that apply.",
+          "stem": "During a cardiovascular risk assessment, which client findings are modifiable risk factors for cardiovascular disease? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -5950,12 +5958,13 @@
           "caseGroup": "ig27-case2",
           "caseStep": 1,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig27-m04",
           "type": "sata",
-          "stem": "A nurse assesses a client, 72 years old, who is seen for fatigue. Heart rate is 84 beats per minute and regular. Which findings require further assessment? Select all that apply.",
+          "stem": "A nurse assesses a client, 72 years old. Which findings require further assessment? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -6029,7 +6038,8 @@
           "caseGroup": "ig27-case2",
           "caseStep": 2,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig27-m05",
@@ -6158,7 +6168,7 @@
         {
           "id": "ig27-m11",
           "type": "sata",
-          "stem": "A nurse auscultating a client, 66 years old, hears a murmur that falls between S1 and S2. Which events of the cardiac cycle are taking place while this murmur is heard? Select all that apply.",
+          "stem": "A nurse hears a murmur that falls between S1 and S2. Which events of the cardiac cycle are taking place while this murmur is heard? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -6237,7 +6247,8 @@
           "caseGroup": "ig27-case3",
           "caseStep": 2,
           "objective": "Review the basic anatomy, blood flow, and valves of the heart.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig27-m09",
@@ -6306,7 +6317,7 @@
         {
           "id": "ig27-m07",
           "type": "multiple_choice",
-          "stem": "A client is admitted after blood loss from a fall. Heart rate is 125 beats per minute, and stroke volume is 32 mL per beat. The reference range for cardiac output is 3 to 6 L/min. Which statement about this client's cardiac output is accurate?",
+          "stem": "A client is admitted after blood loss from a fall. Heart rate is 125 beats per minute, and stroke volume is 32 mL per beat. Which statement about this client's cardiac output is accurate?",
           "options": [
             {
               "id": "A",
@@ -6371,7 +6382,7 @@
         {
           "id": "ig27-m08",
           "type": "multiple_choice",
-          "stem": "A client has blood pressure 186/108 mm Hg and arteries narrowed by long standing hypertension. Heart rate is 88 beats per minute. Which statement best explains the effect on the left ventricle?",
+          "stem": "A client has arteries narrowed by long standing hypertension, and blood pressure is 186/108 mm Hg. Which statement best explains the effect on the left ventricle?",
           "options": [
             {
               "id": "A",
@@ -6433,7 +6444,8 @@
           "caseGroup": "ig27-case4",
           "caseStep": 2,
           "objective": "Explain cardiac output, stroke volume, preload, afterload, and mean arterial pressure.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig27-m10",
@@ -6819,7 +6831,7 @@
         {
           "id": "ig27-m13",
           "type": "multiple_choice",
-          "stem": "An echocardiogram for a client, 69 years old, shows that the tricuspid valve does not open fully, so blood cannot move forward through it normally. Where does the blood back up first, and which finding does the nurse expect from that backup?",
+          "stem": "A client's tricuspid valve does not open fully, so blood cannot move forward through it normally. Where does the blood back up first, and which finding does the nurse expect?",
           "options": [
             {
               "id": "A",
@@ -6884,7 +6896,8 @@
           "caseGroup": "ig27-case6",
           "caseStep": 1,
           "objective": "Review the basic anatomy, blood flow, and valves of the heart.",
-          "addedBatch": 5
+          "addedBatch": 5,
+          "trimmedBatch": 12
         },
         {
           "id": "ig27-m14",
@@ -7223,7 +7236,7 @@
         {
           "id": "ig27-m17",
           "type": "multiple_choice",
-          "stem": "A client, 63 years old, had heart surgery 2 days ago. An echocardiogram now shows fluid collecting in the pericardial space. Blood pressure is 92/64 mm Hg, was 124/78 mm Hg at 0800. Heart rate is 118 beats per minute, was 84 beats per minute at 0800. The family asks where the fluid is and why the blood pressure is falling. Which explanation by the nurse is accurate?",
+          "stem": "After heart surgery, fluid is collecting in a client's pericardial space. Blood pressure is falling and heart rate is rising. Which explanation by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -7284,7 +7297,8 @@
           "caseGroup": "ig27-case8",
           "caseStep": 1,
           "objective": "Review the basic anatomy, blood flow, and valves of the heart.",
-          "addedBatch": 6
+          "addedBatch": 6,
+          "trimmedBatch": 12
         },
         {
           "id": "ig27-m18",
@@ -8301,7 +8315,7 @@
         {
           "id": "ig27-m37",
           "type": "multiple_choice",
-          "stem": "During a right and left heart catheterization of a client, 62 years old, blood samples are drawn from four sites to measure oxygen saturation. The family asks which sample will carry the most oxygen. Which site does the nurse identify?",
+          "stem": "During a right and left heart catheterization, blood samples are drawn from four sites to measure oxygen saturation. Which site does the nurse identify as carrying the most oxygen?",
           "options": [
             {
               "id": "A",
@@ -8362,12 +8376,13 @@
           "objective": "Review the basic anatomy, blood flow, and valves of the heart.",
           "cjmm": "Analyze cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig27-m27",
           "type": "multiple_choice",
-          "stem": "An echocardiogram shows that the mitral valve of a client, 70 years old, does not close completely. Heart rate is 82 beats per minute and regular on the monitor. When during the cardiac cycle, and in which direction, does the nurse expect blood to leak backward through this valve?",
+          "stem": "A client's mitral valve does not close completely. When in the cardiac cycle, and in which direction, does the nurse expect blood to leak backward through this valve?",
           "options": [
             {
               "id": "A",
@@ -8428,7 +8443,8 @@
           "objective": "Review the basic anatomy, blood flow, and valves of the heart.",
           "cjmm": "Analyze cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig27-m28",
@@ -8721,7 +8737,7 @@
         {
           "id": "ig27-m32",
           "type": "sata",
-          "stem": "A client, 69 years old, is seen in the clinic for fatigue over the past 4 months. During the history of current health problems, the client makes these statements. Which statements suggest a cardiac cause and need follow up? Select all that apply.",
+          "stem": "During the history of current health problems, a client with fatigue makes these statements. Which statements suggest a cardiac cause and need follow up? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -8800,7 +8816,8 @@
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig27-m38",
@@ -9195,7 +9212,7 @@
         {
           "id": "ig29-m01",
           "type": "sata",
-          "stem": "A nurse on a cardiac unit reviews findings documented for several clients who have heart failure. Which findings indicate right sided heart failure? Select all that apply.",
+          "stem": "Which findings in a client with heart failure indicate right sided heart failure? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -9270,7 +9287,8 @@
           "caseGroup": "ig29-case1",
           "caseStep": 1,
           "objective": "Differentiate left and right sided heart failure and identify their key clinical findings.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig29-m02",
@@ -9445,7 +9463,7 @@
         {
           "id": "ig29-m03",
           "type": "sata",
-          "stem": "A client is admitted with worsening heart failure. Heart rate 104 beats per minute, respiratory rate 24 breaths per minute, SpO2 92% on room air, 2+ edema in both ankles. Which actions belong in the nurse's ongoing assessment? Select all that apply.",
+          "stem": "A client is admitted with worsening heart failure. Which actions belong in the nurse's ongoing assessment? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -9525,7 +9543,8 @@
           "caseGroup": "ig29-case2",
           "caseStep": 1,
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig29-m04",
@@ -10399,7 +10418,7 @@
         {
           "id": "ig29-m13",
           "type": "multiple_choice",
-          "stem": "A client with heart failure has heart rate 114 beats per minute, blood pressure 150/92 mm Hg, cool hands and feet bilaterally, and weight up 3 lb in 2 days on the same scale. The client asks, \"If my heart is weak, why are my pulse and blood pressure so high?\" Which response by the nurse is accurate?",
+          "stem": "A client with heart failure asks, \"If my heart is weak, why are my pulse and blood pressure so high?\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -10445,8 +10464,8 @@
                 "detail": "Faster rate and vasoconstriction from sympathetic activation; sodium and water retention from the renin angiotensin aldosterone system."
               },
               {
-                "action": "Link to the cues",
-                "detail": "Heart rate 114, pressure 150/92, cool extremities, weight up 3 lb."
+                "action": "Link to the question",
+                "detail": "The fast pulse and high pressure the client asks about are those compensations at work."
               },
               {
                 "action": "Compare the pair",
@@ -10462,7 +10481,8 @@
           "caseGroup": "ig29-case7",
           "caseStep": 1,
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
-          "addedBatch": 5
+          "addedBatch": 5,
+          "trimmedBatch": 12
         },
         {
           "id": "ig29-m16",
@@ -10792,7 +10812,7 @@
         {
           "id": "ig29-m17",
           "type": "multiple_choice",
-          "stem": "A client, 67 years old, has had hypertension for 20 years and had a myocardial infarction 2 years ago. Today the client was told of a new diagnosis of heart failure. Echocardiogram: ejection fraction 35%. The client says, \"Failure means my heart is going to stop. How did this happen?\" Which response by the nurse is accurate?",
+          "stem": "A client with hypertension for 20 years and a myocardial infarction 2 years ago is newly diagnosed with heart failure. The client asks, \"Failure means my heart is going to stop. How did this happen?\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -10855,12 +10875,13 @@
           "caseGroup": "ig29-case9",
           "caseStep": 1,
           "objective": "Differentiate left and right sided heart failure and identify their key clinical findings.",
-          "addedBatch": 6
+          "addedBatch": 6,
+          "trimmedBatch": 12
         },
         {
           "id": "ig29-m18",
           "type": "multiple_choice",
-          "stem": "A client with chronic heart failure started carvedilol 2 weeks ago, along with a diuretic and an ACE inhibitor. The client calls the clinic and says, \"I have taken it every day for 2 weeks and I do not feel any better, so I am going to stop it.\" Home readings today: heart rate 64 beats per minute, blood pressure 114/72 mm Hg sitting and 112/70 mm Hg standing, no dizziness. Weight is unchanged for 1 week on the same scale. Which response by the nurse is appropriate?",
+          "stem": "A client with chronic heart failure started carvedilol 2 weeks ago and calls the clinic: \"I have taken it every day for 2 weeks and I do not feel any better, so I am going to stop it.\" Which response by the nurse is appropriate?",
           "options": [
             {
               "id": "A",
@@ -10897,7 +10918,7 @@
             ],
             "readingChecked": true
           },
-          "strategy": "Two options keep the drug going. The difference is who changes the dose and how fast; the client's readings show nothing that needs a dose change.",
+          "strategy": "Two options keep the drug going. The difference is who changes the dose and how fast; not feeling better yet is not a reason to change it.",
           "elimination": {
             "strategies": [
               "Opposite pair, look closely",
@@ -10905,8 +10926,8 @@
             ],
             "steps": [
               {
-                "action": "Check the readings",
-                "detail": "Heart rate 64, blood pressure 114/72 with no drop on standing, weight unchanged: no adverse effect to act on."
+                "action": "Check the reason",
+                "detail": "Feeling no better at 2 weeks is expected; it is not an adverse effect to act on."
               },
               {
                 "action": "Reject stopping or skipping",
@@ -10926,7 +10947,8 @@
           "caseGroup": "ig29-case9",
           "caseStep": 2,
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
-          "addedBatch": 6
+          "addedBatch": 6,
+          "trimmedBatch": 12
         },
         {
           "id": "ig29-m19",
@@ -11140,7 +11162,7 @@
         {
           "id": "ig29-m21",
           "type": "sata",
-          "stem": "A client, 78 years old, is admitted with new shortness of breath on exertion and 1+ pitting edema in both ankles. The nurse takes a health history. Which conditions in the history can lead to heart failure? Select all that apply.",
+          "stem": "The nurse takes a health history from a client with new signs of heart failure. Which conditions in the history can lead to heart failure? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -11218,7 +11240,8 @@
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig29-m22",
@@ -11299,7 +11322,7 @@
         {
           "id": "ig30-m01",
           "type": "multiple_choice",
-          "stem": "A client, 52 years old, comes to a clinic for a screening visit. Blood pressure is 148/94 mm Hg in the right arm and 146/92 mm Hg in the left arm, and heart rate is 76 beats per minute. The client eats canned soup or takeout most days and asks, \"How can salt make my blood pressure go up?\" Which response by the nurse is accurate?",
+          "stem": "A client with hypertension eats canned soup or takeout most days and asks, \"How can salt make my blood pressure go up?\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -11362,12 +11385,13 @@
           "caseGroup": "ig30-case1",
           "caseStep": 1,
           "objective": "Explain the basic mechanisms that regulate blood pressure and contribute to hypertension.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig30-m02",
           "type": "multiple_choice",
-          "stem": "A client, 49 years old, has blood pressure readings averaging 142/90 mm Hg over 3 clinic visits. The client asks how the body controls blood pressure. Which explanation by the nurse is accurate?",
+          "stem": "A client with newly diagnosed hypertension asks how the body controls blood pressure. Which explanation by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -11426,7 +11450,8 @@
           "caseGroup": "ig30-case1",
           "caseStep": 2,
           "objective": "Explain the basic mechanisms that regulate blood pressure and contribute to hypertension.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig30-m03",
@@ -11584,7 +11609,7 @@
         {
           "id": "ig30-m04",
           "type": "sata",
-          "stem": "A client, 61 years old, has a blood pressure of 136/86 mm Hg. The client smokes 1 pack of cigarettes a day, drinks 4 beers most evenings, has a low density lipoprotein level of 172 mg/dL, and reports constant stress from caring for a parent with dementia. A parent and a sibling have hypertension, and the client's ethnic background carries a higher population risk for hypertension. Which risk factors can the nurse target with teaching because the client can change them? Select all that apply.",
+          "stem": "The nurse reviews the risk factors of a client with elevated blood pressure. Which risk factors can the nurse target with teaching because the client can change them? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -11660,7 +11685,8 @@
           "caseGroup": "ig30-case2",
           "caseStep": 1,
           "objective": "Differentiate primary and secondary hypertension and identify major risk factors.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig30-m05",
@@ -11903,7 +11929,7 @@
         {
           "id": "ig30-m07",
           "type": "sata",
-          "stem": "A client, 55 years old, has hypertension with an average blood pressure of 138/88 mm Hg and a body mass index of 31 kg/m2. The client smokes and eats takeout most nights. After lifestyle teaching, which statements by the client indicate understanding? Select all that apply.",
+          "stem": "After lifestyle teaching for hypertension, which statements by the client indicate understanding? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -11985,7 +12011,8 @@
           "caseGroup": "ig30-case3",
           "caseStep": 1,
           "objective": "Describe lifestyle changes and common medication classes used to manage hypertension.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig30-m08",
@@ -12500,7 +12527,7 @@
         {
           "id": "ig30-m13",
           "type": "multiple_choice",
-          "stem": "A client, 46 years old, has no history of hypertension. Over 3 clinic visits, with a cuff sized to the arm and after 5 minutes of seated rest, readings in the right arm average 126/84 mm Hg. At the first visit, the left arm read within 2 mm Hg of the right. The client says, \"My top number is under 130, so I only have elevated blood pressure, right?\" Which response by the nurse is accurate?",
+          "stem": "A client with no history of hypertension has correctly measured readings averaging 126/84 mm Hg over 3 clinic visits. The client says, \"My top number is under 130, so I only have elevated blood pressure, right?\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -12564,7 +12591,8 @@
           "caseGroup": "ig30-case6",
           "caseStep": 1,
           "objective": "Recognize common manifestations, complications, and priority nursing assessments for hypertension.",
-          "addedBatch": 5
+          "addedBatch": 5,
+          "trimmedBatch": 12
         },
         {
           "id": "ig30-m16",
@@ -12698,7 +12726,7 @@
         {
           "id": "ig30-m14",
           "type": "multiple_choice",
-          "stem": "A client, 66 years old, has had hypertension for 14 years and often skips doses. Blood pressure today is 164/98 mm Hg in the right arm and 162/96 mm Hg in the left arm, and heart rate is 80 beats per minute. The nurse reviews the record. Which finding shows that the hypertension has already damaged a target organ?",
+          "stem": "A client has had hypertension for 14 years and often skips doses. Which finding in the record shows that the hypertension has already damaged a target organ?",
           "options": [
             {
               "id": "A",
@@ -12758,7 +12786,8 @@
           "caseGroup": "ig30-case6",
           "caseStep": 3,
           "objective": "Recognize common manifestations, complications, and priority nursing assessments for hypertension.",
-          "addedBatch": 5
+          "addedBatch": 5,
+          "trimmedBatch": 12
         },
         {
           "id": "ig30-m15",
@@ -12915,7 +12944,7 @@
         {
           "id": "ig30-m17",
           "type": "multiple_choice",
-          "stem": "A client, 50 years old, has readings averaging 142/90 mm Hg in the right arm over 3 clinic visits, with a cuff sized to the arm after 5 minutes of seated rest. The client says, \"I feel completely well and have never had a headache, so my pressure cannot be hurting anything. I will start treatment when I get symptoms.\" Which response by the nurse is accurate?",
+          "stem": "A client with readings averaging 142/90 mm Hg over 3 clinic visits says, \"I feel completely well and have never had a headache, so my pressure cannot be hurting anything. I will start treatment when I get symptoms.\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -12979,7 +13008,8 @@
           "caseGroup": "ig30-case8",
           "caseStep": 1,
           "objective": "Explain the basic mechanisms that regulate blood pressure and contribute to hypertension.",
-          "addedBatch": 6
+          "addedBatch": 6,
+          "trimmedBatch": 12
         },
         {
           "id": "ig30-m18",
@@ -13463,7 +13493,7 @@
         {
           "id": "ig30-m24",
           "type": "sata",
-          "stem": "A client, 41 years old, has new hypertension with readings averaging 158/98 mm Hg in both arms over 3 clinic visits, measured with a cuff sized to the arm. The client takes no drugs, prescribed or over the counter. The nurse reviews the health record. Which findings point toward a secondary cause of the hypertension? Select all that apply.",
+          "stem": "A client with new hypertension takes no prescribed or over the counter drugs. Which findings in the health record point toward a secondary cause? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -13540,12 +13570,13 @@
           "objective": "Differentiate primary and secondary hypertension and identify major risk factors.",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig30-m25",
           "type": "sata",
-          "stem": "A client, 67 years old, has had hypertension for 18 years and often misses doses. Blood pressure today is 162/98 mm Hg in the right arm and 160/96 mm Hg in the left arm. The nurse reviews the record and completes an assessment. Which findings suggest that the hypertension has damaged a target organ? Select all that apply.",
+          "stem": "A client has had hypertension for 18 years and often misses doses. Which findings suggest that the hypertension has damaged a target organ? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -13622,12 +13653,13 @@
           "objective": "Recognize common manifestations, complications, and priority nursing assessments for hypertension.",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig30-m26",
           "type": "multiple_choice",
-          "stem": "A client, 59 years old, started lisinopril for hypertension 6 weeks ago. Home readings in the right arm average 128/78 mm Hg. The provider stops the lisinopril because of a side effect and prescribes an angiotensin receptor blocker. The client asks, \"Why switch? My pressure is finally down. Do I still need to check it at home?\" Which response by the nurse is accurate?",
+          "stem": "A client's lisinopril is stopped because of a side effect, and an angiotensin receptor blocker is prescribed. The client asks, \"Why switch? My pressure is finally down. Do I still need to check it at home?\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -13688,7 +13720,8 @@
           "objective": "Describe lifestyle changes and common medication classes used to manage hypertension.",
           "cjmm": "Take action",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig30-m23",
@@ -14053,7 +14086,7 @@
         {
           "id": "ig31-m04",
           "type": "multiple_choice",
-          "stem": "A client with pneumonia has become restless over the past 4 hours. The respiratory rate has risen from 18 to 26 breaths per minute and urine output has fallen from 60 to 25 mL per hour. The nurse has just completed an assessment, found these changes, and suspects sepsis. Which action does the nurse take first?",
+          "stem": "The nurse has just completed an assessment of a client with pneumonia and suspects sepsis. Which action does the nurse take first?",
           "options": [
             {
               "id": "A",
@@ -14097,11 +14130,11 @@
             "steps": [
               {
                 "action": "Check whether assessment is done",
-                "detail": "The stem says the nurse just assessed and found the changes."
+                "detail": "The stem says the nurse just completed the assessment."
               },
               {
                 "action": "Escalate next",
-                "detail": "Restlessness, a respiratory rate of 26, and urine output of 25 mL per hour with suspected sepsis call for the provider or rapid response."
+                "detail": "Suspected sepsis with the cues in hand calls for the provider or rapid response."
               },
               {
                 "action": "Place the rest after the call",
@@ -14112,7 +14145,8 @@
           },
           "caseGroup": "ig31-case2",
           "caseStep": 2,
-          "objective": "Describe immediate nursing actions when sepsis is suspected"
+          "objective": "Describe immediate nursing actions when sepsis is suspected",
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-m05",
@@ -14460,7 +14494,7 @@
         {
           "id": "ig31-m08",
           "type": "multiple_choice",
-          "stem": "A client had surgery on the right lower leg 5 days ago, and the surgical wound is now draining. The provider orders a wound culture and a first dose of an antimicrobial, both to be done this morning. The antimicrobial is at the bedside and due now, and the culture swab has to be brought from the supply room. The client is alert, with a respiratory rate of 16 breaths per minute and a blood pressure of 124/76 mm Hg, which matches the readings from the past 2 days. In which order does the nurse carry out the orders?",
+          "stem": "A client has a draining surgical wound. The provider orders a wound culture and a first dose of an antimicrobial, both due this morning. The client's vital signs are stable and match the past 2 days. In which order does the nurse carry out the orders?",
           "options": [
             {
               "id": "A",
@@ -14497,7 +14531,7 @@
             ],
             "readingChecked": true
           },
-          "strategy": "The drug is ready and the swab is not, which pulls toward giving the dose first. The client's vital signs match baseline, so there is time to collect the specimen first.",
+          "strategy": "Both orders are due, which can pull toward giving the dose first. The client's vital signs are stable, so collecting the specimen first causes no harmful delay.",
           "elimination": {
             "strategies": [
               "Opposite pair, look closely"
@@ -14520,7 +14554,8 @@
           },
           "caseGroup": "ig31-case3",
           "caseStep": 2,
-          "objective": "Explain the nurse's role in testing, treatment, and teaching"
+          "objective": "Explain the nurse's role in testing, treatment, and teaching",
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-m09",
@@ -14688,7 +14723,7 @@
         {
           "id": "ig31-m10",
           "type": "sata",
-          "stem": "A client with cellulitis of the right leg is being discharged with a dressing over a draining wound. The wound culture was positive for MRSA, and the client has a prescription for an oral antibiotic. The client lives with a partner and a 6 year old child. Which statements by the client indicate that the teaching has been effective? Select all that apply.",
+          "stem": "A client is being discharged with a draining leg wound infected with MRSA and a prescription for an oral antibiotic. Which statements by the client indicate that the teaching has been effective? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -14765,7 +14800,8 @@
           "caseGroup": "ig31-case5",
           "caseStep": 3,
           "objective": "Explain the nurse's role in testing, treatment, and teaching",
-          "addedBatch": 1
+          "addedBatch": 1,
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-m12",
@@ -15023,7 +15059,7 @@
         {
           "id": "ig31-m14",
           "type": "sata",
-          "stem": "A client, 78 years old, is admitted from the emergency department with a cough and suspected pneumonia. The client lives at home with a family member. Oral temperature 37.0 °C, heart rate 96 beats per minute, respiratory rate 24 breaths per minute, oxygen saturation 93% on room air. Which actions belong in the nurse's admission infection assessment? Select all that apply.",
+          "stem": "A client, 78 years old, is admitted with a cough and suspected pneumonia. The oxygen saturation is 93% on room air. Which actions belong in the nurse's admission infection assessment? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -15103,12 +15139,13 @@
           "caseGroup": "ig31-case7",
           "caseStep": 2,
           "objective": "Assess for infection and recognize clinical deterioration",
-          "addedBatch": 2
+          "addedBatch": 2,
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-m15",
           "type": "multiple_choice",
-          "stem": "A client has a draining wound on the left foot. The provider ordered a wound culture and susceptibility, a complete blood count with differential, and an intravenous antimicrobial. On day 2, the susceptibility report shows that the organism is resistant to the antimicrobial the client is receiving. The next dose is due in 1 hour. Which action does the nurse take?",
+          "stem": "On day 2 of an intravenous antimicrobial for a wound infection, the susceptibility report shows that the organism is resistant to the drug. The next dose is due in 1 hour. Which action does the nurse take?",
           "options": [
             {
               "id": "A",
@@ -15168,7 +15205,8 @@
           "caseGroup": "ig31-case8",
           "caseStep": 1,
           "objective": "Explain the nurse's role in testing, treatment, and teaching",
-          "addedBatch": 2
+          "addedBatch": 2,
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-x04",
@@ -15380,7 +15418,7 @@
         {
           "id": "ig31-m18",
           "type": "sata",
-          "stem": "A client is on day 1 after abdominal surgery, with a wound drain on the right side and no diagnosed infection. The nurse will empty the drain, irrigate the incision as ordered, count the radial pulse at the intact right wrist, and give a subcutaneous injection. Which actions by the nurse follow standard precautions? Select all that apply.",
+          "stem": "For a client with no diagnosed infection, the nurse will empty a wound drain, irrigate an incision, count a radial pulse, and give a subcutaneous injection. Which actions follow standard precautions? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -15457,7 +15495,8 @@
           "caseGroup": "ig31-case10",
           "caseStep": 1,
           "objective": "Select standard and transmission based precautions",
-          "addedBatch": 4
+          "addedBatch": 4,
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-x05",
@@ -16648,7 +16687,7 @@
         {
           "id": "ig31-m30",
           "type": "multiple_choice",
-          "stem": "A client, 41 years old, checks in at a clinic for a cough that started 3 days ago. In the waiting room the client coughs into the air without covering the mouth, and 5 other people are seated within 1 m. No diagnosis has been made. Which action does the nurse take first?",
+          "stem": "In a clinic waiting room, a client with a new cough coughs near other people without covering the mouth. No diagnosis has been made. Which action does the nurse take first?",
           "options": [
             {
               "id": "A",
@@ -16709,12 +16748,13 @@
           "objective": "Select standard and transmission based precautions",
           "cjmm": "Take action",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-m28",
           "type": "multiple_choice",
-          "stem": "A client, 58 years old, is admitted with a respiratory infection that the provider documents as spread by droplets, and the client coughs often. Oral temperature 38.2 °C, respiratory rate 22 breaths per minute, oxygen saturation 95% on room air. The nurse prepares the room and the precautions. Which plan is correct?",
+          "stem": "A client is admitted with a respiratory infection spread by droplets and coughs often. Which plan for the room and precautions is correct?",
           "options": [
             {
               "id": "A",
@@ -16775,12 +16815,13 @@
           "objective": "Select standard and transmission based precautions",
           "cjmm": "Generate solutions",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-m29",
           "type": "multiple_choice",
-          "stem": "A client, 66 years old, is admitted with COVID 19 confirmed by testing. Respiratory rate 24 breaths per minute, oxygen saturation 92% on room air. The nurse will listen to the lungs and help the client cough up a sputum specimen as ordered. The nurse has put on a gown, clean gloves, and a fitted respirator. Which protection does the nurse add to meet the precautions for this infection?",
+          "stem": "A client has confirmed COVID 19. The nurse puts on a gown, clean gloves, and a fitted respirator to collect a sputum specimen. Which protection does the nurse add?",
           "options": [
             {
               "id": "A",
@@ -16841,7 +16882,8 @@
           "objective": "Select standard and transmission based precautions",
           "cjmm": "Generate solutions",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-m31",
@@ -16931,7 +16973,7 @@
         {
           "id": "ig31-m32",
           "type": "multiple_choice",
-          "stem": "A client, 72 years old, has an MRSA wound infection on the left foot and is on contact precautions. The client's adult child arrives, reads the sign on the door, and says, \"All this gear seems like a lot. I am family, so do I really need it?\" Which response by the nurse is best?",
+          "stem": "A client with an MRSA wound infection is on contact precautions. The client's adult child reads the sign on the door and says, \"All this gear seems like a lot. I am family, so do I really need it?\" Which response by the nurse is best?",
           "options": [
             {
               "id": "A",
@@ -16992,12 +17034,13 @@
           "objective": "Explain the nurse's role in testing, treatment, and teaching",
           "cjmm": "Take action",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-m33",
           "type": "multiple_choice",
-          "stem": "A client, 79 years old, is being discharged after treatment for cellulitis of the right leg, with an oral antibiotic to take 4 times a day for 10 days. The client lives alone and has diabetes mellitus. Which finding from the discharge assessment is most likely to interfere with treatment of the infection at home?",
+          "stem": "A client who lives alone is being discharged with an oral antibiotic for cellulitis, to take 4 times a day for 10 days. Which finding from the discharge assessment is most likely to interfere with treatment of the infection at home?",
           "options": [
             {
               "id": "A",
@@ -17058,7 +17101,8 @@
           "objective": "Assess for infection and recognize clinical deterioration",
           "cjmm": "Analyze cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig31-m34",
@@ -17390,7 +17434,7 @@
         {
           "id": "ig32-m01",
           "type": "multiple_choice",
-          "stem": "A client, 57 years old, with hypertension and dyslipidemia asks how these conditions can lead to coronary artery disease. The nurse explains that hypertension and dyslipidemia injure the endothelium of the coronary artery, and that low density lipoprotein then enters the artery wall and is oxidized. Which event does the nurse describe next?",
+          "stem": "A client with hypertension and dyslipidemia asks how these conditions lead to coronary artery disease. The nurse explains that they injure the endothelium of the coronary artery, and that low density lipoprotein then enters the artery wall and is oxidized. Which event does the nurse describe next?",
           "options": [
             {
               "id": "A",
@@ -17449,7 +17493,8 @@
           "caseGroup": "ig32-case1",
           "caseStep": 1,
           "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig32-m02",
@@ -17631,7 +17676,7 @@
         {
           "id": "ig32-m03",
           "type": "multiple_choice",
-          "stem": "A client with coronary artery disease reports chest pressure that starts after walking uphill for about 5 minutes and goes away within 3 minutes of sitting down. Blood pressure 134/82 mm Hg, heart rate 78 beats per minute. The client asks why the pressure comes and goes. Which explanation by the nurse is accurate?",
+          "stem": "A client with coronary artery disease has chest pressure that starts after walking uphill for about 5 minutes and goes away within 3 minutes of sitting down. The client asks why it comes and goes. Which explanation by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -17698,7 +17743,8 @@
           "caseGroup": "ig32-case2",
           "caseStep": 1,
           "objective": "Explain how atherosclerosis contributes to the development of coronary artery disease.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig32-x02",
@@ -18380,7 +18426,7 @@
         {
           "id": "ig32-m11",
           "type": "sata",
-          "stem": "The plan of care for a client with coronary artery disease includes several treatments. Blood pressure on admission was 152/94 mm Hg. Which treatments reduce myocardial oxygen demand? Select all that apply.",
+          "stem": "Which treatments in the plan of care for a client with coronary artery disease reduce myocardial oxygen demand? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -18457,7 +18503,8 @@
           "caseGroup": "ig32-case5",
           "caseStep": 1,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
-          "addedBatch": 3
+          "addedBatch": 3,
+          "trimmedBatch": 12
         },
         {
           "id": "ig32-m06",
@@ -18732,7 +18779,7 @@
         {
           "id": "ig32-m13",
           "type": "multiple_choice",
-          "stem": "A client, 64 years old, had a stent placed in a coronary artery 2 days ago and is going home on aspirin 81 mg and clopidogrel 75 mg, both once daily. Which statement by the client shows understanding of the teaching?",
+          "stem": "A client is going home after a coronary stent on aspirin 81 mg and clopidogrel 75 mg, both once daily. Which statement by the client shows understanding of the teaching?",
           "options": [
             {
               "id": "A",
@@ -18797,7 +18844,8 @@
           "caseGroup": "ig32-case6",
           "caseStep": 2,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
-          "addedBatch": 5
+          "addedBatch": 5,
+          "trimmedBatch": 12
         },
         {
           "id": "ig32-m14",
@@ -19450,7 +19498,7 @@
         {
           "id": "ig32-m21",
           "type": "multiple_choice",
-          "stem": "A client, 63 years old, with suspected coronary artery disease had a 12 lead ECG, a chest x ray and a troponin level drawn today. A cardiovascular magnetic resonance scan and an echocardiogram are scheduled for tomorrow. Blood pressure 134/82 mm Hg in the left arm, heart rate 72 beats per minute. The client asks, \"What will the echocardiogram tell my provider that today's tests did not?\" Which response by the nurse is accurate?",
+          "stem": "A client with suspected coronary artery disease had a 12 lead ECG, a chest x ray and a troponin level today, and an echocardiogram is scheduled for tomorrow. The client asks, \"What will the echocardiogram tell my provider that today's tests did not?\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -19511,7 +19559,8 @@
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
           "cjmm": "Take action",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         }
       ]
     },
@@ -19721,7 +19770,7 @@
         {
           "id": "p46-m03",
           "type": "multiple_choice",
-          "stem": "A nurse inserts an indwelling urinary catheter for a client, 59 years old, with acute urinary retention. Urine flows into the tubing, and the nurse advances the catheter as the procedure requires. As the nurse injects sterile water into the balloon port, the client cries out with sudden pain, 8 of 10, and the nurse feels resistance. Which action should the nurse take next?",
+          "stem": "As the nurse injects sterile water into the balloon port of a newly inserted indwelling urinary catheter, the client cries out with sudden pain and the nurse feels resistance. Which action should the nurse take next?",
           "options": [
             {
               "id": "A",
@@ -19782,12 +19831,13 @@
           "caseGroup": "p46-case2",
           "caseStep": 1,
           "objective": "Describe specimen collection & catheter care",
-          "addedBatch": 9
+          "addedBatch": 9,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m04",
           "type": "sata",
-          "stem": "An assistive personnel cares for a client, 80 years old, who has an indwelling urinary catheter. Which actions by the assistive personnel require the nurse to intervene? Select all that apply.",
+          "stem": "An assistive personnel cares for a client with an indwelling urinary catheter. Which actions by the assistive personnel require the nurse to intervene? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -19863,7 +19913,8 @@
           "caseGroup": "p46-case2",
           "caseStep": 2,
           "objective": "Describe specimen collection & catheter care",
-          "addedBatch": 9
+          "addedBatch": 9,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m05",
@@ -20031,7 +20082,7 @@
         {
           "id": "p46-m07",
           "type": "multiple_choice",
-          "stem": "A nurse teaches a client, 31 years old, how to collect a clean voided urine specimen for culture at the clinic at 1100. Which statement by the client indicates correct understanding?",
+          "stem": "The nurse teaches a client how to collect a clean voided urine specimen for culture. Which statement by the client indicates correct understanding?",
           "options": [
             {
               "id": "A",
@@ -20096,12 +20147,13 @@
           "caseGroup": "p46-case3",
           "caseStep": 2,
           "objective": "Describe specimen collection & catheter care",
-          "addedBatch": 9
+          "addedBatch": 9,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m08",
           "type": "sata",
-          "stem": "A client, 84 years old, lives in a long term care facility, walks with a walker, and needs help to reach the bathroom. Urine has leaked twice this week. Which actions by the nurse support the client's dignity and independence? Select all that apply.",
+          "stem": "A client in long term care can walk with help but needs assistance to reach the bathroom and has had urine leakage. Which actions by the nurse support the client's dignity and independence? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -20170,7 +20222,8 @@
           "caseGroup": "p46-case4",
           "caseStep": 1,
           "objective": "Select dignity supporting interventions",
-          "addedBatch": 9
+          "addedBatch": 9,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-x02",
@@ -20311,7 +20364,7 @@
         {
           "id": "p46-m10",
           "type": "sata",
-          "stem": "A client, 58 years old, is on intake and output measurement. The client walks to the bathroom independently, receives intravenous fluid at 75 mL per hour, and drinks a liquid nutrition supplement with each meal. Which actions should the nurse include in the plan? Select all that apply.",
+          "stem": "A client on intake and output measurement walks to the bathroom independently and receives intravenous fluid. Which actions should the nurse include in the plan? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -20392,7 +20445,8 @@
           "objective": "Assess patterns & concerning changes",
           "cjmm": "Generate solutions",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m11",
@@ -21070,7 +21124,7 @@
         {
           "id": "p46-m20",
           "type": "multiple_choice",
-          "stem": "A client, 70 years old, has had an indwelling urinary catheter for 4 days. An order is received for a urine specimen for culture. The drainage bag holds 600 mL of urine. Which action should the nurse take to collect the specimen?",
+          "stem": "A urine specimen for culture is ordered for a client with an indwelling urinary catheter. Which action should the nurse take to collect the specimen?",
           "options": [
             {
               "id": "A",
@@ -21137,12 +21191,13 @@
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Take action",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m21",
           "type": "sata",
-          "stem": "A nurse is assigned to collect urine specimens for urinalysis from three clients on a medical unit at 0800. The laboratory picks up specimens from the unit every 4 hours. Which actions by the nurse are appropriate? Select all that apply.",
+          "stem": "A nurse is collecting urine specimens for urinalysis from three clients. Which actions by the nurse are appropriate? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -21219,7 +21274,8 @@
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Take action",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m22",
@@ -21315,7 +21371,7 @@
         {
           "id": "p46-m23",
           "type": "multiple_choice",
-          "stem": "A client, 54 years old, has burning with voiding and an order for a urinalysis and a urine culture. The nurse explains the purpose of each test. Which statement by the client indicates understanding?",
+          "stem": "A client with burning on voiding has orders for a urinalysis and a urine culture. After the nurse explains each test, which client statement indicates understanding?",
           "options": [
             {
               "id": "A",
@@ -21378,12 +21434,13 @@
           "objective": "Evaluate nursing care outcomes",
           "cjmm": "Evaluate outcomes",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m34",
           "type": "multiple_choice",
-          "stem": "A client, 61 years old, is scheduled tomorrow for an imaging study of the urinary tract. At 1600 the nurse reviews the chart and talks with the client. Which finding should the nurse address before the test?",
+          "stem": "A client is scheduled tomorrow for an imaging study of the urinary tract. Which finding should the nurse address before the test?",
           "options": [
             {
               "id": "A",
@@ -21445,7 +21502,8 @@
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m24",
@@ -21567,7 +21625,7 @@
         {
           "id": "p46-m25",
           "type": "sata",
-          "stem": "A nurse prepares to insert an indwelling urinary catheter for a client, 68 years old, who needs output measured every hour after major surgery. Which actions should the nurse take? Select all that apply.",
+          "stem": "A nurse prepares to insert an indwelling urinary catheter for a client who needs hourly output measurement after major surgery. Which actions should the nurse take? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -21648,7 +21706,8 @@
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Take action",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m26",
@@ -21790,7 +21849,7 @@
         {
           "id": "p46-m28",
           "type": "multiple_choice",
-          "stem": "A client, 59 years old, had the bladder removed for cancer and now has a continent urinary reservoir with a small stoma on the abdomen. The nurse individualizes the discharge teaching and evaluates the client's understanding. Which statement by the client indicates the teaching was effective?",
+          "stem": "The nurse evaluates discharge teaching for a client with a new continent urinary reservoir and stoma. Which statement by the client indicates the teaching was effective?",
           "options": [
             {
               "id": "A",
@@ -21855,12 +21914,13 @@
           "objective": "Evaluate nursing care outcomes",
           "cjmm": "Evaluate outcomes",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m29",
           "type": "multiple_choice",
-          "stem": "A nurse assesses a client, 66 years old, on day 3 after creation of an ileal conduit. Which finding requires follow up?",
+          "stem": "On day 3 after creation of an ileal conduit, which finding requires follow up by the nurse?",
           "options": [
             {
               "id": "A",
@@ -21921,12 +21981,13 @@
           "objective": "Evaluate nursing care outcomes",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m30",
           "type": "sata",
-          "stem": "A client, 81 years old, is admitted to a medical unit with new episodes of urine leakage at night. The nurse reviews the admission data. Which findings are factors that can affect this client's urinary elimination? Select all that apply.",
+          "stem": "A client is admitted with new episodes of urine leakage at night. Which admission findings can affect the client's urinary elimination? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -22004,7 +22065,8 @@
           "objective": "Assess patterns & concerning changes",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "p46-m31",
@@ -22310,7 +22372,7 @@
         {
           "id": "ig58-m02",
           "type": "multiple_choice",
-          "stem": "A resident of a long term care facility, 86 years old, has moderate dementia and is incontinent of urine 4 to 6 times a day. The resident does not recognize the need to void, cannot follow instructions to delay voiding, and walks to the bathroom with the help of 1 staff member. A 3 day bladder diary shows voiding about every 2 hours while awake. Which toileting program does the nurse place in the plan of care?",
+          "stem": "A resident with moderate dementia does not recognize the need to void, cannot follow instructions to delay voiding, and walks to the bathroom with the help of 1 staff member. A bladder diary shows voiding about every 2 hours while awake. Which toileting program does the nurse place in the plan of care?",
           "options": [
             {
               "id": "A",
@@ -22375,7 +22437,8 @@
           "caseGroup": "ig58-case1",
           "caseStep": 2,
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
-          "addedBatch": 9
+          "addedBatch": 9,
+          "trimmedBatch": 12
         },
         {
           "id": "ig58-m03",
@@ -22469,7 +22532,7 @@
         {
           "id": "ig58-m04",
           "type": "multiple_choice",
-          "stem": "A client, 52 years old, leaks urine when coughing or lifting and starts pelvic floor muscle training. At a follow up visit 2 weeks later, the nurse evaluates the client's understanding. Which statement shows the client is performing the exercises correctly?",
+          "stem": "The nurse evaluates a client's understanding of pelvic floor muscle training. Which client statement shows the exercises are being performed correctly?",
           "options": [
             {
               "id": "A",
@@ -22532,7 +22595,8 @@
           "caseGroup": "ig58-case2",
           "caseStep": 1,
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
-          "addedBatch": 9
+          "addedBatch": 9,
+          "trimmedBatch": 12
         },
         {
           "id": "ig58-x01",
@@ -22779,7 +22843,7 @@
         {
           "id": "ig58-m07",
           "type": "sata",
-          "stem": "A client, 27 years old, is diagnosed with cystitis and is prescribed an oral antibiotic for 5 days and phenazopyridine for 2 days. The client has no known kidney or heart disease and no fluid restriction. Which actions does the nurse include in the plan of care? Select all that apply.",
+          "stem": "A client with cystitis is prescribed an oral antibiotic and phenazopyridine and has no fluid restriction. Which actions does the nurse include in the plan of care? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -22859,7 +22923,8 @@
           "caseGroup": "ig58-case3",
           "caseStep": 3,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan",
-          "addedBatch": 9
+          "addedBatch": 9,
+          "trimmedBatch": 12
         },
         {
           "id": "ig58-m08",
@@ -23534,7 +23599,7 @@
         {
           "id": "ig58-m15",
           "type": "multiple_choice",
-          "stem": "A client, 23 years old, has had cystitis twice in 6 months. The client works 10 hour shifts, often waits 6 hours to void, and drinks about 700 mL of fluid during a shift. The client has no fluid restriction. After teaching on prevention, which statement shows the client understands how the infection developed?",
+          "stem": "A client with recurrent cystitis often holds urine for an entire work shift. After teaching on prevention, which statement shows the client understands how the infection developed?",
           "options": [
             {
               "id": "A",
@@ -23581,7 +23646,7 @@
               },
               {
                 "action": "Check the habit in the stem",
-                "detail": "Waiting 6 hours to void and low intake."
+                "detail": "Holding urine for a whole shift."
               },
               {
                 "action": "Keep the statement that fixes it",
@@ -23595,7 +23660,8 @@
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan",
           "cjmm": "Evaluate outcomes",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig58-m16",
@@ -23740,7 +23806,7 @@
         {
           "id": "ig58-m18",
           "type": "sata",
-          "stem": "A nurse on a surgical unit cares for several clients with urinary needs during a 12 hour shift. Which actions by the nurse follow measures to prevent catheter associated urinary tract infection? Select all that apply.",
+          "stem": "Which actions by the nurse follow measures to prevent catheter associated urinary tract infection? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -23817,12 +23883,13 @@
           "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
           "cjmm": "Take action",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig58-m19",
           "type": "multiple_choice",
-          "stem": "A client, 71 years old, has heart failure with a prescribed fluid limit of 1500 mL a day and is diagnosed with cystitis. The client is prescribed an oral antibiotic for 7 days. Which statement by the client indicates a need for more teaching?",
+          "stem": "A client with heart failure and a prescribed fluid limit of 1500 mL a day is prescribed an oral antibiotic for cystitis. Which statement by the client indicates a need for more teaching?",
           "options": [
             {
               "id": "A",
@@ -23883,7 +23950,8 @@
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan",
           "cjmm": "Evaluate outcomes",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig58-m21",
@@ -24185,7 +24253,7 @@
         {
           "id": "ig59-m03",
           "type": "multiple_choice",
-          "stem": "A client, 29 years old, is going home with a 10 day course of an oral antibiotic for pyelonephritis. On day 3 the oral temperature is 37.0 °C and flank pain is 1 of 10. Which statement by the client indicates a need for further teaching?",
+          "stem": "A client with pyelonephritis is going home with a 10 day course of an oral antibiotic and feels better by day 3. Which statement by the client indicates a need for further teaching?",
           "options": [
             {
               "id": "A",
@@ -24249,7 +24317,8 @@
           "caseGroup": "ig59-case1",
           "caseStep": 3,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan.",
-          "addedBatch": 9
+          "addedBatch": 9,
+          "trimmedBatch": 12
         },
         {
           "id": "ig59-m04",
@@ -24555,7 +24624,7 @@
         {
           "id": "ig59-m07",
           "type": "sata",
-          "stem": "A client, 24 years old, has acute glomerulonephritis. Results today: urinalysis with protein 3+, many red blood cells, and negative nitrites; serum creatinine 2.0 mg/dL, was 0.8 mg/dL 2 weeks ago; serum potassium 5.8 mEq/L; hemoglobin 13.6 g/dL. Which results does the nurse interpret as evidence of glomerular injury or reduced kidney filtration? Select all that apply.",
+          "stem": "A client has acute glomerulonephritis. Which results does the nurse interpret as evidence of glomerular injury or reduced kidney filtration? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -24637,7 +24706,8 @@
           "caseGroup": "ig59-case3",
           "caseStep": 2,
           "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings.",
-          "addedBatch": 9
+          "addedBatch": 9,
+          "trimmedBatch": 12
         },
         {
           "id": "ig59-x01",
@@ -24712,7 +24782,7 @@
         {
           "id": "ig59-m08",
           "type": "multiple_choice",
-          "stem": "A client, 31 years old, is going home with acute glomerulonephritis, a prescribed sodium restriction, and a fluid allowance of 1000 mL per day. Which statement by the client shows correct understanding of the care plan?",
+          "stem": "A client with acute glomerulonephritis is going home on a prescribed sodium and fluid restriction. Which statement by the client shows correct understanding of the care plan?",
           "options": [
             {
               "id": "A",
@@ -24775,12 +24845,13 @@
           "caseGroup": "ig59-case3",
           "caseStep": 4,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan.",
-          "addedBatch": 9
+          "addedBatch": 9,
+          "trimmedBatch": 12
         },
         {
           "id": "ig59-m09",
           "type": "sata",
-          "stem": "A client, 63 years old, is admitted with pyelonephritis. Oral temperature 38.8 °C, left flank pain 7 of 10, and left costovertebral angle tenderness. The nurse reviews the health history. Which findings does the nurse recognize as increasing this client's risk for pyelonephritis? Select all that apply.",
+          "stem": "A client is admitted with pyelonephritis and left flank pain. Which findings in the health history does the nurse recognize as increasing this client's risk for pyelonephritis? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -24865,7 +24936,8 @@
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis.",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig59-m10",
@@ -24941,7 +25013,7 @@
         {
           "id": "ig59-m11",
           "type": "sata",
-          "stem": "A client, 38 years old, is admitted with pyelonephritis. Oral temperature 39.0 °C, heart rate 108 beats per minute, right flank pain 7 of 10, and right costovertebral angle tenderness. Prescriptions include an IV antibiotic, an analgesic as needed for pain, and IV fluids at 100 mL per hour. Which actions does the nurse include in the plan of care? Select all that apply.",
+          "stem": "A client admitted with pyelonephritis has right flank pain of 7 of 10 and prescriptions for an IV antibiotic, an analgesic as needed for pain, and IV fluids at 100 mL per hour. Which actions does the nurse include in the plan of care? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -25027,7 +25099,8 @@
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan.",
           "cjmm": "Generate solutions",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig59-m12",
@@ -25198,7 +25271,7 @@
         {
           "id": "ig59-m14",
           "type": "multiple_choice",
-          "stem": "A client, 45 years old, with acute glomerulonephritis has followed a prescribed fluid and sodium restriction and received prescribed medications for 3 days. The nurse reviews the documented trends. Which set of findings best shows that the plan of care is achieving its goal?",
+          "stem": "A client with acute glomerulonephritis has followed a prescribed fluid and sodium restriction and taken prescribed medications for 3 days. Which set of findings best shows that the plan of care is achieving its goal?",
           "options": [
             {
               "id": "A",
@@ -25268,7 +25341,8 @@
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan.",
           "cjmm": "Evaluate outcomes",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         }
       ]
     },
@@ -25413,7 +25487,7 @@
         {
           "id": "ig45-m03",
           "type": "multiple_choice",
-          "stem": "A client, 84 years old, has had 2 bowel movements in the past 9 days, with hard stools passed with straining. The client says, \"I never feel the urge anymore, so I just wait until I do.\" The nurse teaches about age related changes in bowel elimination. Which client statement shows understanding of the teaching?",
+          "stem": "An older adult with constipation says, \"I never feel the urge anymore, so I just wait until I do.\" The nurse teaches about age related changes in bowel elimination. Which client statement shows understanding of the teaching?",
           "options": [
             {
               "id": "A",
@@ -25475,12 +25549,13 @@
           "caseStep": 3,
           "objective": "Describe age related changes in the GI system and their impact on digestion, absorption, and elimination",
           "cjmm": "Evaluate outcomes",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "ig45-m04",
           "type": "sata",
-          "stem": "A client, 46 years old, comes to the clinic with watery diarrhea 5 to 6 times a day for 4 days. Oral temperature 37.9 °C, heart rate 98 beats per minute, blood pressure 118/74 mm Hg. The nurse begins a focused gastrointestinal health history. Which questions does the nurse include? Select all that apply.",
+          "stem": "The nurse begins a focused gastrointestinal health history for a client with watery diarrhea for 4 days. Which questions does the nurse include? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -25561,7 +25636,8 @@
           "caseStep": 4,
           "objective": "Obtain a focused GI health history, including nutritional habits, bowel patterns, and common GI symptoms",
           "cjmm": "Recognize cues",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "ig45-m05",
@@ -25875,7 +25951,7 @@
         {
           "id": "ig45-m08",
           "type": "multiple_choice",
-          "stem": "A nurse begins an abdominal assessment on a client, 45 years old, who has had no bowel movement for 3 days. The nurse has finished inspecting all 4 quadrants. The abdomen is rounded and symmetric with no visible masses, and the client reports no pain. Which action does the nurse take next?",
+          "stem": "The nurse has finished inspecting all 4 quadrants of a client's abdomen. Which action does the nurse take next?",
           "options": [
             {
               "id": "A",
@@ -25935,12 +26011,13 @@
           "caseStep": 1,
           "objective": "Demonstrate the correct sequence and techniques for abdominal assessment, including inspection, auscultation, percussion, and palpation",
           "cjmm": "Take action",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "ig45-m09",
           "type": "sata",
-          "stem": "A nursing student completes an abdominal assessment on a client, 39 years old, under the supervision of the nurse. The client reports no abdominal pain. Which actions by the student require the nurse to intervene? Select all that apply.",
+          "stem": "A nursing student performs an abdominal assessment under the supervision of the nurse. Which actions by the student require the nurse to intervene? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -26009,7 +26086,8 @@
           "caseStep": 2,
           "objective": "Demonstrate the correct sequence and techniques for abdominal assessment, including inspection, auscultation, percussion, and palpation",
           "cjmm": "Evaluate outcomes",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "ig45-m10",
@@ -26404,7 +26482,7 @@
         {
           "id": "ig45-m13",
           "type": "multiple_choice",
-          "stem": "A client, 55 years old, at average risk for colorectal cancer used a multitargeted stool DNA home kit for screening, and today's result is negative. The nurse reviews the screening plan with the client. Which client statement shows understanding?",
+          "stem": "A client at average risk for colorectal cancer has a negative result on a multitargeted stool DNA home kit. Which client statement shows understanding of the screening plan?",
           "options": [
             {
               "id": "A",
@@ -26464,7 +26542,8 @@
           "caseStep": 4,
           "objective": "Identify common laboratory and diagnostic tests used to evaluate GI function and disorders",
           "cjmm": "Evaluate outcomes",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "ig45-m14",
@@ -26973,7 +27052,7 @@
         {
           "id": "ig45-m19",
           "type": "sata",
-          "stem": "A client, 42 years old, reports bloating, gas and loose stools within 2 hours after meals for 3 months. Weight is 70.1 kg now, was 72.0 kg 3 months ago. The nurse is gathering the nutrition and family history. Which questions does the nurse include? Select all that apply.",
+          "stem": "The nurse gathers the nutrition and family history for a client with bloating and loose stools after meals. Which questions does the nurse include? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -27055,7 +27134,8 @@
           "objective": "Obtain a focused GI health history, including nutritional habits, bowel patterns, and common GI symptoms",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig45-m20",
@@ -27360,7 +27440,7 @@
         {
           "id": "ig45-m25",
           "type": "multiple_choice",
-          "stem": "A client, 27 years old, has had 8 watery stools since yesterday and cramping, 3 of 10. Oral temperature 37.8 °C. The abdomen is soft, flat and not distended, and the client passed flatus 20 minutes ago. On auscultation the nurse hears loud, frequent, high pitched gurgling in all 4 quadrants. How does the nurse interpret the bowel sounds?",
+          "stem": "A client has had 8 watery stools since yesterday. On auscultation the nurse hears loud, frequent, high pitched gurgling in all 4 quadrants. How does the nurse interpret the bowel sounds?",
           "options": [
             {
               "id": "A",
@@ -27425,7 +27505,8 @@
           "objective": "Differentiate normal and abnormal GI assessment findings and identify findings that require further evaluation",
           "cjmm": "Analyze cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig45-m26",
@@ -27496,7 +27577,7 @@
         {
           "id": "ig45-m21",
           "type": "multiple_choice",
-          "stem": "A client, 59 years old, is 1 day after abdominal surgery. At 1000: bowel sounds hypoactive in all 4 quadrants, abdomen soft and slightly rounded, incisional pain 4 of 10, no nausea since 0600. The nurse evaluates whether peristalsis is returning. Which finding best shows that peristalsis is returning?",
+          "stem": "A client is 1 day after abdominal surgery and has hypoactive bowel sounds. Which finding best shows that peristalsis is returning?",
           "options": [
             {
               "id": "A",
@@ -27558,7 +27639,8 @@
           "objective": "Differentiate normal and abnormal GI assessment findings and identify findings that require further evaluation",
           "cjmm": "Evaluate outcomes",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig45-m27",
@@ -27822,7 +27904,7 @@
         {
           "id": "ig45-m30",
           "type": "multiple_choice",
-          "stem": "A client, 64 years old, had surgery for colon cancer 1 year ago. The carcinoembryonic antigen (CEA) level is checked every 3 months. Today it is 12 ng/mL, was 3 ng/mL 3 months ago, and the provider plans more testing. The nurse reviews the purpose of the test. Which client statement shows understanding?",
+          "stem": "A client who had surgery for colon cancer has a rising carcinoembryonic antigen (CEA) level, and the provider plans more testing. Which client statement shows understanding of the purpose of the test?",
           "options": [
             {
               "id": "A",
@@ -27886,7 +27968,8 @@
           "objective": "Identify common laboratory and diagnostic tests used to evaluate GI function and disorders",
           "cjmm": "Evaluate outcomes",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig45-m31",
@@ -28053,7 +28136,7 @@
         {
           "id": "ig45-m33",
           "type": "multiple_choice",
-          "stem": "A client, 66 years old, had an esophagogastroduodenoscopy (EGD) 40 minutes ago with moderate sedation and an anesthetic throat spray. The client is awake and oriented. Respiratory rate 16 breaths per minute, SpO2 97% on room air. The side rails are raised, and an IV infusion of normal saline runs at 75 mL per hour. The client says, \"My throat still feels numb and thick. Can I have some water?\" Which action does the nurse take?",
+          "stem": "A client had an esophagogastroduodenoscopy (EGD) with moderate sedation and an anesthetic throat spray 40 minutes ago. The client is awake and oriented and says, \"My throat still feels numb and thick. Can I have some water?\" Which action does the nurse take?",
           "options": [
             {
               "id": "A",
@@ -28119,7 +28202,8 @@
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Take action",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "ig45-m34",
@@ -28689,7 +28773,7 @@
         {
           "id": "en-m02",
           "type": "multiple_choice",
-          "stem": "A client, 74 years old, with dysphagia after a stroke is expected to need tube feeding for 2 to 3 weeks while swallowing therapy continues. The provider prescribes a nasogastric tube for feeding and medications. The client has no nausea, vomiting, or abdominal distention. The unit stocks a 16 Fr double lumen sump tube and a 10 Fr single lumen feeding tube. Which tube should the nurse anticipate using?",
+          "stem": "The provider prescribes a nasogastric tube for 2 to 3 weeks of feeding and medications for a client with dysphagia. The client has no nausea, vomiting, or abdominal distention. Which tube should the nurse anticipate using?",
           "options": [
             {
               "id": "A",
@@ -28753,7 +28837,8 @@
           "caseStep": 2,
           "objective": "Describe feeding tube types and the factors that guide route selection",
           "cjmm": "Generate solutions",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m03",
@@ -28897,7 +28982,7 @@
         {
           "id": "en-m04",
           "type": "sata",
-          "stem": "A client, 66 years old, receives continuous feeding through a small bore nasogastric tube at 55 mL per hour by pump. The client is drowsy and opens the eyes to voice. Which actions by the nurse reduce the risk of aspiration? Select all that apply.",
+          "stem": "Which actions by the nurse reduce the risk of aspiration for a client receiving continuous feeding through a small bore nasogastric tube? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -28948,7 +29033,7 @@
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Drowsiness lowers airway protection. Keep the options that keep formula moving down and catch reflux early.",
+          "strategy": "Keep the options that keep formula moving down, keep the tube in place, and catch reflux early.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
@@ -28977,7 +29062,8 @@
           "caseStep": 1,
           "objective": "Prevent aspiration during enteral feeding",
           "cjmm": "Generate solutions",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m05",
@@ -29316,7 +29402,7 @@
         {
           "id": "en-m07",
           "type": "sata",
-          "stem": "A client, 79 years old, lives in a long term care facility. The nurse reviews the findings documented this week. Which findings indicate undernutrition? Select all that apply.",
+          "stem": "The nurse reviews a client's findings documented this week. Which findings indicate undernutrition? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -29397,7 +29483,8 @@
           "caseStep": 1,
           "objective": "Compare enteral and parenteral nutrition and identify who needs enteral feeding",
           "cjmm": "Recognize cues",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "en-x04",
@@ -29543,7 +29630,7 @@
         {
           "id": "en-m09",
           "type": "sata",
-          "stem": "A client, 45 years old, weighed 41 kg on admission after 4 weeks of very little intake and is at risk for refeeding syndrome. Continuous enteral feeding runs at 25 mL per hour by pump, as ordered. Which actions should the nurse include in the plan of care? Select all that apply.",
+          "stem": "A client at risk for refeeding syndrome receives continuous enteral feeding by pump, as ordered. Which actions should the nurse include in the plan of care? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -29613,12 +29700,13 @@
           "caseStep": 2,
           "objective": "Monitor feeding tolerance and respond to complications",
           "cjmm": "Generate solutions",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m10",
           "type": "multiple_choice",
-          "stem": "A client, 45 years old, has had a small bore nasogastric feeding tube taped to the nose for 6 days. At 1000 the nurse finds a 0.5 cm area of red, nonblanching skin on the left naris where the tube presses. The external mark matches the documented length, and the lips are dry and cracked. Which action should the nurse take?",
+          "stem": "A client has had a small bore nasogastric feeding tube taped to the nose for 6 days. The nurse finds a 0.5 cm area of red, nonblanching skin on the naris where the tube presses, and the lips are dry and cracked. Which action should the nurse take?",
           "options": [
             {
               "id": "A",
@@ -29682,12 +29770,13 @@
           "caseStep": 3,
           "objective": "Provide oral, nasal and site care, teach the patient and document",
           "cjmm": "Take action",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m11",
           "type": "multiple_choice",
-          "stem": "A client, 58 years old, has cancer of the larynx and will receive radiation for 7 weeks, followed by surgery. The team expects the client to need tube feeding for at least 6 months. The client asks, \"Why can't they just put the feeding tube in through my nose?\" Which response by the nurse is accurate?",
+          "stem": "A client who will need tube feeding for at least 6 months asks, \"Why can't they just put the feeding tube in through my nose?\" Which response by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -29747,12 +29836,13 @@
           "caseStep": 1,
           "objective": "Describe feeding tube types and the factors that guide route selection",
           "cjmm": "Analyze cues",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m12",
           "type": "sata",
-          "stem": "A client, 58 years old, had a percutaneous endoscopic gastrostomy (PEG) tube placed 6 days ago. The nurse assesses the site at 0900. Which findings require follow up? Select all that apply.",
+          "stem": "The nurse assesses the site of a client's percutaneous endoscopic gastrostomy (PEG) tube. Which findings require follow up? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -29817,12 +29907,13 @@
           "caseStep": 2,
           "objective": "Provide oral, nasal and site care, teach the patient and document",
           "cjmm": "Recognize cues",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m14",
           "type": "multiple_choice",
-          "stem": "A nurse teaches a client, 58 years old, and the client's spouse how to give bolus feedings through a gastrostomy tube at home. The spouse returns the demonstration. Which statement by the spouse indicates a need for more teaching?",
+          "stem": "The nurse teaches a client's spouse how to give bolus feedings through a gastrostomy tube at home. Which statement by the spouse indicates a need for more teaching?",
           "options": [
             {
               "id": "A",
@@ -29882,12 +29973,13 @@
           "caseStep": 3,
           "objective": "Provide oral, nasal and site care, teach the patient and document",
           "cjmm": "Evaluate outcomes",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m16",
           "type": "sata",
-          "stem": "A nurse prepares to hang a new container of formula for a client, 63 years old, who receives continuous feeding through a gastrostomy tube by pump. Which actions are appropriate? Select all that apply.",
+          "stem": "The nurse prepares to hang a new container of formula for a continuous gastrostomy tube feeding by pump. Which actions are appropriate? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -29960,7 +30052,8 @@
           "caseStep": 1,
           "objective": "Administer feedings, formula, water flushes and medications safely",
           "cjmm": "Generate solutions",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m13",
@@ -30122,7 +30215,7 @@
         {
           "id": "en-m15",
           "type": "multiple_choice",
-          "stem": "A client, 63 years old, receives continuous feeding through a gastrostomy tube. At 1400 the pump alarms for an occlusion. Placement was checked at 1200, and the external mark matches the documented length. When the nurse tries to flush with 30 mL of water, the plunger meets resistance. Which action should the nurse take?",
+          "stem": "During a continuous gastrostomy tube feeding, the pump alarms for an occlusion, and a 30 mL water flush meets resistance. Which action should the nurse take?",
           "options": [
             {
               "id": "A",
@@ -30186,7 +30279,8 @@
           "caseStep": 4,
           "objective": "Administer feedings, formula, water flushes and medications safely",
           "cjmm": "Take action",
-          "addedBatch": 10
+          "addedBatch": 10,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m17",
@@ -30258,7 +30352,7 @@
         {
           "id": "en-m18",
           "type": "sata",
-          "stem": "A client, 76 years old, lives alone and is seen at a community clinic. Weight is 55.0 kg now, was 56.0 kg 6 months ago. Which findings place the client at risk for undernutrition? Select all that apply.",
+          "stem": "The nurse assesses a client, 76 years old, who lives alone. Which findings place the client at risk for undernutrition? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -30340,7 +30434,8 @@
           "objective": "Compare enteral and parenteral nutrition and identify who needs enteral feeding",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m19",
@@ -30416,7 +30511,7 @@
         {
           "id": "en-m20",
           "type": "sata",
-          "stem": "A client, 71 years old, with dysphagia after a stroke has a new gastrostomy tube. The first intermittent feeding is prescribed for 1200. Which actions does the nurse take before starting the feeding? Select all that apply.",
+          "stem": "A client with dysphagia has a new gastrostomy tube. Which actions does the nurse take before starting the first intermittent feeding? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -30498,7 +30593,8 @@
           "objective": "Assess the patient before feeding and verify tube placement",
           "cjmm": "Recognize cues",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m21",
@@ -31132,7 +31228,7 @@
         {
           "id": "en-m29",
           "type": "multiple_choice",
-          "stem": "A client, 68 years old, with cancer of the tongue has received feedings through a new gastrostomy tube for 1 week. During an evening feeding the client says, \"Dinner was always our family time. Now I sit apart with a bag of formula. I do not feel part of the family anymore.\" Which response by the nurse is most appropriate?",
+          "stem": "A client who recently began gastrostomy tube feedings says, \"Dinner was always our family time. Now I sit apart with a bag of formula. I do not feel part of the family anymore.\" Which response by the nurse is most appropriate?",
           "options": [
             {
               "id": "A",
@@ -31197,12 +31293,13 @@
           "objective": "Provide oral, nasal and site care, teach the patient and document",
           "cjmm": "Take action",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         },
         {
           "id": "en-m30",
           "type": "sata",
-          "stem": "A nurse reviews the documentation and handoff report that a nursing student prepared after giving an intermittent feeding through a nasogastric tube to a client, 70 years old. Which entries are appropriate? Select all that apply.",
+          "stem": "The nurse reviews the documentation and handoff report a nursing student prepared after an intermittent feeding through a nasogastric tube. Which entries are appropriate? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -31283,7 +31380,8 @@
           "objective": "Provide oral, nasal and site care, teach the patient and document",
           "cjmm": "Evaluate outcomes",
           "new": true,
-          "addedBatch": 11
+          "addedBatch": 11,
+          "trimmedBatch": 12
         }
       ]
     }
@@ -31949,7 +32047,7 @@
         {
           "id": "sk-cardiac-m08",
           "type": "multiple_choice",
-          "stem": "A nurse is listening to the heart of a 76 year old client with heart failure. Respiratory rate is 14 breaths per minute, oxygen saturation is 97%, and the client reports no increased shortness of breath. At the 2nd intercostal space to the left of the sternum, the nurse hears the second heart sound as two close sounds when the client breathes in and as a single sound when the client breathes out. Which action does the nurse take?",
+          "stem": "At the 2nd intercostal space left of the sternum, a nurse auscultating a client with heart failure hears the second heart sound as two close sounds on inspiration and a single sound on expiration. Which action does the nurse take?",
           "options": [
             {
               "id": "A",
@@ -32011,7 +32109,8 @@
           },
           "caseGroup": "sk-cardiac-case3",
           "caseStep": 3,
-          "objective": "Identify how to undertake cardiac auscultation and what these sounds represent in relation to the cardiac cycle"
+          "objective": "Identify how to undertake cardiac auscultation and what these sounds represent in relation to the cardiac cycle",
+          "trimmedBatch": 12
         },
         {
           "id": "sk-cardiac-m10",
@@ -32233,7 +32332,7 @@
         {
           "id": "sk-cardiac-m12",
           "type": "sata",
-          "stem": "A client with chest pain rated 7 of 10 has a 12 lead ECG recorded. While the nurse reports the chest pain, a clinician competent in ECG interpretation reviews the trace with the nurse. Which findings involve the area of the heart supplied by the left anterior descending artery? Select all that apply.",
+          "stem": "A clinician competent in ECG interpretation reviews the 12 lead ECG of a client with chest pain with the nurse. Which findings involve the area of the heart supplied by the left anterior descending artery? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -32308,12 +32407,13 @@
           "caseGroup": "sk-cardiac-case4",
           "caseStep": 4,
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
-          "addedBatch": 1
+          "addedBatch": 1,
+          "trimmedBatch": 12
         },
         {
           "id": "sk-cardiac-m09",
           "type": "multiple_choice",
-          "stem": "A nurse auscultates the heart of an adult client lying back with the diaphragm of the stethoscope. The apical pulse is 74 beats per minute and regular. The nurse identifies the \"lub\" sound. Which statement about this sound is accurate?",
+          "stem": "A nurse auscultating an adult client's heart identifies the \"lub\" sound. Which statement about this sound is accurate?",
           "options": [
             {
               "id": "A",
@@ -32372,12 +32472,13 @@
           "caseGroup": "sk-cardiac-case5",
           "caseStep": 1,
           "objective": "Identify how to undertake cardiac auscultation and what these sounds represent in relation to the cardiac cycle",
-          "addedBatch": 1
+          "addedBatch": 1,
+          "trimmedBatch": 12
         },
         {
           "id": "sk-cardiac-m13",
           "type": "sata",
-          "stem": "A 12 lead ECG is ordered for an adult client whose left radial pulse is 112 beats per minute and irregular. The client is awake, able to answer questions, and has not had an ECG before. Which actions does the nurse take while preparing the client and placing the electrodes? Select all that apply.",
+          "stem": "A 12 lead ECG is ordered for an adult client who is awake, able to answer questions, and has not had an ECG before. Which actions does the nurse take while preparing the client and placing the electrodes? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -32456,12 +32557,13 @@
           "caseGroup": "sk-cardiac-case6",
           "caseStep": 1,
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
-          "addedBatch": 2
+          "addedBatch": 2,
+          "trimmedBatch": 12
         },
         {
           "id": "sk-cardiac-m14",
           "type": "multiple_choice",
-          "stem": "A nurse reviews the lead II rhythm strip of an adult client with a regular heart rate of 78 beats per minute. Each QRS complex points upward from the baseline. Which interpretation by the nurse is accurate?",
+          "stem": "On a lead II rhythm strip, each QRS complex points upward from the baseline. Which interpretation by the nurse is accurate?",
           "options": [
             {
               "id": "A",
@@ -32520,12 +32622,13 @@
           "caseGroup": "sk-cardiac-case6",
           "caseStep": 2,
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
-          "addedBatch": 2
+          "addedBatch": 2,
+          "trimmedBatch": 12
         },
         {
           "id": "sk-cardiac-m15",
           "type": "sata",
-          "stem": "A nurse auscultates the heart of an adult client lying back. The apical pulse is 72 beats per minute and regular. The nurse hears a long, loud first sound followed by a short, sharp second sound at each beat. Which statements about diastole are accurate? Select all that apply.",
+          "stem": "While auscultating the heart, a nurse hears a long, loud first sound followed by a short, sharp second sound at each beat. Which statements about diastole are accurate? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -32600,7 +32703,8 @@
           "caseGroup": "sk-cardiac-case7",
           "caseStep": 1,
           "objective": "Identify how to undertake cardiac auscultation and what these sounds represent in relation to the cardiac cycle",
-          "addedBatch": 2
+          "addedBatch": 2,
+          "trimmedBatch": 12
         },
         {
           "id": "sk-cardiac-x04",
@@ -33338,7 +33442,7 @@
         {
           "id": "sk-infusion-m06",
           "type": "sata",
-          "stem": "A nurse is teaching a client who is going home with a PICC in the left arm. The client's temperature at discharge is 36.8 °C. Which statements by the client show correct understanding? Select all that apply.",
+          "stem": "A nurse is teaching a client who is going home with a PICC in the left arm. Which statements by the client show correct understanding? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -33416,7 +33520,8 @@
           },
           "caseGroup": "sk-infusion-case4",
           "caseStep": 1,
-          "objective": "Vascular Access Devices"
+          "objective": "Vascular Access Devices",
+          "trimmedBatch": 12
         },
         {
           "id": "sk-infusion-m07",
