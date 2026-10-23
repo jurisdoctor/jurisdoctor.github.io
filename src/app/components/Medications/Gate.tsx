@@ -1,9 +1,11 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { ReactNode, useEffect, useRef, useState } from "react";
 
 const KEY = "meds:unlocked";
 const DIGEST =
   "86bd851d8cf0fb773bf3b5998fcdf4cff799973203169ad4d099ce4e1ab317ba";
+const LIMIT = 3;
 
 const SHAKE = [
   { transform: "translateX(0)" },
@@ -28,6 +30,7 @@ const Gate = ({ children }: { children: ReactNode }) => {
   const [word, setWord] = useState("");
   const [wrong, setWrong] = useState(0);
   const cardRef = useRef<HTMLFormElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     try {
@@ -48,8 +51,14 @@ const Gate = ({ children }: { children: ReactNode }) => {
       return;
     }
 
-    setWrong((count) => count + 1);
+    const missed = wrong + 1;
+    setWrong(missed);
     setWord("");
+
+    if (missed >= LIMIT) {
+      router.replace("/");
+      return;
+    }
 
     const card = cardRef.current;
     if (
@@ -62,6 +71,8 @@ const Gate = ({ children }: { children: ReactNode }) => {
 
   if (!ready) return null;
   if (open) return <>{children}</>;
+
+  const left = LIMIT - wrong;
 
   return (
     <section className="mx-auto flex min-h-screen max-w-[1080px] items-center justify-center px-10 md:px-6">
@@ -87,7 +98,7 @@ const Gate = ({ children }: { children: ReactNode }) => {
 
         {wrong > 0 && (
           <p className="mb-4 text-sm font-bold text-[var(--primary-color)]">
-            Not that one. Try again.
+            Not that one. {left} {left === 1 ? "try" : "tries"} left.
           </p>
         )}
 

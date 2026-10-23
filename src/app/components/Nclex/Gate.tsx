@@ -1,9 +1,11 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { ReactNode, useEffect, useRef, useState } from "react";
 
 const KEY = "nclex:unlocked";
 const DIGEST =
   "391a2c33f2f79913a980fb0c7096c94724886ce763096fbf277122637d15cba2";
+const LIMIT = 3;
 
 const SHAKE = [
   { transform: "translateX(0)" },
@@ -37,6 +39,7 @@ const Gate = ({
   const [word, setWord] = useState("");
   const [wrong, setWrong] = useState(0);
   const cardRef = useRef<HTMLFormElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     try {
@@ -57,8 +60,14 @@ const Gate = ({
       return;
     }
 
-    setWrong((count) => count + 1);
+    const missed = wrong + 1;
+    setWrong(missed);
     setWord("");
+
+    if (missed >= LIMIT) {
+      router.replace("/");
+      return;
+    }
 
     const card = cardRef.current;
     if (
@@ -71,6 +80,8 @@ const Gate = ({
 
   if (!ready) return null;
   if (open) return <>{children}</>;
+
+  const left = LIMIT - wrong;
 
   return (
     <section className="mx-auto flex min-h-screen max-w-[1080px] items-center justify-center px-10 md:px-6">
@@ -96,7 +107,7 @@ const Gate = ({
 
         {wrong > 0 && (
           <p className="mb-4 text-sm font-bold text-[var(--primary-color)]">
-            Not that one. Try again.
+            Not that one. {left} {left === 1 ? "try" : "tries"} left.
           </p>
         )}
 
