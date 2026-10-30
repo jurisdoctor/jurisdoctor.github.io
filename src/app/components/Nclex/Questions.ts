@@ -395,11 +395,31 @@ const clean = (question: QuestionType): QuestionType => ({
 });
 
 // A question's saved result is tied to what counts as correct, not to how it
-// is worded. Rewording a stem or options keeps progress; changing the type or
-// the answer key, or bumping `revision` in the data, resets it.
+// is worded or ordered. Rewording a stem or options, or reshuffling the
+// options of a drop-down or bow tie, keeps progress; changing the type, the
+// answer key, or bumping `revision` in the data, resets it.
+const keySignature = (question: QuestionType) => {
+  if (question.type === "cloze")
+    return question.blanks?.map(
+      (blank) => blank.options.filter((option) => option.correct).length,
+    );
+  if (question.type === "bowtie")
+    return Object.entries(question.pools ?? {})
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([key, pool]) => [
+        key,
+        pool.options.filter((option) => option.correct).length,
+      ]);
+  return question.answer;
+};
+
 const contentHashOf = (question: QuestionType) =>
   seedOf(
-    JSON.stringify([question.type, question.answer, question.revision ?? 0]),
+    JSON.stringify([
+      question.type,
+      keySignature(question),
+      question.revision ?? 0,
+    ]),
   ).toString(36);
 
 interface ExtraType extends QuestionType {
