@@ -26,6 +26,7 @@ import {
   ChapterType,
   DerivedBank,
   displayNumberOf,
+  isStory,
   labelOf,
   QuestionType,
 } from "./Questions";
@@ -217,7 +218,7 @@ const ExamView = ({
     Record<string, ResultType>
   >(`${set.scope}:results:v1:${exam}`, freshMarks, validMarks);
   const [hashes, setHashes, hashesReady] = useSaved<Record<string, string>>(
-    `${set.scope}:hashes:v1:${exam}`,
+    `${set.scope}:hashes:v2:${exam}`,
     freshHashes,
     validHashes,
   );
@@ -337,17 +338,29 @@ const ExamView = ({
 
     const target = pool[index];
     const story =
-      section !== "cases" && section !== "favorites" && target?.caseId
-        ? bank.Cases.find((entry) =>
-            entry.questions.some((step) => step.id === target.id),
-          )
+      section !== "cases" &&
+      section !== "favorites" &&
+      target &&
+      isStory(target)
+        ? groups
+            .flatMap((entry) => entry.questions)
+            .filter((step) => step.caseId === target.caseId)
+            .sort((a, b) => (a.caseStep ?? 0) - (b.caseStep ?? 0))
+            .map((step) => ({ ...step, ordinal: step.caseStep }))
         : undefined;
 
-    const run = story ? story.questions : pool;
+    const run = story ?? pool;
     const sequential =
-      section !== "favorites" && run.some((entry) => entry.caseId);
+      !!story ||
+      (section !== "favorites" &&
+        run.some((entry) => entry.caseId && !isStory(entry)));
     const resume = run.findIndex((entry) => results[entry.id] !== "solved");
-    const fallback = story ? 0 : index;
+    const fallback = story
+      ? Math.max(
+          0,
+          story.findIndex((step) => step.id === target?.id),
+        )
+      : index;
     const startAt = sequential && resume !== -1 ? resume : fallback;
 
     setDeck(run);

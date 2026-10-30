@@ -70,6 +70,7 @@ export interface QuestionType {
   id: string;
   ordinal?: number;
   contentHash?: string;
+  revision?: number;
   homeChapterId?: string;
   type?: string;
   new?: boolean;
@@ -92,6 +93,8 @@ export interface QuestionType {
   caseId?: string;
   caseTitle?: string;
   caseStep?: number;
+  caseGroup?: string;
+  tag?: string;
   caseSteps?: number;
   select?: number;
   constraint?: string;
@@ -391,24 +394,13 @@ const clean = (question: QuestionType): QuestionType => ({
   })),
 });
 
-const CONTENT_HASH_OMIT = new Set([
-  "id",
-  "ordinal",
-  "contentHash",
-  "new",
-  "dailySet",
-  "difficulty",
-  "homeChapterId",
-  "coverage",
-  "coverageDetail",
-]);
-
-const contentHashOf = (question: QuestionType) => {
-  const entries = Object.entries(question)
-    .filter(([key]) => !CONTENT_HASH_OMIT.has(key))
-    .sort(([a], [b]) => a.localeCompare(b));
-  return seedOf(JSON.stringify(entries)).toString(36);
-};
+// A question's saved result is tied to what counts as correct, not to how it
+// is worded. Rewording a stem or options keeps progress; changing the type or
+// the answer key, or bumping `revision` in the data, resets it.
+const contentHashOf = (question: QuestionType) =>
+  seedOf(
+    JSON.stringify([question.type, question.answer, question.revision ?? 0]),
+  ).toString(36);
 
 interface ExtraType extends QuestionType {
   chapter: string;
@@ -445,6 +437,37 @@ export interface DerivedBank {
 
 const isJudgment = (question: QuestionType) => /-cj\d+$/.test(question.id);
 
+export const isStory = (question: QuestionType) =>
+  question.tag === "case-study" && !!question.caseGroup;
+
+// Moves every unfolding case study to the end of its chapter, each case kept
+// together and in step order, and gives its steps the case fields the quiz
+// uses for the step header and for holding back the next step.
+const withStories = (questions: QuestionType[], title: string) => {
+  const stories = questions.filter(isStory);
+  const rest = questions.filter((question) => !isStory(question));
+  const order = Array.from(new Set(stories.map((step) => step.caseGroup)));
+  const sizes = stories.reduce(
+    (map, step) =>
+      map.set(step.caseGroup ?? "", (map.get(step.caseGroup ?? "") ?? 0) + 1),
+    new Map<string, number>(),
+  );
+  const sorted = [...stories].sort(
+    (a, b) =>
+      order.indexOf(a.caseGroup) - order.indexOf(b.caseGroup) ||
+      (a.caseStep ?? 0) - (b.caseStep ?? 0),
+  );
+  return [
+    ...rest,
+    ...sorted.map((step) => ({
+      ...step,
+      caseId: step.caseGroup,
+      caseTitle: title,
+      caseSteps: sizes.get(step.caseGroup ?? ""),
+    })),
+  ];
+};
+
 const caseKey = (question: QuestionType) =>
   /^ch(\d+)-/.exec(question.caseId ?? "")?.[1] ?? question.caseId ?? "";
 
@@ -480,13 +503,14 @@ export const buildBank = (
         members: entry.members,
         title: entry.title,
         subtitle: entry.subtitle,
-        questions: [...own, ...join]
-          .sort((a, b) => difficultRank(a) - difficultRank(b))
-          .map((question, index) => ({
-            ...question,
-            ordinal: index + 1,
-            contentHash: contentHashOf(question),
-          })),
+        questions: withStories(
+          [...own, ...join].sort((a, b) => difficultRank(a) - difficultRank(b)),
+          entry.title,
+        ).map((question, index) => ({
+          ...question,
+          ordinal: index + 1,
+          contentHash: contentHashOf(question),
+        })),
       };
     });
 
@@ -498,7 +522,8 @@ export const buildBank = (
   const readyForChapters: ChapterType[] = banked.map((chapter) => ({
     ...chapter,
     questions: chapter.questions.filter(
-      (question) => !question.caseId && !isJudgment(question),
+      (question) =>
+        (!question.caseId || isStory(question)) && !isJudgment(question),
     ),
   }));
 
@@ -525,7 +550,7 @@ export const buildBank = (
     const held = new Map<string, QuestionType[]>();
     banked.forEach((chapter) =>
       chapter.questions.forEach((question) => {
-        if (!question.caseId) return;
+        if (!question.caseId || isStory(question)) return;
         const bucket = held.get(question.caseId) ?? [];
         bucket.push(question);
         held.set(question.caseId, bucket);

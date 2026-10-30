@@ -4,7 +4,12 @@ import { PiCaretDownBold, PiStar, PiStarFill } from "react-icons/pi";
 import Flash from "./Flash";
 import Glow from "./Glow";
 import { flameHueAt } from "./FlamePalette";
-import { ChapterType, displayNumberOf, QuestionType } from "./Questions";
+import {
+  ChapterType,
+  displayNumberOf,
+  isStory,
+  QuestionType,
+} from "./Questions";
 
 export type PickType = string;
 export type LensType = "all" | "incomplete";
@@ -427,7 +432,10 @@ const ChapterSet = ({
             const wet = progress.solved + progress.missed > 0;
             const fresh = chapter.questions.some(
               (question) =>
-                (question.new || question.dailySet) && !results[question.id],
+                (question.new ||
+                  question.dailySet ||
+                  question.tag === "review") &&
+                !results[question.id],
             );
             return (
               <button
@@ -522,6 +530,7 @@ const ChapterSet = ({
             {shown.questions.map((question, index) => {
               const state = results[question.id];
               const here = current === question.id;
+              const glitching = question.tag === "review" && !state;
               return (
                 <button
                   key={question.id}
@@ -530,6 +539,8 @@ const ChapterSet = ({
                   aria-current={here}
                   onClick={() => onStart(shown.id, index)}
                   className={`relative h-9 rounded-lg text-xs font-bold duration-300 ${
+                    glitching ? "tile-glitch" : ""
+                  } ${
                     here
                       ? "ring-2 ring-[var(--primary-color)] ring-offset-2 ring-offset-[var(--container-color)]"
                       : ""
@@ -541,17 +552,28 @@ const ChapterSet = ({
                         : "bg-[var(--body-color)] text-[var(--muted-color)] hover:bg-[var(--chip-blue)] hover:text-[var(--title-color)]"
                   }`}
                 >
-                  {(question.new || question.dailySet) && !state && (
-                    <Glow label="New question" hue={hueOf(shown.id)} />
-                  )}
-                  {question.difficulty === "difficult" && (
+                  {(question.new || question.dailySet || glitching) &&
+                    !state && (
+                      <Glow label="New question" hue={hueOf(shown.id)} />
+                    )}
+                  {isStory(question) ? (
                     <span
-                      aria-label="Difficult question"
-                      title="Difficult question"
+                      aria-label="Case study"
+                      title="Case study"
                       className="pointer-events-none absolute -right-1 -top-1 text-[11px] leading-none"
                     >
-                      💀
+                      ⭐
                     </span>
+                  ) : (
+                    question.difficulty === "difficult" && (
+                      <span
+                        aria-label="Difficult question"
+                        title="Difficult question"
+                        className="pointer-events-none absolute -right-1 -top-1 text-[11px] leading-none"
+                      >
+                        💀
+                      </span>
+                    )
                   )}
                   {starred?.[question.id] && (
                     <PiStarFill
