@@ -5,8 +5,8 @@
     "schemaVersion": 3,
     "set": "Exam 3",
     "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30, 32, 45, 58 and 59, Potter chapter 46, Enteral Nutrition, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 16): per section 4 regular items in the instructor's short style and 2 hard items in long NCLEX format, each with a \"cjmm\" field. NGN style items are kept near 15% of each section. An independent NCLEX accuracy review fixed flagged items (reviewedBatch 18). All text says \"patient\", never \"client\". Batch 18 adds 4 NCLEX style items per section (now ordinary regular or hard items) and a \"tag\" field \"case-study\" (one unfolding 6 item case per section; show its items in caseStep order within the caseGroup). Case study items are counted apart from the standalone 15% NGN share. Bowtie pools and cloze blanks are shuffled so correct choices are spread across positions.",
-    "questionCount": 702,
-    "chapterQuestionCount": 625,
+    "questionCount": 729,
+    "chapterQuestionCount": 644,
     "skillCount": 2,
     "chaptersIncluded": [
       1016,
@@ -31,10 +31,10 @@
       "skills"
     ],
     "questionTypes": {
-      "multiple_choice": 432,
+      "multiple_choice": 454,
       "highlight": 30,
       "matrix": 55,
-      "sata": 132,
+      "sata": 137,
       "ordered_response": 8,
       "cloze": 27,
       "bowtie": 18
@@ -146,7 +146,7 @@
           1,
           2
         ],
-        "questionCount": 702
+        "questionCount": 729
       }
     ],
     "chapterGroups": [
@@ -233,7 +233,7 @@
       "questionIds": [],
       "caseStudyIds": []
     },
-    "difficultCount": 260,
+    "difficultCount": 264,
     "difficultIds": [
       "ig16-x01",
       "ig16-m06",
@@ -326,6 +326,7 @@
       "ig29-k03",
       "ig29-k05",
       "ig29-k06",
+      "ig29-j01",
       "ig30-x01",
       "ig30-x02",
       "ig30-m09",
@@ -369,6 +370,7 @@
       "ig31-k03",
       "ig31-k05",
       "ig31-k06",
+      "ig31-j01",
       "ig32-x03",
       "ig32-x02",
       "ig32-x01",
@@ -452,6 +454,7 @@
       "ig45-k03",
       "ig45-k05",
       "ig45-k06",
+      "ig45-j06",
       "en-x01",
       "en-x02",
       "en-x04",
@@ -494,7 +497,8 @@
       "sk-infusion-r04",
       "sk-infusion-k03",
       "sk-infusion-k05",
-      "sk-infusion-k06"
+      "sk-infusion-k06",
+      "sk-infusion-j04"
     ],
     "nclexCount": 138,
     "nclexIds": [
@@ -638,118 +642,35 @@
       "sk-infusion-k06"
     ],
     "newIds": [
-      "ig16-r01",
-      "ig16-r02",
-      "ig19-r01",
-      "ig19-r02",
-      "ig19-k01",
-      "ig19-k02",
-      "ig19-k03",
-      "ig19-k04",
-      "ig19-k05",
-      "ig19-k06",
-      "ig27-r01",
-      "ig27-r02",
-      "ig27-r03",
-      "ig27-r04",
-      "ig27-k01",
-      "ig27-k02",
-      "ig27-k03",
-      "ig27-k04",
-      "ig27-k05",
-      "ig27-k06",
-      "ig29-r01",
-      "ig29-k01",
-      "ig29-k02",
-      "ig29-k03",
-      "ig29-k04",
-      "ig29-k05",
-      "ig29-k06",
-      "ig30-r01",
-      "ig31-r01",
-      "ig31-r02",
-      "ig31-r03",
-      "ig31-r04",
-      "ig31-k01",
-      "ig31-k02",
-      "ig31-k03",
-      "ig31-k04",
-      "ig31-k05",
-      "ig31-k06",
-      "ig32-r01",
-      "ig32-r02",
-      "p46-r01",
-      "p46-r02",
-      "p46-r03",
-      "p46-r04",
-      "p46-k01",
-      "p46-k02",
-      "p46-k03",
-      "p46-k04",
-      "p46-k05",
-      "p46-k06",
-      "ig58-r01",
-      "ig58-r02",
-      "ig58-r03",
-      "ig58-r04",
-      "ig58-k01",
-      "ig58-k02",
-      "ig58-k03",
-      "ig58-k04",
-      "ig58-k05",
-      "ig58-k06",
-      "ig59-r01",
-      "ig59-r02",
-      "ig59-r03",
-      "ig59-r04",
-      "ig59-k01",
-      "ig59-k02",
-      "ig59-k03",
-      "ig59-k04",
-      "ig59-k05",
-      "ig59-k06",
-      "ig45-r01",
-      "ig45-r02",
-      "ig45-r03",
-      "ig45-r04",
-      "ig45-k01",
-      "ig45-k02",
-      "ig45-k03",
-      "ig45-k04",
-      "ig45-k05",
-      "ig45-k06",
-      "en-r01",
-      "en-r02",
-      "en-r03",
-      "en-r04",
-      "en-k01",
-      "en-k02",
-      "en-k03",
-      "en-k04",
-      "en-k05",
-      "en-k06",
-      "sk-cardiac-r01",
-      "sk-cardiac-r02",
-      "sk-cardiac-r03",
-      "sk-cardiac-r04",
-      "sk-cardiac-k01",
-      "sk-cardiac-k02",
-      "sk-cardiac-k03",
-      "sk-cardiac-k04",
-      "sk-cardiac-k05",
-      "sk-cardiac-k06",
-      "sk-infusion-r01",
-      "sk-infusion-r02",
-      "sk-infusion-r03",
-      "sk-infusion-r04",
-      "sk-infusion-k01",
-      "sk-infusion-k02",
-      "sk-infusion-k03",
-      "sk-infusion-k04",
-      "sk-infusion-k05",
-      "sk-infusion-k06"
+      "ig16-j01",
+      "ig29-j01",
+      "ig29-j02",
+      "ig30-j01",
+      "ig30-j02",
+      "ig31-j01",
+      "ig31-j02",
+      "p46-j01",
+      "ig45-j01",
+      "ig45-j02",
+      "ig45-j03",
+      "ig45-j04",
+      "ig45-j05",
+      "ig45-j06",
+      "en-j01",
+      "en-j02",
+      "en-j03",
+      "en-j04",
+      "en-j05",
+      "sk-infusion-j01",
+      "sk-infusion-j02",
+      "sk-infusion-j03",
+      "sk-infusion-j04",
+      "sk-infusion-j05",
+      "sk-infusion-j06",
+      "sk-infusion-j07",
+      "sk-infusion-j08"
     ],
-    "newCount": 110,
+    "newCount": 27,
     "ngnIds": [
       "ig16-m02",
       "ig16-m07",
@@ -967,8 +888,38 @@
       "sk-infusion-k06"
     ],
     "tags": {
-      "case-study": "unfolding case study, 6 items per section in caseStep order (same caseGroup)"
-    }
+      "case-study": "unfolding case study, 6 items per section in caseStep order (same caseGroup)",
+      "jeopardy": "application items built on the Exam 3 class review game concepts"
+    },
+    "jeopardyIds": [
+      "ig16-j01",
+      "ig29-j01",
+      "ig29-j02",
+      "ig30-j01",
+      "ig30-j02",
+      "ig31-j01",
+      "ig31-j02",
+      "p46-j01",
+      "ig45-j01",
+      "ig45-j02",
+      "ig45-j03",
+      "ig45-j04",
+      "ig45-j05",
+      "ig45-j06",
+      "en-j01",
+      "en-j02",
+      "en-j03",
+      "en-j04",
+      "en-j05",
+      "sk-infusion-j01",
+      "sk-infusion-j02",
+      "sk-infusion-j03",
+      "sk-infusion-j04",
+      "sk-infusion-j05",
+      "sk-infusion-j06",
+      "sk-infusion-j07",
+      "sk-infusion-j08"
+    ]
   },
   "chapters": [
     {
@@ -4425,7 +4376,6 @@
           "caseStep": 1,
           "objective": "Compare innate and adaptive immunity",
           "cjmm": "Analyze cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -4498,8 +4448,93 @@
           "caseStep": 2,
           "objective": "Describe the three stages of the inflammatory response",
           "cjmm": "Take action",
-          "new": true,
           "addedBatch": 18
+        },
+        {
+          "id": "ig16-j01",
+          "type": "sata",
+          "stem": "The nurse is reviewing the history of a patient admitted with a respiratory infection. Which findings show a weakened innate, nonspecific defense? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Takes a daily medicine that lowers stomach acid",
+              "correct": true,
+              "rationale": "Stomach acid is a nonspecific chemical barrier that kills many swallowed organisms. Lowering it lets more organisms survive into the intestine, so this is a weakened innate defense."
+            },
+            {
+              "id": "B",
+              "text": "Has an open skin tear from a fall",
+              "correct": true,
+              "rationale": "Intact skin is the body's best barrier. A break in the skin is a gap in innate defense and a portal of entry for any organism, not one specific germ."
+            },
+            {
+              "id": "C",
+              "text": "Has not had a tetanus booster in 15 years",
+              "correct": false,
+              "rationale": "Fading protection after a vaccine is a loss of adaptive memory for one specific antigen. It does not weaken the immediate, nonspecific defenses."
+            },
+            {
+              "id": "D",
+              "text": "Has dry, cracked lips and mouth",
+              "correct": true,
+              "rationale": "Moist, intact mucous membranes are part of innate immunity. Cracks in the lining open a path for organisms regardless of type."
+            },
+            {
+              "id": "E",
+              "text": "Received immune globulin last month",
+              "correct": false,
+              "rationale": "Immune globulin gives borrowed antibodies, which is passive adaptive protection. It adds short term protection and does not weaken innate defense."
+            },
+            {
+              "id": "F",
+              "text": "Has never had measles or the measles vaccine",
+              "correct": false,
+              "rationale": "Having no measles memory is a gap in adaptive immunity for one specific disease. The patient's barriers and inflammatory response are not affected."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D"
+          ],
+          "takeaway": "Innate immunity is present at birth and acts right away against anything: intact skin, moist mucous membranes, stomach acid, and inflammation. Adaptive immunity is specific and needs exposure or a vaccine. A break in a barrier or less stomach acid weakens innate defense; a missing or faded vaccine is an adaptive gap.",
+          "coverage": "Topic covered in Lecture PPT. The skin and mucous membrane barriers are covered in Reading (Iggy); the role of stomach acid is standard NCLEX teaching.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy",
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Sort each finding by asking one question: does it affect defense against one named germ (adaptive), or against any germ at the door (innate)?",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the innate barriers",
+                "detail": "Skin, mucous membranes, stomach acid, inflammation."
+              },
+              {
+                "action": "Find the breaches",
+                "detail": "Less stomach acid, a skin tear, cracked oral lining."
+              },
+              {
+                "action": "Set aside adaptive gaps",
+                "detail": "A faded tetanus booster, immune globulin and no measles memory concern specific antigens."
+              }
+            ],
+            "verdict": "A, B, D."
+          },
+          "caseGroup": "ig16-jeop19",
+          "caseStep": 1,
+          "objective": "Compare innate and adaptive immunity",
+          "cjmm": "Recognize cues",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
         }
       ]
     },
@@ -7531,7 +7566,6 @@
           "caseStep": 1,
           "objective": "Differentiate inflammation from infection",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -7600,7 +7634,6 @@
           "caseStep": 2,
           "objective": "Connect immune responses with nursing assessment",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -7692,7 +7725,6 @@
           "objective": "Connect immune responses with nursing assessment",
           "cjmm": "Recognize cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -7777,7 +7809,6 @@
           "objective": "Differentiate inflammation from infection",
           "cjmm": "Analyze cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -7914,7 +7945,6 @@
           "cjmm": "Prioritize hypotheses",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -8000,7 +8030,6 @@
           "objective": "Connect immune responses with nursing assessment",
           "cjmm": "Generate solutions",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -8071,7 +8100,6 @@
           "objective": "Connect immune responses with nursing assessment",
           "cjmm": "Take action",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -8166,7 +8194,6 @@
           "cjmm": "Evaluate outcomes",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         }
       ]
@@ -13136,7 +13163,6 @@
           "caseStep": 1,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -13205,7 +13231,6 @@
           "caseStep": 2,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Analyze cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -13275,7 +13300,6 @@
           "caseStep": 3,
           "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -13343,7 +13367,6 @@
           "caseStep": 4,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Take action",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -13475,7 +13498,6 @@
           "cjmm": "Recognize cues",
           "difficulty": "difficult",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -13611,7 +13633,6 @@
           "objective": "Explain cardiac output, stroke volume, preload, afterload, and mean arterial pressure.",
           "cjmm": "Analyze cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -13684,7 +13705,6 @@
           "objective": "Explain cardiac output, stroke volume, preload, afterload, and mean arterial pressure.",
           "cjmm": "Prioritize hypotheses",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -13776,7 +13796,6 @@
           "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
           "cjmm": "Generate solutions",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -13862,7 +13881,6 @@
           "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
           "cjmm": "Take action",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -13961,7 +13979,6 @@
           "cjmm": "Evaluate outcomes",
           "difficulty": "difficult",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         }
       ]
@@ -16686,7 +16703,6 @@
           "caseStep": 3,
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
           "cjmm": "Take action",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -16838,7 +16854,6 @@
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
           "cjmm": "Recognize cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -16930,7 +16945,6 @@
           "objective": "Differentiate left and right sided heart failure and identify their key clinical findings.",
           "cjmm": "Analyze cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -17053,7 +17067,6 @@
           "cjmm": "Prioritize hypotheses",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -17141,7 +17154,6 @@
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
           "cjmm": "Generate solutions",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -17311,7 +17323,6 @@
           "cjmm": "Take action",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -17404,8 +17415,178 @@
           "cjmm": "Evaluate outcomes",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
+        },
+        {
+          "id": "ig29-j01",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "The nurse is caring for an older adult with heart failure who is receiving IV fluids for poor oral intake. Overnight the patient gained 2 kg, became short of breath lying flat, and developed new crackles in both lungs. Oral temperature is 36.9 °C. The patient is still drinking very little. Which interpretation by the nurse is most accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ongoing dehydration from poor oral intake",
+              "correct": false,
+              "rationale": "Poor oral intake is the tempting cue, but intake includes the IV fluids. A 2 kg gain overnight, orthopnea and new crackles show too much fluid, not too little."
+            },
+            {
+              "id": "B",
+              "text": "Aspiration pneumonia from poor swallowing",
+              "correct": false,
+              "rationale": "New crackles can come from pneumonia, but the normal temperature, the sudden weight gain and breathlessness only when lying flat point to fluid, not infection."
+            },
+            {
+              "id": "C",
+              "text": "Right sided failure with fluid in the tissues",
+              "correct": false,
+              "rationale": "Right sided failure backs fluid into the body (edema, neck veins, liver). Crackles and shortness of breath lying flat are lung findings, which point to fluid backing into the lungs."
+            },
+            {
+              "id": "D",
+              "text": "Fluid overload from the IV fluid volume",
+              "correct": true,
+              "rationale": "A gain of 2 kg overnight is about 2 L of retained fluid. In an older adult with heart failure, the heart and kidneys cannot handle a steady IV volume, so fluid backs into the lungs, causing orthopnea and crackles. Low oral intake does not rule this out."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Count every source of intake. A sudden weight gain, orthopnea and new crackles in an older adult with heart failure on IV fluids mean fluid overload, even when the patient drinks very little.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Weigh the trap (drinking very little) against the cues that decide: a sudden weight gain is fluid, and crackles with orthopnea put that fluid in the lungs.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Odd man wins"
+            ],
+            "steps": [
+              {
+                "action": "Find the trap",
+                "detail": "Drinking very little tempts a dehydration answer, but IV fluid is intake too."
+              },
+              {
+                "action": "Read the weight",
+                "detail": "2 kg overnight is about 2 L of fluid."
+              },
+              {
+                "action": "Rule out infection",
+                "detail": "Normal temperature and a sudden fluid pattern argue against pneumonia."
+              },
+              {
+                "action": "Place the fluid",
+                "detail": "Orthopnea and crackles are lung findings, not right sided ones."
+              },
+              {
+                "action": "Name the problem",
+                "detail": "Fluid overload from the IV fluids."
+              }
+            ],
+            "verdict": "D. Fluid overload from IV fluids the heart cannot handle."
+          },
+          "caseGroup": "ig29-jeop19",
+          "caseStep": 1,
+          "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
+          "cjmm": "Analyze cues",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "ig29-j02",
+          "type": "sata",
+          "stem": "An older adult with heart failure receiving IV fluids has gained 2 kg overnight and has new crackles in both lungs. Which actions should the nurse take? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Slow the IV infusion to a keep vein open rate",
+              "correct": true,
+              "rationale": "Slowing the infusion stops adding volume the heart cannot handle while keeping the line open for prescribed drugs, such as a diuretic."
+            },
+            {
+              "id": "B",
+              "text": "Place the patient in high Fowler's position",
+              "correct": true,
+              "rationale": "Sitting upright with the legs down lowers venous return to the heart and eases breathing."
+            },
+            {
+              "id": "C",
+              "text": "Assess lung sounds and oxygen saturation",
+              "correct": true,
+              "rationale": "Lung sounds and oxygen saturation show how much fluid is in the lungs and whether gas exchange is getting worse."
+            },
+            {
+              "id": "D",
+              "text": "Encourage oral fluids to replace poor intake",
+              "correct": false,
+              "rationale": "More fluid by any route adds to the overload. Low oral intake is not the problem now."
+            },
+            {
+              "id": "E",
+              "text": "Lower the head of the bed so the patient can rest",
+              "correct": false,
+              "rationale": "Lying flat returns more blood to the heart and lungs and worsens breathlessness."
+            },
+            {
+              "id": "F",
+              "text": "Notify the provider of the findings",
+              "correct": true,
+              "rationale": "The provider needs to know about the overload to change the IV prescription and add treatment such as a diuretic."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "F"
+          ],
+          "takeaway": "When fluid overload develops during an IV infusion, slow the infusion, sit the patient upright, assess the lungs and oxygen saturation, and notify the provider.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Ask whether each action removes, stops or adds fluid, and whether it helps or hinders breathing.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Stop adding volume",
+                "detail": "Slow the IV infusion."
+              },
+              {
+                "action": "Ease breathing",
+                "detail": "High Fowler's position; never lay the patient flat."
+              },
+              {
+                "action": "Assess",
+                "detail": "Lung sounds and oxygen saturation."
+              },
+              {
+                "action": "Report",
+                "detail": "Notify the provider for prescription changes."
+              },
+              {
+                "action": "Eliminate fluid gain",
+                "detail": "Oral fluids add to the overload."
+              }
+            ],
+            "verdict": "A, B, C, F."
+          },
+          "caseGroup": "ig29-jeop19",
+          "caseStep": 2,
+          "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
         }
       ]
     },
@@ -20374,8 +20555,153 @@
           "caseStep": 1,
           "objective": "Describe lifestyle changes and common medication classes used to manage hypertension.",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
+        },
+        {
+          "id": "ig30-j01",
+          "type": "multiple_choice",
+          "stem": "At a clinic visit, a patient's repeat blood pressure is 185/90 mm Hg. Which action should the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the next antihypertensive dose early",
+              "correct": false,
+              "rationale": "Giving a drug early is an intervention without a prescription, and it skips the assessment that tells the nurse how urgent this reading is."
+            },
+            {
+              "id": "B",
+              "text": "Ask about headache, vision change and chest pain",
+              "correct": true,
+              "rationale": "A systolic pressure above 180 mm Hg is severe hypertension. The nurse first assesses for signs of target organ damage (severe headache, blurred vision, chest pain, dyspnea, neurologic change). Those findings decide whether this is a hypertensive crisis that needs emergency care."
+            },
+            {
+              "id": "C",
+              "text": "Teach the patient to limit sodium and alcohol intake",
+              "correct": false,
+              "rationale": "Lifestyle teaching is part of the long term plan, but it is not the first step with a reading this high. Assessment for organ damage comes first."
+            },
+            {
+              "id": "D",
+              "text": "Schedule a recheck at next month's visit",
+              "correct": false,
+              "rationale": "Waiting a month ignores a severely high reading that may already be harming the brain, heart or kidneys."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "A very high reading calls for assessment before anything else: ask about headache, vision change, chest pain, dyspnea and neurologic change to find out whether organs are being harmed.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "With a high number, the first move is to find out whether it is causing harm. Look for the option that assesses symptoms of organ damage.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Spot the cue",
+                "detail": "Systolic 185 mm Hg is severe hypertension."
+              },
+              {
+                "action": "Eliminate the intervention",
+                "detail": "Giving a dose early is acting before assessing."
+              },
+              {
+                "action": "Eliminate the long term step",
+                "detail": "Diet teaching is true but not first."
+              },
+              {
+                "action": "Eliminate the delay",
+                "detail": "A month is too long to wait."
+              }
+            ],
+            "verdict": "B. Assess for signs of target organ damage."
+          },
+          "caseGroup": "ig30-jeop19",
+          "caseStep": 1,
+          "objective": "Recognize common manifestations, complications, and priority nursing assessments for hypertension.",
+          "cjmm": "Recognize cues",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "ig30-j02",
+          "type": "multiple_choice",
+          "stem": "An older adult with repeat readings of 168/72 mm Hg says, \"My heart scan showed no plaque, so my arteries must be healthy.\" Which response by the nurse is most appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Then this reading is most likely from the stress of the visit.\"",
+              "correct": false,
+              "rationale": "The readings are repeated, so stress at one visit does not explain them. This response also dismisses a finding that needs treatment."
+            },
+            {
+              "id": "B",
+              "text": "\"Then the top number is normal for your age group.\"",
+              "correct": false,
+              "rationale": "A high systolic pressure is common with age but is never normal. It raises the risk of stroke and heart failure and still needs treatment."
+            },
+            {
+              "id": "C",
+              "text": "\"Artery walls can stiffen without plaque and raise pressure.\"",
+              "correct": true,
+              "rationale": "Arteriosclerosis is thickening, hardening and loss of elasticity of the artery wall, often with aging, and it can happen with or without plaque. Stiff arteries cannot stretch with each beat, so the top number rises and the bottom number may stay low. Atherosclerosis, the plaque form, is only one type."
+            },
+            {
+              "id": "D",
+              "text": "\"Plaque usually follows, so you may need a stent soon.\"",
+              "correct": false,
+              "rationale": "A stent opens a narrowed artery. With no plaque on the scan there is no narrowing to open, and stiffness is not treated with a stent."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Arteriosclerosis is hardening and loss of elasticity of the artery wall with or without plaque. Atherosclerosis is the plaque type. Stiff arteries raise systolic pressure, and that still needs treatment.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "The patient's belief rests on a false link: no plaque means healthy arteries. Choose the response that corrects the belief and explains the high top number.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Eliminate options that deny patient feelings"
+            ],
+            "steps": [
+              {
+                "action": "Find the belief",
+                "detail": "No plaque is taken to mean healthy arteries."
+              },
+              {
+                "action": "Recall the difference",
+                "detail": "Arteriosclerosis can occur without plaque; atherosclerosis is the plaque type."
+              },
+              {
+                "action": "Eliminate the dismissals",
+                "detail": "Stress and age do not make a repeated high systolic reading acceptable."
+              },
+              {
+                "action": "Eliminate the wrong fix",
+                "detail": "A stent treats narrowing, not stiffness."
+              }
+            ],
+            "verdict": "C. Arteriosclerosis can stiffen arteries without plaque."
+          },
+          "caseGroup": "ig30-jeop19",
+          "caseStep": 2,
+          "objective": "Explain the basic mechanisms that regulate blood pressure and contribute to hypertension.",
+          "cjmm": "Analyze cues",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
         }
       ]
     },
@@ -25379,7 +25705,6 @@
           "caseStep": 1,
           "objective": "Recognize early cues of sepsis and septic shock",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -25448,7 +25773,6 @@
           "caseStep": 2,
           "objective": "Select standard and transmission based precautions",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -25515,7 +25839,6 @@
           "caseStep": 3,
           "objective": "Select standard and transmission based precautions",
           "cjmm": "Take action",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -25582,7 +25905,6 @@
           "caseStep": 4,
           "objective": "Explain the nurse's role in testing, treatment, and teaching",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -25707,7 +26029,6 @@
           "objective": "Recognize early cues of sepsis and septic shock",
           "cjmm": "Recognize cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -25825,7 +26146,6 @@
           "objective": "Recognize early cues of sepsis and septic shock",
           "cjmm": "Analyze cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -25898,7 +26218,6 @@
           "objective": "Recognize early cues of sepsis and septic shock",
           "cjmm": "Prioritize hypotheses",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -26004,7 +26323,6 @@
           "objective": "Describe immediate nursing actions when sepsis is suspected",
           "cjmm": "Generate solutions",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -26089,7 +26407,6 @@
           "cjmm": "Take action",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -26196,8 +26513,152 @@
           "cjmm": "Evaluate outcomes",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
+        },
+        {
+          "id": "ig31-j01",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "The nurse is reviewing four patients with sepsis. Each patient has received the full prescribed IV fluid bolus, and no patient was receiving norepinephrine before the bolus. Which patient should the nurse recognize as being in septic shock?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mean arterial pressure 72 mm Hg on no drug, lactate 3.4 mmol/L",
+              "correct": false,
+              "rationale": "The lactate is high, which is tempting, but the pressure holds without any drug after fluids. This is sepsis with poor tissue perfusion that still needs close monitoring, not septic shock, because no vasopressor is needed."
+            },
+            {
+              "id": "B",
+              "text": "Norepinephrine keeps mean arterial pressure at 66 mm Hg, lactate 1.5 mmol/L",
+              "correct": false,
+              "rationale": "The patient needs a vasopressor, so this patient is critically ill, but the lactate is not above 2 mmol/L. Septic shock requires both cues together: a vasopressor to hold the mean arterial pressure at 65 mm Hg or more after fluids, and a lactate above 2 mmol/L."
+            },
+            {
+              "id": "C",
+              "text": "Norepinephrine keeps mean arterial pressure at 67 mm Hg, lactate 3.1 mmol/L",
+              "correct": true,
+              "rationale": "After adequate fluids, this patient still needs a vasopressor to hold the mean arterial pressure at 65 mm Hg or more, and the lactate is above 2 mmol/L. Both cues together define septic shock: the circulation and the cells are failing despite fluid."
+            },
+            {
+              "id": "D",
+              "text": "Mean arterial pressure 60 mm Hg before the bolus and 74 mm Hg after, lactate 2.8 mmol/L",
+              "correct": false,
+              "rationale": "The low starting pressure is the trap. The pressure rose to a safe level with fluid alone, so no vasopressor is needed. This patient responded to fluids and does not meet septic shock, though the high lactate still needs follow up."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Septic shock is sepsis in which, after adequate fluid resuscitation, a vasopressor is still needed to keep the mean arterial pressure at 65 mm Hg or more AND the lactate stays above 2 mmol/L. One cue alone is not enough; the low pressure must persist after fluids.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Every patient has one alarming number. Check each option for both cues at once: a vasopressor needed after fluids, and a lactate above 2 mmol/L. Only one patient has both.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Set the two criteria",
+                "detail": "Vasopressor needed after fluids to hold mean arterial pressure at 65 mm Hg or more, plus lactate above 2 mmol/L."
+              },
+              {
+                "action": "Test A and D",
+                "detail": "No vasopressor: pressure holds on fluid alone, even though lactate is high."
+              },
+              {
+                "action": "Compare B and C",
+                "detail": "Both need norepinephrine; only C has a lactate above 2 mmol/L."
+              },
+              {
+                "action": "Choose",
+                "detail": "C meets both criteria."
+              }
+            ],
+            "verdict": "C. Norepinephrine keeps mean arterial pressure at 67 mm Hg, lactate 3.1 mmol/L."
+          },
+          "caseGroup": "ig31-jeop19",
+          "caseStep": 1,
+          "objective": "Recognize early cues of sepsis and septic shock",
+          "cjmm": "Analyze cues",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "ig31-j02",
+          "type": "multiple_choice",
+          "stem": "The nurse is caring for a patient with septic shock who is receiving a norepinephrine infusion after fluid resuscitation. Which finding requires immediate follow up?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Heart rate 104/min, was 122/min",
+              "correct": false,
+              "rationale": "A falling heart rate shows the circulation is responding to treatment. It is monitored but is a sign of improvement."
+            },
+            {
+              "id": "B",
+              "text": "Urine output 45 mL in the past hour",
+              "correct": false,
+              "rationale": "This urine output shows the kidneys are being perfused. It is an expected sign that treatment is working."
+            },
+            {
+              "id": "C",
+              "text": "Oral temperature 38.2 °C, was 38.9 °C",
+              "correct": false,
+              "rationale": "The fever is easing. It needs continued monitoring, but it does not show that perfusion is failing."
+            },
+            {
+              "id": "D",
+              "text": "Mean arterial pressure 59 mm Hg",
+              "correct": true,
+              "rationale": "The goal in septic shock is a mean arterial pressure of at least 65 mm Hg. A pressure below the goal on a vasopressor means organs are not being perfused, so the nurse adjusts the infusion per protocol and reports it now."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "In septic shock the vasopressor is given to keep the mean arterial pressure at 65 mm Hg or more. A pressure below that goal is inadequate tissue perfusion and needs action now, even when other signs are improving.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Three findings are trending better. Ask which one shows the treatment goal is not being met.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Odd man wins"
+            ],
+            "steps": [
+              {
+                "action": "Name the goal",
+                "detail": "Mean arterial pressure at least 65 mm Hg on the vasopressor."
+              },
+              {
+                "action": "Check the trends",
+                "detail": "Heart rate, urine output and temperature are improving."
+              },
+              {
+                "action": "Choose",
+                "detail": "A mean arterial pressure of 59 mm Hg is below the goal."
+              }
+            ],
+            "verdict": "D. Mean arterial pressure 59 mm Hg."
+          },
+          "caseGroup": "ig31-jeop19",
+          "caseStep": 2,
+          "objective": "Recognize early cues of sepsis and septic shock",
+          "cjmm": "Evaluate outcomes",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
         }
       ]
     },
@@ -28733,7 +29194,6 @@
           "caseStep": 2,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -28806,7 +29266,6 @@
           "caseStep": 4,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "addedBatch": 18
         }
       ]
@@ -33010,7 +33469,6 @@
           "caseStep": 1,
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -33081,7 +33539,6 @@
           "caseStep": 2,
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Analyze cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -33147,7 +33604,6 @@
           "caseStep": 3,
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Take action",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -33218,7 +33674,6 @@
           "caseStep": 4,
           "objective": "Differentiate retention, infection, incontinence",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -33334,7 +33789,6 @@
           "objective": "Assess patterns & concerning changes",
           "cjmm": "Recognize cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -33473,7 +33927,6 @@
           "cjmm": "Analyze cues",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -33546,7 +33999,6 @@
           "objective": "Differentiate retention, infection, incontinence",
           "cjmm": "Prioritize hypotheses",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -33642,7 +34094,6 @@
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Generate solutions",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -33715,7 +34166,6 @@
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Take action",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -33811,8 +34261,81 @@
           "objective": "Evaluate nursing care outcomes",
           "cjmm": "Evaluate outcomes",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
+        },
+        {
+          "id": "p46-j01",
+          "type": "multiple_choice",
+          "stem": "A nursing student disconnected a patient's indwelling urinary catheter from the drainage tubing to collect a urine culture. Which action should the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Reconnect the tubing and monitor for fever and cloudy urine",
+              "correct": false,
+              "rationale": "Watching for infection accepts a contaminated system that can be corrected now. Once the closed system has been opened, bacteria may already be inside the catheter lumen, so reconnecting it does not remove the risk."
+            },
+            {
+              "id": "B",
+              "text": "Wipe both ends with alcohol, then reconnect them",
+              "correct": false,
+              "rationale": "This is the tempting answer because it looks aseptic. Cleaning the outside of the connectors does not sterilize the inside of the catheter and tubing, which were open to the air, so the closed system is still broken."
+            },
+            {
+              "id": "C",
+              "text": "Send the urine that dripped out for culture, then reconnect",
+              "correct": false,
+              "rationale": "Urine that dripped from an open catheter end is contaminated, so the culture result would be inaccurate. A culture comes from the sampling port of an intact system, and reconnecting leaves the break in place."
+            },
+            {
+              "id": "D",
+              "text": "Replace the catheter and drainage system per protocol",
+              "correct": true,
+              "rationale": "A break in the closed drainage system is an indication to replace the catheter and collecting system using aseptic technique and sterile equipment, following agency protocol or a provider prescription. The culture is then collected from the sampling port of the new, intact system."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "The closed drainage system is the main barrier against catheter associated urinary tract infection. If it is opened, the nurse replaces the catheter and drainage system aseptically per protocol, and the specimen comes from the sampling port of the new system, never from a disconnected end.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Potter).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Potter"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "The break has already happened, so the question is how to restore a sterile closed system. Any option that reconnects the opened parts keeps the contamination.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the problem",
+                "detail": "The closed drainage system was opened, so the inside of the catheter and tubing may be contaminated."
+              },
+              {
+                "action": "Reject reconnecting",
+                "detail": "Monitoring, alcohol wipes and sending the dripped urine all end with the opened parts reconnected."
+              },
+              {
+                "action": "Reject the specimen",
+                "detail": "Urine from an open catheter end gives an inaccurate culture."
+              },
+              {
+                "action": "Choose",
+                "detail": "Replace the catheter and drainage system aseptically per protocol, then collect from the sampling port."
+              }
+            ],
+            "verdict": "D. Replace the catheter and drainage system per protocol."
+          },
+          "caseGroup": "p46-jeop19",
+          "caseStep": 1,
+          "objective": "Describe specimen collection & catheter care",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
         }
       ]
     },
@@ -37016,7 +37539,6 @@
           "caseStep": 1,
           "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -37088,7 +37610,6 @@
           "caseStep": 2,
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
           "cjmm": "Analyze cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -37159,7 +37680,6 @@
           "caseStep": 3,
           "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -37241,7 +37761,6 @@
           "caseStep": 4,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -37351,7 +37870,6 @@
           "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings",
           "cjmm": "Recognize cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -37488,7 +38006,6 @@
           "cjmm": "Analyze cues",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -37647,7 +38164,6 @@
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
           "cjmm": "Prioritize hypotheses",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -37743,7 +38259,6 @@
           "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
           "cjmm": "Generate solutions",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -37816,7 +38331,6 @@
           "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
           "cjmm": "Take action",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -37911,7 +38425,6 @@
           "cjmm": "Evaluate outcomes",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         }
       ]
@@ -40589,7 +41102,6 @@
           "caseStep": 1,
           "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -40660,7 +41172,6 @@
           "caseStep": 2,
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis.",
           "cjmm": "Analyze cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -40730,7 +41241,6 @@
           "caseStep": 3,
           "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
           "cjmm": "Take action",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -40812,7 +41322,6 @@
           "caseStep": 4,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan.",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -40943,7 +41452,6 @@
           "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings.",
           "cjmm": "Recognize cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -41029,7 +41537,6 @@
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis.",
           "cjmm": "Analyze cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -41200,7 +41707,6 @@
           "cjmm": "Prioritize hypotheses",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -41306,7 +41812,6 @@
           "cjmm": "Generate solutions",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -41380,7 +41885,6 @@
           "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
           "cjmm": "Take action",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -41475,7 +41979,6 @@
           "cjmm": "Evaluate outcomes",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         }
       ]
@@ -46190,7 +46693,6 @@
           "caseStep": 1,
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -46262,7 +46764,6 @@
           "caseStep": 2,
           "objective": "Differentiate normal and abnormal GI assessment findings and identify findings that require further evaluation",
           "cjmm": "Analyze cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -46336,7 +46837,6 @@
           "caseStep": 3,
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Take action",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -46425,7 +46925,6 @@
           "caseStep": 4,
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -46554,7 +47053,6 @@
           "objective": "Obtain a focused GI health history, including nutritional habits, bowel patterns, and common GI symptoms",
           "cjmm": "Recognize cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -46724,7 +47222,6 @@
           "objective": "Obtain a focused GI health history, including nutritional habits, bowel patterns, and common GI symptoms",
           "cjmm": "Analyze cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -46890,7 +47387,6 @@
           "cjmm": "Prioritize hypotheses",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -46974,7 +47470,6 @@
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Generate solutions",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -47049,7 +47544,6 @@
           "objective": "Differentiate normal and abnormal GI assessment findings and identify findings that require further evaluation",
           "cjmm": "Take action",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -47144,8 +47638,464 @@
           "cjmm": "Evaluate outcomes",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
+        },
+        {
+          "id": "ig45-j01",
+          "type": "multiple_choice",
+          "stem": "The nurse is teaching a patient going home on oxycodone after surgery who reports hard stools and straining. Which statement by the patient indicates understanding?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"The constipation will stop once my body gets used to the pill.\"",
+              "correct": false,
+              "rationale": "This is the trap. Tolerance develops to many opioid effects, but not to slowed bowel motility, so constipation continues as long as the opioid is taken."
+            },
+            {
+              "id": "B",
+              "text": "\"I will take my laxative every day while I take the pain pill.\"",
+              "correct": true,
+              "rationale": "Opioids slow peristalsis, so stool stays in the colon longer and loses water. A bowel regimen taken daily for as long as the opioid is used prevents hard stools and impaction."
+            },
+            {
+              "id": "C",
+              "text": "\"I will skip the pain pill until I have a bowel movement.\"",
+              "correct": false,
+              "rationale": "Stopping the opioid leaves pain untreated and reduces mobility, which also slows the bowel. The constipation is managed alongside the pain medicine."
+            },
+            {
+              "id": "D",
+              "text": "\"I will drink less so the stool does not get loose.\"",
+              "correct": false,
+              "rationale": "Less fluid lets the colon absorb more water from slow moving stool, making it harder. Fluids are increased, not reduced."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Opioids slow peristalsis for as long as they are taken, so constipation does not wear off. Expect a bowel regimen with fluids and activity, not stopping the pain medicine.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Every wrong option sounds like a reasonable plan to the patient. Ask which one matches the mechanism: slowed peristalsis that persists with the drug.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false",
+              "Eliminate absolutes"
+            ],
+            "steps": [
+              {
+                "action": "Name the mechanism",
+                "detail": "Opioids slow the wave like movement of the intestines."
+              },
+              {
+                "action": "Spot the trap",
+                "detail": "No tolerance develops to opioid constipation, so it will not stop on its own."
+              },
+              {
+                "action": "Eliminate",
+                "detail": "Skipping pain medicine and cutting fluids both worsen the problem."
+              },
+              {
+                "action": "Choose",
+                "detail": "A daily laxative while taking the opioid."
+              }
+            ],
+            "verdict": "B. \"I will take my laxative every day while I take the pain pill.\""
+          },
+          "caseGroup": "ig45-jeop19",
+          "caseStep": 1,
+          "objective": "Describe age related changes in the GI system and their impact on digestion, absorption, and elimination",
+          "cjmm": "Evaluate outcomes",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "ig45-j02",
+          "type": "multiple_choice",
+          "stem": "Before light palpation, a patient with gastroenteritis reports cramping tenderness in the left lower quadrant. Which plan should the nurse use?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Palpate the left lower quadrant first",
+              "correct": false,
+              "rationale": "Starting at the tender area causes pain and guarding, and the tensed muscles make the rest of the examination unreliable."
+            },
+            {
+              "id": "B",
+              "text": "Use deep palpation over the tender area",
+              "correct": false,
+              "rationale": "Deep palpation is performed by the provider, not the nurse generalist, and pressing deeply on a tender area adds pain."
+            },
+            {
+              "id": "C",
+              "text": "Skip palpation of every quadrant",
+              "correct": false,
+              "rationale": "Light palpation is within the nurse's role and still needed. Mild cramping tenderness is not a reason to omit it."
+            },
+            {
+              "id": "D",
+              "text": "Palpate the left lower quadrant last",
+              "correct": true,
+              "rationale": "Areas of pain are assessed last and cautiously. Examining them earlier makes the patient tense the abdominal muscles, which hides findings in the other quadrants."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Palpate a painful or tender area last, gently, so guarding does not distort the rest of the examination.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "The side word decides the answer here: the tender quadrant is the one moved to the end.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the cue",
+                "detail": "Tenderness in one quadrant."
+              },
+              {
+                "action": "Apply the rule",
+                "detail": "Painful areas are palpated last."
+              },
+              {
+                "action": "Eliminate",
+                "detail": "First is the opposite; deep palpation is outside the nurse's role; skipping is not needed."
+              },
+              {
+                "action": "Choose",
+                "detail": "Palpate the left lower quadrant last."
+              }
+            ],
+            "verdict": "D. Palpate the left lower quadrant last."
+          },
+          "caseGroup": "ig45-jeop19",
+          "caseStep": 2,
+          "objective": "Demonstrate the correct sequence and techniques for abdominal assessment, including inspection, auscultation, percussion, and palpation",
+          "cjmm": "Generate solutions",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "ig45-j03",
+          "type": "multiple_choice",
+          "stem": "A patient in a shared room has had no bowel movement for 4 days and says, \"My roommate can see the commode.\" Which action should the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Provide privacy and time to use the toilet",
+              "correct": true,
+              "rationale": "Lack of privacy makes patients postpone defecation, and ignoring the urge leads to constipation. A private toilet or a closed curtain and door with uninterrupted time removes the cause the patient named."
+            },
+            {
+              "id": "B",
+              "text": "Request a stool softener from the provider",
+              "correct": false,
+              "rationale": "This treats the symptom while leaving the cause in place. The patient has told the nurse why the bowel movements are being put off."
+            },
+            {
+              "id": "C",
+              "text": "Encourage use of the commode as scheduled",
+              "correct": false,
+              "rationale": "Encouragement does not remove the embarrassment. The patient will keep postponing until privacy is provided."
+            },
+            {
+              "id": "D",
+              "text": "Teach the patient to increase dietary fiber",
+              "correct": false,
+              "rationale": "Fiber supports bowel elimination in general, but it does not address what this patient identified as the barrier."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Privacy is a basic condition for normal bowel elimination. When a patient names the barrier, fix the barrier before adding medications.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Two options are standard constipation care. Ask which one addresses the cause the patient just stated.",
+          "elimination": {
+            "strategies": [
+              "Odd man wins",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the cue",
+                "detail": "The roommate can see the commode."
+              },
+              {
+                "action": "Link it",
+                "detail": "Without privacy the patient postpones defecation, which leads to constipation."
+              },
+              {
+                "action": "Eliminate",
+                "detail": "A softener, encouragement and fiber leave the barrier in place."
+              },
+              {
+                "action": "Choose",
+                "detail": "Provide privacy and time to use the toilet."
+              }
+            ],
+            "verdict": "A. Provide privacy and time to use the toilet."
+          },
+          "caseGroup": "ig45-jeop19",
+          "caseStep": 3,
+          "objective": "Obtain a focused GI health history, including nutritional habits, bowel patterns, and common GI symptoms",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "ig45-j04",
+          "type": "sata",
+          "stem": "The nurse is assessing a patient who has had frequent watery stools for 2 days. Which findings indicate a fluid volume deficit? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Dry, sticky mucous membranes",
+              "correct": true,
+              "rationale": "Loss of body water from repeated watery stools dries the mucous membranes."
+            },
+            {
+              "id": "B",
+              "text": "Hyperactive bowel sounds",
+              "correct": false,
+              "rationale": "Increased bowel activity explains the diarrhea itself. It is not a sign of fluid loss."
+            },
+            {
+              "id": "C",
+              "text": "Dizziness when standing up",
+              "correct": true,
+              "rationale": "Reduced circulating volume lets blood pressure drop on standing, causing dizziness and a fall risk."
+            },
+            {
+              "id": "D",
+              "text": "Heart rate 118/min",
+              "correct": true,
+              "rationale": "The heart speeds up to keep cardiac output up when circulating volume falls."
+            },
+            {
+              "id": "E",
+              "text": "Cramping before each stool",
+              "correct": false,
+              "rationale": "Cramping comes with increased intestinal movement, not with a fluid deficit."
+            },
+            {
+              "id": "F",
+              "text": "Small amounts of dark amber urine",
+              "correct": true,
+              "rationale": "The kidneys conserve water when volume is low, producing a small amount of concentrated urine."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "D",
+            "F"
+          ],
+          "takeaway": "Diarrhea removes colonic water. Dry mucosa, dizziness on standing, tachycardia and concentrated urine mean the loss is now affecting circulating volume.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Sort each finding: does it describe the bowel (the cause) or the body's water status (the effect)?",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Bowel findings",
+                "detail": "Hyperactive sounds and cramping describe the diarrhea, not the deficit."
+              },
+              {
+                "action": "Volume findings",
+                "detail": "Dry mucosa, dizziness on standing, a fast heart rate and dark scant urine."
+              },
+              {
+                "action": "Select",
+                "detail": "A, C, D and F."
+              }
+            ],
+            "verdict": "A, C, D, F."
+          },
+          "caseGroup": "ig45-jeop19",
+          "caseStep": 4,
+          "objective": "Differentiate normal and abnormal GI assessment findings and identify findings that require further evaluation",
+          "cjmm": "Recognize cues",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "ig45-j05",
+          "type": "multiple_choice",
+          "stem": "A nursing student plans to teach a high fiber diet to a patient with vomiting, severe abdominal distention and no flatus since yesterday. Which response by the nurse is most appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Good plan. Teach extra water with the fiber too.\"",
+              "correct": false,
+              "rationale": "Fiber with water is correct teaching for simple constipation, which makes this tempting. These findings point to a blockage, where added bulk can worsen the obstruction."
+            },
+            {
+              "id": "B",
+              "text": "\"Start with a stool softener, then add the fiber.\"",
+              "correct": false,
+              "rationale": "This still treats the problem as constipation. Nothing should be pushed through a bowel that may be blocked until it is evaluated."
+            },
+            {
+              "id": "C",
+              "text": "\"These may be signs of a blockage. Report them.\"",
+              "correct": true,
+              "rationale": "Vomiting, severe distention and no flatus together suggest a bowel obstruction. The nurse considers obstruction first, holds oral intake changes, and reports the findings for evaluation."
+            },
+            {
+              "id": "D",
+              "text": "\"Wait to teach it until after the vomiting stops.\"",
+              "correct": false,
+              "rationale": "The timing is not the problem. Even after vomiting stops, fiber is unsafe until obstruction is ruled out."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Before any constipation remedy, rule out obstruction. Vomiting, marked distention and no flatus or stool point to a blockage, and fiber or laxatives can make it worse.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Three answers treat this as constipation. The cue that changes everything is no flatus with vomiting and severe distention.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention",
+              "Odd man wins"
+            ],
+            "steps": [
+              {
+                "action": "Cluster the cues",
+                "detail": "Vomiting, severe distention and no flatus."
+              },
+              {
+                "action": "Name the problem",
+                "detail": "A bowel obstruction, not simple constipation."
+              },
+              {
+                "action": "Eliminate",
+                "detail": "Fiber now, a softener first, or fiber later all assume constipation."
+              },
+              {
+                "action": "Choose",
+                "detail": "Report the signs of a possible blockage first."
+              }
+            ],
+            "verdict": "C. \"These may be signs of a blockage. Report them.\""
+          },
+          "caseGroup": "ig45-jeop19",
+          "caseStep": 5,
+          "objective": "Differentiate normal and abnormal GI assessment findings and identify findings that require further evaluation",
+          "cjmm": "Analyze cues",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "ig45-j06",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "The nurse is caring for an immobile patient who receives oxycodone every 4 hours for a spinal fracture. The last formed stool was 7 days ago. Today the patient has passed small amounts of liquid stool four times and reports constant rectal pressure. Oral temperature is 37.0 °C, and the patient has received no antibiotics. The patient asks for the loperamide prescribed as needed for diarrhea. Which action should the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the loperamide as prescribed",
+              "correct": false,
+              "rationale": "It is prescribed and the patient is asking for it, which makes it tempting. But the liquid stool is seeping around a hard mass, and an antidiarrheal slows the bowel further and worsens the impaction."
+            },
+            {
+              "id": "B",
+              "text": "Send a stool sample for Clostridioides difficile",
+              "correct": false,
+              "rationale": "Liquid stool in a hospitalized patient makes testing tempting, but there is no fever, no antibiotic exposure, and 7 days without formed stool with rectal pressure. Testing does not address the likely cause."
+            },
+            {
+              "id": "C",
+              "text": "Apply barrier cream and offer the bedpan often",
+              "correct": false,
+              "rationale": "Skin protection is good care for any leaking stool, but it is not the priority. It leaves the cause of the leakage untreated."
+            },
+            {
+              "id": "D",
+              "text": "Hold the loperamide and assess for impaction",
+              "correct": true,
+              "rationale": "An opioid, immobility, no formed stool for 7 days, rectal pressure and small liquid leaks fit fecal impaction. The nurse holds the antidiarrheal, assesses for a retained mass per policy and reports the findings."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Small, frequent liquid stools after days with no formed stool, in a patient on opioids who is immobile, mean fecal impaction until proven otherwise. An antidiarrheal makes impaction worse.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Three options treat the problem as diarrhea. Combine the cues: an opioid, immobility, a week without formed stool and rectal pressure.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Combine cues",
+                "detail": "Opioid plus immobility plus 7 days without formed stool plus rectal pressure."
+              },
+              {
+                "action": "Name the problem",
+                "detail": "Liquid stool leaking around a fecal impaction."
+              },
+              {
+                "action": "Weigh the near misses",
+                "detail": "Loperamide worsens it; the stool test fits infection, which the cues do not support; barrier cream is care, not the priority."
+              },
+              {
+                "action": "Choose",
+                "detail": "Hold the loperamide and assess for impaction."
+              }
+            ],
+            "verdict": "D. Hold the loperamide and assess for impaction."
+          },
+          "caseGroup": "ig45-jeop19",
+          "caseStep": 6,
+          "objective": "Describe age related changes in the GI system and their impact on digestion, absorption, and elimination",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
         }
       ]
     },
@@ -51260,7 +52210,6 @@
           "caseStep": 1,
           "objective": "Monitor feeding tolerance and respond to complications",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -51332,7 +52281,6 @@
           "caseStep": 2,
           "objective": "Administer feedings, formula, water flushes and medications safely",
           "cjmm": "Analyze cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -51403,7 +52351,6 @@
           "caseStep": 3,
           "objective": "Administer feedings, formula, water flushes and medications safely",
           "cjmm": "Take action",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -51474,7 +52421,6 @@
           "caseStep": 4,
           "objective": "Provide oral, nasal and site care, teach the patient and document",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -51592,7 +52538,6 @@
           "objective": "Monitor feeding tolerance and respond to complications",
           "cjmm": "Recognize cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -51688,7 +52633,6 @@
           "objective": "Monitor feeding tolerance and respond to complications",
           "cjmm": "Analyze cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -51825,7 +52769,6 @@
           "cjmm": "Prioritize hypotheses",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -51909,7 +52852,6 @@
           "objective": "Monitor feeding tolerance and respond to complications",
           "cjmm": "Generate solutions",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -51982,7 +52924,6 @@
           "objective": "Monitor feeding tolerance and respond to complications",
           "cjmm": "Take action",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -52079,8 +53020,367 @@
           "cjmm": "Evaluate outcomes",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
+        },
+        {
+          "id": "en-j01",
+          "type": "multiple_choice",
+          "stem": "A patient receives continuous tube feeding prescribed at 60 mL/hour with 30 mL water flushes every 4 hours. The feeding ran for the full 8 hour shift. How much formula should the nurse record?",
+          "options": [
+            {
+              "id": "A",
+              "text": "420 mL",
+              "correct": false,
+              "rationale": "This counts only 7 hours of feeding. The feeding ran the full 8 hours."
+            },
+            {
+              "id": "B",
+              "text": "480 mL",
+              "correct": true,
+              "rationale": "60 mL/hour times 8 hours equals 480 mL of formula. Flushes are recorded as water intake, not as formula."
+            },
+            {
+              "id": "C",
+              "text": "510 mL",
+              "correct": false,
+              "rationale": "This adds one 30 mL flush to the formula. The question asks for formula only."
+            },
+            {
+              "id": "D",
+              "text": "540 mL",
+              "correct": false,
+              "rationale": "This adds two 30 mL flushes to the formula. Flushes are counted in total fluid intake but not in the formula volume."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Formula volume equals the rate times the hours it actually ran. Flushes count toward total fluid intake but are recorded separately from formula.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Multiply first, then check whether the question asks for formula or for total fluid.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Multiply",
+                "detail": "60 mL/hour times 8 hours equals 480 mL."
+              },
+              {
+                "action": "Check the question",
+                "detail": "Formula only, so flushes are left out."
+              },
+              {
+                "action": "Choose",
+                "detail": "480 mL."
+              }
+            ],
+            "verdict": "B. 480 mL."
+          },
+          "caseGroup": "en-jeop19",
+          "caseStep": 1,
+          "objective": "Administer feedings, formula, water flushes and medications safely",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "en-j02",
+          "type": "multiple_choice",
+          "stem": "The nurse is caring for a patient on continuous tube feeding whose sacral pressure injury has not healed in 4 weeks. Which change to the feeding plan should the nurse anticipate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A formula lower in fat",
+              "correct": false,
+              "rationale": "Fat is a concentrated energy source. Cutting it reduces the calories needed to spare protein for healing."
+            },
+            {
+              "id": "B",
+              "text": "Smaller feedings given more often",
+              "correct": false,
+              "rationale": "This addresses tolerance, such as fullness or vomiting, which the patient does not have. It does not change the nutrients for healing."
+            },
+            {
+              "id": "C",
+              "text": "A formula higher in protein",
+              "correct": true,
+              "rationale": "Protein supplies the building blocks for new tissue and collagen. A wound that is not healing signals that protein intake needs to rise, with enough calories so protein is used for repair."
+            },
+            {
+              "id": "D",
+              "text": "Extra water flushes each shift",
+              "correct": false,
+              "rationale": "Hydration supports skin health, but water alone does not supply what tissue repair needs."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Poor wound healing is a sign of undernutrition. Protein is the nutrient most needed for tissue repair, so expect a higher protein formula.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Link the finding to the nutrient: a wound that will not heal needs material to build tissue.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Find the cue",
+                "detail": "A pressure injury not healing after 4 weeks."
+              },
+              {
+                "action": "Link it",
+                "detail": "Tissue repair depends on protein."
+              },
+              {
+                "action": "Eliminate",
+                "detail": "Less fat, smaller feedings and more water do not supply repair material."
+              },
+              {
+                "action": "Choose",
+                "detail": "A formula higher in protein."
+              }
+            ],
+            "verdict": "C. A formula higher in protein."
+          },
+          "caseGroup": "en-jeop19",
+          "caseStep": 2,
+          "objective": "Administer feedings, formula, water flushes and medications safely",
+          "cjmm": "Generate solutions",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "en-j03",
+          "type": "multiple_choice",
+          "stem": "A patient receives continuous tube feeding at 75 mL/hour with 30 mL water flushes every 4 hours. The feeding ran without pauses for 6 hours. How much formula should the nurse record?",
+          "options": [
+            {
+              "id": "A",
+              "text": "450 mL",
+              "correct": true,
+              "rationale": "75 mL/hour times 6 hours equals 450 mL of formula. Flushes are recorded as water intake, not as formula."
+            },
+            {
+              "id": "B",
+              "text": "480 mL",
+              "correct": false,
+              "rationale": "This adds one 30 mL flush to the formula. The question asks for formula only."
+            },
+            {
+              "id": "C",
+              "text": "510 mL",
+              "correct": false,
+              "rationale": "This adds two 30 mL flushes to the formula. Flushes count toward total fluid intake, not formula."
+            },
+            {
+              "id": "D",
+              "text": "525 mL",
+              "correct": false,
+              "rationale": "This counts 7 hours of feeding. The feeding ran for 6 hours."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Formula volume equals the rate times the hours it ran. Keep flushes out of the formula total and record them as water intake.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Multiply first, then make sure the answer contains only formula.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Multiply",
+                "detail": "75 mL/hour times 6 hours equals 450 mL."
+              },
+              {
+                "action": "Check the question",
+                "detail": "Formula only, so flushes are left out."
+              },
+              {
+                "action": "Choose",
+                "detail": "450 mL."
+              }
+            ],
+            "verdict": "A. 450 mL."
+          },
+          "caseGroup": "en-jeop19",
+          "caseStep": 3,
+          "objective": "Administer feedings, formula, water flushes and medications safely",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "en-j04",
+          "type": "sata",
+          "stem": "The nurse is observing a student give medications through a patient's gastrostomy tube during continuous feeding. Which actions by the student require the nurse to intervene? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Adds the crushed tablet to the formula bag",
+              "correct": true,
+              "rationale": "Medication added to formula can be incompatible with it, is delivered unpredictably over hours, and can clump and block the tube."
+            },
+            {
+              "id": "B",
+              "text": "Pauses the pump before the medication",
+              "correct": false,
+              "rationale": "Medications are given separately from formula, so the feeding is paused first. This is correct."
+            },
+            {
+              "id": "C",
+              "text": "Mixes two crushed tablets in one cup",
+              "correct": true,
+              "rationale": "Each medication is given separately with a flush between, so drugs do not interact or clog the tube."
+            },
+            {
+              "id": "D",
+              "text": "Flushes with water before the medication",
+              "correct": false,
+              "rationale": "A flush before medications clears formula from the tube. This is correct."
+            },
+            {
+              "id": "E",
+              "text": "Crushes an extended release tablet",
+              "correct": true,
+              "rationale": "Crushing destroys the release mechanism, so the whole dose is absorbed at once (dose dumping). The student should hold it and ask the pharmacist for another form."
+            },
+            {
+              "id": "F",
+              "text": "Restarts the feeding after a final flush",
+              "correct": false,
+              "rationale": "A final flush clears the last medication, and the feeding then resumes as ordered. This is correct."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "E"
+          ],
+          "takeaway": "Never add medications to the formula. Pause the feeding, give each appropriate medication separately with flushes, and never crush extended release forms.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Read each action as correct or incorrect against one rule: medications go in separately, never through the formula, and only in forms safe to crush.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Correct steps",
+                "detail": "Pausing the pump, flushing before and restarting after a final flush."
+              },
+              {
+                "action": "Errors",
+                "detail": "Adding medication to formula, mixing tablets together and crushing an extended release tablet."
+              },
+              {
+                "action": "Select",
+                "detail": "A, C and E."
+              }
+            ],
+            "verdict": "A, C, E."
+          },
+          "caseGroup": "en-jeop19",
+          "caseStep": 4,
+          "objective": "Administer feedings, formula, water flushes and medications safely",
+          "cjmm": "Evaluate outcomes",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "en-j05",
+          "type": "multiple_choice",
+          "stem": "A water flush through a patient's gastrostomy tube meets resistance. Which action should the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Check the tubing for a kink or closed clamp",
+              "correct": true,
+              "rationale": "A simple mechanical cause is ruled out before treating the tube as clogged. Straightening a kink or opening a clamp may restore flow without any force."
+            },
+            {
+              "id": "B",
+              "text": "Flush with more force using a small syringe",
+              "correct": false,
+              "rationale": "A tube is never forced. A small syringe creates high pressure that can rupture the tube."
+            },
+            {
+              "id": "C",
+              "text": "Instill cola to dissolve the clog",
+              "correct": false,
+              "rationale": "Carbonated drinks and juice are avoided for clogs because they can make formula clump and worsen the blockage."
+            },
+            {
+              "id": "D",
+              "text": "Notify the provider to replace the tube",
+              "correct": false,
+              "rationale": "Replacement may be needed later, but it is premature before the nurse checks the external tubing and tries gentle water flushing."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "When a flush meets resistance, look first for a kink or a closed clamp in the external tubing. Then try gentle water flushing, never force, and follow policy if it stays blocked.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Assess before you intervene: the simplest external cause is checked before anything is pushed into the tube.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention",
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Assess first",
+                "detail": "Resistance may come from the tubing, not a clog inside the tube."
+              },
+              {
+                "action": "Eliminate",
+                "detail": "Force and cola are unsafe; replacement is premature."
+              },
+              {
+                "action": "Choose",
+                "detail": "Check the tubing for a kink or closed clamp."
+              }
+            ],
+            "verdict": "A. Check the tubing for a kink or closed clamp."
+          },
+          "caseGroup": "en-jeop19",
+          "caseStep": 5,
+          "objective": "Monitor feeding tolerance and respond to complications",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
         }
       ]
     }
@@ -53592,7 +54892,6 @@
           "caseStep": 1,
           "objective": "Interpret the findings from a patient assessment to identify the priorities for planning care",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -53660,7 +54959,6 @@
           "caseStep": 2,
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
           "cjmm": "Analyze cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -53728,7 +55026,6 @@
           "caseStep": 3,
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -53797,7 +55094,6 @@
           "caseStep": 4,
           "objective": "Consider when cardiac monitoring may be used for a patient and how the clinician might apply this",
           "cjmm": "Take action",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -53919,7 +55215,6 @@
           "objective": "Outline the location of different pulse points and the process for undertaking an accurate pulse assessment",
           "cjmm": "Recognize cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -54055,7 +55350,6 @@
           "objective": "Outline the location of different pulse points and the process for undertaking an accurate pulse assessment",
           "cjmm": "Analyze cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -54219,7 +55513,6 @@
           "cjmm": "Prioritize hypotheses",
           "difficulty": "difficult",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -54311,7 +55604,6 @@
           "objective": "Consider when cardiac monitoring may be used for a patient and how the clinician might apply this",
           "cjmm": "Generate solutions",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -54401,7 +55693,6 @@
           "cjmm": "Take action",
           "difficulty": "difficult",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -54493,7 +55784,6 @@
           "objective": "Interpret the findings from a patient assessment to identify the priorities for planning care",
           "cjmm": "Evaluate outcomes",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         }
       ]
@@ -57613,7 +58903,6 @@
           "caseStep": 1,
           "objective": "Recognize Complications",
           "cjmm": "Recognize cues",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -57680,7 +58969,6 @@
           "caseStep": 2,
           "objective": "Vascular Access Devices",
           "cjmm": "Take action",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -57762,7 +59050,6 @@
           "caseStep": 3,
           "objective": "RN Responsibility & Delegation",
           "cjmm": "Generate solutions",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -57834,7 +59121,6 @@
           "caseStep": 4,
           "objective": "Apply Clinical Judgment",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -57939,7 +59225,6 @@
           "objective": "Recognize Complications",
           "cjmm": "Recognize cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -58063,7 +59348,6 @@
           "objective": "Recognize Complications",
           "cjmm": "Analyze cues",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -58136,7 +59420,6 @@
           "objective": "Apply Clinical Judgment",
           "cjmm": "Prioritize hypotheses",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -58237,7 +59520,6 @@
           "objective": "Recognize Complications",
           "cjmm": "Generate solutions",
           "tag": "case-study",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -58328,7 +59610,6 @@
           "cjmm": "Take action",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
         },
         {
@@ -58428,8 +59709,597 @@
           "cjmm": "Evaluate outcomes",
           "tag": "case-study",
           "difficulty": "difficult",
-          "new": true,
           "addedBatch": 18
+        },
+        {
+          "id": "sk-infusion-j01",
+          "type": "multiple_choice",
+          "stem": "The nurse is hanging an IV piggyback antibiotic by gravity on a patient's running primary infusion. Which action allows the piggyback to infuse first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Clamp the primary tubing completely",
+              "correct": false,
+              "rationale": "With a back check valve on the primary line, the primary stops on its own while the piggyback runs and resumes when it empties. Clamping the primary means it will not restart, and the vein may clot off."
+            },
+            {
+              "id": "B",
+              "text": "Hang the piggyback higher than the primary",
+              "correct": true,
+              "rationale": "Gravity flow depends on height. The higher bag exerts more pressure, so the piggyback runs first and the primary resumes automatically when the piggyback is empty."
+            },
+            {
+              "id": "C",
+              "text": "Connect it to the port nearest the catheter",
+              "correct": false,
+              "rationale": "The piggyback connects to the upper port on the primary tubing, above the back check valve. The lower port bypasses the valve, so the two solutions would mix and run together."
+            },
+            {
+              "id": "D",
+              "text": "Open the primary roller clamp all the way",
+              "correct": false,
+              "rationale": "This would let the primary run wide open, which risks fluid overload, and does nothing to make the piggyback flow first."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "An IV piggyback is a secondary bag for an intermittent medication. By gravity, it runs first only when it hangs higher than the primary and is connected at the upper port above the back check valve.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Picture the physics: gravity flow goes to the bag with the most height.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the principle",
+                "detail": "Gravity drives flow, so the higher bag infuses first."
+              },
+              {
+                "action": "Eliminate the clamp",
+                "detail": "Clamping the primary keeps it from resuming afterward."
+              },
+              {
+                "action": "Eliminate the port",
+                "detail": "The lower port bypasses the back check valve."
+              },
+              {
+                "action": "Choose",
+                "detail": "Hang the piggyback higher than the primary."
+              }
+            ],
+            "verdict": "B. Hang the piggyback higher than the primary."
+          },
+          "caseGroup": "sk-infusion-jeop19",
+          "caseStep": 1,
+          "objective": "Safety Protocols",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "sk-infusion-j02",
+          "type": "sata",
+          "stem": "The nurse is preparing new primary tubing for a patient with a peripheral IV. Which actions are appropriate before connecting the tubing to the catheter? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Close the roller clamp before spiking the bag",
+              "correct": true,
+              "rationale": "A closed clamp keeps fluid from rushing through the tubing before the drip chamber is filled, so the nurse controls priming."
+            },
+            {
+              "id": "B",
+              "text": "Fill the drip chamber one third to one half full",
+              "correct": true,
+              "rationale": "A partly filled chamber lets the nurse see and count drops and keeps air from being pulled into the tubing."
+            },
+            {
+              "id": "C",
+              "text": "Run solution through until no air remains in the tubing",
+              "correct": true,
+              "rationale": "Priming fills the tubing with solution and removes air before connection, which prevents air from entering the vein."
+            },
+            {
+              "id": "D",
+              "text": "Fill the drip chamber completely",
+              "correct": false,
+              "rationale": "A full chamber hides the drops, so the rate cannot be counted or checked."
+            },
+            {
+              "id": "E",
+              "text": "Connect first, then flush the air into the vein",
+              "correct": false,
+              "rationale": "Air must be cleared before connection. Pushing air into the vein risks an air embolism."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C"
+          ],
+          "takeaway": "Priming means filling the IV tubing with solution and removing all air before it is connected to the patient. Close the clamp, spike, fill the chamber partway, then open the clamp and run fluid to the end of the tubing.",
+          "coverage": "Topic covered in the Infusion Therapy lecture slides. The detail tested is standard NCLEX teaching, not from the slides.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Every correct action keeps air out of the patient and keeps the drops visible.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Before spiking",
+                "detail": "The roller clamp is closed."
+              },
+              {
+                "action": "The chamber",
+                "detail": "One third to one half full, never full."
+              },
+              {
+                "action": "The tubing",
+                "detail": "Filled with solution and free of air before connection."
+              },
+              {
+                "action": "Reject",
+                "detail": "A full chamber and connecting before the air is cleared."
+              }
+            ],
+            "verdict": "A, B, C."
+          },
+          "caseGroup": "sk-infusion-jeop19",
+          "caseStep": 2,
+          "objective": "Safety Protocols",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "sk-infusion-j03",
+          "type": "multiple_choice",
+          "stem": "A patient has a prescription for 1,000 mL of 0.9% sodium chloride over 8 hours by infusion pump. At which rate should the nurse set the pump?",
+          "options": [
+            {
+              "id": "A",
+              "text": "83 mL/hr",
+              "correct": false,
+              "rationale": "This is 1,000 mL over 12 hours. It would underinfuse the prescribed volume."
+            },
+            {
+              "id": "B",
+              "text": "31 mL/hr",
+              "correct": false,
+              "rationale": "31 is the gravity drip rate in drops per minute with 15 drop tubing. A pump is set in mL per hour, so no drop factor is used."
+            },
+            {
+              "id": "C",
+              "text": "125 mL/hr",
+              "correct": true,
+              "rationale": "Pump rate in mL per hour equals total volume divided by hours: 1,000 mL divided by 8 hours equals 125 mL/hr."
+            },
+            {
+              "id": "D",
+              "text": "167 mL/hr",
+              "correct": false,
+              "rationale": "This is 1,000 mL over 6 hours. It would run the fluid too fast and risk fluid overload."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "An infusion pump is programmed in mL per hour: total volume divided by total hours. Drop factors apply only to gravity infusions.",
+          "coverage": "Topic covered in the Infusion Therapy lecture slides. The detail tested is standard NCLEX teaching, not from the slides.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Note the device first. A pump needs mL per hour, not drops per minute.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Identify the unit",
+                "detail": "Pump, so mL per hour."
+              },
+              {
+                "action": "Calculate",
+                "detail": "1,000 mL divided by 8 hours equals 125 mL/hr."
+              },
+              {
+                "action": "Name each distractor's error",
+                "detail": "83 and 167 use the wrong number of hours; 31 is a gravity drop rate."
+              },
+              {
+                "action": "Choose",
+                "detail": "125 mL/hr."
+              }
+            ],
+            "verdict": "C. 125 mL/hr."
+          },
+          "caseGroup": "sk-infusion-jeop19",
+          "caseStep": 3,
+          "objective": "Apply Clinical Judgment",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "sk-infusion-j04",
+          "type": "multiple_choice",
+          "difficulty": "difficult",
+          "stem": "The nurse programmed the pump for a secondary IV antibiotic 20 minutes ago. The secondary bag hangs above the primary, the tubing is attached at the upper port, and the pump shows the secondary rate running. The secondary bag is still full, and the primary bag has dropped by about 60 mL. Which action should the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Reprogram the secondary rate and volume on the pump",
+              "correct": false,
+              "rationale": "The programming is already correct, so entering it again changes nothing. Flow is coming from the primary, which points to a blockage on the secondary tubing."
+            },
+            {
+              "id": "B",
+              "text": "Lower the primary bag farther below it",
+              "correct": false,
+              "rationale": "The height difference is already in place. Lowering the primary more does not open a closed secondary line."
+            },
+            {
+              "id": "C",
+              "text": "Replace the secondary tubing and bag",
+              "correct": false,
+              "rationale": "New equipment wastes the dose and the tubing and does not address the likely cause. The nurse checks the simple mechanical cause first."
+            },
+            {
+              "id": "D",
+              "text": "Check that the secondary roller clamp is open",
+              "correct": true,
+              "rationale": "The pump is pulling fluid from the primary bag while the secondary stays full, so the secondary line is blocked. A closed roller clamp on the secondary tubing is the most common cause, and opening it starts the dose."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "When a secondary medication does not infuse despite correct programming, height and connection, check the secondary roller clamp. The primary bag dropping while the secondary stays full shows the pump is drawing from the primary instead.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Every option is something a nurse might do with a stalled piggyback. Combine the cues: the setup is correct, and the fluid is coming from the primary. Check the simplest closed point first.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Cue 1: the setup is correct",
+                "detail": "Programming, height and port are all right, so redoing any of them is not the answer."
+              },
+              {
+                "action": "Cue 2: the primary bag is dropping",
+                "detail": "The pump is running, but drawing from the primary because the secondary path is closed."
+              },
+              {
+                "action": "Eliminate",
+                "detail": "Reprogramming, lowering the primary and replacing equipment all skip the likely closed clamp."
+              },
+              {
+                "action": "Choose",
+                "detail": "Check that the secondary roller clamp is open."
+              }
+            ],
+            "verdict": "D. Check that the secondary roller clamp is open."
+          },
+          "caseGroup": "sk-infusion-jeop19",
+          "caseStep": 4,
+          "objective": "Apply Clinical Judgment",
+          "cjmm": "Analyze cues",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "sk-infusion-j05",
+          "type": "multiple_choice",
+          "stem": "The nurse watches a student scrub a needleless connector with alcohol for 15 seconds before an IV push. Which student action requires follow up?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Connects the syringe before the hub dries",
+              "correct": true,
+              "rationale": "The disinfectant must dry completely before access. Drying time is part of how alcohol kills organisms, and a wet hub can carry organisms into the line, raising the risk of a bloodstream infection."
+            },
+            {
+              "id": "B",
+              "text": "Uses a new alcohol pad for the scrub",
+              "correct": false,
+              "rationale": "A new pad is correct. Reusing a pad would recontaminate the hub."
+            },
+            {
+              "id": "C",
+              "text": "Scrubs the sides and top with friction",
+              "correct": false,
+              "rationale": "Friction on the top and threads mechanically removes organisms and is correct."
+            },
+            {
+              "id": "D",
+              "text": "Flushes the line with saline before the drug",
+              "correct": false,
+              "rationale": "Flushing before and after an IV push confirms patency and clears the line. This is correct."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Scrub the hub with friction for at least 15 seconds, then let it dry completely before accessing it. Do not blow on it, fan it or wipe it dry.",
+          "coverage": "Topic covered in the Infusion Therapy lecture slides. The detail tested is standard NCLEX teaching, not from the slides.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Three actions are correct steps. Find the step that was cut short.",
+          "elimination": {
+            "strategies": [
+              "Negative polarity",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Flip the question",
+                "detail": "Find the unsafe action."
+              },
+              {
+                "action": "Check each",
+                "detail": "A new pad, friction and a saline flush are all correct."
+              },
+              {
+                "action": "Spot the error",
+                "detail": "The hub was not allowed to dry before access."
+              },
+              {
+                "action": "Choose",
+                "detail": "Connects the syringe before the hub dries."
+              }
+            ],
+            "verdict": "A. Connects the syringe before the hub dries."
+          },
+          "caseGroup": "sk-infusion-jeop19",
+          "caseStep": 5,
+          "objective": "Safety Protocols",
+          "cjmm": "Evaluate outcomes",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "sk-infusion-j06",
+          "type": "multiple_choice",
+          "stem": "The nurse is giving an IV antibiotic in 100 mL of 0.9% sodium chloride, prescribed over 30 minutes by infusion pump. At which rate should the nurse set the pump?",
+          "options": [
+            {
+              "id": "A",
+              "text": "100 mL/hr",
+              "correct": false,
+              "rationale": "This runs the bag over 1 hour, twice the prescribed time."
+            },
+            {
+              "id": "B",
+              "text": "200 mL/hr",
+              "correct": true,
+              "rationale": "Pumps run in mL per hour. 100 mL in 30 minutes is 100 mL per half hour, so the hourly rate is 100 times 60 divided by 30, which equals 200 mL/hr."
+            },
+            {
+              "id": "C",
+              "text": "50 mL/hr",
+              "correct": false,
+              "rationale": "This halves the volume instead of converting the time. The bag would take 2 hours."
+            },
+            {
+              "id": "D",
+              "text": "300 mL/hr",
+              "correct": false,
+              "rationale": "This would finish the bag in 20 minutes, faster than prescribed, which raises the risk of speed shock."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "When the time is in minutes, convert to an hourly rate: volume times 60 divided by the minutes. 100 mL over 30 minutes is 200 mL/hr.",
+          "coverage": "Topic covered in the Infusion Therapy lecture slides. The detail tested is standard NCLEX teaching, not from the slides.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Ask how many mL would run in a full hour at this speed.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Convert the time",
+                "detail": "30 minutes is half an hour."
+              },
+              {
+                "action": "Calculate",
+                "detail": "100 mL times 60 divided by 30 equals 200 mL/hr."
+              },
+              {
+                "action": "Check",
+                "detail": "At 200 mL/hr, 100 mL takes 30 minutes."
+              },
+              {
+                "action": "Choose",
+                "detail": "200 mL/hr."
+              }
+            ],
+            "verdict": "B. 200 mL/hr."
+          },
+          "caseGroup": "sk-infusion-jeop19",
+          "caseStep": 6,
+          "objective": "Apply Clinical Judgment",
+          "cjmm": "Take action",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "sk-infusion-j07",
+          "type": "multiple_choice",
+          "stem": "The nurse is preparing to connect a secondary IV antibiotic to a patient's running primary infusion, which also contains a medication. Which action should the nurse take before connecting it?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Use the port closest to the catheter",
+              "correct": false,
+              "rationale": "The port does not prevent mixing. Both solutions meet in the tubing either way, and a piggyback belongs on the upper port."
+            },
+            {
+              "id": "B",
+              "text": "Watch the tubing for cloudiness after connecting",
+              "correct": false,
+              "rationale": "Cloudiness or crystals mean a reaction has already happened in the line. Many incompatibilities are not visible, so inspection does not replace checking first."
+            },
+            {
+              "id": "C",
+              "text": "Verify compatibility in an approved reference",
+              "correct": true,
+              "rationale": "Two drugs that meet in the same tubing can react, form a precipitate or lose effect. The nurse checks compatibility in an approved drug reference or with the pharmacist before connecting."
+            },
+            {
+              "id": "D",
+              "text": "Slow the primary rate during the dose",
+              "correct": false,
+              "rationale": "Slowing the primary does not keep the two solutions from mixing in the tubing."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Before running a secondary medication through tubing that already carries another medication or solution, verify compatibility with an approved reference or the pharmacist. If they are incompatible, use a separate line or flush between them as directed.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The question says before connecting. Choose the check that prevents the reaction, not one that finds it afterward.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the hazard",
+                "detail": "Two drugs in one tubing can react."
+              },
+              {
+                "action": "Find the safeguard",
+                "detail": "Check an approved reference or the pharmacist first."
+              },
+              {
+                "action": "Eliminate",
+                "detail": "Port choice and a slower rate do not stop mixing; watching for cloudiness is after the fact."
+              },
+              {
+                "action": "Choose",
+                "detail": "Verify compatibility in an approved reference."
+              }
+            ],
+            "verdict": "C. Verify compatibility in an approved reference."
+          },
+          "caseGroup": "sk-infusion-jeop19",
+          "caseStep": 7,
+          "objective": "Safety Protocols",
+          "cjmm": "Generate solutions",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
+        },
+        {
+          "id": "sk-infusion-j08",
+          "type": "multiple_choice",
+          "stem": "The pump alarms \"infusion complete\" for a patient's secondary IV antibiotic. The secondary bag is still full. Which action should the nurse take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hold charting and trace the secondary line",
+              "correct": true,
+              "rationale": "The pump timed out, but the full bag shows the drug never reached the patient. The nurse does not document the dose, finds the cause such as a closed clamp, and then completes the dose as prescribed."
+            },
+            {
+              "id": "B",
+              "text": "Chart the dose as given per the pump record",
+              "correct": false,
+              "rationale": "The pump only shows the programmed volume was counted, not that the medication was delivered. Charting it would record a dose the patient did not receive."
+            },
+            {
+              "id": "C",
+              "text": "Remove the bag and hang the next dose on time",
+              "correct": false,
+              "rationale": "This discards a dose that was never given and leaves the patient without the prescribed antibiotic."
+            },
+            {
+              "id": "D",
+              "text": "Restart the pump at the same rate and recheck later",
+              "correct": false,
+              "rationale": "Restarting without finding the cause will most likely give the same result, and the full bag still has not been explained."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Documentation reflects what the patient actually received. A pump reading of \"infusion complete\" does not confirm delivery; an empty secondary bag and a traced line do.",
+          "coverage": "Covered in the Infusion Therapy lecture slides.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The tempting answer trusts the machine. Look at the patient's bag instead.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Cue",
+                "detail": "The bag is full, so the medication was not delivered."
+              },
+              {
+                "action": "Principle",
+                "detail": "Chart only what the patient received."
+              },
+              {
+                "action": "Eliminate",
+                "detail": "Charting, discarding and restarting without a cause all skip the problem."
+              },
+              {
+                "action": "Choose",
+                "detail": "Hold charting and trace the secondary line."
+              }
+            ],
+            "verdict": "A. Hold charting and trace the secondary line."
+          },
+          "caseGroup": "sk-infusion-jeop19",
+          "caseStep": 8,
+          "objective": "Document Infusion Care",
+          "cjmm": "Evaluate outcomes",
+          "tag": "jeopardy",
+          "new": true,
+          "addedBatch": 19
         }
       ]
     }

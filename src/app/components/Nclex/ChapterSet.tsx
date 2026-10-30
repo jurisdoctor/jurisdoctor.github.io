@@ -434,7 +434,8 @@ const ChapterSet = ({
               (question) =>
                 (question.new ||
                   question.dailySet ||
-                  question.tag === "review") &&
+                  question.tag === "review" ||
+                  question.tag === "jeopardy") &&
                 !results[question.id],
             );
             return (
@@ -531,6 +532,7 @@ const ChapterSet = ({
               const state = results[question.id];
               const here = current === question.id;
               const glitching = question.tag === "review" && !state;
+              const playful = question.tag === "jeopardy" && !state;
               return (
                 <button
                   key={question.id}
@@ -552,7 +554,10 @@ const ChapterSet = ({
                         : "bg-[var(--body-color)] text-[var(--muted-color)] hover:bg-[var(--chip-blue)] hover:text-[var(--title-color)]"
                   }`}
                 >
-                  {(question.new || question.dailySet || glitching) &&
+                  {(question.new ||
+                    question.dailySet ||
+                    glitching ||
+                    playful) &&
                     !state && (
                       <Glow label="New question" hue={hueOf(shown.id)} />
                     )}
@@ -563,6 +568,14 @@ const ChapterSet = ({
                       className="pointer-events-none absolute -right-1 -top-1 text-[11px] leading-none"
                     >
                       ⭐
+                    </span>
+                  ) : question.tag === "jeopardy" ? (
+                    <span
+                      aria-label="Jeopardy question"
+                      title="Jeopardy question"
+                      className="pointer-events-none absolute -right-1 -top-1 text-[11px] leading-none"
+                    >
+                      🎮
                     </span>
                   ) : (
                     question.difficulty === "difficult" && (
