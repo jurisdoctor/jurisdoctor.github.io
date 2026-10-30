@@ -4,7 +4,7 @@
     "textbook": "Potter & Perry, Fundamentals of Nursing, 12th ed.",
     "schemaVersion": 3,
     "set": "Exam 3",
-    "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30, 32, 45, 58 and 59, Potter chapter 46, Enteral Nutrition, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 16): per section 4 regular items in the instructor's short style and 2 hard items in long NCLEX format, each with a \"cjmm\" field. NGN style items are kept near 15% of each section. An independent NCLEX accuracy review fixed flagged items (reviewedBatch 18). All text says \"patient\", never \"client\". Batch 18 adds a \"tag\" field: \"review\" (4 NCLEX style items per section) and \"case-study\" (one unfolding 6 item case per section; show its items in caseStep order within the caseGroup). Case study items are counted apart from the standalone 15% NGN share.",
+    "notes": "Exam 3 practice questions for Iggy chapters 16, 19, 31, 27, 29, 30, 32, 45, 58 and 59, Potter chapter 46, Enteral Nutrition, plus the Cardiac Assessment and Infusion Therapy skills. Built from the lecture PowerPoints and the skill course, with readings as support. Questions marked \"new\": true are the newest additions (addedBatch 16): per section 4 regular items in the instructor's short style and 2 hard items in long NCLEX format, each with a \"cjmm\" field. NGN style items are kept near 15% of each section. An independent NCLEX accuracy review fixed flagged items (reviewedBatch 18). All text says \"patient\", never \"client\". Batch 18 adds 4 NCLEX style items per section (now ordinary regular or hard items) and a \"tag\" field \"case-study\" (one unfolding 6 item case per section; show its items in caseStep order within the caseGroup). Case study items are counted apart from the standalone 15% NGN share.",
     "questionCount": 702,
     "chapterQuestionCount": 625,
     "skillCount": 2,
@@ -898,52 +898,6 @@
       "matrix",
       "ordered_response"
     ],
-    "reviewIds": [
-      "ig16-r01",
-      "ig16-r02",
-      "ig19-r01",
-      "ig19-r02",
-      "ig27-r01",
-      "ig27-r02",
-      "ig27-r03",
-      "ig27-r04",
-      "ig29-r01",
-      "ig30-r01",
-      "ig31-r01",
-      "ig31-r02",
-      "ig31-r03",
-      "ig31-r04",
-      "ig32-r01",
-      "ig32-r02",
-      "p46-r01",
-      "p46-r02",
-      "p46-r03",
-      "p46-r04",
-      "ig58-r01",
-      "ig58-r02",
-      "ig58-r03",
-      "ig58-r04",
-      "ig59-r01",
-      "ig59-r02",
-      "ig59-r03",
-      "ig59-r04",
-      "ig45-r01",
-      "ig45-r02",
-      "ig45-r03",
-      "ig45-r04",
-      "en-r01",
-      "en-r02",
-      "en-r03",
-      "en-r04",
-      "sk-cardiac-r01",
-      "sk-cardiac-r02",
-      "sk-cardiac-r03",
-      "sk-cardiac-r04",
-      "sk-infusion-r01",
-      "sk-infusion-r02",
-      "sk-infusion-r03",
-      "sk-infusion-r04"
-    ],
     "caseStudyIds": [
       "ig19-k01",
       "ig19-k02",
@@ -1013,7 +967,6 @@
       "sk-infusion-k06"
     ],
     "tags": {
-      "review": "review set for the class review session (4 per section)",
       "case-study": "unfolding case study, 6 items per section in caseStep order (same caseGroup)"
     }
   },
@@ -4472,7 +4425,6 @@
           "caseStep": 1,
           "objective": "Compare innate and adaptive immunity",
           "cjmm": "Analyze cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -4546,7 +4498,6 @@
           "caseStep": 2,
           "objective": "Describe the three stages of the inflammatory response",
           "cjmm": "Take action",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         }
@@ -7580,7 +7531,6 @@
           "caseStep": 1,
           "objective": "Differentiate inflammation from infection",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -7650,7 +7600,6 @@
           "caseStep": 2,
           "objective": "Connect immune responses with nursing assessment",
           "cjmm": "Evaluate outcomes",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -13187,7 +13136,6 @@
           "caseStep": 1,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -13257,7 +13205,6 @@
           "caseStep": 2,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Analyze cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -13328,7 +13275,6 @@
           "caseStep": 3,
           "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
           "cjmm": "Prioritize hypotheses",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -13397,7 +13343,6 @@
           "caseStep": 4,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Take action",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -16741,7 +16686,6 @@
           "caseStep": 3,
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
           "cjmm": "Take action",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -20430,7 +20374,6 @@
           "caseStep": 1,
           "objective": "Describe lifestyle changes and common medication classes used to manage hypertension.",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         }
@@ -25436,7 +25379,6 @@
           "caseStep": 1,
           "objective": "Recognize early cues of sepsis and septic shock",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -25506,7 +25448,6 @@
           "caseStep": 2,
           "objective": "Select standard and transmission based precautions",
           "cjmm": "Prioritize hypotheses",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -25574,7 +25515,6 @@
           "caseStep": 3,
           "objective": "Select standard and transmission based precautions",
           "cjmm": "Take action",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -25642,7 +25582,6 @@
           "caseStep": 4,
           "objective": "Explain the nurse's role in testing, treatment, and teaching",
           "cjmm": "Evaluate outcomes",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -28794,7 +28733,6 @@
           "caseStep": 2,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
           "cjmm": "Prioritize hypotheses",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -28868,7 +28806,6 @@
           "caseStep": 4,
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
           "cjmm": "Evaluate outcomes",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         }
@@ -33073,7 +33010,6 @@
           "caseStep": 1,
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -33145,7 +33081,6 @@
           "caseStep": 2,
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Analyze cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -33212,7 +33147,6 @@
           "caseStep": 3,
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Take action",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -33284,7 +33218,6 @@
           "caseStep": 4,
           "objective": "Differentiate retention, infection, incontinence",
           "cjmm": "Prioritize hypotheses",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -37083,7 +37016,6 @@
           "caseStep": 1,
           "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -37156,7 +37088,6 @@
           "caseStep": 2,
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis",
           "cjmm": "Analyze cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -37228,7 +37159,6 @@
           "caseStep": 3,
           "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
           "cjmm": "Prioritize hypotheses",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -37311,7 +37241,6 @@
           "caseStep": 4,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan",
           "cjmm": "Evaluate outcomes",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -40660,7 +40589,6 @@
           "caseStep": 1,
           "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -40732,7 +40660,6 @@
           "caseStep": 2,
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis.",
           "cjmm": "Analyze cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -40803,7 +40730,6 @@
           "caseStep": 3,
           "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
           "cjmm": "Take action",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -40886,7 +40812,6 @@
           "caseStep": 4,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan.",
           "cjmm": "Evaluate outcomes",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -46265,7 +46190,6 @@
           "caseStep": 1,
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -46338,7 +46262,6 @@
           "caseStep": 2,
           "objective": "Differentiate normal and abnormal GI assessment findings and identify findings that require further evaluation",
           "cjmm": "Analyze cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -46413,7 +46336,6 @@
           "caseStep": 3,
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Take action",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -46503,7 +46425,6 @@
           "caseStep": 4,
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Evaluate outcomes",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -51339,7 +51260,6 @@
           "caseStep": 1,
           "objective": "Monitor feeding tolerance and respond to complications",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -51412,7 +51332,6 @@
           "caseStep": 2,
           "objective": "Administer feedings, formula, water flushes and medications safely",
           "cjmm": "Analyze cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -51484,7 +51403,6 @@
           "caseStep": 3,
           "objective": "Administer feedings, formula, water flushes and medications safely",
           "cjmm": "Take action",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -51556,7 +51474,6 @@
           "caseStep": 4,
           "objective": "Provide oral, nasal and site care, teach the patient and document",
           "cjmm": "Evaluate outcomes",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -53675,7 +53592,6 @@
           "caseStep": 1,
           "objective": "Interpret the findings from a patient assessment to identify the priorities for planning care",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -53744,7 +53660,6 @@
           "caseStep": 2,
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
           "cjmm": "Analyze cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -53813,7 +53728,6 @@
           "caseStep": 3,
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
           "cjmm": "Prioritize hypotheses",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -53883,7 +53797,6 @@
           "caseStep": 4,
           "objective": "Consider when cardiac monitoring may be used for a patient and how the clinician might apply this",
           "cjmm": "Take action",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -57700,7 +57613,6 @@
           "caseStep": 1,
           "objective": "Recognize Complications",
           "cjmm": "Recognize cues",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -57768,7 +57680,6 @@
           "caseStep": 2,
           "objective": "Vascular Access Devices",
           "cjmm": "Take action",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -57851,7 +57762,6 @@
           "caseStep": 3,
           "objective": "RN Responsibility & Delegation",
           "cjmm": "Generate solutions",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
@@ -57924,7 +57834,6 @@
           "caseStep": 4,
           "objective": "Apply Clinical Judgment",
           "cjmm": "Evaluate outcomes",
-          "tag": "review",
           "new": true,
           "addedBatch": 18
         },
