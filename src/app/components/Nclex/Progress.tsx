@@ -290,7 +290,7 @@ const Progress = ({
     return (
       <div className="mb-8 mt-4 rounded-2xl bg-[var(--container-color)] p-7 text-center">
         <p className="mb-1 text-lg font-bold text-[var(--title-color)]">
-          Nothing to show yet.
+          nothing to show yet
         </p>
         <p className="text-[var(--muted-color)]">
           Answer a few questions in Chapters or Skills and this page will track
@@ -461,7 +461,7 @@ const Progress = ({
           <div>
             <h3 className={heading}>By chapter</h3>
             <p className="text-sm text-[var(--muted-color)]">
-              Green is correct, the accent colour is missed, grey is untried.
+              green is correct, the accent colour is missed, grey is untried
             </p>
           </div>
         </div>
@@ -485,7 +485,7 @@ const Progress = ({
       <div className="grid grid-cols-2 gap-5 md:grid-cols-1">
         <div className={card}>
           <h3 className={heading}>By question type</h3>
-          <p className={hint}>Weakest format first.</p>
+          <p className={hint}>how you score on each kind of question</p>
           <div className="grid gap-y-4">
             {view.formats.map((row) => (
               <Row key={row.name} name={row.name} tally={row.tally} />
@@ -495,7 +495,7 @@ const Progress = ({
         {view.steps.length > 0 && (
           <div className={card}>
             <h3 className={heading}>By judgment step</h3>
-            <p className={hint}>The clinical judgment skill each item tests.</p>
+            <p className={hint}>the clinical judgment skill each item tests</p>
             <div className="grid gap-y-4">
               {view.steps.map((row) => (
                 <Row key={row.name} name={row.name} tally={row.tally} />
@@ -512,7 +512,7 @@ const Progress = ({
               <h3 className={heading}>Missed questions</h3>
               <p className="text-sm text-[var(--muted-color)]">
                 {view.missedAll.length} questions where your latest answer was
-                wrong.
+                wrong
               </p>
             </div>
             <button
