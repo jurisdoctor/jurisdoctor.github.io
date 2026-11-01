@@ -96,6 +96,8 @@ export interface QuestionType {
   caseGroup?: string;
   tag?: string;
   tags?: string[];
+  objective?: string;
+  cjmm?: string;
   caseSteps?: number;
   select?: number;
   constraint?: string;

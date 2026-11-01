@@ -30,11 +30,18 @@ import {
   labelOf,
   QuestionType,
 } from "./Questions";
+import Progress, { AttemptType } from "./Progress";
 import Quiz from "./Quiz";
 import Swap from "./Swap";
 import TypedText, { Segment } from "../Typed/TypedText";
 
-type SectionType = "chapters" | "skills" | "cases" | "judgment" | "favorites";
+type SectionType =
+  | "chapters"
+  | "skills"
+  | "progress"
+  | "cases"
+  | "judgment"
+  | "favorites";
 
 interface StartType {
   pick: PickType;
@@ -59,6 +66,19 @@ const validMarks = (saved: Record<string, ResultType>) =>
     (entry) => entry === "solved" || entry === "missed",
   );
 
+const freshAttempts = (): Record<string, AttemptType> => ({});
+
+const validAttempts = (saved: Record<string, AttemptType>) =>
+  !!saved &&
+  typeof saved === "object" &&
+  !Array.isArray(saved) &&
+  Object.values(saved).every(
+    (entry) =>
+      !!entry &&
+      typeof entry.tries === "number" &&
+      typeof entry.wrong === "number",
+  );
+
 const freshHashes = (): Record<string, string> => ({});
 
 const validHashes = (saved: Record<string, string>) =>
@@ -70,6 +90,7 @@ const validHashes = (saved: Record<string, string>) =>
 const SECTIONS: SectionType[] = [
   "chapters",
   "skills",
+  "progress",
   "cases",
   "judgment",
   "favorites",
@@ -86,6 +107,7 @@ const validStars = (saved: Record<string, true>) =>
 const TITLES: Record<SectionType, string> = {
   chapters: "Chapters",
   skills: "Skills",
+  progress: "Progress",
   cases: "Case studies",
   judgment: "Clinical judgment",
   favorites: "Favorites",
@@ -203,6 +225,8 @@ const ExamView = ({
       SECTIONS.filter((entry) => {
         if (entry === "favorites") return showFavorites;
         if (entry === "skills") return bank.Skills.length > 0;
+        if (entry === "progress")
+          return bank.Chapters.length > 0 || bank.Skills.length > 0;
         if (entry === "cases") return bank.Cases.length > 0;
         if (entry === "judgment") return bank.Judgment.length > 0;
         return bank.Chapters.length > 0;
@@ -217,12 +241,18 @@ const ExamView = ({
   const [results, setResults, resultsReady] = useSaved<
     Record<string, ResultType>
   >(`${set.scope}:results:v1:${exam}`, freshMarks, validMarks);
+  const [attempts, setAttempts] = useSaved<Record<string, AttemptType>>(
+    `${set.scope}:attempts:v1:${exam}`,
+    freshAttempts,
+    validAttempts,
+  );
   const [hashes, setHashes, hashesReady] = useSaved<Record<string, string>>(
     `${set.scope}:hashes:v3:${exam}`,
     freshHashes,
     validHashes,
   );
   const [deck, setDeck] = useState<QuestionType[]>([]);
+  const [drill, setDrill] = useState<string | null>(null);
   useEffect(() => {
     if (section && section !== view.section) {
       setSection(section);
@@ -236,6 +266,17 @@ const ExamView = ({
 
   const mark = useCallback((id: string, correct: boolean) => {
     setResults((prev) => ({ ...prev, [id]: correct ? "solved" : "missed" }));
+    setAttempts((prev) => {
+      const before = prev[id] ?? { tries: 0, wrong: 0, at: 0 };
+      return {
+        ...prev,
+        [id]: {
+          tries: before.tries + 1,
+          wrong: before.wrong + (correct ? 0 : 1),
+          at: Date.now(),
+        },
+      };
+    });
   }, []);
 
   useEffect(() => {
@@ -246,6 +287,11 @@ const ExamView = ({
     );
     if (stale.length > 0) {
       setResults((prev) => {
+        const next = { ...prev };
+        stale.forEach((id) => delete next[id]);
+        return next;
+      });
+      setAttempts((prev) => {
         const next = { ...prev };
         stale.forEach((id) => delete next[id]);
         return next;
@@ -288,15 +334,17 @@ const ExamView = ({
   }, [bank, stars]);
 
   const groups =
-    section === "skills"
-      ? bank.Skills
-      : section === "cases"
-        ? bank.Cases
-        : section === "judgment"
-          ? bank.Judgment
-          : section === "favorites"
-            ? favoriteGroups
-            : bank.Chapters;
+    section === "progress"
+      ? []
+      : section === "skills"
+        ? bank.Skills
+        : section === "cases"
+          ? bank.Cases
+          : section === "judgment"
+            ? bank.Judgment
+            : section === "favorites"
+              ? favoriteGroups
+              : bank.Chapters;
   const noun =
     section === "skills"
       ? (set.nouns.skills ?? "skills")
@@ -406,14 +454,38 @@ const ExamView = ({
 
   const group = pick ? shown.find((entry) => entry.id === pick) : undefined;
 
-  const label = group
-    ? labelFor(group)
-    : lens === "incomplete"
-      ? `Incomplete ${noun}`
-      : `All ${noun}`;
+  const label =
+    section === "progress" && drill
+      ? drill
+      : group
+        ? labelFor(group)
+        : lens === "incomplete"
+          ? `Incomplete ${noun}`
+          : `All ${noun}`;
+
+  const practice = (questions: QuestionType[], name: string) => {
+    if (!questions.length) return;
+    setDrill(name);
+    setDeck(
+      questions.map((question, index) => ({ ...question, ordinal: index + 1 })),
+    );
+    setAt(0);
+    setPass((prev) => prev + 1);
+    setStarted({ pick: "all", at: 0 });
+    window.setTimeout(() => {
+      const calm = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      document.getElementById("nclex-drill")?.scrollIntoView({
+        behavior: calm ? "auto" : "smooth",
+        block: "start",
+      });
+    }, 60);
+  };
 
   const reset = () => {
     setResults({});
+    setAttempts({});
     setAt(started?.at ?? 0);
     setPass((prev) => prev + 1);
   };
@@ -429,7 +501,7 @@ const ExamView = ({
   useEffect(() => {
     if (arriving === null || section !== arriving) return;
     setArriving(null);
-    if (groups.length > 0) run(lens);
+    if (section !== "progress" && groups.length > 0) run(lens);
   }, [arriving, section]);
 
   if (!section) {
@@ -473,7 +545,14 @@ const ExamView = ({
         <TypedText text={names[section]} reserve={Object.values(names)} />
       </h2>
 
-      {shown.length === 0 ? (
+      {section === "progress" ? (
+        <Progress
+          bank={bank}
+          results={results}
+          attempts={attempts}
+          onPractice={practice}
+        />
+      ) : shown.length === 0 ? (
         <div className="mb-8 rounded-2xl bg-[var(--container-color)] p-7 text-center">
           {section === "favorites" && empty ? (
             <>
@@ -533,19 +612,22 @@ const ExamView = ({
         />
       )}
 
+      <div id="nclex-drill" className="scroll-mt-4" />
       <Swap
-        token={`${section}-${lens}-${String(pick)}-${deck[started?.at ?? -1]?.id ?? "none"}`}
+        token={`${section}-${lens}-${String(pick)}-${drill}-${deck[started?.at ?? -1]?.id ?? "none"}`}
       >
         {started === null || deck.length === 0 ? (
-          <p className="ml-3.5 text-[var(--muted-color)] lg:ml-0 lg:text-center">
-            Pick{" "}
-            {section === "skills"
-              ? (set.picks.skills ?? "a skill")
-              : section === "cases"
-                ? "a case"
-                : "a chapter"}{" "}
-            above to see its questions, or hit All to run the whole set.
-          </p>
+          section === "progress" ? null : (
+            <p className="ml-3.5 text-[var(--muted-color)] lg:ml-0 lg:text-center">
+              Pick{" "}
+              {section === "skills"
+                ? (set.picks.skills ?? "a skill")
+                : section === "cases"
+                  ? "a case"
+                  : "a chapter"}{" "}
+              above to see its questions, or hit All to run the whole set.
+            </p>
+          )
         ) : (
           <>
             <h3 className="mb-6 ml-3.5 text-xl lg:ml-0 lg:text-center">
@@ -564,7 +646,7 @@ const ExamView = ({
               )}
             </h3>
             <Quiz
-              key={`${section}-${lens}-${String(pick)}-${deck[started.at]?.id}-${pass}`}
+              key={`${section}-${lens}-${String(pick)}-${drill}-${deck[started.at]?.id}-${pass}`}
               label={label}
               questions={deck}
               start={started.at}

@@ -558,7 +558,7 @@ const Quiz = ({
           >
             {question.options.map((option) => (
               <Option
-                key={option.id}
+                key={`${question.id}-${option.id}`}
                 option={option}
                 chosen={chosen.includes(option.id)}
                 answered={answered}
