@@ -7,6 +7,7 @@ import { flameHueAt } from "./FlamePalette";
 import {
   ChapterType,
   displayNumberOf,
+  hasTag,
   isStory,
   QuestionType,
 } from "./Questions";
@@ -434,8 +435,8 @@ const ChapterSet = ({
               (question) =>
                 (question.new ||
                   question.dailySet ||
-                  question.tag === "review" ||
-                  question.tag === "jeopardy") &&
+                  hasTag(question, "review") ||
+                  hasTag(question, "jeopardy")) &&
                 !results[question.id],
             );
             return (
@@ -531,8 +532,8 @@ const ChapterSet = ({
             {shown.questions.map((question, index) => {
               const state = results[question.id];
               const here = current === question.id;
-              const glitching = question.tag === "review" && !state;
-              const playful = question.tag === "jeopardy" && !state;
+              const glitching = hasTag(question, "review") && !state;
+              const playful = hasTag(question, "jeopardy") && !state;
               return (
                 <button
                   key={question.id}
@@ -569,7 +570,7 @@ const ChapterSet = ({
                     >
                       ⭐
                     </span>
-                  ) : question.tag === "jeopardy" ? (
+                  ) : hasTag(question, "jeopardy") ? (
                     <span
                       aria-label="Jeopardy question"
                       title="Jeopardy question"

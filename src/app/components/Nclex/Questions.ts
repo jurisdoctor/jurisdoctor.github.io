@@ -95,6 +95,7 @@ export interface QuestionType {
   caseStep?: number;
   caseGroup?: string;
   tag?: string;
+  tags?: string[];
   caseSteps?: number;
   select?: number;
   constraint?: string;
@@ -457,8 +458,11 @@ export interface DerivedBank {
 
 const isJudgment = (question: QuestionType) => /-cj\d+$/.test(question.id);
 
+export const hasTag = (question: QuestionType, name: string) =>
+  question.tag === name || !!question.tags?.includes(name);
+
 export const isStory = (question: QuestionType) =>
-  question.tag === "case-study" && !!question.caseGroup;
+  hasTag(question, "case-study") && !!question.caseGroup;
 
 // Moves every unfolding case study to the end of its chapter, each case kept
 // together and in step order, and gives its steps the case fields the quiz
