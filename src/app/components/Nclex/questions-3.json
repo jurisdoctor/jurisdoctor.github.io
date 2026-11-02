@@ -4732,7 +4732,7 @@
         {
           "id": "ig16-j01",
           "type": "sata",
-          "stem": "The nurse is reviewing the history of a patient admitted with a respiratory infection. Which findings show a weakened innate, nonspecific defense? Select all that apply.",
+          "stem": "The nurse is reviewing the history of a newly admitted patient. Which findings show a weakened innate, nonspecific defense? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -4820,7 +4820,8 @@
           "jeopardyClue": "DEFEND AND PROTECT 400",
           "jeopardyAnswer": "innate immunity",
           "jeopardyOrder": 31,
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "ig16-m30",
@@ -5299,7 +5300,7 @@
         {
           "id": "ig19-m02",
           "type": "sata",
-          "stem": "The nurse is reviewing the history of a patient with a wound. Which findings increase the patient's risk of infection? Select all that apply.",
+          "stem": "The nurse is reviewing the admission history of a patient. Which findings increase the patient's risk of infection? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -5309,9 +5310,9 @@
             },
             {
               "id": "B",
-              "text": "Has lost weight while eating half of each meal",
-              "correct": true,
-              "rationale": "Malnutrition impairs immune cell function and wound healing."
+              "text": "Lost 2 kg on a planned diet, eats full meals",
+              "correct": false,
+              "rationale": "Planned weight loss while eating full, balanced meals does not mean poor intake. Nutrition that supports immune cells is still in place, so this does not raise risk the way unintended loss with poor intake does."
             },
             {
               "id": "C",
@@ -5327,9 +5328,9 @@
             },
             {
               "id": "E",
-              "text": "Has cared for a family member with influenza",
-              "correct": true,
-              "rationale": "Exposure to an ill contact raises the chance of infection."
+              "text": "Had influenza 2 years ago and recovered fully",
+              "correct": false,
+              "rationale": "A past illness that fully resolved is not a current exposure or a current weakness. Recovery leaves memory for that virus, so it does not raise today's risk."
             },
             {
               "id": "F",
@@ -5340,20 +5341,18 @@
           ],
           "answer": [
             "A",
-            "B",
             "C",
             "D",
-            "E",
             "F"
           ],
-          "takeaway": "Age, nutrition, chronic disease, medications, exposure to ill contacts, and invasive devices all raise infection risk. Pick them out of the patient's own history to plan closer assessment.",
+          "takeaway": "Age, poor nutrition, chronic disease, immune lowering medications, current exposures, and invasive devices raise infection risk. A factor counts only if it is present now: planned weight loss with full meals and an illness that resolved years ago do not.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Test each finding against the factors that affect immunity: age, nutrition, chronic disease, medications, exposures, and devices that break a barrier. Do not stop at a usual number of answers.",
+          "strategy": "Each tempting distractor sits next to a real factor. Weight loss sounds like poor nutrition and a past influenza sounds like an exposure, so ask whether the factor weakens defense today.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
@@ -5365,14 +5364,14 @@
               },
               {
                 "action": "Match the history",
-                "detail": "Immunosuppressant, poor intake with weight loss, diabetes, age 84, a sick contact, and a catheter each fit."
+                "detail": "Immunosuppressant, diabetes, age 84, and a catheter each fit."
               },
               {
-                "action": "Check for any that do not fit",
-                "detail": "None; every finding raises risk."
+                "action": "Ask whether it is present now",
+                "detail": "Planned loss with full meals keeps nutrition intact; an influenza that resolved 2 years ago is neither a current exposure nor a weakness."
               }
             ],
-            "verdict": "A, B, C, D, E, F. Each is a factor that raises infection risk."
+            "verdict": "A, C, D, F."
           },
           "caseGroup": "ig19-case1",
           "caseStep": 2,
@@ -5384,7 +5383,8 @@
           "formattedBatch": 16,
           "styledBatch": 17,
           "reviewedBatch": 18,
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "ig19-m03",
@@ -11167,53 +11167,52 @@
         {
           "id": "ig27-m19",
           "type": "sata",
-          "stem": "A patient who works as a roofer has new palpitations and a new murmur between S1 and S2. Which history questions should the nurse ask? Select all that apply.",
+          "stem": "A patient has new palpitations and a new murmur between S1 and S2. Which questions should the nurse ask to look for a cause? Select all that apply.",
           "options": [
             {
               "id": "A",
               "text": "\"Did you have rheumatic fever or strep throat as a child?\"",
               "correct": true,
-              "rationale": "Recurrent tonsillitis, streptococcal infections, and rheumatic fever can lead to valve abnormalities, and a new murmur raises that question."
+              "rationale": "Recurrent streptococcal infections and rheumatic fever can scar the heart valves. A new murmur raises that question, so it is a direct search for the cause."
             },
             {
               "id": "B",
               "text": "\"Have you used cocaine or other street drugs?\"",
               "correct": true,
-              "rationale": "Cocaine and illicit drugs are often associated with heart disease, including rhythm problems that cause palpitations. The drug history includes them."
+              "rationale": "Cocaine and other illicit drugs are linked to heart disease and to rhythm problems that cause palpitations. Injected drugs can also infect the valves and cause a new murmur."
             },
             {
               "id": "C",
-              "text": "\"Which over the counter or herbal products do you take?\"",
+              "text": "\"Do you use decongestants, diet pills, or energy drinks?\"",
               "correct": true,
-              "rationale": "The drug history covers prescription, over the counter, and herbal or natural products, along with any drug sensitivities."
+              "rationale": "Over the counter stimulants and high caffeine products speed the heart and can trigger palpitations. Patients often leave them out unless asked by name."
             },
             {
               "id": "D",
-              "text": "\"Can you do the same roofing work as a year ago?\"",
-              "correct": true,
-              "rationale": "The functional history compares current activity with past activity. Patients often limit activity gradually and do not notice until asked."
+              "text": "\"Would you like me to arrange a cardiology referral?\"",
+              "correct": false,
+              "rationale": "A referral is an action, not a question that gathers data. It does not help find the cause, and the decision to refer belongs to the provider after the assessment."
             },
             {
               "id": "E",
               "text": "\"When did the palpitations start, and how long do they last?\"",
               "correct": true,
-              "rationale": "The current problem is explored openly by onset, duration, frequency and what makes it better or worse. Asking about onset and duration does this without supplying a cause."
+              "rationale": "Onset, duration, frequency and triggers describe the current problem. Linking the start to a new drug, illness or activity points to the cause."
             },
             {
               "id": "F",
               "text": "\"Did your grandparents have heart disease after age 80?\"",
               "correct": false,
-              "rationale": "Family history belongs in the history, but it focuses on immediate family: the age, health status, and cause of death of parents, siblings, and children. A first degree relative with coronary artery disease is the major risk factor."
+              "rationale": "Heart disease late in life in a grandparent is common and does not point to an inherited cause. Family risk counts when a parent, sibling or child is affected early, and it does not explain a sudden new murmur."
             }
           ],
           "answer": [
             "A",
             "B",
             "C",
-            "D",
             "E"
           ],
-          "takeaway": "A cardiovascular history goes beyond risk factors: the current problem (onset, duration, triggers), medical history (including rheumatic fever and strep infections), drug history (prescription, over the counter, herbal, illicit), social history, nutrition, family history of immediate relatives, and function.",
+          "takeaway": "When a patient brings a new finding, aim the history at what could cause it. A new murmur calls for questions about rheumatic fever, strep infections and injected drugs; new palpitations call for questions about onset and duration, illicit drugs, and over the counter stimulants. A referral is an action, and late heart disease in grandparents does not explain a new problem.",
           "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
           "coverageDetail": {
             "ppt": "partial",
@@ -11222,34 +11221,30 @@
             ],
             "readingChecked": true
           },
-          "strategy": "Most of these questions belong, so do not stop at three or four. Match each question to a part of the history and ask whether it reaches the right people and the right facts. Family history means parents, siblings and children, not disease in grandparents late in life.",
+          "strategy": "Read the cues first: a new murmur and new palpitations. Keep each question that could uncover a cause of either one, and reject options that are actions instead of data or that point to no cause.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
             ],
             "steps": [
               {
-                "action": "Current problem",
-                "detail": "Onset and duration of the palpitations: true."
+                "action": "Cause of the murmur",
+                "detail": "Childhood strep infections and rheumatic fever can damage the valves: true."
               },
               {
-                "action": "Medical history",
-                "detail": "A new murmur links to childhood strep infections and rheumatic fever: true."
+                "action": "Cause of the palpitations",
+                "detail": "Street drugs and over the counter stimulants speed the heart: true, true. Onset and duration link the symptom to a trigger: true."
               },
               {
-                "action": "Drug history",
-                "detail": "Illicit drugs and over the counter or herbal products both belong: true, true."
+                "action": "Data or action",
+                "detail": "Offering a referral gathers no data and is the provider's decision: false."
               },
               {
-                "action": "Functional history",
-                "detail": "Comparing work tolerance with a year ago: true."
-              },
-              {
-                "action": "Family history",
-                "detail": "Grandparents with heart disease after 80 are not the immediate family the history targets: false."
+                "action": "Does it explain a new problem",
+                "detail": "Heart disease after 80 in grandparents is not an early, inherited risk and does not explain a new murmur: false."
               }
             ],
-            "verdict": "A, B, C, D, E."
+            "verdict": "A, B, C, E."
           },
           "caseGroup": "ig27-case8",
           "caseStep": 3,
@@ -11258,7 +11253,8 @@
           "formattedBatch": 16,
           "styledBatch": 17,
           "cjmm": "Recognize cues",
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "ig27-m20",
@@ -12689,35 +12685,35 @@
         {
           "id": "ig27-m38",
           "type": "multiple_choice",
-          "stem": "Before coronary CT angiography with IV contrast, a patient mentions having a coronary stent placed 3 years ago. Which action should the nurse take?",
+          "stem": "Before coronary CT angiography with IV contrast, a patient mentions getting hives and wheezing after a contrast scan years ago. Which action should the nurse take?",
           "options": [
             {
               "id": "A",
               "text": "Hold all oral fluids until after the scan",
               "correct": false,
-              "rationale": "Contrast can damage the kidneys, so hydration is encouraged, not withheld. Oral fluids are encouraged after the test."
+              "rationale": "Contrast can harm the kidneys, so hydration is encouraged, not withheld. This would raise the kidney risk the hives history already complicates."
             },
             {
               "id": "B",
-              "text": "Report the stent to the provider now",
+              "text": "Report the reaction to the provider now",
               "correct": true,
-              "rationale": "Previous treatment for cardiovascular disease is part of the history. A coronary stent can make coronary CT angiography less reliable, so the provider needs to know before the scan."
+              "rationale": "Hives and wheezing with earlier contrast mean a reaction could recur and be worse. The provider must know before the scan to change the plan or premedicate."
             },
             {
               "id": "C",
-              "text": "Give a beta blocker to slow the heart rate",
+              "text": "Give an antihistamine before the scan",
               "correct": false,
-              "rationale": "A beta blocker may be prescribed to slow the heart rate for the scan, but the nurse does not give a drug that has not been prescribed."
+              "rationale": "Premedication may be prescribed, but the nurse cannot give a drug that has not been ordered. Reporting comes first."
             },
             {
               "id": "D",
-              "text": "Record the stent in the past medical history",
+              "text": "Record the reaction in the allergy history",
               "correct": false,
-              "rationale": "Past procedures are recorded, but this one bears directly on the test being done today. Recording it without telling the provider leaves the problem in place."
+              "rationale": "The reaction must be documented, but recording it without telling the provider leaves the patient exposed to the same contrast today."
             }
           ],
           "answer": "B",
-          "takeaway": "Ask about previous treatment for cardiovascular disease, including diagnostic procedures and invasive treatment. For coronary CT angiography, a stent makes the scan less reliable, the heart rate must be slow, and the contrast calls for checking kidney function and keeping the patient hydrated.",
+          "takeaway": "Before any test with IV contrast, ask about earlier contrast reactions, kidney function and metformin. A past reaction is reported to the provider before the scan, not only recorded.",
           "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
           "coverageDetail": {
             "ppt": "partial",
@@ -12726,7 +12722,7 @@
             ],
             "readingChecked": true
           },
-          "strategy": "Connect the history to the test. The cue is a stent in the same arteries the scan is meant to show.",
+          "strategy": "Connect the history to the test being done today. A past reaction to the same contrast is a safety risk now, so it goes to the provider before the scan.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
@@ -12738,14 +12734,14 @@
               },
               {
                 "action": "Reject giving an unprescribed drug",
-                "detail": "There is no prescription for it."
+                "detail": "There is no order for it."
               },
               {
-                "action": "Act on the history",
-                "detail": "A stent can make the scan less reliable, so report it before the scan."
+                "action": "Choose reporting over recording",
+                "detail": "Documenting is needed, but the provider must know before the same contrast is given."
               }
             ],
-            "verdict": "B. Report the stent before the scan."
+            "verdict": "B. Report the reaction before the scan."
           },
           "caseGroup": "ig27-c11c",
           "caseStep": 3,
@@ -12753,7 +12749,8 @@
           "cjmm": "Take action",
           "addedBatch": 11,
           "formattedBatch": 16,
-          "styledBatch": 17
+          "styledBatch": 17,
+          "revisedBatch": 21
         },
         {
           "id": "ig27-m36",
@@ -17718,7 +17715,7 @@
         {
           "id": "ig29-m15",
           "type": "sata",
-          "stem": "Before discharge, a patient with heart failure is taught about a diuretic, a beta blocker, and low sodium. Which statements indicate understanding? Select all that apply.",
+          "stem": "Before discharge, the nurse evaluates heart failure teaching on drugs, diet, activity and daily self monitoring. Which patient statements indicate understanding? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -17807,7 +17804,8 @@
           "addedBatch": 5,
           "formattedBatch": 16,
           "styledBatch": 17,
-          "cjmm": "Evaluate outcomes"
+          "cjmm": "Evaluate outcomes",
+          "revisedBatch": 21
         },
         {
           "id": "ig29-m17",
@@ -21923,7 +21921,7 @@
         {
           "id": "ig30-m18",
           "type": "multiple_choice",
-          "stem": "A patient with new hypertension smokes, has obesity and a stressful job, and has normal urine and blood tests. Which plan should the nurse anticipate teaching?",
+          "stem": "A patient with new stage 2 hypertension smokes, has obesity and a stressful job, and has normal urine and blood tests. Which plan should the nurse anticipate teaching?",
           "options": [
             {
               "id": "A",
@@ -21935,13 +21933,13 @@
               "id": "B",
               "text": "Weight loss alone to cure the hypertension",
               "correct": false,
-              "rationale": "Obesity is a risk factor for primary hypertension, not a secondary cause. Weight loss helps, but it is one part of the plan and does not cure the disease."
+              "rationale": "Obesity is a risk factor for primary hypertension, not a secondary cause. Weight loss helps, but at stage 2 it is one part of the plan and does not cure the disease."
             },
             {
               "id": "C",
               "text": "Lifestyle changes plus prescribed drugs",
               "correct": true,
-              "rationale": "With risk factors present and no sign of another cause, this is primary hypertension, the most common type. Ongoing pressure thickens arteriole walls and lowers organ blood flow, so treatment targets the risk factors and the pressure."
+              "rationale": "With risk factors present and no sign of another cause, this is primary hypertension. At stage 2, lifestyle change alone is not enough, so drugs are prescribed along with changes to smoking, weight and stress."
             },
             {
               "id": "D",
@@ -21951,14 +21949,14 @@
             }
           ],
           "answer": "C",
-          "takeaway": "Primary hypertension is the most common type and is not caused by another health problem. Over time it thickens the walls of the arterioles, lowering blood flow to the organs. The plan targets modifiable risks such as weight, smoking and stress, plus drugs as prescribed.",
+          "takeaway": "Primary hypertension is the most common type and is not caused by another health problem. Over time it thickens the walls of the arterioles, lowering blood flow to the organs. At stage 2 the plan pairs drugs as prescribed with changes to modifiable risks such as weight, smoking and stress, started together.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "First decide primary or secondary from the data, then pick the plan that treats that type.",
+          "strategy": "First decide primary or secondary from the data, then use the stage to decide whether drugs join lifestyle change.",
           "elimination": {
             "strategies": [
               "Duplicate facts",
@@ -21967,7 +21965,7 @@
             "steps": [
               {
                 "action": "Classify",
-                "detail": "Normal urine and blood tests leave no secondary cause. The risk factors point to primary hypertension."
+                "detail": "Normal urine and blood tests leave no secondary cause. The risk factors point to primary hypertension, and stage 2 calls for drugs as well as lifestyle change."
               },
               {
                 "action": "Remove the wrong plans",
@@ -21988,12 +21986,13 @@
           "convertedBatch": 13,
           "formattedBatch": 16,
           "styledBatch": 17,
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "ig30-m19",
           "type": "highlight",
-          "nursesNote": "1030. Patient, 60 years old, at a walk in clinic. Blood pressure 176/108 mm Hg in the right arm and 174/106 mm Hg in the left arm. Reports a headache at the back of the head since waking, 4 of 10. States vision has been blurry in both eyes since yesterday. Face appears flushed. Becomes short of breath climbing one flight of stairs, which began this week. Reports cramping in one calf after walking 2 blocks that stops with standing still. Reports heartburn after spicy meals for 1 year. Reports pain in one knee after gardening for 1 month.",
+          "nursesNote": "1030. Patient, 60 years old, at a walk in clinic. Blood pressure 176/108 mm Hg in the right arm and 174/106 mm Hg in the left arm. Reports a headache at the back of the head since waking, 4 of 10. States vision has been blurry in both eyes since yesterday. Face appears flushed. Becomes short of breath climbing one flight of stairs, which began this week. Reports dizziness only when rolling over in bed, for 2 years. Reports heartburn after spicy meals for 1 year. Reports pain in one knee after gardening for 1 month.",
           "stem": "The nurse at a walk in clinic is reviewing the note of a patient with a blood pressure of 176/108 mm Hg. Highlight the findings that may be manifestations of significantly elevated blood pressure.",
           "segments": [
             {
@@ -22022,9 +22021,9 @@
             },
             {
               "id": "s5",
-              "text": "Reports cramping in one calf after walking 2 blocks that stops with standing still.",
+              "text": "Reports dizziness only when rolling over in bed, for 2 years.",
               "correct": false,
-              "rationale": "This pattern points to reduced arterial flow to the leg, a vascular problem, not a manifestation of the elevated pressure itself."
+              "rationale": "Dizziness can come with significantly elevated pressure, but dizziness only with a change in head position that began 2 years ago, long before this pressure was found, points to an inner ear cause."
             },
             {
               "id": "s6",
@@ -22054,7 +22053,7 @@
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Check each finding against the five possible manifestations of significantly elevated pressure. Findings with another clear explanation, such as a meal pattern or knee pain after gardening, are not selected.",
+          "strategy": "Check each finding against the possible manifestations of significantly elevated pressure, then ask whether it fits today's pressure. A finding with its own clear explanation, such as dizziness only with head position for years, a meal pattern, or knee pain after gardening, is not selected.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
@@ -22065,8 +22064,8 @@
                 "detail": "Headache, blurred vision, flushing, and dyspnea are on it."
               },
               {
-                "action": "Reject the leg finding",
-                "detail": "Calf cramping with walking that stops with rest is a flow problem in the leg."
+                "action": "Reject the old dizziness",
+                "detail": "Dizziness only when rolling over, present for 2 years, is positional and predates the high pressure."
               },
               {
                 "action": "Reject the other systems",
@@ -22081,7 +22080,8 @@
           "addedBatch": 6,
           "tidiedBatch": 15,
           "formattedBatch": 16,
-          "cjmm": "Recognize cues"
+          "cjmm": "Recognize cues",
+          "revisedBatch": 21
         },
         {
           "id": "ig30-m20",
@@ -24822,19 +24822,19 @@
         {
           "id": "ig31-m13",
           "type": "multiple_choice",
-          "stem": "A patient with a respiratory infection coughs into the hands and presses the call light. The nurse touches it without gloves and later becomes ill. Which route of transmission occurred?",
+          "stem": "A patient coughs into the hands and presses the call light. The nurse turns it off bare handed, then rubs the eyes. Which transmission route is this?",
           "options": [
             {
               "id": "A",
               "text": "Droplet, from the cough",
               "correct": false,
-              "rationale": "The organism started in a cough, but the route is named by how it reaches the next person. No droplets reached the nurse's mucous membranes."
+              "rationale": "The organism came from a cough, but it reached the nurse's eyes on the nurse's own hands after touching the call light. No droplets traveled through the air to the nurse."
             },
             {
               "id": "B",
               "text": "Indirect contact, through the call light",
               "correct": true,
-              "rationale": "The organism reached the nurse on a contaminated item. Touching a person or a contaminated item is the contact route, and spread through an item is indirect contact."
+              "rationale": "The organism reached the nurse's hands on a contaminated item and then the eyes. Touching a person or a contaminated item is the contact route, and spread through an item is indirect contact."
             },
             {
               "id": "C",
@@ -24846,7 +24846,7 @@
               "id": "D",
               "text": "Airborne, through particles in the room air",
               "correct": false,
-              "rationale": "Airborne spread explains illness without touch or close range. Here the nurse touched a contaminated item, which accounts for the spread."
+              "rationale": "Airborne spread explains illness without touch or close range. Here the nurse touched a contaminated item and then the eyes, which accounts for the spread."
             }
           ],
           "answer": "B",
@@ -24870,7 +24870,7 @@
               },
               {
                 "action": "Find the vehicle",
-                "detail": "The call light carried the organism from the patient's hands to the nurse's hands."
+                "detail": "The call light carried the organism from the patient's hands to the nurse's hands, and the hands carried it to the eyes."
               },
               {
                 "action": "Compare the two contact options",
@@ -24885,48 +24885,49 @@
           "addedBatch": 2,
           "formattedBatch": 16,
           "styledBatch": 17,
-          "cjmm": "Analyze cues"
+          "cjmm": "Analyze cues",
+          "revisedBatch": 21
         },
         {
           "id": "ig31-m14",
           "type": "sata",
-          "stem": "The nurse is admitting an older adult with a cough and suspected pneumonia. Which actions belong in the admission infection assessment? Select all that apply.",
+          "stem": "The nurse is admitting an older adult with a new cough and suspected pneumonia. Which actions should the nurse include in the assessment? Select all that apply.",
           "options": [
             {
               "id": "A",
               "text": "Ask when the cough started and how it has changed",
               "correct": true,
-              "rationale": "Symptoms and their onset are part of the history in an infection assessment."
+              "rationale": "Onset and course of the cough show how the illness has developed and give a baseline for judging change."
             },
             {
               "id": "B",
               "text": "Ask whether anyone at home or work has been ill",
               "correct": true,
-              "rationale": "Exposures are part of the history and can point to the source."
+              "rationale": "Ill contacts at home or work point to a community source and to the organism the team should suspect."
             },
             {
               "id": "C",
-              "text": "Ask whether any devices, such as a urinary catheter, are used",
+              "text": "Ask whether coughing or choking happens with meals",
               "correct": true,
-              "rationale": "Devices are part of the history. They bypass natural barriers and can be a source of infection."
+              "rationale": "Aspiration is a common cause of pneumonia in older adults. Coughing or choking with meals points to it as the source and changes the plan of care."
             },
             {
               "id": "D",
               "text": "Ask the family how alertness compares with usual",
               "correct": true,
-              "rationale": "Findings are compared with the patient's baseline. Changes in behavior and function matter, and the family member knows what is usual."
+              "rationale": "Older adults often show infection first as a change in alertness. The family knows the usual baseline, so the nurse can tell whether confusion is new."
             },
             {
               "id": "E",
               "text": "Ask about recent antibiotics or hospital stays",
               "correct": true,
-              "rationale": "Recent treatment is part of the history. Recent antibiotics or a hospital stay change the likely organisms and the risk for a resistant one."
+              "rationale": "Recent antibiotics or a hospital stay raise the chance of a resistant organism and change the likely treatment."
             },
             {
               "id": "F",
               "text": "Document an oxygen saturation of 93% as normal for the patient's age",
               "correct": false,
-              "rationale": "93% is below the reference range of 95 to 100%. Decreased oxygen saturation is a concerning cue, and age does not make it expected."
+              "rationale": "Age does not make a low oxygen saturation expected. In a patient with suspected pneumonia, a low value is a concerning cue to report and trend, not to explain away."
             }
           ],
           "answer": [
@@ -24936,30 +24937,30 @@
             "D",
             "E"
           ],
-          "takeaway": "The infection assessment gathers symptoms, onset, exposures, recent treatment, and devices; assesses overall appearance, the likely site, and respiratory status; and compares every finding with baseline. A low value is not explained away by age, and fever is not relied on alone.",
+          "takeaway": "For an older adult with suspected pneumonia, the nurse asks about onset, ill contacts, swallowing problems that suggest aspiration, recent antibiotics or hospital stays, and how alertness compares with usual. A low oxygen saturation is never explained away by age.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Most options are history questions, and each part of the history (onset, exposures, recent treatment, devices, baseline) belongs. The wrong option explains a low value by age; ask whether age really makes it expected.",
+          "strategy": "Tie each option to this patient: does it help find the source, the likely organism, or a change from baseline? The wrong option dismisses a concerning cue instead of gathering data.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
             ],
             "steps": [
               {
-                "action": "Check the history items",
-                "detail": "Onset, exposures, recent treatment, and devices all belong."
+                "action": "Check the source questions",
+                "detail": "Onset, ill contacts, choking with meals, and recent antibiotics or hospital stays all point to a source or organism."
               },
               {
                 "action": "Check the baseline item",
-                "detail": "Comparing with usual alertness belongs."
+                "detail": "Comparing alertness with usual catches confusion, a common early sign in older adults."
               },
               {
                 "action": "Check the age option",
-                "detail": "93% is below 95 to 100%, whatever the age."
+                "detail": "A low saturation in suspected pneumonia is a cue, not a normal finding for age."
               }
             ],
             "verdict": "A, B, C, D, E."
@@ -24972,7 +24973,8 @@
           "formattedBatch": 16,
           "styledBatch": 17,
           "cjmm": "Recognize cues",
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "ig31-m15",
@@ -25818,7 +25820,7 @@
         {
           "id": "ig31-m23",
           "type": "sata",
-          "stem": "A patient with dehydration has cracked lips, a skin tear, and a urinary catheter and is due for vaccines. Which actions lower this patient's risk for infection? Select all that apply.",
+          "stem": "A patient with dehydration has cracked lips, a skin tear, a urinary catheter, and vaccines due. Which actions lower this patient's risk for infection? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -25852,9 +25854,9 @@
             },
             {
               "id": "F",
-              "text": "Wash with soap and water after touching stool",
-              "correct": true,
-              "rationale": "Hand hygiene prevents exposure, and hands soiled with stool are washed with soap and water rather than cleaned with sanitizer."
+              "text": "Keep the catheter to track output during rehydration",
+              "correct": false,
+              "rationale": "An indwelling catheter bypasses natural barriers, and every extra day raises infection risk. Output can be measured with a urinal or collection device, so tracking output is not a reason to keep it."
             }
           ],
           "answer": [
@@ -25862,17 +25864,16 @@
             "B",
             "C",
             "D",
-            "E",
-            "F"
+            "E"
           ],
-          "takeaway": "The body defends itself with intact skin and mucous membranes and with inflammation and immune responses. Nurses support those defenses, offer recommended vaccines, prevent exposure with the right hand hygiene method, and reassess every day whether a device is still needed.",
+          "takeaway": "The body defends itself with intact skin and mucous membranes and with immune responses. Nurses restore broken barriers, offer recommended vaccines, clean hands around devices, and remove a catheter as soon as it is not needed. Measuring output is not a reason to keep one.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "For each action, ask whether it protects a barrier, strengthens the host, or blocks exposure. Do not assume some options must be wrong: here every action does one of the three.",
+          "strategy": "Match each action to a cue in the stem: cracked lips, the skin tear, the catheter, the vaccines. Then ask whether the action lowers risk or quietly adds it.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
@@ -25891,11 +25892,11 @@
                 "detail": "Recommended vaccines lower risk: true."
               },
               {
-                "action": "Check the hand hygiene method",
-                "detail": "Soap and water for stool soiled hands: true."
+                "action": "Check the catheter plan",
+                "detail": "Keeping the catheter only to measure output adds risk; output can be measured without it: false."
               }
             ],
-            "verdict": "A, B, C, D, E, F."
+            "verdict": "A, B, C, D, E."
           },
           "caseGroup": "ig31-case13",
           "caseStep": 1,
@@ -25906,7 +25907,8 @@
           "styledBatch": 17,
           "reviewedBatch": 18,
           "cjmm": "Generate solutions",
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "ig31-m24",
@@ -26443,9 +26445,9 @@
             },
             {
               "id": "r2",
-              "text": "After 3 days of an antibiotic, the organisms that normally live in the patient's bowel are reduced, and liquid stools begin",
+              "text": "After 3 days of an antibiotic, a stool test shows fewer of the organisms that normally live in the bowel; stools are formed and the patient has no symptoms",
               "answer": "Microbiome",
-              "rationale": "The microbiome is the set of microorganisms normally living in and on the body. Antibiotics can disturb it, which changes how the bowel works."
+              "rationale": "The microbiome is the set of microorganisms normally living in and on the body. Antibiotics can reduce these normal organisms even when no disease is present."
             },
             {
               "id": "r3",
@@ -26515,7 +26517,8 @@
           "cjmm": "Analyze cues",
           "addedBatch": 11,
           "formattedBatch": 16,
-          "reviewedBatch": 18
+          "reviewedBatch": 18,
+          "revisedBatch": 21
         },
         {
           "id": "ig31-m27",
@@ -35363,7 +35366,7 @@
               "id": "A",
               "text": "Signed consent form is on the chart",
               "correct": false,
-              "rationale": "A signed form is expected, but it does not prove understanding. Here it makes the patient's statement more important, because consent has to be informed."
+              "rationale": "A signed form is expected, but the nurse who witnesses it is confirming the signature, not the explanation. The patient's statement shows the form is not enough here."
             },
             {
               "id": "B",
@@ -35375,7 +35378,7 @@
               "id": "C",
               "text": "Says, \"Nobody told me why I need this test.\"",
               "correct": true,
-              "rationale": "The nurse explains the purpose of each test. This patient does not know why the study is ordered even though consent is signed, so the nurse explains the purpose and procedure and involves the provider if the patient did not understand what was signed."
+              "rationale": "The signed form does not show understanding: the patient does not know why the study is ordered, so the consent may not be informed. Explaining the purpose, risks and alternatives of a procedure that needs consent is the provider's role. The nurse holds the study and notifies the provider so the patient can be informed before the test."
             },
             {
               "id": "D",
@@ -35385,7 +35388,7 @@
             }
           ],
           "answer": "C",
-          "takeaway": "For laboratory and diagnostic tests, the nurse explains the purpose so the patient understands what is being done and why. A signed consent does not replace that understanding.",
+          "takeaway": "The nurse explains what to expect with routine tests and checks understanding, but for a procedure that needs informed consent, the provider explains its purpose, risks and alternatives. When a patient who signed does not understand, the nurse notifies the provider before the procedure.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
@@ -35408,7 +35411,7 @@
               },
               {
                 "action": "Find the unmet need",
-                "detail": "The patient does not know the purpose, so the signed consent may not be informed."
+                "detail": "The patient does not know the purpose, so the consent is not informed. Notify the provider before the test."
               }
             ],
             "verdict": "C. Says, \"Nobody told me why I need this test.\""
@@ -35421,7 +35424,8 @@
           "trimmedBatch": 12,
           "formattedBatch": 16,
           "styledBatch": 17,
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 22
         },
         {
           "id": "p46-m24",
@@ -35911,80 +35915,78 @@
         {
           "id": "p46-m30",
           "type": "sata",
-          "stem": "The nurse admits a patient with new nighttime urine leakage. Which findings can affect the patient's urinary elimination? Select all that apply.",
+          "stem": "The nurse admits a patient with new nighttime urine leakage. Which findings may be contributing to the nighttime leakage? Select all that apply.",
           "options": [
             {
               "id": "A",
               "text": "Takes a new diuretic each evening",
               "correct": true,
-              "rationale": "Medications affect urinary elimination. A diuretic increases urine output, and an evening dose produces more urine overnight."
+              "rationale": "A diuretic increases urine output, and an evening dose means the bladder fills overnight. A new drug with a new symptom is a strong lead."
             },
             {
               "id": "B",
               "text": "Recent stroke with an unsteady gait",
               "correct": true,
-              "rationale": "Mobility affects urinary elimination. An unsteady gait slows the walk to the toilet at night, when the urge is new and the room is dark."
+              "rationale": "An unsteady gait slows the walk to the toilet at night, in a dark room, so urine can leak before the patient arrives."
             },
             {
               "id": "C",
-              "text": "Hand arthritis and pants with small buttons",
-              "correct": true,
-              "rationale": "Clothing management is a factor. Stiff hands and small buttons slow undressing once the patient reaches the toilet."
+              "text": "Hand arthritis, wears pants with an elastic waist",
+              "correct": false,
+              "rationale": "Stiff hands can delay undressing, which makes this tempting, but an elastic waist removes that barrier. This finding is not slowing the patient down."
             },
             {
               "id": "D",
               "text": "Takes an antihistamine for sleep",
               "correct": true,
-              "rationale": "Medications affect urinary elimination. A sedating antihistamine can dull awareness of the urge and make emptying harder, both of which fit new nighttime leakage."
+              "rationale": "A sedating antihistamine can dull awareness of the urge and weaken bladder emptying, both of which fit new leakage during sleep."
             },
             {
               "id": "E",
-              "text": "Finds it hard to void with a roommate behind the curtain",
-              "correct": true,
-              "rationale": "Privacy affects the ability to void. A shared room can make the patient hold urine or not empty fully."
+              "text": "Bladder infection treated 3 years ago, no symptoms now",
+              "correct": false,
+              "rationale": "An infection that cleared years ago, with no current burning or urgency, does not explain a new pattern of leakage."
             },
             {
               "id": "F",
               "text": "Drinks 4 cups of coffee each evening",
               "correct": true,
-              "rationale": "Fluid intake and habits are factors. A large volume of a caffeinated drink in the evening adds to urine overnight."
+              "rationale": "A large volume of a caffeinated drink in the evening adds urine overnight and irritates the bladder."
             }
           ],
           "answer": [
             "A",
             "B",
-            "C",
             "D",
-            "E",
             "F"
           ],
-          "takeaway": "Factors that influence urinary elimination include fluid intake and habits, growth and development, illness, surgery and medications, mobility and clothing management, privacy and culture, and toilet access. Every finding here touches one of them.",
+          "takeaway": "When leakage is new and happens at night, look for what changed and what acts at night: evening fluids and diuretics, sedating drugs, and slow or unsafe access to the toilet. A factor counts only if it is active for this patient now.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "For each finding, ask whether it changes how much urine is made, how fast the patient can get to and use the toilet, or how easily the patient can void. Judge each one on its own.",
+          "strategy": "For each finding, ask whether it adds urine overnight, dulls the urge, or slows the trip to the toilet for this patient right now. A factor that is resolved or already offset does not contribute.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
             ],
             "steps": [
               {
-                "action": "Medication and fluid",
-                "detail": "Evening diuretic, evening coffee, and a sleep antihistamine."
+                "action": "More urine at night",
+                "detail": "Evening diuretic and evening coffee."
               },
               {
-                "action": "Mobility and clothing",
-                "detail": "Unsteady gait; small buttons with arthritis."
+                "action": "Dulled urge or slow access",
+                "detail": "Sleep antihistamine; unsteady gait after a stroke."
               },
               {
-                "action": "Privacy",
-                "detail": "A roommate behind the curtain."
+                "action": "Reject what is not active",
+                "detail": "Elastic waist offsets the arthritis; the old infection has resolved."
               }
             ],
-            "verdict": "A, B, C, D, E, F."
+            "verdict": "A, B, D, F."
           },
           "caseGroup": "p46-c11e",
           "caseStep": 1,
@@ -35994,7 +35996,8 @@
           "trimmedBatch": 12,
           "formattedBatch": 16,
           "styledBatch": 17,
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "p46-m31",
@@ -38711,7 +38714,7 @@
         {
           "id": "p46-m41",
           "type": "sata",
-          "stem": "The nurse is admitting a patient who reports lower abdominal discomfort and voiding less than usual. Which questions should the nurse include in the history? Select all that apply.",
+          "stem": "The nurse is admitting a patient with lower abdominal discomfort who is voiding less than usual. Which questions should the nurse ask to look for a cause? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -38723,7 +38726,7 @@
               "id": "B",
               "text": "\"Would you like a catheter to ease the pressure?\"",
               "correct": false,
-              "rationale": "This jumps to an intervention before the problem is known. A catheter is considered only after assessment confirms a need and an alternative has been considered, and the nurse does not offer one as a history question."
+              "rationale": "This is an intervention, not data. A catheter is considered only after assessment confirms a need and alternatives have been tried."
             },
             {
               "id": "C",
@@ -38735,59 +38738,54 @@
               "id": "D",
               "text": "\"Which medicines do you take, including over the counter?\"",
               "correct": true,
-              "rationale": "Medications such as antihistamines, anticholinergics, and diuretics change voiding, and over the counter sleep aids are easy to miss."
+              "rationale": "Antihistamines, anticholinergics, and some sleep aids weaken bladder contraction and are a common cause of retention that is easy to miss."
             },
             {
               "id": "E",
-              "text": "\"Do you need help getting to or using the toilet?\"",
-              "correct": true,
-              "rationale": "Ability to toilet independently is part of the urinary history and changes the plan, even when the main concern is discomfort."
+              "text": "\"Do you leak urine when you cough or sneeze?\"",
+              "correct": false,
+              "rationale": "Leakage with coughing points to weak pelvic floor muscles. It does not explain discomfort with less voiding, which suggests urine is being held in."
             },
             {
               "id": "F",
               "text": "\"Do you have pain, urgency, or trouble starting to void?\"",
               "correct": true,
-              "rationale": "Pain, urgency, and hesitancy help separate infection from retention, so they belong in every urinary history."
+              "rationale": "Pain and urgency suggest infection, and trouble starting the stream suggests retention, so the answer helps separate the causes."
             }
           ],
           "answer": [
             "A",
             "C",
             "D",
-            "E",
             "F"
           ],
-          "takeaway": "A urinary history covers the last void and amount, symptoms such as pain, urgency, hesitancy, or leakage, a feeling of incomplete emptying, fluids and medications, and the ability to toilet independently. Assessment comes before choosing any device.",
+          "takeaway": "Discomfort with less voiding raises the question of retention versus low urine production. Ask about the last void and amount, incomplete emptying, medications that weaken emptying, and symptoms such as pain, urgency, or hesitancy before choosing any device.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Every option that gathers data about the pattern, symptoms, medications, or self care belongs. The one that offers a treatment does not.",
+          "strategy": "Tie each question to this patient's cues. Keep the ones that help explain discomfort with less voiding; reject a question about a different problem and any option that is an action rather than data.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
             ],
             "steps": [
               {
-                "action": "Sort by purpose",
-                "detail": "Five options gather data; one offers a device."
+                "action": "Link to the cues",
+                "detail": "Last void, incomplete emptying, medications, and pain or hesitancy all help explain discomfort with less voiding."
               },
               {
-                "action": "Keep the history",
-                "detail": "Last void, incomplete emptying, medications, toileting ability, symptoms."
+                "action": "Reject the other problem",
+                "detail": "Leakage with coughing describes a weak pelvic floor, not urine being held in."
               },
               {
                 "action": "Reject the shortcut",
-                "detail": "Offering a catheter skips assessment and the search for an alternative."
-              },
-              {
-                "action": "Count",
-                "detail": "Five correct."
+                "detail": "Offering a catheter is an action, not history, and skips assessment."
               }
             ],
-            "verdict": "A, C, D, E, F."
+            "verdict": "A, C, D, F."
           },
           "objective": "Assess patterns & concerning changes",
           "cjmm": "Recognize cues",
@@ -38796,7 +38794,8 @@
           "tags": [
             "new"
           ],
-          "addedBatch": 20
+          "addedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "p46-m42",
@@ -49285,43 +49284,43 @@
         {
           "id": "ig45-m07",
           "type": "sata",
-          "stem": "A patient reports yellow eyes and a dull ache in the right upper quadrant. Which questions about skin changes should the nurse ask? Select all that apply.",
+          "stem": "A patient reports yellow eyes and a dull ache in the right upper quadrant. Which skin questions help the nurse look for liver disease? Select all that apply.",
           "options": [
             {
+              "correct": true,
               "id": "A",
-              "text": "\"Have you had itching anywhere?\"",
-              "correct": true,
-              "rationale": "Itching is a skin change that can result from liver and biliary obstruction."
+              "rationale": "Itching can follow bile flow blocked in the liver or biliary tract, so it fits yellow eyes and a right upper quadrant ache.",
+              "text": "\"Have you had itching anywhere?\""
             },
             {
+              "correct": false,
               "id": "B",
-              "text": "\"Do your fingers turn white in the cold?\"",
-              "correct": false,
-              "rationale": "Color change of the fingers with cold is a vascular finding, not a skin change from a GI disorder."
+              "rationale": "White fingers in the cold point to spasm of the small arteries in the hands. Nothing in yellow eyes or a liver ache suggests that problem.",
+              "text": "\"Do your fingers turn white in the cold?\""
             },
             {
+              "correct": true,
               "id": "C",
-              "text": "\"Do you bruise or bleed more easily?\"",
-              "correct": true,
-              "rationale": "Increased bruising or a tendency to bleed is a skin change linked to GI disorders. The liver makes clotting proteins."
+              "rationale": "The liver makes clotting proteins, so easy bruising or bleeding can signal liver disease in a patient with yellow eyes.",
+              "text": "\"Do you bruise or bleed more easily?\""
             },
             {
+              "correct": true,
               "id": "D",
-              "text": "\"Have you noticed rashes or skin color changes?\"",
-              "correct": true,
-              "rationale": "Skin discolorations, including jaundice, and rashes are skin changes the nurse asks about."
+              "rationale": "Yellowing of the skin or a new rash can go along with the yellow eyes and helps show how widespread the jaundice is.",
+              "text": "\"Have you noticed rashes or skin color changes?\""
             },
             {
+              "correct": true,
               "id": "E",
-              "text": "\"Have you noticed small red spots with spidery lines?\"",
-              "correct": true,
-              "rationale": "Spider angiomas are small red skin lesions with branching vessels that appear with liver disease, so they fit yellow eyes and a right upper quadrant ache."
+              "rationale": "Spider angiomas are small red lesions with branching vessels that appear with liver disease, so they fit yellow eyes and a right upper quadrant ache.",
+              "text": "\"Have you noticed small red spots with spidery lines?\""
             },
             {
-              "id": "F",
-              "text": "\"Do your feet look pale when you raise them?\"",
               "correct": false,
-              "rationale": "Pallor of the feet on elevation is a sign of poor arterial blood flow, a vascular finding, not a skin change from a liver or GI disorder."
+              "id": "F",
+              "rationale": "Pallor of the feet on elevation points to poor arterial blood flow to the legs. It does not follow from yellow eyes or a liver ache.",
+              "text": "\"Do your feet look pale when you raise them?\""
             }
           ],
           "answer": [
@@ -49330,31 +49329,31 @@
             "D",
             "E"
           ],
-          "takeaway": "Skin changes linked to GI disorders such as liver and biliary obstruction are discoloration or rashes, itching, jaundice, increased bruising or a tendency to bleed, and in liver disease, spider angiomas.",
+          "takeaway": "With yellow eyes and a right upper quadrant ache, the nurse asks about skin signs of liver and biliary disease: itching, easy bruising or bleeding, skin color change or rash, and spider angiomas.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Yellow eyes and right upper quadrant pain point to the liver and biliary tract. Keep the questions about skin changes from that system and reject color changes that come from blood vessels.",
+          "strategy": "Yellow eyes and right upper quadrant pain point to the liver and biliary tract. Keep the questions that could uncover more signs of that problem and reject findings that point to poor blood flow in the limbs.",
           "elimination": {
-            "strategies": [
-              "Treat each option as true or false"
-            ],
             "steps": [
               {
                 "action": "Connect the cue",
                 "detail": "Yellow eyes with a right upper quadrant ache points to the liver and biliary tract."
               },
               {
-                "action": "Keep the liver skin changes",
-                "detail": "Itching, bruising or bleeding, rash or color change, and spider angiomas."
+                "action": "Keep the liver signs",
+                "detail": "Itching, bruising or bleeding, skin color change or rash, and spider angiomas."
               },
               {
-                "action": "Reject vascular color changes",
-                "detail": "White fingers in the cold and pale feet on elevation come from blood flow, not the liver."
+                "action": "Reject the limb circulation signs",
+                "detail": "White fingers in the cold and pale feet on elevation point to arterial problems, not the liver."
               }
+            ],
+            "strategies": [
+              "Treat each option as true or false"
             ],
             "verdict": "A, C, D, E."
           },
@@ -49365,7 +49364,8 @@
           "addedBatch": 10,
           "formattedBatch": 16,
           "styledBatch": 17,
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "ig45-x04",
@@ -50587,43 +50587,43 @@
         {
           "id": "ig45-m19",
           "type": "sata",
-          "stem": "A patient reports bloating and loose stools after meals. Which nutrition and family history questions should the nurse ask? Select all that apply.",
+          "stem": "A patient has had bloating, gas and loose stools after meals for 2 months. Which questions should the nurse ask to look for a cause? Select all that apply.",
           "options": [
             {
               "id": "A",
               "text": "\"Do symptoms follow milk, cheese or ice cream?\"",
               "correct": true,
-              "rationale": "Lactose intolerance is part of the nutrition history. Bloating, gas and loose stools after dairy point toward it."
+              "rationale": "Lactose intolerance causes bloating, gas and loose stools after dairy. Linking symptoms to a food is the first clue to the cause."
             },
             {
               "id": "B",
-              "text": "\"Has anyone in your family had colon cancer or polyps?\"",
+              "text": "\"Has anyone in your family had celiac or inflammatory bowel disease?\"",
               "correct": true,
-              "rationale": "Family history of GI disorders matters because some GI problems carry a genetic predisposition."
+              "rationale": "Both run in families and both cause bloating and loose stools. Family history of GI disorders points to a genetic predisposition."
             },
             {
               "id": "C",
               "text": "\"Would you like a dietitian referral today?\"",
               "correct": false,
-              "rationale": "A referral may come later, but it is an intervention, not a history question. The nurse finishes collecting data first."
+              "rationale": "A referral may come later, but it is an intervention. The nurse finishes collecting data before acting."
             },
             {
               "id": "D",
-              "text": "\"How much alcohol or caffeine do you drink weekly?\"",
+              "text": "\"How much alcohol or caffeine do you drink each day?\"",
               "correct": true,
-              "rationale": "Alcohol and caffeine intake belong in the nutrition history and can contribute to GI symptoms."
+              "rationale": "Alcohol and caffeine speed movement through the gut and irritate the lining, so either can cause loose stools and bloating."
             },
             {
               "id": "E",
               "text": "\"Has anyone in your family had high blood pressure?\"",
               "correct": false,
-              "rationale": "This is family history, but hypertension is not a GI disorder and does not carry genetic risk for these bowel symptoms."
+              "rationale": "Family history matters only when it bears on the complaint. Hypertension is not a GI disorder and does not explain these bowel symptoms."
             },
             {
               "id": "F",
-              "text": "\"Has food tasted different, or is swallowing hard?\"",
+              "text": "\"Have you lost weight without trying?\"",
               "correct": true,
-              "rationale": "Changes in taste and dysphagia are listed nutrition history items and may reveal another GI problem."
+              "rationale": "Unintentional weight loss with loose stools suggests nutrients are not being absorbed, which makes a disease such as celiac more likely than a simple food intolerance."
             }
           ],
           "answer": [
@@ -50632,34 +50632,30 @@
             "D",
             "F"
           ],
-          "takeaway": "A focused GI history covers the nutrition history (special diets, food allergies, lactose intolerance, anorexia, taste change, dysphagia, pain with eating, nausea, dyspepsia, weight loss, alcohol and caffeine) and family history with genetic risk.",
+          "takeaway": "A focused GI history follows the complaint: foods that trigger it (lactose), intake that loosens stool (alcohol, caffeine), weight loss that suggests malabsorption, and GI disorders that run in the family.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Sort each option into history data or something else. Keep questions that gather nutrition or family data; drop interventions and unrelated health data.",
+          "strategy": "Ask of each option: would the answer help explain bloating and loose stools after meals? Keep the ones that would; drop actions and unrelated history.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
             ],
             "steps": [
               {
-                "action": "Keep nutrition questions",
-                "detail": "Dairy, alcohol and caffeine, taste and swallowing."
+                "action": "Tie each question to the complaint",
+                "detail": "Dairy, alcohol and caffeine, weight loss and family GI disease each could explain it."
               },
               {
-                "action": "Keep GI family history",
-                "detail": "Colon cancer, polyps and bowel disorders in relatives."
-              },
-              {
-                "action": "Drop the intervention",
+                "action": "Drop the action",
                 "detail": "A referral is a next step, not data collection."
               },
               {
-                "action": "Drop unrelated family data",
-                "detail": "High blood pressure in relatives does not bear on these GI symptoms."
+                "action": "Drop unrelated history",
+                "detail": "High blood pressure in relatives does not bear on bowel symptoms."
               }
             ],
             "verdict": "A, B, D, F."
@@ -50672,7 +50668,8 @@
           "trimmedBatch": 12,
           "formattedBatch": 16,
           "styledBatch": 17,
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "ig45-m20",
@@ -51608,40 +51605,40 @@
           "stem": "A patient with an insulin pump is scheduled for an abdominal radiograph and then an abdominal MRI. Which actions should the nurse take? Select all that apply.",
           "options": [
             {
+              "correct": true,
               "id": "A",
-              "text": "Have the patient remove jewelry and belts for the radiograph",
-              "correct": true,
-              "rationale": "No preparation is needed for an abdominal radiograph except a hospital gown and removal of jewelry and belts that can interfere with the film."
+              "rationale": "No preparation is needed for an abdominal radiograph except a hospital gown and removal of jewelry and belts that can interfere with the film.",
+              "text": "Have the patient remove jewelry and belts for the radiograph"
             },
             {
+              "correct": false,
               "id": "B",
-              "text": "Keep the patient NPO from midnight for the radiograph",
-              "correct": false,
-              "rationale": "An abdominal radiograph needs no preparation, so fasting is not required for it."
+              "rationale": "An abdominal radiograph needs no preparation, so fasting is not required for it.",
+              "text": "Keep the patient NPO from midnight for the radiograph"
             },
             {
+              "correct": true,
               "id": "C",
-              "text": "Report the insulin pump to the MRI team",
-              "correct": true,
-              "rationale": "MRI uses powerful magnets. The nurse screens for metal implants and devices such as insulin pumps, pacemakers and aneurysm clips."
+              "rationale": "MRI uses powerful magnets. The nurse screens for metal implants and devices such as insulin pumps, pacemakers and aneurysm clips.",
+              "text": "Report the insulin pump to the MRI team"
             },
             {
+              "correct": true,
               "id": "D",
-              "text": "Explain that the MRI is long and requires lying still",
-              "correct": true,
-              "rationale": "The MRI takes longer than a CT, and the patient must lie still for clear images."
+              "rationale": "The MRI takes longer than a CT, and the patient must lie still for clear images.",
+              "text": "Explain that the MRI is long and requires lying still"
             },
             {
+              "correct": false,
               "id": "E",
-              "text": "Explain that the MRI uses a small dose of radiation",
-              "correct": false,
-              "rationale": "MRI uses magnets and gives no radiation exposure."
+              "rationale": "MRI uses magnets and gives no radiation exposure.",
+              "text": "Explain that the MRI uses a small dose of radiation"
             },
             {
-              "id": "F",
-              "text": "Explain that the radiograph is taken sitting upright",
               "correct": false,
-              "rationale": "The abdominal radiograph is taken with the patient lying supine."
+              "id": "F",
+              "rationale": "The MRI magnet can damage an insulin pump or pull it toward the scanner. The pump is reported and handled by the MRI team's protocol, with a plan for glucose control, not worn into the scanner.",
+              "text": "Have the patient keep the insulin pump on for the MRI"
             }
           ],
           "answer": [
@@ -51649,31 +51646,31 @@
             "C",
             "D"
           ],
-          "takeaway": "Abdominal radiograph: no preparation, hospital gown, remove jewelry and belts, taken supine. MRI: screen for metal implants and devices such as insulin pumps, remove all metal, longer than CT, lie still, no radiation.",
+          "takeaway": "Abdominal radiograph: no preparation, hospital gown, remove jewelry and belts. MRI: screen for metal implants and devices such as insulin pumps, which are never worn into the scanner; remove all metal; longer than CT; lie still; no radiation.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Sort each statement by test, then check it against that test's preparation. The radiograph needs almost nothing; the MRI needs metal screening.",
+          "strategy": "Sort each action by test, then check it against that test's preparation. The radiograph needs almost nothing; the MRI turns on the pump, because the magnet and the device cannot meet.",
           "elimination": {
-            "strategies": [
-              "Treat each option as true or false"
-            ],
             "steps": [
               {
                 "action": "Radiograph",
-                "detail": "Gown and removal of metal; no fasting; supine."
+                "detail": "Gown and removal of metal; no fasting."
               },
               {
                 "action": "MRI",
-                "detail": "Screen the insulin pump; lie still; longer than CT."
+                "detail": "Report the insulin pump; it does not go into the scanner; lie still; longer than CT."
               },
               {
                 "action": "Reject the radiation claim",
                 "detail": "MRI uses magnets, not radiation."
               }
+            ],
+            "strategies": [
+              "Treat each option as true or false"
             ],
             "verdict": "A, C, D."
           },
@@ -51684,7 +51681,8 @@
           "addedBatch": 11,
           "tidiedBatch": 15,
           "formattedBatch": 16,
-          "styledBatch": 17
+          "styledBatch": 17,
+          "revisedBatch": 21
         },
         {
           "id": "ig45-m33",
@@ -57840,84 +57838,82 @@
         {
           "id": "en-m20",
           "type": "sata",
-          "stem": "Before the first feeding through a new gastrostomy tube in a patient with dysphagia, which actions should the nurse take? Select all that apply.",
+          "stem": "A patient with dysphagia after a stroke will receive the first feeding through a new gastrostomy tube. Which actions should the nurse take before starting? Select all that apply.",
           "options": [
             {
+              "correct": true,
               "id": "A",
-              "text": "Review weight, intake and output, and ordered laboratory results",
-              "correct": true,
-              "rationale": "Weight, hydration, intake and output, and laboratory results give the baseline for monitoring the response to feeding."
+              "rationale": "Weight, hydration, intake and output, and laboratory results give the baseline for judging the response to feeding.",
+              "text": "Review weight, intake and output, and ordered laboratory results"
             },
             {
+              "correct": true,
               "id": "B",
-              "text": "Assess the abdomen and bowel pattern",
-              "correct": true,
-              "rationale": "Assessing the abdomen and bowel pattern gives a baseline to compare for distention, intolerance or diarrhea after feeding starts."
+              "rationale": "A baseline of the abdomen, nausea and bowel pattern lets the nurse spot distention, intolerance or diarrhea once feeding starts.",
+              "text": "Assess the abdomen, nausea and bowel pattern"
             },
             {
+              "correct": false,
               "id": "C",
-              "text": "Verify the order and identify the patient",
-              "correct": true,
-              "rationale": "Verifying the order and identifying the patient come first before any feeding."
+              "rationale": "This patient has dysphagia, so oral water risks aspiration. The tube bypasses the swallow, and swallowing is reevaluated by a formal evaluation, not by the nurse giving fluids.",
+              "text": "Offer sips of water to recheck the swallow"
             },
             {
+              "correct": true,
               "id": "D",
-              "text": "Assess consciousness and airway protection",
-              "correct": true,
-              "rationale": "Swallowing, consciousness and airway protection affect aspiration risk during feeding."
+              "rationale": "A patient with dysphagia already has a weak airway defense. Level of consciousness and airway protection decide how great the aspiration risk is during feeding.",
+              "text": "Assess consciousness and airway protection"
             },
             {
+              "correct": false,
               "id": "E",
-              "text": "Ask about nausea and vomiting",
-              "correct": true,
-              "rationale": "Nausea and vomiting raise aspiration risk and need to be known before formula starts."
+              "rationale": "Listening for injected air does not reliably confirm placement. For a gastrostomy tube, the nurse checks the external mark against the documented length and follows policy.",
+              "text": "Inject air and listen over the stomach to confirm placement"
             },
             {
-              "id": "F",
-              "text": "Record baseline respiratory status",
               "correct": true,
-              "rationale": "A baseline respiratory status lets the nurse recognize aspiration if it occurs."
+              "id": "F",
+              "rationale": "Aspiration is the main danger with dysphagia, and a baseline respiratory status lets the nurse recognize it if it occurs.",
+              "text": "Record baseline respiratory status"
             }
           ],
           "answer": [
             "A",
             "B",
-            "C",
             "D",
-            "E",
             "F"
           ],
-          "takeaway": "Before feeding: verify the order and identify the patient; assess weight, hydration, I&O and labs; assess the abdomen, nausea, vomiting and bowel pattern; evaluate swallowing, consciousness and airway protection; and establish baseline respiratory status.",
+          "takeaway": "Before the first feeding in a patient with dysphagia, the nurse gathers baselines (weight, intake and output, labs, abdomen, respiratory status) and judges aspiration risk from consciousness and airway protection. The nurse never tests the swallow with water and never relies on injected air to confirm placement.",
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
             "ppt": "full",
             "reading": [],
             "readingChecked": false
           },
-          "strategy": "Each option gives a baseline or confirms safety. Before the first feeding, every part of the assessment applies.",
+          "strategy": "Dysphagia means aspiration is the main danger. Keep the baselines that let you detect intolerance or aspiration, and reject anything that puts fluid in the mouth or uses an unreliable placement check.",
           "elimination": {
+            "steps": [
+              {
+                "action": "Keep the baselines",
+                "detail": "Weight, intake and output, labs, abdomen and respiratory status."
+              },
+              {
+                "action": "Weigh aspiration risk",
+                "detail": "Consciousness and airway protection matter most with dysphagia."
+              },
+              {
+                "action": "Reject oral water",
+                "detail": "Sips of water risk aspiration in a patient who cannot swallow safely."
+              },
+              {
+                "action": "Reject the air check",
+                "detail": "Injected air is not a reliable placement check; compare the external mark."
+              }
+            ],
             "strategies": [
               "Treat each option as true or false"
             ],
-            "steps": [
-              {
-                "action": "Safety first",
-                "detail": "Order and identity."
-              },
-              {
-                "action": "Baselines",
-                "detail": "Weight, I&O, labs and respiratory status."
-              },
-              {
-                "action": "GI status",
-                "detail": "Abdomen, bowel pattern, nausea and vomiting."
-              },
-              {
-                "action": "Aspiration risk",
-                "detail": "Consciousness and airway protection."
-              }
-            ],
-            "verdict": "A, B, C, D, E, F."
+            "verdict": "A, B, D, F."
           },
           "caseGroup": "en-c11b",
           "caseStep": 2,
@@ -57927,7 +57923,8 @@
           "trimmedBatch": 12,
           "formattedBatch": 16,
           "styledBatch": 17,
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "en-m21",
@@ -66054,8 +66051,8 @@
         {
           "id": "sk-infusion-m17",
           "type": "cloze",
-          "stem": "Complete each sentence by selecting from the choices below.",
-          "sentence": "A patient with cancer will receive chemotherapy every 3 weeks for 6 months and wants to keep swimming between treatments. The patient had a nontunneled central line during a recent intensive care stay.\n\nThe device that best fits this plan is [[1]].\n\nTo access it, the nurse uses [[2]].\n\nBetween treatment cycles, when the device is not in use, it is flushed [[3]].\n\nBefore any newly placed peripherally inserted central catheter (PICC) is used, the nurse confirms [[4]].",
+          "stem": "The nurse is planning vascular access for a patient starting long term chemotherapy. Complete each sentence by selecting from the choices below.",
+          "sentence": "A patient with cancer will receive chemotherapy every 3 weeks for 6 months and wants to keep swimming between treatments.\n\nThe device that best fits this plan is [[1]].\n\nTo access it, the nurse uses [[2]].\n\nBetween treatment cycles, when the device is not in use, it is flushed [[3]].\n\nAfter the device is placed and before the first chemotherapy dose, the nurse confirms [[4]].",
           "blanks": [
             {
               "id": 1,
@@ -66139,19 +66136,19 @@
                   "id": "A",
                   "text": "Tip placement by x ray",
                   "correct": true,
-                  "rationale": "X ray confirmation of the tip is required before a PICC is used. Tip location, not insertion site, makes a line central."
+                  "rationale": "The catheter tip must be confirmed by imaging before a newly placed central device is first used. Tip location, not where the device sits or was inserted, makes a line central."
                 },
                 {
                   "id": "B",
-                  "text": "An upper arm insertion site",
+                  "text": "The port's position under the skin",
                   "correct": false,
-                  "rationale": "The insertion site does not define a central line. The tip location does."
+                  "rationale": "Feeling the reservoir under the skin locates the port, not the catheter tip. The tip location is what makes the line central and safe for chemotherapy."
                 },
                 {
                   "id": "C",
                   "text": "A brisk blood return",
                   "correct": false,
-                  "rationale": "Blood return shows patency, not where the tip lies."
+                  "rationale": "A blood return shows the line is patent. It does not show where the tip lies."
                 }
               ]
             }
@@ -66163,7 +66160,7 @@
             "4": "A"
           },
           "scoring": "0/1",
-          "takeaway": "Implanted port: lowest infection risk, intermittent long term therapy, Huber needle, monthly flush when not in use, no external catheter. Tunneled: cuff, daily care. Nontunneled: short term, highest catheter related bloodstream infection risk. Hemodialysis catheter: dialysis only. PICC: x ray tip confirmation before use.",
+          "takeaway": "Implanted port: lowest infection risk, intermittent long term therapy, Huber needle, monthly flush when not in use, no external catheter. Tunneled: cuff, daily care. Nontunneled: short term, highest catheter related bloodstream infection risk. Hemodialysis catheter: dialysis only. Any newly placed central device, PICC or port: tip placement confirmed by x ray before first use.",
           "coverage": "Covered in the Infusion Therapy lecture slides.",
           "coverageDetail": {
             "ppt": "full",
@@ -66185,8 +66182,8 @@
                 "detail": "Huber needle, monthly flush when idle."
               },
               {
-                "action": "Confirm before using a PICC",
-                "detail": "X ray of the tip, not blood return or insertion site."
+                "action": "Confirm before the first dose",
+                "detail": "Imaging of the tip, not blood return or where the port sits."
               }
             ],
             "verdict": "An implanted port, a non coring Huber needle, monthly, tip placement by x ray."
@@ -66195,7 +66192,8 @@
           "caseStep": 2,
           "objective": "Vascular Access Devices",
           "cjmm": "Generate solutions",
-          "addedBatch": 17
+          "addedBatch": 17,
+          "revisedBatch": 21
         },
         {
           "id": "sk-infusion-x06",
@@ -67055,7 +67053,7 @@
         {
           "id": "sk-infusion-m26",
           "type": "sata",
-          "stem": "The nurse is assisting with insertion of a nontunneled central line. Which actions reduce the risk of a catheter related bloodstream infection? Select all that apply.",
+          "stem": "A patient in the intensive care unit needs a nontunneled central line. Which actions reduce the risk of a catheter related bloodstream infection? Select all that apply.",
           "options": [
             {
               "id": "A",
@@ -67135,7 +67133,8 @@
           "objective": "Safety Protocols",
           "cjmm": "Generate solutions",
           "addedBatch": 17,
-          "hardenedBatch": 20
+          "hardenedBatch": 20,
+          "revisedBatch": 21
         },
         {
           "id": "sk-infusion-x09",
