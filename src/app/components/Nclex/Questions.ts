@@ -624,3 +624,40 @@ export const buildBank = (
     Textbook: data.meta.textbook,
   };
 };
+
+// Narrows every view of a bank to the questions `keep` allows, renumbering the
+// chapter and skill tiles. Saved-result hashes stay those of the whole bank so
+// switching between narrowed views never loses track of changed questions.
+export const filterBank = (
+  bank: DerivedBank,
+  keep: (question: QuestionType) => boolean,
+): DerivedBank => {
+  const narrow = (list: ChapterType[], renumber: boolean) =>
+    list
+      .map((entry) => ({
+        ...entry,
+        questions: entry.questions
+          .filter(keep)
+          .map((question, index) =>
+            renumber ? { ...question, ordinal: index + 1 } : question,
+          ),
+      }))
+      .filter((entry) => entry.questions.length > 0);
+
+  const Chapters = narrow(bank.Chapters, true);
+  const Skills = narrow(bank.Skills, true);
+  const Cases = narrow(bank.Cases, false);
+  const Judgment = narrow(bank.Judgment, false);
+  return {
+    ...bank,
+    Chapters,
+    Skills,
+    Cases,
+    Judgment,
+    Ready: Chapters,
+    AllQuestions: Chapters.flatMap((chapter) => chapter.questions),
+    AllSkillQuestions: Skills.flatMap((skill) => skill.questions),
+    AllCaseQuestions: Cases.flatMap((entry) => entry.questions),
+    AllJudgmentQuestions: Judgment.flatMap((step) => step.questions),
+  };
+};

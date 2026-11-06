@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, useMemo, useState } from "react";
-import { PiCaretDownBold } from "react-icons/pi";
+import { PiCaretDownBold, PiChartBarBold } from "react-icons/pi";
 import { ResultType } from "./ChapterSet";
 import { ChapterType, DerivedBank, labelOf, QuestionType } from "./Questions";
 
@@ -288,11 +288,34 @@ const Progress = ({
 
   if (overall.attempted === 0) {
     return (
-      <div className="mb-8 mt-4 rounded-2xl bg-[var(--container-color)] p-7 text-center">
-        <p className="mb-1 text-lg font-bold text-[var(--title-color)]">
+      <div
+        data-shapes-safe
+        className="mb-8 mt-4 grid justify-items-center gap-y-5 rounded-xl bg-[var(--container-color)] px-7 py-10 text-center shadow-xl md:px-5"
+      >
+        <span className="inline-flex items-center gap-x-2.5 rounded-full bg-[var(--chip-blue)] py-2 pl-3 pr-5 text-sm font-bold text-[var(--title-color)] shadow-lg">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[var(--chip-blue-border)] text-[var(--body-color)]">
+            <PiChartBarBold aria-hidden />
+          </span>
           nothing to show yet
-        </p>
-        <p className="text-[var(--muted-color)]">
+        </span>
+        <div
+          aria-hidden
+          className="grid w-full max-w-[26rem] grid-cols-3 gap-2 opacity-60"
+        >
+          {[0.7, 0.45, 0.25].map((width) => (
+            <span
+              key={width}
+              className="grid gap-y-2 rounded-xl bg-[var(--body-color)] p-3"
+            >
+              <span
+                className="h-3 rounded-sm bg-[var(--track-color)]"
+                style={{ width: `${width * 100}%` }}
+              />
+              <span className="h-1.5 rounded-sm bg-[var(--track-color)]" />
+            </span>
+          ))}
+        </div>
+        <p className="max-w-[28rem] text-[var(--muted-color)]">
           Answer a few questions in Chapters or Skills and this page will track
           your score and point you at what to study next.
         </p>

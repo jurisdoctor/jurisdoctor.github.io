@@ -279,7 +279,7 @@ const ChapterSet = ({
   results: Record<string, ResultType>;
   current: string | null;
   lens: LensType;
-  onRun: (next: LensType) => void;
+  onRun: (next: LensType, keepChapter?: boolean) => void;
   noun: string;
   labelFor: (chapter: ChapterType) => string;
   picker?: "grid" | "select";
@@ -304,6 +304,11 @@ const ChapterSet = ({
     const frame = grid.getBoundingClientRect();
     setArrow(box.left - frame.left + box.width / 2);
   }, []);
+
+  useEffect(() => {
+    if (open !== null && !chapters.some((chapter) => chapter.id === open))
+      setOpen(null);
+  }, [open, chapters]);
 
   useEffect(() => {
     if (open === null) return;
@@ -361,8 +366,10 @@ const ChapterSet = ({
             on={lens === "all"}
             tone="bg-[var(--chip-blue)] text-[var(--title-color)]"
             onPick={() => {
-              setOpen(null);
-              onRun("all");
+              if (lens === "all" && open !== null) return;
+              const keep = open !== null;
+              if (!keep) setOpen(null);
+              onRun("all", keep);
             }}
           >
             All
@@ -374,8 +381,10 @@ const ChapterSet = ({
             disabled={left === 0}
             tone="bg-[var(--chip-amber)] text-[var(--title-color)]"
             onPick={() => {
-              setOpen(null);
-              onRun("incomplete");
+              if (lens === "incomplete" && open !== null) return;
+              const keep = open !== null;
+              if (!keep) setOpen(null);
+              onRun("incomplete", keep);
             }}
           >
             Incomplete

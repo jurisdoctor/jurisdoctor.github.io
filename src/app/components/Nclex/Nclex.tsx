@@ -26,6 +26,8 @@ import {
   ChapterType,
   DerivedBank,
   displayNumberOf,
+  filterBank,
+  hasTag,
   isStory,
   labelOf,
   QuestionType,
@@ -147,6 +149,13 @@ const SETS: Record<SetKind, SetType> = {
   },
 };
 
+type FinalKind = "application" | "concept";
+
+const FINAL_KINDS: { id: FinalKind; label: string }[] = [
+  { id: "application", label: "Application" },
+  { id: "concept", label: "Concept" },
+];
+
 const validView = (saved: ViewType) =>
   !!saved &&
   SECTIONS.includes(saved.section) &&
@@ -167,11 +176,13 @@ const ExamView = ({
   exam,
   examTitle,
   bank,
+  toolbar,
 }: {
   set: SetType;
   exam: string;
   examTitle: string;
   bank: DerivedBank;
+  toolbar?: ReactNode;
 }) => {
   const names = { ...TITLES, ...set.names };
   const [view, setView] = useSaved<ViewType>(
@@ -253,6 +264,12 @@ const ExamView = ({
   );
   const [deck, setDeck] = useState<QuestionType[]>([]);
   const [drill, setDrill] = useState<string | null>(null);
+  useEffect(() => {
+    setStarted(null);
+    setDeck([]);
+    setAt(0);
+    setDrill(null);
+  }, [bank]);
   useEffect(() => {
     if (section && section !== view.section) {
       setSection(section);
@@ -418,9 +435,14 @@ const ExamView = ({
 
   // Starts the whole set of the current tab at the first question not yet
   // answered, so it picks up where the learner left off.
-  const run = (which: LensType) => {
+  const run = (which: LensType, keepChapter = false) => {
     setLens(which);
     const list = viewFor(which);
+    const kept = keepChapter ? list.find((entry) => entry.id === pick) : null;
+    if (kept) {
+      open(kept.id, firstToDo(kept.questions, results), list);
+      return;
+    }
     const pool = list.flatMap((entry) => entry.questions);
     open("all", firstToDo(pool, results), list);
   };
@@ -516,28 +538,31 @@ const ExamView = ({
 
   return (
     <>
-      {available.length > 1 && (
-        <div className="mb-6 lg:flex lg:justify-center">
-          <div className="ml-3.5 inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1 lg:ml-0">
-            {available.map((entry) => (
-              <button
-                key={entry}
-                type="button"
-                onClick={() => swap(entry)}
-                aria-pressed={section === entry}
-                className={`${tab} ${
-                  section === entry
-                    ? "bg-[var(--chip-blue)] text-[var(--title-color)] shadow-lg"
-                    : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
-                }`}
-              >
-                {names[entry]}
-                {entry === "favorites" && starsReady && starCount > 0
-                  ? ` (${starCount})`
-                  : ""}
-              </button>
-            ))}
-          </div>
+      {(available.length > 1 || toolbar) && (
+        <div className="mb-6 flex flex-wrap items-center gap-3 lg:justify-center">
+          {available.length > 1 && (
+            <div className="ml-3.5 inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1 lg:ml-0">
+              {available.map((entry) => (
+                <button
+                  key={entry}
+                  type="button"
+                  onClick={() => swap(entry)}
+                  aria-pressed={section === entry}
+                  className={`${tab} ${
+                    section === entry
+                      ? "bg-[var(--chip-blue)] text-[var(--title-color)] shadow-lg"
+                      : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
+                  }`}
+                >
+                  {names[entry]}
+                  {entry === "favorites" && starsReady && starCount > 0
+                    ? ` (${starCount})`
+                    : ""}
+                </button>
+              ))}
+            </div>
+          )}
+          {toolbar}
         </div>
       )}
 
@@ -616,19 +641,7 @@ const ExamView = ({
       <Swap
         token={`${section}-${lens}-${String(pick)}-${drill}-${deck[started?.at ?? -1]?.id ?? "none"}`}
       >
-        {started === null || deck.length === 0 ? (
-          section === "progress" ? null : (
-            <p className="ml-3.5 text-[var(--muted-color)] lg:ml-0 lg:text-center">
-              Pick{" "}
-              {section === "skills"
-                ? (set.picks.skills ?? "a skill")
-                : section === "cases"
-                  ? "a case"
-                  : "a chapter"}{" "}
-              above to see its questions, or hit All to run the whole set.
-            </p>
-          )
-        ) : (
+        {started === null || deck.length === 0 ? null : (
           <>
             <h3 className="mb-6 ml-3.5 text-xl lg:ml-0 lg:text-center">
               {group?.members && group.members.length > 1 ? (
@@ -677,6 +690,19 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
     exams.find((entry) => entry.id === saved)?.id ?? exams[0]?.id ?? "";
   const examTitle = exams.find((entry) => entry.id === exam)?.title ?? "";
   const [bank, setBank] = useState<DerivedBank | null>(null);
+  const [finalKind, setFinalKind] = useSaved<FinalKind>(
+    "nclex:final:kind:v1",
+    () => "application",
+    (value) => value === "application" || value === "concept",
+  );
+  const finalView = kind === "nclex" && exam === "final";
+  const shownBank = useMemo(
+    () =>
+      bank && finalView
+        ? filterBank(bank, (question) => hasTag(question, finalKind))
+        : bank,
+    [bank, finalView, finalKind],
+  );
 
   useEffect(() => {
     if (kind !== "kaplan") return;
@@ -742,13 +768,41 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
             {bank ? bank.Course : ` `}
           </p>
 
-          {bank ? (
+          {shownBank ? (
             <ExamView
               key={`${kind}-${exam}`}
               set={set}
               exam={exam}
               examTitle={examTitle}
-              bank={bank}
+              bank={shownBank}
+              toolbar={
+                finalView && bank ? (
+                  <div className="ml-auto inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1 lg:ml-0">
+                    {FINAL_KINDS.map((entry) => (
+                      <button
+                        key={entry.id}
+                        type="button"
+                        onClick={() => setFinalKind(entry.id)}
+                        aria-pressed={finalKind === entry.id}
+                        className={`${tab} ${
+                          finalKind === entry.id
+                            ? "bg-[var(--chip-blue)] text-[var(--title-color)] shadow-lg"
+                            : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
+                        }`}
+                      >
+                        {entry.label}
+                        <span className="ml-2 text-xs font-normal opacity-70">
+                          {
+                            bank.AllQuestions.filter((question) =>
+                              hasTag(question, entry.id),
+                            ).length
+                          }
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                ) : undefined
+              }
             />
           ) : (
             <Loading />
