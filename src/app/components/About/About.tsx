@@ -16,7 +16,7 @@ const About = () => {
         about
       </Reveal>
 
-      <div className="grid grid-cols-[125px_minmax(0,760px)] justify-center gap-x-7 xl:grid-cols-[720px] xl:gap-x-[1.875rem] md:grid-cols-[320px] xs:grid-cols-1">
+      <div className="grid grid-cols-[125px_minmax(0,760px)] justify-center gap-x-7 xl:grid-cols-[720px] xl:gap-x-[max(0px,calc(1.875rem-2px))] md:grid-cols-[320px] xs:grid-cols-1">
         <Reveal
           delay={80}
           className="flex items-start justify-end xl:justify-center"

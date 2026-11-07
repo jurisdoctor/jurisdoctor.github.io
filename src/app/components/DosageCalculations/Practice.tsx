@@ -393,7 +393,7 @@ const Practice = () => {
                 }))
               }
               placeholder={`Answer in ${question.unit}`}
-              className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${saved.status === "answering" ? "" : "opacity-60"}`}
+              className={`h-14 w-full min-w-0 flex-1 rounded-2xl border-none bg-[var(--body-color)] px-[max(0px,calc(1.875rem-2px))] py-[max(0px,calc(0.625rem-2px))] text-[var(--text-color)] shadow-inner outline-none sm:flex-none ${saved.status === "answering" ? "" : "opacity-60"}`}
             />
 
             {saved.status === "missed" && (

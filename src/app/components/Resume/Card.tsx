@@ -12,9 +12,9 @@ const Card = ({ category, year, title, desc }: CardType) => {
   return (
     <div className="relative pb-4 pl-12 before:absolute before:left-1 before:top-0 before:h-full before:w-px before:bg-[var(--primary-color)] before:content-['']">
       {category === "education" ? (
-        <PiGraduationCap className="absolute -left-[0.4375rem] top-0 bg-[var(--container-color)] py-[0.3rem] text-2xl text-[var(--primary-color)]" />
+        <PiGraduationCap className="absolute -left-[0.4375rem] top-0 bg-[var(--container-color)] py-[max(0px,calc(0.3rem-2px))] text-2xl text-[var(--primary-color)]" />
       ) : (
-        <BsSuitcaseLg className="absolute -left-[0.4375rem] top-0 bg-[var(--container-color)] py-[0.3rem] text-2xl text-[var(--primary-color)]" />
+        <BsSuitcaseLg className="absolute -left-[0.4375rem] top-0 bg-[var(--container-color)] py-[max(0px,calc(0.3rem-2px))] text-2xl text-[var(--primary-color)]" />
       )}
       <span className="text-sm text-[var(--muted-color)]">{year}</span>
       <h3 className="my-1 text-xl">{title}</h3>

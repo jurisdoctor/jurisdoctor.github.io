@@ -1,45 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { PiMoon, PiSun } from "react-icons/pi";
 
-type Theme = "light" | "dark";
-
 // Dark is the default (see globals.css's base :root), so "light" is the
-// only state that needs an attribute at all — toggling back to dark just
-// removes it rather than writing a redundant "dark" value.
+// only state that needs an attribute at all, and the early script in the
+// layout sets it before first paint. Both icons are always rendered and CSS
+// shows the right one, so the toggle is there from the first frame and never
+// shifts the sidebar when the page hydrates.
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState<Theme | null>(null);
-
-  useEffect(() => {
-    setTheme(localStorage.getItem("theme") === "light" ? "light" : "dark");
-  }, []);
-
   const toggle = () => {
-    const next: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    if (next === "light") {
-      document.documentElement.setAttribute("data-theme", "light");
-    } else {
-      document.documentElement.removeAttribute("data-theme");
-    }
+    const root = document.documentElement;
+    const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    if (next === "light") root.setAttribute("data-theme", "light");
+    else root.removeAttribute("data-theme");
     try {
       localStorage.setItem("theme", next);
     } catch {}
   };
 
-  if (!theme) return <span className="block h-5 w-5" aria-hidden />;
-
   return (
     <button
       type="button"
       onClick={toggle}
-      aria-label={
-        theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
-      }
+      aria-label="Switch between light and dark mode"
       className="text-xl text-[var(--title-color)] duration-300 hover:text-[var(--accent-color)]"
     >
-      {theme === "dark" ? <PiSun /> : <PiMoon />}
+      <PiSun className="theme-sun" />
+      <PiMoon className="theme-moon" />
     </button>
   );
 };

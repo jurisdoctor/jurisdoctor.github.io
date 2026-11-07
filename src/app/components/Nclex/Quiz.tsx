@@ -124,7 +124,7 @@ const Option = ({
       </button>
 
       {answered && (
-        <p className="mt-1.5 animate-fadeIn px-[18px] text-sm leading-6 text-[var(--muted-color)]">
+        <p className="mt-1.5 animate-fadeIn px-[max(0px,calc(18px-2px))] text-sm leading-6 text-[var(--muted-color)]">
           <Temps>{option.rationale}</Temps>
         </p>
       )}

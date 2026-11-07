@@ -13,7 +13,7 @@ const Home = () => {
       </div>
 
       <section
-        className="relative flex min-h-screen items-center justify-center overflow-hidden px-[15px]"
+        className="relative flex min-h-screen items-center justify-center overflow-hidden px-[max(0px,calc(15px-2px))]"
         id="home"
       >
         <div data-shapes-safe className="z-10 max-w-[540px] text-center">

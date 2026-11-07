@@ -5,8 +5,8 @@
     "schemaVersion": 3,
     "set": "Final",
     "notes": "Final exam practice questions, built section by section from the lecture PowerPoints taught after Exam 3, with readings as support. Each section has two kinds of questions, marked by tag: \"concept\" items test the rule itself (most have a short realistic scenario whose answer turns on one rule), covering every concept on every PowerPoint slide; \"application\" items are regular difficulty NCLEX style clinical judgment questions. Every item has a cjmm step. NGN style items are kept near 15% of each section. All text says \"patient\", never \"client\". Bowtie pools and cloze blanks are shuffled so correct choices are spread across positions. Ids are stable: ig33 = Iggy chapter 33, c = concept, m = application.",
-    "questionCount": 90,
-    "chapterQuestionCount": 90,
+    "questionCount": 94,
+    "chapterQuestionCount": 94,
     "skillCount": 0,
     "chaptersIncluded": [
       1033
@@ -17,8 +17,8 @@
       "skills"
     ],
     "questionTypes": {
-      "sata": 15,
-      "multiple_choice": 63,
+      "sata": 16,
+      "multiple_choice": 66,
       "matrix": 7,
       "ordered_response": 1,
       "cloze": 2,
@@ -118,7 +118,7 @@
           1033
         ],
         "skills": [],
-        "questionCount": 90
+        "questionCount": 94
       }
     ],
     "chapterGroups": [
@@ -155,8 +155,13 @@
       "ig33-m05",
       "ig33-m10"
     ],
-    "newIds": [],
-    "newCount": 0,
+    "newIds": [
+      "ig33-m11",
+      "ig33-m12",
+      "ig33-m13",
+      "ig33-m14"
+    ],
+    "newCount": 4,
     "ngnIds": [
       "ig33-c05",
       "ig33-c13",
@@ -181,7 +186,8 @@
     ],
     "caseStudyIds": [],
     "tags": {
-      "concept": "concept question: tests the rule itself; most have a short scenario whose answer turns on one rule; covers every PowerPoint concept",
+      "new": "newest additions (application batch of 4, added 2026-11-06)",
+      "Concepts": "concept question: tests the rule itself; most have a short scenario whose answer turns on one rule; covers every PowerPoint concept",
       "application": "application question: regular difficulty NCLEX style clinical judgment"
     },
     "conceptIds": [
@@ -277,9 +283,13 @@
       "ig33-m07",
       "ig33-m08",
       "ig33-m09",
-      "ig33-m10"
+      "ig33-m10",
+      "ig33-m11",
+      "ig33-m12",
+      "ig33-m13",
+      "ig33-m14"
     ],
-    "applicationCount": 10,
+    "applicationCount": 14,
     "jeopardyIds": []
   },
   "chapters": [
@@ -358,9 +368,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -421,9 +431,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -483,9 +493,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -556,9 +566,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -645,9 +655,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -707,9 +717,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -770,9 +780,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -832,9 +842,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -895,9 +905,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -958,9 +968,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1020,9 +1030,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1083,9 +1093,9 @@
           },
           "objective": "Explain clot formation and breakdown mechanisms",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1158,9 +1168,9 @@
           },
           "objective": "Explain clot formation and breakdown mechanisms",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1220,9 +1230,9 @@
           },
           "objective": "Explain clot formation and breakdown mechanisms",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1285,9 +1295,9 @@
           },
           "objective": "Explain clot formation and breakdown mechanisms",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1349,9 +1359,9 @@
           },
           "objective": "Explain clot formation and breakdown mechanisms",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1412,9 +1422,9 @@
           },
           "objective": "Explain clot formation and breakdown mechanisms",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1490,9 +1500,9 @@
           },
           "objective": "Explain clot formation and breakdown mechanisms",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1552,9 +1562,9 @@
           },
           "objective": "Explain clot formation and breakdown mechanisms",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1615,9 +1625,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1678,9 +1688,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1758,9 +1768,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1842,9 +1852,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1905,9 +1915,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -1968,9 +1978,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2031,9 +2041,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2093,9 +2103,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2172,9 +2182,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2237,9 +2247,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Take action",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2320,9 +2330,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2384,9 +2394,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2446,9 +2456,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2509,9 +2519,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2572,9 +2582,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2706,9 +2716,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2779,9 +2789,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2844,9 +2854,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Prioritize hypotheses",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2907,9 +2917,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -2970,9 +2980,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3033,9 +3043,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Take action",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3096,9 +3106,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3159,9 +3169,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3222,9 +3232,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3285,9 +3295,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Take action",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3365,9 +3375,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3454,9 +3464,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3614,9 +3624,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3677,9 +3687,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3740,9 +3750,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3805,9 +3815,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Take action",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3868,9 +3878,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Take action",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3931,9 +3941,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Take action",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -3996,9 +4006,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Take action",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4076,9 +4086,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4141,9 +4151,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Prioritize hypotheses",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4206,9 +4216,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Evaluate outcomes",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4271,9 +4281,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Take action",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4334,9 +4344,9 @@
           },
           "objective": "Identify environmental exposures affecting blood health",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4413,9 +4423,9 @@
           },
           "objective": "Identify environmental exposures affecting blood health",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4476,9 +4486,9 @@
           },
           "objective": "Identify environmental exposures affecting blood health",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4539,9 +4549,9 @@
           },
           "objective": "Identify environmental exposures affecting blood health",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4628,9 +4638,9 @@
           },
           "objective": "Identify environmental exposures affecting blood health",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4691,9 +4701,9 @@
           },
           "objective": "Recognize carbon monoxide poisoning and nursing priorities",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4773,9 +4783,9 @@
           },
           "objective": "Recognize carbon monoxide poisoning and nursing priorities",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4838,9 +4848,9 @@
           },
           "objective": "Recognize carbon monoxide poisoning and nursing priorities",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -4921,9 +4931,9 @@
           },
           "objective": "Recognize carbon monoxide poisoning and nursing priorities",
           "cjmm": "Take action",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5008,9 +5018,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5070,9 +5080,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5134,9 +5144,9 @@
           },
           "objective": "Describe major blood components and their functions",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5198,9 +5208,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5262,9 +5272,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5343,9 +5353,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5407,9 +5417,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5471,9 +5481,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Recognize cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5535,9 +5545,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5617,9 +5627,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5681,9 +5691,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5745,9 +5755,9 @@
           },
           "objective": "Recognize hematologic abnormalities from assessments",
           "cjmm": "Take action",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5809,9 +5819,9 @@
           },
           "objective": "Understand nursing care before and after bone marrow tests",
           "cjmm": "Generate solutions",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -5873,9 +5883,9 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
-          "tag": "concept",
+          "tag": "Concepts",
           "tags": [
-            "concept"
+            "Concepts"
           ]
         },
         {
@@ -6718,6 +6728,283 @@
           "tags": [
             "application"
           ]
+        },
+        {
+          "id": "ig33-m11",
+          "type": "multiple_choice",
+          "stem": "Fifteen minutes into a unit of packed red blood cells, a patient reports chills and low back pain. Temperature rose from 36.9°C to 38.3°C. What does the nurse do first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "slow the transfusion and recheck vital signs in 15 minutes",
+              "correct": false,
+              "rationale": "Slowing still delivers incompatible cells. Chills, back pain and a fever early in a transfusion suggest a hemolytic reaction, so the transfusion is stopped, not slowed."
+            },
+            {
+              "id": "B",
+              "text": "give acetaminophen and continue the transfusion as ordered",
+              "correct": false,
+              "rationale": "Treating the fever hides the reaction while more incompatible blood is given."
+            },
+            {
+              "id": "C",
+              "text": "stop the transfusion and keep the IV line open",
+              "correct": true,
+              "rationale": "Stopping limits how much incompatible blood enters. Keeping the line open with 0.9% sodium chloride (new tubing) preserves access for treatment; then the provider and blood bank are notified."
+            },
+            {
+              "id": "D",
+              "text": "send a blood sample for a Coombs test before stopping",
+              "correct": false,
+              "rationale": "A Coombs test helps confirm a hemolytic reaction, but testing never comes before stopping the infusion."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Signs of a transfusion reaction mean stop the transfusion first, keep the line open with 0.9% sodium chloride, then notify the provider and blood bank. Typing, antibody screen and crossmatch exist to prevent this reaction.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Every option except one keeps the blood running or delays stopping it. In a suspected reaction, the first action removes the cause.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Name the problem",
+                "detail": "Chills, back pain and fever 15 minutes in suggest a hemolytic reaction."
+              },
+              {
+                "action": "Remove the cause first",
+                "detail": "Stop the blood; tests and comfort measures come after."
+              }
+            ],
+            "verdict": "Stop the transfusion and keep the line open."
+          },
+          "objective": "Connect lab tests with clinical purposes",
+          "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "ig33-m12",
+          "type": "multiple_choice",
+          "stem": "A patient on day 6 of a heparin infusion has a platelet count of 98 K/µL. On admission it was 260 K/µL. The aPTT is within the ordered range. What does the nurse do?",
+          "options": [
+            {
+              "id": "A",
+              "text": "continue the infusion because the aPTT is therapeutic",
+              "correct": false,
+              "rationale": "A therapeutic aPTT shows the dose is right, but it says nothing about platelets. The drop is a separate safety problem."
+            },
+            {
+              "id": "B",
+              "text": "report the platelet drop to the provider promptly",
+              "correct": true,
+              "rationale": "Heparin can lower the platelet count, which is why platelets are monitored during therapy. A fall of more than half from baseline is reported promptly so the provider can decide whether to stop heparin."
+            },
+            {
+              "id": "C",
+              "text": "increase the infusion rate to prevent new clots",
+              "correct": false,
+              "rationale": "Raising the dose ignores the platelet drop and adds bleeding risk."
+            },
+            {
+              "id": "D",
+              "text": "recheck the platelet count again in 1 week",
+              "correct": false,
+              "rationale": "Waiting a week lets a dangerous drop continue."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "During heparin therapy, the nurse watches the platelet count as well as the aPTT. A large drop from baseline is reported promptly, even when the aPTT is therapeutic.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Two labs are given. Decide which one is the problem: the aPTT is in range, the platelets have fallen by more than half.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Read each lab",
+                "detail": "aPTT in range; platelets fell from 260 to 98."
+              },
+              {
+                "action": "Match to the safety check",
+                "detail": "Heparin requires platelet monitoring."
+              }
+            ],
+            "verdict": "Report the platelet drop."
+          },
+          "objective": "Connect lab tests with clinical purposes",
+          "cjmm": "Recognize cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "ig33-m13",
+          "type": "sata",
+          "stem": "A patient with neutropenia after chemotherapy is going home. Which teaching points does the nurse include? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "wash hands often and before eating",
+              "correct": true,
+              "rationale": "Hand hygiene is the most important protection when neutrophils, the first responders to bacteria, are low."
+            },
+            {
+              "id": "B",
+              "text": "check temperature daily and report 38°C or higher right away",
+              "correct": true,
+              "rationale": "Fever may be the only sign of infection when neutrophils are low, and it needs prompt care."
+            },
+            {
+              "id": "C",
+              "text": "avoid people who are sick, and crowds when possible",
+              "correct": true,
+              "rationale": "Limiting exposure lowers the chance of catching an infection the body cannot fight well."
+            },
+            {
+              "id": "D",
+              "text": "use a soft toothbrush and an electric razor",
+              "correct": false,
+              "rationale": "These protect against bleeding from low platelets, a different cytopenia. Nothing here says platelets are low."
+            },
+            {
+              "id": "E",
+              "text": "take temperatures rectally for the most accurate result",
+              "correct": false,
+              "rationale": "Rectal temperatures can injure the mucosa and introduce bacteria; they are avoided in neutropenia."
+            },
+            {
+              "id": "F",
+              "text": "avoid raw or undercooked meat and eggs",
+              "correct": true,
+              "rationale": "Undercooked foods can carry bacteria that a neutropenic patient cannot fight off."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "F"
+          ],
+          "takeaway": "Neutropenia carries the highest infection risk: teach hand hygiene, avoiding sick people, safe food handling, and to report a fever right away.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Match each teaching point to the problem this patient has. Infection prevention fits neutropenia; bleeding precautions fit a low platelet count.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the risk",
+                "detail": "Low neutrophils mean infection risk."
+              },
+              {
+                "action": "Sort each option",
+                "detail": "Keep infection prevention; set aside bleeding precautions and rectal temperatures."
+              }
+            ],
+            "verdict": "Hand hygiene, temperature checks, avoiding sick people, safe food."
+          },
+          "objective": "Connect lab tests with clinical purposes",
+          "cjmm": "Generate solutions",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "ig33-m14",
+          "type": "multiple_choice",
+          "stem": "A patient on a stable warfarin dose had an INR of 2.6 last month. Today it is 1.5. The patient started drinking a large spinach and kale smoothie every morning. How does the nurse interpret this?",
+          "options": [
+            {
+              "id": "A",
+              "text": "the new vitamin K intake is lowering the warfarin effect",
+              "correct": true,
+              "rationale": "Warfarin works by reducing the vitamin K dependent clotting factors. A sudden rise in vitamin K from leafy greens lets the liver make more factors, so the INR falls below goal."
+            },
+            {
+              "id": "B",
+              "text": "the patient needs to stop eating leafy greens",
+              "correct": false,
+              "rationale": "Leafy greens do not have to be removed; the teaching is to keep vitamin K intake consistent."
+            },
+            {
+              "id": "C",
+              "text": "the INR is in the expected range for warfarin",
+              "correct": false,
+              "rationale": "An INR of 1.5 is below the usual goal of 2 to 3, so the patient is less protected from clots."
+            },
+            {
+              "id": "D",
+              "text": "the smoothie is raising the risk of bleeding",
+              "correct": false,
+              "rationale": "More vitamin K pushes toward clotting, not bleeding. A falling INR means less anticoagulant effect."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "A sudden increase in vitamin K lowers warfarin's effect and the INR. Teach consistent vitamin K intake, not avoidance, and report the change to the provider.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Link the new habit to how warfarin works: more vitamin K means more clotting factors, which means a lower INR.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Note the change",
+                "detail": "INR dropped after a new daily source of vitamin K."
+              },
+              {
+                "action": "Apply the mechanism",
+                "detail": "Warfarin blocks vitamin K dependent factors; extra vitamin K overrides it."
+              }
+            ],
+            "verdict": "Vitamin K intake is lowering the warfarin effect."
+          },
+          "objective": "Connect lab tests with clinical purposes",
+          "cjmm": "Analyze cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
         }
       ]
     }

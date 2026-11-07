@@ -102,7 +102,7 @@ const Gate = ({
           value={word}
           onChange={(event) => setWord(event.target.value)}
           placeholder="Password"
-          className="mb-4 h-14 w-full rounded-2xl border-none bg-[var(--body-color)] px-[1.875rem] py-[0.625rem] text-center text-[var(--text-color)] shadow-inner outline-none"
+          className="mb-4 h-14 w-full rounded-2xl border-none bg-[var(--body-color)] px-[max(0px,calc(1.875rem-2px))] py-[max(0px,calc(0.625rem-2px))] text-center text-[var(--text-color)] shadow-inner outline-none"
         />
 
         {wrong > 0 && (

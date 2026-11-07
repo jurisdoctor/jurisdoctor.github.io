@@ -46,7 +46,7 @@ const Resume = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-2 items-start gap-x-7 lg:grid-cols-[450px] lg:justify-center lg:gap-y-[1.875rem] sm:grid-cols-1">
+      <div className="grid grid-cols-2 items-start gap-x-7 lg:grid-cols-[450px] lg:justify-center lg:gap-y-[max(0px,calc(1.875rem-2px))] sm:grid-cols-1">
         <Reveal delay={80}>
           <div
             key={`education-${tab}`}

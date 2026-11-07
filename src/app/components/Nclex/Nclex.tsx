@@ -32,7 +32,7 @@ import {
   labelOf,
   QuestionType,
 } from "./Questions";
-import Progress, { AttemptType } from "./Progress";
+import Progress, { AttemptType, KindType } from "./Progress";
 import Quiz from "./Quiz";
 import Swap from "./Swap";
 import TypedText, { Segment } from "../Typed/TypedText";
@@ -149,12 +149,17 @@ const SETS: Record<SetKind, SetType> = {
   },
 };
 
-type FinalKind = "application" | "concept";
+type FinalKind = "application" | "concepts";
 
 const FINAL_KINDS: { id: FinalKind; label: string }[] = [
   { id: "application", label: "Application" },
-  { id: "concept", label: "Concept" },
+  { id: "concepts", label: "Concepts" },
 ];
+
+const FINAL_TALLIES: KindType[] = FINAL_KINDS.map((entry) => ({
+  label: entry.label,
+  match: (question: QuestionType) => hasTag(question, entry.id),
+}));
 
 const validView = (saved: ViewType) =>
   !!saved &&
@@ -177,12 +182,16 @@ const ExamView = ({
   examTitle,
   bank,
   toolbar,
+  progressBank,
+  kinds,
 }: {
   set: SetType;
   exam: string;
   examTitle: string;
   bank: DerivedBank;
   toolbar?: ReactNode;
+  progressBank?: DerivedBank;
+  kinds?: KindType[];
 }) => {
   const names = { ...TITLES, ...set.names };
   const [view, setView] = useSaved<ViewType>(
@@ -572,7 +581,8 @@ const ExamView = ({
 
       {section === "progress" ? (
         <Progress
-          bank={bank}
+          bank={progressBank ?? bank}
+          kinds={kinds}
           results={results}
           attempts={attempts}
           onPractice={practice}
@@ -693,7 +703,7 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
   const [finalKind, setFinalKind] = useSaved<FinalKind>(
     "nclex:final:kind:v1",
     () => "application",
-    (value) => value === "application" || value === "concept",
+    (value) => value === "application" || value === "concepts",
   );
   const finalView = kind === "nclex" && exam === "final";
   const shownBank = useMemo(
@@ -775,6 +785,8 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
               exam={exam}
               examTitle={examTitle}
               bank={shownBank}
+              progressBank={finalView ? (bank ?? undefined) : undefined}
+              kinds={finalView ? FINAL_TALLIES : undefined}
               toolbar={
                 finalView && bank ? (
                   <div className="ml-auto inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1 lg:ml-0">

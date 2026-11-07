@@ -461,7 +461,9 @@ export interface DerivedBank {
 const isJudgment = (question: QuestionType) => /-cj\d+$/.test(question.id);
 
 export const hasTag = (question: QuestionType, name: string) =>
-  question.tag === name || !!question.tags?.includes(name);
+  [question.tag, ...(question.tags ?? [])].some(
+    (tag) => tag?.toLowerCase() === name.toLowerCase(),
+  );
 
 export const isStory = (question: QuestionType) =>
   hasTag(question, "case-study") && !!question.caseGroup;

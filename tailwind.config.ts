@@ -1,4 +1,16 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
+
+const TRIM = "2px";
+
+const tighter = Object.fromEntries(
+  Object.entries(defaultTheme.spacing).map(([key, value]) => [
+    key,
+    value === "0px" || value === "1px" || !/rem$/.test(value)
+      ? value
+      : `max(0px, calc(${value} - ${TRIM}))`,
+  ]),
+);
 
 const config: Config = {
   darkMode: ["selector", '[data-theme="dark"]'],
@@ -23,14 +35,18 @@ const config: Config = {
       xs: { max: "350px" },
     },
     extend: {
+      padding: tighter,
+      margin: tighter,
+      gap: tighter,
+      space: tighter,
       borderRadius: {
-        DEFAULT: "1.5px",
-        sm: "1px",
-        md: "1.5px",
-        lg: "1.5px",
-        xl: "1.5px",
-        "2xl": "1.5px",
-        "3xl": "1.5px",
+        DEFAULT: "3px",
+        sm: "2px",
+        md: "4px",
+        lg: "6px",
+        xl: "8px",
+        "2xl": "10px",
+        "3xl": "12px",
       },
       boxShadow: {
         md: "0 1px 2px rgba(0,0,0,0.22)",

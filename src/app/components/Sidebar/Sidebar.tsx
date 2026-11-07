@@ -36,7 +36,7 @@ const Sidebar = () => {
   const navToggle =
     "fixed left-[1.875rem] top-5 z-10 hidden h-[40px] w-[45px] cursor-pointer items-center justify-center bg-[var(--body-color)] lg:flex rounded-lg duration-300 shadow-md";
   const aside =
-    "l-0 t-0 fixed z-10 flex min-h-[100dvh] w-20 flex-col justify-between border-r border-solid border-[var(--border-color)] bg-[var(--body-color)] p-6 lg:left-[-80px] duration-300";
+    "l-0 t-0 fixed z-10 flex min-h-[100dvh] w-20 flex-col items-center justify-between border-r border-solid border-[var(--border-color)] bg-[var(--body-color)] px-[18px] py-6 lg:left-[-80px] duration-300";
   return (
     <>
       {toggle && (
@@ -64,12 +64,12 @@ const Sidebar = () => {
 
         <nav className="nav">
           <div className="nav__menu">
-            <ul className="flex flex-col gap-y-4">
+            <ul className="flex flex-col items-center gap-y-4">
               <li className="nav__item">
                 <Link
                   href={sectionHref("home")}
                   onClick={(e) => scrollToSection(e, "home")}
-                  className={navLink}
+                  className={`${navLink} flex`}
                 >
                   <PiHouse />
                 </Link>
@@ -78,7 +78,7 @@ const Sidebar = () => {
                 <Link
                   href="/dosage-calculations"
                   onClick={() => setToggle(false)}
-                  className={`${navLink} ${path === "/dosage-calculations" ? "!text-[var(--accent-color)]" : ""}`}
+                  className={`${navLink} flex ${path === "/dosage-calculations" ? "!text-[var(--accent-color)]" : ""}`}
                 >
                   <PiCalculator />
                 </Link>
@@ -90,7 +90,7 @@ const Sidebar = () => {
                   onClick={() => setToggle(false)}
                   aria-label="Pharm"
                   title="Pharm"
-                  className={`${navLink} ${path.startsWith("/pharm") ? "!text-[var(--accent-color)]" : ""}`}
+                  className={`${navLink} flex ${path.startsWith("/pharm") ? "!text-[var(--accent-color)]" : ""}`}
                 >
                   <PiGraduationCap />
                 </Link>
@@ -102,7 +102,7 @@ const Sidebar = () => {
                   onClick={() => setToggle(false)}
                   aria-label="Drug guide"
                   title="Drug guide"
-                  className={`${navLink} ${path.startsWith("/medications") ? "!text-[var(--accent-color)]" : ""}`}
+                  className={`${navLink} flex ${path.startsWith("/medications") ? "!text-[var(--accent-color)]" : ""}`}
                 >
                   <PiPill />
                 </Link>
@@ -111,7 +111,7 @@ const Sidebar = () => {
           </div>
         </nav>
 
-        <div className="mx-auto">
+        <div className="flex justify-center">
           <ThemeToggle />
         </div>
       </aside>

@@ -4,6 +4,11 @@ import { PiCaretDownBold, PiChartBarBold } from "react-icons/pi";
 import { ResultType } from "./ChapterSet";
 import { ChapterType, DerivedBank, labelOf, QuestionType } from "./Questions";
 
+export interface KindType {
+  label: string;
+  match: (question: QuestionType) => boolean;
+}
+
 export interface AttemptType {
   tries: number;
   wrong: number;
@@ -144,11 +149,13 @@ const Progress = ({
   bank,
   results,
   attempts,
+  kinds,
   onPractice,
 }: {
   bank: DerivedBank;
   results: Record<string, ResultType>;
   attempts: Record<string, AttemptType>;
+  kinds?: KindType[];
   onPractice: (questions: QuestionType[], label: string) => void;
 }) => {
   const view = useMemo(() => {
@@ -257,7 +264,17 @@ const Progress = ({
       (question) => results[question.id] === "missed",
     );
 
+    const parts = (kinds ?? []).map((kind) => {
+      const members = questions.filter(kind.match);
+      return {
+        label: kind.label,
+        tally: tallyOf(members, results),
+        missed: members.filter((question) => results[question.id] === "missed"),
+      };
+    });
+
     return {
+      parts,
       redo: { redone, turned, stuck },
       entries: entries
         .map((entry) => ({
@@ -275,7 +292,7 @@ const Progress = ({
       steps: grouped((question) => question.cjmm),
       missedAll,
     };
-  }, [bank, results, attempts]);
+  }, [bank, results, attempts, kinds]);
 
   const [opened, setOpened] = useState<Record<string, boolean>>({});
   const isOpen = (label: string) =>
@@ -349,6 +366,23 @@ const Progress = ({
           note={`${Math.round((overall.attempted / overall.total) * 100)}% done`}
         />
       </div>
+
+      {view.parts.length > 0 && (
+        <div className={card}>
+          <h3 className={heading}>By kind of question</h3>
+          <p className={hint}>how you score on each part of this exam</p>
+          <div className="grid gap-y-4">
+            {view.parts.map((part) => (
+              <Row
+                key={part.label}
+                name={part.label}
+                tally={part.tally}
+                onPractice={() => onPractice(part.missed, part.label)}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className={card}>
         <h3 className={heading}>Redo tracker</h3>
