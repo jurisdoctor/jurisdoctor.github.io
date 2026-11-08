@@ -413,6 +413,14 @@ const keySignature = (question: QuestionType) => {
         key,
         pool.options.filter((option) => option.correct).length,
       ]);
+  if (
+    question.answer &&
+    typeof question.answer === "object" &&
+    !Array.isArray(question.answer)
+  )
+    return Object.values(question.answer)
+      .map((value) => JSON.stringify(value))
+      .sort();
   return question.answer;
 };
 
