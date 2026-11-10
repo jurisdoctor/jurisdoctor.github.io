@@ -1,7 +1,12 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { FormEvent, ReactNode, useEffect, useRef, useState } from "react";
-import { PiArrowLeftBold, PiUsersThreeBold } from "react-icons/pi";
+import {
+  PiArrowLeftBold,
+  PiPlusBold,
+  PiUsersThreeBold,
+  PiXBold,
+} from "react-icons/pi";
 import Results from "./Results";
 import Shell from "./Shell";
 import Winner from "./Winner";
@@ -12,7 +17,8 @@ import {
   FLIP_MS,
   PLAYERS,
   SKIP_SECONDS,
-  TEAMS,
+  MAX_TEAMS,
+  MIN_TEAMS,
   categoryOf,
   dealCards,
   field,
@@ -181,6 +187,18 @@ const HeadsUp = () => {
         ...prev,
         teams: prev.teams.map((team, at) => (at === index ? value : team)),
       }));
+    const addTeam = () =>
+      setState((prev) =>
+        prev.teams.length >= MAX_TEAMS
+          ? prev
+          : { ...prev, teams: [...prev.teams, ""] },
+      );
+    const removeTeam = (index: number) =>
+      setState((prev) =>
+        prev.teams.length <= MIN_TEAMS
+          ? prev
+          : { ...prev, teams: prev.teams.filter((_, at) => at !== index) },
+      );
     return (
       <Shell>
         <Panel>
@@ -188,7 +206,8 @@ const HeadsUp = () => {
             Team names
           </h2>
           <p className="mb-5 text-sm text-[var(--muted-color)]">
-            {TEAMS} teams of {PLAYERS}, give each one a name
+            at least {MIN_TEAMS} teams of {PLAYERS}, add up to {MAX_TEAMS} with
+            +
           </p>
           <div className="grid gap-y-3">
             {state.teams.map((team, index) => (
@@ -209,9 +228,32 @@ const HeadsUp = () => {
                   <PiUsersThreeBold aria-hidden />
                   {PLAYERS}
                 </span>
+                {index >= MIN_TEAMS ? (
+                  <button
+                    type="button"
+                    onClick={() => removeTeam(index)}
+                    aria-label={`Remove team ${index + 1}`}
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[var(--muted-color)] duration-300 hover:text-[var(--primary-color)]"
+                  >
+                    <PiXBold aria-hidden />
+                  </button>
+                ) : (
+                  <span className="h-9 w-9 shrink-0" aria-hidden />
+                )}
               </label>
             ))}
           </div>
+          {state.teams.length < MAX_TEAMS && (
+            <button
+              type="button"
+              onClick={addTeam}
+              aria-label="Add team"
+              className={`${ghost} mt-4`}
+            >
+              <PiPlusBold aria-hidden />
+              Add team
+            </button>
+          )}
           <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
             <button
               type="button"
@@ -246,7 +288,7 @@ const HeadsUp = () => {
     (card) => !state.turns.some((turn) => turn.card === card.id),
   );
   const next = state.turns.length;
-  const finished = remaining.length === 0;
+  const finished = state.turns.length >= state.teams.length;
   const winner = finished ? standings(state.turns)[0] : null;
 
   const pick = (card: CardId) => {

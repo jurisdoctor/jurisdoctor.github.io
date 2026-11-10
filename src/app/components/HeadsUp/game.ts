@@ -6,7 +6,8 @@ export * from "./data";
 export const TITLE = "Culture Project: Heads Up! Philippines!";
 export const DIGEST =
   "c63b9dfff2edf3cdb6e137831a8fa89188949d78611730c431101a0f94cce095";
-export const TEAMS = 5;
+export const MIN_TEAMS = 2;
+export const MAX_TEAMS = 5;
 export const PLAYERS = 7;
 export const NEEDED = 3;
 export const SKIP_SECONDS = 15;
@@ -50,7 +51,7 @@ export interface StateType {
 const fresh = (): StateType => ({
   key: "",
   stage: "rules",
-  teams: Array.from({ length: TEAMS }, () => ""),
+  teams: Array.from({ length: MIN_TEAMS }, () => ""),
   deal: null,
   turns: [],
   active: null,
@@ -64,7 +65,8 @@ const valid = (saved: StateType) =>
     saved.stage === "teams" ||
     saved.stage === "cards") &&
   Array.isArray(saved.teams) &&
-  saved.teams.length === TEAMS &&
+  saved.teams.length >= MIN_TEAMS &&
+  saved.teams.length <= MAX_TEAMS &&
   saved.teams.every((team) => typeof team === "string") &&
   (saved.deal === null || typeof saved.deal === "object") &&
   Array.isArray(saved.turns) &&
