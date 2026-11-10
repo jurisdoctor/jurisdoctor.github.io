@@ -5,8 +5,8 @@
     "schemaVersion": 3,
     "set": "Final",
     "notes": "Final exam practice questions, built section by section from the lecture PowerPoints taught after Exam 3, with readings as support. Each section has two kinds of questions, marked by tag: \"concept\" items test the rule itself (most have a short realistic scenario whose answer turns on one rule), covering every concept on every PowerPoint slide; \"application\" items are regular difficulty NCLEX style clinical judgment questions. Every item has a cjmm step. NGN style items are kept near 15% of each section. All text says \"patient\", never \"client\". Bowtie pools and cloze blanks are shuffled so correct choices are spread across positions. Ids are stable: ig33 = Iggy chapter 33, ig18 = Iggy chapter 18, c = concept, m = application, x = hard application (difficulty: difficult).",
-    "questionCount": 184,
-    "chapterQuestionCount": 184,
+    "questionCount": 192,
+    "chapterQuestionCount": 192,
     "skillCount": 0,
     "chaptersIncluded": [
       1033,
@@ -18,8 +18,8 @@
       "skills"
     ],
     "questionTypes": {
-      "sata": 32,
-      "multiple_choice": 126,
+      "sata": 35,
+      "multiple_choice": 131,
       "matrix": 15,
       "ordered_response": 1,
       "cloze": 4,
@@ -120,7 +120,7 @@
           1018
         ],
         "skills": [],
-        "questionCount": 184
+        "questionCount": 192
       }
     ],
     "chapterGroups": [
@@ -184,22 +184,16 @@
       "ig18-m09"
     ],
     "newIds": [
-      "ig33-m23",
-      "ig33-x01",
-      "ig33-x02",
-      "ig33-x03",
-      "ig18-m01",
-      "ig18-m02",
-      "ig18-m03",
-      "ig18-m04",
-      "ig18-m05",
-      "ig18-m06",
-      "ig18-m07",
-      "ig18-m08",
-      "ig18-m09",
-      "ig18-m10"
+      "ig33-m24",
+      "ig33-m25",
+      "ig33-m26",
+      "ig33-m27",
+      "ig18-m11",
+      "ig18-m12",
+      "ig18-m13",
+      "ig18-m14"
     ],
-    "newCount": 14,
+    "newCount": 8,
     "ngnIds": [
       "ig33-c05",
       "ig33-c13",
@@ -238,7 +232,7 @@
     ],
     "caseStudyIds": [],
     "tags": {
-      "new": "newest additions (2026-11-09: 4 hematology, including 3 hard, and 10 cancer application)",
+      "new": "newest additions (2026-11-10: 4 hematology and 4 cancer application)",
       "Concepts": "concept question: tests the rule itself; most have a short scenario whose answer turns on one rule; covers every PowerPoint concept",
       "application": "application question: regular difficulty NCLEX style clinical judgment"
     },
@@ -417,6 +411,10 @@
       "ig33-m21",
       "ig33-m22",
       "ig33-m23",
+      "ig33-m24",
+      "ig33-m25",
+      "ig33-m26",
+      "ig33-m27",
       "ig33-x01",
       "ig33-x02",
       "ig33-x03",
@@ -429,9 +427,13 @@
       "ig18-m07",
       "ig18-m08",
       "ig18-m09",
-      "ig18-m10"
+      "ig18-m10",
+      "ig18-m11",
+      "ig18-m12",
+      "ig18-m13",
+      "ig18-m14"
     ],
-    "applicationCount": 36,
+    "applicationCount": 44,
     "jeopardyIds": []
   },
   "chapters": [
@@ -7810,6 +7812,298 @@
           "cjmm": "Evaluate outcomes",
           "tag": "application",
           "tags": [
+            "application"
+          ]
+        },
+        {
+          "id": "ig33-m24",
+          "type": "sata",
+          "stem": "The nurse is assessing a patient with advanced liver cirrhosis. Which findings does the nurse expect because of the liver's role in blood health? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Platelet count above normal",
+              "correct": false,
+              "rationale": "Platelets are often low in cirrhosis, because an enlarged spleen traps them. A high count is not expected."
+            },
+            {
+              "id": "B",
+              "text": "Easy bruising on the arms",
+              "correct": true,
+              "rationale": "The liver makes most clotting factors. With fewer factors, small bumps bruise easily."
+            },
+            {
+              "id": "C",
+              "text": "Shortened time for blood to clot",
+              "correct": false,
+              "rationale": "Fewer clotting factors make clotting slower, not faster."
+            },
+            {
+              "id": "D",
+              "text": "Prolonged international normalized ratio",
+              "correct": true,
+              "rationale": "The INR rises when the liver cannot make enough clotting factors, even without warfarin."
+            },
+            {
+              "id": "E",
+              "text": "Gums that bleed when brushing teeth",
+              "correct": true,
+              "rationale": "Low clotting factors cause oozing from small mucosal injuries like brushing."
+            }
+          ],
+          "answer": [
+            "B",
+            "D",
+            "E"
+          ],
+          "takeaway": "The liver makes many plasma proteins and clotting factors. In liver failure, expect bruising, mucosal bleeding and a prolonged INR.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Start from what the liver makes: clotting factors. Every correct finding is a result of having too few of them.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the liver's job",
+                "detail": "It makes clotting factors."
+              },
+              {
+                "action": "Predict the result",
+                "detail": "Slower clotting: bruising, bleeding gums, high INR."
+              },
+              {
+                "action": "Reject the opposites",
+                "detail": "Faster clotting and high platelets do not fit."
+              }
+            ],
+            "verdict": "Bruising, a prolonged INR and bleeding gums."
+          },
+          "objective": "Describe major blood components and their functions",
+          "cjmm": "Recognize cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "ig33-m25",
+          "type": "multiple_choice",
+          "stem": "A patient with a new leg clot started on heparin asks, “Will this dissolve my clot?” Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "“Heparin keeps the clot from growing while your body breaks it down.”",
+              "correct": true,
+              "rationale": "Heparin is an anticoagulant: it stops new fibrin from forming. The body's own fibrinolytic system, through plasmin, dissolves the existing clot over time."
+            },
+            {
+              "id": "B",
+              "text": "“Yes, heparin dissolves the clot within the first few hours.”",
+              "correct": false,
+              "rationale": "Heparin does not break down fibrin. Dissolving a clot quickly takes a fibrinolytic drug such as alteplase."
+            },
+            {
+              "id": "C",
+              "text": "“Heparin thins the blood so the clot passes through your veins.”",
+              "correct": false,
+              "rationale": "Heparin does not thin the blood or move the clot. A clot that travels is an embolism, which is a danger, not a goal."
+            },
+            {
+              "id": "D",
+              "text": "“No, the clot will stay the same size for the rest of your life.”",
+              "correct": false,
+              "rationale": "The body's fibrinolytic system breaks clots down over weeks, so the clot usually shrinks."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Anticoagulants such as heparin stop new clot formation; they do not dissolve an existing clot. Fibrinolysis, through plasmin, breaks the clot down.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Separate the two halves of hemostasis: formation and breakdown. Heparin acts on formation only, so any option claiming it dissolves or moves the clot is wrong.",
+          "elimination": {
+            "strategies": [
+              "Eliminate absolutes",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the drug class",
+                "detail": "Heparin is an anticoagulant, not a fibrinolytic."
+              },
+              {
+                "action": "Recall what breaks clots down",
+                "detail": "Plasmin, from the body's fibrinolytic system."
+              },
+              {
+                "action": "Reject the absolute",
+                "detail": "“The rest of your life” is never accurate here."
+              }
+            ],
+            "verdict": "Heparin stops growth; the body breaks the clot down."
+          },
+          "objective": "Explain clot formation and breakdown mechanisms",
+          "cjmm": "Analyze cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "ig33-m26",
+          "type": "multiple_choice",
+          "stem": "A patient with severe anemia has hemoglobin 6.8 g/dL. Which finding requires immediate follow up?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pale inner eyelids and nail beds",
+              "correct": false,
+              "rationale": "Pallor is expected with this hemoglobin. It confirms the anemia but is not a new danger."
+            },
+            {
+              "id": "B",
+              "text": "Chest pressure while walking to the bathroom",
+              "correct": true,
+              "rationale": "Chest pressure on exertion means the heart is not getting enough oxygen. Low hemoglobin can cause myocardial ischemia, so this needs immediate follow up."
+            },
+            {
+              "id": "C",
+              "text": "Fatigue after showering in the morning",
+              "correct": false,
+              "rationale": "Fatigue is expected with low oxygen carrying capacity. It is planned for, not escalated."
+            },
+            {
+              "id": "D",
+              "text": "Cool hands and feeling cold in the room",
+              "correct": false,
+              "rationale": "Feeling cold is a common, expected finding with anemia."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "With severe anemia, pallor, fatigue and cold intolerance are expected; chest pain or pressure means the heart is short of oxygen and is escalated right away.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Every option fits anemia, so ask which one threatens an organ. Chest pressure signals the heart is starved of oxygen.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Apply the ABCs"
+            ],
+            "steps": [
+              {
+                "action": "Accept the expected findings",
+                "detail": "Pallor, fatigue and feeling cold all fit anemia."
+              },
+              {
+                "action": "Find the organ at risk",
+                "detail": "Chest pressure on exertion means cardiac ischemia."
+              }
+            ],
+            "verdict": "Chest pressure while walking."
+          },
+          "objective": "Recognize hematologic abnormalities from assessments",
+          "cjmm": "Prioritize hypotheses",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "ig33-m27",
+          "type": "sata",
+          "stem": "A patient has new anemia with a low white blood cell count. Which history findings suggest an environmental exposure that can harm blood health? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Drinks filtered tap water at home",
+              "correct": false,
+              "rationale": "Filtered water is not a known source of a blood harming exposure."
+            },
+            {
+              "id": "B",
+              "text": "Sanded old paint while restoring a 1940s house",
+              "correct": true,
+              "rationale": "Old paint often contains lead, which blocks heme production and can cause anemia."
+            },
+            {
+              "id": "C",
+              "text": "Uses a fitness tracker every day",
+              "correct": false,
+              "rationale": "A fitness tracker is not an exposure that affects the blood."
+            },
+            {
+              "id": "D",
+              "text": "Works at a refinery handling gasoline products",
+              "correct": true,
+              "rationale": "Gasoline contains benzene, which damages the bone marrow and can lower blood cell counts."
+            },
+            {
+              "id": "E",
+              "text": "Smokes one pack of cigarettes a day",
+              "correct": true,
+              "rationale": "Cigarette smoke contains benzene, a marrow toxin."
+            }
+          ],
+          "answer": [
+            "B",
+            "D",
+            "E"
+          ],
+          "takeaway": "Ask about home, work and hobby exposures: lead from old paint impairs hemoglobin production, and benzene from gasoline, industry and cigarette smoke harms the marrow.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Match each history detail to a known blood toxin: lead or benzene. Anything that is not a source of either is not the answer.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Lead sources",
+                "detail": "Disturbing old paint, soil, dust."
+              },
+              {
+                "action": "Benzene sources",
+                "detail": "Gasoline, industrial work, cigarette smoke."
+              },
+              {
+                "action": "Discard the rest",
+                "detail": "Filtered water and a fitness tracker carry no exposure."
+              }
+            ],
+            "verdict": "Old paint, refinery work and smoking."
+          },
+          "objective": "Identify environmental exposures affecting blood health",
+          "cjmm": "Recognize cues",
+          "tag": "application",
+          "tags": [
             "application",
             "new"
           ],
@@ -7881,10 +8175,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "difficulty": "difficult"
         },
         {
@@ -7951,10 +8243,8 @@
           "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "difficulty": "difficult"
         },
         {
@@ -8019,10 +8309,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "difficulty": "difficult"
         }
       ]
@@ -12367,10 +12655,8 @@
           "cjmm": "Prioritize hypotheses",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m02",
@@ -12442,10 +12728,8 @@
           "cjmm": "Evaluate outcomes",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m03",
@@ -12532,10 +12816,8 @@
           "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m04",
@@ -12692,10 +12974,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m05",
@@ -12757,10 +13037,8 @@
           "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m06",
@@ -12817,10 +13095,8 @@
           "cjmm": "Evaluate outcomes",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m07",
@@ -12899,10 +13175,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m08",
@@ -12974,10 +13248,8 @@
           "cjmm": "Generate solutions",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m09",
@@ -13088,10 +13360,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m10",
@@ -13152,6 +13422,297 @@
           },
           "objective": "Apply safety precautions when caring for patients receiving cancer treatment",
           "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application"
+          ]
+        },
+        {
+          "id": "ig18-m11",
+          "type": "multiple_choice",
+          "stem": "A patient with colon cancer who has not started treatment now has right upper abdominal pain and rising liver enzymes. What is the most likely explanation?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A side effect of the cancer treatment plan",
+              "correct": false,
+              "rationale": "The patient has not started treatment, so this cannot be a treatment effect."
+            },
+            {
+              "id": "B",
+              "text": "A new, unrelated primary cancer in the liver",
+              "correct": false,
+              "rationale": "A second primary cancer is possible but far less likely than spread from the known colon cancer."
+            },
+            {
+              "id": "C",
+              "text": "Cancer cells spread through the blood to the liver",
+              "correct": true,
+              "rationale": "Blood from the colon drains to the liver first, so colon cancer commonly metastasizes there. Cells break off, travel in the blood and seed a new tumor."
+            },
+            {
+              "id": "D",
+              "text": "Normal tissue reacting to the stress of a diagnosis",
+              "correct": false,
+              "rationale": "Emotional stress does not raise liver enzymes or cause organ pain."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Metastasis happens when cancer cells break away, travel through blood or lymph, and grow in a distant organ. Colon cancer commonly spreads to the liver.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is covered in Reading (Iggy).",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "Iggy"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Use the known diagnosis first. A patient with a known cancer and a new problem in a common site of spread most likely has metastasis.",
+          "elimination": {
+            "strategies": [
+              "Duplicate facts",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Rule out treatment",
+                "detail": "No treatment has started."
+              },
+              {
+                "action": "Pick the common over the rare",
+                "detail": "Spread from a known cancer beats a second primary."
+              },
+              {
+                "action": "Name the route",
+                "detail": "Through the blood to the liver."
+              }
+            ],
+            "verdict": "Spread through the blood to the liver."
+          },
+          "objective": "Explain how cancer develops, invades nearby tissue, and spreads",
+          "cjmm": "Analyze cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "ig18-m12",
+          "type": "sata",
+          "stem": "A patient with no symptoms asks which activities are cancer screening. Which activities does the nurse include? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Getting the HPV vaccine",
+              "correct": false,
+              "rationale": "The vaccine prevents infection with a virus that causes cancer. That is risk reduction, not screening."
+            },
+            {
+              "id": "B",
+              "text": "A yearly fecal immunochemical stool test",
+              "correct": true,
+              "rationale": "This looks for hidden blood from colon cancer in a person without symptoms, which is screening."
+            },
+            {
+              "id": "C",
+              "text": "Wearing sunscreen outdoors",
+              "correct": false,
+              "rationale": "Sunscreen lowers the chance of skin cancer starting. That is risk reduction."
+            },
+            {
+              "id": "D",
+              "text": "A yearly low dose chest CT after years of heavy smoking",
+              "correct": true,
+              "rationale": "Low dose CT finds lung cancer early in a high risk person without symptoms, which is screening."
+            },
+            {
+              "id": "E",
+              "text": "A biopsy of a mole that changed color",
+              "correct": false,
+              "rationale": "A biopsy works up a finding that already exists. That is diagnostic evaluation, not screening."
+            },
+            {
+              "id": "F",
+              "text": "A monthly skin check for new or changing moles",
+              "correct": true,
+              "rationale": "A routine skin check looks for skin cancer early in a person without symptoms, which is screening."
+            }
+          ],
+          "answer": [
+            "B",
+            "D",
+            "F"
+          ],
+          "takeaway": "Screening finds cancer early in people without symptoms. Risk reduction stops cancer from starting, and diagnostic evaluation works up a finding.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "For each option ask: does it prevent cancer, look for it in a well person, or work up a finding? Only the middle group is screening.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Remove prevention",
+                "detail": "Vaccine and sunscreen lower risk."
+              },
+              {
+                "action": "Remove diagnosis",
+                "detail": "A biopsy of a changed mole works up a finding."
+              },
+              {
+                "action": "Keep detection",
+                "detail": "Stool test, low dose CT, skin checks."
+              }
+            ],
+            "verdict": "Stool test, low dose CT and skin checks."
+          },
+          "objective": "Distinguish cancer risk reduction, screening, and diagnostic evaluation",
+          "cjmm": "Generate solutions",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "ig18-m13",
+          "type": "multiple_choice",
+          "stem": "A patient with a small breast tumor, T1 N0 M0, grade 3, asks why chemotherapy is recommended when the tumor is so small. Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "“Grade 3 cells look very abnormal and tend to grow and spread faster.”",
+              "correct": true,
+              "rationale": "Grade describes how abnormal the cells look. Poorly differentiated, grade 3 cells are aggressive, so treatment may be advised even when the stage is early."
+            },
+            {
+              "id": "B",
+              "text": "“A small tumor always needs chemotherapy before surgery.”",
+              "correct": false,
+              "rationale": "Tumor size alone does not require chemotherapy, and the absolute “always” is inaccurate."
+            },
+            {
+              "id": "C",
+              "text": "“Grade 3 means the cancer is already in three lymph nodes.”",
+              "correct": false,
+              "rationale": "Grade is not about lymph nodes. N0 means no nodes are involved."
+            },
+            {
+              "id": "D",
+              "text": "“Your cancer has already spread, so the size of the tumor no longer matters at all.”",
+              "correct": false,
+              "rationale": "M0 means no distant spread was found. The stage is early."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Stage (TNM) tells how far the cancer has spread; grade tells how abnormal and aggressive the cells are. A high grade can change treatment even at an early stage.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The TNM part is reassuring, so the reason for chemotherapy must come from the grade. Reject options that confuse grade with nodes or spread.",
+          "elimination": {
+            "strategies": [
+              "Eliminate absolutes",
+              "Opposite pair, look closely"
+            ],
+            "steps": [
+              {
+                "action": "Read the stage",
+                "detail": "T1 N0 M0: small, no nodes, no distant spread."
+              },
+              {
+                "action": "Read the grade",
+                "detail": "Grade 3: very abnormal, aggressive cells."
+              },
+              {
+                "action": "Connect to treatment",
+                "detail": "Aggressive cells justify systemic treatment."
+              }
+            ],
+            "verdict": "Grade 3 cells are aggressive."
+          },
+          "objective": "Differentiate tumor grade from cancer stage",
+          "cjmm": "Analyze cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "ig18-m14",
+          "type": "multiple_choice",
+          "stem": "After surgery removed a colon tumor with clear margins, a patient asks, “Why do I need chemotherapy if the cancer is gone?” Which response by the nurse is accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "“Chemotherapy will shrink the tumor before your surgery.”",
+              "correct": false,
+              "rationale": "Chemotherapy before surgery to shrink a tumor is neoadjuvant. This patient's surgery is already done."
+            },
+            {
+              "id": "B",
+              "text": "“Chemotherapy is only to keep you comfortable now.”",
+              "correct": false,
+              "rationale": "Comfort focused treatment is palliative. This chemotherapy aims to prevent the cancer from coming back."
+            },
+            {
+              "id": "C",
+              "text": "“It kills cancer cells that may remain but are too small to detect.”",
+              "correct": true,
+              "rationale": "This is adjuvant chemotherapy: given after the main treatment to destroy hidden cells and lower the chance of recurrence."
+            },
+            {
+              "id": "D",
+              "text": "“Clear margins mean the surgeon was not able to remove all of the cancer cells.”",
+              "correct": false,
+              "rationale": "Clear margins mean no cancer was seen at the edges of the removed tissue, which is the goal of surgery."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Adjuvant therapy follows surgery to kill undetected cells and prevent recurrence. Neoadjuvant therapy comes before surgery to shrink the tumor.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Timing decides the name: the surgery is done, so the treatment is adjuvant, and its job is to catch what cannot be seen.",
+          "elimination": {
+            "strategies": [
+              "Opposite pair, look closely",
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Check the timing",
+                "detail": "After surgery is adjuvant; before is neoadjuvant."
+              },
+              {
+                "action": "Name the goal",
+                "detail": "Kill hidden cells, prevent recurrence."
+              },
+              {
+                "action": "Correct the misread",
+                "detail": "Clear margins are good news."
+              }
+            ],
+            "verdict": "It kills cells too small to detect."
+          },
+          "objective": "Compare the goals and common types of cancer treatment",
+          "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
             "application",
