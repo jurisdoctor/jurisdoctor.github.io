@@ -61,10 +61,10 @@ export const CATEGORIES: CategoryType[] = [
     words: [
       "karaoke",
       "taking off shoes (at the door)",
-      "eating with your hands",
+      "chess",
       "basketball",
       "boxing",
-      "bamboo dance",
+      "volleyball",
     ],
   },
 ];
