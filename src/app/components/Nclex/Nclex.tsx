@@ -805,9 +805,11 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
                         {entry.label}
                         <span className="ml-2 text-xs font-normal opacity-70">
                           {
-                            bank.AllQuestions.filter((question) =>
-                              hasTag(question, entry.id),
-                            ).length
+                            [
+                              ...bank.AllQuestions,
+                              ...bank.AllSkillQuestions,
+                            ].filter((question) => hasTag(question, entry.id))
+                              .length
                           }
                         </span>
                       </button>
