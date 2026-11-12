@@ -929,15 +929,15 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Shortness of breath and fatigue with light activity",
-              "answer": "Red blood cells",
-              "rationale": "Red cells carry oxygen on hemoglobin; fewer red cells means less oxygen to tissues, so activity causes dyspnea and fatigue."
+              "text": "Gums that bleed after brushing",
+              "answer": "Platelets",
+              "rationale": "Gum bleeding is a small vessel bleed, the classic sign of too few platelets to plug minor injuries."
             },
             {
               "id": "r2",
-              "text": "Three infections in the past four months",
-              "answer": "White blood cells",
-              "rationale": "White cells recognize pathogens, make antibodies and destroy infected cells; a shortage leaves the patient open to repeated infections."
+              "text": "Swollen ankles and puffy eyelids",
+              "answer": "Albumin",
+              "rationale": "Albumin keeps fluid inside the vessels by regulating osmotic pressure; when it is low, fluid leaks into the tissues as edema."
             },
             {
               "id": "r3",
@@ -947,30 +947,30 @@
             },
             {
               "id": "r4",
-              "text": "Swollen ankles and puffy eyelids",
-              "answer": "Albumin",
-              "rationale": "Albumin keeps fluid inside the vessels by regulating osmotic pressure; when it is low, fluid leaks into the tissues as edema."
+              "text": "Shortness of breath and fatigue with light activity",
+              "answer": "Red blood cells",
+              "rationale": "Red cells carry oxygen on hemoglobin; fewer red cells means less oxygen to tissues, so activity causes dyspnea and fatigue."
             },
             {
               "id": "r5",
-              "text": "Gums that bleed after brushing",
-              "answer": "Platelets",
-              "rationale": "Gum bleeding is a small vessel bleed, the classic sign of too few platelets to plug minor injuries."
-            },
-            {
-              "id": "r6",
               "text": "Pale skin and nail beds",
               "answer": "Red blood cells",
               "rationale": "Pallor reflects less hemoglobin in the blood, which means fewer red cells carrying oxygen."
+            },
+            {
+              "id": "r6",
+              "text": "Three infections in the past four months",
+              "answer": "White blood cells",
+              "rationale": "White cells recognize pathogens, make antibodies and destroy infected cells; a shortage leaves the patient open to repeated infections."
             }
           ],
           "answer": {
-            "r1": "Red blood cells",
-            "r2": "White blood cells",
+            "r1": "Platelets",
+            "r2": "Albumin",
             "r3": "Platelets",
-            "r4": "Albumin",
-            "r5": "Platelets",
-            "r6": "Red blood cells"
+            "r4": "Red blood cells",
+            "r5": "Red blood cells",
+            "r6": "White blood cells"
           },
           "scoring": "0/1",
           "takeaway": "Each component has one main job: red cells carry oxygen, white cells defend, platelets plug and albumin holds fluid in the vessels. A shortage shows up as the loss of that job.",
@@ -2611,41 +2611,41 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Pallor, weakness, and dyspnea walking to the bathroom",
-              "answer": "Anemia",
-              "rationale": "Fatigue, pallor, weakness and dyspnea point to anemia: less oxygen is delivered, so the heart and lungs work harder."
-            },
-            {
-              "id": "r2",
-              "text": "Third fever and infection in two months",
-              "answer": "Immune deficiency",
-              "rationale": "Fever and recurrent infections point to immune deficiency, because the WBCs that fight infection are low or not working."
-            },
-            {
-              "id": "r3",
-              "text": "Petechiae on the shins and bleeding gums",
-              "answer": "Platelet disorder",
-              "rationale": "Petechiae, bruising and gum bleeding point to a platelet disorder. Low platelets show first in the smallest vessels of the skin and gums."
-            },
-            {
-              "id": "r4",
               "text": "Venipuncture site still oozing after 15 minutes",
               "answer": "Impaired hemostasis",
               "rationale": "Prolonged bleeding points to impaired hemostasis, a breakdown in the process that stops bleeding."
             },
             {
-              "id": "r5",
+              "id": "r2",
               "text": "New swelling and pain in one calf",
               "answer": "Possible venous clot",
               "rationale": "New swelling and pain in one limb is a possible venous clot until proven otherwise. Report it and do not massage the limb."
+            },
+            {
+              "id": "r3",
+              "text": "Pallor, weakness, and dyspnea walking to the bathroom",
+              "answer": "Anemia",
+              "rationale": "Fatigue, pallor, weakness and dyspnea point to anemia: less oxygen is delivered, so the heart and lungs work harder."
+            },
+            {
+              "id": "r4",
+              "text": "Petechiae on the shins and bleeding gums",
+              "answer": "Platelet disorder",
+              "rationale": "Petechiae, bruising and gum bleeding point to a platelet disorder. Low platelets show first in the smallest vessels of the skin and gums."
+            },
+            {
+              "id": "r5",
+              "text": "Third fever and infection in two months",
+              "answer": "Immune deficiency",
+              "rationale": "Fever and recurrent infections point to immune deficiency, because the WBCs that fight infection are low or not working."
             }
           ],
           "answer": {
-            "r1": "Anemia",
-            "r2": "Immune deficiency",
-            "r3": "Platelet disorder",
-            "r4": "Impaired hemostasis",
-            "r5": "Possible venous clot"
+            "r1": "Impaired hemostasis",
+            "r2": "Possible venous clot",
+            "r3": "Anemia",
+            "r4": "Platelet disorder",
+            "r5": "Immune deficiency"
           },
           "scoring": "0/1",
           "takeaway": "Fatigue, pallor and dyspnea mean anemia; recurrent infection means immune deficiency; petechiae and gum bleeding mean a platelet disorder; prolonged bleeding means impaired hemostasis; new limb swelling and pain means a possible clot.",
@@ -2942,27 +2942,27 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "leukopenia",
-                  "correct": false,
-                  "rationale": "Leukopenia means only the WBC count is low."
-                },
-                {
-                  "id": "B",
-                  "text": "pancytopenia",
-                  "correct": true,
-                  "rationale": "Pancytopenia means all three cell lines are low. Because the marrow makes all three, it signals serious marrow suppression."
-                },
-                {
-                  "id": "C",
                   "text": "thrombocytopenia",
                   "correct": false,
                   "rationale": "Thrombocytopenia means only platelets are low."
                 },
                 {
-                  "id": "D",
+                  "id": "B",
+                  "text": "leukopenia",
+                  "correct": false,
+                  "rationale": "Leukopenia means only the WBC count is low."
+                },
+                {
+                  "id": "C",
                   "text": "anemia",
                   "correct": false,
                   "rationale": "Anemia means only hemoglobin or RBCs are low."
+                },
+                {
+                  "id": "D",
+                  "text": "pancytopenia",
+                  "correct": true,
+                  "rationale": "Pancytopenia means all three cell lines are low. Because the marrow makes all three, it signals serious marrow suppression."
                 }
               ]
             },
@@ -2971,27 +2971,27 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "lymphopenia",
-                  "correct": false,
-                  "rationale": "Lymphopenia lowers lymphocytes, but neutrophils are the first responders, so neutropenia carries the highest infection risk."
-                },
-                {
-                  "id": "B",
                   "text": "neutropenia",
                   "correct": true,
                   "rationale": "Neutropenia carries the highest infection vulnerability because neutrophils are the first responders to bacteria."
                 },
                 {
-                  "id": "C",
+                  "id": "B",
                   "text": "leukopenia",
                   "correct": false,
                   "rationale": "Leukopenia raises infection risk, but a low total WBC count is less specific than low neutrophils, which are the first responders."
                 },
                 {
-                  "id": "D",
+                  "id": "C",
                   "text": "anemia",
                   "correct": false,
                   "rationale": "Anemia affects oxygen delivery, not defense against infection."
+                },
+                {
+                  "id": "D",
+                  "text": "lymphopenia",
+                  "correct": false,
+                  "rationale": "Lymphopenia lowers lymphocytes, but neutrophils are the first responders, so neutropenia carries the highest infection risk."
                 }
               ]
             },
@@ -3000,15 +3000,15 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "polycythemia",
-                  "correct": false,
-                  "rationale": "Polycythemia is too many red cells, not a cytopenia, and it raises clot risk."
-                },
-                {
-                  "id": "B",
                   "text": "thrombocytopenia",
                   "correct": true,
                   "rationale": "Thrombocytopenia is a low platelet count, so the danger is bruising, petechiae and bleeding."
+                },
+                {
+                  "id": "B",
+                  "text": "neutropenia",
+                  "correct": false,
+                  "rationale": "Neutropenia raises infection risk, not bleeding risk."
                 },
                 {
                   "id": "C",
@@ -3018,17 +3018,17 @@
                 },
                 {
                   "id": "D",
-                  "text": "neutropenia",
+                  "text": "polycythemia",
                   "correct": false,
-                  "rationale": "Neutropenia raises infection risk, not bleeding risk."
+                  "rationale": "Polycythemia is too many red cells, not a cytopenia, and it raises clot risk."
                 }
               ]
             }
           ],
           "answer": {
-            "1": "B",
-            "2": "B",
-            "3": "B"
+            "1": "D",
+            "2": "A",
+            "3": "A"
           },
           "takeaway": "Match each low count to its danger: red cells and oxygen, white cells and infection (neutrophils most of all), platelets and bleeding. All three low is pancytopenia.",
           "coverage": "Covered in Lecture PPT.",
@@ -3736,9 +3736,9 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Slow, even thinning of hair on the lower legs over several years",
-              "answer": "Fits normal aging",
-              "rationale": "Gradual, even hair loss on the legs is a normal aging change and is not counted as poor perfusion."
+              "text": "Gets winded on the stairs, which was easy 6 months ago",
+              "answer": "Needs further evaluation",
+              "rationale": "A loss of activity tolerance compared with the patient's baseline is a subtle change that can point to anemia."
             },
             {
               "id": "r2",
@@ -3748,35 +3748,35 @@
             },
             {
               "id": "r3",
-              "text": "Bruises on both forearms that the patient cannot explain",
-              "answer": "Needs further evaluation",
-              "rationale": "Unexplained bruising is a bleeding tendency to evaluate, not an expected change."
+              "text": "Slow, even thinning of hair on the lower legs over several years",
+              "answer": "Fits normal aging",
+              "rationale": "Gradual, even hair loss on the legs is a normal aging change and is not counted as poor perfusion."
             },
             {
               "id": "r4",
-              "text": "Dry skin on the arms and legs",
-              "answer": "Fits normal aging",
-              "rationale": "Dry skin and reduced turgor are common in older adults and are not reliable signs of a blood problem."
-            },
-            {
-              "id": "r5",
               "text": "Three urinary infections since spring, none the year before",
               "answer": "Needs further evaluation",
               "rationale": "More frequent infections than the patient's baseline can signal falling white cells or weaker immunity and are assessed."
             },
             {
+              "id": "r5",
+              "text": "Dry skin on the arms and legs",
+              "answer": "Fits normal aging",
+              "rationale": "Dry skin and reduced turgor are common in older adults and are not reliable signs of a blood problem."
+            },
+            {
               "id": "r6",
-              "text": "Gets winded on the stairs, which was easy 6 months ago",
+              "text": "Bruises on both forearms that the patient cannot explain",
               "answer": "Needs further evaluation",
-              "rationale": "A loss of activity tolerance compared with the patient's baseline is a subtle change that can point to anemia."
+              "rationale": "Unexplained bruising is a bleeding tendency to evaluate, not an expected change."
             }
           ],
           "answer": {
-            "r1": "Fits normal aging",
+            "r1": "Needs further evaluation",
             "r2": "Needs further evaluation",
-            "r3": "Needs further evaluation",
-            "r4": "Fits normal aging",
-            "r5": "Needs further evaluation",
+            "r3": "Fits normal aging",
+            "r4": "Needs further evaluation",
+            "r5": "Fits normal aging",
             "r6": "Needs further evaluation"
           },
           "scoring": "0/1",
@@ -4911,47 +4911,47 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Sands old paint while renovating an older home",
-              "answer": "Interferes with heme production",
-              "rationale": "Older paint is a lead source, and lead interferes with heme production, which can lead to anemia."
-            },
-            {
-              "id": "r2",
-              "text": "Runs a charcoal grill indoors during a power outage",
-              "answer": "Blocks hemoglobin from carrying oxygen",
-              "rationale": "Burning fuel indoors releases carbon monoxide, which binds hemoglobin and reduces oxygen carrying capacity."
-            },
-            {
-              "id": "r3",
-              "text": "Works daily near refinery emissions",
-              "answer": "Disrupts cell production in the marrow",
-              "rationale": "Industrial emissions contain benzene, which disrupts hematopoiesis in the marrow."
-            },
-            {
-              "id": "r4",
               "text": "Uses benzene containing solvents at a chemical plant",
               "answer": "Disrupts cell production in the marrow",
               "rationale": "Some chemical products contain benzene, which harms the marrow's blood cell production."
             },
             {
-              "id": "r5",
+              "id": "r2",
+              "text": "Sands old paint while renovating an older home",
+              "answer": "Interferes with heme production",
+              "rationale": "Older paint is a lead source, and lead interferes with heme production, which can lead to anemia."
+            },
+            {
+              "id": "r3",
               "text": "Grows food in contaminated garden soil",
               "answer": "Interferes with heme production",
               "rationale": "Contaminated soil is a common lead source; lead disrupts heme production."
             },
             {
-              "id": "r6",
+              "id": "r4",
               "text": "Lives with a faulty furnace and no CO alarm",
               "answer": "Blocks hemoglobin from carrying oxygen",
               "rationale": "A faulty furnace can leak carbon monoxide; without an alarm, exposure goes unnoticed while hemoglobin is blocked from carrying oxygen."
+            },
+            {
+              "id": "r5",
+              "text": "Works daily near refinery emissions",
+              "answer": "Disrupts cell production in the marrow",
+              "rationale": "Industrial emissions contain benzene, which disrupts hematopoiesis in the marrow."
+            },
+            {
+              "id": "r6",
+              "text": "Runs a charcoal grill indoors during a power outage",
+              "answer": "Blocks hemoglobin from carrying oxygen",
+              "rationale": "Burning fuel indoors releases carbon monoxide, which binds hemoglobin and reduces oxygen carrying capacity."
             }
           ],
           "answer": {
-            "r1": "Interferes with heme production",
-            "r2": "Blocks hemoglobin from carrying oxygen",
-            "r3": "Disrupts cell production in the marrow",
-            "r4": "Disrupts cell production in the marrow",
-            "r5": "Interferes with heme production",
+            "r1": "Disrupts cell production in the marrow",
+            "r2": "Interferes with heme production",
+            "r3": "Interferes with heme production",
+            "r4": "Blocks hemoglobin from carrying oxygen",
+            "r5": "Disrupts cell production in the marrow",
             "r6": "Blocks hemoglobin from carrying oxygen"
           },
           "scoring": "0/1",
@@ -5292,48 +5292,48 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Confirm that informed consent was obtained",
-              "answer": "Before the procedure",
-              "rationale": "Consent is confirmed before sedation and before the procedure begins."
-            },
-            {
-              "id": "r2",
               "text": "Apply pressure to the site and check the dressing regularly",
               "answer": "After the procedure",
               "rationale": "Pressure and dressing checks prevent and detect bleeding, the priority after the procedure."
             },
             {
-              "id": "r3",
-              "text": "Follow sedation recovery protocols and monitor vital signs",
-              "answer": "After the procedure",
-              "rationale": "Recovery from sedation is monitored once the procedure is done."
-            },
-            {
-              "id": "r4",
+              "id": "r2",
               "text": "Review medications, allergies and bleeding risks",
               "answer": "Before the procedure",
               "rationale": "Anticoagulants, allergies and bleeding risks are reviewed beforehand so the provider can decide what to hold."
             },
             {
-              "id": "r5",
-              "text": "Explain the pressure and brief pulling pain the patient will feel",
-              "answer": "Before the procedure",
-              "rationale": "Explaining expected sensations ahead of time lowers anxiety and is part of preparation."
-            },
-            {
-              "id": "r6",
+              "id": "r3",
               "text": "Teach site care and activity limits",
               "answer": "After the procedure",
               "rationale": "Site care and activity restrictions are taught before discharge, after the procedure."
+            },
+            {
+              "id": "r4",
+              "text": "Follow sedation recovery protocols and monitor vital signs",
+              "answer": "After the procedure",
+              "rationale": "Recovery from sedation is monitored once the procedure is done."
+            },
+            {
+              "id": "r5",
+              "text": "Confirm that informed consent was obtained",
+              "answer": "Before the procedure",
+              "rationale": "Consent is confirmed before sedation and before the procedure begins."
+            },
+            {
+              "id": "r6",
+              "text": "Explain the pressure and brief pulling pain the patient will feel",
+              "answer": "Before the procedure",
+              "rationale": "Explaining expected sensations ahead of time lowers anxiety and is part of preparation."
             }
           ],
           "answer": {
-            "r1": "Before the procedure",
-            "r2": "After the procedure",
+            "r1": "After the procedure",
+            "r2": "Before the procedure",
             "r3": "After the procedure",
-            "r4": "Before the procedure",
+            "r4": "After the procedure",
             "r5": "Before the procedure",
-            "r6": "After the procedure"
+            "r6": "Before the procedure"
           },
           "scoring": "0/1",
           "takeaway": "Before: explain sensations, confirm consent, review medications and bleeding risks, prepare positioning and sedation. After: pressure and dressing checks, watch for bleeding, swelling and pain, sedation recovery, and discharge teaching.",
@@ -5906,40 +5906,40 @@
           "rows": [
             {
               "id": "r1",
-              "text": "AB positive patient receiving A negative red cells",
-              "answer": "Compatible",
-              "rationale": "AB positive is the universal recipient and can receive red cells of any type."
-            },
-            {
-              "id": "r2",
-              "text": "A positive patient receiving O negative red cells",
-              "answer": "Compatible",
-              "rationale": "O negative is the universal red cell donor."
-            },
-            {
-              "id": "r3",
               "text": "B negative patient receiving B positive red cells",
               "answer": "Not compatible",
               "rationale": "An Rh negative patient receives only Rh negative red cells."
             },
             {
-              "id": "r4",
+              "id": "r2",
+              "text": "AB positive patient receiving A negative red cells",
+              "answer": "Compatible",
+              "rationale": "AB positive is the universal recipient and can receive red cells of any type."
+            },
+            {
+              "id": "r3",
               "text": "A negative patient receiving AB negative red cells",
               "answer": "Not compatible",
               "rationale": "AB cells carry the B antigen, which an A patient's anti B antibodies attack."
             },
             {
-              "id": "r5",
+              "id": "r4",
               "text": "O positive patient receiving O negative red cells",
               "answer": "Compatible",
               "rationale": "An O positive patient can receive O positive or O negative red cells."
+            },
+            {
+              "id": "r5",
+              "text": "A positive patient receiving O negative red cells",
+              "answer": "Compatible",
+              "rationale": "O negative is the universal red cell donor."
             }
           ],
           "answer": {
-            "r1": "Compatible",
+            "r1": "Not compatible",
             "r2": "Compatible",
             "r3": "Not compatible",
-            "r4": "Not compatible",
+            "r4": "Compatible",
             "r5": "Compatible"
           },
           "scoring": "0/1",
@@ -6562,9 +6562,9 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Platelets 18 K/µL",
-              "answer": "Bleeding",
-              "rationale": "A very low platelet count means platelets cannot form the initial plug at vessel injuries, so bleeding risk is high."
+              "text": "Hemoglobin 7.4 g/dL",
+              "answer": "Poor oxygen delivery",
+              "rationale": "Low hemoglobin means less oxygen carrying protein, so tissues receive less oxygen. This is the anemia part of pancytopenia."
             },
             {
               "id": "r2",
@@ -6574,21 +6574,21 @@
             },
             {
               "id": "r3",
+              "text": "Platelets 18 K/µL",
+              "answer": "Bleeding",
+              "rationale": "A very low platelet count means platelets cannot form the initial plug at vessel injuries, so bleeding risk is high."
+            },
+            {
+              "id": "r4",
               "text": "Neutrophils 0.4 K/µL",
               "answer": "Infection",
               "rationale": "Neutropenia carries the highest infection vulnerability because neutrophils are the first responders to bacteria. A count this low means almost no first responders are available."
             },
             {
-              "id": "r4",
+              "id": "r5",
               "text": "Temperature 38.2 °C with chills",
               "answer": "Infection",
               "rationale": "Fever with chills in a patient with low WBCs signals infection, even if other signs of inflammation are muted."
-            },
-            {
-              "id": "r5",
-              "text": "Hemoglobin 7.4 g/dL",
-              "answer": "Poor oxygen delivery",
-              "rationale": "Low hemoglobin means less oxygen carrying protein, so tissues receive less oxygen. This is the anemia part of pancytopenia."
             },
             {
               "id": "r6",
@@ -6598,11 +6598,11 @@
             }
           ],
           "answer": {
-            "r1": "Bleeding",
+            "r1": "Poor oxygen delivery",
             "r2": "Bleeding",
-            "r3": "Infection",
+            "r3": "Bleeding",
             "r4": "Infection",
-            "r5": "Poor oxygen delivery",
+            "r5": "Infection",
             "r6": "Poor oxygen delivery"
           },
           "scoring": "0/1",
@@ -6930,9 +6930,9 @@
                 },
                 {
                   "id": "B",
-                  "text": "Notify the provider and expect a carboxyhemoglobin level",
+                  "text": "Apply 100% oxygen by nonrebreather mask",
                   "correct": true,
-                  "rationale": "Prompt reporting is a priority, and a carboxyhemoglobin level confirms the diagnosis. Severe cases may need hyperbaric oxygen."
+                  "rationale": "100% oxygen speeds removal of carbon monoxide from hemoglobin and is given right away, regardless of the SpO2 value."
                 },
                 {
                   "id": "C",
@@ -6942,15 +6942,15 @@
                 },
                 {
                   "id": "D",
-                  "text": "Titrate oxygen down to an SpO2 of 94%",
-                  "correct": false,
-                  "rationale": "Pulse oximetry can read falsely normal in carbon monoxide poisoning, so oxygen is not lowered based on it."
+                  "text": "Notify the provider and expect a carboxyhemoglobin level",
+                  "correct": true,
+                  "rationale": "Prompt reporting is a priority, and a carboxyhemoglobin level confirms the diagnosis. Severe cases may need hyperbaric oxygen."
                 },
                 {
                   "id": "E",
-                  "text": "Apply 100% oxygen by nonrebreather mask",
-                  "correct": true,
-                  "rationale": "100% oxygen speeds removal of carbon monoxide from hemoglobin and is given right away, regardless of the SpO2 value."
+                  "text": "Titrate oxygen down to an SpO2 of 94%",
+                  "correct": false,
+                  "rationale": "Pulse oximetry can read falsely normal in carbon monoxide poisoning, so oxygen is not lowered based on it."
                 }
               ]
             },
@@ -6990,27 +6990,27 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Hemoglobin level",
+                  "text": "Blood lead level",
                   "correct": false,
-                  "rationale": "The hemoglobin amount is usually normal. The problem is that carbon monoxide is bound to it, not that there is too little of it."
+                  "rationale": "It is another environmental test, but lead causes anemia over months, not overnight symptoms from a heater."
                 },
                 {
                   "id": "B",
-                  "text": "Carboxyhemoglobin level",
-                  "correct": true,
-                  "rationale": "This level confirms carbon monoxide poisoning and shows whether treatment is working as it falls."
-                },
-                {
-                  "id": "C",
                   "text": "Pulse oximetry trend",
                   "correct": false,
                   "rationale": "The oximeter cannot tell carboxyhemoglobin from oxyhemoglobin, so its values stay falsely normal and do not track recovery."
                 },
                 {
+                  "id": "C",
+                  "text": "Carboxyhemoglobin level",
+                  "correct": true,
+                  "rationale": "This level confirms carbon monoxide poisoning and shows whether treatment is working as it falls."
+                },
+                {
                   "id": "D",
-                  "text": "Blood lead level",
+                  "text": "Hemoglobin level",
                   "correct": false,
-                  "rationale": "It is another environmental test, but lead causes anemia over months, not overnight symptoms from a heater."
+                  "rationale": "The hemoglobin amount is usually normal. The problem is that carbon monoxide is bound to it, not that there is too little of it."
                 },
                 {
                   "id": "E",
@@ -7024,13 +7024,13 @@
           "answer": {
             "actions": [
               "B",
-              "E"
+              "D"
             ],
             "condition": [
               "B"
             ],
             "parameters": [
-              "B",
+              "C",
               "E"
             ]
           },
@@ -7860,48 +7860,48 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Inspects the skin and gums for bleeding",
-              "answer": "Appropriate",
-              "rationale": "Inspection for petechiae, bruising and gum bleeding is a key part of assessing a patient with low platelets."
-            },
-            {
-              "id": "r2",
               "text": "Palpates deeply under the left ribs to feel the spleen",
               "answer": "Requires intervention",
               "rationale": "An enlarged spleen ruptures easily. The nurse does not palpate it when a hematologic problem is suspected; the provider assesses it."
             },
             {
-              "id": "r3",
-              "text": "Uses a firm, tight blood pressure cuff on the same arm repeatedly",
-              "answer": "Requires intervention",
-              "rationale": "Repeated, prolonged cuff pressure can cause bruising and petechiae with a low platelet count; handle the patient gently."
-            },
-            {
-              "id": "r4",
-              "text": "Asks about bleeding after brushing teeth",
-              "answer": "Appropriate",
-              "rationale": "Gum bleeding is a platelet related finding worth asking about."
-            },
-            {
-              "id": "r5",
+              "id": "r2",
               "text": "Palpates lymph nodes gently and notes size",
               "answer": "Appropriate",
               "rationale": "Gentle lymph node palpation is part of the hematologic assessment; document size, tenderness and whether the node moves."
             },
             {
-              "id": "r6",
+              "id": "r3",
+              "text": "Asks about bleeding after brushing teeth",
+              "answer": "Appropriate",
+              "rationale": "Gum bleeding is a platelet related finding worth asking about."
+            },
+            {
+              "id": "r4",
               "text": "Applies brief pressure, then moves on after a blood draw",
               "answer": "Requires intervention",
               "rationale": "With a known or suspected bleeding problem, pressure is held until the bleeding stops, which can take several minutes."
+            },
+            {
+              "id": "r5",
+              "text": "Uses a firm, tight blood pressure cuff on the same arm repeatedly",
+              "answer": "Requires intervention",
+              "rationale": "Repeated, prolonged cuff pressure can cause bruising and petechiae with a low platelet count; handle the patient gently."
+            },
+            {
+              "id": "r6",
+              "text": "Inspects the skin and gums for bleeding",
+              "answer": "Appropriate",
+              "rationale": "Inspection for petechiae, bruising and gum bleeding is a key part of assessing a patient with low platelets."
             }
           ],
           "answer": {
-            "r1": "Appropriate",
-            "r2": "Requires intervention",
-            "r3": "Requires intervention",
-            "r4": "Appropriate",
-            "r5": "Appropriate",
-            "r6": "Requires intervention"
+            "r1": "Requires intervention",
+            "r2": "Appropriate",
+            "r3": "Appropriate",
+            "r4": "Requires intervention",
+            "r5": "Requires intervention",
+            "r6": "Appropriate"
           },
           "scoring": "0/1",
           "takeaway": "With a suspected hematologic problem, examine gently, do not palpate the spleen, and hold pressure on puncture sites until bleeding stops.",
@@ -8955,39 +8955,39 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Divides only to build or replace tissue and undergoes programmed cell death",
-              "answer": "Normal cell",
-              "rationale": "Normal cells regulate division and undergo programmed cell death (apoptosis)."
-            },
-            {
-              "id": "r2",
               "text": "Grows in the wrong place or at the wrong time but stays localized",
               "answer": "Benign tumor cell",
               "rationale": "Benign tumor cells are normal looking cells growing where or when they should not, without invading."
             },
             {
+              "id": "r2",
+              "text": "Looks very different from its tissue of origin",
+              "answer": "Malignant cell",
+              "rationale": "Cancer cells vary in how closely they resemble their tissue of origin, and many look very different."
+            },
+            {
               "id": "r3",
+              "text": "Divides only to build or replace tissue and undergoes programmed cell death",
+              "answer": "Normal cell",
+              "rationale": "Normal cells regulate division and undergo programmed cell death (apoptosis)."
+            },
+            {
+              "id": "r4",
               "text": "Evades growth controls and grows into surrounding tissue",
               "answer": "Malignant cell",
               "rationale": "Evading growth controls and invading tissue are the defining features of cancer."
             },
             {
-              "id": "r4",
+              "id": "r5",
               "text": "Breaks away and forms new tumors in distant organs",
               "answer": "Malignant cell",
               "rationale": "Metastasis happens only with malignant cells."
-            },
-            {
-              "id": "r5",
-              "text": "Looks very different from its tissue of origin",
-              "answer": "Malignant cell",
-              "rationale": "Cancer cells vary in how closely they resemble their tissue of origin, and many look very different."
             }
           ],
           "answer": {
-            "r1": "Normal cell",
-            "r2": "Benign tumor cell",
-            "r3": "Malignant cell",
+            "r1": "Benign tumor cell",
+            "r2": "Malignant cell",
+            "r3": "Normal cell",
             "r4": "Malignant cell",
             "r5": "Malignant cell"
           },
@@ -10106,9 +10106,9 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Receiving the HPV vaccine",
-              "answer": "Primary prevention",
-              "rationale": "Vaccination prevents a cancer causing infection: primary."
+              "text": "Having cervical screening",
+              "answer": "Secondary prevention",
+              "rationale": "Cervical screening detects disease early: secondary."
             },
             {
               "id": "r2",
@@ -10124,30 +10124,30 @@
             },
             {
               "id": "r4",
+              "text": "Receiving the HPV vaccine",
+              "answer": "Primary prevention",
+              "rationale": "Vaccination prevents a cancer causing infection: primary."
+            },
+            {
+              "id": "r5",
               "text": "Completing a fecal occult blood test",
               "answer": "Secondary prevention",
               "rationale": "A stool test screens for existing cancer: secondary."
             },
             {
-              "id": "r5",
+              "id": "r6",
               "text": "Removing a mole that is at risk of change",
               "answer": "Primary prevention",
               "rationale": "Removing at risk tissue prevents cancer from forming: primary."
-            },
-            {
-              "id": "r6",
-              "text": "Having cervical screening",
-              "answer": "Secondary prevention",
-              "rationale": "Cervical screening detects disease early: secondary."
             }
           ],
           "answer": {
-            "r1": "Primary prevention",
+            "r1": "Secondary prevention",
             "r2": "Secondary prevention",
             "r3": "Primary prevention",
-            "r4": "Secondary prevention",
-            "r5": "Primary prevention",
-            "r6": "Secondary prevention"
+            "r4": "Primary prevention",
+            "r5": "Secondary prevention",
+            "r6": "Primary prevention"
           },
           "scoring": "0/1",
           "takeaway": "Primary prevention stops cancer from starting (avoid carcinogens, modify risk, remove at risk tissue, chemoprevention, vaccination). Secondary prevention is regular screening.",
@@ -10443,41 +10443,41 @@
           "rows": [
             {
               "id": "r1",
+              "text": "Hormonal therapy",
+              "answer": "Systemic",
+              "rationale": "Hormonal therapy changes hormone levels or signals throughout the body."
+            },
+            {
+              "id": "r2",
               "text": "Surgery to remove a tumor",
               "answer": "Local",
               "rationale": "Surgery acts at a specific site."
             },
             {
-              "id": "r2",
-              "text": "IV chemotherapy",
-              "answer": "Systemic",
-              "rationale": "Chemotherapy circulates through the body."
-            },
-            {
               "id": "r3",
-              "text": "External beam radiation",
-              "answer": "Local",
-              "rationale": "Radiation acts on the area in the beam."
-            },
-            {
-              "id": "r4",
               "text": "Immunotherapy",
               "answer": "Systemic",
               "rationale": "Immunotherapy works through the whole immune system."
             },
             {
-              "id": "r5",
-              "text": "Hormonal therapy",
+              "id": "r4",
+              "text": "IV chemotherapy",
               "answer": "Systemic",
-              "rationale": "Hormonal therapy changes hormone levels or signals throughout the body."
+              "rationale": "Chemotherapy circulates through the body."
+            },
+            {
+              "id": "r5",
+              "text": "External beam radiation",
+              "answer": "Local",
+              "rationale": "Radiation acts on the area in the beam."
             }
           ],
           "answer": {
-            "r1": "Local",
-            "r2": "Systemic",
-            "r3": "Local",
+            "r1": "Systemic",
+            "r2": "Local",
+            "r3": "Systemic",
             "r4": "Systemic",
-            "r5": "Systemic"
+            "r5": "Local"
           },
           "scoring": "0/1",
           "takeaway": "Local treatment acts at a specific site (surgery, radiation); systemic treatment circulates through the body (chemotherapy, immunotherapy, hormonal therapy).",
@@ -10931,34 +10931,34 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Blocks a specific mutation or signaling pathway the cancer needs to grow",
-              "answer": "Targeted therapy",
-              "rationale": "Targeted therapies block specific genetic mutations, proteins or signaling pathways."
-            },
-            {
-              "id": "r2",
-              "text": "Laboratory made protein that attaches to a specific target",
-              "answer": "Monoclonal antibody",
-              "rationale": "Monoclonal antibodies are laboratory made proteins designed to attach to specific targets."
-            },
-            {
-              "id": "r3",
               "text": "Lowers hormone levels or blocks hormone signals",
               "answer": "Endocrine therapy",
               "rationale": "Endocrine therapy slows hormone sensitive cancers by lowering hormones or blocking their signals."
             },
             {
-              "id": "r4",
+              "id": "r2",
               "text": "Speeds bone marrow recovery after chemotherapy",
               "answer": "Colony stimulating factor",
               "rationale": "Colony stimulating factors are supportive therapy that speed marrow recovery after myelosuppression."
+            },
+            {
+              "id": "r3",
+              "text": "Laboratory made protein that attaches to a specific target",
+              "answer": "Monoclonal antibody",
+              "rationale": "Monoclonal antibodies are laboratory made proteins designed to attach to specific targets."
+            },
+            {
+              "id": "r4",
+              "text": "Blocks a specific mutation or signaling pathway the cancer needs to grow",
+              "answer": "Targeted therapy",
+              "rationale": "Targeted therapies block specific genetic mutations, proteins or signaling pathways."
             }
           ],
           "answer": {
-            "r1": "Targeted therapy",
-            "r2": "Monoclonal antibody",
-            "r3": "Endocrine therapy",
-            "r4": "Colony stimulating factor"
+            "r1": "Endocrine therapy",
+            "r2": "Colony stimulating factor",
+            "r3": "Monoclonal antibody",
+            "r4": "Targeted therapy"
           },
           "scoring": "0/1",
           "takeaway": "Targeted therapy blocks pathways; monoclonal antibodies attach to targets; endocrine therapy lowers or blocks hormones; colony stimulating factors speed marrow recovery.",
@@ -11428,41 +11428,41 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Teach hand hygiene and avoiding sick contacts",
-              "answer": "Neutropenia",
-              "rationale": "Low neutrophils raise infection risk."
-            },
-            {
-              "id": "r2",
-              "text": "Assess for fatigue and shortness of breath with activity",
-              "answer": "Anemia",
-              "rationale": "Low red cells reduce oxygen delivery."
-            },
-            {
-              "id": "r3",
-              "text": "Teach use of an electric shaver and soft toothbrush",
-              "answer": "Thrombocytopenia",
-              "rationale": "Low platelets raise bleeding risk."
-            },
-            {
-              "id": "r4",
               "text": "Check for petechiae and bleeding gums",
               "answer": "Thrombocytopenia",
               "rationale": "These are signs of low platelets."
             },
             {
-              "id": "r5",
+              "id": "r2",
               "text": "Teach that fever may be the only sign of infection",
               "answer": "Neutropenia",
               "rationale": "With few neutrophils, the usual signs of infection may not appear."
+            },
+            {
+              "id": "r3",
+              "text": "Teach hand hygiene and avoiding sick contacts",
+              "answer": "Neutropenia",
+              "rationale": "Low neutrophils raise infection risk."
+            },
+            {
+              "id": "r4",
+              "text": "Teach use of an electric shaver and soft toothbrush",
+              "answer": "Thrombocytopenia",
+              "rationale": "Low platelets raise bleeding risk."
+            },
+            {
+              "id": "r5",
+              "text": "Assess for fatigue and shortness of breath with activity",
+              "answer": "Anemia",
+              "rationale": "Low red cells reduce oxygen delivery."
             }
           ],
           "answer": {
-            "r1": "Neutropenia",
-            "r2": "Anemia",
-            "r3": "Thrombocytopenia",
+            "r1": "Thrombocytopenia",
+            "r2": "Neutropenia",
+            "r3": "Neutropenia",
             "r4": "Thrombocytopenia",
-            "r5": "Neutropenia"
+            "r5": "Anemia"
           },
           "scoring": "0/1",
           "takeaway": "Neutropenia: infection precautions; anemia: assess fatigue and dyspnea; thrombocytopenia: bleeding precautions and checks.",
@@ -12646,39 +12646,54 @@
           "scenario": "A patient is at risk for tumor lysis syndrome after starting chemotherapy for a bulky lymphoma.",
           "columns": [
             "Rises",
-            "Falls"
+            "Falls",
+            "No expected change"
           ],
           "rows": [
             {
               "id": "r1",
-              "text": "Potassium",
-              "answer": "Rises",
-              "rationale": "Dying tumor cells release potassium."
+              "text": "Sodium",
+              "answer": "No expected change",
+              "rationale": "Sodium is mainly outside cells, so cell breakdown does not raise it."
             },
             {
               "id": "r2",
-              "text": "Phosphate",
-              "answer": "Rises",
-              "rationale": "Dying tumor cells release phosphate."
-            },
-            {
-              "id": "r3",
               "text": "Uric acid",
               "answer": "Rises",
               "rationale": "Released cell material becomes uric acid."
+            },
+            {
+              "id": "r3",
+              "text": "Potassium",
+              "answer": "Rises",
+              "rationale": "Dying tumor cells release potassium."
             },
             {
               "id": "r4",
               "text": "Calcium",
               "answer": "Falls",
               "rationale": "Calcium binds to the extra phosphate, so the blood level falls."
+            },
+            {
+              "id": "r5",
+              "text": "Creatinine",
+              "answer": "Rises",
+              "rationale": "Uric acid and phosphate crystals can injure the kidneys, so creatinine rises."
+            },
+            {
+              "id": "r6",
+              "text": "Phosphate",
+              "answer": "Rises",
+              "rationale": "Dying tumor cells release phosphate."
             }
           ],
           "answer": {
-            "r1": "Rises",
+            "r1": "No expected change",
             "r2": "Rises",
             "r3": "Rises",
-            "r4": "Falls"
+            "r4": "Falls",
+            "r5": "Rises",
+            "r6": "Rises"
           },
           "scoring": "0/1",
           "takeaway": "Tumor lysis syndrome: potassium, phosphate and uric acid rise; calcium can fall as it binds phosphate. Trend labs, give IV hydration and uric acid lowering therapy, monitor cardiac rhythm.",
@@ -12701,9 +12716,13 @@
               {
                 "action": "Find the exception",
                 "detail": "Calcium falls."
+              },
+              {
+                "action": "Add the kidney effect",
+                "detail": "Creatinine rises; sodium is not released from cells."
               }
             ],
-            "verdict": "Three rise, calcium falls."
+            "verdict": "Potassium, phosphate, uric acid and creatinine rise; calcium falls; sodium does not change."
           },
           "objective": "Recognize oncologic emergencies and prioritize the initial nursing response",
           "cjmm": "Analyze cues",
@@ -13330,33 +13349,33 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Give the prescribed calcium tablets with meals",
-                  "correct": false,
-                  "rationale": "Calcium is not the treatment for tumor lysis; the priority is fluids and lowering uric acid."
-                },
-                {
-                  "id": "B",
-                  "text": "Restrict fluids to 1 L per day",
-                  "correct": false,
-                  "rationale": "Fluid restriction is for SIADH; this patient needs more fluid, not less."
-                },
-                {
-                  "id": "C",
-                  "text": "Give the prescribed uric acid lowering drug",
-                  "correct": true,
-                  "rationale": "Allopurinol or rasburicase lowers uric acid and protects the kidneys."
-                },
-                {
-                  "id": "D",
                   "text": "Encourage foods high in potassium",
                   "correct": false,
                   "rationale": "Potassium is already dangerously high."
                 },
                 {
-                  "id": "E",
+                  "id": "B",
+                  "text": "Give the prescribed uric acid lowering drug",
+                  "correct": true,
+                  "rationale": "Allopurinol or rasburicase lowers uric acid and protects the kidneys."
+                },
+                {
+                  "id": "C",
+                  "text": "Give the prescribed calcium tablets with meals",
+                  "correct": false,
+                  "rationale": "Calcium is not the treatment for tumor lysis; the priority is fluids and lowering uric acid."
+                },
+                {
+                  "id": "D",
                   "text": "Give the prescribed IV hydration",
                   "correct": true,
                   "rationale": "IV fluids flush potassium, phosphate and uric acid through the kidneys."
+                },
+                {
+                  "id": "E",
+                  "text": "Restrict fluids to 1 L per day",
+                  "correct": false,
+                  "rationale": "Fluid restriction is for SIADH; this patient needs more fluid, not less."
                 }
               ]
             },
@@ -13372,9 +13391,9 @@
                 },
                 {
                   "id": "B",
-                  "text": "SIADH",
-                  "correct": false,
-                  "rationale": "SIADH causes low sodium from water retention, not high potassium and uric acid."
+                  "text": "Tumor lysis syndrome",
+                  "correct": true,
+                  "rationale": "Rapid breakdown of a bulky, treatment sensitive tumor releases potassium, phosphate and uric acid."
                 },
                 {
                   "id": "C",
@@ -13384,9 +13403,9 @@
                 },
                 {
                   "id": "D",
-                  "text": "Tumor lysis syndrome",
-                  "correct": true,
-                  "rationale": "Rapid breakdown of a bulky, treatment sensitive tumor releases potassium, phosphate and uric acid."
+                  "text": "SIADH",
+                  "correct": false,
+                  "rationale": "SIADH causes low sodium from water retention, not high potassium and uric acid."
                 }
               ]
             },
@@ -13396,47 +13415,47 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Urine output",
-                  "correct": true,
-                  "rationale": "Falling urine output signals kidney injury from uric acid crystals."
-                },
-                {
-                  "id": "B",
-                  "text": "Blood glucose",
-                  "correct": false,
-                  "rationale": "Glucose is not affected by tumor lysis."
-                },
-                {
-                  "id": "C",
-                  "text": "Pupil size",
-                  "correct": false,
-                  "rationale": "Pupils are not a priority parameter for this problem."
-                },
-                {
-                  "id": "D",
                   "text": "Oxygen saturation",
                   "correct": false,
                   "rationale": "Oxygenation is not the main risk here."
                 },
                 {
-                  "id": "E",
+                  "id": "B",
+                  "text": "Pupil size",
+                  "correct": false,
+                  "rationale": "Pupils are not a priority parameter for this problem."
+                },
+                {
+                  "id": "C",
                   "text": "Cardiac rhythm",
                   "correct": true,
                   "rationale": "High potassium can cause dangerous dysrhythmias."
+                },
+                {
+                  "id": "D",
+                  "text": "Blood glucose",
+                  "correct": false,
+                  "rationale": "Glucose is not affected by tumor lysis."
+                },
+                {
+                  "id": "E",
+                  "text": "Urine output",
+                  "correct": true,
+                  "rationale": "Falling urine output signals kidney injury from uric acid crystals."
                 }
               ]
             }
           },
           "answer": {
             "actions": [
-              "C",
-              "E"
-            ],
-            "condition": [
+              "B",
               "D"
             ],
+            "condition": [
+              "B"
+            ],
             "parameters": [
-              "A",
+              "C",
               "E"
             ]
           },
@@ -13609,15 +13628,15 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Wears chemotherapy rated gloves and a gown to empty the urinal",
-              "answer": "Appropriate",
-              "rationale": "Body fluids carry drug for at least 48 hours, so gloves and gown are needed."
-            },
-            {
-              "id": "r2",
               "text": "Places soiled linens in the regular laundry bag",
               "answer": "Requires intervention",
               "rationale": "Linens soiled with body fluids in the first 48 hours are handled with the facility's hazardous precautions."
+            },
+            {
+              "id": "r2",
+              "text": "Washes hands after removing gloves",
+              "answer": "Appropriate",
+              "rationale": "Hand hygiene after glove removal is always correct."
             },
             {
               "id": "r3",
@@ -13627,20 +13646,20 @@
             },
             {
               "id": "r4",
-              "text": "Reports that the patient has new bleeding gums",
+              "text": "Wears chemotherapy rated gloves and a gown to empty the urinal",
               "answer": "Appropriate",
-              "rationale": "Every caregiver reports possible adverse effects; bleeding gums suggest low platelets."
+              "rationale": "Body fluids carry drug for at least 48 hours, so gloves and gown are needed."
             },
             {
               "id": "r5",
-              "text": "Washes hands after removing gloves",
+              "text": "Reports that the patient has new bleeding gums",
               "answer": "Appropriate",
-              "rationale": "Hand hygiene after glove removal is always correct."
+              "rationale": "Every caregiver reports possible adverse effects; bleeding gums suggest low platelets."
             }
           ],
           "answer": {
-            "r1": "Appropriate",
-            "r2": "Requires intervention",
+            "r1": "Requires intervention",
+            "r2": "Appropriate",
             "r3": "Requires intervention",
             "r4": "Appropriate",
             "r5": "Appropriate"
@@ -14424,48 +14443,48 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Adenocarcinoma of the colon",
-              "answer": "Carcinoma",
-              "rationale": "Carcinomas arise from epithelial tissue; “adeno” means glandular epithelium."
-            },
-            {
-              "id": "r2",
-              "text": "Osteosarcoma of the femur",
-              "answer": "Sarcoma",
-              "rationale": "Sarcomas arise from connective tissue such as bone; “osteo” means bone."
-            },
-            {
-              "id": "r3",
-              "text": "Lipoma on the shoulder",
-              "answer": "Benign",
-              "rationale": "The ending “oma” without carcinoma or sarcoma usually names a benign tumor; “lipo” means fat."
-            },
-            {
-              "id": "r4",
               "text": "Liposarcoma of the thigh",
               "answer": "Sarcoma",
               "rationale": "A malignant tumor of fat, which is connective tissue, is a sarcoma."
             },
             {
-              "id": "r5",
-              "text": "Squamous cell carcinoma of the skin",
-              "answer": "Carcinoma",
-              "rationale": "Skin surface cells are epithelial, so this malignant tumor is a carcinoma."
+              "id": "r2",
+              "text": "Lipoma on the shoulder",
+              "answer": "Benign",
+              "rationale": "The ending “oma” without carcinoma or sarcoma usually names a benign tumor; “lipo” means fat."
             },
             {
-              "id": "r6",
+              "id": "r3",
+              "text": "Adenocarcinoma of the colon",
+              "answer": "Carcinoma",
+              "rationale": "Carcinomas arise from epithelial tissue; “adeno” means glandular epithelium."
+            },
+            {
+              "id": "r4",
               "text": "Osteoma of the skull",
               "answer": "Benign",
               "rationale": "Osteoma is a benign bone tumor; the malignant version is osteosarcoma."
+            },
+            {
+              "id": "r5",
+              "text": "Osteosarcoma of the femur",
+              "answer": "Sarcoma",
+              "rationale": "Sarcomas arise from connective tissue such as bone; “osteo” means bone."
+            },
+            {
+              "id": "r6",
+              "text": "Squamous cell carcinoma of the skin",
+              "answer": "Carcinoma",
+              "rationale": "Skin surface cells are epithelial, so this malignant tumor is a carcinoma."
             }
           ],
           "answer": {
-            "r1": "Carcinoma",
-            "r2": "Sarcoma",
-            "r3": "Benign",
-            "r4": "Sarcoma",
-            "r5": "Carcinoma",
-            "r6": "Benign"
+            "r1": "Sarcoma",
+            "r2": "Benign",
+            "r3": "Carcinoma",
+            "r4": "Benign",
+            "r5": "Sarcoma",
+            "r6": "Carcinoma"
           },
           "scoring": "0/1",
           "takeaway": "Tumor names combine tissue and behavior: “oma” alone is usually benign, carcinoma is malignant epithelial tissue, and sarcoma is malignant connective tissue such as bone, fat or muscle.",
@@ -15219,9 +15238,9 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Removing as much of a large abdominal tumor as possible when it cannot all be removed",
-              "answer": "Debulking",
-              "rationale": "Debulking removes part of a tumor that cannot be fully removed so other treatments work better."
+              "text": "Bypassing a bowel blocked by widespread cancer to relieve vomiting",
+              "answer": "Palliative",
+              "rationale": "Palliative surgery relieves symptoms and improves comfort without aiming to cure."
             },
             {
               "id": "r2",
@@ -15231,36 +15250,36 @@
             },
             {
               "id": "r3",
-              "text": "Removing a tissue sample from a new breast lump",
-              "answer": "Diagnostic",
-              "rationale": "A biopsy obtains tissue to confirm whether a mass is cancer and what type."
-            },
-            {
-              "id": "r4",
               "text": "Removing an early lung tumor with clear margins and no spread",
               "answer": "Curative",
               "rationale": "Removing all of a localized tumor aims to cure."
             },
             {
-              "id": "r5",
-              "text": "Bypassing a bowel blocked by widespread cancer to relieve vomiting",
-              "answer": "Palliative",
-              "rationale": "Palliative surgery relieves symptoms and improves comfort without aiming to cure."
+              "id": "r4",
+              "text": "Removing as much of a large abdominal tumor as possible when it cannot all be removed",
+              "answer": "Debulking",
+              "rationale": "Debulking removes part of a tumor that cannot be fully removed so other treatments work better."
             },
             {
-              "id": "r6",
+              "id": "r5",
               "text": "Removing a thyroid gland in a patient with an inherited RET gene change and no cancer",
               "answer": "Prophylactic",
               "rationale": "A preventive removal in a person with a high risk gene change and no cancer is prophylactic."
+            },
+            {
+              "id": "r6",
+              "text": "Removing a tissue sample from a new breast lump",
+              "answer": "Diagnostic",
+              "rationale": "A biopsy obtains tissue to confirm whether a mass is cancer and what type."
             }
           ],
           "answer": {
-            "r1": "Debulking",
+            "r1": "Palliative",
             "r2": "Prophylactic",
-            "r3": "Diagnostic",
-            "r4": "Curative",
-            "r5": "Palliative",
-            "r6": "Prophylactic"
+            "r3": "Curative",
+            "r4": "Debulking",
+            "r5": "Prophylactic",
+            "r6": "Diagnostic"
           },
           "scoring": "0/1",
           "takeaway": "Prophylactic surgery prevents cancer in high risk tissue; diagnostic surgery gets tissue; curative surgery removes all localized cancer; debulking removes part of a tumor; palliative surgery relieves symptoms.",
@@ -16643,48 +16662,48 @@
           "rows": [
             {
               "id": "r1",
-              "text": "A visitor sits in a chair 6 feet from the bed",
-              "answer": "Appropriate",
-              "rationale": "Distance lowers exposure; visitors stay at least 6 feet away."
-            },
-            {
-              "id": "r2",
-              "text": "A visitor brings a 10 year old child to the bedside",
-              "answer": "Requires intervention",
-              "rationale": "Children are not allowed to visit while the implant is in place because they are more sensitive to radiation."
-            },
-            {
-              "id": "r3",
-              "text": "A staff member wears a radiation dosimeter badge",
-              "answer": "Appropriate",
-              "rationale": "The badge tracks each person's cumulative exposure."
-            },
-            {
-              "id": "r4",
               "text": "A nursing assistant picks up a dislodged implant with gloved hands",
               "answer": "Requires intervention",
               "rationale": "A dislodged source is never handled with hands. It is picked up with long forceps and placed in the lead container."
             },
             {
-              "id": "r5",
-              "text": "The nurse clusters care to limit time in the room",
+              "id": "r2",
+              "text": "A staff member wears a radiation dosimeter badge",
               "answer": "Appropriate",
-              "rationale": "Less time near the source means less exposure."
+              "rationale": "The badge tracks each person's cumulative exposure."
             },
             {
-              "id": "r6",
+              "id": "r3",
               "text": "A visitor plans to stay for the whole afternoon",
               "answer": "Requires intervention",
               "rationale": "Visits are limited in length, often to 30 minutes a day, to limit time near the source."
+            },
+            {
+              "id": "r4",
+              "text": "A visitor brings a 10 year old child to the bedside",
+              "answer": "Requires intervention",
+              "rationale": "Children are not allowed to visit while the implant is in place because they are more sensitive to radiation."
+            },
+            {
+              "id": "r5",
+              "text": "A visitor sits in a chair 6 feet from the bed",
+              "answer": "Appropriate",
+              "rationale": "Distance lowers exposure; visitors stay at least 6 feet away."
+            },
+            {
+              "id": "r6",
+              "text": "The nurse clusters care to limit time in the room",
+              "answer": "Appropriate",
+              "rationale": "Less time near the source means less exposure."
             }
           ],
           "answer": {
-            "r1": "Appropriate",
-            "r2": "Requires intervention",
-            "r3": "Appropriate",
+            "r1": "Requires intervention",
+            "r2": "Appropriate",
+            "r3": "Requires intervention",
             "r4": "Requires intervention",
             "r5": "Appropriate",
-            "r6": "Requires intervention"
+            "r6": "Appropriate"
           },
           "scoring": "0/1",
           "takeaway": "Time, distance and shielding: limit time, keep distance, use shielding, badge every staff member, keep children away, and pick up a dislodged source only with long forceps into the lead container.",
@@ -16947,33 +16966,33 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Raise the head of the bed",
-                  "correct": true,
-                  "rationale": "Elevation lets blood drain from the head and eases breathing."
-                },
-                {
-                  "id": "B",
                   "text": "Encourage a large glass of water",
                   "correct": false,
                   "rationale": "Swallowing is unsafe with a narrowing airway."
                 },
                 {
-                  "id": "C",
-                  "text": "Call the rapid response team",
-                  "correct": true,
-                  "rationale": "Stridor means the airway is narrowing, which is an emergency."
-                },
-                {
-                  "id": "D",
+                  "id": "B",
                   "text": "Place the patient flat with legs raised",
                   "correct": false,
                   "rationale": "Lying flat worsens swelling in the head and neck."
                 },
                 {
-                  "id": "E",
+                  "id": "C",
+                  "text": "Raise the head of the bed",
+                  "correct": true,
+                  "rationale": "Elevation lets blood drain from the head and eases breathing."
+                },
+                {
+                  "id": "D",
                   "text": "Start an IV in the right arm",
                   "correct": false,
                   "rationale": "Arm veins above the blockage drain poorly; IV access goes in the lower body if possible."
+                },
+                {
+                  "id": "E",
+                  "text": "Call the rapid response team",
+                  "correct": true,
+                  "rationale": "Stridor means the airway is narrowing, which is an emergency."
                 }
               ]
             },
@@ -16983,27 +17002,27 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Tumor lysis syndrome",
+                  "text": "Spinal cord compression",
                   "correct": false,
-                  "rationale": "Tumor lysis causes electrolyte changes after treatment, not swelling of the face."
+                  "rationale": "Cord compression causes back pain and limb weakness, not facial swelling."
                 },
                 {
                   "id": "B",
-                  "text": "Superior vena cava syndrome",
-                  "correct": true,
-                  "rationale": "A lung tumor compressing the superior vena cava blocks blood return from the head, neck and arms."
-                },
-                {
-                  "id": "C",
                   "text": "Hypercalcemia",
                   "correct": false,
                   "rationale": "Hypercalcemia causes constipation, thirst and confusion."
                 },
                 {
-                  "id": "D",
-                  "text": "Spinal cord compression",
+                  "id": "C",
+                  "text": "Tumor lysis syndrome",
                   "correct": false,
-                  "rationale": "Cord compression causes back pain and limb weakness, not facial swelling."
+                  "rationale": "Tumor lysis causes electrolyte changes after treatment, not swelling of the face."
+                },
+                {
+                  "id": "D",
+                  "text": "Superior vena cava syndrome",
+                  "correct": true,
+                  "rationale": "A lung tumor compressing the superior vena cava blocks blood return from the head, neck and arms."
                 }
               ]
             },
@@ -17013,15 +17032,15 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "Airway sounds and respiratory effort",
-                  "correct": true,
-                  "rationale": "Stridor can progress to airway obstruction."
+                  "text": "Urine specific gravity",
+                  "correct": false,
+                  "rationale": "Specific gravity relates to fluid balance, not to this obstruction."
                 },
                 {
                   "id": "B",
-                  "text": "Deep tendon reflexes",
-                  "correct": false,
-                  "rationale": "Reflexes are monitored in calcium and magnesium problems, not here."
+                  "text": "Oxygen saturation",
+                  "correct": true,
+                  "rationale": "Saturation shows whether swelling is affecting gas exchange."
                 },
                 {
                   "id": "C",
@@ -17031,30 +17050,30 @@
                 },
                 {
                   "id": "D",
-                  "text": "Oxygen saturation",
-                  "correct": true,
-                  "rationale": "Saturation shows whether swelling is affecting gas exchange."
+                  "text": "Deep tendon reflexes",
+                  "correct": false,
+                  "rationale": "Reflexes are monitored in calcium and magnesium problems, not here."
                 },
                 {
                   "id": "E",
-                  "text": "Urine specific gravity",
-                  "correct": false,
-                  "rationale": "Specific gravity relates to fluid balance, not to this obstruction."
+                  "text": "Airway sounds and respiratory effort",
+                  "correct": true,
+                  "rationale": "Stridor can progress to airway obstruction."
                 }
               ]
             }
           },
           "answer": {
             "actions": [
-              "A",
-              "C"
+              "C",
+              "E"
             ],
             "condition": [
-              "B"
+              "D"
             ],
             "parameters": [
-              "A",
-              "D"
+              "B",
+              "E"
             ]
           },
           "scoring": "0/1",
@@ -17784,48 +17803,48 @@
           "rows": [
             {
               "id": "r1",
-              "text": "Nasogastric tube",
-              "answer": "Short term (nasoenteric)",
-              "rationale": "A tube through the nose into the stomach is a nasoenteric, short term route."
-            },
-            {
-              "id": "r2",
-              "text": "Percutaneous endoscopic gastrostomy (PEG)",
-              "answer": "Long term (enterostomal)",
-              "rationale": "A PEG goes through the abdominal wall into the stomach and is used long term."
-            },
-            {
-              "id": "r3",
-              "text": "Gastrostomy tube",
-              "answer": "Long term (enterostomal)",
-              "rationale": "A gastrostomy opens directly into the stomach for long term feeding."
-            },
-            {
-              "id": "r4",
-              "text": "Nasoduodenal tube",
-              "answer": "Short term (nasoenteric)",
-              "rationale": "Through the nose into the duodenum: short term."
-            },
-            {
-              "id": "r5",
               "text": "Direct percutaneous endoscopic jejunostomy (DPEJ)",
               "answer": "Long term (enterostomal)",
               "rationale": "A tube placed directly into the jejunum through the abdominal wall is long term."
             },
             {
-              "id": "r6",
+              "id": "r2",
+              "text": "Nasoduodenal tube",
+              "answer": "Short term (nasoenteric)",
+              "rationale": "Through the nose into the duodenum: short term."
+            },
+            {
+              "id": "r3",
               "text": "Nasojejunal tube",
               "answer": "Short term (nasoenteric)",
               "rationale": "Through the nose into the jejunum: short term, and used less often."
+            },
+            {
+              "id": "r4",
+              "text": "Percutaneous endoscopic gastrostomy (PEG)",
+              "answer": "Long term (enterostomal)",
+              "rationale": "A PEG goes through the abdominal wall into the stomach and is used long term."
+            },
+            {
+              "id": "r5",
+              "text": "Nasogastric tube",
+              "answer": "Short term (nasoenteric)",
+              "rationale": "A tube through the nose into the stomach is a nasoenteric, short term route."
+            },
+            {
+              "id": "r6",
+              "text": "Gastrostomy tube",
+              "answer": "Long term (enterostomal)",
+              "rationale": "A gastrostomy opens directly into the stomach for long term feeding."
             }
           ],
           "answer": {
-            "r1": "Short term (nasoenteric)",
-            "r2": "Long term (enterostomal)",
-            "r3": "Long term (enterostomal)",
-            "r4": "Short term (nasoenteric)",
-            "r5": "Long term (enterostomal)",
-            "r6": "Short term (nasoenteric)"
+            "r1": "Long term (enterostomal)",
+            "r2": "Short term (nasoenteric)",
+            "r3": "Short term (nasoenteric)",
+            "r4": "Long term (enterostomal)",
+            "r5": "Short term (nasoenteric)",
+            "r6": "Long term (enterostomal)"
           },
           "scoring": "0/1",
           "takeaway": "Nasoenteric tubes (NG, nasoduodenal, nasojejunal) are short term; enterostomal tubes (gastrostomy, PEG, PEG with a jejunal extension, DPEJ) are long term.",
