@@ -5,8 +5,8 @@
     "schemaVersion": 3,
     "set": "Final",
     "notes": "Final exam practice questions, built section by section from the lecture PowerPoints taught after Exam 3, with readings as support. Each section has two kinds of questions, marked by tag: \"concept\" items test the rule itself (most have a short realistic scenario whose answer turns on one rule), covering every concept on every PowerPoint slide; \"application\" items are regular difficulty NCLEX style clinical judgment questions. Every item has a cjmm step. NGN style items are kept near 15% of each section. All text says \"patient\", never \"client\". Bowtie pools and cloze blanks are shuffled so correct choices are spread across positions. Ids are stable: ig33 = Iggy chapter 33, ig18 = Iggy chapter 18, sk-enteral = Enteral Nutrition skill, c = concept, m = application, x = hard application (difficulty: difficult).",
-    "questionCount": 278,
-    "chapterQuestionCount": 238,
+    "questionCount": 302,
+    "chapterQuestionCount": 246,
     "skillCount": 1,
     "chaptersIncluded": [
       1033,
@@ -20,13 +20,13 @@
       "skills"
     ],
     "questionTypes": {
-      "sata": 50,
-      "multiple_choice": 188,
-      "matrix": 22,
+      "sata": 52,
+      "multiple_choice": 205,
+      "matrix": 24,
       "ordered_response": 2,
-      "cloze": 6,
+      "cloze": 8,
       "highlight": 7,
-      "bowtie": 3
+      "bowtie": 4
     },
     "itemTypes": [
       "bowtie",
@@ -124,7 +124,7 @@
         "skills": [
           3
         ],
-        "questionCount": 278
+        "questionCount": 302
       }
     ],
     "chapterGroups": [
@@ -152,7 +152,7 @@
       "questionIds": [],
       "caseStudyIds": []
     },
-    "difficultCount": 7,
+    "difficultCount": 15,
     "difficultIds": [
       "ig33-x01",
       "ig33-x02",
@@ -160,9 +160,17 @@
       "ig33-x04",
       "ig33-x05",
       "ig33-x06",
-      "ig33-x07"
+      "ig33-x07",
+      "ig33-x08",
+      "ig33-x09",
+      "ig33-x10",
+      "ig33-x11",
+      "ig18-x01",
+      "ig18-x02",
+      "ig18-x03",
+      "ig18-x04"
     ],
-    "nclexCount": 40,
+    "nclexCount": 45,
     "nclexIds": [
       "ig33-c05",
       "ig33-c13",
@@ -180,6 +188,7 @@
       "ig33-m20",
       "ig33-m22",
       "ig33-x04",
+      "ig33-x09",
       "ig18-c03",
       "ig18-c12",
       "ig18-c21",
@@ -198,102 +207,44 @@
       "ig18-m49",
       "ig18-m50",
       "ig18-m53",
+      "ig18-x02",
       "sk-enteral-c08",
       "sk-enteral-c09",
       "sk-enteral-c21",
       "sk-enteral-c29",
       "sk-enteral-c30",
-      "sk-enteral-m03"
+      "sk-enteral-m03",
+      "sk-enteral-m17",
+      "sk-enteral-m19",
+      "sk-enteral-m24"
     ],
     "newIds": [
-      "ig33-x04",
-      "ig33-x05",
-      "ig33-x06",
-      "ig33-x07",
-      "ig18-m15",
-      "ig18-m16",
-      "ig18-m17",
-      "ig18-m18",
-      "ig18-m19",
-      "ig18-m20",
-      "ig18-m21",
-      "ig18-m22",
-      "ig18-m23",
-      "ig18-m24",
-      "ig18-m25",
-      "ig18-m26",
-      "ig18-m27",
-      "ig18-m28",
-      "ig18-m29",
-      "ig18-m30",
-      "ig18-m31",
-      "ig18-m32",
-      "ig18-m33",
-      "ig18-m34",
-      "ig18-m35",
-      "ig18-m36",
-      "ig18-m37",
-      "ig18-m38",
-      "ig18-m39",
-      "ig18-m40",
-      "ig18-m41",
-      "ig18-m42",
-      "ig18-m43",
-      "ig18-m44",
-      "ig18-m45",
-      "ig18-m46",
-      "ig18-m47",
-      "ig18-m48",
-      "ig18-m49",
-      "ig18-m50",
-      "ig18-m51",
-      "ig18-m52",
-      "ig18-m53",
-      "ig18-m54",
-      "ig18-m55",
-      "ig18-m56",
-      "sk-enteral-c01",
-      "sk-enteral-c02",
-      "sk-enteral-c03",
-      "sk-enteral-c04",
-      "sk-enteral-c05",
-      "sk-enteral-c06",
-      "sk-enteral-c07",
-      "sk-enteral-c08",
-      "sk-enteral-c09",
-      "sk-enteral-c10",
-      "sk-enteral-c11",
-      "sk-enteral-c12",
-      "sk-enteral-c13",
-      "sk-enteral-c14",
-      "sk-enteral-c15",
-      "sk-enteral-c16",
-      "sk-enteral-c17",
-      "sk-enteral-c18",
-      "sk-enteral-c19",
-      "sk-enteral-c20",
-      "sk-enteral-c21",
-      "sk-enteral-c22",
-      "sk-enteral-c23",
-      "sk-enteral-c24",
-      "sk-enteral-c25",
-      "sk-enteral-c26",
-      "sk-enteral-c27",
-      "sk-enteral-c28",
-      "sk-enteral-c29",
-      "sk-enteral-c30",
-      "sk-enteral-m01",
-      "sk-enteral-m02",
-      "sk-enteral-m03",
-      "sk-enteral-m04",
-      "sk-enteral-m05",
-      "sk-enteral-m06",
-      "sk-enteral-m07",
-      "sk-enteral-m08",
-      "sk-enteral-m09",
-      "sk-enteral-m10"
+      "ig33-x08",
+      "ig33-x09",
+      "ig33-x10",
+      "ig33-x11",
+      "ig18-x01",
+      "ig18-x02",
+      "ig18-x03",
+      "ig18-x04",
+      "sk-enteral-m11",
+      "sk-enteral-m12",
+      "sk-enteral-m13",
+      "sk-enteral-m14",
+      "sk-enteral-m15",
+      "sk-enteral-m16",
+      "sk-enteral-m17",
+      "sk-enteral-m18",
+      "sk-enteral-m19",
+      "sk-enteral-m20",
+      "sk-enteral-m21",
+      "sk-enteral-m22",
+      "sk-enteral-m23",
+      "sk-enteral-m24",
+      "sk-enteral-m25",
+      "sk-enteral-m26"
     ],
-    "newCount": 86,
+    "newCount": 24,
     "ngnIds": [
       "ig33-c05",
       "ig33-c13",
@@ -311,6 +262,7 @@
       "ig33-m20",
       "ig33-m22",
       "ig33-x04",
+      "ig33-x09",
       "ig18-c03",
       "ig18-c12",
       "ig18-c21",
@@ -329,14 +281,18 @@
       "ig18-m49",
       "ig18-m50",
       "ig18-m53",
+      "ig18-x02",
       "sk-enteral-c08",
       "sk-enteral-c09",
       "sk-enteral-c21",
       "sk-enteral-c29",
       "sk-enteral-c30",
-      "sk-enteral-m03"
+      "sk-enteral-m03",
+      "sk-enteral-m17",
+      "sk-enteral-m19",
+      "sk-enteral-m24"
     ],
-    "ngnCount": 40,
+    "ngnCount": 45,
     "ngnTypes": [
       "bowtie",
       "cloze",
@@ -346,7 +302,7 @@
     ],
     "caseStudyIds": [],
     "tags": {
-      "new": "newest additions (2026-11-11: 4 hard hematology, cancer application items covering every concept and objective, and the Enteral Nutrition skill)",
+      "new": "newest additions (2026-11-13: 4 hard hematology, 4 hard cancer and 16 enteral nutrition application)",
       "Concepts": "concept question: tests the rule itself; most have a short scenario whose answer turns on one rule; covers every PowerPoint concept",
       "application": "application question: regular difficulty NCLEX style clinical judgment"
     },
@@ -566,6 +522,10 @@
       "ig33-x05",
       "ig33-x06",
       "ig33-x07",
+      "ig33-x08",
+      "ig33-x09",
+      "ig33-x10",
+      "ig33-x11",
       "ig18-m01",
       "ig18-m02",
       "ig18-m03",
@@ -622,6 +582,10 @@
       "ig18-m54",
       "ig18-m55",
       "ig18-m56",
+      "ig18-x01",
+      "ig18-x02",
+      "ig18-x03",
+      "ig18-x04",
       "sk-enteral-m01",
       "sk-enteral-m02",
       "sk-enteral-m03",
@@ -631,9 +595,25 @@
       "sk-enteral-m07",
       "sk-enteral-m08",
       "sk-enteral-m09",
-      "sk-enteral-m10"
+      "sk-enteral-m10",
+      "sk-enteral-m11",
+      "sk-enteral-m12",
+      "sk-enteral-m13",
+      "sk-enteral-m14",
+      "sk-enteral-m15",
+      "sk-enteral-m16",
+      "sk-enteral-m17",
+      "sk-enteral-m18",
+      "sk-enteral-m19",
+      "sk-enteral-m20",
+      "sk-enteral-m21",
+      "sk-enteral-m22",
+      "sk-enteral-m23",
+      "sk-enteral-m24",
+      "sk-enteral-m25",
+      "sk-enteral-m26"
     ],
-    "applicationCount": 100,
+    "applicationCount": 124,
     "jeopardyIds": []
   },
   "chapters": [
@@ -8590,10 +8570,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "difficulty": "difficult"
         },
         {
@@ -8662,10 +8640,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "difficulty": "difficult"
         },
         {
@@ -8734,10 +8710,8 @@
           "cjmm": "Prioritize hypotheses",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "difficulty": "difficult"
         },
         {
@@ -8804,6 +8778,342 @@
           },
           "objective": "Connect lab tests with clinical purposes",
           "cjmm": "Analyze cues",
+          "tag": "application",
+          "tags": [
+            "application"
+          ],
+          "difficulty": "difficult"
+        },
+        {
+          "id": "ig33-x08",
+          "type": "multiple_choice",
+          "stem": "A patient with cirrhosis has a serum albumin of 2.3 g/dL and new pitting edema in both legs and the abdomen. Blood pressure and heart sounds are unchanged. Which explanation for the edema is most accurate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Low albumin lowers the pull that holds fluid in vessels",
+              "correct": true,
+              "rationale": "Albumin, made by the liver, creates oncotic pressure that keeps fluid inside the vessels. With less albumin, fluid leaks into the tissues even without heart failure."
+            },
+            {
+              "id": "B",
+              "text": "The heart is failing to pump the extra fluid forward",
+              "correct": false,
+              "rationale": "Unchanged heart sounds and blood pressure do not point to heart failure. The cue is the low albumin."
+            },
+            {
+              "id": "C",
+              "text": "Too much sodium is being absorbed from the diet",
+              "correct": false,
+              "rationale": "Sodium can worsen fluid retention, but it does not explain why fluid leaves the vessels here."
+            },
+            {
+              "id": "D",
+              "text": "Clotting factors are too low to seal the vessel walls",
+              "correct": false,
+              "rationale": "Clotting factors stop bleeding; they do not hold fluid inside vessels."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Albumin is the main plasma protein holding fluid in the vessels by oncotic pressure. Low albumin, as in liver disease or malnutrition, causes edema.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Link the abnormal lab to its job. Albumin holds water in the vessels, so low albumin lets it escape.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the low value",
+                "detail": "Albumin 2.3 g/dL."
+              },
+              {
+                "action": "Recall its job",
+                "detail": "Oncotic pressure holds fluid in vessels."
+              },
+              {
+                "action": "Rule out the heart",
+                "detail": "No change in heart findings."
+              }
+            ],
+            "verdict": "Low albumin lowers the pull that holds fluid in vessels."
+          },
+          "objective": "Describe major blood components and their functions",
+          "cjmm": "Analyze cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult"
+        },
+        {
+          "id": "ig33-x09",
+          "type": "cloze",
+          "stem": "A patient taking warfarin has an INR of 6.4 with no bleeding. Complete the sentence by selecting from the choices below.",
+          "sentence": "The nurse expects to [[1]] and anticipates an order for [[2]], because warfarin works by [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "switch to the evening dose time",
+                  "correct": false,
+                  "rationale": "Timing does not change an excessive effect."
+                },
+                {
+                  "id": "B",
+                  "text": "hold the next warfarin dose",
+                  "correct": true,
+                  "rationale": "An INR far above the usual goal of 2 to 3 means the next dose is held and the provider is notified."
+                },
+                {
+                  "id": "C",
+                  "text": "double the next dose",
+                  "correct": false,
+                  "rationale": "Doubling makes no sense when the effect is already too strong."
+                },
+                {
+                  "id": "D",
+                  "text": "give the next dose as scheduled",
+                  "correct": false,
+                  "rationale": "Giving more warfarin raises an already dangerous bleeding risk."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "an extra enoxaparin dose",
+                  "correct": false,
+                  "rationale": "Another anticoagulant would add to the bleeding risk."
+                },
+                {
+                  "id": "B",
+                  "text": "a platelet transfusion",
+                  "correct": false,
+                  "rationale": "Platelets are not the problem; clotting factors are."
+                },
+                {
+                  "id": "C",
+                  "text": "oral vitamin K",
+                  "correct": true,
+                  "rationale": "Without bleeding, a high INR is usually managed by holding warfarin and sometimes giving low dose oral vitamin K."
+                },
+                {
+                  "id": "D",
+                  "text": "protamine sulfate",
+                  "correct": false,
+                  "rationale": "Protamine reverses heparin, not warfarin."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "dissolving existing clots",
+                  "correct": false,
+                  "rationale": "Warfarin prevents new clots; it does not dissolve existing ones."
+                },
+                {
+                  "id": "B",
+                  "text": "blocking vitamin K dependent clotting factors",
+                  "correct": true,
+                  "rationale": "Warfarin blocks the liver's use of vitamin K to make factors 2, 7, 9 and 10, so vitamin K reverses it."
+                },
+                {
+                  "id": "C",
+                  "text": "lowering the platelet count",
+                  "correct": false,
+                  "rationale": "Warfarin does not change platelet numbers."
+                },
+                {
+                  "id": "D",
+                  "text": "blocking thrombin directly in the blood",
+                  "correct": false,
+                  "rationale": "Direct thrombin inhibition describes other anticoagulants, not warfarin."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "B",
+            "2": "C",
+            "3": "B"
+          },
+          "takeaway": "Warfarin blocks vitamin K dependent factors 2, 7, 9 and 10. A high INR without bleeding: hold warfarin, notify, and expect oral vitamin K if ordered. Protamine is for heparin.",
+          "coverage": "Topic covered in Lecture PPT. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Tie the antidote to the mechanism: warfarin blocks vitamin K, so vitamin K reverses it.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Act on the high INR",
+                "detail": "Hold the dose."
+              },
+              {
+                "action": "Pick the matching antidote",
+                "detail": "Vitamin K for warfarin, protamine for heparin."
+              },
+              {
+                "action": "Explain why",
+                "detail": "Vitamin K dependent factors."
+              }
+            ],
+            "verdict": "Hold warfarin; oral vitamin K; it blocks vitamin K dependent factors."
+          },
+          "objective": "Explain clot formation and breakdown mechanisms",
+          "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult"
+        },
+        {
+          "id": "ig33-x10",
+          "type": "multiple_choice",
+          "stem": "The nurse assesses a patient with a dark skin tone and suspected hemolytic anemia. Where does the nurse look to assess most accurately for jaundice?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The palms and the soles of the feet",
+              "correct": false,
+              "rationale": "Palms and soles can look yellow from calluses or carotene, which misleads."
+            },
+            {
+              "id": "B",
+              "text": "The skin of the forearm and chest",
+              "correct": false,
+              "rationale": "Melanin in the skin hides the yellow color of bilirubin."
+            },
+            {
+              "id": "C",
+              "text": "The nail beds after pressing on them",
+              "correct": false,
+              "rationale": "Pressing the nail beds checks capillary refill, not jaundice."
+            },
+            {
+              "id": "D",
+              "text": "The sclera and the hard palate",
+              "correct": true,
+              "rationale": "In darker skin, yellowing shows best where skin pigment does not mask it: the sclera and the hard palate. Look in natural light."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "In darker skin, assess jaundice in the sclera and hard palate, pallor in the conjunctivae and mucous membranes, and cyanosis in the lips, tongue and nail beds.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Choose the site where skin pigment cannot hide the color change.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the problem",
+                "detail": "Melanin hides color changes in skin."
+              },
+              {
+                "action": "Find the low pigment sites",
+                "detail": "Sclera and hard palate."
+              }
+            ],
+            "verdict": "The sclera and the hard palate."
+          },
+          "objective": "Recognize hematologic abnormalities from assessments",
+          "cjmm": "Recognize cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult"
+        },
+        {
+          "id": "ig33-x11",
+          "type": "multiple_choice",
+          "stem": "One week after starting oral iron, a patient's hemoglobin is unchanged at 8.9 g/dL, but the reticulocyte count has risen from 0.4% to 3.5%. The patient asks if the iron is working. Which response is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "“No, your hemoglobin should be normal by now.”",
+              "correct": false,
+              "rationale": "Hemoglobin rises slowly, over weeks to months; no change at 1 week is expected."
+            },
+            {
+              "id": "B",
+              "text": "“Yes, your marrow is making new red cells faster.”",
+              "correct": true,
+              "rationale": "A rising reticulocyte count is the earliest sign that iron therapy is working. Hemoglobin follows over the next weeks."
+            },
+            {
+              "id": "C",
+              "text": "“It is too early for any test to tell us.”",
+              "correct": false,
+              "rationale": "The reticulocyte count already shows a response within days."
+            },
+            {
+              "id": "D",
+              "text": "“The rising count means you are losing blood.”",
+              "correct": false,
+              "rationale": "Reticulocytes can rise after bleeding, but in a patient starting iron the expected cause is a response to treatment."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Reticulocytes are young red cells. A rising count within days of starting iron, B12 or folate shows the marrow is responding; hemoglobin rises later.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Know which lab moves first: the reticulocyte count, then hemoglobin.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the change",
+                "detail": "Reticulocytes up from 0.4% to 3.5%."
+              },
+              {
+                "action": "Know the timeline",
+                "detail": "Reticulocytes rise first; hemoglobin follows."
+              }
+            ],
+            "verdict": "Yes, the marrow is making new red cells faster."
+          },
+          "objective": "Connect lab tests with clinical purposes",
+          "cjmm": "Evaluate outcomes",
           "tag": "application",
           "tags": [
             "application",
@@ -14294,10 +14604,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m16",
@@ -14360,10 +14668,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m17",
@@ -14425,10 +14731,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m18",
@@ -14517,10 +14821,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m19",
@@ -14586,10 +14888,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m20",
@@ -14660,10 +14960,8 @@
           "cjmm": "Evaluate outcomes",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m21",
@@ -14725,10 +15023,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m22",
@@ -14816,10 +15112,8 @@
           "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m23",
@@ -14881,10 +15175,8 @@
           "cjmm": "Generate solutions",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m24",
@@ -14946,10 +15238,8 @@
           "cjmm": "Evaluate outcomes",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m25",
@@ -15022,10 +15312,8 @@
           "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m26",
@@ -15086,10 +15374,8 @@
           "cjmm": "Generate solutions",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m27",
@@ -15150,10 +15436,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m28",
@@ -15218,10 +15502,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m29",
@@ -15322,10 +15604,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m30",
@@ -15390,10 +15670,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m31",
@@ -15455,10 +15733,8 @@
           "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m32",
@@ -15519,10 +15795,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m33",
@@ -15583,10 +15857,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m34",
@@ -15649,10 +15921,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m35",
@@ -15713,10 +15983,8 @@
           "cjmm": "Generate solutions",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m36",
@@ -15784,10 +16052,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m37",
@@ -15871,10 +16137,8 @@
           "cjmm": "Generate solutions",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m38",
@@ -15935,10 +16199,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m39",
@@ -15999,10 +16261,8 @@
           "cjmm": "Generate solutions",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m40",
@@ -16101,10 +16361,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m41",
@@ -16166,10 +16424,8 @@
           "cjmm": "Prioritize hypotheses",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m42",
@@ -16230,10 +16486,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m43",
@@ -16294,10 +16548,8 @@
           "cjmm": "Evaluate outcomes",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m44",
@@ -16367,10 +16619,8 @@
           "cjmm": "Generate solutions",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m45",
@@ -16435,10 +16685,8 @@
           "cjmm": "Generate solutions",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m46",
@@ -16499,10 +16747,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m47",
@@ -16581,10 +16827,8 @@
           "cjmm": "Generate solutions",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m48",
@@ -16645,10 +16889,8 @@
           "cjmm": "Evaluate outcomes",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m49",
@@ -16738,10 +16980,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m50",
@@ -16821,10 +17061,8 @@
           "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m51",
@@ -16885,10 +17123,8 @@
           "cjmm": "Analyze cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m52",
@@ -16949,10 +17185,8 @@
           "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m53",
@@ -17109,10 +17343,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m54",
@@ -17173,10 +17405,8 @@
           "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m55",
@@ -17237,10 +17467,8 @@
           "cjmm": "Evaluate outcomes",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "ig18-m56",
@@ -17301,10 +17529,305 @@
           "cjmm": "Evaluate outcomes",
           "tag": "application",
           "tags": [
+            "application"
+          ]
+        },
+        {
+          "id": "ig18-x01",
+          "type": "multiple_choice",
+          "stem": "Twenty hours after the first chemotherapy dose for a large lymphoma, a patient has potassium 6.4 mEq/L, phosphate 6.8 mg/dL, uric acid 11 mg/dL and urine output 20 mL/hr. Which action should the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the scheduled oral allopurinol dose",
+              "correct": false,
+              "rationale": "Allopurinol lowers future uric acid production but does nothing for the potassium that threatens the heart now."
+            },
+            {
+              "id": "B",
+              "text": "Place on a cardiac monitor and notify the provider",
+              "correct": true,
+              "rationale": "These results are tumor lysis syndrome. A potassium of 6.4 mEq/L can cause fatal dysrhythmias, so the heart is monitored and the provider is called now."
+            },
+            {
+              "id": "C",
+              "text": "Restrict potassium rich foods on the meal tray",
+              "correct": false,
+              "rationale": "Diet changes are far too slow for a potassium of 6.4 mEq/L."
+            },
+            {
+              "id": "D",
+              "text": "Encourage the patient to drink more water throughout the next few hours",
+              "correct": false,
+              "rationale": "Hydration matters, but low urine output and high potassium need urgent provider orders, not oral fluids alone."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Tumor lysis syndrome raises potassium, phosphate and uric acid and lowers calcium. The most immediate threat is hyperkalemia to the heart, then the kidneys.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Several options help tumor lysis, but only one addresses the finding that can kill first: the potassium.",
+          "elimination": {
+            "strategies": [
+              "Priority key word",
+              "Apply the ABCs"
+            ],
+            "steps": [
+              {
+                "action": "Name the syndrome",
+                "detail": "Tumor lysis: three up, one down."
+              },
+              {
+                "action": "Find the fastest threat",
+                "detail": "Potassium 6.4 mEq/L and the heart."
+              },
+              {
+                "action": "Act at that level",
+                "detail": "Monitor and notify."
+              }
+            ],
+            "verdict": "Cardiac monitor and notify the provider."
+          },
+          "objective": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "cjmm": "Prioritize hypotheses",
+          "tag": "application",
+          "tags": [
             "application",
             "new"
           ],
-          "new": true
+          "new": true,
+          "difficulty": "difficult"
+        },
+        {
+          "id": "ig18-x02",
+          "type": "matrix",
+          "stem": "For each finding, indicate the oncologic emergency it most suggests.",
+          "scenario": "The oncology nurse reviews six patients with new findings.",
+          "columns": [
+            "SIADH",
+            "Spinal cord compression",
+            "Superior vena cava syndrome",
+            "Tumor lysis syndrome",
+            "Hypercalcemia"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Back pain that is worse lying down and new trouble starting urination",
+              "answer": "Spinal cord compression",
+              "rationale": "Back pain worse lying flat, then bladder changes, signals pressure on the cord."
+            },
+            {
+              "id": "r2",
+              "text": "Facial swelling that is worse in the morning and a tight shirt collar",
+              "answer": "Superior vena cava syndrome",
+              "rationale": "Blocked return of blood from the head causes swelling, worse after lying flat overnight."
+            },
+            {
+              "id": "r3",
+              "text": "Weight gain of 2 kg, confusion and sodium 121 mEq/L",
+              "answer": "SIADH",
+              "rationale": "Retained water dilutes sodium, causing weight gain and confusion."
+            },
+            {
+              "id": "r4",
+              "text": "Numb lips and muscle cramps the day after a first chemotherapy dose",
+              "answer": "Tumor lysis syndrome",
+              "rationale": "Phosphate released from dying cells binds calcium, so calcium falls, causing numbness and cramps."
+            },
+            {
+              "id": "r5",
+              "text": "Constipation, thirst and fatigue in a patient with bone metastases",
+              "answer": "Hypercalcemia",
+              "rationale": "Bone breakdown releases calcium; constipation, thirst and fatigue are early signs."
+            },
+            {
+              "id": "r6",
+              "text": "New leg weakness with numbness below the waist",
+              "answer": "Spinal cord compression",
+              "rationale": "Motor and sensory loss below a level means the cord is compressed; this is an emergency."
+            }
+          ],
+          "answer": {
+            "r1": "Spinal cord compression",
+            "r2": "Superior vena cava syndrome",
+            "r3": "SIADH",
+            "r4": "Tumor lysis syndrome",
+            "r5": "Hypercalcemia",
+            "r6": "Spinal cord compression"
+          },
+          "scoring": "0/1",
+          "takeaway": "Match the emergency by its signature: back pain worse lying down (cord compression), facial swelling (superior vena cava), low sodium with water gain (SIADH), low calcium signs after chemotherapy (tumor lysis), constipation and thirst with bone metastases (hypercalcemia).",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Find the one cue in each row that only one emergency explains, then confirm with the setting.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Look for the signature cue",
+                "detail": "Position related pain, swelling above the heart, low sodium, timing after chemotherapy, bone spread."
+              },
+              {
+                "action": "Confirm with context",
+                "detail": "Who has bone metastases, who just had chemotherapy."
+              }
+            ],
+            "verdict": "Back pain and leg weakness: cord compression; facial swelling: superior vena cava; low sodium: SIADH; numb lips after chemotherapy: tumor lysis; constipation with bone metastases: hypercalcemia."
+          },
+          "objective": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "cjmm": "Analyze cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult"
+        },
+        {
+          "id": "ig18-x03",
+          "type": "multiple_choice",
+          "stem": "While hanging IV chemotherapy, the nurse knocks over the bag and about 100 mL spills on the floor. No one has been splashed. Which action should the nurse take first?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Restrict the area and put on spill kit protection",
+              "correct": true,
+              "rationale": "The first step is to keep others away and protect yourself: double gloves, gown, eye protection and a respirator from the spill kit. Then contain and clean the spill."
+            },
+            {
+              "id": "B",
+              "text": "Wipe the spill with paper towels and discard them",
+              "correct": false,
+              "rationale": "Wiping without protection exposes the nurse, and regular trash is not used for hazardous waste."
+            },
+            {
+              "id": "C",
+              "text": "Call housekeeping to mop the floor",
+              "correct": false,
+              "rationale": "Chemotherapy spills are cleaned by trained staff with a spill kit, not routine mopping."
+            },
+            {
+              "id": "D",
+              "text": "Notify the provider that the dose was lost",
+              "correct": false,
+              "rationale": "The provider is told so the dose can be replaced, but the hazard is controlled first."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "For a chemotherapy spill, secure the area, put on the protective equipment from the spill kit, contain and clean the spill, and dispose of it as hazardous waste; then report it.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Safety first for everyone near the spill, then cleanup, then reporting.",
+          "elimination": {
+            "strategies": [
+              "Priority key word"
+            ],
+            "steps": [
+              {
+                "action": "Protect others",
+                "detail": "Restrict the area."
+              },
+              {
+                "action": "Protect yourself",
+                "detail": "Spill kit equipment."
+              },
+              {
+                "action": "Then clean and report",
+                "detail": "Hazardous waste, incident report."
+              }
+            ],
+            "verdict": "Restrict the area and put on spill kit protection."
+          },
+          "objective": "Apply safety precautions when caring for patients receiving cancer treatment",
+          "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult"
+        },
+        {
+          "id": "ig18-x04",
+          "type": "multiple_choice",
+          "stem": "On day 9 after chemotherapy, a patient's platelets are 18,000/mm3 and the patient is constipated. Which prescription does the nurse question?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Oral docusate twice daily",
+              "correct": false,
+              "rationale": "A stool softener prevents straining, which lowers bleeding risk."
+            },
+            {
+              "id": "B",
+              "text": "Acetaminophen for a headache",
+              "correct": false,
+              "rationale": "Acetaminophen does not affect platelet function, so it is preferred over aspirin and NSAIDs."
+            },
+            {
+              "id": "C",
+              "text": "Bisacodyl rectal suppository",
+              "correct": true,
+              "rationale": "With platelets below 20,000/mm3, anything inserted into the rectum can tear the lining and cause bleeding. Rectal suppositories, enemas and rectal temperatures are avoided."
+            },
+            {
+              "id": "D",
+              "text": "A soft toothbrush for oral care",
+              "correct": false,
+              "rationale": "A soft brush protects the gums when platelets are low."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "At the nadir with very low platelets, avoid rectal routes, injections when possible, aspirin and NSAIDs, and anything that injures mucosa; use stool softeners and soft toothbrushes.",
+          "coverage": "Covered in Lecture PPT.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Read the platelet count, then look for the option that injures a mucous membrane.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the count",
+                "detail": "18,000/mm3: high bleeding risk."
+              },
+              {
+                "action": "Find the injury",
+                "detail": "Rectal insertion."
+              }
+            ],
+            "verdict": "The rectal suppository."
+          },
+          "objective": "Identify common treatment side effects and appropriate nursing interventions",
+          "cjmm": "Recognize cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult"
         }
       ]
     }
@@ -17375,10 +17898,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c02",
@@ -17439,10 +17960,8 @@
           "cjmm": "Generate solutions",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c03",
@@ -17520,10 +18039,8 @@
           "cjmm": "Recognize cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c04",
@@ -17580,10 +18097,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c05",
@@ -17640,10 +18155,8 @@
           "cjmm": "Recognize cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c06",
@@ -17711,10 +18224,8 @@
           "cjmm": "Recognize cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c07",
@@ -17786,10 +18297,8 @@
           "cjmm": "Recognize cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c08",
@@ -17875,10 +18384,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c09",
@@ -17964,10 +18471,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c10",
@@ -18038,10 +18543,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c11",
@@ -18098,10 +18601,8 @@
           "cjmm": "Take action",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c12",
@@ -18185,10 +18686,8 @@
           "cjmm": "Recognize cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c13",
@@ -18249,10 +18748,8 @@
           "cjmm": "Recognize cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c14",
@@ -18309,10 +18806,8 @@
           "cjmm": "Take action",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c15",
@@ -18391,10 +18886,8 @@
           "cjmm": "Generate solutions",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c16",
@@ -18451,10 +18944,8 @@
           "cjmm": "Recognize cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c17",
@@ -18515,10 +19006,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c18",
@@ -18575,10 +19064,8 @@
           "cjmm": "Take action",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c19",
@@ -18639,10 +19126,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c20",
@@ -18714,10 +19199,8 @@
           "cjmm": "Recognize cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c21",
@@ -18798,10 +19281,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c22",
@@ -18858,10 +19339,8 @@
           "cjmm": "Take action",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c23",
@@ -18935,10 +19414,8 @@
           "cjmm": "Recognize cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c24",
@@ -18999,10 +19476,8 @@
           "cjmm": "Take action",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c25",
@@ -19059,10 +19534,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c26",
@@ -19141,10 +19614,8 @@
           "cjmm": "Recognize cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c27",
@@ -19205,10 +19676,8 @@
           "cjmm": "Take action",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c28",
@@ -19265,10 +19734,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c29",
@@ -19353,10 +19820,8 @@
           "cjmm": "Take action",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-c30",
@@ -19489,10 +19954,8 @@
           "cjmm": "Analyze cues",
           "tag": "Concepts",
           "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true
+            "Concepts"
+          ]
         },
         {
           "id": "sk-enteral-m01",
@@ -19553,10 +20016,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "sk-enteral-m02",
@@ -19617,10 +20078,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "sk-enteral-m03",
@@ -19711,10 +20170,8 @@
           "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "sk-enteral-m04",
@@ -19779,10 +20236,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "sk-enteral-m05",
@@ -19857,10 +20312,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "sk-enteral-m06",
@@ -19921,10 +20374,8 @@
           "cjmm": "Prioritize hypotheses",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "sk-enteral-m07",
@@ -19985,10 +20436,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "sk-enteral-m08",
@@ -20049,10 +20498,8 @@
           "cjmm": "Generate solutions",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "sk-enteral-m09",
@@ -20117,10 +20564,8 @@
           "cjmm": "Take action",
           "tag": "application",
           "tags": [
-            "application",
-            "new"
-          ],
-          "new": true
+            "application"
+          ]
         },
         {
           "id": "sk-enteral-m10",
@@ -20179,6 +20624,1274 @@
           },
           "objective": "Compare enteral feeding methods",
           "cjmm": "Analyze cues",
+          "tag": "application",
+          "tags": [
+            "application"
+          ]
+        },
+        {
+          "id": "sk-enteral-m11",
+          "type": "multiple_choice",
+          "stem": "After bowel surgery, a patient has absent bowel sounds and abdominal distention, and total parenteral nutrition is ordered. The family asks why tube feeding is not used. Which response is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "“Tube feeding costs more money than nutrition given through the vein.”",
+              "correct": false,
+              "rationale": "Cost is not the reason; parenteral nutrition is usually more costly and has more risks."
+            },
+            {
+              "id": "B",
+              "text": "“IV nutrition is always better after any surgery.”",
+              "correct": false,
+              "rationale": "When the gut works, enteral feeding is preferred; “always” is wrong."
+            },
+            {
+              "id": "C",
+              "text": "“A feeding tube cannot be placed after surgery.”",
+              "correct": false,
+              "rationale": "Tubes can be placed after surgery; the problem is the bowel, not the tube."
+            },
+            {
+              "id": "D",
+              "text": "“The bowel is not working yet, so nutrition goes by vein.”",
+              "correct": true,
+              "rationale": "Enteral feeding needs a working GI tract. With an ileus, nutrition is given parenterally until bowel function returns."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Enteral nutrition needs a working GI tract; parenteral nutrition is used when the GI tract cannot be used, and the patient moves to enteral feeding when it recovers.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Absent bowel sounds and distention tell you the gut cannot take formula.",
+          "elimination": {
+            "strategies": [
+              "Eliminate absolutes"
+            ],
+            "steps": [
+              {
+                "action": "Read the cue",
+                "detail": "Absent bowel sounds, distention."
+              },
+              {
+                "action": "Match the route",
+                "detail": "Gut not working means parenteral."
+              }
+            ],
+            "verdict": "The bowel is not working yet."
+          },
+          "objective": "Compare enteral and parenteral nutrition",
+          "cjmm": "Analyze cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m12",
+          "type": "sata",
+          "stem": "The nurse reviews four newly admitted patients. Which patients does the nurse anticipate will need enteral nutrition? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A patient eating 90% of each meal after knee surgery",
+              "correct": false,
+              "rationale": "This patient meets needs by mouth."
+            },
+            {
+              "id": "B",
+              "text": "A patient with a stroke who failed the swallow screen",
+              "correct": true,
+              "rationale": "Unsafe swallowing with a working gut is a key reason for tube feeding."
+            },
+            {
+              "id": "C",
+              "text": "A patient with a complete small bowel obstruction",
+              "correct": false,
+              "rationale": "An obstructed gut cannot be used; this patient needs parenteral nutrition."
+            },
+            {
+              "id": "D",
+              "text": "A patient with advanced amyotrophic lateral sclerosis (ALS) who chokes on liquids",
+              "correct": true,
+              "rationale": "Progressive loss of swallowing with a working gut calls for enteral feeding, often long term."
+            },
+            {
+              "id": "E",
+              "text": "A patient with mild nausea after anesthesia who is eating small meals",
+              "correct": false,
+              "rationale": "Short lived nausea with some intake is managed with antiemetics and diet, not a tube."
+            }
+          ],
+          "answer": [
+            "B",
+            "D"
+          ],
+          "takeaway": "Enteral nutrition fits a working gut with intake that is unsafe or not enough by mouth.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Check both conditions for each patient: a working gut, and oral intake that is unsafe or inadequate.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Working gut?",
+                "detail": "The obstruction rules one out."
+              },
+              {
+                "action": "Safe and adequate oral intake?",
+                "detail": "The patient eating 90% does not need a tube."
+              }
+            ],
+            "verdict": "The stroke patient and the patient with amyotrophic lateral sclerosis."
+          },
+          "objective": "Identify patients who need enteral nutrition",
+          "cjmm": "Recognize cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m13",
+          "type": "multiple_choice",
+          "stem": "A patient with advanced dementia can no longer swallow safely. The patient's advance directive declines artificial nutrition, and a family member asks for a feeding tube. Which action is best?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Share the directive with the provider and family",
+              "correct": true,
+              "rationale": "The nurse advocates for the patient's documented wishes, brings the directive to the team and family, and supports a care discussion."
+            },
+            {
+              "id": "B",
+              "text": "Insert the tube because the family requested it",
+              "correct": false,
+              "rationale": "The patient's documented wishes take priority over a family member's request."
+            },
+            {
+              "id": "C",
+              "text": "Tell the family the tube is not allowed by law",
+              "correct": false,
+              "rationale": "This is inaccurate and closes the discussion instead of supporting the family."
+            },
+            {
+              "id": "D",
+              "text": "Start parenteral nutrition instead of a tube",
+              "correct": false,
+              "rationale": "Parenteral nutrition is also artificial nutrition that the directive declines."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "The decision to start enteral nutrition includes the patient's treatment goals and preferences, including an advance directive. The nurse advocates for those wishes.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The patient's own documented choice guides care; the nurse's role is advocacy and communication.",
+          "elimination": {
+            "strategies": [
+              "Patient centered option"
+            ],
+            "steps": [
+              {
+                "action": "Find the patient's voice",
+                "detail": "The advance directive."
+              },
+              {
+                "action": "Act as advocate",
+                "detail": "Bring it to the provider and family."
+              }
+            ],
+            "verdict": "Share the directive with the provider and family."
+          },
+          "objective": "Identify patients who need enteral nutrition",
+          "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m14",
+          "type": "multiple_choice",
+          "stem": "A provider orders a nasogastric tube to low intermittent suction for a bowel obstruction. Which tube does the nurse gather?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A 10 Fr single lumen Dobhoff tube",
+              "correct": false,
+              "rationale": "Small bore tubes are for feeding and medications and collapse under suction."
+            },
+            {
+              "id": "B",
+              "text": "An 8 Fr feeding tube with a weighted tip",
+              "correct": false,
+              "rationale": "This is a small bore feeding tube, not a decompression tube."
+            },
+            {
+              "id": "C",
+              "text": "A 16 Fr double lumen Salem sump tube",
+              "correct": true,
+              "rationale": "Decompression needs a large bore tube; the second lumen, the air vent, protects the stomach lining during suction."
+            },
+            {
+              "id": "D",
+              "text": "A percutaneous endoscopic gastrostomy tube",
+              "correct": false,
+              "rationale": "A PEG is a long term feeding tube placed by a procedure, not a bedside decompression tube."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Large bore double lumen tubes (14 to 18 Fr, Salem sump) are for decompression, lavage and medications; small bore tubes are for feeding and medications only.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The word suction in the order calls for a large bore tube.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name the job",
+                "detail": "Decompression with suction."
+              },
+              {
+                "action": "Match the tube",
+                "detail": "Large bore, double lumen."
+              }
+            ],
+            "verdict": "A 16 Fr Salem sump."
+          },
+          "objective": "Compare types of feeding tubes and routes",
+          "cjmm": "Generate solutions",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m15",
+          "type": "multiple_choice",
+          "stem": "A small bore feeding tube was just inserted at the bedside. The x ray is not done yet, and the provider asks to start feeding now. Which action is correct?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Start the feeding at a slow rate until the x ray",
+              "correct": false,
+              "rationale": "Even a slow rate puts formula into the lungs if the tube is misplaced."
+            },
+            {
+              "id": "B",
+              "text": "Hold the feeding until the x ray confirms placement",
+              "correct": true,
+              "rationale": "A blindly inserted tube is not used for formula, water or medications until an x ray confirms placement. The nurse explains this to the provider."
+            },
+            {
+              "id": "C",
+              "text": "Inject air and listen, then start the feeding",
+              "correct": false,
+              "rationale": "Air bolus auscultation is not reliable and does not replace an x ray."
+            },
+            {
+              "id": "D",
+              "text": "Give only water flushes until the x ray",
+              "correct": false,
+              "rationale": "Water in a misplaced tube can also be aspirated."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Get an x ray before using any blindly inserted tube; nothing goes in until placement is confirmed.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The rule covers formula, water and medications alike, whatever the rate or who asks.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the rule",
+                "detail": "X ray before first use."
+              },
+              {
+                "action": "Reject partial use",
+                "detail": "Slow rates and water still risk aspiration."
+              }
+            ],
+            "verdict": "Hold the feeding until the x ray."
+          },
+          "objective": "Verify feeding tube placement",
+          "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m16",
+          "type": "multiple_choice",
+          "stem": "A patient taking famotidine has aspirate with a pH of 6 from a nasogastric feeding tube. Which action does the nurse take next?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Conclude the tube is in the lung and pull it out",
+              "correct": false,
+              "rationale": "A pH of 6 is common with acid suppressants and does not prove lung placement."
+            },
+            {
+              "id": "B",
+              "text": "Conclude the tube is in the stomach and feed",
+              "correct": false,
+              "rationale": "pH alone never proves placement."
+            },
+            {
+              "id": "C",
+              "text": "Hold the famotidine so the pH can be retested",
+              "correct": false,
+              "rationale": "The nurse does not stop a prescribed medication to change a test result."
+            },
+            {
+              "id": "D",
+              "text": "Compare the external tube length with the baseline",
+              "correct": true,
+              "rationale": "Acid suppressants can raise gastric pH, so pH alone neither proves nor disproves placement. The nurse adds other checks per policy, and holds the tube if any doubt remains."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Acid suppressants raise gastric pH. Use pH with other checks such as the external length, follow policy, and hold the tube if placement is uncertain.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "When one check is skewed, add another check rather than jumping to a conclusion.",
+          "elimination": {
+            "strategies": [
+              "Assessment before intervention"
+            ],
+            "steps": [
+              {
+                "action": "Explain the pH",
+                "detail": "Famotidine raises it."
+              },
+              {
+                "action": "Add another check",
+                "detail": "External length against baseline."
+              }
+            ],
+            "verdict": "Compare the external length with the baseline."
+          },
+          "objective": "Verify feeding tube placement",
+          "cjmm": "Analyze cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m17",
+          "type": "bowtie",
+          "stem": "Complete the diagram by selecting the condition the patient is most likely experiencing, two actions the nurse should take, and two parameters to monitor.",
+          "scenario": "A patient receiving continuous nasogastric feeding at 60 mL/hr suddenly coughs and becomes short of breath. Oxygen saturation drops from 96% to 88%, and suctioned secretions look like the formula.",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Flush the tube with 30 mL of water",
+                  "correct": false,
+                  "rationale": "Adding fluid adds to what can be aspirated."
+                },
+                {
+                  "id": "B",
+                  "text": "Increase the rate to finish the feeding",
+                  "correct": false,
+                  "rationale": "More formula worsens aspiration."
+                },
+                {
+                  "id": "C",
+                  "text": "Stop the feeding",
+                  "correct": true,
+                  "rationale": "Stopping the feeding prevents more formula from entering the airway."
+                },
+                {
+                  "id": "D",
+                  "text": "Lay the patient flat on the right side",
+                  "correct": false,
+                  "rationale": "Flat positioning increases reflux and aspiration."
+                },
+                {
+                  "id": "E",
+                  "text": "Raise the head of the bed and suction the airway",
+                  "correct": true,
+                  "rationale": "Upright positioning and suctioning clear the airway and ease breathing."
+                }
+              ]
+            },
+            "condition": {
+              "label": "The problem",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Dumping syndrome",
+                  "correct": false,
+                  "rationale": "Dumping causes cramping, diarrhea and sweating, not formula in airway secretions."
+                },
+                {
+                  "id": "B",
+                  "text": "Feeding tube clog",
+                  "correct": false,
+                  "rationale": "A clog stops the feeding but does not cause respiratory distress."
+                },
+                {
+                  "id": "C",
+                  "text": "Fluid overload from flushes",
+                  "correct": false,
+                  "rationale": "Overload develops gradually, without formula in secretions."
+                },
+                {
+                  "id": "D",
+                  "text": "Aspiration of tube feeding",
+                  "correct": true,
+                  "rationale": "Sudden coughing, shortness of breath, falling saturation and formula in secretions point to aspiration."
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to monitor",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Capillary blood glucose",
+                  "correct": false,
+                  "rationale": "Glucose is not the concern in this emergency."
+                },
+                {
+                  "id": "B",
+                  "text": "Oxygen saturation",
+                  "correct": true,
+                  "rationale": "Shows whether gas exchange is improving after the airway is cleared."
+                },
+                {
+                  "id": "C",
+                  "text": "Stool frequency",
+                  "correct": false,
+                  "rationale": "Stool output is unrelated to aspiration."
+                },
+                {
+                  "id": "D",
+                  "text": "Bowel sounds",
+                  "correct": false,
+                  "rationale": "Bowel sounds do not track this airway problem."
+                },
+                {
+                  "id": "E",
+                  "text": "Lung sounds",
+                  "correct": true,
+                  "rationale": "New crackles or wheezes show aspiration and possible pneumonia."
+                }
+              ]
+            }
+          },
+          "answer": {
+            "actions": [
+              "C",
+              "E"
+            ],
+            "condition": [
+              "D"
+            ],
+            "parameters": [
+              "B",
+              "E"
+            ]
+          },
+          "scoring": "0/1",
+          "takeaway": "Suspected aspiration during tube feeding: stop the feeding, position upright, suction, give oxygen as ordered, notify the provider, and monitor saturation and lung sounds.",
+          "coverage": "Topic covered in the skill course. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "The formula in the secretions names the condition; airway actions come first.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Name it",
+                "detail": "Formula in the airway is aspiration."
+              },
+              {
+                "action": "Act for the airway",
+                "detail": "Stop, sit up, suction."
+              },
+              {
+                "action": "Monitor breathing",
+                "detail": "Saturation and lung sounds."
+              }
+            ],
+            "verdict": "Aspiration; stop the feeding and raise and suction; monitor saturation and lung sounds."
+          },
+          "objective": "Prevent aspiration during tube feeding",
+          "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m18",
+          "type": "multiple_choice",
+          "stem": "A feeding is ordered to advance 10 mL/hr every 8 hours to 60 mL/hr as tolerated. At 40 mL/hr, the patient vomits and is newly distended. What does the nurse do?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Advance to 50 mL/hr as scheduled",
+              "correct": false,
+              "rationale": "Vomiting and distention show the patient is not tolerating the current rate."
+            },
+            {
+              "id": "B",
+              "text": "Switch to a bolus feeding to rest the stomach",
+              "correct": false,
+              "rationale": "A bolus delivers a large volume quickly and worsens intolerance, and method changes need an order."
+            },
+            {
+              "id": "C",
+              "text": "Hold the advance and notify the provider",
+              "correct": true,
+              "rationale": "“As tolerated” means advancing only when the patient tolerates the feeding. Vomiting and distention are intolerance and an aspiration risk."
+            },
+            {
+              "id": "D",
+              "text": "Advance the rate but lower the head of the bed",
+              "correct": false,
+              "rationale": "Lowering the head of the bed increases aspiration risk."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Advance a continuous rate only as ordered and as tolerated; signs of intolerance (vomiting, distention) mean hold the advance and report.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "The words “as tolerated” make tolerance the condition for each step.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Read the condition",
+                "detail": "As tolerated."
+              },
+              {
+                "action": "Check tolerance",
+                "detail": "Vomiting and distention."
+              },
+              {
+                "action": "Act",
+                "detail": "Hold and notify."
+              }
+            ],
+            "verdict": "Hold the advance and notify the provider."
+          },
+          "objective": "Compare enteral feeding methods",
+          "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m19",
+          "type": "matrix",
+          "stem": "For each action, indicate whether it is appropriate or requires the nurse to intervene.",
+          "scenario": "The nurse observes a nursing student caring for a patient receiving tube feedings.",
+          "columns": [
+            "Appropriate",
+            "Requires intervention"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Lets an open formula container keep hanging past its time limit",
+              "answer": "Requires intervention",
+              "rationale": "Formula past its hang time can grow bacteria and is discarded."
+            },
+            {
+              "id": "r2",
+              "text": "Flushes 30 mL of water before and after the medication",
+              "answer": "Appropriate",
+              "rationale": "Flushes keep the tube open and deliver the full dose."
+            },
+            {
+              "id": "r3",
+              "text": "Adds a crushed tablet to the formula bag",
+              "answer": "Requires intervention",
+              "rationale": "Medications are never added to formula; they are given separately with flushes."
+            },
+            {
+              "id": "r4",
+              "text": "Uses a Luer IV adapter because the ENFit syringe is missing",
+              "answer": "Requires intervention",
+              "rationale": "Adapting connectors defeats wrong route protection."
+            },
+            {
+              "id": "r5",
+              "text": "Labels the new formula bag with date, time and initials",
+              "answer": "Appropriate",
+              "rationale": "Labeling lets staff track hang time."
+            },
+            {
+              "id": "r6",
+              "text": "Performs hand hygiene before handling the feeding set",
+              "answer": "Appropriate",
+              "rationale": "Hand hygiene and minimal handling prevent contamination."
+            }
+          ],
+          "answer": {
+            "r1": "Requires intervention",
+            "r2": "Appropriate",
+            "r3": "Requires intervention",
+            "r4": "Requires intervention",
+            "r5": "Appropriate",
+            "r6": "Appropriate"
+          },
+          "scoring": "0/1",
+          "takeaway": "Safe formula handling: hand hygiene, minimal handling, labeling, hang time limits, ENFit connectors, medications given separately with flushes.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Test each action against infection prevention, wrong route prevention and medication safety.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Infection prevention",
+                "detail": "Hand hygiene, labels, hang time."
+              },
+              {
+                "action": "Wrong route prevention",
+                "detail": "ENFit only."
+              },
+              {
+                "action": "Medication safety",
+                "detail": "Never in the bag; flush before and after."
+              }
+            ],
+            "verdict": "Labeling, flushing and hand hygiene are appropriate; the Luer adapter, the tablet in the bag and the expired formula require intervention."
+          },
+          "objective": "Give formula, flushes and medications safely",
+          "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m20",
+          "type": "multiple_choice",
+          "stem": "The nurse is caring for a patient on continuous tube feeding. Which task can be delegated to the nursing assistant?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Keep the head of the bed raised and report coughing",
+              "correct": true,
+              "rationale": "Maintaining position and reporting observations is within the nursing assistant's role; the nurse interprets the findings."
+            },
+            {
+              "id": "B",
+              "text": "Check tube placement before a medication",
+              "correct": false,
+              "rationale": "Placement checks require nursing assessment and judgment."
+            },
+            {
+              "id": "C",
+              "text": "Give the scheduled medication through the tube",
+              "correct": false,
+              "rationale": "Medication administration is not delegated to a nursing assistant."
+            },
+            {
+              "id": "D",
+              "text": "Advance the feeding rate by 10 mL/hr per the order",
+              "correct": false,
+              "rationale": "Adjusting a feeding requires assessment of tolerance."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Delegate routine positioning, comfort care and reporting to the nursing assistant; keep placement checks, medications and feeding changes with the nurse.",
+          "coverage": "Topic covered in the skill course. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Delegate tasks with a set procedure and no judgment; keep anything that needs assessment.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Remove assessment tasks",
+                "detail": "Placement and rate changes."
+              },
+              {
+                "action": "Remove medications",
+                "detail": "Not delegated."
+              },
+              {
+                "action": "Keep routine care",
+                "detail": "Positioning and reporting."
+              }
+            ],
+            "verdict": "Keep the head of the bed raised and report coughing."
+          },
+          "objective": "Prevent aspiration during tube feeding",
+          "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m21",
+          "type": "multiple_choice",
+          "stem": "A small bore feeding tube will not flush, and the pump alarms for occlusion. The tubing is not kinked or clamped. Which action is appropriate?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Push water forcefully with a 10 mL syringe",
+              "correct": false,
+              "rationale": "Small syringes create high pressure that can rupture the tube."
+            },
+            {
+              "id": "B",
+              "text": "Gently push and pull warm water with a 60 mL syringe",
+              "correct": true,
+              "rationale": "Warm water with a large syringe and a gentle push and pull motion is the first measure for a clog, per policy."
+            },
+            {
+              "id": "C",
+              "text": "Instill a cola drink into the tube to dissolve the clog",
+              "correct": false,
+              "rationale": "Acidic drinks can make formula clump and are not recommended."
+            },
+            {
+              "id": "D",
+              "text": "Reinsert the guidewire to clear the tube",
+              "correct": false,
+              "rationale": "Reinserting the stylet can perforate the tube and the GI tract."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "For a clogged tube, check for kinks and clamps, then gently flush warm water with a 60 mL syringe; never force, never use small syringes or the stylet. Prevent clogs with routine flushes.",
+          "coverage": "Topic covered in the skill course. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Reject anything forceful or invasive; choose the gentle first step.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Rule out kinks",
+                "detail": "Already done."
+              },
+              {
+                "action": "Choose the gentle method",
+                "detail": "Warm water, large syringe."
+              },
+              {
+                "action": "Reject harm",
+                "detail": "High pressure and the stylet."
+              }
+            ],
+            "verdict": "Push and pull warm water with a 60 mL syringe."
+          },
+          "objective": "Give formula, flushes and medications safely",
+          "cjmm": "Take action",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m22",
+          "type": "sata",
+          "stem": "A patient receiving continuous tube feeding has had five liquid stools today. Which actions does the nurse take? Select all that apply.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Stop tube feeding permanently",
+              "correct": false,
+              "rationale": "Diarrhea is evaluated and managed; the feeding is not simply stopped for good."
+            },
+            {
+              "id": "B",
+              "text": "Check how long the formula has been hanging",
+              "correct": true,
+              "rationale": "Contaminated formula past its hang time can cause diarrhea."
+            },
+            {
+              "id": "C",
+              "text": "Review medications such as antibiotics and sorbitol elixirs",
+              "correct": true,
+              "rationale": "Medications are a common cause of diarrhea in tube fed patients."
+            },
+            {
+              "id": "D",
+              "text": "Increase the rate to replace lost fluid",
+              "correct": false,
+              "rationale": "A faster rate can worsen diarrhea, and rate changes need an order."
+            },
+            {
+              "id": "E",
+              "text": "Report the stools and check for C. difficile per order",
+              "correct": true,
+              "rationale": "Frequent liquid stools in a hospitalized patient may be infection and are reported."
+            }
+          ],
+          "answer": [
+            "B",
+            "C",
+            "E"
+          ],
+          "takeaway": "Diarrhea on tube feeding: look for contaminated formula, medication causes and infection, track intake and output, and report.",
+          "coverage": "Topic covered in the skill course. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Look for causes first; avoid changes that worsen the diarrhea or need an order.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Formula cause",
+                "detail": "Hang time."
+              },
+              {
+                "action": "Medication cause",
+                "detail": "Antibiotics, sorbitol."
+              },
+              {
+                "action": "Infection",
+                "detail": "C. difficile."
+              },
+              {
+                "action": "Reject harm",
+                "detail": "Stopping for good or speeding up."
+              }
+            ],
+            "verdict": "Check hang time, review medications, report and test."
+          },
+          "objective": "Give formula, flushes and medications safely",
+          "cjmm": "Recognize cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m23",
+          "type": "multiple_choice",
+          "stem": "Before starting a patient's first intermittent tube feeding, the nurse completes an assessment. Which finding requires the nurse to hold the feeding and notify the provider?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bowel sounds present in all four quadrants",
+              "correct": false,
+              "rationale": "Active bowel sounds support feeding."
+            },
+            {
+              "id": "B",
+              "text": "Weight 2 kg below the usual weight",
+              "correct": false,
+              "rationale": "Weight loss is a reason for feeding, not a reason to hold it."
+            },
+            {
+              "id": "C",
+              "text": "A soft stool this morning",
+              "correct": false,
+              "rationale": "A normal stool supports feeding."
+            },
+            {
+              "id": "D",
+              "text": "A firm, distended abdomen with new vomiting",
+              "correct": true,
+              "rationale": "Distention with vomiting suggests the gut cannot handle formula and raises aspiration risk."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Before feeding, assess the abdomen, nausea and vomiting, bowel pattern, swallowing, consciousness, airway and breathing; hold and report signs of intolerance.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Find the finding that makes feeding unsafe right now.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the purpose",
+                "detail": "Baseline and safety."
+              },
+              {
+                "action": "Find the danger",
+                "detail": "Distention with vomiting."
+              }
+            ],
+            "verdict": "A firm, distended abdomen with new vomiting."
+          },
+          "objective": "Assess the patient before feeding",
+          "cjmm": "Recognize cues",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m24",
+          "type": "cloze",
+          "stem": "A patient with gastroparesis and two recent aspiration pneumonias will need tube feeding for at least 6 months. Complete the sentence by selecting from the choices below.",
+          "sentence": "The nurse anticipates a [[1]] because the feeding is long term, and feeding into the [[2]] may lower aspiration risk, although aspiration precautions [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "nasogastric tube",
+                  "correct": false,
+                  "rationale": "Nasal tubes are for short periods."
+                },
+                {
+                  "id": "B",
+                  "text": "large bore Salem sump tube",
+                  "correct": false,
+                  "rationale": "A Salem sump is for decompression, not long term feeding."
+                },
+                {
+                  "id": "C",
+                  "text": "nasoduodenal tube",
+                  "correct": false,
+                  "rationale": "This is also a short term nasal route."
+                },
+                {
+                  "id": "D",
+                  "text": "gastrostomy tube with a jejunal extension",
+                  "correct": true,
+                  "rationale": "Long term feeding needs an enterostomal tube; a jejunal extension bypasses the slow stomach."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "large intestine",
+                  "correct": false,
+                  "rationale": "The large intestine does not absorb nutrients for feeding."
+                },
+                {
+                  "id": "B",
+                  "text": "esophagus",
+                  "correct": false,
+                  "rationale": "Feeding is never delivered into the esophagus."
+                },
+                {
+                  "id": "C",
+                  "text": "small intestine",
+                  "correct": true,
+                  "rationale": "Formula past the stomach is less likely to reflux."
+                },
+                {
+                  "id": "D",
+                  "text": "stomach",
+                  "correct": false,
+                  "rationale": "The stomach empties slowly in gastroparesis, raising reflux risk."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "are no longer needed",
+                  "correct": false,
+                  "rationale": "Aspiration can still happen."
+                },
+                {
+                  "id": "B",
+                  "text": "apply only at night",
+                  "correct": false,
+                  "rationale": "Precautions apply whenever the feeding runs."
+                },
+                {
+                  "id": "C",
+                  "text": "are replaced by suction",
+                  "correct": false,
+                  "rationale": "Suction is not a substitute for elevation and monitoring."
+                },
+                {
+                  "id": "D",
+                  "text": "still apply",
+                  "correct": true,
+                  "rationale": "Small intestine feeding lowers but does not eliminate aspiration risk."
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "D",
+            "2": "C",
+            "3": "D"
+          },
+          "takeaway": "Route choice depends on duration, anatomy and gastric emptying; small intestine feeding may lower aspiration risk but precautions still apply.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Use the duration to pick the tube type and the slow stomach to pick the site.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Duration",
+                "detail": "Six months is long term."
+              },
+              {
+                "action": "Gastric emptying",
+                "detail": "Slow, so bypass the stomach."
+              },
+              {
+                "action": "Aspiration",
+                "detail": "Lower risk, not zero."
+              }
+            ],
+            "verdict": "Gastrostomy with a jejunal extension; small intestine; still apply."
+          },
+          "objective": "Compare types of feeding tubes and routes",
+          "cjmm": "Generate solutions",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m25",
+          "type": "multiple_choice",
+          "stem": "Two weeks after starting enteral feeding for undernutrition, which finding best shows the patient is responding?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Weight up 1 kg and the wound edges closing",
+              "correct": true,
+              "rationale": "Gradual weight gain with wound healing shows the feeding is meeting needs."
+            },
+            {
+              "id": "B",
+              "text": "Weight up 2 kg since yesterday",
+              "correct": false,
+              "rationale": "A sudden overnight gain reflects fluid, not nutrition."
+            },
+            {
+              "id": "C",
+              "text": "Eats 25% of a meal tray each day",
+              "correct": false,
+              "rationale": "Low oral intake does not show the feeding is working."
+            },
+            {
+              "id": "D",
+              "text": "Sleeps most of the day and no longer reports any hunger",
+              "correct": false,
+              "rationale": "Sleeping more can mean fatigue or weakness, not improvement in nutrition."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Monitor the response to feeding: gradual weight gain, better wound healing and more strength and energy show it is working; sudden weight gain is fluid.",
+          "coverage": "Covered in the skill course.",
+          "coverageDetail": {
+            "ppt": "full",
+            "reading": [],
+            "readingChecked": false
+          },
+          "strategy": "Pick the outcome that reverses the signs of undernutrition, at a believable pace.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Recall the signs to reverse",
+                "detail": "Weight loss, poor healing, weakness."
+              },
+              {
+                "action": "Check the pace",
+                "detail": "Overnight gain is fluid."
+              }
+            ],
+            "verdict": "Weight up 1 kg and the wound edges closing."
+          },
+          "objective": "Identify patients who need enteral nutrition",
+          "cjmm": "Evaluate outcomes",
+          "tag": "application",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true
+        },
+        {
+          "id": "sk-enteral-m26",
+          "type": "multiple_choice",
+          "stem": "On day 4 after percutaneous endoscopic gastrostomy (PEG) placement, which finding at the insertion site does the nurse report?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A small amount of clear drainage on the dressing",
+              "correct": false,
+              "rationale": "Small amounts of clear drainage are common in the first days."
+            },
+            {
+              "id": "B",
+              "text": "Mild tenderness when the dressing is changed",
+              "correct": false,
+              "rationale": "Mild tenderness is expected as the site heals."
+            },
+            {
+              "id": "C",
+              "text": "Spreading redness with thick yellow drainage",
+              "correct": true,
+              "rationale": "Spreading redness and purulent drainage suggest a site infection that needs treatment."
+            },
+            {
+              "id": "D",
+              "text": "The external bumper resting lightly against the skin",
+              "correct": false,
+              "rationale": "A bumper resting lightly without pressure is the correct fit."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "PEG site care: keep it clean and dry, check daily for redness, drainage, leakage and bumper fit; report spreading redness, purulent drainage or formula leaking around the tube.",
+          "coverage": "Topic covered in the skill course. The detail tested is standard NCLEX teaching, not from your sources.",
+          "coverageDetail": {
+            "ppt": "partial",
+            "reading": [
+              "standard teaching"
+            ],
+            "readingChecked": true
+          },
+          "strategy": "Separate expected healing from infection: spreading and purulent are the cues.",
+          "elimination": {
+            "strategies": [
+              "Treat each option as true or false"
+            ],
+            "steps": [
+              {
+                "action": "Accept expected healing",
+                "detail": "Clear drainage, mild tenderness."
+              },
+              {
+                "action": "Find infection",
+                "detail": "Spreading redness, thick yellow drainage."
+              }
+            ],
+            "verdict": "Spreading redness with thick yellow drainage."
+          },
+          "objective": "Compare types of feeding tubes and routes",
+          "cjmm": "Recognize cues",
           "tag": "application",
           "tags": [
             "application",
