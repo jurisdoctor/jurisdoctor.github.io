@@ -168,6 +168,10 @@ const Progress = ({
         label: entry.title,
         questions: entry.questions,
       })),
+      ...bank.Procedures.map((entry) => ({
+        label: entry.title,
+        questions: entry.questions,
+      })),
       ...bank.Cases.map((entry) => ({
         label: `Case · ${entry.title}`,
         questions: entry.questions,
@@ -313,7 +317,7 @@ const Progress = ({
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[var(--chip-blue-border)] text-[var(--body-color)]">
             <PiChartBarBold aria-hidden />
           </span>
-          nothing to show yet
+          No progress yet...
         </span>
         <div
           aria-hidden
@@ -332,10 +336,6 @@ const Progress = ({
             </span>
           ))}
         </div>
-        <p className="max-w-[28rem] text-[var(--muted-color)]">
-          Answer a few questions in any section and this page will track your
-          score and point you at what to study next.
-        </p>
       </div>
     );
   }

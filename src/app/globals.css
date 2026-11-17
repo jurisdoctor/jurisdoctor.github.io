@@ -835,3 +835,283 @@ button {
     animation: none;
   }
 }
+
+.gate-stage {
+  position: relative;
+  height: 4rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gate-walker {
+  --w: 4rem;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - var(--w) / 2);
+  height: 4rem;
+  width: var(--w);
+}
+
+.gate-walker-wide {
+  --w: 6rem;
+}
+
+.gate-flip {
+  height: 100%;
+  width: 100%;
+}
+
+.gate-bob,
+.gate-leg,
+.gate-tail,
+.gate-head {
+  transform-box: fill-box;
+}
+
+.gate-leg {
+  transform-origin: 50% 8%;
+}
+
+.gate-tail {
+  transform-origin: 90% 90%;
+}
+
+.gate-head {
+  transform-origin: 20% 90%;
+}
+
+@keyframes gateWalk {
+  0% {
+    left: 0;
+    animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+  }
+  48.5% {
+    left: calc(100% - var(--w));
+    animation-timing-function: linear;
+  }
+  50% {
+    left: calc(100% - var(--w));
+    animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+  }
+  98.5% {
+    left: 0;
+    animation-timing-function: linear;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes gateFlip {
+  0%,
+  48.5% {
+    transform: translateY(0) scaleX(1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  49.25% {
+    transform: translateY(-4px) scaleX(0);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  50%,
+  98.5% {
+    transform: translateY(0) scaleX(-1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  99.25% {
+    transform: translateY(-4px) scaleX(0);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  100% {
+    transform: translateY(0) scaleX(1);
+  }
+}
+
+@keyframes gateLeg {
+  from {
+    transform: rotate(-26deg);
+  }
+  to {
+    transform: rotate(26deg);
+  }
+}
+
+@keyframes gateLegOpposite {
+  from {
+    transform: rotate(26deg);
+  }
+  to {
+    transform: rotate(-26deg);
+  }
+}
+
+@keyframes gateBob {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1.2px);
+  }
+}
+
+@keyframes gateWag {
+  from {
+    transform: rotate(-14deg);
+  }
+  to {
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes gateNod {
+  from {
+    transform: rotate(-3deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gate-walker {
+    animation: gateWalk 26s linear infinite;
+  }
+  .gate-flip {
+    animation: gateFlip 26s linear infinite;
+  }
+  .gate-leg-a {
+    animation: gateLeg 0.42s ease-in-out infinite alternate;
+  }
+  .gate-leg-b {
+    animation: gateLegOpposite 0.42s ease-in-out infinite alternate;
+  }
+  .gate-bob {
+    animation: gateBob 0.21s ease-in-out infinite alternate;
+  }
+  .gate-tail {
+    animation: gateWag 0.3s ease-in-out infinite alternate;
+  }
+  .gate-head {
+    animation: gateNod 0.42s ease-in-out infinite alternate;
+  }
+}
+
+.dog-joint {
+  transform-box: view-box;
+}
+
+@keyframes dogForeUp {
+  0% {
+    transform: rotate(-30deg);
+    animation-timing-function: linear;
+  }
+  58% {
+    transform: rotate(30deg);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes dogHindUp {
+  0% {
+    transform: rotate(-28deg);
+    animation-timing-function: linear;
+  }
+  58% {
+    transform: rotate(24deg);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  100% {
+    transform: rotate(-28deg);
+  }
+}
+
+@keyframes dogForeLow {
+  0%,
+  55% {
+    transform: rotate(0deg);
+  }
+  78% {
+    transform: rotate(70deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes dogHindLow {
+  0%,
+  55% {
+    transform: rotate(0deg);
+  }
+  78% {
+    transform: rotate(70deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes dogBob {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1.3px);
+  }
+}
+
+@keyframes dogNod {
+  from {
+    transform: rotate(-2.5deg);
+  }
+  to {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes dogEar {
+  from {
+    transform: rotate(-3deg);
+  }
+  to {
+    transform: rotate(6deg);
+  }
+}
+
+@keyframes dogTail {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(14deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dog-fore-up {
+    animation: dogForeUp 0.62s infinite;
+  }
+  .dog-hind-up {
+    animation: dogHindUp 0.62s infinite;
+  }
+  .dog-fore-low {
+    animation: dogForeLow 0.62s infinite;
+  }
+  .dog-hind-low {
+    animation: dogHindLow 0.62s infinite;
+  }
+  .dog-body {
+    animation: dogBob 0.31s ease-in-out infinite alternate;
+  }
+  .dog-head {
+    animation: dogNod 0.62s ease-in-out infinite alternate;
+  }
+  .dog-ear {
+    animation: dogEar 0.31s ease-in-out infinite alternate;
+  }
+  .dog-tail {
+    animation: dogTail 0.3s ease-in-out infinite alternate;
+  }
+}

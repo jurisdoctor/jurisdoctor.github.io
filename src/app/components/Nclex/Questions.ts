@@ -445,6 +445,7 @@ interface RawBankFile {
   };
   chapters: BankType[];
   skills?: BankType[];
+  procedures?: BankType[];
 }
 
 interface ExtraFile {
@@ -454,11 +455,13 @@ interface ExtraFile {
 export interface DerivedBank {
   Chapters: ChapterType[];
   Skills: ChapterType[];
+  Procedures: ChapterType[];
   Cases: ChapterType[];
   Judgment: ChapterType[];
   Ready: ChapterType[];
   AllQuestions: QuestionType[];
   AllSkillQuestions: QuestionType[];
+  AllProcedureQuestions: QuestionType[];
   AllCaseQuestions: QuestionType[];
   AllJudgmentQuestions: QuestionType[];
   ContentHashes: Record<string, string>;
@@ -581,6 +584,7 @@ export const buildBank = (
   }));
 
   const Skills: ChapterType[] = group(data.skills ?? [], false);
+  const Procedures: ChapterType[] = group(data.procedures ?? [], false);
 
   const Cases: ChapterType[] = (() => {
     const held = new Map<string, QuestionType[]>();
@@ -612,7 +616,7 @@ export const buildBank = (
   })();
 
   const ContentHashes: Record<string, string> = {};
-  [...banked, ...Skills].forEach((entry) =>
+  [...banked, ...Skills, ...Procedures].forEach((entry) =>
     entry.questions.forEach((question) => {
       if (question.contentHash)
         ContentHashes[question.id] = question.contentHash;
@@ -622,11 +626,13 @@ export const buildBank = (
   return {
     Chapters,
     Skills,
+    Procedures,
     Cases,
     Judgment,
     Ready: Chapters.filter((chapter) => chapter.questions.length > 0),
     AllQuestions: Chapters.flatMap((chapter) => chapter.questions),
     AllSkillQuestions: Skills.flatMap((skill) => skill.questions),
+    AllProcedureQuestions: Procedures.flatMap((skill) => skill.questions),
     AllCaseQuestions: Cases.flatMap((entry) => entry.questions),
     AllJudgmentQuestions: Judgment.flatMap((step) => step.questions),
     ContentHashes,
@@ -656,17 +662,20 @@ export const filterBank = (
 
   const Chapters = narrow(bank.Chapters, true);
   const Skills = narrow(bank.Skills, true);
+  const Procedures = narrow(bank.Procedures, true);
   const Cases = narrow(bank.Cases, false);
   const Judgment = narrow(bank.Judgment, false);
   return {
     ...bank,
     Chapters,
     Skills,
+    Procedures,
     Cases,
     Judgment,
     Ready: Chapters,
     AllQuestions: Chapters.flatMap((chapter) => chapter.questions),
     AllSkillQuestions: Skills.flatMap((skill) => skill.questions),
+    AllProcedureQuestions: Procedures.flatMap((skill) => skill.questions),
     AllCaseQuestions: Cases.flatMap((entry) => entry.questions),
     AllJudgmentQuestions: Judgment.flatMap((step) => step.questions),
   };

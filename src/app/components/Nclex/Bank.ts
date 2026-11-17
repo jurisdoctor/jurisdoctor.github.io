@@ -32,10 +32,13 @@ export const loadBank = (exam: ExamId): Promise<DerivedBank> => {
       ? Promise.all([
           import("./questions-final.json"),
           import("./questions-pharm.json"),
-        ]).then(([data, pharm]) =>
+          import("./questions-skills.json"),
+        ]).then(([data, pharm, skills]) =>
           buildBank({
             ...(data.default as unknown as Parameters<typeof buildBank>[0]),
             skills: (pharm.default as unknown as { chapters: never[] })
+              .chapters,
+            procedures: (skills.default as unknown as { chapters: never[] })
               .chapters,
           }),
         )

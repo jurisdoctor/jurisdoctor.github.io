@@ -21,7 +21,6 @@ import ChapterSet, {
   PickType,
   ResultType,
 } from "./ChapterSet";
-import Flash from "./Flash";
 import {
   ChapterType,
   DerivedBank,
@@ -40,6 +39,7 @@ import TypedText, { Segment } from "../Typed/TypedText";
 type SectionType =
   | "chapters"
   | "skills"
+  | "procedures"
   | "progress"
   | "cases"
   | "judgment"
@@ -92,6 +92,7 @@ const validHashes = (saved: Record<string, string>) =>
 const SECTIONS: SectionType[] = [
   "chapters",
   "skills",
+  "procedures",
   "progress",
   "cases",
   "judgment",
@@ -109,6 +110,7 @@ const validStars = (saved: Record<string, true>) =>
 const TITLES: Record<SectionType, string> = {
   chapters: "Chapters",
   skills: "Skills",
+  procedures: "Skills",
   progress: "Progress",
   cases: "Case studies",
   judgment: "Clinical judgment",
@@ -135,9 +137,9 @@ const SETS: Record<SetKind, SetType> = {
       { text: "style", className: "italic" },
       { text: " Questions" },
     ],
-    names: { skills: "Pharmacology" },
-    nouns: { skills: "drug groups" },
-    picks: { skills: "a drug group" },
+    names: { skills: "Pharmacology", procedures: "Skills" },
+    nouns: { skills: "drug groups", procedures: "skills" },
+    picks: { skills: "a drug group", procedures: "a skill" },
   },
   kaplan: {
     scope: "kaplan",
@@ -223,7 +225,13 @@ const ExamView = ({
   const known = useMemo(
     () =>
       new Set(
-        [...bank.Chapters, ...bank.Skills, ...bank.Cases, ...bank.Judgment]
+        [
+          ...bank.Chapters,
+          ...bank.Skills,
+          ...bank.Procedures,
+          ...bank.Cases,
+          ...bank.Judgment,
+        ]
           .flatMap((entry) => entry.questions)
           .map((entry) => entry.id),
       ),
@@ -245,8 +253,13 @@ const ExamView = ({
       SECTIONS.filter((entry) => {
         if (entry === "favorites") return showFavorites;
         if (entry === "skills") return bank.Skills.length > 0;
+        if (entry === "procedures") return bank.Procedures.length > 0;
         if (entry === "progress")
-          return bank.Chapters.length > 0 || bank.Skills.length > 0;
+          return (
+            bank.Chapters.length > 0 ||
+            bank.Skills.length > 0 ||
+            bank.Procedures.length > 0
+          );
         if (entry === "cases") return bank.Cases.length > 0;
         if (entry === "judgment") return bank.Judgment.length > 0;
         return bank.Chapters.length > 0;
@@ -332,6 +345,7 @@ const ExamView = ({
     const sources: [SectionType, ChapterType[]][] = [
       ["chapters", bank.Chapters],
       ["skills", bank.Skills],
+      ["procedures", bank.Procedures],
       ["cases", bank.Cases],
       ["judgment", bank.Judgment],
     ];
@@ -364,21 +378,25 @@ const ExamView = ({
       ? []
       : section === "skills"
         ? bank.Skills
-        : section === "cases"
-          ? bank.Cases
-          : section === "judgment"
-            ? bank.Judgment
-            : section === "favorites"
-              ? favoriteGroups
-              : bank.Chapters;
+        : section === "procedures"
+          ? bank.Procedures
+          : section === "cases"
+            ? bank.Cases
+            : section === "judgment"
+              ? bank.Judgment
+              : section === "favorites"
+                ? favoriteGroups
+                : bank.Chapters;
   const noun =
     section === "skills"
       ? (set.nouns.skills ?? "skills")
-      : section === "cases"
-        ? "cases"
-        : section === "favorites"
-          ? "favorites"
-          : "chapters";
+      : section === "procedures"
+        ? (set.nouns.procedures ?? "skills")
+        : section === "cases"
+          ? "cases"
+          : section === "favorites"
+            ? "favorites"
+            : "chapters";
   const empty = groups.length === 0;
 
   const viewFor = useCallback(
@@ -647,13 +665,17 @@ const ExamView = ({
           onStart={(next, index) => open(next, index, shown)}
           onReset={reset}
           picker={
-            section === "skills"
+            section === "skills" || section === "procedures"
               ? set.scope === "nclex"
                 ? "menu"
                 : "select"
               : "grid"
           }
-          placeholder={`Choose ${set.picks.skills ?? "a skill"}…`}
+          placeholder={`Choose ${
+            (section === "procedures"
+              ? set.picks.procedures
+              : set.picks.skills) ?? "a skill"
+          }…`}
           starred={stars}
         />
       )}
@@ -664,21 +686,6 @@ const ExamView = ({
       >
         {started === null || deck.length === 0 ? null : (
           <>
-            <h3 className="mb-6 text-xl lg:text-center">
-              {group?.members && group.members.length > 1 ? (
-                <>
-                  Chapter{" "}
-                  <Flash
-                    items={group.members.map((member) =>
-                      String(member.chapterNumber),
-                    )}
-                  />{" "}
-                  · {group.title}
-                </>
-              ) : (
-                label
-              )}
-            </h3>
             <Quiz
               key={`${section}-${lens}-${String(pick)}-${drill}-${deck[started.at]?.id}-${pass}`}
               label={label}
@@ -806,9 +813,15 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
                       const pool =
                         section === "skills"
                           ? bank.AllSkillQuestions
-                          : section === "progress" || section === "favorites"
-                            ? [...bank.AllQuestions, ...bank.AllSkillQuestions]
-                            : bank.AllQuestions;
+                          : section === "procedures"
+                            ? bank.AllProcedureQuestions
+                            : section === "progress" || section === "favorites"
+                              ? [
+                                  ...bank.AllQuestions,
+                                  ...bank.AllSkillQuestions,
+                                  ...bank.AllProcedureQuestions,
+                                ]
+                              : bank.AllQuestions;
                       return (
                         <div className="ml-auto inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1 lg:ml-0">
                           {FINAL_KINDS.map((entry) => (
