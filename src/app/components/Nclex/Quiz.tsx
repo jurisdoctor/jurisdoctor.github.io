@@ -195,6 +195,8 @@ const Quiz = ({
   onResult,
   onMove,
   onRedo,
+  total,
+  hideCount = false,
   starred,
   onStar,
   finalRedoOnly = false,
@@ -207,6 +209,8 @@ const Quiz = ({
   onResult: (id: string, correct: boolean) => void;
   onMove: (at: number) => void;
   onRedo?: (at: number) => void;
+  total?: number;
+  hideCount?: boolean;
   starred?: Record<string, true>;
   onStar?: (id: string) => void;
   finalRedoOnly?: boolean;
@@ -255,6 +259,8 @@ const Quiz = ({
   const built = bowtie || grid || marker || ranked || paired || gapped;
   const staged = !!question.caseId;
   const multi = built || isMulti(question);
+  const floatStar =
+    hideCount && !multi && !question.caseId && !question.scenario;
   const keys = built ? [] : keysOf(question);
   const correct = built
     ? results[question.id] === "solved"
@@ -340,7 +346,9 @@ const Quiz = ({
     <div
       ref={topRef}
       data-shapes-safe
-      className="animate-fadeIn scroll-mt-4 rounded-xl bg-[var(--container-color)] p-7 shadow-xl"
+      className={`animate-fadeIn scroll-mt-4 rounded-xl bg-[var(--container-color)] p-7 shadow-xl ${
+        floatStar ? "relative" : ""
+      }`}
     >
       {question.caseId && (
         <div className="mb-4 rounded-2xl bg-[var(--chip-blue-soft)] p-4">
@@ -374,11 +382,19 @@ const Quiz = ({
         </div>
       )}
 
-      <div className="mb-3 flex items-center justify-between gap-x-4">
+      <div
+        className={
+          floatStar
+            ? "absolute right-5 top-5"
+            : "mb-3 flex items-center justify-between gap-x-4"
+        }
+      >
         <span className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2">
-          <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
-            {question.ordinal ?? at + 1} of {questions.length}
-          </span>
+          {!hideCount && (
+            <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
+              {question.ordinal ?? at + 1} of {total ?? questions.length}
+            </span>
+          )}
           {multi && (
             <span className="rounded-md bg-[var(--chip-blue)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[var(--title-color)]">
               {bowtie
@@ -400,10 +416,12 @@ const Quiz = ({
           )}
         </span>
 
-        <span className="flex h-6 shrink-0 items-center gap-x-3 whitespace-nowrap text-sm text-[var(--muted-color)]">
-          <span>
-            {right} / {asked}
-          </span>
+        <span className="ml-auto flex h-6 shrink-0 items-center gap-x-3 whitespace-nowrap text-sm text-[var(--muted-color)]">
+          {!hideCount && (
+            <span>
+              {right} / {asked}
+            </span>
+          )}
           {onStar && (
             <button
               type="button"
@@ -497,7 +515,7 @@ const Quiz = ({
         </div>
       )}
 
-      <p className="mb-6 text-lg sm:text-base">
+      <p className={`mb-6 text-lg sm:text-base ${floatStar ? "pr-8" : ""}`}>
         <Temps>{question.stem}</Temps>
       </p>
 

@@ -11,7 +11,7 @@ export const EXAM_TITLES: Record<ExamId, string> = {
   final: "Final Exam",
 };
 
-export const EXAMS: ExamId[] = ["exam1", "exam2", "exam3", "final"];
+export const EXAMS: ExamId[] = ["final"];
 
 export const isExamId = (value: unknown): value is ExamId =>
   value === "exam1" ||
@@ -29,8 +29,15 @@ export const loadBank = (exam: ExamId): Promise<DerivedBank> => {
 
   const promise =
     exam === "final"
-      ? import("./questions-final.json").then((mod) =>
-          buildBank(mod.default as unknown as Parameters<typeof buildBank>[0]),
+      ? Promise.all([
+          import("./questions-final.json"),
+          import("./questions-pharm.json"),
+        ]).then(([data, pharm]) =>
+          buildBank({
+            ...(data.default as unknown as Parameters<typeof buildBank>[0]),
+            skills: (pharm.default as unknown as { chapters: never[] })
+              .chapters,
+          }),
         )
       : exam === "exam3"
         ? import("./questions-3.json").then((mod) =>

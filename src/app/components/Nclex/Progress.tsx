@@ -333,8 +333,8 @@ const Progress = ({
           ))}
         </div>
         <p className="max-w-[28rem] text-[var(--muted-color)]">
-          Answer a few questions in Chapters or Skills and this page will track
-          your score and point you at what to study next.
+          Answer a few questions in any section and this page will track your
+          score and point you at what to study next.
         </p>
       </div>
     );

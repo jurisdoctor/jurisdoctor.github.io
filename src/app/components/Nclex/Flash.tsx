@@ -1,10 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
-import TypedText from "../Typed/TypedText";
 
 const STEP = 2500;
 const slotNow = () => Math.floor(Date.now() / STEP);
 
+// Cycles through chapter numbers for a topic built from several chapters.
+// One number is in the DOM at a time (no overlap/garble). It sits in a plain
+// inline-block sized to the widest value with tabular figures, so the glyph
+// keeps the normal text baseline (never clipped) and the surrounding text
+// never shifts. Each change flashes in with a simple opacity fade.
 const Flash = ({
   items,
   className,
@@ -28,14 +32,17 @@ const Flash = ({
 
   if (items.length < 2) return <>{items[0]}</>;
 
+  const widest = items.reduce((a, b) => Math.max(a, b.length), 0);
+
   return (
-    <TypedText
-      inline
-      nowrap
-      text={items[index]}
-      reserve={items}
-      className={className}
-    />
+    <span
+      className={`inline-block text-center tabular-nums ${className ?? ""}`}
+      style={{ minWidth: `${widest}ch` }}
+    >
+      <span key={index} className="flash-num">
+        {items[index]}
+      </span>
+    </span>
   );
 };
 

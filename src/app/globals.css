@@ -430,6 +430,24 @@ button {
   }
 }
 
+/* One chapter number flashing in cleanly (used by Flash for multi-chapter
+   topics). No overlap with the previous number, so digits never garble, and
+   a plain opacity fade (no blur or shift) so glyphs are never clipped. */
+@media (prefers-reduced-motion: no-preference) {
+  .flash-num {
+    animation: flashNum 0.3s ease-out;
+  }
+}
+
+@keyframes flashNum {
+  0% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes lineFade {
   from {
     opacity: 0;

@@ -135,9 +135,9 @@ const SETS: Record<SetKind, SetType> = {
       { text: "style", className: "italic" },
       { text: " Questions" },
     ],
-    names: {},
-    nouns: {},
-    picks: {},
+    names: { skills: "Pharmacology" },
+    nouns: { skills: "drug groups" },
+    picks: { skills: "a drug group" },
   },
   kaplan: {
     scope: "kaplan",
@@ -189,7 +189,7 @@ const ExamView = ({
   exam: string;
   examTitle: string;
   bank: DerivedBank;
-  toolbar?: ReactNode;
+  toolbar?: ReactNode | ((section: SectionType) => ReactNode);
   progressBank?: DerivedBank;
   kinds?: KindType[];
 }) => {
@@ -485,6 +485,11 @@ const ExamView = ({
 
   const group = pick ? shown.find((entry) => entry.id === pick) : undefined;
 
+  const chapterTotal =
+    !drill && pick && pick !== "all" && !deck.every(isStory)
+      ? groups.find((entry) => entry.id === pick)?.questions.length
+      : undefined;
+
   const label =
     section === "progress" && drill
       ? drill
@@ -550,7 +555,7 @@ const ExamView = ({
       {(available.length > 1 || toolbar) && (
         <div className="mb-6 flex flex-wrap items-center gap-3 lg:justify-center">
           {available.length > 1 && (
-            <div className="ml-3.5 inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1 lg:ml-0">
+            <div className="inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1">
               {available.map((entry) => (
                 <button
                   key={entry}
@@ -571,11 +576,11 @@ const ExamView = ({
               ))}
             </div>
           )}
-          {toolbar}
+          {typeof toolbar === "function" ? toolbar(section) : toolbar}
         </div>
       )}
 
-      <h2 className="relative mb-1 ml-3.5 text-3xl font-bold lg:ml-0 lg:text-center">
+      <h2 className="relative mb-1 text-3xl font-bold lg:text-center">
         <TypedText text={names[section]} reserve={Object.values(names)} />
       </h2>
 
@@ -641,7 +646,13 @@ const ExamView = ({
           left={left}
           onStart={(next, index) => open(next, index, shown)}
           onReset={reset}
-          picker={section === "skills" ? "select" : "grid"}
+          picker={
+            section === "skills"
+              ? set.scope === "nclex"
+                ? "menu"
+                : "select"
+              : "grid"
+          }
           placeholder={`Choose ${set.picks.skills ?? "a skill"}…`}
           starred={stars}
         />
@@ -653,7 +664,7 @@ const ExamView = ({
       >
         {started === null || deck.length === 0 ? null : (
           <>
-            <h3 className="mb-6 ml-3.5 text-xl lg:ml-0 lg:text-center">
+            <h3 className="mb-6 text-xl lg:text-center">
               {group?.members && group.members.length > 1 ? (
                 <>
                   Chapter{" "}
@@ -671,6 +682,8 @@ const ExamView = ({
             <Quiz
               key={`${section}-${lens}-${String(pick)}-${drill}-${deck[started.at]?.id}-${pass}`}
               label={label}
+              total={chapterTotal}
+              hideCount={lens === "incomplete"}
               questions={deck}
               start={started.at}
               results={results}
@@ -693,7 +706,7 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
   );
   const [saved, setExam] = useSaved<string>(
     set.examKey,
-    () => (kind === "nclex" ? "exam1" : ""),
+    () => (kind === "nclex" ? "final" : ""),
     (value) => typeof value === "string",
   );
   const exam =
@@ -748,11 +761,13 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
       <section className="relative mx-auto max-w-[1080px] animate-fadeIn px-10 pb-24 pt-28 lg:pt-12 md:px-6">
         <div className="relative z-10">
           <div className="mb-2 flex items-start justify-between gap-x-4 lg:flex-col lg:items-center lg:gap-y-3">
-            <h1 className="relative ml-3.5 text-4xl font-bold lg:ml-0 lg:text-center">
+            <h1 className="relative text-4xl font-bold lg:text-center">
               <TypedText segments={set.heading} typeOnMount />
             </h1>
 
-            <div className="relative shrink-0">
+            <div
+              className={`relative shrink-0 ${exams.length > 1 ? "" : "hidden"}`}
+            >
               <select
                 value={exam}
                 onChange={(event) => {
@@ -774,9 +789,7 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
             </div>
           </div>
 
-          <p className="mb-10 ml-3.5 lg:ml-0 lg:text-center">
-            {bank ? bank.Course : ` `}
-          </p>
+          <p className="mb-10 lg:text-center">{bank ? bank.Course : ` `}</p>
 
           {shownBank ? (
             <ExamView
@@ -788,34 +801,42 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
               progressBank={finalView ? (bank ?? undefined) : undefined}
               kinds={finalView ? FINAL_TALLIES : undefined}
               toolbar={
-                finalView && bank ? (
-                  <div className="ml-auto inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1 lg:ml-0">
-                    {FINAL_KINDS.map((entry) => (
-                      <button
-                        key={entry.id}
-                        type="button"
-                        onClick={() => setFinalKind(entry.id)}
-                        aria-pressed={finalKind === entry.id}
-                        className={`${tab} ${
-                          finalKind === entry.id
-                            ? "bg-[var(--chip-blue)] text-[var(--title-color)] shadow-lg"
-                            : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
-                        }`}
-                      >
-                        {entry.label}
-                        <span className="ml-2 text-xs font-normal opacity-70">
-                          {
-                            [
-                              ...bank.AllQuestions,
-                              ...bank.AllSkillQuestions,
-                            ].filter((question) => hasTag(question, entry.id))
-                              .length
-                          }
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                ) : undefined
+                finalView && bank
+                  ? (section) => {
+                      const pool =
+                        section === "skills"
+                          ? bank.AllSkillQuestions
+                          : section === "progress" || section === "favorites"
+                            ? [...bank.AllQuestions, ...bank.AllSkillQuestions]
+                            : bank.AllQuestions;
+                      return (
+                        <div className="ml-auto inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1 lg:ml-0">
+                          {FINAL_KINDS.map((entry) => (
+                            <button
+                              key={entry.id}
+                              type="button"
+                              onClick={() => setFinalKind(entry.id)}
+                              aria-pressed={finalKind === entry.id}
+                              className={`${tab} ${
+                                finalKind === entry.id
+                                  ? "bg-[var(--chip-blue)] text-[var(--title-color)] shadow-lg"
+                                  : "text-[var(--muted-color)] hover:text-[var(--title-color)]"
+                              }`}
+                            >
+                              {entry.label}
+                              <span className="ml-2 text-xs font-normal opacity-70">
+                                {
+                                  pool.filter((question) =>
+                                    hasTag(question, entry.id),
+                                  ).length
+                                }
+                              </span>
+                            </button>
+                          ))}
+                        </div>
+                      );
+                    }
+                  : undefined
               }
             />
           ) : (
