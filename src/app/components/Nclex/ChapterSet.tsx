@@ -4,7 +4,6 @@ import {
   ReactNode,
   useCallback,
   useEffect,
-  useMemo,
   useRef,
   useState,
 } from "react";
@@ -431,21 +430,6 @@ const ChapterSet = ({
   const gridRef = useRef<HTMLDivElement>(null);
   const tiles = useRef(new Map<string, HTMLButtonElement>());
 
-  const rows = useMemo(() => {
-    const nameOf = (chapter: ChapterType): string => chapter.source ?? "";
-    const found = Array.from(new Set(chapters.map(nameOf)));
-    if (found.length < 2) return [{ name: "", chapters }];
-    const order = ["Potter", "Iggy"];
-    const names = [
-      ...order.filter((name) => found.includes(name)),
-      ...found.filter((name) => !order.includes(name)),
-    ];
-    return names.map((name) => ({
-      name,
-      chapters: chapters.filter((chapter) => nameOf(chapter) === name),
-    }));
-  }, [chapters]);
-
   const place = useCallback((id: string) => {
     const tile = tiles.current.get(id);
     const grid = gridRef.current;
@@ -598,86 +582,75 @@ const ChapterSet = ({
       </div>
 
       {picker !== "grid" ? null : (
-        <div ref={gridRef} className="-m-1 flex flex-col gap-5 p-1">
-          {rows.map((row) => (
-            <div key={row.name}>
-              {row.name && (
-                <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[var(--muted-color)]">
-                  {row.name}
-                </p>
-              )}
-              <div className="grid grid-cols-[repeat(auto-fill,minmax(2.75rem,1fr))] gap-2">
-                {row.chapters.map((chapter) => {
-                  const count = chapter.questions.length;
-                  const here = open === chapter.id;
-                  const progress = progressOf(chapter.id);
-                  const wet = progress.solved + progress.missed > 0;
-                  const fresh = chapter.questions.some(
-                    (question) =>
-                      (question.new ||
-                        question.dailySet ||
-                        hasTag(question, "review") ||
-                        hasTag(question, "jeopardy")) &&
-                      !results[question.id],
-                  );
-                  return (
-                    <button
-                      key={chapter.id}
-                      ref={(node) => {
-                        if (node) tiles.current.set(chapter.id, node);
-                        else tiles.current.delete(chapter.id);
-                      }}
-                      type="button"
-                      disabled={!count}
-                      onClick={() => toggle(chapter)}
-                      aria-expanded={here}
-                      title={
-                        count
-                          ? `${labelFor(chapter)} · ${count} questions${fresh ? " · has new questions" : ""}`
-                          : `${labelFor(chapter)} · no questions yet`
-                      }
-                      className={`relative h-10 rounded-lg border-2 border-solid text-xs font-bold duration-300 ${here ? "tile-selected z-[1]" : ""} ${
-                        !count
-                          ? "cursor-not-allowed border-transparent text-[#cfc9bb]"
-                          : here
-                            ? "border-[var(--primary-color)] text-[var(--title-color)]"
-                            : active === chapter.id
-                              ? "border-[var(--chip-blue-border)] text-[var(--title-color)]"
-                              : wet
-                                ? "border-transparent text-[var(--title-color)] hover:border-[var(--chip-blue-border)]"
-                                : "border-transparent text-[var(--muted-color)] hover:border-[var(--chip-blue-border)] hover:text-[var(--title-color)]"
-                      } bg-[var(--body-color)]`}
-                    >
-                      {fresh && (
-                        <Glow
-                          label="Has new questions"
-                          hue={hueOf(chapter.id)}
-                          edge={2}
-                        />
-                      )}
-                      <Fill {...progress} />
-                      {chapter.members && chapter.members.length > 1 ? (
-                        <Flash
-                          items={chapter.members.map((member) =>
-                            String(member.chapterNumber),
-                          )}
-                        />
-                      ) : (
-                        <span className="relative">
-                          {displayNumberOf(chapter)}
-                        </span>
-                      )}
-                      {count > 0 && (
-                        <span className="pointer-events-none absolute -right-1 -top-1 rounded-md bg-[var(--chip-blue)] px-1 text-[9px] leading-[14px] text-[var(--title-color)]">
-                          {count}
-                        </span>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+        <div
+          ref={gridRef}
+          className="-m-1 grid grid-cols-[repeat(auto-fill,minmax(2.75rem,1fr))] gap-2 p-1"
+        >
+          {chapters.map((chapter) => {
+            const count = chapter.questions.length;
+            const here = open === chapter.id;
+            const progress = progressOf(chapter.id);
+            const wet = progress.solved + progress.missed > 0;
+            const fresh = chapter.questions.some(
+              (question) =>
+                (question.new ||
+                  question.dailySet ||
+                  hasTag(question, "review")) &&
+                !results[question.id],
+            );
+            return (
+              <button
+                key={chapter.id}
+                ref={(node) => {
+                  if (node) tiles.current.set(chapter.id, node);
+                  else tiles.current.delete(chapter.id);
+                }}
+                type="button"
+                disabled={!count}
+                onClick={() => toggle(chapter)}
+                aria-expanded={here}
+                title={
+                  count
+                    ? `${labelFor(chapter)} · ${count} questions${fresh ? " · has new questions" : ""}`
+                    : `${labelFor(chapter)} · no questions yet`
+                }
+                className={`relative h-10 rounded-lg border-2 border-solid text-xs font-bold duration-300 ${here ? "tile-selected z-[1]" : ""} ${
+                  !count
+                    ? "cursor-not-allowed border-transparent text-[#cfc9bb]"
+                    : here
+                      ? "border-[var(--primary-color)] text-[var(--title-color)]"
+                      : active === chapter.id
+                        ? "border-[var(--chip-blue-border)] text-[var(--title-color)]"
+                        : wet
+                          ? "border-transparent text-[var(--title-color)] hover:border-[var(--chip-blue-border)]"
+                          : "border-transparent text-[var(--muted-color)] hover:border-[var(--chip-blue-border)] hover:text-[var(--title-color)]"
+                } bg-[var(--body-color)]`}
+              >
+                {fresh && (
+                  <Glow
+                    label="Has new questions"
+                    hue={hueOf(chapter.id)}
+                    edge={2}
+                  />
+                )}
+                <Fill {...progress} />
+                {chapter.members && chapter.members.length > 1 ? (
+                  <Flash
+                    items={chapter.members.map((member) =>
+                      String(member.chapterNumber),
+                    )}
+                  />
+                ) : (
+                  <span className="relative">{displayNumberOf(chapter)}</span>
+                )}
+                {count > 0 && (
+                  <span className="pointer-events-none absolute -right-1 -top-1 rounded-md bg-[var(--chip-blue)] px-1 text-[9px] leading-[14px] text-[var(--title-color)]">
+                    {count}
+                  </span>
+                )}
+              </button>
+            );
+          })}
         </div>
       )}
 
@@ -709,7 +682,6 @@ const ChapterSet = ({
               const state = results[question.id];
               const here = current === question.id;
               const glitching = hasTag(question, "review") && !state;
-              const playful = hasTag(question, "jeopardy") && !state;
               return (
                 <button
                   key={question.id}
@@ -731,10 +703,7 @@ const ChapterSet = ({
                         : "bg-[var(--body-color)] text-[var(--muted-color)] hover:bg-[var(--chip-blue)] hover:text-[var(--title-color)]"
                   }`}
                 >
-                  {(question.new ||
-                    question.dailySet ||
-                    glitching ||
-                    playful) &&
+                  {(question.new || question.dailySet || glitching) &&
                     !state && (
                       <Glow label="New question" hue={hueOf(shown.id)} />
                     )}

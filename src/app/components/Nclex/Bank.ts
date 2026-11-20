@@ -11,7 +11,7 @@ export const EXAM_TITLES: Record<ExamId, string> = {
   final: "Final Exam",
 };
 
-export const EXAMS: ExamId[] = ["final"];
+export const EXAMS: ExamId[] = ["exam1", "exam2", "exam3", "final"];
 
 export const isExamId = (value: unknown): value is ExamId =>
   value === "exam1" ||

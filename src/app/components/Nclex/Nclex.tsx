@@ -195,7 +195,11 @@ const ExamView = ({
   progressBank?: DerivedBank;
   kinds?: KindType[];
 }) => {
-  const names = { ...TITLES, ...set.names };
+  const words: Pick<SetType, "names" | "nouns" | "picks"> =
+    set.scope === "nclex" && exam !== "final"
+      ? { names: {}, nouns: {}, picks: {} }
+      : set;
+  const names: Record<SectionType, string> = { ...TITLES, ...words.names };
   const [view, setView] = useSaved<ViewType>(
     `${set.scope}:view:v1:${exam}`,
     freshView,
@@ -389,9 +393,9 @@ const ExamView = ({
                 : bank.Chapters;
   const noun =
     section === "skills"
-      ? (set.nouns.skills ?? "skills")
+      ? (words.nouns.skills ?? "skills")
       : section === "procedures"
-        ? (set.nouns.procedures ?? "skills")
+        ? (words.nouns.procedures ?? "skills")
         : section === "cases"
           ? "cases"
           : section === "favorites"
@@ -673,8 +677,8 @@ const ExamView = ({
           }
           placeholder={`Choose ${
             (section === "procedures"
-              ? set.picks.procedures
-              : set.picks.skills) ?? "a skill"
+              ? words.picks.procedures
+              : words.picks.skills) ?? "a skill"
           }…`}
           starred={stars}
         />

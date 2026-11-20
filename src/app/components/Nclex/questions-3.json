@@ -710,119 +710,8 @@
       "sk-infusion-x14",
       "sk-infusion-x15"
     ],
-    "newIds": [
-      "ig16-m30",
-      "ig16-m31",
-      "ig16-m32",
-      "ig16-x15",
-      "ig16-x16",
-      "ig19-m25",
-      "ig19-m26",
-      "ig19-m27",
-      "ig19-x13",
-      "ig19-x14",
-      "ig27-m43",
-      "ig27-m44",
-      "ig27-m45",
-      "ig27-m46",
-      "ig27-m47",
-      "ig27-m48",
-      "ig27-x21",
-      "ig27-x22",
-      "ig27-x23",
-      "ig27-x24",
-      "ig29-m24",
-      "ig29-m25",
-      "ig29-x17",
-      "ig29-x18",
-      "ig30-m28",
-      "ig30-m29",
-      "ig30-x15",
-      "ig31-m42",
-      "ig31-m43",
-      "ig31-m44",
-      "ig31-m45",
-      "ig31-m46",
-      "ig31-m47",
-      "ig31-x24",
-      "ig31-x25",
-      "ig31-x26",
-      "ig31-x27",
-      "ig32-m24",
-      "ig32-m25",
-      "ig32-x11",
-      "p46-m39",
-      "p46-m40",
-      "p46-m41",
-      "p46-m42",
-      "p46-m43",
-      "p46-m44",
-      "p46-x15",
-      "p46-x16",
-      "p46-x17",
-      "p46-x18",
-      "ig58-m26",
-      "ig58-m27",
-      "ig58-m28",
-      "ig58-m29",
-      "ig58-m30",
-      "ig58-m31",
-      "ig58-x15",
-      "ig58-x16",
-      "ig58-x17",
-      "ig58-x18",
-      "ig59-m19",
-      "ig59-m20",
-      "ig59-m21",
-      "ig59-m22",
-      "ig59-m23",
-      "ig59-m24",
-      "ig59-x15",
-      "ig59-x16",
-      "ig59-x17",
-      "ig59-x18",
-      "ig45-m46",
-      "ig45-m47",
-      "ig45-m48",
-      "ig45-m49",
-      "ig45-m50",
-      "ig45-m51",
-      "ig45-x15",
-      "ig45-x16",
-      "ig45-x17",
-      "ig45-x18",
-      "en-m39",
-      "en-m40",
-      "en-m41",
-      "en-m42",
-      "en-m43",
-      "en-m44",
-      "en-x13",
-      "en-x14",
-      "en-x15",
-      "en-x16",
-      "sk-cardiac-m16",
-      "sk-cardiac-m17",
-      "sk-cardiac-m18",
-      "sk-cardiac-m19",
-      "sk-cardiac-m20",
-      "sk-cardiac-m21",
-      "sk-cardiac-x05",
-      "sk-cardiac-x06",
-      "sk-cardiac-x07",
-      "sk-cardiac-x08",
-      "sk-infusion-m28",
-      "sk-infusion-m29",
-      "sk-infusion-m30",
-      "sk-infusion-m31",
-      "sk-infusion-m32",
-      "sk-infusion-m33",
-      "sk-infusion-x12",
-      "sk-infusion-x13",
-      "sk-infusion-x14",
-      "sk-infusion-x15"
-    ],
-    "newCount": 110,
+    "newIds": [],
+    "newCount": 0,
     "ngnIds": [
       "ig16-m02",
       "ig16-m07",
@@ -1066,8 +955,7 @@
     ],
     "tags": {
       "case-study": "unfolding case study, 6 items per section in caseStep order (same caseGroup)",
-      "jeopardy": "one question per Exam 3 review game clue (61); jeopardyClue, jeopardyAnswer and jeopardyOrder give the game category, answer and order",
-      "new": "batch 20: 10 new questions per section"
+      "jeopardy": "one question per Exam 3 review game clue (61); jeopardyClue, jeopardyAnswer and jeopardyOrder give the game category, answer and order"
     },
     "jeopardyIds": [
       "ig16-m09",
@@ -4888,11 +4776,7 @@
           "caseStep": 1,
           "objective": "Identify the five cardinal signs of inflammation",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -4973,11 +4857,7 @@
           "caseStep": 1,
           "objective": "Distinguish active from passive immunity using examples",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -5043,11 +4923,7 @@
           "caseStep": 1,
           "objective": "Distinguish active from passive immunity using examples",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -5116,11 +4992,7 @@
           "caseStep": 1,
           "objective": "Compare innate and adaptive immunity",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -5213,11 +5085,7 @@
           "objective": "Describe the three stages of the inflammatory response",
           "difficulty": "difficult",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -9005,11 +8873,7 @@
           "caseStep": 1,
           "objective": "Differentiate inflammation from infection",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -9093,11 +8957,7 @@
           "caseStep": 1,
           "objective": "Connect immune responses with nursing assessment",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -9165,11 +9025,7 @@
           "caseStep": 1,
           "objective": "Connect immune responses with nursing assessment",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -9239,11 +9095,7 @@
           "caseStep": 1,
           "objective": "Connect immune responses with nursing assessment",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -9350,11 +9202,7 @@
           "objective": "Differentiate inflammation from infection",
           "difficulty": "difficult",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -15307,11 +15155,7 @@
           "caseStep": 1,
           "objective": "Review the basic anatomy, blood flow, and valves of the heart.",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -15383,11 +15227,7 @@
           "caseStep": 1,
           "objective": "Describe the basic functions of the arterial and venous systems.",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -15455,11 +15295,7 @@
           "caseStep": 1,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -15546,11 +15382,7 @@
           "caseStep": 1,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -15639,11 +15471,7 @@
           "caseStep": 1,
           "objective": "Identify important cardiovascular changes associated with aging.",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -15740,11 +15568,7 @@
           "caseStep": 1,
           "objective": "Review the basic anatomy, blood flow, and valves of the heart.",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -15818,11 +15642,7 @@
           "caseStep": 1,
           "objective": "Recognize common laboratory and diagnostic tests used to evaluate the cardiovascular system.",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -15896,11 +15716,7 @@
           "caseStep": 1,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -15974,11 +15790,7 @@
           "caseStep": 1,
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -16099,11 +15911,7 @@
           "objective": "Perform a focused cardiovascular history and physical assessment.",
           "cjmm": "Recognize cues",
           "difficulty": "difficult",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -19886,11 +19694,7 @@
           },
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -19980,11 +19784,7 @@
           },
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -20058,11 +19858,7 @@
           },
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -20134,11 +19930,7 @@
           },
           "objective": "Describe priority assessment, treatment, and patient teaching interventions for heart failure.",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -23384,11 +23176,7 @@
           },
           "objective": "Explain the basic mechanisms that regulate blood pressure and contribute to hypertension.",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -23471,11 +23259,7 @@
           },
           "objective": "Differentiate primary and secondary hypertension and identify major risk factors.",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -23545,11 +23329,7 @@
           },
           "objective": "Describe lifestyle changes and common medication classes used to manage hypertension.",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -29680,11 +29460,7 @@
           "caseStep": 1,
           "objective": "Select standard and transmission based precautions",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -29751,11 +29527,7 @@
           "caseStep": 1,
           "objective": "Recognize early cues of sepsis and septic shock",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -29840,11 +29612,7 @@
           "caseStep": 1,
           "objective": "Assess for infection and recognize clinical deterioration",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -29925,11 +29693,7 @@
           "caseStep": 1,
           "objective": "Recognize early cues of sepsis and septic shock",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -29998,11 +29762,7 @@
           "caseStep": 1,
           "objective": "Select standard and transmission based precautions",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -30093,11 +29853,7 @@
           "caseStep": 1,
           "objective": "Describe immediate nursing actions when sepsis is suspected",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -30171,11 +29927,7 @@
           "caseStep": 1,
           "objective": "Explain the nurse's role in testing, treatment, and teaching",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -30293,11 +30045,7 @@
           "objective": "Explain the nurse's role in testing, treatment, and teaching",
           "difficulty": "difficult",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -30369,11 +30117,7 @@
           "caseStep": 1,
           "objective": "Describe immediate nursing actions when sepsis is suspected",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -30441,11 +30185,7 @@
           "caseStep": 1,
           "objective": "Select standard and transmission based precautions",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -33163,11 +32903,7 @@
           },
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -33267,11 +33003,7 @@
           },
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -33343,11 +33075,7 @@
           },
           "objective": "Recognize common risk factors, manifestations, diagnostic tests, and treatment approaches for CAD.",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -38606,11 +38334,7 @@
           },
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -38704,11 +38428,7 @@
           },
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -38789,11 +38509,7 @@
           },
           "objective": "Assess patterns & concerning changes",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20,
           "revisedBatch": 21
         },
@@ -38863,11 +38579,7 @@
           },
           "objective": "Select dignity supporting interventions",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -38936,11 +38648,7 @@
           },
           "objective": "Select dignity supporting interventions",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -39011,11 +38719,7 @@
           },
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -39087,11 +38791,7 @@
           },
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -39161,11 +38861,7 @@
           },
           "objective": "Describe specimen collection & catheter care",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -39235,11 +38931,7 @@
           },
           "objective": "Select dignity supporting interventions",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -39325,11 +39017,7 @@
           "objective": "Evaluate nursing care outcomes",
           "difficulty": "difficult",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -43528,11 +43216,7 @@
           "caseStep": 1,
           "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -43603,11 +43287,7 @@
           "caseStep": 1,
           "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -43690,11 +43370,7 @@
           "caseStep": 1,
           "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -43802,11 +43478,7 @@
           "caseStep": 1,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -43877,11 +43549,7 @@
           "caseStep": 1,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -43951,11 +43619,7 @@
           "caseStep": 1,
           "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -44048,11 +43712,7 @@
           "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
           "difficulty": "difficult",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -44126,11 +43786,7 @@
           "caseStep": 1,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -44219,11 +43875,7 @@
           "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
           "difficulty": "difficult",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -44301,11 +43953,7 @@
           "caseStep": 1,
           "objective": "Prioritize nursing interventions, including catheter safety, specimen collection, dignity, and skin protection",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -47985,11 +47633,7 @@
           "caseStep": 1,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan.",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -48078,11 +47722,7 @@
           "caseStep": 1,
           "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings.",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -48151,11 +47791,7 @@
           "caseStep": 1,
           "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -48317,11 +47953,7 @@
           "caseStep": 1,
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis.",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -48393,11 +48025,7 @@
           "caseStep": 1,
           "objective": "Assess urinary patterns, symptoms, intake and output, and key diagnostic findings.",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -48470,11 +48098,7 @@
           "caseStep": 1,
           "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -48547,11 +48171,7 @@
           "caseStep": 1,
           "objective": "Evaluate outcomes and teach patients when to report changes and how to follow the care plan.",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -48623,11 +48243,7 @@
           "caseStep": 1,
           "objective": "Differentiate incontinence, retention, cystitis/UTI, pyelonephritis, and glomerulonephritis.",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -48717,11 +48333,7 @@
           "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
           "difficulty": "difficult",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -48793,11 +48405,7 @@
           "caseStep": 1,
           "objective": "Recognize worsening infection, sepsis, decreased urine output, and kidney dysfunction.",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -55112,11 +54720,7 @@
           },
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -55220,11 +54824,7 @@
           },
           "objective": "Differentiate normal and abnormal GI assessment findings and identify findings that require further evaluation",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -55295,11 +54895,7 @@
           },
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -55370,11 +54966,7 @@
           },
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -55459,11 +55051,7 @@
           },
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -55529,11 +55117,7 @@
           },
           "objective": "Identify common laboratory and diagnostic tests used to evaluate GI function and disorders",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -55688,11 +55272,7 @@
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "difficulty": "difficult",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -55764,11 +55344,7 @@
           },
           "objective": "Explain nursing responsibilities and patient education for GI diagnostic procedures, including preparation, monitoring, and post procedure care",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -55854,11 +55430,7 @@
           "objective": "Identify common laboratory and diagnostic tests used to evaluate GI function and disorders",
           "difficulty": "difficult",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -55930,11 +55502,7 @@
           },
           "objective": "Differentiate normal and abnormal GI assessment findings and identify findings that require further evaluation",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -61389,11 +60957,7 @@
           },
           "objective": "Administer feedings, formula, water flushes and medications safely",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -61475,11 +61039,7 @@
           },
           "objective": "Assess the patient before feeding and verify tube placement",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -61569,11 +61129,7 @@
           },
           "objective": "Provide oral, nasal and site care, teach the patient and document",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -61642,11 +61198,7 @@
           },
           "objective": "Provide oral, nasal and site care, teach the patient and document",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -61712,11 +61264,7 @@
           },
           "objective": "Describe feeding tube types and the factors that guide route selection",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -61811,11 +61359,7 @@
           },
           "objective": "Monitor feeding tolerance and respond to complications",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -61884,11 +61428,7 @@
           },
           "objective": "Compare enteral and parenteral nutrition and identify who needs enteral feeding",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -61960,11 +61500,7 @@
           },
           "objective": "Monitor feeding tolerance and respond to complications",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -62114,11 +61650,7 @@
           "objective": "Prevent aspiration during enteral feeding",
           "difficulty": "difficult",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -62231,11 +61763,7 @@
           "objective": "Assess the patient before feeding and verify tube placement",
           "difficulty": "difficult",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -64748,11 +64276,7 @@
           },
           "objective": "Identify how to undertake cardiac auscultation and what these sounds represent in relation to the cardiac cycle",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -64821,11 +64345,7 @@
           },
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -64911,11 +64431,7 @@
           },
           "objective": "Describe why a 12 lead ECG might be used in practice and how to undertake the procedure of recording one for a patient",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -64983,11 +64499,7 @@
           },
           "objective": "Consider when cardiac monitoring may be used for a patient and how the clinician might apply this",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -65074,11 +64586,7 @@
           },
           "objective": "Outline the location of different pulse points and the process for undertaking an accurate pulse assessment",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -65180,11 +64688,7 @@
           },
           "objective": "Outline the location of different pulse points and the process for undertaking an accurate pulse assessment",
           "cjmm": "Evaluate outcomes",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -65256,11 +64760,7 @@
           },
           "objective": "Interpret the findings from a patient assessment to identify the priorities for planning care",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -65332,11 +64832,7 @@
           },
           "objective": "Consider when cardiac monitoring may be used for a patient and how the clinician might apply this",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -65407,11 +64903,7 @@
           },
           "objective": "Identify how to undertake cardiac auscultation and what these sounds represent in relation to the cardiac cycle",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -65518,11 +65010,7 @@
           "objective": "Consider when cardiac monitoring may be used for a patient and how the clinician might apply this",
           "difficulty": "difficult",
           "cjmm": "Recognize cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
@@ -70223,11 +69711,7 @@
           },
           "objective": "Safety Protocols",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -70295,11 +69779,7 @@
           },
           "objective": "Vascular Access Devices",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -70384,11 +69864,7 @@
           },
           "objective": "Safety Protocols",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -70458,11 +69934,7 @@
           },
           "objective": "Apply Clinical Judgment",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -70550,11 +70022,7 @@
           },
           "objective": "Safety Protocols",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -70637,11 +70105,7 @@
           },
           "objective": "Define Infusion Therapy",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -70713,11 +70177,7 @@
           },
           "objective": "Recognize Complications",
           "cjmm": "Take action",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -70786,11 +70246,7 @@
           },
           "objective": "Apply Clinical Judgment",
           "cjmm": "Generate solutions",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -70924,11 +70380,7 @@
           "objective": "Recognize Complications",
           "difficulty": "difficult",
           "cjmm": "Analyze cues",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         },
         {
@@ -71089,11 +70541,7 @@
           "objective": "Recognize Complications",
           "difficulty": "difficult",
           "cjmm": "Prioritize hypotheses",
-          "new": true,
           "tag": "new",
-          "tags": [
-            "new"
-          ],
           "addedBatch": 20
         }
       ]
