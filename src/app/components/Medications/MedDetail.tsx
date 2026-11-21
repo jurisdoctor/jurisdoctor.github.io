@@ -203,7 +203,7 @@ const Grouped = ({ title, groups }: { title: string; groups: GroupItem[] }) => (
                         key={effect}
                         className={`rounded-lg px-2.5 py-1 text-sm leading-snug ${
                           serious
-                            ? "bg-[color-mix(in_srgb,var(--primary-color)_14%,transparent)] text-[var(--title-color)]"
+                            ? "bg-[color-mix(in_srgb,var(--danger-color)_14%,transparent)] text-[var(--title-color)]"
                             : "bg-[var(--body-color)] text-[var(--text-color)]"
                         }`}
                       >
@@ -480,7 +480,7 @@ const Effects = ({
                   key={effect}
                   className={`rounded-lg px-2.5 py-1 text-base leading-snug sm:text-sm ${
                     tone === "serious"
-                      ? "bg-[color-mix(in_srgb,var(--primary-color)_14%,transparent)] text-[var(--title-color)]"
+                      ? "bg-[color-mix(in_srgb,var(--danger-color)_14%,transparent)] text-[var(--title-color)]"
                       : "bg-[var(--body-color)] text-[var(--text-color)]"
                   }`}
                 >

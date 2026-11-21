@@ -84,9 +84,9 @@ const FlowNode = ({
 }) => {
   const toneClass =
     tone === "give"
-      ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
+      ? "border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.12)]"
       : tone === "hold"
-        ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
+        ? "border-[var(--danger-color)] bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)]"
         : tone === "clarify"
           ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
           : "border-transparent bg-[var(--body-color)]";
@@ -160,7 +160,7 @@ export const TherapeuticWindow = () => {
     <div className="grid gap-4 rounded-xl bg-[var(--container-color)] p-4">
       <div className="relative h-40 w-full overflow-hidden rounded-xl">
         <div className="absolute inset-x-0 top-0 h-1/3 bg-[color-mix(in_srgb,var(--primary-color)_25%,transparent)]" />
-        <div className="absolute inset-x-0 top-1/3 h-1/3 bg-[rgba(0,212,127,0.22)]" />
+        <div className="absolute inset-x-0 top-1/3 h-1/3 bg-[rgba(var(--success-rgb),0.22)]" />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[var(--chip-blue)]" />
 
         <div
@@ -241,7 +241,7 @@ export const PatientChart = ({
           className={`rounded-md px-3 py-1 text-xs font-bold ${
             bad
               ? "bg-[color-mix(in_srgb,var(--primary-color)_15%,transparent)] text-[var(--primary-color)]"
-              : "bg-[rgba(0,212,127,0.15)] text-[rgb(0,212,127)]"
+              : "bg-[rgba(var(--success-rgb),0.15)] text-[rgb(var(--success-rgb))]"
           }`}
         >
           {label}

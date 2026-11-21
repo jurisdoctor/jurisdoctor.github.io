@@ -70,11 +70,11 @@ const Option = ({
 
   const shell = answered
     ? won
-      ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
+      ? "border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.12)]"
       : wrongPick
-        ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
+        ? "border-[var(--danger-color)] bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)]"
         : missed
-          ? "border-dashed border-[rgb(0,212,127)] bg-[var(--body-color)]"
+          ? "border-dashed border-[rgb(var(--success-rgb))] bg-[var(--body-color)]"
           : "border-transparent bg-[var(--body-color)] opacity-60"
     : chosen
       ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
@@ -82,9 +82,9 @@ const Option = ({
 
   const badge = answered
     ? won || missed
-      ? "bg-[rgb(0,212,127)] text-white"
+      ? "bg-[rgb(var(--success-rgb))] text-white"
       : wrongPick
-        ? "bg-[var(--primary-color)] text-[var(--on-primary)]"
+        ? "bg-[var(--danger-color)] text-[var(--on-primary)]"
         : "border-2 border-solid border-[var(--chip-blue-border)] text-[var(--chip-blue-border)]"
     : chosen
       ? "bg-[var(--chip-blue-border)] text-white"
@@ -117,7 +117,7 @@ const Option = ({
         {won && <span className="shrink-0 leading-7">✅</span>}
         {wrongPick && <span className="shrink-0 leading-7">❌</span>}
         {missed && (
-          <span className="flex h-7 shrink-0 items-center rounded-md bg-[rgba(0,212,127,0.18)] px-2 text-[10px] font-bold uppercase tracking-wide text-[var(--title-color)]">
+          <span className="flex h-7 shrink-0 items-center rounded-md bg-[rgba(var(--success-rgb),0.18)] px-2 text-[10px] font-bold uppercase tracking-wide text-[var(--title-color)]">
             Missed
           </span>
         )}
@@ -136,13 +136,13 @@ const Verdict = ({ correct, multi }: { correct: boolean; multi: boolean }) => (
   <div
     className={`mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 ${
       correct
-        ? "bg-[rgba(0,212,127,0.12)]"
-        : "bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
+        ? "bg-[rgba(var(--success-rgb),0.12)]"
+        : "bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)]"
     }`}
   >
     <span
       className={`rounded-md px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${
-        correct ? "bg-[rgb(0,212,127)]" : "bg-[var(--primary-color)]"
+        correct ? "bg-[rgb(var(--success-rgb))]" : "bg-[var(--danger-color)]"
       }`}
     >
       {correct ? "Correct ✅" : "Not quite"}

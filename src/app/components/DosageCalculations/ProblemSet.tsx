@@ -46,8 +46,8 @@ const TwinStar = () => {
 
 const FILTERS = [
   { key: "all", label: "All", tone: "" },
-  { key: "solved", label: "Correct", tone: "bg-[rgb(0,212,127)]" },
-  { key: "missed", label: "Missed", tone: "bg-[var(--primary-color)]" },
+  { key: "solved", label: "Correct", tone: "bg-[rgb(var(--success-rgb))]" },
+  { key: "missed", label: "Missed", tone: "bg-[var(--danger-color)]" },
   { key: "todo", label: "Not done", tone: "bg-[var(--container-color)]" },
   { key: "extra", label: "Extra", tone: "" },
   { key: "difficult", label: "Difficult", tone: "" },
@@ -154,9 +154,9 @@ const ProblemSet = ({
                 here ? "ring-2 ring-[var(--title-color)]" : ""
               } ${
                 state === "solved"
-                  ? "bg-[rgb(0,212,127)] text-white"
+                  ? "bg-[rgb(var(--success-rgb))] text-white"
                   : state === "missed"
-                    ? "bg-[var(--primary-color)] text-[var(--on-primary)]"
+                    ? "bg-[var(--danger-color)] text-[var(--on-primary)]"
                     : "bg-[var(--container-color)] text-[var(--muted-color)] hover:text-[var(--title-color)]"
               }`}
             >

@@ -202,7 +202,7 @@ const Help = ({
 const Cancelled = ({ unit }: { unit: string }) => (
   <span className="relative inline-block">
     {unit}
-    <span className="absolute left-0 top-1/2 h-[2px] w-full animate-strike bg-[var(--primary-color)] motion-reduce:animate-none" />
+    <span className="absolute left-0 top-1/2 h-[2px] w-full animate-strike bg-[var(--danger-color)] motion-reduce:animate-none" />
   </span>
 );
 const Parts = ({
@@ -416,15 +416,15 @@ const Practice = () => {
               <div
                 className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 ${
                   saved.status === "solved"
-                    ? "bg-[rgba(0,212,127,0.12)]"
-                    : "bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
+                    ? "bg-[rgba(var(--success-rgb),0.12)]"
+                    : "bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)]"
                 }`}
               >
                 <span
                   className={`rounded-md px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${
                     saved.status === "solved"
-                      ? "bg-[rgb(0,212,127)]"
-                      : "bg-[var(--primary-color)]"
+                      ? "bg-[rgb(var(--success-rgb))]"
+                      : "bg-[var(--danger-color)]"
                   }`}
                 >
                   {saved.status === "solved" ? "Correct ✅" : "Not quite"}

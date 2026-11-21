@@ -55,9 +55,9 @@ const ghost =
 
 const calloutClass: Record<string, string> = {
   tip: "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]",
-  critical: "border-[var(--primary-color)] bg-[var(--chip-amber)]",
+  critical: "border-[var(--danger-color)] bg-[var(--chip-amber)]",
   idea: "border-[var(--chip-blue-border)] bg-[var(--chip-blue)]",
-  takeaway: "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.08)]",
+  takeaway: "border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.08)]",
   reference: "border-[var(--muted-color)] bg-[var(--body-color)]",
 };
 
@@ -557,7 +557,7 @@ const Pharm = () => {
                         {!unlocked ? (
                           <PiLock />
                         ) : complete ? (
-                          <PiCheckBold className="text-[rgb(0,212,127)]" />
+                          <PiCheckBold className="text-[rgb(var(--success-rgb))]" />
                         ) : (
                           index + 1
                         )}
@@ -619,7 +619,7 @@ const Pharm = () => {
                       }
                       className={`shrink-0 whitespace-nowrap rounded-md px-2.5 py-1 text-xs font-bold ${
                         canContinue
-                          ? "text-[rgb(0,212,127)]"
+                          ? "text-[rgb(var(--success-rgb))]"
                           : "text-[var(--muted-color)]"
                       }`}
                     >

@@ -124,7 +124,7 @@ const Back = ({ card, pick }: { card: Card; pick: string | null }) => (
                   aria-hidden
                   className={`mt-[0.6em] h-2 w-2 shrink-0 rounded-full ${
                     block.tone === "danger"
-                      ? "bg-[var(--primary-color)]"
+                      ? "bg-[var(--danger-color)]"
                       : "bg-[var(--chip-blue-border)]"
                   }`}
                 />
@@ -519,7 +519,7 @@ const Session = ({
                   "missed",
                   "Missed",
                   "3",
-                  "bg-[var(--primary-color)] text-[var(--on-primary)]",
+                  "bg-[var(--danger-color)] text-[var(--on-primary)]",
                 ],
               ] as const
             ).map(([value, label, key, tone]) => (

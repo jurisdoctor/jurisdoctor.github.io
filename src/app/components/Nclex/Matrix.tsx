@@ -34,11 +34,11 @@ const Cell = ({
 }) => {
   const tone = answered
     ? on && right
-      ? "border-[rgb(0,212,127)] bg-[rgb(0,212,127)] text-white"
+      ? "border-[rgb(var(--success-rgb))] bg-[rgb(var(--success-rgb))] text-white"
       : on
-        ? "border-[var(--primary-color)] bg-[var(--primary-color)] text-[var(--on-primary)]"
+        ? "border-[var(--danger-color)] bg-[var(--danger-color)] text-[var(--on-primary)]"
         : right
-          ? "border-dashed border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)] text-[rgb(0,212,127)]"
+          ? "border-dashed border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.12)] text-[rgb(var(--success-rgb))]"
           : "border-[#cfc9bb] bg-[var(--container-color)] text-transparent"
     : on
       ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-border)] text-white"
@@ -170,8 +170,8 @@ const Matrix = ({
                 className={`border-t-[1px] border-solid border-[#e4dfd3] ${
                   answered
                     ? rowRight(row)
-                      ? "bg-[rgba(0,212,127,0.08)]"
-                      : "bg-[color-mix(in_srgb,var(--primary-color)_7%,transparent)]"
+                      ? "bg-[rgba(var(--success-rgb),0.08)]"
+                      : "bg-[color-mix(in_srgb,var(--danger-color)_7%,transparent)]"
                     : ""
                 }`}
               >
@@ -202,8 +202,8 @@ const Matrix = ({
               key={row.id}
               className={`animate-fadeIn rounded-xl border-2 border-solid p-3 text-sm ${
                 rowRight(row)
-                  ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
-                  : "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
+                  ? "border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.12)]"
+                  : "border-[var(--danger-color)] bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)]"
               }`}
             >
               <span className="font-bold text-[var(--title-color)]">

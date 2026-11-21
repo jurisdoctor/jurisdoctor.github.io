@@ -13,6 +13,8 @@ import Glow from "./Glow";
 import { flameHueAt } from "./FlamePalette";
 import {
   ChapterType,
+  memberName,
+  memberTile,
   displayNumberOf,
   hasTag,
   isStory,
@@ -92,8 +94,8 @@ const Fill = ({
   const level = total ? (done / total) * 100 : 0;
   const crest =
     missed > 0
-      ? "bg-[color-mix(in_srgb,var(--primary-color)_50%,transparent)]"
-      : "bg-[rgba(0,212,127,0.55)]";
+      ? "bg-[color-mix(in_srgb,var(--danger-color)_50%,transparent)]"
+      : "bg-[rgba(var(--success-rgb),0.55)]";
 
   useEffect(() => {
     if (!done || calm()) return;
@@ -149,11 +151,11 @@ const Fill = ({
       >
         <span
           style={{ flexGrow: solved }}
-          className="w-full bg-[rgba(0,212,127,0.55)]"
+          className="w-full bg-[rgba(var(--success-rgb),0.55)]"
         />
         <span
           style={{ flexGrow: missed }}
-          className="w-full bg-[color-mix(in_srgb,var(--primary-color)_50%,transparent)]"
+          className="w-full bg-[color-mix(in_srgb,var(--danger-color)_50%,transparent)]"
         />
 
         {done > 0 && (
@@ -635,11 +637,7 @@ const ChapterSet = ({
                 )}
                 <Fill {...progress} />
                 {chapter.members && chapter.members.length > 1 ? (
-                  <Flash
-                    items={chapter.members.map((member) =>
-                      String(member.chapterNumber),
-                    )}
-                  />
+                  <Flash items={chapter.members.map(memberTile)} />
                 ) : (
                   <span className="relative">{displayNumberOf(chapter)}</span>
                 )}
@@ -659,15 +657,19 @@ const ChapterSet = ({
           <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <span className="font-bold text-[var(--title-color)]">
               {shown.members && shown.members.length > 1 ? (
-                <>
-                  Chapter{" "}
+                shown.members.some((member) => member.named) ? (
                   <Flash
-                    items={shown.members.map((member) =>
-                      String(member.chapterNumber),
+                    className="!text-left"
+                    items={shown.members.map(
+                      (member) => `${memberName(member)} · ${member.title}`,
                     )}
-                  />{" "}
-                  · {shown.title}
-                </>
+                  />
+                ) : (
+                  <>
+                    Chapter <Flash items={shown.members.map(memberTile)} /> ·{" "}
+                    {shown.title}
+                  </>
+                )
               ) : (
                 labelFor(shown)
               )}
@@ -697,9 +699,9 @@ const ChapterSet = ({
                       : ""
                   } ${
                     state === "solved"
-                      ? "bg-[rgb(0,212,127)] text-white"
+                      ? "bg-[rgb(var(--success-rgb))] text-white"
                       : state === "missed"
-                        ? "bg-[var(--primary-color)] text-[var(--on-primary)]"
+                        ? "bg-[var(--danger-color)] text-[var(--on-primary)]"
                         : "bg-[var(--body-color)] text-[var(--muted-color)] hover:bg-[var(--chip-blue)] hover:text-[var(--title-color)]"
                   }`}
                 >

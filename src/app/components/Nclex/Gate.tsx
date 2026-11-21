@@ -313,7 +313,7 @@ const Gate = ({ children }: { children: ReactNode }) => {
         />
 
         {wrong > 0 && (
-          <p className="text-sm font-bold text-[var(--primary-color)]">
+          <p className="text-sm font-bold text-[var(--danger-color)]">
             Not that one. {left} {left === 1 ? "try" : "tries"} left.
           </p>
         )}

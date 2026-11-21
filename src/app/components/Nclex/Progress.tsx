@@ -80,11 +80,11 @@ const shorten = (text: string, length: number) =>
 const Bar = ({ tally }: { tally: TallyType }) => (
   <span className="flex h-2 w-full overflow-hidden rounded-sm bg-[var(--track-color)]">
     <span
-      className="h-full bg-[rgb(0,212,127)] duration-500"
+      className="h-full bg-[rgb(var(--success-rgb))] duration-500"
       style={{ width: `${(tally.solved / Math.max(1, tally.total)) * 100}%` }}
     />
     <span
-      className="h-full bg-[var(--primary-color)] duration-500"
+      className="h-full bg-[var(--danger-color)] duration-500"
       style={{ width: `${(tally.missed / Math.max(1, tally.total)) * 100}%` }}
     />
   </span>
@@ -121,7 +121,7 @@ const Row = ({
 }) => {
   const rate = percent(tally);
   return (
-    <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-1.5">
+    <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-3">
       <span className="min-w-0 truncate text-sm text-[var(--title-color)]">
         {name}
       </span>
@@ -428,7 +428,7 @@ const Progress = ({
             the chapter you struggle with most first. Redo a concept to rerun
             only the questions you got wrong.
           </p>
-          <div className="mb-5 rounded-xl bg-[color-mix(in_srgb,var(--primary-color)_14%,transparent)] p-4">
+          <div className="mb-5 rounded-xl bg-[color-mix(in_srgb,var(--danger-color)_14%,transparent)] p-4">
             <p className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
               Start here
             </p>
@@ -453,7 +453,7 @@ const Progress = ({
               return (
                 <div
                   key={section.label}
-                  className="rounded-xl bg-[var(--body-color)]"
+                  className="-mx-3 rounded-xl bg-[var(--body-color)]"
                 >
                   <div className="flex items-center gap-x-3 p-3">
                     <button
@@ -493,7 +493,7 @@ const Progress = ({
                     </button>
                   </div>
                   {here && (
-                    <div className="grid gap-y-4 px-3 pb-4 pl-9">
+                    <div className="grid gap-y-3 px-3 pb-3 pl-9">
                       {section.concepts.map((concept) => (
                         <Row
                           key={concept.name}
@@ -514,14 +514,7 @@ const Progress = ({
       )}
 
       <div className={card}>
-        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-          <div>
-            <h3 className={heading}>By chapter</h3>
-            <p className="text-sm text-[var(--muted-color)]">
-              green is correct, the accent colour is missed, grey is untried
-            </p>
-          </div>
-        </div>
+        <h3 className={`${heading} mb-4`}>By chapter</h3>
         <div className="grid gap-y-4">
           {view.entries.map((entry) => (
             <Row
@@ -589,7 +582,7 @@ const Progress = ({
             {view.missedAll.slice(0, 30).map(({ question, where }) => (
               <div
                 key={question.id}
-                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 rounded-xl bg-[var(--body-color)] p-3"
+                className="-mx-3 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 rounded-xl bg-[var(--body-color)] p-3"
               >
                 <span className="min-w-0">
                   <span className="block text-sm text-[var(--title-color)]">

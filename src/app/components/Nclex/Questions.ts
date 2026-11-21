@@ -227,7 +227,38 @@ export interface ChapterMemberType {
   chapterNumber?: number;
   source?: string;
   title: string;
+  kind?: string;
+  named?: boolean;
 }
+
+interface SourceType {
+  kind?: string;
+  textbook?: string;
+  chapter?: number;
+  skill?: number;
+  title: string;
+}
+
+export const memberName = (member: ChapterMemberType) =>
+  `${member.kind === "skill" ? "Skill" : "Chapter"} ${member.chapterNumber}`;
+
+export const memberTile = (member: ChapterMemberType) =>
+  member.kind === "skill"
+    ? `S${member.chapterNumber}`
+    : String(member.chapterNumber);
+
+const membersFromSources = (sources?: SourceType[]) =>
+  sources && sources.length > 1
+    ? sources.map(
+        (entry): ChapterMemberType => ({
+          chapterNumber: entry.chapter ?? entry.skill,
+          source: entry.textbook,
+          title: entry.title,
+          kind: entry.kind,
+          named: true,
+        }),
+      )
+    : undefined;
 
 export interface ChapterType {
   id: string;
@@ -242,6 +273,7 @@ export interface ChapterType {
 
 interface BankType {
   id: string | number;
+  sources?: SourceType[];
   chapterNumber?: number;
   source?: string;
   title: string;
@@ -269,10 +301,11 @@ export const displayNumberOf = (chapter: ChapterType) =>
 
 export const labelOf = (chapter: ChapterType) => {
   if (chapter.members && chapter.members.length > 1) {
-    const numbers = chapter.members
-      .map((member) => member.chapterNumber)
-      .join(" & ");
-    return `Chapters ${numbers} · ${chapter.title}`;
+    const plain = chapter.members.every((member) => member.kind !== "skill");
+    const names = plain
+      ? `Chapters ${chapter.members.map((member) => member.chapterNumber).join(" & ")}`
+      : chapter.members.map(memberName).join(" & ");
+    return `${names} · ${chapter.title}`;
   }
   return /^\d+$/.test(chapter.id)
     ? `Chapter ${displayNumberOf(chapter)} · ${chapter.title}`
@@ -539,7 +572,7 @@ export const buildBank = (
         id,
         chapterNumber: entry.chapterNumber,
         source: entry.source,
-        members: entry.members,
+        members: entry.members ?? membersFromSources(entry.sources),
         title: entry.title,
         subtitle: entry.subtitle,
         questions: withStories(

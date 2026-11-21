@@ -17,7 +17,7 @@ const ActivityShell = ({
   <div
     className={`rounded-lg border border-l-4 border-solid bg-[var(--body-color)] p-5 duration-300 ${
       done
-        ? "border-transparent border-l-[rgb(0,212,127)]"
+        ? "border-transparent border-l-[rgb(var(--success-rgb))]"
         : "border-transparent border-l-[var(--chip-blue-border)]"
     }`}
   >
@@ -26,7 +26,7 @@ const ActivityShell = ({
         {label}
       </span>
       {done && (
-        <span className="flex items-center gap-x-1 text-xs font-bold text-[rgb(0,212,127)]">
+        <span className="flex items-center gap-x-1 text-xs font-bold text-[rgb(var(--success-rgb))]">
           <PiCheckBold /> Done
         </span>
       )}
@@ -122,9 +122,9 @@ export const Mcq = ({
               onClick={() => pick(index)}
               className={`rounded-xl border border-solid p-3 text-left duration-200 ${
                 isRight
-                  ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)] text-[var(--title-color)]"
+                  ? "border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.12)] text-[var(--title-color)]"
                   : isWrong
-                    ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
+                    ? "border-[var(--danger-color)] bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)] text-[var(--title-color)]"
                     : ok
                       ? "cursor-not-allowed border-transparent bg-[var(--container-color)] text-[var(--text-color)] opacity-40"
                       : "border-transparent bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]"
@@ -251,12 +251,12 @@ export const FlipCards = ({
                 <div
                   className={`absolute inset-0 flex flex-col items-center justify-center gap-y-1 rounded-lg border border-solid p-3 text-center [backface-visibility:hidden] ${
                     seen.includes(index)
-                      ? "border-transparent bg-[rgba(0,212,127,0.05)]"
+                      ? "border-transparent bg-[rgba(var(--success-rgb),0.05)]"
                       : "border-transparent bg-[var(--container-color)]"
                   }`}
                 >
                   {seen.includes(index) && (
-                    <span className="absolute right-1.5 top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[rgb(0,212,127)] text-white">
+                    <span className="absolute right-1.5 top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-[rgb(var(--success-rgb))] text-white">
                       <PiCheckBold size={10} />
                     </span>
                   )}
@@ -317,13 +317,13 @@ export const SortActivity = ({
             key={index}
             className={`rounded-xl border border-solid p-3 ${
               state[index]
-                ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.08)]"
+                ? "border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.08)]"
                 : "border-transparent bg-[var(--container-color)]"
             }`}
           >
             <p className="mb-2 text-[var(--text-color)]">{item.text}</p>
             {state[index] ? (
-              <span className="inline-block rounded-md bg-[rgb(0,212,127)] px-3 py-1 text-xs font-bold text-white">
+              <span className="inline-block rounded-md bg-[rgb(var(--success-rgb))] px-3 py-1 text-xs font-bold text-white">
                 ✓ {buckets[item.answer]}
               </span>
             ) : (
@@ -335,7 +335,7 @@ export const SortActivity = ({
                     onClick={() => pick(index, bucketIndex)}
                     className={`rounded-md border border-solid px-3 py-1 text-xs font-bold duration-150 ${
                       wrong[index] === bucketIndex
-                        ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
+                        ? "border-[var(--danger-color)] bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)] text-[var(--title-color)]"
                         : "border-[var(--chip-blue-border)] text-[var(--chip-blue-border)] hover:bg-[var(--chip-blue-soft)]"
                     }`}
                   >
@@ -389,7 +389,7 @@ export const OrderActivity = ({
           {items.map((item) => (
             <div
               key={item}
-              className="rounded-xl border border-solid border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.08)] p-3 text-[var(--title-color)]"
+              className="rounded-xl border border-solid border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.08)] p-3 text-[var(--title-color)]"
             >
               {item}
             </div>
@@ -433,8 +433,8 @@ export const OrderActivity = ({
               className={`rounded-xl border border-solid p-3 text-left ${
                 checked
                   ? seq[position] === position
-                    ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.08)] text-[var(--title-color)]"
-                    : "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
+                    ? "border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.08)] text-[var(--title-color)]"
+                    : "border-[var(--danger-color)] bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)] text-[var(--title-color)]"
                   : "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
               }`}
             >
@@ -643,9 +643,9 @@ export const ReadinessQuiz = ({
 
                 const cls =
                   state === "right"
-                    ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)] text-[var(--title-color)]"
+                    ? "border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.12)] text-[var(--title-color)]"
                     : state === "wrong"
-                      ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--title-color)]"
+                      ? "border-[var(--danger-color)] bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)] text-[var(--title-color)]"
                       : state === "selected"
                         ? "border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)] text-[var(--title-color)]"
                         : "border-transparent bg-[var(--container-color)] text-[var(--text-color)] hover:border-[var(--chip-blue-border)]";

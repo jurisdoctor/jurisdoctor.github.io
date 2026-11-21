@@ -163,7 +163,7 @@ const Round = ({ category }: { category: CategoryType }) => {
                   key={index}
                   className={`h-2.5 w-10 rounded-sm duration-300 ${
                     index < correct
-                      ? "bg-[rgb(0,212,127)]"
+                      ? "bg-[rgb(var(--success-rgb))]"
                       : "bg-[var(--track-color)]"
                   }`}
                 />
@@ -183,7 +183,7 @@ const Round = ({ category }: { category: CategoryType }) => {
                 type="button"
                 onClick={onCorrect}
                 disabled={phase === "paused"}
-                className={`${primary} inline-flex items-center gap-x-2 !bg-[rgb(0,212,127)] !text-[#06251a]`}
+                className={`${primary} inline-flex items-center gap-x-2 !bg-[rgb(var(--success-rgb))] !text-[#06251a]`}
               >
                 <PiCheckBold aria-hidden />
                 Correct

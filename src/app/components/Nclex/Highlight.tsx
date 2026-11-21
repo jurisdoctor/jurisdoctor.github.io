@@ -30,11 +30,11 @@ const Segment = ({
 }) => {
   const shell = answered
     ? picked && segment.correct
-      ? "bg-[rgba(0,212,127,0.35)] decoration-[rgb(0,212,127)]"
+      ? "bg-[rgba(var(--success-rgb),0.35)] decoration-[rgb(var(--success-rgb))]"
       : picked && !segment.correct
-        ? "bg-[color-mix(in_srgb,var(--primary-color)_22%,transparent)] line-through decoration-[var(--primary-color)]"
+        ? "bg-[color-mix(in_srgb,var(--danger-color)_22%,transparent)] line-through decoration-[var(--danger-color)]"
         : segment.correct
-          ? "bg-transparent underline decoration-dashed decoration-[rgb(0,212,127)] underline-offset-4"
+          ? "bg-transparent underline decoration-dashed decoration-[rgb(var(--success-rgb))] underline-offset-4"
           : "bg-transparent"
     : picked
       ? "bg-[#fdf06a]"
@@ -135,10 +135,10 @@ const Highlight = ({
             if (!took && !segment.correct) return null;
             const tone =
               took && segment.correct
-                ? "border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
+                ? "border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.12)]"
                 : took
-                  ? "border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
-                  : "border-dashed border-[rgb(0,212,127)] bg-[var(--body-color)]";
+                  ? "border-[var(--danger-color)] bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)]"
+                  : "border-dashed border-[rgb(var(--success-rgb))] bg-[var(--body-color)]";
             const label =
               took && segment.correct
                 ? "Correct"

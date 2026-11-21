@@ -62,7 +62,7 @@ const About = () => {
               </div>
 
               <div className="relative h-[7px] overflow-hidden rounded bg-[var(--track-color)]">
-                <div className="absolute h-[7px] w-1/4 animate-indeterminate rounded bg-[rgb(0,212,127)]"></div>
+                <div className="absolute h-[7px] w-1/4 animate-indeterminate rounded bg-[rgb(var(--success-rgb))]"></div>
               </div>
             </div>
           </div>

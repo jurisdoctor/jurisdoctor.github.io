@@ -95,8 +95,8 @@ const Ordered = ({
           const right = answered && rightAt(index);
           const shell = answered
             ? right
-              ? "border-solid border-[rgb(0,212,127)] bg-[rgba(0,212,127,0.12)]"
-              : "border-solid border-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)]"
+              ? "border-solid border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.12)]"
+              : "border-solid border-[var(--danger-color)] bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)]"
             : option
               ? "border-solid border-[var(--chip-blue-border)] bg-[var(--chip-blue-soft)]"
               : held
@@ -109,8 +109,8 @@ const Ordered = ({
                 className={`flex h-auto w-9 shrink-0 items-center justify-center rounded-lg text-sm font-bold ${
                   answered && option
                     ? right
-                      ? "bg-[rgb(0,212,127)] text-white"
-                      : "bg-[var(--primary-color)] text-[var(--on-primary)]"
+                      ? "bg-[rgb(var(--success-rgb))] text-white"
+                      : "bg-[var(--danger-color)] text-[var(--on-primary)]"
                     : "bg-[var(--body-color)] text-[var(--muted-color)]"
                 }`}
               >

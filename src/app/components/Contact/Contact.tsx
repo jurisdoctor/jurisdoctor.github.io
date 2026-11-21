@@ -101,7 +101,7 @@ const Contact = () => {
 
         {status === "sent" || status === "local" ? (
           <div className="grid content-center justify-items-center py-6 text-center">
-            <span className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(0,212,127,0.18)] text-[rgb(0,212,127)]">
+            <span className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(var(--success-rgb),0.18)] text-[rgb(var(--success-rgb))]">
               <PiCheckBold aria-hidden />
             </span>
             <p className="font-bold text-[var(--title-color)]">
