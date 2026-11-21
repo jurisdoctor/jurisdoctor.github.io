@@ -50,7 +50,8 @@ interface StartType {
   at: number;
 }
 
-const tab = "rounded-md px-6 py-2 text-sm font-bold duration-300 lg:px-5";
+const tab =
+  "shrink-0 rounded-md px-6 py-2 text-sm font-bold duration-300 lg:px-5 sm:px-2.5 sm:text-xs xs:px-1.5";
 
 interface ViewType {
   section: SectionType;
@@ -577,7 +578,7 @@ const ExamView = ({
       {(available.length > 1 || toolbar) && (
         <div className="mb-6 flex flex-wrap items-center gap-3 lg:justify-center">
           {available.length > 1 && (
-            <div className="inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1">
+            <div className="inline-flex max-w-full gap-x-1 overflow-x-auto rounded-md bg-[var(--container-color)] p-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {available.map((entry) => (
                 <button
                   key={entry}
@@ -827,7 +828,7 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
                                 ]
                               : bank.AllQuestions;
                       return (
-                        <div className="ml-auto inline-flex gap-x-1 rounded-md bg-[var(--container-color)] p-1 lg:ml-0">
+                        <div className="ml-auto inline-flex max-w-full gap-x-1 overflow-x-auto rounded-md bg-[var(--container-color)] p-1 [scrollbar-width:none] lg:ml-0 [&::-webkit-scrollbar]:hidden">
                           {FINAL_KINDS.map((entry) => (
                             <button
                               key={entry.id}

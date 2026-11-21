@@ -7,6 +7,7 @@ import {
   useState,
 } from "react";
 import { PiCaretDownBold } from "react-icons/pi";
+import { useKeepInView } from "./KeepInView";
 import { QuestionType } from "./Questions";
 
 const SHAKE = [
@@ -51,6 +52,8 @@ const Blank = ({
   const [shown, setShown] = useState(false);
   const [cursor, setCursor] = useState(0);
   const root = useRef<HTMLSpanElement>(null);
+  const panel = useRef<HTMLUListElement>(null);
+  const shift = useKeepInView(panel, shown);
   const current = choices.find((choice) => choice.id === value);
 
   useEffect(() => {
@@ -109,7 +112,7 @@ const Blank = ({
         aria-haspopup="listbox"
         aria-expanded={shown}
         onClick={() => (shown ? setShown(false) : show())}
-        className={`inline-flex min-w-[8.5rem] max-w-[min(20rem,100%)] items-center justify-between gap-x-2 rounded-lg border-2 border-solid px-3 py-0.5 text-left text-sm font-bold outline-none duration-300 focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] disabled:cursor-default ${tone}`}
+        className={`inline-flex min-w-[8.5rem] max-w-[min(20rem,100%)] items-center justify-between gap-x-2 rounded-lg border-2 border-solid px-3 py-0.5 text-left text-sm font-bold outline-none duration-300 focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] disabled:cursor-default sm:min-w-[6.5rem] ${tone}`}
       >
         <span className={`truncate ${current ? "" : "font-normal"}`}>
           {current?.text ?? "Select"}
@@ -125,7 +128,9 @@ const Blank = ({
 
       {shown && (
         <ul
+          ref={panel}
           role="listbox"
+          style={{ left: shift }}
           className="absolute left-0 top-full z-30 mt-1.5 max-h-72 w-max min-w-full max-w-[min(26rem,calc(100vw-4rem))] animate-fadeIn overflow-auto rounded-xl bg-[var(--container-color)] p-1.5 text-left leading-snug shadow-xl ring-1 ring-[var(--chip-blue-border)]"
         >
           {choices.map((choice, index) => (
@@ -204,7 +209,7 @@ const Cloze = ({
     <div className="mb-6">
       <div
         ref={frameRef}
-        className="mb-6 rounded-2xl bg-[var(--body-color)] p-5 leading-9"
+        className="mb-6 rounded-2xl bg-[var(--body-color)] p-5 leading-[1.875rem] sm:p-4"
       >
         {parts.map((part, index) => {
           const hit = part.match(/^\[\[(\d+)\]\]$/);

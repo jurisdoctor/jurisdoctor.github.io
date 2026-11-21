@@ -37,7 +37,7 @@ const Flash = ({
   return (
     <span
       className={`inline-block text-center tabular-nums ${className ?? ""}`}
-      style={{ minWidth: `${widest}ch` }}
+      style={{ minWidth: `min(${widest}ch, 100%)`, maxWidth: "100%" }}
     >
       <span key={index} className="flash-num">
         {items[index]}

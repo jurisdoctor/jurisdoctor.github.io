@@ -9,6 +9,7 @@ import {
 } from "react";
 import { PiCaretDownBold, PiStar, PiStarFill } from "react-icons/pi";
 import Flash from "./Flash";
+import { useKeepInView } from "./KeepInView";
 import Glow from "./Glow";
 import { flameHueAt } from "./FlamePalette";
 import {
@@ -273,6 +274,8 @@ const Menu = ({
   const [shown, setShown] = useState(false);
   const [cursor, setCursor] = useState(0);
   const root = useRef<HTMLDivElement>(null);
+  const panel = useRef<HTMLUListElement>(null);
+  const shift = useKeepInView(panel, shown);
   const current = items.find((item) => item.id === value);
 
   useEffect(() => {
@@ -348,7 +351,9 @@ const Menu = ({
 
       {shown && (
         <ul
+          ref={panel}
           role="listbox"
+          style={{ left: shift }}
           className="absolute left-0 top-full z-30 mt-2 max-h-80 w-72 max-w-[calc(100vw-4rem)] animate-fadeIn overflow-auto rounded-xl bg-[var(--body-color)] p-1.5 shadow-xl ring-1 ring-[var(--chip-blue-border)]"
         >
           {items.map((item, index) => (
