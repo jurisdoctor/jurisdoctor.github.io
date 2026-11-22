@@ -6629,6 +6629,3047 @@
       ]
     },
     {
+      "id": 32,
+      "chapterNumber": 32,
+      "source": "Potter",
+      "title": "Complementary, Alternative and Integrative Therapies",
+      "questions": [
+        {
+          "id": "cai-c01",
+          "topic": "Complementary, alternative and integrative care",
+          "stem": "Classify how each therapy is being used.",
+          "objective": "Complementary, alternative and integrative care",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "matrix",
+          "columns": [
+            "Complementary",
+            "Alternative",
+            "Integrative"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Yoga used together with a prescribed anti inflammatory drug for chronic pain",
+              "answer": "Complementary",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Yoga and meditation used instead of the prescribed pain medication",
+              "answer": "Alternative",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "An oncology team that plans acupuncture, massage and chemotherapy together as one coordinated plan",
+              "answer": "Integrative",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Traditional Chinese medicine used as the only system of care",
+              "answer": "Alternative",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Guided imagery added to a postoperative analgesic",
+              "answer": "Complementary",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Complementary",
+            "r2": "Alternative",
+            "r3": "Integrative",
+            "r4": "Alternative",
+            "r5": "Complementary"
+          },
+          "takeaway": "Complementary therapies are used alongside conventional treatment. Alternative therapies replace conventional treatment and become the primary treatment. Integrative care deliberately coordinates conventional and complementary therapies around the whole person, with the patient and provider as partners. A whole medical system used in place of biomedicine is always alternative. Alongside, instead of, coordinated together.",
+          "strategy": "Ask whether the therapy is added, substituted or planned as one system."
+        },
+        {
+          "id": "cai-c02",
+          "topic": "Complementary, alternative and integrative care",
+          "stem": "What makes a therapy alternative rather than complementary?",
+          "objective": "Complementary, alternative and integrative care",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "It comes from a culture outside North America",
+              "correct": false,
+              "rationale": "Label instead of mechanism Origin does not decide the label; how it is used does."
+            },
+            {
+              "id": "B",
+              "text": "It requires special training to perform",
+              "correct": false,
+              "rationale": "Near miss concept Training requirements separate nursing accessible from training specific therapies."
+            },
+            {
+              "id": "C",
+              "text": "It has not been studied in clinical trials",
+              "correct": false,
+              "rationale": "Near miss concept Evidence level does not define the category."
+            },
+            {
+              "id": "D",
+              "text": "It is used in place of conventional treatment",
+              "correct": true,
+              "rationale": "The same therapy can be either. Yoga added to prescribed analgesics is complementary; yoga used instead of the medication is alternative. The deciding factor is whether it replaces biomedical care."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Alternative means instead of.",
+          "strategy": "Look for how the therapy is used, not what it is."
+        },
+        {
+          "id": "cai-c03",
+          "topic": "Complementary, alternative and integrative care",
+          "stem": "Select all of the features of integrative health care.",
+          "objective": "Complementary, alternative and integrative care",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Focuses on the whole person, not only the disease",
+              "correct": true,
+              "rationale": "Integrative care is whole person, relationship based and evidence informed. It brings conventional and complementary therapies together rather than choosing one over the other."
+            },
+            {
+              "id": "B",
+              "text": "Treats the patient and provider as equal partners",
+              "correct": true,
+              "rationale": "Integrative care is whole person, relationship based and evidence informed. It brings conventional and complementary therapies together rather than choosing one over the other."
+            },
+            {
+              "id": "C",
+              "text": "Leaves the choice of therapies entirely to the provider",
+              "correct": false,
+              "rationale": "Near miss concept Integrative care is a partnership with the patient."
+            },
+            {
+              "id": "D",
+              "text": "Replaces medications with natural products",
+              "correct": false,
+              "rationale": "Near miss concept Replacing conventional care is alternative, not integrative."
+            },
+            {
+              "id": "E",
+              "text": "Combines conventional and complementary therapies",
+              "correct": true,
+              "rationale": "Integrative care is whole person, relationship based and evidence informed. It brings conventional and complementary therapies together rather than choosing one over the other."
+            },
+            {
+              "id": "F",
+              "text": "Uses evidence to guide which therapies are chosen",
+              "correct": true,
+              "rationale": "Integrative care is whole person, relationship based and evidence informed. It brings conventional and complementary therapies together rather than choosing one over the other."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "E",
+            "F"
+          ],
+          "takeaway": "Integrative: whole person, partnership, both together.",
+          "strategy": "Reject options that replace care or exclude the patient."
+        },
+        {
+          "id": "cai-c04",
+          "topic": "Complementary, alternative and integrative care",
+          "stem": "Why do many patients seek complementary therapies?",
+          "objective": "Complementary, alternative and integrative care",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Insurance plans usually require a trial of complementary therapy before any medication is covered",
+              "correct": false,
+              "rationale": "Institution as rationale Coverage rules are not the reason given."
+            },
+            {
+              "id": "B",
+              "text": "Providers rarely prescribe medication for chronic disease",
+              "correct": false,
+              "rationale": "Accurate but inert data Providers do prescribe for chronic disease; the gap is symptom and whole person care."
+            },
+            {
+              "id": "C",
+              "text": "Conventional care does less for stress related illness, chronic symptoms and emotional needs",
+              "correct": true,
+              "rationale": "Biomedicine works well for infections and structural problems but is less effective for stress induced illness, chronic symptoms, emotional and spiritual needs and quality of life. Patients also report fewer unpleasant side effects with some therapies."
+            },
+            {
+              "id": "D",
+              "text": "Complementary therapies are always safer than prescription drugs",
+              "correct": false,
+              "rationale": "Absolute language Natural does not mean safe; herbs can be toxic or interact with drugs."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Patients fill the gaps biomedicine leaves.",
+          "strategy": "Reject the absolute safety claim."
+        },
+        {
+          "id": "cai-c05",
+          "topic": "Complementary, alternative and integrative care",
+          "stem": "Classify each therapy as one a nurse can use independently or one that requires additional training or certification.",
+          "objective": "Complementary, alternative and integrative care",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "matrix",
+          "columns": [
+            "Nursing accessible",
+            "Training specific"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Guided imagery",
+              "answer": "Nursing accessible",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Acupuncture",
+              "answer": "Training specific",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Slow abdominal breathing",
+              "answer": "Nursing accessible",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Biofeedback",
+              "answer": "Training specific",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Chiropractic manipulation",
+              "answer": "Training specific",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Progressive relaxation",
+              "answer": "Nursing accessible",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Nursing accessible",
+            "r2": "Training specific",
+            "r3": "Nursing accessible",
+            "r4": "Training specific",
+            "r5": "Training specific",
+            "r6": "Nursing accessible"
+          },
+          "takeaway": "Nursing accessible therapies use natural processes such as breathing, concentration, presence and movement: relaxation, meditation, breathwork, imagery, simple touch and music. Training specific therapies need postgraduate education, certification or licensure: acupuncture, biofeedback, therapeutic massage, acupressure and therapeutic touch. Chiropractic therapy is not a nursing therapy. Breathing, imagery, relaxation: nurse. Needles, devices, manipulation: trained.",
+          "strategy": "Ask whether a basic nurse could learn it at the bedside."
+        },
+        {
+          "id": "cai-c06",
+          "topic": "Complementary, alternative and integrative care",
+          "stem": "What determines which complementary therapies a nurse may perform?",
+          "objective": "Complementary, alternative and integrative care",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "The patient's preference alone",
+              "correct": false,
+              "rationale": "Near miss concept Preference matters for choice but does not set the nurse's scope."
+            },
+            {
+              "id": "B",
+              "text": "Whether the therapy is popular in the community",
+              "correct": false,
+              "rationale": "Accurate but inert data Popularity does not define scope."
+            },
+            {
+              "id": "C",
+              "text": "Whether the therapy can be bought over the counter without a prescription",
+              "correct": false,
+              "rationale": "Accurate but inert data Retail availability does not define scope."
+            },
+            {
+              "id": "D",
+              "text": "The state nurse practice act and the nurse's training",
+              "correct": true,
+              "rationale": "Nurses practice only within their state nurse practice act and their training. Training specific therapies require certification beyond the registered nurse license."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Scope comes from the practice act and training.",
+          "strategy": "Pick the legal boundary."
+        },
+        {
+          "id": "cai-c07",
+          "topic": "Categories of therapies",
+          "stem": "Match each therapy to its category.",
+          "objective": "Categories of therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "matrix",
+          "columns": [
+            "Mind body",
+            "Body based",
+            "Movement",
+            "Biologically based",
+            "Whole medical system"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Chiropractic spinal manipulation",
+              "answer": "Body based",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Biofeedback",
+              "answer": "Mind body",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Probiotics",
+              "answer": "Biologically based",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Ayurveda",
+              "answer": "Whole medical system",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Pilates",
+              "answer": "Movement",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Guided imagery",
+              "answer": "Mind body",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Body based",
+            "r2": "Mind body",
+            "r3": "Biologically based",
+            "r4": "Whole medical system",
+            "r5": "Movement",
+            "r6": "Mind body"
+          },
+          "takeaway": "Mind body therapies use thoughts and emotion to influence the body: imagery, meditation, biofeedback, breathwork, music and art. Body based therapies manipulate body structures: massage, chiropractic, acupressure. Movement therapies include Pilates, dance and Feldenkrais. Biologically based therapies are natural products: herbs, supplements, probiotics, special diets. Whole medical systems such as traditional Chinese medicine, Ayurveda, homeopathy and naturopathy are complete systems of theory and practice. Mind, body, movement, product, whole system.",
+          "strategy": "Ask what the therapy works through."
+        },
+        {
+          "id": "cai-c08",
+          "topic": "Categories of therapies",
+          "stem": "Which statement about whole medical systems is correct?",
+          "objective": "Categories of therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are single herbal products that a patient uses to relieve one specific symptom",
+              "correct": false,
+              "rationale": "Near miss concept A single herb is a biologically based therapy."
+            },
+            {
+              "id": "B",
+              "text": "They are always used alongside conventional care",
+              "correct": false,
+              "rationale": "Absolute language When used in place of biomedicine they are alternative."
+            },
+            {
+              "id": "C",
+              "text": "They are exercise programs that build core strength",
+              "correct": false,
+              "rationale": "Near miss concept That describes Pilates, a movement therapy."
+            },
+            {
+              "id": "D",
+              "text": "They are complete systems of theory and practice separate from biomedicine",
+              "correct": true,
+              "rationale": "Whole medical systems such as traditional Chinese medicine, Ayurveda, naturopathy and homeopathy have their own theory of health and illness. Used in place of biomedicine, they are always considered alternative because they rest on different philosophies."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Whole system: its own theory of health.",
+          "strategy": "Look for the word complete."
+        },
+        {
+          "id": "cai-c09",
+          "topic": "Categories of therapies",
+          "stem": "Match each whole medical system to its central idea.",
+          "objective": "Categories of therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "matrix",
+          "columns": [
+            "Traditional Chinese medicine",
+            "Ayurveda",
+            "Naturopathy",
+            "Homeopathy"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Balances the doshas through diet, herbs, massage and meditation",
+              "answer": "Ayurveda",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Uses tiny, highly diluted doses of substances that cause similar symptoms",
+              "answer": "Homeopathy",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Balances yin and yang and the flow of qi",
+              "answer": "Traditional Chinese medicine",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Supports the body's own capacity for self healing",
+              "answer": "Naturopathy",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Ayurveda",
+            "r2": "Homeopathy",
+            "r3": "Traditional Chinese medicine",
+            "r4": "Naturopathy"
+          },
+          "takeaway": "Traditional Chinese medicine balances yin and yang and qi along meridians. Ayurveda, from India, balances the doshas. Naturopathy treats the whole person and supports self healing. Homeopathy gives small, highly diluted doses of substances that would cause similar symptoms in a healthy person. Qi, doshas, self healing, like cures like.",
+          "strategy": "Match the system to its key word."
+        },
+        {
+          "id": "cai-c10",
+          "topic": "Stress and relaxation response",
+          "stem": "Classify each finding as part of the stress response or the relaxation response.",
+          "objective": "Stress and relaxation response",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "matrix",
+          "columns": [
+            "Stress response",
+            "Relaxation response"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Increased peripheral skin temperature",
+              "answer": "Relaxation response",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Lower blood pressure",
+              "answer": "Relaxation response",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Dilated pupils and tight muscles",
+              "answer": "Stress response",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Decreased oxygen consumption",
+              "answer": "Relaxation response",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Elevated blood glucose",
+              "answer": "Stress response",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Increased heart and respiratory rates",
+              "answer": "Stress response",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Relaxation response",
+            "r2": "Relaxation response",
+            "r3": "Stress response",
+            "r4": "Relaxation response",
+            "r5": "Stress response",
+            "r6": "Stress response"
+          },
+          "takeaway": "The stress response raises heart rate, respirations, blood pressure, muscle tension, metabolic rate, pupil size and blood glucose and lipids. The relaxation response lowers heart rate, respirations, blood pressure and oxygen consumption and raises peripheral skin temperature as vessels dilate. Stress speeds up; relaxation slows down and warms the skin.",
+          "strategy": "Ask whether the body is preparing to fight or settling down."
+        },
+        {
+          "id": "cai-c11",
+          "topic": "Stress and relaxation response",
+          "stem": "Why is chronic stress harmful even though the stress response is protective?",
+          "objective": "Stress and relaxation response",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chronic stress slows the heart rate to unsafe levels",
+              "correct": false,
+              "rationale": "Near miss concept Stress raises heart rate."
+            },
+            {
+              "id": "B",
+              "text": "The stress response only occurs during physical danger",
+              "correct": false,
+              "rationale": "Near miss concept Thoughts and emotions trigger it too."
+            },
+            {
+              "id": "C",
+              "text": "Sustained arousal raises the risk of hypertension, heart disease, anxiety and poor sleep",
+              "correct": true,
+              "rationale": "Short term, the stress response prepares the body to respond. Long term, it is maladaptive and contributes to anxiety, depression, digestive problems, headaches, muscle tension, heart disease, stroke, hypertension, sleep problems, weight gain and poor concentration."
+            },
+            {
+              "id": "D",
+              "text": "Over time the stress response lowers blood glucose, which leads to repeated fainting spells",
+              "correct": false,
+              "rationale": "Near miss concept Stress raises blood glucose."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Protective short term, harmful long term.",
+          "strategy": "Look for the long term consequence."
+        },
+        {
+          "id": "cai-c12",
+          "topic": "Stress and relaxation response",
+          "stem": "Select all of the cognitive skills a patient develops through relaxation practice.",
+          "objective": "Stress and relaxation response",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Receptivity, tolerating uncertain or unfamiliar experiences",
+              "correct": true,
+              "rationale": "Relaxation builds three cognitive skills: focusing, passivity and receptivity. The long term goal is for the person to notice tension and consciously release it."
+            },
+            {
+              "id": "B",
+              "text": "Focusing attention on a simple stimulus for an extended time",
+              "correct": true,
+              "rationale": "Relaxation builds three cognitive skills: focusing, passivity and receptivity. The long term goal is for the person to notice tension and consciously release it."
+            },
+            {
+              "id": "C",
+              "text": "Limiting what comes into the field of vision",
+              "correct": false,
+              "rationale": "Near miss concept Narrowing stimuli describes meditation, not a relaxation skill."
+            },
+            {
+              "id": "D",
+              "text": "Building relationships with significant others",
+              "correct": false,
+              "rationale": "Accurate but inert data Relationships are not one of the cognitive skills."
+            },
+            {
+              "id": "E",
+              "text": "Passivity, stopping unnecessary goal directed activity",
+              "correct": true,
+              "rationale": "Relaxation builds three cognitive skills: focusing, passivity and receptivity. The long term goal is for the person to notice tension and consciously release it."
+            },
+            {
+              "id": "F",
+              "text": "Solving problems faster under pressure",
+              "correct": false,
+              "rationale": "Near miss concept Passivity means stopping analytic problem solving."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "E"
+          ],
+          "takeaway": "Focus, passivity, receptivity.",
+          "strategy": "Pick the three inward skills."
+        },
+        {
+          "id": "cai-c13",
+          "topic": "Stress and relaxation response",
+          "stem": "How does passive relaxation differ from progressive relaxation?",
+          "objective": "Stress and relaxation response",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Passive relaxation requires the patient to tense each muscle group harder",
+              "correct": false,
+              "rationale": "Near miss concept Tensing and releasing is progressive relaxation."
+            },
+            {
+              "id": "B",
+              "text": "Passive relaxation must be led by a certified therapist",
+              "correct": false,
+              "rationale": "Outside the nurse's scope Both are nursing accessible."
+            },
+            {
+              "id": "C",
+              "text": "Passive relaxation is done only while the patient is asleep",
+              "correct": false,
+              "rationale": "Near miss concept The patient is awake and focused on breathing and warmth."
+            },
+            {
+              "id": "D",
+              "text": "Passive relaxation stills the body without tensing and releasing muscle groups",
+              "correct": true,
+              "rationale": "Progressive relaxation tightens and releases an ordered succession of muscle groups with slow abdominal breathing. Passive relaxation uses slow breathing while imagining warmth flowing through body parts, with no muscle contraction, so it uses less energy."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Progressive tenses; passive does not.",
+          "strategy": "Ask whether muscles are contracted."
+        },
+        {
+          "id": "cai-c14",
+          "topic": "Stress and relaxation response",
+          "stem": "Place the steps for guiding progressive muscle relaxation in order.",
+          "objective": "Stress and relaxation response",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "ordered_response",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tighten one muscle group, such as the face, and hold the tension",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "B",
+              "text": "Begin slow, deep abdominal breathing",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "C",
+              "text": "Move to the next muscle group and repeat down the body",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "D",
+              "text": "Release the tension and notice the difference between tension and relaxation",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "E",
+              "text": "Help the patient into a comfortable position in a quiet setting",
+              "correct": false,
+              "rationale": ""
+            }
+          ],
+          "answer": [
+            "E",
+            "B",
+            "A",
+            "D",
+            "C"
+          ],
+          "takeaway": "Prepare a quiet, comfortable setting, start slow abdominal breathing, then tense and release one muscle group at a time, noticing the contrast, and move in order through the body, from face to feet or feet to face. Settle, breathe, tense, release, move on.",
+          "strategy": "The breathing comes before the first muscle group."
+        },
+        {
+          "id": "cai-c15",
+          "topic": "Stress and relaxation response",
+          "stem": "Which patient is the poorest candidate for active progressive relaxation?",
+          "objective": "Stress and relaxation response",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "A patient with mild anxiety before a dental procedure",
+              "correct": false,
+              "rationale": "Accurate but inert data Progressive relaxation suits mild anxiety."
+            },
+            {
+              "id": "B",
+              "text": "A patient with chronic back pain who walks daily",
+              "correct": false,
+              "rationale": "Strength read as deficit Daily walking suggests adequate energy."
+            },
+            {
+              "id": "C",
+              "text": "A patient with advanced cancer and very low energy reserves",
+              "correct": true,
+              "rationale": "Active progressive relaxation takes a moderate expenditure of energy and can increase fatigue. Patients with advanced disease or low energy reserves do better with passive relaxation or guided imagery."
+            },
+            {
+              "id": "D",
+              "text": "A patient with tension headaches that start during stressful weeks of school exams",
+              "correct": false,
+              "rationale": "Accurate but inert data This patient has the energy for active relaxation."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Low energy: passive relaxation or imagery.",
+          "strategy": "Find the patient who cannot afford the effort."
+        },
+        {
+          "id": "cai-c16",
+          "topic": "Mind body techniques",
+          "stem": "Select all of the features of meditation.",
+          "objective": "Mind body techniques",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "A receptive attitude",
+              "correct": true,
+              "rationale": "The five features of meditation are a quiet space, a comfortable position, a receptive attitude, a focus of attention and relaxed breathing. It directs attention to a single unchanging or repetitive stimulus."
+            },
+            {
+              "id": "B",
+              "text": "Strong, rapid breathing to energize the body",
+              "correct": false,
+              "rationale": "Near miss concept Meditation uses relaxed breathing."
+            },
+            {
+              "id": "C",
+              "text": "A comfortable position",
+              "correct": true,
+              "rationale": "The five features of meditation are a quiet space, a comfortable position, a receptive attitude, a focus of attention and relaxed breathing. It directs attention to a single unchanging or repetitive stimulus."
+            },
+            {
+              "id": "D",
+              "text": "A goal of solving a specific problem",
+              "correct": false,
+              "rationale": "Near miss concept Meditation stills goal directed thinking."
+            },
+            {
+              "id": "E",
+              "text": "A quiet space",
+              "correct": true,
+              "rationale": "The five features of meditation are a quiet space, a comfortable position, a receptive attitude, a focus of attention and relaxed breathing. It directs attention to a single unchanging or repetitive stimulus."
+            },
+            {
+              "id": "F",
+              "text": "A focus of attention",
+              "correct": true,
+              "rationale": "The five features of meditation are a quiet space, a comfortable position, a receptive attitude, a focus of attention and relaxed breathing. It directs attention to a single unchanging or repetitive stimulus."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          "takeaway": "Quiet, comfortable, receptive, focused, relaxed breathing.",
+          "strategy": "Reject anything that speeds up or analyzes."
+        },
+        {
+          "id": "cai-c17",
+          "topic": "Mind body techniques",
+          "stem": "Select all of the cautions for a patient learning meditation.",
+          "objective": "Mind body techniques",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Meditation works without regular practice",
+              "correct": false,
+              "rationale": "Near miss concept Lasting results require ongoing practice."
+            },
+            {
+              "id": "B",
+              "text": "Some patients become hypertensive and need shorter sessions",
+              "correct": true,
+              "rationale": "Meditation can enhance drug effects and reduce the need for antihypertensive, thyroid and psychotropic medications, so the nurse monitors for physiological changes and the provider adjusts doses. Patients afraid of losing control may see it as mind control. Some become hypertensive and need sessions shorter than the usual 15 to 20 minutes."
+            },
+            {
+              "id": "C",
+              "text": "Antihypertensive or thyroid doses may need adjustment over time",
+              "correct": true,
+              "rationale": "Meditation can enhance drug effects and reduce the need for antihypertensive, thyroid and psychotropic medications, so the nurse monitors for physiological changes and the provider adjusts doses. Patients afraid of losing control may see it as mind control. Some become hypertensive and need sessions shorter than the usual 15 to 20 minutes."
+            },
+            {
+              "id": "D",
+              "text": "A patient with a strong fear of losing control may resist it",
+              "correct": true,
+              "rationale": "Meditation can enhance drug effects and reduce the need for antihypertensive, thyroid and psychotropic medications, so the nurse monitors for physiological changes and the provider adjusts doses. Patients afraid of losing control may see it as mind control. Some become hypertensive and need sessions shorter than the usual 15 to 20 minutes."
+            },
+            {
+              "id": "E",
+              "text": "It may increase the effects of some medications",
+              "correct": true,
+              "rationale": "Meditation can enhance drug effects and reduce the need for antihypertensive, thyroid and psychotropic medications, so the nurse monitors for physiological changes and the provider adjusts doses. Patients afraid of losing control may see it as mind control. Some become hypertensive and need sessions shorter than the usual 15 to 20 minutes."
+            },
+            {
+              "id": "F",
+              "text": "It is safe to stop all psychotropic drugs once meditation begins",
+              "correct": false,
+              "rationale": "Outside the nurse's scope Only the provider adjusts medications."
+            }
+          ],
+          "answer": [
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "takeaway": "Monitor for medication effects; the provider adjusts doses.",
+          "strategy": "Reject the option where the nurse or patient stops drugs."
+        },
+        {
+          "id": "cai-c18",
+          "topic": "Mind body techniques",
+          "stem": "A nurse is guiding imagery for a patient. What step comes first?",
+          "objective": "Mind body techniques",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Have the patient begin slow abdominal breathing",
+              "correct": true,
+              "rationale": "Guided imagery begins with slow abdominal breathing, then a chosen image, then the other senses, then warmth entering with inspiration and tension leaving with exhalation. The image is individualized so it does not trigger negative feelings."
+            },
+            {
+              "id": "B",
+              "text": "Describe a beach scene in detail",
+              "correct": false,
+              "rationale": "Correct but premature The image is introduced after the breathing rhythm is established."
+            },
+            {
+              "id": "C",
+              "text": "Ask the patient to picture tension leaving with each exhalation",
+              "correct": false,
+              "rationale": "Correct but premature Releasing tension comes later in the session."
+            },
+            {
+              "id": "D",
+              "text": "Ask the patient to describe a painful memory so the image can replace it",
+              "correct": false,
+              "rationale": "Near miss concept The image should never evoke negative memories."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Breathe first, then picture.",
+          "strategy": "Find the foundation step."
+        },
+        {
+          "id": "cai-c19",
+          "topic": "Mind body techniques",
+          "stem": "Why does the nurse individualize the image used in guided imagery?",
+          "objective": "Mind body techniques",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "The provider must review and approve each image before the nurse can use it",
+              "correct": false,
+              "rationale": "Institution as rationale Imagery is nursing accessible; no approval is needed for the image."
+            },
+            {
+              "id": "B",
+              "text": "Individual images shorten the session",
+              "correct": false,
+              "rationale": "Accurate but inert data Session length is not the reason."
+            },
+            {
+              "id": "C",
+              "text": "A calming image for one patient may evoke bad memories for another",
+              "correct": true,
+              "rationale": "People respond to images through their own experiences. A beach may be peaceful for one patient and frightening for someone who nearly drowned. Using the patient's preferences and all the senses makes imagery work."
+            },
+            {
+              "id": "D",
+              "text": "Standard images are copyrighted",
+              "correct": false,
+              "rationale": "Accurate but inert data Copyright is irrelevant."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "The patient's image, not the nurse's.",
+          "strategy": "Pick the reason rooted in the patient's experience."
+        },
+        {
+          "id": "cai-c20",
+          "topic": "Mind body techniques",
+          "stem": "Match each description to music therapy or therapeutic music.",
+          "objective": "Mind body techniques",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "matrix",
+          "columns": [
+            "Music therapy",
+            "Therapeutic music"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "A nurse offering the patient's favorite songs to ease anxiety",
+              "answer": "Therapeutic music",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Used to improve movement, communication or memory in an individualized treatment plan",
+              "answer": "Music therapy",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Delivered by a credentialed music therapist with clinical goals",
+              "answer": "Music therapy",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Calming music played at the bedside for comfort",
+              "answer": "Therapeutic music",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Therapeutic music",
+            "r2": "Music therapy",
+            "r3": "Music therapy",
+            "r4": "Therapeutic music"
+          },
+          "takeaway": "Music therapy is a clinical, goal directed intervention by a credentialed music therapist that addresses physical, psychological, cognitive and social needs. Therapeutic music is music offered for comfort and relaxation, which a nurse can provide. Music therapy has a therapist and goals; therapeutic music offers comfort.",
+          "strategy": "Ask who delivers it and why."
+        },
+        {
+          "id": "cai-c21",
+          "topic": "Mind body techniques",
+          "stem": "How does biofeedback work?",
+          "objective": "Mind body techniques",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "A practitioner moves the energy fields around the body with the open hands",
+              "correct": false,
+              "rationale": "Near miss concept That describes therapeutic touch."
+            },
+            {
+              "id": "B",
+              "text": "Needles inserted along meridians redirect qi",
+              "correct": false,
+              "rationale": "Near miss concept That describes acupuncture."
+            },
+            {
+              "id": "C",
+              "text": "The patient takes herbs that lower the heart rate",
+              "correct": false,
+              "rationale": "Near miss concept Biofeedback uses no products."
+            },
+            {
+              "id": "D",
+              "text": "Instruments display body signals so the patient learns to control them",
+              "correct": true,
+              "rationale": "Biofeedback is a mind body technique. Electronic instruments measure muscle tension, heart rate, respirations, skin temperature or brain waves and give visual or sound signals, so the patient learns which relaxation behaviors change them. Over time the patient controls the response without the device."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Biofeedback: see the signal, learn to change it.",
+          "strategy": "Look for instruments and self regulation."
+        },
+        {
+          "id": "cai-c22",
+          "topic": "Mind body techniques",
+          "stem": "Select all of the conditions biofeedback has evidence for managing.",
+          "objective": "Mind body techniques",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Acute appendicitis",
+              "correct": false,
+              "rationale": "Near miss concept Acute appendicitis needs conventional care."
+            },
+            {
+              "id": "B",
+              "text": "Cardiac arrhythmias",
+              "correct": true,
+              "rationale": "Biofeedback manages chronic pain, supports treatment of urinary incontinence and helps manage cardiac arrhythmias, with some evidence for fecal incontinence and stroke recovery. Acute conditions such as appendicitis or pneumonia need conventional care."
+            },
+            {
+              "id": "C",
+              "text": "Chronic pain",
+              "correct": true,
+              "rationale": "Biofeedback manages chronic pain, supports treatment of urinary incontinence and helps manage cardiac arrhythmias, with some evidence for fecal incontinence and stroke recovery. Acute conditions such as appendicitis or pneumonia need conventional care."
+            },
+            {
+              "id": "D",
+              "text": "Urinary incontinence",
+              "correct": true,
+              "rationale": "Biofeedback manages chronic pain, supports treatment of urinary incontinence and helps manage cardiac arrhythmias, with some evidence for fecal incontinence and stroke recovery. Acute conditions such as appendicitis or pneumonia need conventional care."
+            },
+            {
+              "id": "E",
+              "text": "Bacterial pneumonia",
+              "correct": false,
+              "rationale": "Near miss concept Infections need conventional treatment."
+            }
+          ],
+          "answer": [
+            "B",
+            "C",
+            "D"
+          ],
+          "takeaway": "Biofeedback helps chronic, self regulated problems.",
+          "strategy": "Reject acute problems that need biomedicine."
+        },
+        {
+          "id": "cai-c23",
+          "topic": "Mind body techniques",
+          "stem": "Which precaution applies to biofeedback?",
+          "objective": "Mind body techniques",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Repressed emotions may surface, so a referral path is needed",
+              "correct": true,
+              "rationale": "During sessions, repressed emotions may surface, so practitioners need psychological training or a referral path. Long term biofeedback can lower blood pressure and heart rate, so medications may need adjustment."
+            },
+            {
+              "id": "B",
+              "text": "Biofeedback raises blood pressure over time",
+              "correct": false,
+              "rationale": "Near miss concept Long term use tends to lower blood pressure and heart rate."
+            },
+            {
+              "id": "C",
+              "text": "Biofeedback must be stopped as soon as the patient's symptoms begin to improve",
+              "correct": false,
+              "rationale": "Absolute language Patients eventually self regulate; there is no stop rule."
+            },
+            {
+              "id": "D",
+              "text": "Biofeedback cannot be combined with relaxation exercises",
+              "correct": false,
+              "rationale": "Near miss concept It is often combined with relaxation and imagery."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Emotions may surface; vital signs may drop.",
+          "strategy": "Pick the safety precaution."
+        },
+        {
+          "id": "cai-c24",
+          "topic": "Traditional and energy therapies",
+          "stem": "According to traditional Chinese medicine, what causes illness?",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Misalignment of the spinal vertebrae",
+              "correct": false,
+              "rationale": "Near miss concept That is the chiropractic view."
+            },
+            {
+              "id": "B",
+              "text": "An imbalance of the three doshas",
+              "correct": false,
+              "rationale": "Near miss concept Doshas belong to Ayurveda."
+            },
+            {
+              "id": "C",
+              "text": "An imbalance of yin and yang that disrupts qi",
+              "correct": true,
+              "rationale": "Traditional Chinese medicine sees health as life in balance. Yin and yang are opposing but complementary forces. Imbalance from external, internal or other causes disrupts qi, the vital energy, along meridians."
+            },
+            {
+              "id": "D",
+              "text": "A deficiency of beneficial probiotic bacteria living in the bowel",
+              "correct": false,
+              "rationale": "Near miss concept Probiotics are a biologically based therapy."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Yin, yang and qi.",
+          "strategy": "Match the key words to the system."
+        },
+        {
+          "id": "cai-c25",
+          "topic": "Traditional and energy therapies",
+          "stem": "Match each traditional Chinese medicine practice to its description.",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "matrix",
+          "columns": [
+            "Acupuncture",
+            "Moxibustion",
+            "Cupping",
+            "Tui na",
+            "Qi gong"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Placing a heated cup on the skin to create suction",
+              "answer": "Cupping",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Burning dried herbs on or near the skin",
+              "answer": "Moxibustion",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Inserting thin needles at acupoints along meridians",
+              "answer": "Acupuncture",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Choreographed movements to guide the flow of qi",
+              "answer": "Qi gong",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "A form of therapeutic massage",
+              "answer": "Tui na",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Cupping",
+            "r2": "Moxibustion",
+            "r3": "Acupuncture",
+            "r4": "Qi gong",
+            "r5": "Tui na"
+          },
+          "takeaway": "Acupuncture uses needles at acupoints. Moxibustion burns moxa, dried herbs, on or near the skin. Cupping places a heated cup to create suction. Tui na is massage. Qi gong and tai chi are movement practices that guide qi. Needles, heat, suction, massage, movement.",
+          "strategy": "Match the practice to its tool."
+        },
+        {
+          "id": "cai-c26",
+          "topic": "Traditional and energy therapies",
+          "stem": "Select all of the patients for whom acupuncture is contraindicated or requires caution.",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "A patient with a bleeding disorder",
+              "correct": true,
+              "rationale": "Acupuncture is contraindicated with bleeding disorders and skin infections, and anticoagulants raise bleeding risk. Caution is needed with seizures, hepatitis and HIV. Electroacupuncture is avoided with pacemakers, arrhythmias and epilepsy."
+            },
+            {
+              "id": "B",
+              "text": "A patient with a skin infection at the site",
+              "correct": true,
+              "rationale": "Acupuncture is contraindicated with bleeding disorders and skin infections, and anticoagulants raise bleeding risk. Caution is needed with seizures, hepatitis and HIV. Electroacupuncture is avoided with pacemakers, arrhythmias and epilepsy."
+            },
+            {
+              "id": "C",
+              "text": "A patient with a history of seizures",
+              "correct": true,
+              "rationale": "Acupuncture is contraindicated with bleeding disorders and skin infections, and anticoagulants raise bleeding risk. Caution is needed with seizures, hepatitis and HIV. Electroacupuncture is avoided with pacemakers, arrhythmias and epilepsy."
+            },
+            {
+              "id": "D",
+              "text": "A patient with tension headaches and no other conditions",
+              "correct": false,
+              "rationale": "Expected finding offered as a problem Tension headaches are an indication for acupuncture."
+            },
+            {
+              "id": "E",
+              "text": "A patient taking an anticoagulant",
+              "correct": true,
+              "rationale": "Acupuncture is contraindicated with bleeding disorders and skin infections, and anticoagulants raise bleeding risk. Caution is needed with seizures, hepatitis and HIV. Electroacupuncture is avoided with pacemakers, arrhythmias and epilepsy."
+            },
+            {
+              "id": "F",
+              "text": "A patient with chronic low back pain",
+              "correct": false,
+              "rationale": "Expected finding offered as a problem Low back pain is an indication."
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          "takeaway": "Needles plus bleeding risk or infection: stop and check.",
+          "strategy": "Look for bleeding and infection risks."
+        },
+        {
+          "id": "cai-c27",
+          "topic": "Traditional and energy therapies",
+          "stem": "Which requirement protects patients from infection during acupuncture?",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Needles are cleaned with alcohol between patients",
+              "correct": false,
+              "rationale": "Near miss concept Alcohol does not sterilize; needles are single use."
+            },
+            {
+              "id": "B",
+              "text": "Needles may be reused for the same patient",
+              "correct": false,
+              "rationale": "Near miss concept Reuse increases infection risk."
+            },
+            {
+              "id": "C",
+              "text": "Needles are left in place for several days so the effect lasts longer",
+              "correct": false,
+              "rationale": "Near miss concept Needles left in too long raise infection risk."
+            },
+            {
+              "id": "D",
+              "text": "Needles must be sterile and labeled for single use",
+              "correct": true,
+              "rationale": "The Food and Drug Administration regulates acupuncture needles as medical devices that must be sterile and labeled for single use. Complications include infection, broken needles, organ puncture and bleeding, but they are rare with trained practitioners."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Sterile, single use needles.",
+          "strategy": "Pick the infection control standard."
+        },
+        {
+          "id": "cai-c28",
+          "topic": "Traditional and energy therapies",
+          "stem": "Select all of the conditions acupuncture has evidence for treating.",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Postoperative pain",
+              "correct": true,
+              "rationale": "Acupuncture changes how pain is processed in central pathways. Evidence supports it for low back pain, myofascial pain, chemotherapy induced nausea with antiemetics, tension headache, migraine prevention, fibromyalgia, anxiety, hot flashes, fatigue and postoperative pain."
+            },
+            {
+              "id": "B",
+              "text": "Bacterial infections",
+              "correct": false,
+              "rationale": "Near miss concept Infections need antibiotics."
+            },
+            {
+              "id": "C",
+              "text": "Chemotherapy induced nausea and vomiting",
+              "correct": true,
+              "rationale": "Acupuncture changes how pain is processed in central pathways. Evidence supports it for low back pain, myofascial pain, chemotherapy induced nausea with antiemetics, tension headache, migraine prevention, fibromyalgia, anxiety, hot flashes, fatigue and postoperative pain."
+            },
+            {
+              "id": "D",
+              "text": "Low back pain",
+              "correct": true,
+              "rationale": "Acupuncture changes how pain is processed in central pathways. Evidence supports it for low back pain, myofascial pain, chemotherapy induced nausea with antiemetics, tension headache, migraine prevention, fibromyalgia, anxiety, hot flashes, fatigue and postoperative pain."
+            },
+            {
+              "id": "E",
+              "text": "Tension headaches and migraine prevention",
+              "correct": true,
+              "rationale": "Acupuncture changes how pain is processed in central pathways. Evidence supports it for low back pain, myofascial pain, chemotherapy induced nausea with antiemetics, tension headache, migraine prevention, fibromyalgia, anxiety, hot flashes, fatigue and postoperative pain."
+            },
+            {
+              "id": "F",
+              "text": "Bleeding disorders",
+              "correct": false,
+              "rationale": "Near miss concept Bleeding disorders contraindicate acupuncture."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "D",
+            "E"
+          ],
+          "takeaway": "Acupuncture: pain, nausea, headache.",
+          "strategy": "Reject the contraindication."
+        },
+        {
+          "id": "cai-c29",
+          "topic": "Traditional and energy therapies",
+          "stem": "Place the phases of therapeutic touch in order.",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "ordered_response",
+          "options": [
+            {
+              "id": "A",
+              "text": "Unruffling",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "B",
+              "text": "Assessing",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "C",
+              "text": "Evaluating",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "D",
+              "text": "Centering",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "E",
+              "text": "Treating",
+              "correct": false,
+              "rationale": ""
+            }
+          ],
+          "answer": [
+            "D",
+            "B",
+            "A",
+            "E",
+            "C"
+          ],
+          "takeaway": "Therapeutic touch has five phases: centering, assessing the energy field with the palms 2 to 6 inches from the body, unruffling with long downward strokes, treating by redirecting energy and evaluating the response. Center, assess, unruffle, treat, evaluate.",
+          "strategy": "The practitioner centers before touching anything."
+        },
+        {
+          "id": "cai-c30",
+          "topic": "Traditional and energy therapies",
+          "stem": "Select all of the patients for whom therapeutic touch requires caution or may be inappropriate.",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "A patient with cardiovascular instability",
+              "correct": true,
+              "rationale": "Patients sensitive to touch, such as those who have experienced abuse or have psychiatric disorders, may misread the intent and feel threatened, so the nurse assesses for trauma first. Neonates, patients with cardiovascular or neurological instability and dying patients need short, gentle sessions. Some cultures find touch inappropriate."
+            },
+            {
+              "id": "B",
+              "text": "A patient with anxiety who requests the therapy",
+              "correct": false,
+              "rationale": "Strength read as deficit A patient requesting it is a good candidate."
+            },
+            {
+              "id": "C",
+              "text": "A patient whose culture considers touch inappropriate",
+              "correct": true,
+              "rationale": "Patients sensitive to touch, such as those who have experienced abuse or have psychiatric disorders, may misread the intent and feel threatened, so the nurse assesses for trauma first. Neonates, patients with cardiovascular or neurological instability and dying patients need short, gentle sessions. Some cultures find touch inappropriate."
+            },
+            {
+              "id": "D",
+              "text": "A patient with a history of physical abuse",
+              "correct": true,
+              "rationale": "Patients sensitive to touch, such as those who have experienced abuse or have psychiatric disorders, may misread the intent and feel threatened, so the nurse assesses for trauma first. Neonates, patients with cardiovascular or neurological instability and dying patients need short, gentle sessions. Some cultures find touch inappropriate."
+            },
+            {
+              "id": "E",
+              "text": "An older adult who welcomes a hand being held",
+              "correct": false,
+              "rationale": "Strength read as deficit Accepting touch is a strength, not a risk."
+            },
+            {
+              "id": "F",
+              "text": "A patient with a psychiatric disorder who feels threatened by touch",
+              "correct": true,
+              "rationale": "Patients sensitive to touch, such as those who have experienced abuse or have psychiatric disorders, may misread the intent and feel threatened, so the nurse assesses for trauma first. Neonates, patients with cardiovascular or neurological instability and dying patients need short, gentle sessions. Some cultures find touch inappropriate."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "D",
+            "F"
+          ],
+          "takeaway": "Ask about trauma and culture before touch.",
+          "strategy": "Look for who may feel threatened."
+        },
+        {
+          "id": "cai-c31",
+          "topic": "Traditional and energy therapies",
+          "stem": "Which statement about touch and older adults is correct?",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Touch should be avoided because it confuses older adults",
+              "correct": false,
+              "rationale": "Absolute language Simple touch supports communication when other senses decline."
+            },
+            {
+              "id": "B",
+              "text": "Nurses should touch older adults without asking to build trust faster",
+              "correct": false,
+              "rationale": "Near miss concept The nurse asks permission first."
+            },
+            {
+              "id": "C",
+              "text": "Older adults often lack touch, and simple touch builds connection",
+              "correct": true,
+              "rationale": "Older adults often experience skin hunger because they have fewer people to touch them. Simple touch improves connection, acceptance and self worth. The nurse asks permission and watches personal reactions to aging skin."
+            },
+            {
+              "id": "D",
+              "text": "Older adults need less touch because their skin is fragile",
+              "correct": false,
+              "rationale": "Near miss concept Older adults need touch as much as or more than other age groups."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Older adults need touch; ask first.",
+          "strategy": "Reject options that withhold touch or skip consent."
+        },
+        {
+          "id": "cai-c32",
+          "topic": "Traditional and energy therapies",
+          "stem": "Which movement therapy is best supported for preventing falls in older adults?",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Moxibustion",
+              "correct": false,
+              "rationale": "Near miss concept Moxibustion uses heat, not movement."
+            },
+            {
+              "id": "B",
+              "text": "Magnet therapy",
+              "correct": false,
+              "rationale": "Near miss concept Magnets are used for musculoskeletal pain."
+            },
+            {
+              "id": "C",
+              "text": "Tai chi",
+              "correct": true,
+              "rationale": "Tai chi is a moving meditation that improves balance and reduces falls and the fear of falling in older adults, including group tai chi in residential care. Pilates once a week also improves balance and function."
+            },
+            {
+              "id": "D",
+              "text": "Cupping",
+              "correct": false,
+              "rationale": "Near miss concept Cupping is not a movement therapy."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Tai chi for balance and falls.",
+          "strategy": "Pick the movement option."
+        },
+        {
+          "id": "cai-c33",
+          "topic": "Herbs and natural products",
+          "stem": "Which statement about herbal supplements in the United States is correct?",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "The amount of active ingredient in each product is standardized and checked by federal law",
+              "correct": false,
+              "rationale": "Near miss concept Concentrations vary widely because they are not regulated."
+            },
+            {
+              "id": "B",
+              "text": "The Food and Drug Administration does not approve them before sale",
+              "correct": true,
+              "rationale": "Herbs are sold as dietary supplements under the Dietary Supplement Health and Education Act. The Food and Drug Administration does not approve them before marketing, so concentrations vary and products may be contaminated with pesticides, heavy metals or other herbs."
+            },
+            {
+              "id": "C",
+              "text": "They must pass the same testing as prescription drugs",
+              "correct": false,
+              "rationale": "Near miss concept Supplements are not tested or approved like drugs."
+            },
+            {
+              "id": "D",
+              "text": "They are safe because they are natural",
+              "correct": false,
+              "rationale": "Absolute language Natural does not mean safe."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Supplements are not approved like drugs.",
+          "strategy": "Reject natural equals safe."
+        },
+        {
+          "id": "cai-c34",
+          "topic": "Herbs and natural products",
+          "stem": "Match each herb to its main drug interaction concern.",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "matrix",
+          "columns": [
+            "Increased bleeding",
+            "Increased sedation",
+            "Altered blood glucose",
+            "Serotonin and drug metabolism interactions"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Ginkgo",
+              "answer": "Increased bleeding",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Valerian",
+              "answer": "Increased sedation",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Ginseng",
+              "answer": "Altered blood glucose",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "St. John's wort",
+              "answer": "Serotonin and drug metabolism interactions",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Garlic",
+              "answer": "Increased bleeding",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Chamomile",
+              "answer": "Increased sedation",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Increased bleeding",
+            "r2": "Increased sedation",
+            "r3": "Altered blood glucose",
+            "r4": "Serotonin and drug metabolism interactions",
+            "r5": "Increased bleeding",
+            "r6": "Increased sedation"
+          },
+          "takeaway": "Ginkgo, garlic, ginger and feverfew increase bleeding with warfarin, aspirin and nonsteroidal anti inflammatory drugs. Valerian and chamomile add to central nervous system depressants. Ginseng affects blood glucose. St. John's wort interacts with antidepressants and speeds the breakdown of many drugs. Ginkgo and garlic bleed; valerian sedates; ginseng moves glucose; St. John's wort interacts widely.",
+          "strategy": "Ask what body system the herb acts on."
+        },
+        {
+          "id": "cai-c35",
+          "topic": "Herbs and natural products",
+          "stem": "Select all of the herbs that increase bleeding risk with warfarin.",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ginger",
+              "correct": true,
+              "rationale": "Ginkgo, garlic, ginger and feverfew interfere with platelets or clotting and increase bleeding with warfarin, other anticoagulants, aspirin and nonsteroidal anti inflammatory drugs."
+            },
+            {
+              "id": "B",
+              "text": "Saw palmetto",
+              "correct": false,
+              "rationale": "Near miss concept Saw palmetto interacts with finasteride and antiandrogens."
+            },
+            {
+              "id": "C",
+              "text": "Feverfew",
+              "correct": true,
+              "rationale": "Ginkgo, garlic, ginger and feverfew interfere with platelets or clotting and increase bleeding with warfarin, other anticoagulants, aspirin and nonsteroidal anti inflammatory drugs."
+            },
+            {
+              "id": "D",
+              "text": "Garlic",
+              "correct": true,
+              "rationale": "Ginkgo, garlic, ginger and feverfew interfere with platelets or clotting and increase bleeding with warfarin, other anticoagulants, aspirin and nonsteroidal anti inflammatory drugs."
+            },
+            {
+              "id": "E",
+              "text": "Valerian",
+              "correct": false,
+              "rationale": "Near miss concept Valerian adds sedation, not bleeding."
+            },
+            {
+              "id": "F",
+              "text": "Ginkgo",
+              "correct": true,
+              "rationale": "Ginkgo, garlic, ginger and feverfew interfere with platelets or clotting and increase bleeding with warfarin, other anticoagulants, aspirin and nonsteroidal anti inflammatory drugs."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "D",
+            "F"
+          ],
+          "takeaway": "The four Gs plus feverfew: ginkgo, garlic, ginger.",
+          "strategy": "Look for platelet effects."
+        },
+        {
+          "id": "cai-c36",
+          "topic": "Herbs and natural products",
+          "stem": "Select all of the information a safe herbal product label should include.",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "The name and address of the actual manufacturer",
+              "correct": true,
+              "rationale": "Teach patients to buy from reputable manufacturers whose labels list the scientific name, manufacturer name and address, batch or lot number, manufacture date and expiration date. The United States Pharmacopeia Verified mark signals quality and purity."
+            },
+            {
+              "id": "B",
+              "text": "A claim that the product cures a disease",
+              "correct": false,
+              "rationale": "Near miss concept Supplements cannot carry disease claims on the label."
+            },
+            {
+              "id": "C",
+              "text": "The expiration date",
+              "correct": true,
+              "rationale": "Teach patients to buy from reputable manufacturers whose labels list the scientific name, manufacturer name and address, batch or lot number, manufacture date and expiration date. The United States Pharmacopeia Verified mark signals quality and purity."
+            },
+            {
+              "id": "D",
+              "text": "A batch or lot number",
+              "correct": true,
+              "rationale": "Teach patients to buy from reputable manufacturers whose labels list the scientific name, manufacturer name and address, batch or lot number, manufacture date and expiration date. The United States Pharmacopeia Verified mark signals quality and purity."
+            },
+            {
+              "id": "E",
+              "text": "The scientific name of the plant",
+              "correct": true,
+              "rationale": "Teach patients to buy from reputable manufacturers whose labels list the scientific name, manufacturer name and address, batch or lot number, manufacture date and expiration date. The United States Pharmacopeia Verified mark signals quality and purity."
+            },
+            {
+              "id": "F",
+              "text": "A guarantee that it has no side effects",
+              "correct": false,
+              "rationale": "Absolute language No product is free of side effects."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "D",
+            "E"
+          ],
+          "takeaway": "Scientific name, maker, lot, dates, USP mark.",
+          "strategy": "Reject promises."
+        },
+        {
+          "id": "cai-c37",
+          "topic": "Herbs and natural products",
+          "stem": "Classify each herb as generally considered safe for its use or unsafe.",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "matrix",
+          "columns": [
+            "Generally safe",
+            "Unsafe"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Ginger for nausea",
+              "answer": "Generally safe",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Chamomile for mild anxiety",
+              "answer": "Generally safe",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Chaparral",
+              "answer": "Unsafe",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Comfrey taken orally",
+              "answer": "Unsafe",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Aloe vera applied to a burn",
+              "answer": "Generally safe",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Ephedra for weight loss",
+              "answer": "Unsafe",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Generally safe",
+            "r2": "Generally safe",
+            "r3": "Unsafe",
+            "r4": "Unsafe",
+            "r5": "Generally safe",
+            "r6": "Unsafe"
+          },
+          "takeaway": "Aloe vera, chamomile, echinacea, feverfew, garlic, ginger, ginkgo, saw palmetto and valerian are considered safe or effective for certain uses, though they still interact with drugs. Calamus, chaparral, coltsfoot, comfrey, ephedra, life root and pokeweed are unsafe; several are liver toxic or carcinogenic, and ephedra is dangerous with hypertension, diabetes, thyroid disease or caffeine. Comfrey, chaparral, coltsfoot: liver harm. Ephedra: heart risk.",
+          "strategy": "Liver toxic and stimulant herbs are unsafe."
+        },
+        {
+          "id": "cai-c38",
+          "topic": "Herbs and natural products",
+          "stem": "Which patient should avoid ephedra?",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "A patient with mild constipation",
+              "correct": false,
+              "rationale": "Accurate but inert data Constipation is not the concern."
+            },
+            {
+              "id": "B",
+              "text": "A patient with hypertension",
+              "correct": true,
+              "rationale": "Ephedra is a central nervous system and cardiac stimulant. It is unsafe with hypertension, diabetes or thyroid disease and should not be combined with caffeine."
+            },
+            {
+              "id": "C",
+              "text": "A patient with seasonal allergies and no other conditions",
+              "correct": false,
+              "rationale": "Accurate but inert data No contraindicating condition is described."
+            },
+            {
+              "id": "D",
+              "text": "A patient with a healing burn",
+              "correct": false,
+              "rationale": "Accurate but inert data Burns are not the concern."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Ephedra: stimulant, unsafe for the heart.",
+          "strategy": "Match the stimulant to the cardiac risk."
+        },
+        {
+          "id": "cai-c39",
+          "topic": "Herbs and natural products",
+          "stem": "Which statement about aromatherapy is correct?",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Essential oils are regulated as prescription drugs",
+              "correct": false,
+              "rationale": "Near miss concept They are natural products, not prescription drugs."
+            },
+            {
+              "id": "B",
+              "text": "Essential oils are safe to swallow in any amount because they come from plants",
+              "correct": false,
+              "rationale": "Absolute language Many essential oils are toxic when swallowed."
+            },
+            {
+              "id": "C",
+              "text": "Aromatherapy replaces analgesics for postoperative pain",
+              "correct": false,
+              "rationale": "Near miss concept It may be added for comfort, not used in place of analgesia."
+            },
+            {
+              "id": "D",
+              "text": "Essential oils can cause skin irritation or allergic reactions",
+              "correct": true,
+              "rationale": "Aromatherapy uses essential oils, a natural product, for relaxation and comfort. Oils can irritate skin or trigger allergic or respiratory reactions, so the nurse asks about allergies and follows agency policy."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Essential oils are natural, not harmless.",
+          "strategy": "Reject the absolute safety claim."
+        },
+        {
+          "id": "cai-c40",
+          "topic": "Nursing process and teaching",
+          "stem": "Select all of the questions to include when assessing a patient's use of complementary therapies.",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"You stopped those products before coming in, right?\"",
+              "correct": false,
+              "rationale": "Near miss concept A leading question assumes the answer and misses information."
+            },
+            {
+              "id": "B",
+              "text": "\"Why would you use something that is not proven?\"",
+              "correct": false,
+              "rationale": "Kind but non therapeutic A judgmental question shuts down honest disclosure."
+            },
+            {
+              "id": "C",
+              "text": "\"Have you told your provider about these products?\"",
+              "correct": true,
+              "rationale": "Always ask directly and without judgment about all products, including teas and powders patients may not think of as medicine, all practices, their goals and whether the provider knows. Open, honest dialogue is the nurse's responsibility."
+            },
+            {
+              "id": "D",
+              "text": "\"What do you hope the therapy will do for you?\"",
+              "correct": true,
+              "rationale": "Always ask directly and without judgment about all products, including teas and powders patients may not think of as medicine, all practices, their goals and whether the provider knows. Open, honest dialogue is the nurse's responsibility."
+            },
+            {
+              "id": "E",
+              "text": "\"Do you use practices such as yoga, meditation or acupuncture?\"",
+              "correct": true,
+              "rationale": "Always ask directly and without judgment about all products, including teas and powders patients may not think of as medicine, all practices, their goals and whether the provider knows. Open, honest dialogue is the nurse's responsibility."
+            },
+            {
+              "id": "F",
+              "text": "\"What herbs, vitamins, teas or supplements do you take?\"",
+              "correct": true,
+              "rationale": "Always ask directly and without judgment about all products, including teas and powders patients may not think of as medicine, all practices, their goals and whether the provider knows. Open, honest dialogue is the nurse's responsibility."
+            }
+          ],
+          "answer": [
+            "C",
+            "D",
+            "E",
+            "F"
+          ],
+          "takeaway": "Ask about everything, without judgment.",
+          "strategy": "Reject judging and leading questions."
+        },
+        {
+          "id": "cai-c41",
+          "topic": "Nursing process and teaching",
+          "stem": "Why must the nurse keep evaluating a patient who uses relaxation, meditation or biofeedback regularly?",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "The nurse must document the therapy daily for billing",
+              "correct": false,
+              "rationale": "Institution as rationale Billing is not the clinical reason."
+            },
+            {
+              "id": "B",
+              "text": "Patients must stop the therapy once they feel better",
+              "correct": false,
+              "rationale": "Near miss concept Continued practice sustains the benefit."
+            },
+            {
+              "id": "C",
+              "text": "Physiological changes may mean doses need adjusting",
+              "correct": true,
+              "rationale": "These therapies can lower blood pressure, heart rate and the need for antihypertensive, thyroid, psychotropic or pain medications. The nurse evaluates the response and reports changes so the provider can adjust doses."
+            },
+            {
+              "id": "D",
+              "text": "These therapies always stop working after a few weeks",
+              "correct": false,
+              "rationale": "Absolute language Regular practice tends to improve results."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Evaluate response; doses may change.",
+          "strategy": "Pick the safety reason."
+        },
+        {
+          "id": "cai-c42",
+          "topic": "Nursing process and teaching",
+          "stem": "What most strongly predicts whether a complementary therapy such as meditation or imagery will help?",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "The patient's active involvement and daily practice",
+              "correct": true,
+              "rationale": "Active patient involvement is a primary principle. Patients who commit to practicing daily achieve better and longer lasting results, so therapies are matched to the patient's acceptance, condition, lifestyle, beliefs and setting."
+            },
+            {
+              "id": "B",
+              "text": "The cost of the program",
+              "correct": false,
+              "rationale": "Accurate but inert data Cost does not predict effect."
+            },
+            {
+              "id": "C",
+              "text": "The number of therapies combined",
+              "correct": false,
+              "rationale": "Accurate but inert data More therapies are not better."
+            },
+            {
+              "id": "D",
+              "text": "How quickly the nurse teaches the technique",
+              "correct": false,
+              "rationale": "Task completion as outcome Teaching quickly is task completion, not a patient outcome."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Practice and commitment drive results.",
+          "strategy": "Pick the patient centered factor."
+        },
+        {
+          "id": "cai-x01",
+          "topic": "Herbs and natural products",
+          "stem": "A patient taking warfarin tells the nurse, \"I started ginkgo to help my memory.\" The patient has new bruises on both arms. What should the nurse do first?",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Assess for other bleeding and review the latest INR",
+              "correct": true,
+              "rationale": "Ginkgo inhibits platelets and adds to the effect of warfarin. New bruising is a cue of bleeding, so the nurse first assesses for other bleeding and checks the international normalized ratio, then notifies the provider and teaches the patient."
+            },
+            {
+              "id": "B",
+              "text": "Tell the patient to double the warfarin dose",
+              "correct": false,
+              "rationale": "Outside the nurse's scope The nurse does not change prescribed doses."
+            },
+            {
+              "id": "C",
+              "text": "Reassure the patient that ginkgo is a natural product",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Natural does not mean safe; ginkgo increases bleeding."
+            },
+            {
+              "id": "D",
+              "text": "Document the supplement on the medication list and continue with the plan of care",
+              "correct": false,
+              "rationale": "Documenting instead of acting Documenting alone ignores active bleeding signs."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Warfarin plus ginkgo plus bruising: assess for bleeding.",
+          "strategy": "Assess the cue before teaching."
+        },
+        {
+          "id": "cai-x02",
+          "topic": "Herbs and natural products",
+          "stem": "A patient on warfarin reports taking ginkgo daily. Place the nurse's actions in order.",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "ordered_response",
+          "options": [
+            {
+              "id": "A",
+              "text": "Notify the provider of the supplement and findings",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "B",
+              "text": "Teach the patient to talk with the provider before starting or stopping any supplement",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "C",
+              "text": "Ask about all other herbs, teas and supplements the patient uses",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "D",
+              "text": "Assess for bleeding and review the international normalized ratio",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "E",
+              "text": "Document the interaction, the teaching and the patient's response",
+              "correct": false,
+              "rationale": ""
+            }
+          ],
+          "answer": [
+            "C",
+            "D",
+            "A",
+            "B",
+            "E"
+          ],
+          "takeaway": "Get the full picture of products, assess for bleeding and review clotting labs, report to the provider, teach and then document. Assessment comes before notification so the report includes the findings. Ask, assess, notify, teach, document.",
+          "strategy": "Gather the data you will report before calling."
+        },
+        {
+          "id": "cai-x03",
+          "topic": "Herbs and natural products",
+          "stem": "A patient taking warfarin reports drinking garlic and ginger tea several times a day. The patient has bleeding gums and dark stools. Complete the diagram: the condition the patient is most likely experiencing, two actions to take, and two parameters to monitor.",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "bowtie",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Hold the next warfarin dose without an order",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "Encourage more ginger tea for nausea",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "Notify the provider",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "D",
+                  "text": "Apply a heating pad to the abdomen",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "E",
+                  "text": "Assess for other signs of bleeding",
+                  "correct": true,
+                  "rationale": ""
+                }
+              ]
+            },
+            "condition": {
+              "label": "Condition",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Expected effect of warfarin",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "Increased bleeding risk from an herb drug interaction",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "Allergic reaction to garlic",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "D",
+                  "text": "Hypoglycemia",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to monitor",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "International normalized ratio",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "Blood glucose",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "Serum sodium",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "D",
+                  "text": "Hemoglobin and hematocrit",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "E",
+                  "text": "Peak expiratory flow",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            }
+          },
+          "answer": {
+            "actions": [
+              "C",
+              "E"
+            ],
+            "condition": [
+              "B"
+            ],
+            "parameters": [
+              "A",
+              "D"
+            ]
+          },
+          "takeaway": "Garlic and ginger add antiplatelet effects to warfarin. Bleeding gums and dark stools signal bleeding. The nurse assesses for more bleeding and notifies the provider, who decides about the warfarin. The international normalized ratio and hemoglobin and hematocrit track clotting and blood loss. Bleeding on warfarin plus herbs: assess, notify, watch INR and hemoglobin.",
+          "strategy": "The nurse does not hold or change doses without an order."
+        },
+        {
+          "id": "cai-x04",
+          "topic": "Herbs and natural products",
+          "stem": "A patient taking sertraline for depression asks whether adding St. John's wort would help. What is the nurse's best response?",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"It can interact dangerously with your antidepressant. Let's ask your provider first.\"",
+              "correct": true,
+              "rationale": "St. John's wort interacts with antidepressants and can cause serotonin syndrome, and it speeds the breakdown of many other drugs. The nurse explains the risk respectfully and involves the provider."
+            },
+            {
+              "id": "B",
+              "text": "\"It is a natural product, so it is safe to try.\"",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Natural does not mean safe."
+            },
+            {
+              "id": "C",
+              "text": "\"You can switch to St. John's wort and stop the sertraline.\"",
+              "correct": false,
+              "rationale": "Outside the nurse's scope Stopping a prescribed drug is not the nurse's or patient's decision alone."
+            },
+            {
+              "id": "D",
+              "text": "\"Supplements are not real medicine, so it will not do anything for your mood either way.\"",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Dismissing the question damages trust and is inaccurate."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "St. John's wort plus antidepressant: stop and ask the provider.",
+          "strategy": "Choose respectful, accurate and collaborative."
+        },
+        {
+          "id": "cai-x05",
+          "topic": "Herbs and natural products",
+          "stem": "A patient with type 2 diabetes taking metformin has started ginseng. Which assessment is most important?",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Blood glucose",
+              "correct": true,
+              "rationale": "Ginseng can lower blood glucose and add to the effect of diabetes medications, raising the risk of hypoglycemia. The nurse monitors glucose and informs the provider."
+            },
+            {
+              "id": "B",
+              "text": "Hearing",
+              "correct": false,
+              "rationale": "Accurate but inert data Ginseng does not affect hearing."
+            },
+            {
+              "id": "C",
+              "text": "Urine color",
+              "correct": false,
+              "rationale": "Accurate but inert data Not the main concern."
+            },
+            {
+              "id": "D",
+              "text": "Skin turgor",
+              "correct": false,
+              "rationale": "Accurate but inert data Not the main concern."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Ginseng moves glucose.",
+          "strategy": "Match the herb to the system it affects."
+        },
+        {
+          "id": "cai-x06",
+          "topic": "Herbs and natural products",
+          "stem": "A patient scheduled for surgery tomorrow takes valerian nightly for sleep. Why is this important to report?",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Valerian raises blood pressure during surgery",
+              "correct": false,
+              "rationale": "Near miss concept Valerian is a central nervous system depressant, not a stimulant."
+            },
+            {
+              "id": "B",
+              "text": "Valerian causes high blood glucose",
+              "correct": false,
+              "rationale": "Near miss concept Glucose is not the concern."
+            },
+            {
+              "id": "C",
+              "text": "Valerian is a stimulant that keeps patients awake after anesthesia wears off",
+              "correct": false,
+              "rationale": "Near miss concept It depresses the central nervous system."
+            },
+            {
+              "id": "D",
+              "text": "Valerian adds to sedation from anesthesia and opioids",
+              "correct": true,
+              "rationale": "Valerian depresses the central nervous system and adds to barbiturates, sleep aids, alcohol, antihistamines, anesthesia and opioids. Preoperative assessment always includes natural products."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Valerian sedates; report it before surgery.",
+          "strategy": "Ask what adds to anesthesia."
+        },
+        {
+          "id": "cai-x07",
+          "topic": "Mind body techniques",
+          "stem": "A patient with pneumonia is anxious and short of breath. Oxygen saturation is 85%. The patient asks the nurse to lead a breathing exercise to calm down. What should the nurse do first?",
+          "objective": "Mind body techniques",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Raise the head of the bed and apply oxygen per protocol",
+              "correct": true,
+              "rationale": "An oxygen saturation of 85% needs immediate respiratory intervention. Anxiety here is likely caused by hypoxemia. Once oxygenation is addressed and the provider notified, breathing exercises can support the patient."
+            },
+            {
+              "id": "B",
+              "text": "Lead a slow abdominal breathing exercise",
+              "correct": false,
+              "rationale": "Correct but premature Relaxation does not correct hypoxemia and delays treatment."
+            },
+            {
+              "id": "C",
+              "text": "Begin guided imagery of a calm beach",
+              "correct": false,
+              "rationale": "Correct but premature Imagery is not the priority while the patient is hypoxic."
+            },
+            {
+              "id": "D",
+              "text": "Offer calming music, dim the lights and stay at the bedside",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Comforting, but it ignores the airway and breathing problem."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Hypoxia first, relaxation second.",
+          "strategy": "Apply the ABCs before comfort measures."
+        },
+        {
+          "id": "cai-x08",
+          "topic": "Mind body techniques",
+          "stem": "A patient on the first postoperative day rates pain 6 out of 10 and says, \"I'm so anxious I can't relax.\" Analgesia is due now. What should the nurse do?",
+          "objective": "Mind body techniques",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the analgesic and add guided imagery or slow breathing",
+              "correct": true,
+              "rationale": "Complementary therapies work with conventional treatment. The analgesic treats the pain, and imagery or breathing reduces anxiety and may reduce opioid use. The nurse reassesses pain and anxiety after both."
+            },
+            {
+              "id": "B",
+              "text": "Teach guided imagery instead of giving the analgesic",
+              "correct": false,
+              "rationale": "Near miss concept Using imagery instead of the analgesic is alternative care, which undertreats pain."
+            },
+            {
+              "id": "C",
+              "text": "Hold the analgesic until the patient tries meditation",
+              "correct": false,
+              "rationale": "Near miss concept Withholding ordered analgesia is unsafe."
+            },
+            {
+              "id": "D",
+              "text": "Tell the patient that anxiety after surgery is normal and will pass on its own soon",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Reassurance does not treat pain or anxiety."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Complementary means added, not instead.",
+          "strategy": "Keep the prescribed treatment and add the therapy."
+        },
+        {
+          "id": "cai-x09",
+          "topic": "Stress and relaxation response",
+          "stem": "A patient with advanced heart failure is exhausted and anxious and asks for help relaxing. Which technique should the nurse offer?",
+          "objective": "Stress and relaxation response",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Passive relaxation with slow breathing",
+              "correct": true,
+              "rationale": "Patients with low energy reserves do better with passive relaxation or guided imagery, which need no muscle contraction."
+            },
+            {
+              "id": "B",
+              "text": "Active progressive muscle relaxation",
+              "correct": false,
+              "rationale": "Near miss concept Tensing muscles uses energy this patient lacks."
+            },
+            {
+              "id": "C",
+              "text": "A vigorous yoga session",
+              "correct": false,
+              "rationale": "Near miss concept Too much exertion for advanced disease."
+            },
+            {
+              "id": "D",
+              "text": "A brisk walk around the unit to release tension",
+              "correct": false,
+              "rationale": "Near miss concept Increases oxygen demand."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Low energy: passive relaxation.",
+          "strategy": "Match the effort to the energy."
+        },
+        {
+          "id": "cai-x10",
+          "topic": "Stress and relaxation response",
+          "stem": "A patient practicing progressive relaxation for several weeks reports new chest tightness during sessions. What should the nurse do?",
+          "objective": "Stress and relaxation response",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Fully assess the new symptom and notify the provider",
+              "correct": true,
+              "rationale": "Early in training, patients may notice tension more. New or worsening symptoms may signal disease progression or a new illness, so the nurse assesses completely and notifies the provider."
+            },
+            {
+              "id": "B",
+              "text": "Tell the patient increased awareness of tension is expected",
+              "correct": false,
+              "rationale": "Expected finding offered as a problem Increased tension awareness is expected early, but a new symptom is not."
+            },
+            {
+              "id": "C",
+              "text": "Have the patient practice twice as long",
+              "correct": false,
+              "rationale": "Near miss concept More practice ignores a possible new problem."
+            },
+            {
+              "id": "D",
+              "text": "Switch to guided imagery and continue",
+              "correct": false,
+              "rationale": "Correct but premature Changing technique before assessing misses the cause."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "New symptom during relaxation: assess and report.",
+          "strategy": "Separate the expected from the new."
+        },
+        {
+          "id": "cai-x11",
+          "topic": "Mind body techniques",
+          "stem": "A patient with hypertension has meditated daily for three months. Blood pressure readings are now 98/60 and the patient feels lightheaded on standing. What should the nurse do?",
+          "objective": "Mind body techniques",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tell the patient to skip the antihypertensive dose until the readings return to normal",
+              "correct": false,
+              "rationale": "Outside the nurse's scope Only the provider changes the medication."
+            },
+            {
+              "id": "B",
+              "text": "Document the improved readings as a success",
+              "correct": false,
+              "rationale": "Documenting instead of acting Documenting does not address symptomatic low blood pressure."
+            },
+            {
+              "id": "C",
+              "text": "Report the readings to the provider for a dose review",
+              "correct": true,
+              "rationale": "Prolonged meditation can reduce the need for antihypertensive medication. Low readings with lightheadedness mean the provider needs to review the dose. The nurse also teaches fall safety when standing."
+            },
+            {
+              "id": "D",
+              "text": "Tell the patient to stop meditating",
+              "correct": false,
+              "rationale": "Near miss concept Meditation is helping; the medication may now be too strong."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Therapy working plus low blood pressure: provider adjusts the dose.",
+          "strategy": "Report, do not stop the therapy or the drug."
+        },
+        {
+          "id": "cai-x12",
+          "topic": "Mind body techniques",
+          "stem": "A patient with a history of physical abuse is anxious before a procedure. Which complementary therapy is the best choice?",
+          "objective": "Mind body techniques",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Massage of the shoulders",
+              "correct": false,
+              "rationale": "Near miss concept Hands on therapy may trigger distress."
+            },
+            {
+              "id": "B",
+              "text": "Holding the patient's hand without asking",
+              "correct": false,
+              "rationale": "Near miss concept Touch without permission is never appropriate."
+            },
+            {
+              "id": "C",
+              "text": "Guided imagery with slow breathing",
+              "correct": true,
+              "rationale": "Patients with trauma may misinterpret touch and feel threatened. Imagery and breathing offer relaxation without touch. Assessing for trauma comes before choosing a touch therapy."
+            },
+            {
+              "id": "D",
+              "text": "Therapeutic touch",
+              "correct": false,
+              "rationale": "Near miss concept Touch therapies may feel threatening after abuse."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Trauma history: choose a no touch therapy.",
+          "strategy": "Ask which option avoids touch."
+        },
+        {
+          "id": "cai-x13",
+          "topic": "Traditional and energy therapies",
+          "stem": "A patient taking apixaban asks whether acupuncture could help chronic neck pain. What is the nurse's best response?",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"You can stop the apixaban for a few days before each session.\"",
+              "correct": false,
+              "rationale": "Outside the nurse's scope Stopping an anticoagulant is a provider decision."
+            },
+            {
+              "id": "B",
+              "text": "\"Acupuncture has no evidence for pain relief.\"",
+              "correct": false,
+              "rationale": "Near miss concept There is evidence for neck and back pain."
+            },
+            {
+              "id": "C",
+              "text": "\"It may help, but apixaban raises bleeding risk. Let's involve your provider.\"",
+              "correct": true,
+              "rationale": "Acupuncture is effective for many types of pain, but anticoagulants raise bleeding risk at the needle sites. The nurse supports the choice, involves the provider and teaches the patient to disclose all medications to the practitioner."
+            },
+            {
+              "id": "D",
+              "text": "\"Acupuncture is never safe for anyone with neck pain.\"",
+              "correct": false,
+              "rationale": "Absolute language Absolute and inaccurate."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Needles plus anticoagulant: involve the provider.",
+          "strategy": "Choose accurate, supportive and collaborative."
+        },
+        {
+          "id": "cai-x14",
+          "topic": "Traditional and energy therapies",
+          "stem": "A patient from a Chinese cultural background uses herbal teas from a traditional practitioner along with prescribed digoxin. What should the nurse do?",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tell the patient to stop taking the digoxin while using the traditional herbal teas",
+              "correct": false,
+              "rationale": "Outside the nurse's scope The nurse does not stop prescribed drugs."
+            },
+            {
+              "id": "B",
+              "text": "Ask about every tea and remedy and share the list with the provider",
+              "correct": true,
+              "rationale": "Many Chinese herbs interact with cardiovascular drugs. Patients often think of teas and powders as food, not medicine. The nurse asks about the full range of therapies respectfully and shares them with the provider."
+            },
+            {
+              "id": "C",
+              "text": "Tell the patient to stop the teas because they are unregulated",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Dismissing the practice damages trust; the provider reviews interactions."
+            },
+            {
+              "id": "D",
+              "text": "Ignore the teas because they are not medications",
+              "correct": false,
+              "rationale": "Near miss concept Patients may not see teas as medicine, but they can interact."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Ask about teas and powders too.",
+          "strategy": "Respect the culture and check the interactions."
+        },
+        {
+          "id": "cai-x15",
+          "topic": "Nursing process and teaching",
+          "stem": "A patient with new right lower abdominal pain, nausea and vomiting says, \"I'm going to try herbal tea and meditation before seeing a doctor.\" What should the nurse do?",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Suggest peppermint tea for the nausea",
+              "correct": false,
+              "rationale": "Correct action, wrong question Treating a symptom ignores the possible cause."
+            },
+            {
+              "id": "B",
+              "text": "Teach progressive relaxation for the pain",
+              "correct": false,
+              "rationale": "Correct action, wrong question Relaxation does not treat appendicitis."
+            },
+            {
+              "id": "C",
+              "text": "Urge prompt provider evaluation, since this may be appendicitis",
+              "correct": true,
+              "rationale": "Nurses advise patients when to seek conventional care. Acute right lower abdominal pain with nausea and vomiting may be appendicitis. A diagnosed chronic problem such as irritable bowel syndrome is where relaxation and herbs may help."
+            },
+            {
+              "id": "D",
+              "text": "Support the plan because complementary therapy is usually safer than surgery or medication",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Supporting delay could miss a surgical emergency."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Acute new symptoms: conventional care first.",
+          "strategy": "Separate acute from chronic."
+        },
+        {
+          "id": "cai-x16",
+          "topic": "Nursing process and teaching",
+          "stem": "A patient had a first chiropractic treatment for chronic low back pain and is going home. Classify each teaching point.",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "matrix",
+          "columns": [
+            "Indicated",
+            "Contraindicated",
+            "Nonessential"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "\"Call the office if you have tingling or numbness in your hands or legs.\"",
+              "answer": "Indicated",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "\"If the pain returns today, place a 3 pound weight on your lower back.\"",
+              "answer": "Contraindicated",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "\"Plan to nap for 40 minutes when you get home.\"",
+              "answer": "Nonessential",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "\"Keep track of how often you need pain medication and bring it to the next visit.\"",
+              "answer": "Indicated",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Indicated",
+            "r2": "Contraindicated",
+            "r3": "Nonessential",
+            "r4": "Indicated"
+          },
+          "takeaway": "Numbness or tingling may signal nerve injury and must be reported. Weight on the back could cause harm. A nap makes no difference. Some patients need less pain medication after treatment, so tracking use helps the provider adjust doses. Report nerve symptoms; track medication need.",
+          "strategy": "Ask whether each point protects, harms or does nothing."
+        },
+        {
+          "id": "cai-x17",
+          "topic": "Nursing process and teaching",
+          "stem": "The nurse taught a patient creative visualization. Which statement shows the teaching was effective?",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"I'll picture the worst outcome so I am prepared.\"",
+              "correct": false,
+              "rationale": "Near miss concept Negative images undo the purpose."
+            },
+            {
+              "id": "B",
+              "text": "\"I only need to try it once to see if it works.\"",
+              "correct": false,
+              "rationale": "Near miss concept Visualization requires frequent practice."
+            },
+            {
+              "id": "C",
+              "text": "\"I should use it only when my pain is severe.\"",
+              "correct": false,
+              "rationale": "Near miss concept It is practiced throughout the day, especially when relaxed."
+            },
+            {
+              "id": "D",
+              "text": "\"I'll picture my garden clearly, often, especially before bed.\"",
+              "correct": true,
+              "rationale": "Creative visualization uses a clear, pleasing image held in the present tense and practiced often, especially before bedtime or on waking, with encouraging statements. Teach back confirms understanding."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Clear, pleasant, present tense, practiced often.",
+          "strategy": "Pick the statement with frequent positive practice."
+        },
+        {
+          "id": "cai-x18",
+          "topic": "Nursing process and teaching",
+          "stem": "An older adult with a history of falls asks about an exercise to improve balance. Which recommendation is best?",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "A high impact aerobics class",
+              "correct": false,
+              "rationale": "Near miss concept High impact exercise increases fall risk."
+            },
+            {
+              "id": "B",
+              "text": "A group tai chi class",
+              "correct": true,
+              "rationale": "Tai chi improves balance and reduces falls and fear of falling in older adults. Pilates, low impact and core focused, also improves balance and function."
+            },
+            {
+              "id": "C",
+              "text": "Magnet therapy bracelets",
+              "correct": false,
+              "rationale": "Near miss concept Magnets do not improve balance."
+            },
+            {
+              "id": "D",
+              "text": "Cupping therapy",
+              "correct": false,
+              "rationale": "Near miss concept Cupping does not improve balance."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Falls: tai chi.",
+          "strategy": "Pick the low impact balance option."
+        },
+        {
+          "id": "cai-x19",
+          "topic": "Nursing process and teaching",
+          "stem": "A patient says, \"I've decided to stop chemotherapy and use only a macrobiotic diet and herbs.\" What is the nurse's best response?",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Tell me more about what led you to this decision.\"",
+              "correct": true,
+              "rationale": "Using therapies in place of conventional care is alternative. The nurse explores the patient's reasons and goals without judgment, provides accurate information so the decision is informed and involves the provider. The patient has the right to decide."
+            },
+            {
+              "id": "B",
+              "text": "\"That is a dangerous choice and you need to reconsider.\"",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Judgment closes the conversation."
+            },
+            {
+              "id": "C",
+              "text": "\"Natural treatments work just as well, so that is fine.\"",
+              "correct": false,
+              "rationale": "Kind but non therapeutic False reassurance is inaccurate."
+            },
+            {
+              "id": "D",
+              "text": "\"I will tell your oncologist you are refusing care.\"",
+              "correct": false,
+              "rationale": "Correct but premature The provider needs to know, but first understand the patient's reasons."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Explore first; inform, do not judge.",
+          "strategy": "Pick the open, therapeutic response."
+        },
+        {
+          "id": "cai-x20",
+          "topic": "Nursing process and teaching",
+          "stem": "A nurse gave guided imagery to a patient for procedure anxiety. Which finding best shows the therapy was effective?",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Heart rate fell from 104 to 82 and the patient reports feeling calmer",
+              "correct": true,
+              "rationale": "Evaluation looks for the relaxation response: slower heart rate and respirations, lower blood pressure and the patient's report of calm."
+            },
+            {
+              "id": "B",
+              "text": "The nurse finished the imagery script",
+              "correct": false,
+              "rationale": "Task completion as outcome Finishing the script is a task, not an outcome."
+            },
+            {
+              "id": "C",
+              "text": "The patient's family thanked the nurse",
+              "correct": false,
+              "rationale": "Accurate but inert data Gratitude does not measure the patient's response."
+            },
+            {
+              "id": "D",
+              "text": "The patient fell asleep and could not be awakened easily before the procedure began",
+              "correct": false,
+              "rationale": "Accurate but inert data Sleep may or may not reflect reduced anxiety."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Evaluate the patient's response.",
+          "strategy": "Pick measurable change in the patient."
+        }
+      ]
+    },
+    {
       "id": 1033,
       "chapterNumber": 33,
       "source": "Iggy",
