@@ -382,7 +382,7 @@
     {
      "id": "ch1-q4",
      "type": "multiple_choice",
-     "stem": "A nurse finds a systematic review supporting mobilization within 12 hours of abdominal surgery. The patient, six hours post-operative, reports a fall at home last month, is frightened of falling again, and declines to get up. Which action best reflects evidence-based practice?",
+     "stem": "A nurse finds a systematic review supporting mobilization within 12 hours of abdominal surgery. Her patient, six hours post-operative, reports a fall at home last month, is frightened of falling again, and declines to get up. Which action best reflects evidence-based practice?",
      "options": [
       {
        "id": "A",
@@ -835,68 +835,10 @@
      "id": "ch2-x1",
      "type": "cloze",
      "stem": "Complete each sentence by selecting from the choices below.",
-     "sentence": "A 34-year-old with no chronic conditions sees a family nurse practitioner for a sore throat and to discuss contraception. This patient is receiving [[1]].\n\nA 58-year-old is admitted directly to intensive care after a myocardial infarction, needing continuous monitoring and intravenous medication. This patient is receiving [[2]].\n\nThree weeks after a stroke, a patient enters a facility for daily physical and occupational therapy with the goal of going home. This is [[3]].\n\nAn 84-year-old with advanced dementia lives in a residential facility receiving help with all activities of daily living. The condition is not expected to improve. This is [[4]].",
+     "sentence": "Three weeks after a stroke, a patient enters a facility for daily physical and occupational therapy with the goal of going home. This is [[1]].\n\nA 34-year-old with no chronic conditions sees a family nurse practitioner for a sore throat and to discuss contraception. This patient is receiving [[2]].\n\nAn 84-year-old with advanced dementia lives in a residential facility receiving help with all activities of daily living. The condition is not expected to improve. This is [[3]].\n\nA 58-year-old is admitted directly to intensive care after a myocardial infarction, needing continuous monitoring and intravenous medication. This patient is receiving [[4]].",
      "blanks": [
       {
        "id": 1,
-       "options": [
-        {
-         "id": "A",
-         "text": "secondary care",
-         "correct": false,
-         "rationale": "Secondary care is hospital treatment for an acute episode, not a clinic visit for a sore throat."
-        },
-        {
-         "id": "B",
-         "text": "tertiary care",
-         "correct": false,
-         "rationale": "Tertiary care is the highly specialized end of treatment, for complex conditions. A sore throat is not that."
-        },
-        {
-         "id": "C",
-         "text": "preventive care",
-         "correct": false,
-         "rationale": "Preventive care reduces risk before disease appears. She arrived with a symptom, so something is already wrong."
-        },
-        {
-         "id": "D",
-         "text": "primary care",
-         "correct": true,
-         "rationale": "This is first contact for a routine problem, with no specialist involved and a relationship that continues. That is primary care."
-        }
-       ]
-      },
-      {
-       "id": 2,
-       "options": [
-        {
-         "id": "A",
-         "text": "restorative care",
-         "correct": false,
-         "rationale": "Restorative care recovers function that has been lost. He is still in the middle of the acute event."
-        },
-        {
-         "id": "B",
-         "text": "primary care",
-         "correct": false,
-         "rationale": "Primary care is first contact and continuity, which an intensive care admission is not."
-        },
-        {
-         "id": "C",
-         "text": "secondary care",
-         "correct": false,
-         "rationale": "This is the near miss. Secondary is admission for an acute episode, and intensive care is the specialized level above it."
-        },
-        {
-         "id": "D",
-         "text": "tertiary care",
-         "correct": true,
-         "rationale": "Intensive care is the specialized end of hospital treatment, and that is what tertiary names."
-        }
-       ]
-      },
-      {
-       "id": 3,
        "options": [
         {
          "id": "A",
@@ -925,7 +867,36 @@
        ]
       },
       {
-       "id": 4,
+       "id": 2,
+       "options": [
+        {
+         "id": "A",
+         "text": "secondary care",
+         "correct": false,
+         "rationale": "Secondary care is hospital treatment for an acute episode, not a clinic visit for a sore throat."
+        },
+        {
+         "id": "B",
+         "text": "tertiary care",
+         "correct": false,
+         "rationale": "Tertiary care is the highly specialized end of treatment, for complex conditions. A sore throat is not that."
+        },
+        {
+         "id": "C",
+         "text": "preventive care",
+         "correct": false,
+         "rationale": "Preventive care reduces risk before disease appears. She arrived with a symptom, so something is already wrong."
+        },
+        {
+         "id": "D",
+         "text": "primary care",
+         "correct": true,
+         "rationale": "This is first contact for a routine problem, with no specialist involved and a relationship that continues. That is primary care."
+        }
+       ]
+      },
+      {
+       "id": 3,
        "options": [
         {
          "id": "A",
@@ -952,13 +923,42 @@
          "rationale": "No acute episode is being treated, so secondary does not fit."
         }
        ]
+      },
+      {
+       "id": 4,
+       "options": [
+        {
+         "id": "A",
+         "text": "restorative care",
+         "correct": false,
+         "rationale": "Restorative care recovers function that has been lost. He is still in the middle of the acute event."
+        },
+        {
+         "id": "B",
+         "text": "primary care",
+         "correct": false,
+         "rationale": "Primary care is first contact and continuity, which an intensive care admission is not."
+        },
+        {
+         "id": "C",
+         "text": "secondary care",
+         "correct": false,
+         "rationale": "This is the near miss. Secondary is admission for an acute episode, and intensive care is the specialized level above it."
+        },
+        {
+         "id": "D",
+         "text": "tertiary care",
+         "correct": true,
+         "rationale": "Intensive care is the specialized end of hospital treatment, and that is what tertiary names."
+        }
+       ]
       }
      ],
      "answer": {
-      "1": "D",
+      "1": "B",
       "2": "D",
-      "3": "B",
-      "4": "A"
+      "3": "A",
+      "4": "D"
      },
      "scoring": "0/1",
      "takeaway": "Six levels: preventive, primary, secondary, tertiary, restorative, continuing. Restorative and continuing are separated by the trajectory, not the setting.",
@@ -987,7 +987,7 @@
     {
      "id": "ch2-q1",
      "type": "multiple_choice",
-     "stem": "A patient with type 2 diabetes has not filled the insulin prescription for two months, and the A1C has risen from 7.4% to 10.2%. The patient works two jobs, has no car, and the pharmacy is a 40-minute bus ride each way with one change. Which nursing action is most appropriate?",
+     "stem": "A patient with type 2 diabetes has not filled his insulin prescription for two months, and his A1C has risen from 7.4% to 10.2%. He works two jobs, has no car, and the pharmacy is a 40-minute bus ride each way with one change. Which nursing action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -1041,7 +1041,7 @@
     {
      "id": "ch2-q2",
      "type": "sata",
-     "stem": "A 68-year-old is discharged after abdominal surgery needing a daily dressing change for 14 days. The wound is 6 cm with moderate serous drainage. The patient lives alone, has never changed a dressing, and an adult child works weekdays. Which actions belong in the discharge plan? Select all that apply.",
+     "stem": "A 68-year-old man is discharged after abdominal surgery needing a daily dressing change for 14 days. The wound is 6 cm with moderate serous drainage. He lives alone, has never changed a dressing, and his daughter works weekdays. Which actions belong in the discharge plan? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -1620,7 +1620,7 @@
     {
      "id": "ch1-g2",
      "type": "multiple_choice",
-     "stem": "A nurse wants two things: the state's nurse-to-patient staffing legislation amended, and a credential in the nurse's clinical specialty. A colleague says the board of nursing handles both. Which pairing is correct?",
+     "stem": "A nurse wants two things: the state's nurse-to-patient staffing legislation amended, and a credential in her own clinical specialty. A colleague says the board of nursing handles both. Which pairing is correct?",
      "options": [
       {
        "id": "A",
@@ -1674,7 +1674,7 @@
     {
      "id": "ch1-g3",
      "type": "multiple_choice",
-     "stem": "A patient with a blood pressure of 168/98 mm Hg has missed three clinic appointments. The patient has active insurance, a current prescription on file, and lives four blocks from the clinic. The patient holds two hourly jobs with no paid leave, and the clinic closes at 1600. Which barrier to access does this describe?",
+     "stem": "A patient with a blood pressure of 168/98 mm Hg has missed three clinic appointments. She has active insurance, a current prescription on file, and lives four blocks from the clinic. She holds two hourly jobs with no paid leave, and the clinic closes at 1600. Which barrier to access does this describe?",
      "options": [
       {
        "id": "A",
@@ -1782,7 +1782,7 @@
     {
      "id": "ch1-g5",
      "type": "multiple_choice",
-     "stem": "A nurse with five years on a medical unit enters a room, says the patient does not look right before any vital signs are taken, and asks the provider to assess. Vitals taken minutes later are normal. Six hours later the patient meets sepsis criteria. Which stage of Benner's model does this illustrate?",
+     "stem": "A nurse with five years on a medical unit enters a room, says the patient does not look right before any vital signs are taken, and asks the provider to assess him. Vitals taken minutes later are normal. Six hours later he meets sepsis criteria. Which stage of Benner's model does this illustrate?",
      "options": [
       {
        "id": "A",
@@ -1890,7 +1890,7 @@
     {
      "id": "ch1-p2",
      "type": "multiple_choice",
-     "stem": "A patient is leaving with a new anticoagulant. The nurse notices the printed discharge summary lists 5 mg daily while the final prescriber order reads 2.5 mg daily. Transport is waiting. Which action takes priority?",
+     "stem": "A patient is leaving with a new anticoagulant. The nurse notices his printed discharge summary lists 5 mg daily while the final prescriber order reads 2.5 mg daily. Transport is waiting. Which action takes priority?",
      "options": [
       {
        "id": "A",
@@ -1972,7 +1972,7 @@
     {
      "id": "ch4-q1",
      "type": "multiple_choice",
-     "stem": "A 91-year-old admitted two days ago for a urinary tract infection is oriented in the morning and cannot say where the unit is by evening. An adult child reports that the patient manages the household finances at home. Which finding most strongly supports delirium?",
+     "stem": "A 91-year-old woman admitted two days ago for a urinary tract infection is oriented in the morning and cannot say where she is by evening. Her daughter reports that she manages the household finances at home. Which finding most strongly supports delirium?",
      "options": [
       {
        "id": "A",
@@ -2105,7 +2105,7 @@
     {
      "id": "ch4-q2",
      "type": "sata",
-     "stem": "An 82-year-old is admitted after a fall at home. The nurse reviews the home medication list: lisinopril, metformin, furosemide, zolpidem at night, ibuprofen most days for knee pain, a herbal sleep supplement, and a multivitamin. Which concerns should the nurse identify? Select all that apply.",
+     "stem": "An 82-year-old woman is admitted after a fall at home. The nurse reviews her home medication list: lisinopril, metformin, furosemide, zolpidem at night, ibuprofen most days for knee pain, a herbal sleep supplement, and a multivitamin. Which concerns should the nurse identify? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -2176,7 +2176,7 @@
     {
      "id": "ch4-q3",
      "type": "multiple_choice",
-     "stem": "An 86-year-old moved into an adult child's home three weeks ago after living in the same house for 40 years. The patient is tearful, has stopped a daily morning walk, and is disoriented to place in the evenings. Cognition was intact at the last clinic visit. There is no fever, the medications are unchanged, and attention is steady through the day. Which nursing action is most appropriate?",
+     "stem": "An 86-year-old woman moved into her daughter's home three weeks ago after living in the same house for 40 years. She is tearful, has stopped her daily morning walk, and is disoriented to place in the evenings. Her cognition was intact at her last clinic visit. She has no fever, her medications are unchanged, and her attention is steady through the day. Which nursing action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -2230,7 +2230,7 @@
     {
      "id": "ch4-q4",
      "type": "multiple_choice",
-     "stem": "A 79-year-old has lost 6 kg over four months. The nurse asks what a typical day's eating looks like. Which response reflects the best nursing approach?",
+     "stem": "A 79-year-old woman has lost 6 kg over four months. The nurse asks her to describe what a typical day's eating looks like. Which response reflects the best nursing approach?",
      "options": [
       {
        "id": "A",
@@ -2378,7 +2378,7 @@
     {
      "id": "ch4-q5",
      "type": "multiple_choice",
-     "stem": "A nurse caring for a 77-year-old admitted for pneumonia finds the patient disoriented on day three, having been oriented on admission. Oxygen saturation is 88% on room air and temperature is 38.4 C. Which action does the nurse take first?",
+     "stem": "A nurse caring for a 77-year-old woman admitted for pneumonia finds her disoriented on day three, having been oriented on admission. Her oxygen saturation is 88% on room air and her temperature is 38.4 C. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -2432,7 +2432,7 @@
     {
      "id": "ch4-q6",
      "type": "sata",
-     "stem": "A nurse assesses fall risk for an 81-year-old admitted after tripping at home. The patient takes seven medications including a nightly sedative, has cataracts, and fell once last year, and an adult child reports very little food and few fluids. Which findings increase the risk of falling? Select all that apply.",
+     "stem": "A nurse assesses fall risk for an 81-year-old woman admitted after tripping at home. She takes seven medications including a nightly sedative, has cataracts, and fell once last year, and her daughter reports she eats very little and drinks few fluids. Which findings increase her risk of falling? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -2503,7 +2503,7 @@
     {
      "id": "ch4-q7",
      "type": "multiple_choice",
-     "stem": "A nurse admits an 88-year-old for an elective hip replacement. An adult child reports that the patient has become much more forgetful over the past three years and now needs prompting to dress. Attention is steady throughout the interview. Which condition does this pattern suggest?",
+     "stem": "A nurse admits an 88-year-old woman for an elective hip replacement. Her daughter reports that she has become much more forgetful over the past three years and now needs prompting to dress. Her attention is steady throughout the interview. Which condition does this pattern suggest?",
      "options": [
       {
        "id": "A",
@@ -2557,7 +2557,7 @@
     {
      "id": "ch4-q8",
      "type": "multiple_choice",
-     "stem": "A 73-year-old tells the nurse about three glasses of wine most evenings, the same as for the past thirty years, and adds that it now feels far stronger than it used to. Which response is accurate?",
+     "stem": "A 73-year-old woman tells the nurse she has three glasses of wine most evenings, the same as for the past thirty years, and adds that it now feels far stronger than it used to. Which response is accurate?",
      "options": [
       {
        "id": "A",
@@ -2764,7 +2764,7 @@
     {
      "id": "ch4-q9",
      "type": "multiple_choice",
-     "stem": "A 90-year-old who walked independently on admission has needed two people to transfer since day four. The patient is medically improving and the infection has resolved. Which conclusion does the nurse draw?",
+     "stem": "A 90-year-old woman who walked independently on admission has needed two people to transfer since day four. She is medically improving and her infection has resolved. Which conclusion does the nurse draw?",
      "options": [
       {
        "id": "A",
@@ -2818,7 +2818,7 @@
     {
      "id": "ch4-q10",
      "type": "sata",
-     "stem": "A nurse performs medication reconciliation for an 80-year-old on admission. Which errors is this process designed to prevent? Select all that apply.",
+     "stem": "A nurse performs medication reconciliation for an 80-year-old woman on admission. Which errors is this process designed to prevent? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -2882,7 +2882,7 @@
     {
      "id": "ch4-q11",
      "type": "multiple_choice",
-     "stem": "A nurse plans care for a 76-year-old admitted with a hip fracture. Which approach best reflects patient-centered care for an older adult?",
+     "stem": "A nurse plans care for a 76-year-old woman admitted with a hip fracture. Which approach best reflects patient-centered care for an older adult?",
      "options": [
       {
        "id": "A",
@@ -2936,7 +2936,7 @@
     {
      "id": "ch4-q12",
      "type": "multiple_choice",
-     "stem": "An 85-year-old attends clinic with fatigue, reduced appetite, and new weakness. Laboratory results are unremarkable and no single diagnosis accounts for the findings. The patient takes six medications. Which conclusion is most appropriate?",
+     "stem": "An 85-year-old man attends clinic with fatigue, reduced appetite, and new weakness. His laboratory results are unremarkable and no single diagnosis accounts for the findings. He takes six medications. Which conclusion is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -3044,7 +3044,7 @@
     {
      "id": "ch4-q13",
      "type": "multiple_choice",
-     "stem": "A nurse works with an 82-year-old who wants to remain at home. An adult child is concerned about safety and is pushing for assisted living. The patient is oriented, manages the medications independently, and has had no falls. Which action best supports aging in place?",
+     "stem": "A nurse works with an 82-year-old woman who wants to remain at home. Her daughter is concerned about safety and is pushing for assisted living. The patient is oriented, manages her medications independently, and has had no falls. Which action best supports aging in place?",
      "options": [
       {
        "id": "A",
@@ -3232,7 +3232,7 @@
     {
      "id": "ch4-q14",
      "type": "multiple_choice",
-     "stem": "A nurse reviews a 75-year-old's chart before an annual visit. Which piece of information tells the nurse most about the nursing needs?",
+     "stem": "A nurse reviews a 75-year-old woman's chart before her annual visit. Which piece of information tells the nurse most about her nursing needs?",
      "options": [
       {
        "id": "A",
@@ -3340,7 +3340,7 @@
     {
      "id": "ch14-q1",
      "type": "multiple_choice",
-     "stem": "A nurse tells a colleague there is little point teaching a 79-year-old to use a new glucose meter because people that age cannot learn new technology. Which does this statement represent?",
+     "stem": "A nurse tells a colleague there is little point teaching a 79-year-old woman to use a new glucose meter, because people that age cannot learn new technology. Which does this statement represent?",
      "options": [
       {
        "id": "A",
@@ -3527,7 +3527,7 @@
     {
      "id": "ch14-q3",
      "type": "sata",
-     "stem": "A nurse works with a 76-year-old who retired last year, whose spouse died six months ago, and who has moved into a smaller apartment. Which developmental tasks of older adulthood is the patient facing? Select all that apply.",
+     "stem": "A nurse works with a 76-year-old man who retired last year, whose wife died six months ago, and who has moved into a smaller apartment. Which developmental tasks of older adulthood is he facing? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -3605,7 +3605,7 @@
     {
      "id": "ch14-q4",
      "type": "multiple_choice",
-     "stem": "An 84-year-old has become withdrawn, has stopped eating with the other residents, and says nothing is enjoyable any more. Orientation is intact and the changes began gradually over three months. Which assessment tool is most appropriate?",
+     "stem": "An 84-year-old woman has become withdrawn, has stopped eating with the other residents, and says nothing is enjoyable any more. Her orientation is intact and the changes began gradually over three months. Which assessment tool is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -3659,7 +3659,7 @@
     {
      "id": "ch14-q5",
      "type": "multiple_choice",
-     "stem": "A resident with moderate dementia says, I have to go, my mother is waiting for me at home. The resident's mother died thirty years ago. Which response reflects validation therapy?",
+     "stem": "A resident with moderate dementia says, I have to go, my mother is waiting for me at home. Her mother died thirty years ago. Which response reflects validation therapy?",
      "options": [
       {
        "id": "A",
@@ -3878,7 +3878,7 @@
     {
      "id": "ch14-q6",
      "type": "multiple_choice",
-     "stem": "An 81-year-old is admitted for rehabilitation after a hip fracture. The patient managed shopping, banking and medications independently before the fall. Which goal reflects restorative care?",
+     "stem": "An 81-year-old woman is admitted for rehabilitation after a hip fracture. She managed her shopping, banking and medications independently before the fall. Which goal reflects restorative care?",
      "options": [
       {
        "id": "A",
@@ -3932,7 +3932,7 @@
     {
      "id": "ch14-q7",
      "type": "multiple_choice",
-     "stem": "An 84-year-old recovering from pneumonia wants to go home, the daughter wants a facility, and the therapy team recommends two weeks of rehabilitation. Which approach fits the gerontological nurse's role?",
+     "stem": "An 84-year-old woman recovering from pneumonia wants to go home, her daughter wants a facility, and the therapy team recommends two weeks of rehabilitation. Which approach fits the gerontological nurse's role?",
      "options": [
       {
        "id": "A",
@@ -3986,7 +3986,7 @@
     {
      "id": "ch14-q8",
      "type": "sata",
-     "stem": "A social worker and nurse meet with a family reviewing care options for an 83-year-old who can no longer manage alone. Which settings should be discussed? Select all that apply.",
+     "stem": "A social worker and nurse meet with a family reviewing care options for an 83-year-old woman who can no longer manage alone. Which settings should be discussed? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -4064,7 +4064,7 @@
     {
      "id": "ch14-q9",
      "type": "multiple_choice",
-     "stem": "A nurse notes that a 78-year-old's blood pressure drops on standing, and that climbing one flight of stairs causes breathlessness. Which age-related change contributes to these findings?",
+     "stem": "A nurse notes that a 78-year-old woman's blood pressure drops on standing, and that climbing one flight of stairs leaves her breathless. Which age-related change contributes to these findings?",
      "options": [
       {
        "id": "A",
@@ -4271,7 +4271,7 @@
     {
      "id": "ch14-q10",
      "type": "multiple_choice",
-     "stem": "A 77-year-old who managed the household independently until last month now needs help dressing and has stopped cooking. An adult child says this is simply getting older. Which conclusion is most accurate?",
+     "stem": "A 77-year-old woman who managed her household independently until last month now needs help dressing and has stopped cooking. Her daughter says this is simply getting older. Which conclusion is most accurate?",
      "options": [
       {
        "id": "A",
@@ -4379,7 +4379,7 @@
     {
      "id": "ch14-q12",
      "type": "sata",
-     "stem": "A nurse assesses an 81-year-old and identifies what the patient can still do well. Which findings represent strengths to build on rather than problems to solve? Select all that apply.",
+     "stem": "A nurse assesses an 81-year-old woman and identifies what she can still do well. Which findings represent strengths to build on rather than problems to solve? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -4638,7 +4638,7 @@
     {
      "id": "ch14-q13",
      "type": "multiple_choice",
-     "stem": "A 79-year-old tells the nurse that since a spouse died there is rarely anyone to see and no longer any sense of being useful. Which psychosocial change does this describe?",
+     "stem": "A 79-year-old woman tells the nurse that since her husband died there is rarely anyone to see and she no longer feels useful. Which psychosocial change does this describe?",
      "options": [
       {
        "id": "A",
@@ -4692,7 +4692,7 @@
     {
      "id": "ch14-q14",
      "type": "multiple_choice",
-     "stem": "A nurse prepares teaching for an 82-year-old with newly diagnosed heart failure. Which adaptation is most appropriate?",
+     "stem": "A nurse prepares teaching for an 82-year-old woman with newly diagnosed heart failure. Which adaptation is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -4746,7 +4746,7 @@
     {
      "id": "ch4-g1",
      "type": "multiple_choice",
-     "stem": "A clinic adopts a structured fall-prevention algorithm. A 78-year-old reports one fall in the past year without injury and says standing up from a chair feels unsteady. Which action does the algorithm direct next?",
+     "stem": "A clinic adopts a structured fall-prevention algorithm. A 78-year-old man reports one fall in the past year without injury and says standing up from a chair leaves him unsteady. Which action does the algorithm direct next?",
      "options": [
       {
        "id": "A",
@@ -4800,7 +4800,7 @@
     {
      "id": "ch4-g2",
      "type": "multiple_choice",
-     "stem": "An 82-year-old widowed three months ago reports low mood, poor appetite, and trouble concentrating. The nurse selects the Geriatric Depression Scale. Which consideration most supports that choice?",
+     "stem": "An 82-year-old woman widowed three months ago reports low mood, poor appetite, and trouble concentrating. The nurse selects the Geriatric Depression Scale. Which consideration most supports that choice?",
      "options": [
       {
        "id": "A",
@@ -5746,7 +5746,7 @@
     {
      "id": "ch5-q12",
      "type": "multiple_choice",
-     "stem": "A nurse hears a colleague refer to a patient by the wrong pronoun during handover. The patient is not present. Which action is most appropriate?",
+     "stem": "A nurse hears a colleague refer to a patient by the wrong pronoun during handover. He is not present. Which action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -6061,7 +6061,7 @@
     {
      "id": "ch5-q15",
      "type": "multiple_choice",
-     "stem": "A patient tells the nurse a mammogram has been delayed for three years because at the last visit staff repeatedly asked questions about the patient's partner. Which nursing action is most appropriate?",
+     "stem": "A patient tells the nurse she has put off a mammogram for three years, because at her last visit staff repeatedly asked questions about her partner. Which nursing action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -6303,7 +6303,7 @@
     {
      "id": "ch5-g2",
      "type": "multiple_choice",
-     "stem": "An 81-year-old older adult is admitted to a long-term care facility. The record lists the patient's partner of 40 years as a friend. The patient asks the nurse not to mention the relationship to the rest of the staff. Which nursing action best addresses the concern behind that request?",
+     "stem": "An 81-year-old woman is admitted to a long-term care facility. The record lists her partner of 40 years as a friend. She asks the nurse not to mention the relationship to the rest of the staff. Which nursing action best addresses the concern behind that request?",
      "options": [
       {
        "id": "A",
@@ -6494,7 +6494,7 @@
     {
      "id": "ch6-q1",
      "type": "multiple_choice",
-     "stem": "A 58-year-old with chronic obstructive pulmonary disease has stopped attending a choir of twenty years because of breathlessness. The inhalers are managed correctly, and the patient says it no longer feels like being the same person. Which model of health best captures what has been lost?",
+     "stem": "A 58-year-old man with chronic obstructive pulmonary disease has stopped attending the choir he sang with for twenty years, because of breathlessness. He manages his inhalers correctly and says he no longer feels like himself. Which model of health best captures what he has lost?",
      "options": [
       {
        "id": "A",
@@ -6619,7 +6619,7 @@
     {
      "id": "ch6-q3",
      "type": "multiple_choice",
-     "stem": "A 58-year-old develops crushing chest pain while mowing the lawn, sits down, tells a family member it is indigestion, and takes an antacid. Which stage of illness behavior does this represent?",
+     "stem": "A 58-year-old man develops crushing chest pain while mowing the lawn. He sits down, tells his wife it is indigestion, and takes an antacid. Which stage of illness behavior does this represent?",
      "options": [
       {
        "id": "A",
@@ -6728,68 +6728,10 @@
      "id": "ch6-x2",
      "type": "cloze",
      "stem": "Complete each sentence by selecting from the choices below.",
-     "sentence": "A nurse plans care for a community with a high rate of cardiovascular disease.\n\nRunning a school program that teaches children never to start smoking is [[1]].\n\nOffering blood pressure checks at a community event is [[2]].\n\nRunning a cardiac rehabilitation group for people who have had a myocardial infarction is [[3]].\n\nTeaching a patient with diabetes how to inspect the feet is [[4]].",
+     "sentence": "A nurse plans care for a community with a high rate of cardiovascular disease.\n\nRunning a cardiac rehabilitation group for people who have had a myocardial infarction is [[1]].\n\nRunning a school program that teaches children never to start smoking is [[2]].\n\nTeaching a patient with diabetes how to inspect the feet is [[3]].\n\nOffering blood pressure checks at a community event is [[4]].",
      "blanks": [
       {
        "id": 1,
-       "options": [
-        {
-         "id": "A",
-         "text": "secondary prevention",
-         "correct": false,
-         "rationale": "Secondary prevention looks for disease that is already present but has not caused symptoms yet. Nothing has started here."
-        },
-        {
-         "id": "B",
-         "text": "health promotion",
-         "correct": false,
-         "rationale": "The near-miss. Health promotion is broad and aimed at wellbeing; this targets one specific disease, which makes it prevention."
-        },
-        {
-         "id": "C",
-         "text": "tertiary prevention",
-         "correct": false,
-         "rationale": "Tertiary prevention limits complications in someone who already has the disease. These children do not."
-        },
-        {
-         "id": "D",
-         "text": "primary prevention",
-         "correct": true,
-         "rationale": "This acts before any disease exists, in people who are currently well. That is what primary prevention means."
-        }
-       ]
-      },
-      {
-       "id": 2,
-       "options": [
-        {
-         "id": "A",
-         "text": "tertiary prevention",
-         "correct": false,
-         "rationale": "Tertiary prevention manages a disease that has already been diagnosed. Screening happens before any diagnosis exists."
-        },
-        {
-         "id": "B",
-         "text": "secondary prevention",
-         "correct": true,
-         "rationale": "Screening finds disease early, before symptoms bring anyone in. That is secondary prevention, even in people who feel fine."
-        },
-        {
-         "id": "C",
-         "text": "secondary care",
-         "correct": false,
-         "rationale": "A level of the health care system, not a level of prevention. Same word, unrelated systems."
-        },
-        {
-         "id": "D",
-         "text": "primary prevention",
-         "correct": false,
-         "rationale": "Primary prevention acts before the disease occurs. A screening is looking for disease that may already be there."
-        }
-       ]
-      },
-      {
-       "id": 3,
        "options": [
         {
          "id": "A",
@@ -6818,7 +6760,36 @@
        ]
       },
       {
-       "id": 4,
+       "id": 2,
+       "options": [
+        {
+         "id": "A",
+         "text": "secondary prevention",
+         "correct": false,
+         "rationale": "Secondary prevention looks for disease that is already present but has not caused symptoms yet. Nothing has started here."
+        },
+        {
+         "id": "B",
+         "text": "health promotion",
+         "correct": false,
+         "rationale": "The near-miss. Health promotion is broad and aimed at wellbeing; this targets one specific disease, which makes it prevention."
+        },
+        {
+         "id": "C",
+         "text": "tertiary prevention",
+         "correct": false,
+         "rationale": "Tertiary prevention limits complications in someone who already has the disease. These children do not."
+        },
+        {
+         "id": "D",
+         "text": "primary prevention",
+         "correct": true,
+         "rationale": "This acts before any disease exists, in people who are currently well. That is what primary prevention means."
+        }
+       ]
+      },
+      {
+       "id": 3,
        "options": [
         {
          "id": "A",
@@ -6845,13 +6816,42 @@
          "rationale": "He already has diabetes, and checking his feet exists to stop an ulcer becoming an amputation. That is tertiary prevention."
         }
        ]
+      },
+      {
+       "id": 4,
+       "options": [
+        {
+         "id": "A",
+         "text": "tertiary prevention",
+         "correct": false,
+         "rationale": "Tertiary prevention manages a disease that has already been diagnosed. Screening happens before any diagnosis exists."
+        },
+        {
+         "id": "B",
+         "text": "secondary prevention",
+         "correct": true,
+         "rationale": "Screening finds disease early, before symptoms bring anyone in. That is secondary prevention, even in people who feel fine."
+        },
+        {
+         "id": "C",
+         "text": "secondary care",
+         "correct": false,
+         "rationale": "A level of the health care system, not a level of prevention. Same word, unrelated systems."
+        },
+        {
+         "id": "D",
+         "text": "primary prevention",
+         "correct": false,
+         "rationale": "Primary prevention acts before the disease occurs. A screening is looking for disease that may already be there."
+        }
+       ]
       }
      ],
      "answer": {
-      "1": "D",
-      "2": "B",
-      "3": "A",
-      "4": "D"
+      "1": "A",
+      "2": "D",
+      "3": "D",
+      "4": "B"
      },
      "scoring": "0/1",
      "takeaway": "Primary prevents disease occurring. Secondary detects it early. Tertiary limits complications once it exists.",
@@ -6880,7 +6880,7 @@
     {
      "id": "ch6-q5",
      "type": "multiple_choice",
-     "stem": "A 47-year-old smoker whose parent died of lung cancer at 60 tells the nurse, I know smoking is dangerous, but it is not going to happen to me. Which Health Belief Model construct does this reflect?",
+     "stem": "A 47-year-old smoker whose father died of lung cancer at 60 tells the nurse, I know smoking is dangerous, but it is not going to happen to me. Which Health Belief Model construct does this reflect?",
      "options": [
       {
        "id": "A",
@@ -6934,7 +6934,7 @@
     {
      "id": "ch6-q6",
      "type": "sata",
-     "stem": "A nurse works with a patient who wants to lose weight and has not managed to change anything in six months. Which barriers to behavior change should the nurse assess? Select all that apply.",
+     "stem": "A nurse works with a patient who wants to lose weight and has not managed to change anything in six months. Which barriers should the nurse assess in him? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -7059,7 +7059,7 @@
     {
      "id": "ch6-q8",
      "type": "sata",
-     "stem": "A nurse reviews a 52-year-old's risk factors: 20 cigarettes a day, heavy weekend drinking, a sedentary routine, a body mass index of 34, a parent who died of myocardial infarction at 55, and an ethnicity carrying raised cardiovascular risk. Which of these risk factors are modifiable? Select all that apply.",
+     "stem": "A nurse reviews a 52-year-old man's risk factors: 20 cigarettes a day, heavy weekend drinking, a sedentary routine, a body mass index of 34, a father who died of myocardial infarction at 55, and an ethnicity carrying raised cardiovascular risk. Which of his risk factors are modifiable? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -7184,7 +7184,7 @@
     {
      "id": "ch6-q10",
      "type": "multiple_choice",
-     "stem": "A 70-year-old with well-controlled hypertension and osteoarthritis gardens daily, volunteers twice a week, and describes feeling well. A new nurse says the patient cannot be called healthy with two chronic diagnoses. Which definition of health contradicts that view?",
+     "stem": "A 70-year-old woman with well-controlled hypertension and osteoarthritis gardens daily, volunteers twice a week, and describes feeling well. A new nurse says she cannot be called healthy with two chronic diagnoses. Which definition of health contradicts that view?",
      "options": [
       {
        "id": "A",
@@ -7332,7 +7332,7 @@
     {
      "id": "ch6-q11",
      "type": "multiple_choice",
-     "stem": "A nurse prepares discharge teaching for a patient newly diagnosed with heart failure. Which content is the priority before discharge?",
+     "stem": "A nurse prepares discharge teaching for a patient newly diagnosed with heart failure. Which content is the priority before he goes home?",
      "options": [
       {
        "id": "A",
@@ -7386,7 +7386,7 @@
     {
      "id": "ch6-q12",
      "type": "multiple_choice",
-     "stem": "A patient with a new diagnosis of type 2 diabetes attends a follow-up, having learned to adjust the diet, check glucose, and plan around work shifts, and says it has become routine. Which model of health evaluates this patient most favorably?",
+     "stem": "A patient with a new diagnosis of type 2 diabetes attends a follow-up. He has learned to adjust his meals, check his glucose, and plan around his work shifts, and says it has become routine. Which model of health evaluates him most favorably?",
      "options": [
       {
        "id": "A",
@@ -7736,7 +7736,7 @@
     {
      "id": "ch6-q15",
      "type": "multiple_choice",
-     "stem": "A patient recovering from pneumonia says, I am not sick anymore but I am not back to normal either. The nurse documents a position between illness and wellness. Which model of health does that reflect?",
+     "stem": "A patient recovering from pneumonia says, I am not sick anymore but I am not back to normal either. The nurse documents that she is somewhere between illness and wellness. Which model of health does that reflect?",
      "options": [
       {
        "id": "A",
@@ -7844,7 +7844,7 @@
     {
      "id": "ch6-p1",
      "type": "multiple_choice",
-     "stem": "At a community health fair a 55-year-old has a blood pressure of 168/102 mm Hg on two readings ten minutes apart, smokes 15 cigarettes a day, has a body mass index of 33, and has no primary care provider. Which action takes priority?",
+     "stem": "At a community health fair a 55-year-old man has a blood pressure of 168/102 mm Hg on two readings ten minutes apart. He smokes 15 cigarettes a day, has a body mass index of 33, and has no primary care provider. Which action takes priority?",
      "options": [
       {
        "id": "A",
@@ -7898,7 +7898,7 @@
     {
      "id": "ch6-p2",
      "type": "multiple_choice",
-     "stem": "A 58-year-old arrives at urgent care with 40 minutes of crushing substernal pain, is diaphoretic, says it is indigestion, and asks for an antacid so the visit can end. Which action does the nurse take first?",
+     "stem": "A 61-year-old woman arrives at urgent care with 40 minutes of crushing substernal pain. She is diaphoretic, says it is indigestion, and asks for an antacid so she can leave. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -8156,7 +8156,7 @@
     {
      "id": "ch7-q4",
      "type": "multiple_choice",
-     "stem": "A patient with heart failure has not been taking the prescribed diuretic. Which question reflects Caritas Coaching?",
+     "stem": "A patient with heart failure has not been taking his diuretic. Which question reflects Caritas Coaching?",
      "options": [
       {
        "id": "A",
@@ -8621,7 +8621,7 @@
     {
      "id": "ch7-q8",
      "type": "multiple_choice",
-     "stem": "A nurse asks a patient what has been hardest about managing the diet since diagnosis. The patient describes a shift pattern and the food available at work. Together they agree on eating the main meal before the shift rather than during it. Which describes what the nurse has done?",
+     "stem": "A nurse asks a patient what has been hardest about managing his diet since his diagnosis. He describes his shift pattern and the food available at work. Together they agree he will eat his main meal before his shift rather than during it. Which describes what the nurse has done?",
      "options": [
       {
        "id": "A",
@@ -9056,7 +9056,7 @@
     {
      "id": "ch7-q13",
      "type": "sata",
-     "stem": "A nurse applies Watson's Caritas Processes while caring for a patient having a wound dressing changed. Which actions reflect those principles? Select all that apply.",
+     "stem": "A nurse applies Watson's Caritas Processes while changing a patient's wound dressing. Which actions reflect those principles? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -9520,7 +9520,7 @@
     {
      "id": "ch8-q2",
      "type": "sata",
-     "stem": "A nurse assesses the health risk of a 68-year-old who has cared for a spouse with Alzheimer disease in their shared home for the past three years. Which factors place this patient at risk for poor health? Select all that apply.",
+     "stem": "A nurse assesses the health risk of a 68-year-old woman who has cared for her husband with Alzheimer disease in their shared home for the past three years. Which factors place her at risk for poor health? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -9598,7 +9598,7 @@
     {
      "id": "ch8-q3",
      "type": "multiple_choice",
-     "stem": "A nurse assesses a 62-year-old with heart failure. Which finding should prompt the nurse to assess the family caregiver as well?",
+     "stem": "A nurse assesses a 62-year-old man with heart failure. Which finding should prompt her to assess his family caregiver as well?",
      "options": [
       {
        "id": "A",
@@ -9805,7 +9805,7 @@
     {
      "id": "ch8-q4",
      "type": "multiple_choice",
-     "stem": "A 74-year-old with hypertension, arthritis and heart disease becomes confused two days after a medication change. An adult child says it is 'just getting old'. Which nursing consideration applies?",
+     "stem": "A 74-year-old woman with hypertension, arthritis and heart disease becomes confused two days after a medication change. Her daughter says it is 'just getting old'. Which nursing consideration applies?",
      "options": [
       {
        "id": "A",
@@ -9913,7 +9913,7 @@
     {
      "id": "ch8-q6",
      "type": "sata",
-     "stem": "A nurse assesses a 55-year-old newly diagnosed with multiple sclerosis. Which factors contribute to the multifactorial nature of chronic disease? Select all that apply.",
+     "stem": "A nurse assesses a 55-year-old woman newly diagnosed with multiple sclerosis. Which factors contribute to the multifactorial nature of chronic disease? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -9991,7 +9991,7 @@
     {
      "id": "ch8-q6b",
      "type": "multiple_choice",
-     "stem": "A 48-year-old with Crohn disease tells the nurse the hardest part is that people cannot see anything wrong, so they assume the symptoms are exaggerated. Which aspect of chronic illness does this describe?",
+     "stem": "A 48-year-old woman with Crohn disease tells the nurse the hardest part is that people cannot see anything wrong, so they assume her symptoms are exaggerated. Which aspect of chronic illness does this describe?",
      "options": [
       {
        "id": "A",
@@ -10131,7 +10131,7 @@
     {
      "id": "ch8-q7",
      "type": "multiple_choice",
-     "stem": "A nurse plans care for a patient with chronic kidney disease who will manage a fluid restriction, a diet, and four medications at home. Which Chronic Care Model component does teaching the patient to recognize and act on early fluid overload address?",
+     "stem": "A nurse plans care for a patient with chronic kidney disease who will manage a fluid restriction, a diet, and four medications at home. Which Chronic Care Model component does teaching him to recognize and act on early fluid overload address?",
      "options": [
       {
        "id": "A",
@@ -10185,7 +10185,7 @@
     {
      "id": "ch8-q8",
      "type": "multiple_choice",
-     "stem": "A 59-year-old with three chronic conditions has attended no appointments in eight months. When contacted, the patient says the attempt was given up because every clinic said something different and it was impossible to keep track. Which Chronic Care Model component has failed?",
+     "stem": "A 59-year-old man with three chronic conditions has attended no appointments in eight months. When contacted, he says he gave up trying, because every clinic said something different and he could not keep track. Which Chronic Care Model component has failed?",
      "options": [
       {
        "id": "A",
@@ -10371,7 +10371,7 @@
     {
      "id": "ch8-q11",
      "type": "multiple_choice",
-     "stem": "A 16-year-old with cystic fibrosis has begun missing treatments since starting a new school. Which nursing consideration is most relevant?",
+     "stem": "A 16-year-old boy with cystic fibrosis has begun missing treatments since starting a new school. Which nursing consideration is most relevant?",
      "options": [
       {
        "id": "A",
@@ -10667,7 +10667,7 @@
     {
      "id": "ch8-q13",
      "type": "multiple_choice",
-     "stem": "A patient with a chronic condition tells the nurse that an online source said the prescribed medication causes permanent kidney damage, and that the medication has been stopped. Which nursing action is most appropriate?",
+     "stem": "A patient with a chronic condition tells the nurse that an online source said her medication causes permanent kidney damage, and that she has stopped taking it. Which nursing action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -10721,7 +10721,7 @@
     {
      "id": "ch8-q14",
      "type": "multiple_choice",
-     "stem": "A 45-year-old newly diagnosed with type 2 diabetes asks the nurse, does this mean I failed to look after myself? Which response is most accurate?",
+     "stem": "A 45-year-old woman newly diagnosed with type 2 diabetes asks the nurse, does this mean I failed to look after myself? Which response is most accurate?",
      "options": [
       {
        "id": "A",
@@ -10775,7 +10775,7 @@
     {
      "id": "ch8-p1",
      "type": "multiple_choice",
-     "stem": "A nurse visits a patient with chronic obstructive pulmonary disease prescribed home oxygen at 2 L/min. The concentrator is set at 5 L/min. The patient is drowsy, difficult to rouse, and has a respiratory rate of 8. Which action does the nurse take first?",
+     "stem": "A nurse visits a patient with chronic obstructive pulmonary disease prescribed home oxygen at 2 L/min. The concentrator is set at 5 L/min. He is drowsy, difficult to rouse, and his respiratory rate is 8. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -10830,7 +10830,7 @@
     {
      "id": "ch8-p2",
      "type": "multiple_choice",
-     "stem": "A spouse has provided all care at home for a patient with advanced dementia for three years. The spouse has lost 6 kg, has not seen a provider in two years, sleeps in a chair at the bedside, and says it is all manageable. Which action takes priority?",
+     "stem": "A man has provided all the care at home for his wife with advanced dementia for three years. He has lost 6 kg, has not seen a provider in two years, sleeps in a chair at her bedside, and says it is all manageable. Which action takes priority?",
      "options": [
       {
        "id": "A",
@@ -10988,7 +10988,7 @@
     {
      "id": "ch9-q1",
      "type": "multiple_choice",
-     "stem": "A nursing student is caring for a patient with type 2 diabetes who is currently living in a shelter. The student teaches the importance of taking insulin as prescribed and how to make healthy food choices. The patient nods and reports no questions. Which assessment should the student have made first?",
+     "stem": "A nursing student is caring for a patient with type 2 diabetes who is living in a shelter. The student teaches her the importance of taking insulin as prescribed and how to make healthy food choices. She nods and says she has no questions. Which assessment should the student have made first?",
      "options": [
       {
        "id": "A",
@@ -11042,7 +11042,7 @@
     {
      "id": "ch9-q2",
      "type": "multiple_choice",
-     "stem": "A nurse asks a patient with type 2 diabetes who is living in a shelter about insulin storage. The patient explains that the shelter has one shared refrigerator that is often full, meals are served at fixed times that are not always possible to attend, and supplies are kept in a locker. Which conclusion is most accurate?",
+     "stem": "A nurse asks a patient with type 2 diabetes who is living in a shelter about insulin storage. She explains that the shelter has one shared refrigerator that is often full, meals are served at fixed times she cannot always attend, and her supplies are kept in a locker. Which conclusion is most accurate?",
      "options": [
       {
        "id": "A",
@@ -11097,10 +11097,39 @@
      "id": "ch9-x2",
      "type": "cloze",
      "stem": "Complete each sentence by selecting from the choices below.",
-     "sentence": "A nurse prepares for a difficult conversation with a patient whose beliefs about treatment differ from her own.\n\nSaying \"tell me more about what you think is causing this\" is the [[1]] step of LEARN.\n\nPointing out that they both want to avoid another admission is the [[2]] step.\n\nAgreeing a plan that keeps the patient's traditional remedies alongside the prescribed treatment is the [[3]] step.\n\nA nurse who examines her own assumptions before entering the room is demonstrating [[4]].",
+     "sentence": "A nurse prepares for a difficult conversation with a patient whose beliefs about treatment differ from her own.\n\nAgreeing a plan that keeps the patient's traditional remedies alongside the prescribed treatment is the [[1]] step of LEARN.\n\nSaying \"tell me more about what you think is causing this\" is the [[2]] step.\n\nPointing out that they both want to avoid another admission is the [[3]] step.\n\nA nurse who examines her own assumptions before entering the room is demonstrating [[4]].",
      "blanks": [
       {
        "id": 1,
+       "options": [
+        {
+         "id": "A",
+         "text": "Acknowledge",
+         "correct": false,
+         "rationale": "Acknowledge compares perceptions. It does not build the plan."
+        },
+        {
+         "id": "B",
+         "text": "Negotiate",
+         "correct": true,
+         "rationale": "Negotiate a treatment plan, incorporating selected aspects of the patient's culture into it."
+        },
+        {
+         "id": "C",
+         "text": "Recommend",
+         "correct": false,
+         "rationale": "This is the near miss. Recommending offers the options; negotiating settles on one you both accept."
+        },
+        {
+         "id": "D",
+         "text": "Explain",
+         "correct": false,
+         "rationale": "Explain is where you give your perception of the problem, which is earlier in the model."
+        }
+       ]
+      },
+      {
+       "id": 2,
        "options": [
         {
          "id": "A",
@@ -11129,7 +11158,7 @@
        ]
       },
       {
-       "id": 2,
+       "id": 3,
        "options": [
         {
          "id": "A",
@@ -11154,35 +11183,6 @@
          "text": "Recommend",
          "correct": false,
          "rationale": "Recommend offers the options, and it comes after the differences have been named."
-        }
-       ]
-      },
-      {
-       "id": 3,
-       "options": [
-        {
-         "id": "A",
-         "text": "Acknowledge",
-         "correct": false,
-         "rationale": "Acknowledge compares perceptions. It does not build the plan."
-        },
-        {
-         "id": "B",
-         "text": "Negotiate",
-         "correct": true,
-         "rationale": "Negotiate a treatment plan, incorporating selected aspects of the patient's culture into it."
-        },
-        {
-         "id": "C",
-         "text": "Recommend",
-         "correct": false,
-         "rationale": "This is the near miss. Recommending offers the options; negotiating settles on one you both accept."
-        },
-        {
-         "id": "D",
-         "text": "Explain",
-         "correct": false,
-         "rationale": "Explain is where you give your perception of the problem, which is earlier in the model."
         }
        ]
       },
@@ -11218,8 +11218,8 @@
      ],
      "answer": {
       "1": "B",
-      "2": "C",
-      "3": "B",
+      "2": "B",
+      "3": "C",
       "4": "A"
      },
      "scoring": "0/1",
@@ -11249,7 +11249,7 @@
     {
      "id": "ch9-q3",
      "type": "multiple_choice",
-     "stem": "A nurse notices having assumed a patient would decline a blood transfusion because of a surname, stops, and asks the patient directly. Which describes what the nurse recognized?",
+     "stem": "A nurse catches herself assuming a patient will decline a blood transfusion because of his surname. She stops and asks him directly. Which describes what she recognized?",
      "options": [
       {
        "id": "A",
@@ -11609,7 +11609,7 @@
     {
      "id": "ch9-q8",
      "type": "multiple_choice",
-     "stem": "A patient says blood pressure has been managed with a herbal preparation a parent used, and that the prescribed medication was never started. Which response reflects the LEARN model?",
+     "stem": "A patient says she has been managing her blood pressure with a herbal preparation her mother used, and that she never started the prescribed medication. Which response reflects the LEARN model?",
      "options": [
       {
        "id": "A",
@@ -11717,7 +11717,7 @@
     {
      "id": "ch9-q10",
      "type": "multiple_choice",
-     "stem": "A patient with a new diagnosis of epilepsy tells the nurse that nobody in the community has been told, because of how the condition is viewed there. Which concept best describes what the patient is experiencing?",
+     "stem": "A patient with a new diagnosis of epilepsy tells the nurse she has not told anyone in her community, because of how the condition is viewed there. Which concept best describes what she is experiencing?",
      "options": [
       {
        "id": "A",
@@ -11771,7 +11771,7 @@
     {
      "id": "ch9-q11",
      "type": "multiple_choice",
-     "stem": "A patient who moved to the United States twelve years ago celebrates holidays from both the country of origin and the United States, cooks traditional food, and speaks both languages at home. Which term describes this?",
+     "stem": "A patient who moved to the United States twelve years ago celebrates holidays from both his birth country and the United States, cooks traditional food, and speaks both languages at home. Which term describes this?",
      "options": [
       {
        "id": "A",
@@ -12819,7 +12819,7 @@
     {
      "id": "ch16-q3",
      "type": "multiple_choice",
-     "stem": "A patient tells the nurse everything is fine, while sitting rigidly, guarding the abdomen, and grimacing when shifting position. Which nursing action is most appropriate?",
+     "stem": "A patient tells the nurse everything is fine, while he sits rigidly, guards his abdomen, and grimaces when he shifts position. Which nursing action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -13278,68 +13278,39 @@
      "id": "ch18-x1",
      "type": "cloze",
      "stem": "Complete each sentence by selecting from the choices below.",
-     "sentence": "A nurse writes outcomes for a patient recovering from a stroke.\n\nSaying exactly what the patient will do, rather than that the patient will improve, makes the outcome [[1]].\n\nAdding a distance of 20 feet makes it [[2]].\n\nChecking that the goal fits a patient who could walk 10 feet yesterday makes it [[3]].\n\nAdding by the end of the week makes it [[4]].",
+     "sentence": "A nurse writes outcomes for a patient recovering from a stroke.\n\nAdding by the end of the week makes the outcome [[1]].\n\nChecking that the goal fits a patient who could walk 10 feet yesterday makes it [[2]].\n\nSaying exactly what the patient will do, rather than that the patient will improve, makes it [[3]].\n\nAdding a distance of 20 feet makes it [[4]].",
      "blanks": [
       {
        "id": 1,
        "options": [
         {
          "id": "A",
-         "text": "measurable",
-         "correct": false,
-         "rationale": "Measurable adds the number. This blank is about naming the action itself."
+         "text": "time-bound",
+         "correct": true,
+         "rationale": "Time-bound sets the deadline, and without one an outcome can never be judged unmet."
         },
         {
          "id": "B",
-         "text": "specific",
-         "correct": true,
-         "rationale": "Specific says exactly what will happen, leaving no room for two nurses to read it differently."
+         "text": "measurable",
+         "correct": false,
+         "rationale": "The distance already makes it countable. What this outcome is missing is a date."
         },
         {
          "id": "C",
-         "text": "relevant",
+         "text": "achievable",
          "correct": false,
-         "rationale": "Relevant asks whether the outcome addresses the priority problem, not how clearly it is worded."
+         "rationale": "Achievable is about whether it is realistic, not about when it should happen."
         },
         {
          "id": "D",
-         "text": "achievable",
+         "text": "relevant",
          "correct": false,
-         "rationale": "Achievable asks whether it is realistic for this patient, which is a different question."
+         "rationale": "Relevant is about whether it matters to his priority problem, not about timing."
         }
        ]
       },
       {
        "id": 2,
-       "options": [
-        {
-         "id": "A",
-         "text": "measurable",
-         "correct": true,
-         "rationale": "A number you can check against. Twenty feet either happened or it did not."
-        },
-        {
-         "id": "B",
-         "text": "time-bound",
-         "correct": false,
-         "rationale": "Time-bound adds the when. This blank is asking about how much."
-        },
-        {
-         "id": "C",
-         "text": "specific",
-         "correct": false,
-         "rationale": "This is the near miss. Specific says what will happen; measurable says how much."
-        },
-        {
-         "id": "D",
-         "text": "achievable",
-         "correct": false,
-         "rationale": "Achievable concerns whether it is realistic for him, not whether you can count it."
-        }
-       ]
-      },
-      {
-       "id": 3,
        "options": [
         {
          "id": "A",
@@ -13368,39 +13339,68 @@
        ]
       },
       {
+       "id": 3,
+       "options": [
+        {
+         "id": "A",
+         "text": "measurable",
+         "correct": false,
+         "rationale": "Measurable adds the number. This blank is about naming the action itself."
+        },
+        {
+         "id": "B",
+         "text": "specific",
+         "correct": true,
+         "rationale": "Specific says exactly what will happen, leaving no room for two nurses to read it differently."
+        },
+        {
+         "id": "C",
+         "text": "relevant",
+         "correct": false,
+         "rationale": "Relevant asks whether the outcome addresses the priority problem, not how clearly it is worded."
+        },
+        {
+         "id": "D",
+         "text": "achievable",
+         "correct": false,
+         "rationale": "Achievable asks whether it is realistic for this patient, which is a different question."
+        }
+       ]
+      },
+      {
        "id": 4,
        "options": [
         {
          "id": "A",
-         "text": "time-bound",
+         "text": "measurable",
          "correct": true,
-         "rationale": "Time-bound sets the deadline, and without one an outcome can never be judged unmet."
+         "rationale": "A number you can check against. Twenty feet either happened or it did not."
         },
         {
          "id": "B",
-         "text": "measurable",
+         "text": "time-bound",
          "correct": false,
-         "rationale": "The distance already makes it countable. What this outcome is missing is a date."
+         "rationale": "Time-bound adds the when. This blank is asking about how much."
         },
         {
          "id": "C",
-         "text": "achievable",
+         "text": "specific",
          "correct": false,
-         "rationale": "Achievable is about whether it is realistic, not about when it should happen."
+         "rationale": "This is the near miss. Specific says what will happen; measurable says how much."
         },
         {
          "id": "D",
-         "text": "relevant",
+         "text": "achievable",
          "correct": false,
-         "rationale": "Relevant is about whether it matters to his priority problem, not about timing."
+         "rationale": "Achievable concerns whether it is realistic for him, not whether you can count it."
         }
        ]
       }
      ],
      "answer": {
-      "1": "B",
+      "1": "A",
       "2": "A",
-      "3": "A",
+      "3": "B",
       "4": "A"
      },
      "scoring": "0/1",
@@ -13430,7 +13430,7 @@
     {
      "id": "ch18-q2",
      "type": "multiple_choice",
-     "stem": "A patient recovering from a stroke has difficulty swallowing, cannot manage stairs at home, and struggles to be understood when speaking. Which consultation should the nurse arrange for the swallowing difficulty?",
+     "stem": "A patient recovering from a stroke has difficulty swallowing, cannot manage the stairs at home, and struggles to make himself understood. Which consultation should the nurse arrange for the swallowing difficulty?",
      "options": [
       {
        "id": "A",
@@ -13555,7 +13555,7 @@
     {
      "id": "ch18-q4",
      "type": "multiple_choice",
-     "stem": "A nurse writes an outcome that a patient will ambulate 50 feet twice daily by tomorrow. The patient walked 10 feet once today with two assistants. Which element of the outcome is the problem?",
+     "stem": "A nurse writes an outcome that a patient will ambulate 50 feet twice daily by tomorrow. He walked 10 feet once today with two assistants. Which element of the outcome is the problem?",
      "options": [
       {
        "id": "A",
@@ -13609,7 +13609,7 @@
     {
      "id": "ch19-q1",
      "type": "multiple_choice",
-     "stem": "A nurse begins a planned bed bath and the patient becomes short of breath and asks to sit forward, having been assessed as stable at the start of the shift. Which action is most appropriate?",
+     "stem": "A nurse begins a planned bed bath and the patient becomes short of breath and asks to sit forward. He was assessed as stable at the start of the shift. Which action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -13803,7 +13803,7 @@
     {
      "id": "ch19-q3",
      "type": "multiple_choice",
-     "stem": "A nurse follows a standard turning schedule but adapts it for a patient who cannot lie on the left side after surgery. Which implementation principle does this show?",
+     "stem": "A nurse follows a standard turning schedule but adapts it for a patient who cannot lie on his left side after surgery. Which implementation principle does this show?",
      "options": [
       {
        "id": "A",
@@ -13935,7 +13935,7 @@
     {
      "id": "ch20-q1",
      "type": "multiple_choice",
-     "stem": "An outcome states that a patient will walk 100 feet twice daily by day four. On day four the patient walks 60 feet once, having managed 20 feet on day one. Which evaluation is accurate?",
+     "stem": "An outcome states that a patient will walk 100 feet twice daily by day four. On day four he walks 60 feet once, having managed 20 feet on day one. Which evaluation is accurate?",
      "options": [
       {
        "id": "A",
@@ -14356,7 +14356,7 @@
     {
      "id": "ch15-g2",
      "type": "multiple_choice",
-     "stem": "Two days after a stroke, a patient has left-sided weakness, coughs when drinking thin liquids, and has lost four pounds since admission. Which statement is a nursing diagnosis the nurse can treat independently?",
+     "stem": "Two days after a stroke, a patient has left-sided weakness, coughs when she drinks thin liquids, and has lost four pounds since admission. Which statement is a nursing diagnosis the nurse can treat independently?",
      "options": [
       {
        "id": "A",
@@ -14561,7 +14561,7 @@
     {
      "id": "ch21-q2",
      "type": "multiple_choice",
-     "stem": "A nurse delegates a bed bath to assistive personnel. During the bath the patient's oxygen tubing is dislodged and not replaced, and the saturation falls. Who is accountable?",
+     "stem": "A nurse delegates a bed bath to assistive personnel. During the bath the patient's oxygen tubing is dislodged and not replaced, and his saturation falls. Who is accountable?",
      "options": [
       {
        "id": "A",
@@ -15127,7 +15127,7 @@
     {
      "id": "ch21-q9",
      "type": "multiple_choice",
-     "stem": "A patient is discharged from hospital to a rehabilitation facility and then home, with one person coordinating across all three settings. Which nursing care delivery model is in use?",
+     "stem": "A patient is discharged from hospital to a rehabilitation facility and then home, with one person coordinating her care across all three settings. Which nursing care delivery model is in use?",
      "options": [
       {
        "id": "A",
@@ -15862,7 +15862,7 @@
     {
      "id": "ch21-p2",
      "type": "multiple_choice",
-     "stem": "Assistive personnel report a blood pressure of 88/50 mm Hg on a patient admitted with dehydration, and add that the patient looks fine. Which action does the nurse take first?",
+     "stem": "Assistive personnel report a blood pressure of 88/50 mm Hg on a patient admitted with dehydration, and add that he looks fine. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -16036,7 +16036,7 @@
     {
      "id": "ch22-q1",
      "type": "multiple_choice",
-     "stem": "A nurse is caring for a patient whose family insists that aggressive treatment continue while the patient has a valid advance directive declining it. The team is divided. Which type of ethical problem is this?",
+     "stem": "A nurse is caring for a patient whose family insists that aggressive treatment continue, while he has a valid advance directive declining it. The team is divided. Which type of ethical problem is this?",
      "options": [
       {
        "id": "A",
@@ -16620,7 +16620,7 @@
     {
      "id": "ch23-q1",
      "type": "multiple_choice",
-     "stem": "A patient in skeletal traction develops pale, cold toes with reduced sensation. The nurse becomes occupied elsewhere and neither documents nor reports it. Two days later the leg requires amputation. Which term describes the nurse's conduct?",
+     "stem": "A patient in skeletal traction develops pale, cold toes with reduced sensation. The nurse becomes occupied elsewhere and neither documents nor reports it. Two days later his leg requires amputation. Which term describes the nurse's conduct?",
      "options": [
       {
        "id": "A",
@@ -16808,7 +16808,7 @@
     {
      "id": "ch23-q3",
      "type": "sata",
-     "stem": "A nurse reviews what a patient must receive for informed consent to be valid. Which elements are required? Select all that apply.",
+     "stem": "A nurse reviews what a patient must receive for his informed consent to be valid. Which elements are required? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -17147,7 +17147,7 @@
     {
      "id": "ch23-q6",
      "type": "multiple_choice",
-     "stem": "A nurse discusses a patient's diagnosis in a hospital lift where visitors can hear. No harm was intended. Which category does this fall into?",
+     "stem": "A nurse discusses a patient's diagnosis in a hospital lift where visitors can hear. She intended no harm. Which category does this fall into?",
      "options": [
       {
        "id": "A",
@@ -17545,7 +17545,7 @@
     {
      "id": "ch26-q2",
      "type": "multiple_choice",
-     "stem": "A patient transfers from a clinic to a hospital. The clinic's system holds only that practice's visits, while the hospital's follows the patient across every facility in the network. Which distinction does this illustrate?",
+     "stem": "A patient transfers from a clinic to a hospital. The clinic's system holds only that practice's visits, while the hospital's follows him across every facility in the network. Which distinction does this illustrate?",
      "options": [
       {
        "id": "A",
@@ -18142,7 +18142,7 @@
     {
      "id": "ch22-g2",
      "type": "multiple_choice",
-     "stem": "An hour after charting, a nurse realizes an entire assessment was entered on the wrong patient's paper record. Which action meets the legal guidelines for documentation?",
+     "stem": "An hour after charting, a nurse realizes she entered an entire assessment on the wrong patient's paper record. Which action meets the legal guidelines for documentation?",
      "options": [
       {
        "id": "A",
@@ -18196,7 +18196,7 @@
     {
      "id": "ch22-g3",
      "type": "multiple_choice",
-     "stem": "A patient is going home after treatment for cellulitis of the lower leg. Which entry in the discharge documentation best demonstrates that teaching was effective?",
+     "stem": "A patient is going home after treatment for cellulitis of her lower leg. Which entry in the discharge documentation best demonstrates that teaching was effective?",
      "options": [
       {
        "id": "A",
@@ -18433,7 +18433,7 @@
     {
      "id": "ch22-p1",
      "type": "multiple_choice",
-     "stem": "A patient scheduled for surgery in thirty minutes has a signed consent form in the record and tells the nurse, I am still not sure what they are actually going to do. Which action takes priority?",
+     "stem": "A patient scheduled for surgery in thirty minutes has a signed consent form in his record and tells the nurse, I am still not sure what they are actually going to do. Which action takes priority?",
      "options": [
       {
        "id": "A",
@@ -18703,7 +18703,7 @@
     {
      "id": "ch24-q2",
      "type": "multiple_choice",
-     "stem": "A patient with newly diagnosed heart failure says none of it makes sense and that everyone uses unfamiliar words. Which action does the nurse take first?",
+     "stem": "A patient with newly diagnosed heart failure says none of it makes sense and that everyone uses words he does not know. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -18890,68 +18890,10 @@
      "id": "ch24-x2",
      "type": "cloze",
      "stem": "Complete each sentence by selecting from the choices below.",
-     "sentence": "A nurse reviews the communication process with a student.\n\nThe person who initiates the communication and encodes the message is the [[1]].\n\nThe route the message travels, whether spoken, written or electronic, is the [[2]].\n\nThe response that tells the sender the message was received is the [[3]].\n\nRepeating a patient's main idea in different words is [[4]].",
+     "sentence": "A nurse reviews the communication process with a student.\n\nThe response that tells the sender the message was received is the [[1]].\n\nThe person who initiates the communication and encodes the message is the [[2]].\n\nRepeating a patient's main idea in different words is [[3]].\n\nThe route the message travels, whether spoken, written or electronic, is the [[4]].",
      "blanks": [
       {
        "id": 1,
-       "options": [
-        {
-         "id": "A",
-         "text": "channel",
-         "correct": false,
-         "rationale": "The channel is the route the message travels. This blank names who starts it."
-        },
-        {
-         "id": "B",
-         "text": "context",
-         "correct": false,
-         "rationale": "Context is the environment the exchange happens in, not the person initiating it."
-        },
-        {
-         "id": "C",
-         "text": "receiver",
-         "correct": false,
-         "rationale": "The receiver takes the message in, interprets it and decodes it. That is the other end of the exchange."
-        },
-        {
-         "id": "D",
-         "text": "sender",
-         "correct": true,
-         "rationale": "The sender starts the communication and encodes the message into words and behavior."
-        }
-       ]
-      },
-      {
-       "id": 2,
-       "options": [
-        {
-         "id": "A",
-         "text": "feedback",
-         "correct": false,
-         "rationale": "Feedback is the response coming back. This blank is about how the message travels."
-        },
-        {
-         "id": "B",
-         "text": "message",
-         "correct": false,
-         "rationale": "The near-miss. The message is the content; the channel is how it travels."
-        },
-        {
-         "id": "C",
-         "text": "context",
-         "correct": false,
-         "rationale": "Context is the surrounding environment. This blank is about the route the message travels along."
-        },
-        {
-         "id": "D",
-         "text": "channel",
-         "correct": true,
-         "rationale": "Speech, writing, a phone or a screen. The route rather than the content."
-        }
-       ]
-      },
-      {
-       "id": 3,
        "options": [
         {
          "id": "A",
@@ -18980,7 +18922,36 @@
        ]
       },
       {
-       "id": 4,
+       "id": 2,
+       "options": [
+        {
+         "id": "A",
+         "text": "channel",
+         "correct": false,
+         "rationale": "The channel is the route the message travels. This blank names who starts it."
+        },
+        {
+         "id": "B",
+         "text": "context",
+         "correct": false,
+         "rationale": "Context is the environment the exchange happens in, not the person initiating it."
+        },
+        {
+         "id": "C",
+         "text": "receiver",
+         "correct": false,
+         "rationale": "The receiver takes the message in, interprets it and decodes it. That is the other end of the exchange."
+        },
+        {
+         "id": "D",
+         "text": "sender",
+         "correct": true,
+         "rationale": "The sender starts the communication and encodes the message into words and behavior."
+        }
+       ]
+      },
+      {
+       "id": 3,
        "options": [
         {
          "id": "A",
@@ -19007,13 +18978,42 @@
          "rationale": "Giving information means supplying accurate, usable detail. It is not repeating the patient's own words back."
         }
        ]
+      },
+      {
+       "id": 4,
+       "options": [
+        {
+         "id": "A",
+         "text": "feedback",
+         "correct": false,
+         "rationale": "Feedback is the response coming back. This blank is about how the message travels."
+        },
+        {
+         "id": "B",
+         "text": "message",
+         "correct": false,
+         "rationale": "The near-miss. The message is the content; the channel is how it travels."
+        },
+        {
+         "id": "C",
+         "text": "context",
+         "correct": false,
+         "rationale": "Context is the surrounding environment. This blank is about the route the message travels along."
+        },
+        {
+         "id": "D",
+         "text": "channel",
+         "correct": true,
+         "rationale": "Speech, writing, a phone or a screen. The route rather than the content."
+        }
+       ]
       }
      ],
      "answer": {
-      "1": "D",
+      "1": "B",
       "2": "D",
       "3": "B",
-      "4": "B"
+      "4": "D"
      },
      "scoring": "0/1",
      "takeaway": "Six components: sender, message, channel, receiver, feedback, context. Restating repeats the idea; reflection names the feeling.",
@@ -19042,7 +19042,7 @@
     {
      "id": "ch24-q5",
      "type": "multiple_choice",
-     "stem": "A patient says, I do not know whether I can manage the insulin at home. Which response is reflection?",
+     "stem": "A patient says, I do not know whether I can manage the insulin at home. Which nurse response is reflection?",
      "options": [
       {
        "id": "A",
@@ -19096,7 +19096,7 @@
     {
      "id": "ch24-q6",
      "type": "sata",
-     "stem": "A nurse begins a relationship with a newly admitted patient. Which actions establish a therapeutic relationship? Select all that apply.",
+     "stem": "A nurse begins a relationship with a newly admitted patient. Which actions establish a therapeutic relationship with him? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -19174,7 +19174,7 @@
     {
      "id": "ch24-q7",
      "type": "multiple_choice",
-     "stem": "A nurse notices a patient's condition has changed but mentions it vaguely to the provider without giving the specific findings. Which statement is most accurate?",
+     "stem": "A nurse notices a patient's condition has changed but mentions it vaguely to the provider without giving him the specific findings. Which statement is most accurate?",
      "options": [
       {
        "id": "A",
@@ -19228,7 +19228,7 @@
     {
      "id": "ch24-q8",
      "type": "multiple_choice",
-     "stem": "A nurse tells a frightened preoperative patient not to worry because the surgeon is excellent. Which block is this?",
+     "stem": "A nurse tells a frightened preoperative patient not to worry, because the surgeon is excellent. Which block is this?",
      "options": [
       {
        "id": "A",
@@ -19369,7 +19369,7 @@
     {
      "id": "ch24-q9",
      "type": "multiple_choice",
-     "stem": "A nurse asks a patient whether the pain is worse today. The patient answers yes and says nothing further. Which change would improve the exchange?",
+     "stem": "A nurse asks a patient whether his pain is worse today. He answers yes and says nothing further. Which change would improve the exchange?",
      "options": [
       {
        "id": "A",
@@ -19423,7 +19423,7 @@
     {
      "id": "ch24-q10",
      "type": "multiple_choice",
-     "stem": "A nurse is told a patient from a particular cultural background will avoid eye contact and will want family present for decisions. Which approach is appropriate?",
+     "stem": "A nurse is told that a patient from a particular cultural background will avoid eye contact and will want his family present for decisions. Which approach is appropriate?",
      "options": [
       {
        "id": "A",
@@ -19477,7 +19477,7 @@
     {
      "id": "ch24-q11",
      "type": "sata",
-     "stem": "A nurse gives information to a patient about a new medication. Which characteristics should that information have? Select all that apply.",
+     "stem": "A nurse gives a patient information about a new medication. Which characteristics should that information have? Select all that apply.",
      "options": [
       {
        "id": "A",
@@ -19542,7 +19542,7 @@
     {
      "id": "ch24-q12",
      "type": "multiple_choice",
-     "stem": "A nurse sits at eye level, does not interrupt, repeats key phrases, and watches the patient's facial expression while the patient speaks. Which does this describe?",
+     "stem": "A nurse sits at eye level, does not interrupt, repeats key phrases, and watches the patient's face while he speaks. Which does this describe?",
      "options": [
       {
        "id": "A",
@@ -19596,7 +19596,7 @@
     {
      "id": "ch24-q13",
      "type": "multiple_choice",
-     "stem": "A patient with expressive difficulty after a stroke struggles to find a word and the nurse finishes the sentence. Which problem does this create?",
+     "stem": "A patient with expressive difficulty after a stroke struggles to find a word and the nurse finishes his sentence. Which problem does this create?",
      "options": [
       {
        "id": "A",
@@ -19650,7 +19650,7 @@
     {
      "id": "ch24-q14",
      "type": "multiple_choice",
-     "stem": "A nurse explains a procedure quickly, uses several abbreviations, and asks at the end whether the patient has any questions. The patient says no. Which error has the nurse made?",
+     "stem": "A nurse explains a procedure quickly, uses several abbreviations, and asks at the end whether the patient has any questions. He says no. Which error has the nurse made?",
      "options": [
       {
        "id": "A",
@@ -19946,7 +19946,7 @@
     {
      "id": "ch25-q1",
      "type": "multiple_choice",
-     "stem": "A nurse prepares to teach a newly diagnosed patient about a new insulin. The patient reports pain of 8 of 10, a roommate's television is on, and a family member is due in ten minutes. Which action is most appropriate?",
+     "stem": "A nurse prepares to teach a newly diagnosed patient about a new insulin. He reports pain of 8 of 10, his roommate's television is on, and his daughter is due in ten minutes. Which action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -20080,7 +20080,7 @@
     {
      "id": "ch25-q2",
      "type": "multiple_choice",
-     "stem": "A nurse writes the objective that a patient will understand the new anticoagulant. Which revision is better?",
+     "stem": "A nurse writes the objective that a patient will understand his new anticoagulant. Which revision is better?",
      "options": [
       {
        "id": "A",
@@ -20267,68 +20267,10 @@
      "id": "ch25-x2",
      "type": "cloze",
      "stem": "Complete each sentence by selecting from the choices below.",
-     "sentence": "A nurse plans education for a patient going home with a new wound.\n\nWhat the nurse does to facilitate learning is [[1]].\n\nA change in knowledge, behavior, skill or understanding is [[2]].\n\nWatching the patient perform the dressing change unaided is [[3]].\n\nThe capacity to obtain, understand and use health information is [[4]].",
+     "sentence": "A nurse plans education for a patient going home with a new wound.\n\nWatching the patient perform the dressing change unaided is [[1]].\n\nWhat the nurse does to facilitate learning is [[2]].\n\nThe capacity to obtain, understand and use health information is [[3]].\n\nA change in knowledge, behavior, skill or understanding is [[4]].",
      "blanks": [
       {
        "id": 1,
-       "options": [
-        {
-         "id": "A",
-         "text": "teaching",
-         "correct": true,
-         "rationale": "This is the definition: what the nurse does to make learning possible."
-        },
-        {
-         "id": "B",
-         "text": "learning",
-         "correct": false,
-         "rationale": "The near-miss. Learning is what happens in the patient; teaching is what the nurse does."
-        },
-        {
-         "id": "C",
-         "text": "health literacy",
-         "correct": false,
-         "rationale": "Health literacy is the patient's capacity to work with health information, not the nurse's activity."
-        },
-        {
-         "id": "D",
-         "text": "evaluation",
-         "correct": false,
-         "rationale": "Evaluation is determining whether learning actually happened, which comes later."
-        }
-       ]
-      },
-      {
-       "id": 2,
-       "options": [
-        {
-         "id": "A",
-         "text": "readiness",
-         "correct": false,
-         "rationale": "Readiness is whether the patient is in a state to learn right now. It is a precondition, not the learning itself."
-        },
-        {
-         "id": "B",
-         "text": "learning",
-         "correct": true,
-         "rationale": "This is the definition, and learning is measured by a change in the patient rather than by exposure to information."
-        },
-        {
-         "id": "C",
-         "text": "teaching",
-         "correct": false,
-         "rationale": "This is the nurse's activity, not the patient's. Teaching can happen without any learning, and that is what evaluation catches."
-        },
-        {
-         "id": "D",
-         "text": "reinforcement",
-         "correct": false,
-         "rationale": "Reinforcement is the final step, where what was learned gets repeated and strengthened."
-        }
-       ]
-      },
-      {
-       "id": 3,
        "options": [
         {
          "id": "A",
@@ -20357,7 +20299,36 @@
        ]
       },
       {
-       "id": 4,
+       "id": 2,
+       "options": [
+        {
+         "id": "A",
+         "text": "teaching",
+         "correct": true,
+         "rationale": "This is the definition: what the nurse does to make learning possible."
+        },
+        {
+         "id": "B",
+         "text": "learning",
+         "correct": false,
+         "rationale": "The near-miss. Learning is what happens in the patient; teaching is what the nurse does."
+        },
+        {
+         "id": "C",
+         "text": "health literacy",
+         "correct": false,
+         "rationale": "Health literacy is the patient's capacity to work with health information, not the nurse's activity."
+        },
+        {
+         "id": "D",
+         "text": "evaluation",
+         "correct": false,
+         "rationale": "Evaluation is determining whether learning actually happened, which comes later."
+        }
+       ]
+      },
+      {
+       "id": 3,
        "options": [
         {
          "id": "A",
@@ -20384,12 +20355,41 @@
          "rationale": "Closer, and health literacy is specific to health information rather than to general capacity."
         }
        ]
+      },
+      {
+       "id": 4,
+       "options": [
+        {
+         "id": "A",
+         "text": "readiness",
+         "correct": false,
+         "rationale": "Readiness is whether the patient is in a state to learn right now. It is a precondition, not the learning itself."
+        },
+        {
+         "id": "B",
+         "text": "learning",
+         "correct": true,
+         "rationale": "This is the definition, and learning is measured by a change in the patient rather than by exposure to information."
+        },
+        {
+         "id": "C",
+         "text": "teaching",
+         "correct": false,
+         "rationale": "This is the nurse's activity, not the patient's. Teaching can happen without any learning, and that is what evaluation catches."
+        },
+        {
+         "id": "D",
+         "text": "reinforcement",
+         "correct": false,
+         "rationale": "Reinforcement is the final step, where what was learned gets repeated and strengthened."
+        }
+       ]
       }
      ],
      "answer": {
-      "1": "A",
-      "2": "B",
-      "3": "D",
+      "1": "D",
+      "2": "A",
+      "3": "B",
       "4": "B"
      },
      "scoring": "0/1",
@@ -20419,7 +20419,7 @@
     {
      "id": "ch25-q5",
      "type": "multiple_choice",
-     "stem": "A nurse teaches a patient to use a new inhaler, then asks whether it was understood. The patient nods and says yes. Which action should follow?",
+     "stem": "A nurse teaches a patient to use a new inhaler, then asks whether he understood. He nods and says yes. Which action should follow?",
      "options": [
       {
        "id": "A",
@@ -20473,7 +20473,7 @@
     {
      "id": "ch25-q6",
      "type": "multiple_choice",
-     "stem": "A patient with a new abdominal wound cannot reach the site to change the dressing. The patient lives with an adult child, who will perform the care. Which action is most appropriate?",
+     "stem": "A patient with a new abdominal wound cannot reach the site to change the dressing. He lives with his daughter, who will perform the care. Which action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -20853,7 +20853,7 @@
     {
      "id": "ch25-q11",
      "type": "multiple_choice",
-     "stem": "A patient with newly diagnosed heart failure says there is no point in daily weights because it will not change anything. Which learning domain should the nurse address first?",
+     "stem": "A patient with newly diagnosed heart failure says there is no point weighing himself daily, because it will not change anything. Which learning domain should the nurse address first?",
      "options": [
       {
        "id": "A",
@@ -21093,7 +21093,7 @@
     {
      "id": "ch25-q15",
      "type": "multiple_choice",
-     "stem": "A nurse explains that a patient should ambulate three times daily, watch for edema, and remain NPO after midnight. Which change would most improve this?",
+     "stem": "A nurse tells a patient to ambulate three times daily, watch for edema, and remain NPO after midnight. Which change would most improve this?",
      "options": [
       {
        "id": "A",
@@ -21335,7 +21335,7 @@
     {
      "id": "ch24-g1",
      "type": "multiple_choice",
-     "stem": "A nurse finishes teaching a patient to use a metered-dose inhaler with a spacer. Which closing action evaluates learning rather than satisfaction?",
+     "stem": "A nurse finishes teaching a patient to use a metered-dose inhaler with a spacer. Which closing action evaluates his learning rather than his satisfaction?",
      "options": [
       {
        "id": "A",
@@ -21443,7 +21443,7 @@
     {
      "id": "ch24-p1",
      "type": "multiple_choice",
-     "stem": "A patient who is deaf and communicates in American Sign Language is admitted for a procedure requiring consent. An adult child offers to interpret so the discussion is not delayed. Which action does the nurse take first?",
+     "stem": "A patient who is deaf and communicates in American Sign Language is admitted for a procedure requiring consent. His son offers to interpret so the discussion is not delayed. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -21498,7 +21498,7 @@
     {
      "id": "ch24-p2",
      "type": "multiple_choice",
-     "stem": "A nurse is teaching a patient to change a new colostomy appliance. The patient becomes tearful, turns away, and says, I cannot even look at it. Discharge is planned for tomorrow. Which action does the nurse take first?",
+     "stem": "A nurse is teaching a patient to change her new colostomy appliance. She becomes tearful, turns away, and says, I cannot even look at it. Discharge is planned for tomorrow. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -21644,7 +21644,7 @@
     {
      "id": "ch37-q1",
      "type": "multiple_choice",
-     "stem": "A patient has been caring for a disabled child for eleven years. Blood pressure is now 152/94 mm Hg, sleep is poor, and reflux has developed. Which concept explains the link between these circumstances and these findings?",
+     "stem": "A patient has cared for her disabled son for eleven years. Her blood pressure is now 152/94 mm Hg, she sleeps poorly, and she has developed reflux. Which concept explains the link between her circumstances and these findings?",
      "options": [
       {
        "id": "A",
@@ -21698,7 +21698,7 @@
     {
      "id": "ch37-q2",
      "type": "multiple_choice",
-     "stem": "A patient whose home was destroyed in a wildfire three weeks ago tells the nurse that the usual ways of coping are no longer working and that there is no idea what to do next. Which does this describe?",
+     "stem": "A patient whose home was destroyed in a wildfire three weeks ago tells the nurse that her usual ways of coping are no longer working and she does not know what to do next. Which does this describe?",
      "options": [
       {
        "id": "A",
@@ -21753,68 +21753,10 @@
      "id": "ch37-x2",
      "type": "cloze",
      "stem": "Complete each sentence by selecting from the choices below.",
-     "sentence": "A nurse works with several patients in crisis.\n\nA first-time mother overwhelmed by the transition to parenthood is experiencing a [[1]] crisis.\n\nA man whose business closed last month is experiencing a [[2]] crisis.\n\nA family displaced by an earthquake is experiencing an [[3]] crisis.\n\nA nurse who feels guilt and loss of confidence after a medication error caused harm is experiencing [[4]].",
+     "sentence": "A nurse works with several patients in crisis.\n\nA family displaced by an earthquake is experiencing an [[1]] crisis.\n\nA first-time mother overwhelmed by the transition to parenthood is experiencing a [[2]] crisis.\n\nA nurse who feels guilt and loss of confidence after a medication error caused harm is experiencing [[3]].\n\nA man whose business closed last month is experiencing a [[4]] crisis.",
      "blanks": [
       {
        "id": 1,
-       "options": [
-        {
-         "id": "A",
-         "text": "developmental",
-         "correct": true,
-         "rationale": "Triggered by a normal life transition. Becoming a parent is expected and can still overwhelm coping."
-        },
-        {
-         "id": "B",
-         "text": "traumatic",
-         "correct": false,
-         "rationale": "Traumatic is not one of the three named crisis types."
-        },
-        {
-         "id": "C",
-         "text": "adventitious",
-         "correct": false,
-         "rationale": "Adventitious crises are unplanned, rare and catastrophic. A normal life transition is none of those."
-        },
-        {
-         "id": "D",
-         "text": "situational",
-         "correct": false,
-         "rationale": "The near-miss. Situational crises come from external events rather than from expected life stages."
-        }
-       ]
-      },
-      {
-       "id": 2,
-       "options": [
-        {
-         "id": "A",
-         "text": "adventitious",
-         "correct": false,
-         "rationale": "Adventitious is reserved for rare catastrophic events such as a disaster or a mass casualty."
-        },
-        {
-         "id": "B",
-         "text": "developmental",
-         "correct": false,
-         "rationale": "Developmental crises arise from the normal transitions of a life stage, not from an unexpected event."
-        },
-        {
-         "id": "C",
-         "text": "situational",
-         "correct": true,
-         "rationale": "Provoked by an external event such as job loss, a crash or serious illness."
-        },
-        {
-         "id": "D",
-         "text": "chronic",
-         "correct": false,
-         "rationale": "Chronic describes a type of stress rather than a type of crisis."
-        }
-       ]
-      },
-      {
-       "id": 3,
        "options": [
         {
          "id": "A",
@@ -21843,7 +21785,36 @@
        ]
       },
       {
-       "id": 4,
+       "id": 2,
+       "options": [
+        {
+         "id": "A",
+         "text": "developmental",
+         "correct": true,
+         "rationale": "Triggered by a normal life transition. Becoming a parent is expected and can still overwhelm coping."
+        },
+        {
+         "id": "B",
+         "text": "traumatic",
+         "correct": false,
+         "rationale": "Traumatic is not one of the three named crisis types."
+        },
+        {
+         "id": "C",
+         "text": "adventitious",
+         "correct": false,
+         "rationale": "Adventitious crises are unplanned, rare and catastrophic. A normal life transition is none of those."
+        },
+        {
+         "id": "D",
+         "text": "situational",
+         "correct": false,
+         "rationale": "The near-miss. Situational crises come from external events rather than from expected life stages."
+        }
+       ]
+      },
+      {
+       "id": 3,
        "options": [
         {
          "id": "A",
@@ -21870,13 +21841,42 @@
          "rationale": "Moral distress is knowing the right action and being prevented from taking it. That is a different situation."
         }
        ]
+      },
+      {
+       "id": 4,
+       "options": [
+        {
+         "id": "A",
+         "text": "adventitious",
+         "correct": false,
+         "rationale": "Adventitious is reserved for rare catastrophic events such as a disaster or a mass casualty."
+        },
+        {
+         "id": "B",
+         "text": "developmental",
+         "correct": false,
+         "rationale": "Developmental crises arise from the normal transitions of a life stage, not from an unexpected event."
+        },
+        {
+         "id": "C",
+         "text": "situational",
+         "correct": true,
+         "rationale": "Provoked by an external event such as job loss, a crash or serious illness."
+        },
+        {
+         "id": "D",
+         "text": "chronic",
+         "correct": false,
+         "rationale": "Chronic describes a type of stress rather than a type of crisis."
+        }
+       ]
       }
      ],
      "answer": {
-      "1": "A",
-      "2": "C",
-      "3": "B",
-      "4": "A"
+      "1": "B",
+      "2": "A",
+      "3": "A",
+      "4": "C"
      },
      "scoring": "0/1",
      "takeaway": "Developmental crises come from life transitions, situational from external events, adventitious from rare catastrophes. Second victim syndrome follows an adverse event you were involved in.",
@@ -21905,7 +21905,7 @@
     {
      "id": "ch37-q3",
      "type": "multiple_choice",
-     "stem": "A patient tells the nurse the diagnosis must be a laboratory error and that there are no symptoms at all. Which defense mechanism is the patient using?",
+     "stem": "A patient tells the nurse her diagnosis must be a laboratory error and that she has no symptoms at all. Which defense mechanism is she using?",
      "options": [
       {
        "id": "A",
@@ -22091,7 +22091,7 @@
     {
      "id": "ch37-q6",
      "type": "multiple_choice",
-     "stem": "A patient facing surgery organizes a list of questions, researches the procedure, and arranges childcare for the recovery period. Which type of coping is the patient using?",
+     "stem": "A patient facing surgery writes a list of questions, researches the procedure, and arranges childcare for her recovery. Which type of coping is she using?",
      "options": [
       {
        "id": "A",
@@ -22145,7 +22145,7 @@
     {
      "id": "ch37-q7",
      "type": "multiple_choice",
-     "stem": "A patient facing a diagnosis that cannot be changed spends time with family, prays, and uses a breathing exercise when feeling overwhelmed. A student asks whether this is less effective than problem solving. Which response is accurate?",
+     "stem": "A patient facing a diagnosis that cannot be changed spends time with his family, prays, and uses a breathing exercise when he feels overwhelmed. A student asks whether this is less effective than problem solving. Which response is accurate?",
      "options": [
       {
        "id": "A",
@@ -22364,7 +22364,7 @@
     {
      "id": "ch37-q9",
      "type": "multiple_choice",
-     "stem": "A patient in the emergency department after an assault says, I do not want to talk about it, and asks to keep a coat on. Which response reflects trauma-informed care?",
+     "stem": "A patient in the emergency department after an assault says, I do not want to talk about it, and asks to keep her coat on. Which response reflects trauma-informed care?",
      "options": [
       {
        "id": "A",
@@ -22604,7 +22604,7 @@
     {
      "id": "ch37-q13",
      "type": "multiple_choice",
-     "stem": "A nurse plans care for a patient experiencing severe stress after a serious diagnosis. Which is the first priority in the plan?",
+     "stem": "A nurse plans care for a patient experiencing severe stress after a serious diagnosis. Which is the first priority in her plan?",
      "options": [
       {
        "id": "A",
@@ -23050,7 +23050,7 @@
     {
      "id": "ch43-q1",
      "type": "multiple_choice",
-     "stem": "A 76-year-old takes furosemide at 6 pm, which is when it gets remembered with the evening meal. The patient wakes three or four times each night to void and struggles to fall back asleep, is drowsy during the day, and has stumbled twice on the way to the bathroom. Which nursing action is most appropriate?",
+     "stem": "A 76-year-old man takes his furosemide at 6 pm, because that is when he remembers it with his evening meal. He wakes three or four times each night to void and struggles to fall back asleep, is drowsy during the day, and has stumbled twice on the way to the bathroom. Which nursing action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -23104,7 +23104,7 @@
     {
      "id": "ch43-q2",
      "type": "multiple_choice",
-     "stem": "A 59-year-old admitted for elective surgery is accompanied by a spouse, who reports loud snoring and having watched the patient stop breathing for several seconds at a time most nights. The patient falls asleep during meetings and once while stopped in traffic, and believes the amount of sleep is adequate. Which action does the nurse take?",
+     "stem": "A 59-year-old man admitted for elective surgery is accompanied by his wife, who reports loud snoring and says she has watched him stop breathing for several seconds at a time most nights. He falls asleep during meetings and once while stopped in traffic, and believes his sleep is fine. Which action does the nurse take?",
      "options": [
       {
        "id": "A",
@@ -23515,7 +23515,7 @@
     {
      "id": "ch43-q5",
      "type": "multiple_choice",
-     "stem": "A 68-year-old with heart failure tells the nurse about waking most nights with chest discomfort that eases on sitting up. Which does this most likely represent?",
+     "stem": "A 68-year-old man with heart failure tells the nurse he wakes most nights with chest discomfort that eases when he sits up. Which does this most likely represent?",
      "options": [
       {
        "id": "A",
@@ -23701,7 +23701,7 @@
     {
      "id": "ch43-q8",
      "type": "multiple_choice",
-     "stem": "A 74-year-old in intensive care has been sleeping poorly and is becoming confused at night. Which evidence-based intervention should the nurse consider?",
+     "stem": "A 74-year-old man in intensive care has been sleeping poorly and is becoming confused at night. Which evidence-based intervention should the nurse consider?",
      "options": [
       {
        "id": "A",
@@ -23895,7 +23895,7 @@
     {
      "id": "ch43-q10",
      "type": "multiple_choice",
-     "stem": "A 70-year-old with insomnia asks for something to help with sleep, having already tried a consistent bedtime and reduced evening caffeine. Which is the most appropriate first pharmacological option to discuss?",
+     "stem": "A 70-year-old woman with insomnia asks for something to help her sleep. She has already tried a consistent bedtime and reduced her evening caffeine. Which is the most appropriate first pharmacological option to discuss?",
      "options": [
       {
        "id": "A",
@@ -24081,7 +24081,7 @@
     {
      "id": "ch43-q13",
      "type": "multiple_choice",
-     "stem": "A patient has been taking a benzodiazepine nightly for three weeks. The nurse stops it abruptly at discharge at the patient's request. Which does the nurse monitor for?",
+     "stem": "A patient has taken a benzodiazepine nightly for three weeks. The nurse stops it abruptly at discharge at his request. Which does the nurse monitor for?",
      "options": [
       {
        "id": "A",
@@ -24189,7 +24189,7 @@
     {
      "id": "ch43-q15",
      "type": "multiple_choice",
-     "stem": "A hospitalized 82-year-old has slept four hours a night for three nights. Which safety concern should the nurse prioritize?",
+     "stem": "A hospitalized 82-year-old woman has slept four hours a night for three nights. Which safety concern should the nurse prioritize?",
      "options": [
       {
        "id": "A",
@@ -24709,7 +24709,7 @@
     {
      "id": "ch56-q4",
      "type": "multiple_choice",
-     "stem": "A patient with known hypothyroidism is admitted with a temperature of 34.8 C, a pulse of 44, and a decreasing level of consciousness. Levothyroxine was stopped two months ago. Which does the nurse suspect?",
+     "stem": "A patient with known hypothyroidism is admitted with a temperature of 34.8 C, a pulse of 44, and a decreasing level of consciousness. He stopped his levothyroxine two months ago. Which does the nurse suspect?",
      "options": [
       {
        "id": "A",
@@ -24763,7 +24763,7 @@
     {
      "id": "ch56-q6",
      "type": "multiple_choice",
-     "stem": "A patient asks why urination has become so frequent now that the glucose is high. Which explanation is accurate?",
+     "stem": "A patient asks why he is urinating so much now that his glucose is high. Which explanation is accurate?",
      "options": [
       {
        "id": "A",
@@ -24970,7 +24970,7 @@
     {
      "id": "ch56-q7",
      "type": "multiple_choice",
-     "stem": "A 19-year-old with type 1 diabetes is brought to the emergency department. Blood glucose 486 mg/dL, pH 7.21, bicarbonate 11, ketones present in urine, and deep rapid respirations with a fruity odor on the breath. Which does this represent?",
+     "stem": "A 19-year-old man with type 1 diabetes is brought to the emergency department. His blood glucose is 486 mg/dL, pH 7.21, bicarbonate 11, ketones present in urine, with deep rapid respirations and a fruity odor on his breath. Which does this represent?",
      "options": [
       {
        "id": "A",
@@ -25024,7 +25024,7 @@
     {
      "id": "ch56-q8",
      "type": "multiple_choice",
-     "stem": "A 78-year-old with type 2 diabetes is admitted after three days of increasing confusion. Blood glucose 742 mg/dL, serum osmolality 340, pH 7.38, no ketones in urine, and dry mucous membranes with poor skin turgor. Which does this represent?",
+     "stem": "A 78-year-old woman with type 2 diabetes is admitted after three days of increasing confusion. Her blood glucose is 742 mg/dL, serum osmolality 340, pH 7.38, no ketones in urine, with dry mucous membranes and poor skin turgor. Which does this represent?",
      "options": [
       {
        "id": "A",
@@ -25156,7 +25156,7 @@
     {
      "id": "ch56-q10",
      "type": "multiple_choice",
-     "stem": "A nurse finds a patient with type 1 diabetes drowsy, confused and unable to follow instructions. The blood glucose is 44 mg/dL. Which action is correct?",
+     "stem": "A nurse finds a patient with type 1 diabetes drowsy, confused and unable to follow instructions. His blood glucose is 44 mg/dL. Which action is correct?",
      "options": [
       {
        "id": "A",
@@ -25436,7 +25436,7 @@
     {
      "id": "ch56-q13",
      "type": "multiple_choice",
-     "stem": "A nursing student says a patient must have type 1 diabetes because the patient uses insulin. Which response is accurate?",
+     "stem": "A nursing student says a patient must have type 1 diabetes because he uses insulin. Which response is accurate?",
      "options": [
       {
        "id": "A",
@@ -25490,7 +25490,7 @@
     {
      "id": "ch56-q14",
      "type": "multiple_choice",
-     "stem": "A nurse is preparing to administer a diabetes medication to a newly admitted patient. Which assessment should be completed first?",
+     "stem": "A nurse is preparing to administer a diabetes medication to a newly admitted patient. Which assessment should she complete first?",
      "options": [
       {
        "id": "A",
@@ -25544,7 +25544,7 @@
     {
      "id": "ch56-q15",
      "type": "multiple_choice",
-     "stem": "A patient with diabetes is found confused and irritable, with a heart rate of 112. Which action does the nurse take first?",
+     "stem": "A patient with diabetes is found confused and irritable, and his heart rate is 112. Which action does the nurse take first?",
      "options": [
       {
        "id": "A",
@@ -26457,7 +26457,7 @@
     {
      "id": "ch56-g1",
      "type": "multiple_choice",
-     "stem": "A patient with type 1 diabetes calls the clinic reporting vomiting twice and no appetite since morning. The patient has taken no insulin today, reasoning that nothing has been eaten. Glucose an hour ago was 248 mg/dL. Applying sick-day rules, which instruction takes priority?",
+     "stem": "A patient with type 1 diabetes calls the clinic reporting that he has vomited twice and has had no appetite since morning. He has taken no insulin today, reasoning that he has not eaten. His glucose an hour ago was 248 mg/dL. Applying sick-day rules, which instruction takes priority?",
      "options": [
       {
        "id": "A",
