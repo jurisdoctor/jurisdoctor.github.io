@@ -12,9 +12,11 @@ const slotNow = () => Math.floor(Date.now() / STEP);
 const Flash = ({
   items,
   className,
+  fluid = false,
 }: {
   items: string[];
   className?: string;
+  fluid?: boolean;
 }) => {
   const [index, setIndex] = useState(0);
 
@@ -37,7 +39,7 @@ const Flash = ({
   return (
     <span
       className={`inline-block text-center tabular-nums ${className ?? ""}`}
-      style={{ minWidth: `min(${widest}ch, 100%)`, maxWidth: "100%" }}
+      style={fluid ? undefined : { minWidth: `${widest}ch` }}
     >
       <span key={index} className="flash-num">
         {items[index]}

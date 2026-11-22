@@ -188,7 +188,7 @@ const LavaCanvas = ({
     let vw = 0;
     let vh = 0;
     let shrink = 1;
-    const LEVELS = [1.5, 1, 0.75, 0.5];
+    const LEVELS = [1.5, 1, 0.75];
     let level = 0;
     let every = 30;
     const fit = () => {
@@ -237,7 +237,7 @@ const LavaCanvas = ({
             level += 1;
             fit();
           } else {
-            every = Math.min(every * 2, 500);
+            every = Math.min(every * 1.5, 100);
           }
         }
       }

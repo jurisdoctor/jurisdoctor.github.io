@@ -245,6 +245,11 @@ const Quiz = ({
     onMove(at);
   }, [at, onMove]);
 
+  useEffect(() => {
+    if (redo === 0) return;
+    topRef.current?.scrollIntoView({ behavior: "auto", block: "start" });
+  }, [redo]);
+
   const question = questions[at];
   if (!question) return null;
 
@@ -294,10 +299,6 @@ const Quiz = ({
     setChosen([]);
     setAnswered(false);
     setRedo((prev) => prev + 1);
-    topRef.current?.scrollIntoView({
-      behavior: calm() ? "auto" : "smooth",
-      block: "start",
-    });
   };
 
   const next = () => {

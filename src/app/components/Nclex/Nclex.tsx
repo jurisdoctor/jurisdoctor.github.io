@@ -159,9 +159,16 @@ const FINAL_KINDS: { id: FinalKind; label: string }[] = [
   { id: "concepts", label: "Concepts" },
 ];
 
+const ofKind = (question: QuestionType, id: FinalKind) =>
+  id === "concepts"
+    ? hasTag(question, "concepts") || hasTag(question, "concept")
+    : hasTag(question, id);
+
+const SPLIT_EXAMS: string[] = ["final", "exam3"];
+
 const FINAL_TALLIES: KindType[] = FINAL_KINDS.map((entry) => ({
   label: entry.label,
-  match: (question: QuestionType) => hasTag(question, entry.id),
+  match: (question: QuestionType) => ofKind(question, entry.id),
 }));
 
 const validView = (saved: ViewType) =>
@@ -730,11 +737,11 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
     () => "application",
     (value) => value === "application" || value === "concepts",
   );
-  const finalView = kind === "nclex" && exam === "final";
+  const finalView = kind === "nclex" && SPLIT_EXAMS.includes(exam);
   const shownBank = useMemo(
     () =>
       bank && finalView
-        ? filterBank(bank, (question) => hasTag(question, finalKind))
+        ? filterBank(bank, (question) => ofKind(question, finalKind))
         : bank,
     [bank, finalView, finalKind],
   );
@@ -845,7 +852,7 @@ const Nclex = ({ kind = "nclex" }: { kind?: SetKind }) => {
                               <span className="ml-2 text-xs font-normal opacity-70">
                                 {
                                   pool.filter((question) =>
-                                    hasTag(question, entry.id),
+                                    ofKind(question, entry.id),
                                   ).length
                                 }
                               </span>

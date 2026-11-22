@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "site de tom",
 };
 
-const WEBKIT_SCRIPT = `(function(){try{var u=navigator.userAgent;if(/iP(hone|ad|od)/.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1)||/[?&]lava=canvas/.test(location.search)){document.documentElement.classList.add("no-goo");}}catch(e){}})();`;
+const WEBKIT_SCRIPT = `(function(){try{var u=navigator.userAgent;if(/iP(hone|ad|od)|Android|Mobi/.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1)||window.matchMedia("(max-width: 1023px)").matches||/[?&]lava=canvas/.test(location.search)){document.documentElement.classList.add("no-goo");}}catch(e){}})();`;
 
 const THEME_SCRIPT = `(function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();`;
 

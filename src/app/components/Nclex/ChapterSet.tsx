@@ -664,6 +664,7 @@ const ChapterSet = ({
               {shown.members && shown.members.length > 1 ? (
                 shown.members.some((member) => member.named) ? (
                   <Flash
+                    fluid
                     className="!text-left"
                     items={shown.members.map(
                       (member) => `${memberName(member)} · ${member.title}`,
