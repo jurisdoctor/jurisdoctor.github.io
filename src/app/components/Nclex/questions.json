@@ -1063,9 +1063,9 @@
       },
       {
        "id": "D",
-       "text": "Schedule a surgeon follow-up appointment in two weeks",
+       "text": "Reassure the patient that the wound will most likely be healed before the fourteen days are up",
        "correct": false,
-       "rationale": "The appointment is appropriate, and it falls thirteen days after the first dressing is due."
+       "rationale": "False reassurance about a 6 cm wound with moderate drainage, and it gives him a reason to skip the plan."
       },
       {
        "id": "E",
@@ -2176,7 +2176,7 @@
     {
      "id": "ch4-q3",
      "type": "multiple_choice",
-     "stem": "An 86-year-old moved into an adult child's home three weeks ago after living in the same house for 40 years. The patient is tearful, has stopped a daily morning walk, and is disoriented to place in the evenings. Cognition was intact at the last clinic visit. Which nursing action is most appropriate?",
+     "stem": "An 86-year-old moved into an adult child's home three weeks ago after living in the same house for 40 years. The patient is tearful, has stopped a daily morning walk, and is disoriented to place in the evenings. Cognition was intact at the last clinic visit. There is no fever, the medications are unchanged, and attention is steady through the day. Which nursing action is most appropriate?",
      "options": [
       {
        "id": "A",
@@ -2188,7 +2188,7 @@
        "id": "B",
        "text": "Request a cognitive screening tool to establish the degree of impairment",
        "correct": false,
-       "rationale": "Measures the deficit without looking for its cause, and the stem tells you her cognition was intact three weeks ago."
+       "rationale": "Steady attention and no acute cause makes this relocation rather than a new cognitive problem. Screening now measures the upheaval, not her baseline."
       },
       {
        "id": "C",
@@ -4888,9 +4888,9 @@
       },
       {
        "id": "C",
-       "text": "Training the receptionist to respond calmly when a patient discloses family structure",
+       "text": "Posting the clinic's nondiscrimination policy at the reception desk",
        "correct": false,
-       "rationale": "Worth doing, and it addresses the reaction rather than the assumption. He still has to correct a form that assumed his family wrong."
+       "rationale": "A policy on the wall does not change what the form demanded of him. The exchange still happens."
       },
       {
        "id": "D",
@@ -4901,7 +4901,7 @@
      ],
      "answer": "A",
      "takeaway": "Foster an inclusive environment: update policies and forms, display symbols of inclusivity, and build sexual orientation and gender identity into records.",
-     "strategy": "Three options improve what happens after the assumption is made. Only one removes the assumption.",
+     "strategy": "Three options are visible gestures of inclusion. Only one removes the thing that forced him to correct the form at a public desk.",
      "elimination": {
       "strategies": [
        "Treat each option as true or false"
@@ -4926,7 +4926,7 @@
     {
      "id": "ch5-q2",
      "type": "multiple_choice",
-     "stem": "During the exchange above, the receptionist realizes what she has said. Which response is most appropriate at that moment?",
+     "stem": "A receptionist tells a teenage boy that the mother's and father's names are required on the intake form. He says quietly that he has two dads, and she announces loudly across a full waiting area that he does not have a mother. Heads turn and he starts for the door. She realizes what she has said. Which response is most appropriate at that moment?",
      "options": [
       {
        "id": "A",
@@ -5419,55 +5419,55 @@
     {
      "id": "ch5-q9",
      "type": "multiple_choice",
-     "stem": "A nurse notices that several LGBTQ+ patients have not returned after a first visit, and two described feeling judged by staff. Which consequence should the nurse anticipate?",
+     "stem": "A patient tells the nurse she has not seen a provider in four years. She explains that at her last clinic staff repeatedly used the wrong name and asked questions she found intrusive, so she stopped going. Which action takes priority at this visit?",
      "options": [
       {
        "id": "A",
-       "text": "Patients will seek the same care from a different provider promptly",
+       "text": "Apologize for the previous clinic and reassure her that this one is different",
        "correct": false,
-       "rationale": "Optimistic. Avoidance after a bad experience is more often avoidance of care generally, not a smooth transfer."
+       "rationale": "Warmth that changes nothing clinically. Four years of missed care is still sitting in front of you."
       },
       {
        "id": "B",
-       "text": "Conditions will present later and at a more advanced stage",
+       "text": "Review which routine screenings and preventive care she has missed in those four years",
        "correct": true,
-       "rationale": "Lack of affirmation discourages service utilization. People who stop coming still get ill, and they arrive when the illness is harder to treat."
+       "rationale": "Avoidance after a non-affirming experience is how conditions get found late. The gap in care is the clinical problem her story created."
       },
       {
        "id": "C",
-       "text": "Outcomes will be unaffected, since the clinical care given was appropriate",
+       "text": "Document the previous clinic's conduct in the chart",
        "correct": false,
-       "rationale": "Care that is clinically correct and delivered in a way that stops someone returning has not worked."
+       "rationale": "This records the history instead of acting on it, and the chart is not where that complaint belongs."
       },
       {
        "id": "D",
-       "text": "The clinic's satisfaction scores will fall, prompting a review",
+       "text": "Ask her to describe in detail what happened at the previous clinic",
        "correct": false,
-       "rationale": "People who stop attending often stop responding to surveys too, so the scores may not show it at all."
+       "rationale": "This turns her visit into a debrief of her worst experience. She has already told you enough to act on."
       }
      ],
      "answer": "B",
-     "takeaway": "Lack of affirmation discourages service utilization, and delayed presentation is how that shows up in outcomes.",
-     "strategy": "One distractor assumes people move smoothly to another provider. One assumes the problem will announce itself in the data.",
+     "takeaway": "A non-affirming environment drives avoidance, and avoidance shows up as a gap in screening and preventive care. Close the gap.",
+     "strategy": "One distractor is warmth, one is documentation, one is more history. Only one of them treats the four years as the finding.",
      "elimination": {
       "strategies": [
-       "Treat each option as true or false"
+       "Ask which option changes her care today"
       ],
       "steps": [
        {
-        "action": "Ask what happens to someone who stops attending",
-        "detail": "The illness continues."
+        "action": "Find the clinical finding in the stem",
+        "detail": "Four years without care."
        },
        {
-        "action": "Cut the smooth-transfer option",
-        "detail": "Avoidance generalizes."
+        "action": "Cut the apology and the detailed history",
+        "detail": "Neither closes the gap."
        },
        {
-        "action": "Cut the satisfaction option",
-        "detail": "Those who leave stop responding."
+        "action": "Cut documentation",
+        "detail": "It records rather than acts."
        }
       ],
-      "verdict": "That leaves later presentation at a more advanced stage."
+      "verdict": "That leaves reviewing the screenings and preventive care she has missed."
      }
     },
     {
@@ -5800,13 +5800,13 @@
     {
      "id": "ch5-q13",
      "type": "multiple_choice",
-     "stem": "A nurse is assigned a transgender patient, tells the charge nurse that affirming care conflicts with the nurse's personal beliefs, and asks to be reassigned. Which basis establishes the obligation to care for this patient?",
+     "stem": "A nurse is assigned a transgender patient, tells the charge nurse that affirming care conflicts with the nurse's personal beliefs, and asks to be reassigned. Which basis for the obligation to care for this patient comes from the nursing profession itself?",
      "options": [
       {
        "id": "A",
        "text": "Facility policy requires staff to use patients' stated names and pronouns",
        "correct": false,
-       "rationale": "Policy may well require it, and policy is not the ethical basis. Policies vary; the code does not."
+       "rationale": "Real and binding, and it comes from the employer rather than from the profession."
       },
       {
        "id": "B",
@@ -5818,7 +5818,7 @@
        "id": "C",
        "text": "State law protects patients from discrimination in health care settings",
        "correct": false,
-       "rationale": "Legal protections differ by state and by year. The professional obligation does not."
+       "rationale": "Real and binding, and it comes from the legislature rather than from the profession."
       },
       {
        "id": "D",
@@ -10988,7 +10988,7 @@
     {
      "id": "ch9-q1",
      "type": "multiple_choice",
-     "stem": "A nursing student caring for the patient above teaches the importance of taking insulin as prescribed and how to make healthy food choices. The patient nods and reports no questions. Which assessment should the student have made first?",
+     "stem": "A nursing student is caring for a patient with type 2 diabetes who is currently living in a shelter. The student teaches the importance of taking insulin as prescribed and how to make healthy food choices. The patient nods and reports no questions. Which assessment should the student have made first?",
      "options": [
       {
        "id": "A",
@@ -11042,7 +11042,7 @@
     {
      "id": "ch9-q2",
      "type": "multiple_choice",
-     "stem": "The nurse asks the same patient about insulin storage. The patient explains that the shelter has one shared refrigerator that is often full, meals are served at fixed times that are not always possible to attend, and supplies are kept in a locker. Which conclusion is most accurate?",
+     "stem": "A nurse asks a patient with type 2 diabetes who is living in a shelter about insulin storage. The patient explains that the shelter has one shared refrigerator that is often full, meals are served at fixed times that are not always possible to attend, and supplies are kept in a locker. Which conclusion is most accurate?",
      "options": [
       {
        "id": "A",
@@ -31079,7 +31079,7 @@
    "questions": [
     {
      "id": "sk7-q4",
-     "stem": "A student sets up a sterile field for a dressing change on a wound with a temperature of 38.4 C, then reaches across the field to retrieve gauze from the far side. Nothing visibly touched the drape. Which action should the nurse take?",
+     "stem": "A student sets up a sterile field for a dressing change on a patient with a temperature of 38.4 C, then reaches across the field to retrieve gauze from the far side. Nothing visibly touched the drape. Which action should the nurse take?",
      "options": [
       {
        "id": "A",
