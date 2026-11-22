@@ -332,25 +332,25 @@
           "options": [
             {
               "id": "A",
-              "text": "The colleague is accountable, because she prepared the dose",
+              "text": "The colleague is accountable",
               "correct": false,
               "rationale": "The colleague does answer for drawing it up wrong. That takes nothing away from the nurse who pushed it."
             },
             {
               "id": "B",
-              "text": "She is accountable, because the nurse who gives a medication answers for it",
+              "text": "She is accountable",
               "correct": true,
               "rationale": "Preparing a drug and giving it are two separate acts, and each nurse answers for her own. Once she picked up that syringe, verifying it became her job."
             },
             {
               "id": "C",
-              "text": "Both share accountability equally, because both handled the syringe",
+              "text": "Both share accountability equally",
               "correct": false,
               "rationale": "Accountability is not split between them like a bill. Each one answers in full for what she personally did."
             },
             {
               "id": "D",
-              "text": "This is a system failure, because the unit routinely leaves syringes out",
+              "text": "This is a system failure",
               "correct": false,
               "rationale": "Leaving syringes at the bedside is a real system problem, and it still does not excuse giving a drug nobody verified."
             }
@@ -1570,25 +1570,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Assessment, by not obtaining the vital signs",
+              "text": "Assessment",
               "correct": false,
               "rationale": "The vital signs were taken on schedule. The failure came after the data existed, not in collecting it."
             },
             {
               "id": "B",
-              "text": "Diagnosis, by not naming an active nursing problem",
+              "text": "Diagnosis",
               "correct": false,
               "rationale": "Naming the problem is the weaker charge here. A change was recognized and recorded, and then nothing was done with it."
             },
             {
               "id": "C",
-              "text": "Evaluation, by not reassessing after the change",
+              "text": "Evaluation",
               "correct": true,
               "rationale": "Evaluation is the standard that makes you look again after something shifts. A charted change with no reassessment and no call is that loop left open for three hours."
             },
             {
               "id": "D",
-              "text": "Planning, by not writing measurable patient outcomes",
+              "text": "Planning",
               "correct": false,
               "rationale": "Measurable outcomes matter. A missing outcome statement is not what let this patient slide for three hours."
             }
@@ -1678,25 +1678,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Health and health care, through no insurance coverage",
+              "text": "Health and health care",
               "correct": false,
               "rationale": "This is the pull of the question. It is an access problem, and her insurance is active, so coverage is not what is blocking her."
             },
             {
               "id": "B",
-              "text": "Neighborhood and built environment, through poor transit",
+              "text": "Neighborhood and built environment",
               "correct": false,
               "rationale": "She lives four blocks away. Distance and transport are not the barrier here."
             },
             {
               "id": "C",
-              "text": "Economic stability, through unpaid time away from work",
+              "text": "Economic stability",
               "correct": true,
               "rationale": "Going to the clinic costs her wages. When the clinic's open hours and her paid hours are the same hours, the barrier is economic even though the door is open."
             },
             {
               "id": "D",
-              "text": "Social and community context, through weak family support",
+              "text": "Social and community context",
               "correct": false,
               "rationale": "Nothing in the history points to isolation. Inventing a support deficit is how this option gets picked."
             }
@@ -1786,25 +1786,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Advanced beginner, recognizing recurring aspects of care",
+              "text": "Advanced beginner",
               "correct": false,
               "rationale": "An advanced beginner needs the findings to be there before the picture registers. This nurse read the room before any data existed."
             },
             {
               "id": "B",
-              "text": "Competent, planning care against long-range goals",
+              "text": "Competent",
               "correct": false,
               "rationale": "Competence shows up as deliberate planning, usually around two to three years in. It is organized rather than perceptive."
             },
             {
               "id": "C",
-              "text": "Proficient, perceiving the situation as a whole",
+              "text": "Proficient",
               "correct": true,
               "rationale": "A proficient nurse takes in the whole situation and notices when it does not look the way it usually does. Normal vital signs did not reassure her, and that is the clue."
             },
             {
               "id": "D",
-              "text": "Expert, no longer relying on analytic principles",
+              "text": "Expert",
               "correct": false,
               "rationale": "This is the near miss, and the tiebreak is what she did next. An expert acts on the grasp; this nurse recognized something was off and handed it on to be analyzed."
             }
@@ -1948,25 +1948,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Quality improvement, because the unit changed a process to improve outcomes",
+              "text": "Quality improvement",
               "correct": false,
               "rationale": "Quality improvement starts from the unit's own performance data and tests a change against it. This change started from published evidence."
             },
             {
               "id": "B",
-              "text": "Nursing research, because the unit is using research findings",
+              "text": "Nursing research",
               "correct": false,
               "rationale": "Research generates new knowledge. Using someone else's findings is not conducting research."
             },
             {
               "id": "C",
-              "text": "Benchmarking, because the unit compared itself against a standard",
+              "text": "Benchmarking",
               "correct": false,
               "rationale": "Benchmarking compares performance against other units or a target, and no comparison was made."
             },
             {
               "id": "D",
-              "text": "Evidence-based practice, because external research was applied to practice",
+              "text": "Evidence-based practice",
               "correct": true,
               "rationale": "Appraising existing research and applying it to care is evidence-based practice."
             }
@@ -3381,7 +3381,7 @@
             },
             {
               "id": "B",
-              "text": "The functional decline needs investigating, because it is not explained by her improving illness",
+              "text": "The functional decline needs investigating",
               "correct": true,
               "rationale": "A decline of this speed signals something treatable. Deconditioning from bed rest, a new medication, or an unrecognized problem all need excluding."
             },
@@ -3393,7 +3393,7 @@
             },
             {
               "id": "D",
-              "text": "The decline reflects her age, since function naturally declines after 90",
+              "text": "The decline reflects her age",
               "correct": false,
               "rationale": "Age is not a diagnosis. Function does not fall from independent to two-person assist in four days because of a birthday."
             }
@@ -7480,25 +7480,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Health equity, matching resources to patient need",
+              "text": "Health equity",
               "correct": true,
               "rationale": "Equity asks what a patient needs to reach the same outcome. The interpreted visit needs more minutes to deliver the same teaching, so identical scheduling produces unequal care."
             },
             {
               "id": "B",
-              "text": "Health equality, giving every patient the same thing",
+              "text": "Health equality",
               "correct": false,
               "rationale": "The emotionally satisfying answer and the wrong one. Equality is exactly what the clinic is already doing, and it is what created the gap."
             },
             {
               "id": "C",
-              "text": "Beneficence, acting in the patient's best interest",
+              "text": "Beneficence",
               "correct": false,
               "rationale": "This is true of the nurse's motive and too broad to name the problem. Beneficence does not explain why giving everyone the same thing fails here."
             },
             {
               "id": "D",
-              "text": "Cultural competence, learning about patient groups",
+              "text": "Cultural competence",
               "correct": false,
               "rationale": "Knowledge about groups would not add the minutes back. The barrier is structural rather than informational."
             }
@@ -8340,25 +8340,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Clinical, because his lung disease is progressing",
+              "text": "Clinical",
               "correct": false,
               "rationale": "Nothing in the stem says the disease has worsened. He describes a loss that the clinical model cannot see."
             },
             {
               "id": "B",
-              "text": "Adaptive, because he has failed to adjust to his diagnosis",
+              "text": "Adaptive",
               "correct": false,
               "rationale": "He uses his inhalers correctly and has changed his activity. That is adaptation, not failure to adapt."
             },
             {
               "id": "C",
-              "text": "Role performance, because he cannot perform his usual activities",
+              "text": "Role performance",
               "correct": false,
               "rationale": "The near-miss, and singing in a choir is not a societal or work role. What he lost was meaning rather than function."
             },
             {
               "id": "D",
-              "text": "Eudaimonistic, because meaning and life satisfaction have gone",
+              "text": "Eudaimonistic",
               "correct": true,
               "rationale": "He is managing the disease and performing daily tasks. What has gone is the thing that made his life feel like his own."
             }
@@ -9232,25 +9232,25 @@
           "options": [
             {
               "id": "A",
-              "text": "The clinical model, because his glucose is being monitored",
+              "text": "The clinical model",
               "correct": false,
               "rationale": "The clinical model measures absence of disease. He has diabetes, so this model does not judge him healthy."
             },
             {
               "id": "B",
-              "text": "The adaptive model, because he has adjusted to the change",
+              "text": "The adaptive model",
               "correct": true,
               "rationale": "Adaptive health is the ability to adapt flexibly, and coping with a new diagnosis is the standard example of it."
             },
             {
               "id": "C",
-              "text": "The role performance model, because he keeps working",
+              "text": "The role performance model",
               "correct": false,
               "rationale": "This is plausible, and the stem is about how he adjusted rather than which roles he still fills. Working is evidence, not the model being described."
             },
             {
               "id": "D",
-              "text": "The eudaimonistic model, because he has found meaning",
+              "text": "The eudaimonistic model",
               "correct": false,
               "rationale": "He describes routine, not meaning or growth. This model would need more than competent management."
             }
@@ -9916,55 +9916,55 @@
         {
           "id": "ch6-h4",
           "type": "multiple_choice",
-          "stem": "A patient with well-controlled type 1 diabetes says her condition no longer feels like an illness, just something she does. Which model of health does her description fit?",
+          "stem": "A man with chronic back pain takes daily medication, has permanent degenerative changes on imaging, and works full time as an electrician without restriction. He tells the nurse he considers himself a healthy man. Which model of health is he using?",
           "options": [
             {
               "id": "A",
-              "text": "The adaptive model",
-              "correct": true,
-              "rationale": "She has adapted successfully to a permanent condition, which is what this model calls health."
+              "text": "The clinical model",
+              "correct": false,
+              "rationale": "The clinical model would call him unhealthy, since disease is present on imaging."
             },
             {
               "id": "B",
-              "text": "The clinical model",
-              "correct": false,
-              "rationale": "The clinical model would call her ill, since the disease is present."
+              "text": "The role performance model",
+              "correct": true,
+              "rationale": "Health in this model is the ability to fulfill one's roles, and he is doing his job without restriction."
             },
             {
               "id": "C",
-              "text": "The eudaimonistic model",
+              "text": "The adaptive model",
               "correct": false,
-              "rationale": "That model asks whether she is realizing her potential, which she has not described."
+              "rationale": "The adaptive model is about flexible adjustment to change, and he describes capability rather than adjustment."
             },
             {
               "id": "D",
-              "text": "The health-illness continuum",
+              "text": "The eudaimonistic model",
               "correct": false,
-              "rationale": "The continuum places her somewhere on a range. It does not describe adaptation as health."
+              "rationale": "The eudaimonistic model looks at meaning and self-actualization, which he does not mention."
             }
           ],
-          "answer": "A",
-          "takeaway": "Adaptive health is the ability to adapt flexibly to change. Eudaimonistic health is self-actualization.",
-          "strategy": "Adaptive and eudaimonistic both sound positive. The separator is whether she describes coping or flourishing.",
+          "answer": "B",
+          "takeaway": "Role performance judges health by whether you can do your work. Clinical judges it by absence of disease. Adaptive by adjustment, eudaimonistic by meaning.",
+          "strategy": "Working despite disease fits two models on a quick read. He names the job, not the adjustment and not the meaning.",
           "elimination": {
             "strategies": [
-              "Listen for what she claims"
+              "Ask what he offers as evidence of health"
             ],
             "steps": [
               {
-                "action": "Coping, routine, management",
-                "detail": "Adaptation."
+                "action": "He works without restriction",
+                "detail": "Role performance."
               },
               {
-                "action": "Meaning, growth, potential",
-                "detail": "Absent."
+                "action": "Cut clinical",
+                "detail": "Disease is present."
               },
               {
-                "action": "Cut eudaimonistic",
-                "detail": "Nothing about fulfilment."
+                "action": "Cut adaptive and eudaimonistic",
+                "detail": "Neither adjustment nor meaning is mentioned."
               }
             ],
-            "verdict": "That leaves the adaptive model."
+            "verdict": "That leaves the role performance model."
           },
           "new": true,
           "difficulty": "difficult"
@@ -9976,25 +9976,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Symptom experience, because he has recognized something is wrong",
+              "text": "Symptom experience",
               "correct": false,
               "rationale": "He recognized it weeks ago. What is new is that he has told someone and changed what he does."
             },
             {
               "id": "B",
-              "text": "Assuming the sick role, because he has told others and given up his usual activities",
+              "text": "Assuming the sick role",
               "correct": true,
               "rationale": "Telling people, giving up normal roles and seeking confirmation are what define this stage."
             },
             {
               "id": "C",
-              "text": "Dependence, because he has asked his wife to arrange care",
+              "text": "Dependence",
               "correct": false,
               "rationale": "Dependence is accepting care and relinquishing decisions after treatment begins, which has not happened."
             },
             {
               "id": "D",
-              "text": "Recovery, because he is taking action about the problem",
+              "text": "Recovery",
               "correct": false,
               "rationale": "Recovery follows treatment and a return to prior roles."
             }
@@ -10028,55 +10028,55 @@
         {
           "id": "ch6-h6",
           "type": "multiple_choice",
-          "stem": "A man declines a follow-up appointment, saying his family has always handled illness at home and that going to a clinic means you are seriously ill. Which influence on his health practices does this represent?",
+          "stem": "A man declines a follow-up appointment, saying his family has always handled illness at home and that going to a clinic means you are seriously ill. Which variable is shaping his health practices?",
           "options": [
             {
               "id": "A",
-              "text": "An internal variable, because it reflects how he perceives his own functioning",
+              "text": "His perception of how well he is functioning",
               "correct": false,
-              "rationale": "Perception of functioning is internal and he has said nothing about how he feels physically."
+              "rationale": "An internal variable, and he has said nothing about how he feels physically."
             },
             {
               "id": "B",
-              "text": "An internal variable, because it reflects his emotional response to being unwell",
+              "text": "His emotional response to being unwell",
               "correct": false,
-              "rationale": "Emotional factors are internal, and what he describes is a family pattern rather than a feeling."
+              "rationale": "Also internal, and what he describes is a family pattern rather than a feeling."
             },
             {
               "id": "C",
-              "text": "An external variable, because family practices shape what he does when ill",
+              "text": "His family's practices when someone is ill",
               "correct": true,
-              "rationale": "Family practices are an external variable and they are among the strongest predictors of when a person seeks care."
+              "rationale": "Family practices are an external variable, and they are among the strongest predictors of when a person seeks care."
             },
             {
               "id": "D",
-              "text": "An external variable, because the cost of the appointment is the obstacle",
+              "text": "The cost of the appointment",
               "correct": false,
-              "rationale": "Socioeconomic factors are external, and he has not raised cost."
+              "rationale": "An external variable and not this one, since he never raises cost."
             }
           ],
           "answer": "C",
           "takeaway": "Internal variables are what the person brings: developmental stage, perception of functioning, emotional and spiritual factors. External variables come from around him: family practices, socioeconomic status, culture.",
-          "strategy": "Two options pick the right category and the wrong reason, so read the reason clause before choosing.",
+          "strategy": "Two options are internal and two are external, so naming the category is not enough. The question is which specific influence he described.",
           "elimination": {
             "strategies": [
-              "Locate the source of the influence"
+              "Find what he actually said"
             ],
             "steps": [
               {
-                "action": "What his family has always done",
-                "detail": "Outside him."
+                "action": "His family has always handled illness at home",
+                "detail": "A family practice."
               },
               {
-                "action": "Cut both internal options",
-                "detail": "Nothing about feeling or emotion."
+                "action": "Cut perception and emotion",
+                "detail": "Nothing about how he feels."
               },
               {
-                "action": "Cut the cost reason",
-                "detail": "He never mentions cost."
+                "action": "Cut cost",
+                "detail": "He never mentions it."
               }
             ],
-            "verdict": "That leaves family practices as an external variable."
+            "verdict": "That leaves his family's practices."
           },
           "new": true,
           "difficulty": "difficult"
@@ -10088,25 +10088,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Primary prevention, because it prevents a new cancer",
+              "text": "Primary prevention",
               "correct": false,
               "rationale": "Primary prevention applies before disease occurs, and she has already had it."
             },
             {
               "id": "B",
-              "text": "Secondary prevention, because it is part of follow-up surveillance",
+              "text": "Secondary prevention",
               "correct": false,
               "rationale": "Secondary prevention is early detection. An exercise program detects nothing."
             },
             {
               "id": "C",
-              "text": "Tertiary prevention, because it reduces complications of an existing condition",
+              "text": "Tertiary prevention",
               "correct": true,
               "rationale": "Tertiary prevention limits complications and disability in someone who already has the disease."
             },
             {
               "id": "D",
-              "text": "Health promotion, because exercise and nutrition improve general wellbeing",
+              "text": "Health promotion",
               "correct": false,
               "rationale": "Exercise and nutrition do promote health, and here they target a specific disease outcome in a person who has that disease."
             }
@@ -11782,25 +11782,25 @@
           "options": [
             {
               "id": "A",
-              "text": "The second nurse, because she offered more time",
+              "text": "The second nurse",
               "correct": false,
               "rationale": "Offered time is not attention. Her body is already leaving."
             },
             {
               "id": "B",
-              "text": "The first nurse, because her attention is undivided",
+              "text": "The first nurse",
               "correct": true,
               "rationale": "Presence is full attention in the moment, and ten honest minutes of it outweigh an open-ended offer delivered from the doorway."
             },
             {
               "id": "C",
-              "text": "Neither, because presence requires an unlimited commitment",
+              "text": "Neither",
               "correct": false,
               "rationale": "Presence is not measured in hours."
             },
             {
               "id": "D",
-              "text": "Both, because each has made herself available",
+              "text": "Both",
               "correct": false,
               "rationale": "Availability and presence are different. One is a schedule, the other is attention."
             }
@@ -12066,7 +12066,7 @@
           "options": [
             {
               "id": "A",
-              "text": "She is right, since emotional distance protects clinical judgment",
+              "text": "She is right",
               "correct": false,
               "rationale": "Detachment is not a component of professional caring and it does not protect judgment."
             },
@@ -12078,7 +12078,7 @@
             },
             {
               "id": "C",
-              "text": "She should seek support, since this indicates compassion fatigue",
+              "text": "She should seek support",
               "correct": false,
               "rationale": "Nothing in the stem describes numbness toward patients or a loss of empathy."
             },
@@ -13213,25 +13213,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Self-management support, since the patient stopped managing the conditions",
+              "text": "Self-management support",
               "correct": false,
               "rationale": "This describes the outcome rather than the cause. He stopped because the system was incoherent, not because he lacked the skill."
             },
             {
               "id": "B",
-              "text": "Delivery system design, because the care was never organized around him",
+              "text": "Delivery system design",
               "correct": true,
               "rationale": "Delivery system design determines how care is arranged and who does what. Three services working separately is a design failure, not a patient failure."
             },
             {
               "id": "C",
-              "text": "Community, since local resources are lacking for support",
+              "text": "Community",
               "correct": false,
               "rationale": "Nothing in the stem concerns community resources. The problem is inside the health service."
             },
             {
               "id": "D",
-              "text": "Clinical information systems, since records were incomplete across sites",
+              "text": "Clinical information systems",
               "correct": false,
               "rationale": "This is plausible and it is not what he said. He describes conflicting advice, not missing records."
             }
@@ -14196,55 +14196,59 @@
         {
           "id": "ch8-h6",
           "type": "multiple_choice",
-          "stem": "A patient with three chronic conditions sees four specialists who each adjust their own medications. He has been admitted twice this year for interactions. Which Chronic Care Model component would most directly address this?",
+          "stem": "A patient with heart failure is admitted for the third time this year. The unit has no current heart failure pathway, and each nurse teaches discharge weights differently depending on what she was taught.",
           "options": [
             {
               "id": "A",
-              "text": "Delivery system design",
-              "correct": true,
-              "rationale": "How care is organized and who coordinates it is what determines whether four prescribers act as one team."
+              "text": "Self-management support",
+              "correct": false,
+              "rationale": "The patient is not refusing to manage. The staff cannot agree on what to teach him."
             },
             {
               "id": "B",
-              "text": "Self-management support",
+              "text": "Delivery system design",
               "correct": false,
-              "rationale": "Teaching him to track his own medications helps, and it places the burden of coordination on the patient."
+              "rationale": "Delivery system design is about how visits and roles are organized, and the failure here is in what guides the care rather than who delivers it."
             },
             {
               "id": "C",
               "text": "Decision support",
-              "correct": false,
-              "rationale": "Each specialist may be prescribing correctly within his own specialty."
+              "correct": true,
+              "rationale": "Evidence-based guidelines embedded where care happens are what is missing, and without them practice varies by whoever is on."
             },
             {
               "id": "D",
-              "text": "Health system",
+              "text": "Clinical information systems",
               "correct": false,
-              "rationale": "The health system component concerns the organization's culture and priorities rather than how a care team is structured."
+              "rationale": "The records are not the problem. The guidance is."
             }
           ],
-          "answer": "A",
-          "takeaway": "Delivery system design is how care is organized: who does what, who coordinates, and how the team is structured.",
-          "strategy": "Self-management support is the tempting answer because the patient could track it. Ask whose job coordination should be.",
+          "answer": "C",
+          "takeaway": "Decision support puts current evidence at the point of care. Delivery system design arranges who does what and when. Without the first, practice varies with whoever is working.",
+          "strategy": "Both middle options describe something organizational. Ask whether what is missing is the arrangement of the care or the guidance behind it.",
           "elimination": {
             "strategies": [
-              "Ask whose failure this is"
+              "Ask what is missing"
             ],
             "steps": [
               {
-                "action": "Four uncoordinated prescribers",
-                "detail": "A structural problem."
+                "action": "A current pathway",
+                "detail": "Guidance."
+              },
+              {
+                "action": "Cut delivery system design",
+                "detail": "Roles and visits are not the issue."
               },
               {
                 "action": "Cut self-management support",
-                "detail": "Shifts the work to him."
+                "detail": "He is not the one failing."
               },
               {
-                "action": "Cut decision support",
-                "detail": "Each may be individually right."
+                "action": "Cut information systems",
+                "detail": "Records are intact."
               }
             ],
-            "verdict": "That leaves delivery system design."
+            "verdict": "That leaves decision support."
           },
           "new": true,
           "difficulty": "difficult"
@@ -15896,25 +15900,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Implicit bias, because the pattern formed without her deciding on it",
+              "text": "Implicit bias",
               "correct": false,
               "rationale": "Implicit bias is the unexamined attitude. What is being described is the care that resulted from it."
             },
             {
               "id": "B",
-              "text": "Stereotyping, because she is applying a group assumption to individuals",
+              "text": "Stereotyping",
               "correct": false,
               "rationale": "Stereotyping is the belief about the group. Again, this describes what she did."
             },
             {
               "id": "C",
-              "text": "Discrimination, because patients in one group received less care than others",
+              "text": "Discrimination",
               "correct": true,
               "rationale": "When an attitude becomes unequal treatment, it is discrimination, whether or not it was intended."
             },
             {
               "id": "D",
-              "text": "Prejudice, because she holds a negative judgment about a group",
+              "text": "Prejudice",
               "correct": false,
               "rationale": "Prejudice is the judgment held. The finding here is measurable in the care delivered."
             }
@@ -16008,25 +16012,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Assimilation, because the original cultural identity has been replaced",
+              "text": "Assimilation",
               "correct": true,
               "rationale": "Assimilation is the full adoption of the new culture with the original given up."
             },
             {
               "id": "B",
-              "text": "Acculturation, because she has adopted the practices of the new culture",
+              "text": "Acculturation",
               "correct": false,
               "rationale": "Acculturation adds the new culture while the original is retained in some form, and hers is not."
             },
             {
               "id": "C",
-              "text": "Biculturalism, because she grew up between two cultures",
+              "text": "Biculturalism",
               "correct": false,
               "rationale": "Biculturalism means operating in both, and she describes only one."
             },
             {
               "id": "D",
-              "text": "Ethnocentrism, because she views her own culture as the standard",
+              "text": "Ethnocentrism",
               "correct": false,
               "rationale": "Ethnocentrism is judging other cultures against your own, which is not described."
             }
@@ -16815,25 +16819,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Recognizing cues, because the new finding restarts the cycle",
+              "text": "Recognizing cues",
               "correct": true,
               "rationale": "Evaluation data becomes new assessment data. An unmet outcome sends you back to gathering, not forward."
             },
             {
               "id": "B",
-              "text": "Taking action, by giving a further dose",
+              "text": "Taking action",
               "correct": false,
               "rationale": "Acting again before knowing why the first action failed, and the reason may not be the dose."
             },
             {
               "id": "C",
-              "text": "Evaluating outcomes, by documenting that the goal was not met",
+              "text": "Evaluating outcomes",
               "correct": false,
               "rationale": "She has already evaluated, and the verdict was not met. The question is what she does next with that verdict."
             },
             {
               "id": "D",
-              "text": "Generating solutions, by choosing a different analgesic",
+              "text": "Generating solutions",
               "correct": false,
               "rationale": "Changing the plan before reassessing skips the step that would tell you what to change it to."
             }
@@ -17268,25 +17272,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Prioritizing hypotheses, by selecting the most urgent problem",
+              "text": "Prioritizing hypotheses",
               "correct": false,
               "rationale": "Only one problem has been named here. Prioritizing needs at least two things competing for first place."
             },
             {
               "id": "B",
-              "text": "Analyzing cues, by clustering the data into a pattern",
+              "text": "Analyzing cues",
               "correct": true,
               "rationale": "Analysis interprets the data, clusters it, and names what it amounts to. Three separate gaps became one problem."
             },
             {
               "id": "C",
-              "text": "Recognizing cues, by identifying which findings are relevant",
+              "text": "Recognizing cues",
               "correct": false,
               "rationale": "Recognizing produced the three findings. Grouping and naming them is the next step."
             },
             {
               "id": "D",
-              "text": "Generating solutions, by planning the teaching he needs",
+              "text": "Generating solutions",
               "correct": false,
               "rationale": "Nothing has been planned yet. She has named the problem and stopped there."
             }
@@ -18196,13 +18200,13 @@
           "options": [
             {
               "id": "A",
-              "text": "Met, because he has made significant progress",
+              "text": "Met",
               "correct": false,
               "rationale": "The outcome named 100 feet twice daily. Progress is not the same as achievement."
             },
             {
               "id": "B",
-              "text": "Partially met, because he improved substantially without reaching the stated target",
+              "text": "Partially met",
               "correct": true,
               "rationale": "Three verdicts exist: met, partially met, not met. Real progress that falls short of the target is what partially met describes."
             },
@@ -18214,7 +18218,7 @@
             },
             {
               "id": "D",
-              "text": "Not met, because he did not reach 100 feet twice daily",
+              "text": "Not met",
               "correct": false,
               "rationale": "Technically accurate about the target and it discards a tripling of his distance, which the plan revision needs to know."
             }
@@ -18563,25 +18567,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Recognizing cues, identifying the relevant findings",
+              "text": "Recognizing cues",
               "correct": false,
               "rationale": "That step already happened when the nurse picked these three numbers out of the shift's data."
             },
             {
               "id": "B",
-              "text": "Analyzing cues, linking the findings to each other",
+              "text": "Analyzing cues",
               "correct": false,
               "rationale": "The near miss. Analysis connects findings to possible explanations. This nurse has gone past that and ranked them."
             },
             {
               "id": "C",
-              "text": "Prioritizing hypotheses, ranking the likeliest cause",
+              "text": "Prioritizing hypotheses",
               "correct": true,
               "rationale": "Two explanations fit the same cues, and the nurse decided which one to act on first. Choosing between competing explanations is what this step is."
             },
             {
               "id": "D",
-              "text": "Generating solutions, choosing among possible actions",
+              "text": "Generating solutions",
               "correct": false,
               "rationale": "That comes after the hypothesis is chosen. Nothing in the stem names an intervention yet."
             }
@@ -18903,13 +18907,13 @@
           "options": [
             {
               "id": "A",
-              "text": "Acute pain at 7, since unrelieved pain affects everything else",
+              "text": "Acute pain at 7",
               "correct": false,
               "rationale": "Pain is urgent and it is not the most immediate physiological threat on this list."
             },
             {
               "id": "B",
-              "text": "Anxiety about discharge, since that is what the patient has identified",
+              "text": "Anxiety about discharge",
               "correct": false,
               "rationale": "Patient preference shapes the plan and does not override an airway or breathing problem."
             },
@@ -18921,7 +18925,7 @@
             },
             {
               "id": "D",
-              "text": "Risk for falls, since prevention avoids the greatest harm",
+              "text": "Risk for falls",
               "correct": false,
               "rationale": "A risk diagnosis is potential. An actual physiological problem outranks it."
             }
@@ -19436,25 +19440,25 @@
           "options": [
             {
               "id": "A",
-              "text": "The assistive personnel, since the omission occurred in their care",
+              "text": "The assistive personnel",
               "correct": false,
               "rationale": "They answer for their own performance. That does not remove the nurse's accountability for the outcome."
             },
             {
               "id": "B",
-              "text": "Both equally, since the task was a shared responsibility",
+              "text": "Both equally",
               "correct": false,
               "rationale": "Accountability is not divided into halves. Each answers fully for their own part, and the nurse answers for the outcome."
             },
             {
               "id": "C",
-              "text": "The charge nurse, who made the original assignment",
+              "text": "The charge nurse",
               "correct": false,
               "rationale": "The charge nurse answers for the assignment. The nurse who delegated this task answers for this outcome."
             },
             {
               "id": "D",
-              "text": "The nurse, because accountability for the outcome remains after delegating",
+              "text": "The nurse",
               "correct": true,
               "rationale": "The task moves and the accountability does not. She delegated the bath, and she still answers for what happened during it."
             }
@@ -19721,25 +19725,25 @@
           "options": [
             {
               "id": "A",
-              "text": "SBAR, to repeat the report in a clearer structure",
+              "text": "SBAR",
               "correct": false,
               "rationale": "She already reported it using a structure. Repeating the same tool that did not work is unlikely to change the outcome."
             },
             {
               "id": "B",
-              "text": "TeamSTEPPS situation monitoring, to continue observing the patient",
+              "text": "TeamSTEPPS situation monitoring",
               "correct": false,
               "rationale": "Situation monitoring is what produced her concern. It does not communicate it to anyone."
             },
             {
               "id": "C",
-              "text": "CUS, naming concern, discomfort, and a safety issue",
+              "text": "CUS",
               "correct": true,
               "rationale": "CUS exists for the moment when reporting has not produced a response. The graded language makes the concern impossible to file away."
             },
             {
               "id": "D",
-              "text": "The chain of command, going to the nursing supervisor",
+              "text": "The chain of command",
               "correct": false,
               "rationale": "Going over the provider's head fits if CUS fails. Skipping the graded language misses a step that usually works."
             }
@@ -20792,25 +20796,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Right task, because this task may never be delegated",
+              "text": "Right task",
               "correct": false,
               "rationale": "Removal of a peripheral catheter may be delegated in many settings, so the task is not the problem."
             },
             {
               "id": "B",
-              "text": "Right circumstance, because the patient is being discharged",
+              "text": "Right circumstance",
               "correct": false,
               "rationale": "Discharge is a stable circumstance and does not make the delegation unsafe."
             },
             {
               "id": "C",
-              "text": "Right person, because the delegatee is not competent to perform it",
+              "text": "Right person",
               "correct": true,
               "rationale": "Competence of the specific person is what fails here, and the person saying so is the safeguard working."
             },
             {
               "id": "D",
-              "text": "Right supervision, because the charge nurse did not plan to observe",
+              "text": "Right supervision",
               "correct": false,
               "rationale": "Supervision would matter after a valid delegation, and this one fails before that."
             }
@@ -21020,25 +21024,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Total patient care, because one nurse holds the plan for each patient",
+              "text": "Total patient care",
               "correct": false,
               "rationale": "In total patient care, one nurse performs all the care for her patients during the shift, with no team under her."
             },
             {
               "id": "B",
-              "text": "Primary nursing, because she is accountable for the plan across the stay",
+              "text": "Primary nursing",
               "correct": false,
               "rationale": "Primary nursing assigns one nurse accountability for a patient from admission to discharge, not a shift team."
             },
             {
               "id": "C",
-              "text": "Team nursing, because a registered nurse directs a mixed-skill group caring for a set of patients",
+              "text": "Team nursing",
               "correct": true,
               "rationale": "A registered nurse leading staff of different licenses to care for a group of patients is the defining structure."
             },
             {
               "id": "D",
-              "text": "Case management, because she coordinates the care of a defined group",
+              "text": "Case management",
               "correct": false,
               "rationale": "Case management coordinates a patient's care across settings and over time rather than across one shift."
             }
@@ -21544,7 +21548,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Moral distress, because the nurse knows the right action but cannot take it",
+              "text": "Moral distress",
               "correct": false,
               "rationale": "The near-miss. Moral distress is knowing what is right and being unable to do it. Here the right course is contested."
             },
@@ -21562,7 +21566,7 @@
             },
             {
               "id": "D",
-              "text": "An ethical dilemma, because two defensible courses of action conflict",
+              "text": "An ethical dilemma",
               "correct": true,
               "rationale": "A dilemma exists when there are competing legitimate claims and no option satisfies everyone. Both positions have an ethical basis."
             }
@@ -22787,13 +22791,13 @@
           "options": [
             {
               "id": "A",
-              "text": "Patient abandonment, because she left without handing over responsibility",
+              "text": "Patient abandonment",
               "correct": true,
               "rationale": "One of the workforce guidelines. Leaving a scheduled shift without transferring care to someone qualified is abandonment."
             },
             {
               "id": "B",
-              "text": "None, because her contracted hours had ended",
+              "text": "None",
               "correct": false,
               "rationale": "The end of her hours does not end her responsibility until care has been transferred."
             },
@@ -24046,55 +24050,59 @@
         {
           "id": "ch22-h1",
           "type": "multiple_choice",
-          "stem": "A nurse believes a patient's family is prolonging suffering by insisting on continued treatment. The valid advance directive declines it. The team continues anyway. She feels sick before every shift. Which problem is this?",
+          "stem": "A nurse has twice raised with the team that continued treatment is prolonging a dying patient's suffering against his valid advance directive. Nothing has changed and she is assigned to him again tonight. Which action is most appropriate?",
           "options": [
             {
               "id": "A",
-              "text": "An ethical dilemma, because two defensible positions conflict",
-              "correct": false,
-              "rationale": "A dilemma means you do not know which option is right. She knows."
+              "text": "Request an ethics committee consultation",
+              "correct": true,
+              "rationale": "The informal route has been tried twice and failed. The committee exists for exactly this: a structured forum where the directive, the family and the team can be worked through."
             },
             {
               "id": "B",
-              "text": "Moral distress, because she knows what is right and cannot act",
-              "correct": true,
-              "rationale": "The directive settles what is right. Being unable to act on it is what produces the distress."
+              "text": "Refuse the assignment on the grounds of conscience",
+              "correct": false,
+              "rationale": "Conscientious objection has a place and it abandons this patient tonight without resolving anything for the next shift."
             },
             {
               "id": "C",
-              "text": "Compassion fatigue from repeated exposure to suffering",
+              "text": "Tell the family the team is acting against the patient's wishes",
               "correct": false,
-              "rationale": "Compassion fatigue blunts feeling toward patients. She is not numb, she is in conflict."
+              "rationale": "Going to the family outside the team escalates a conflict rather than resolving it, and it puts the nurse between the family and the providers."
             },
             {
               "id": "D",
-              "text": "Burnout from the emotional demands of the unit",
+              "text": "Document her objection in the record and carry out the treatment",
               "correct": false,
-              "rationale": "Burnout is a mismatch with the job. Her problem is a specific course of action she cannot take."
+              "rationale": "Documenting an objection protects the nurse and changes nothing for the patient."
             }
           ],
-          "answer": "B",
-          "takeaway": "A dilemma is two defensible options and no clear right answer. Moral distress is knowing the right answer and being blocked.",
-          "strategy": "The valid directive is the detail that settles it. Without it this would be a dilemma.",
+          "answer": "A",
+          "takeaway": "When the informal route has failed, the ethics committee is the next step. It is a forum, not a tribunal, and asking for one is within any nurse's role.",
+          "strategy": "Three options are things nurses do when they feel unheard. Ask which one moves the patient's situation rather than the nurse's position in it.",
           "elimination": {
             "strategies": [
-              "Ask whether the right action is known"
+              "Ask what has already been tried"
             ],
             "steps": [
               {
-                "action": "The directive declines treatment",
-                "detail": "So yes."
+                "action": "Raising it with the team, twice",
+                "detail": "The informal route is exhausted."
               },
               {
-                "action": "Cut the dilemma",
-                "detail": "Requires uncertainty."
+                "action": "Cut refusing",
+                "detail": "Does not resolve it."
               },
               {
-                "action": "Cut fatigue and burnout",
-                "detail": "Neither describes being blocked."
+                "action": "Cut going to the family",
+                "detail": "Escalates outside the team."
+              },
+              {
+                "action": "Cut documenting and proceeding",
+                "detail": "Protects her, not him."
               }
             ],
-            "verdict": "That leaves moral distress."
+            "verdict": "That leaves the ethics consultation."
           },
           "new": true,
           "difficulty": "difficult"
@@ -24118,13 +24126,13 @@
             },
             {
               "id": "C",
-              "text": "No occurrence report is needed, since the patient came to no harm",
+              "text": "No occurrence report is needed",
               "correct": false,
               "rationale": "A near miss is reported precisely because it reached the patient without harming him."
             },
             {
               "id": "D",
-              "text": "Her documentation is correct, because the report stays separate from the record",
+              "text": "Her documentation is correct",
               "correct": true,
               "rationale": "The record holds what was given and how the patient is. The occurrence report is an internal risk management document."
             }
@@ -24162,25 +24170,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Negligence, because she failed to meet the standard of care",
+              "text": "Negligence",
               "correct": false,
               "rationale": "Negligence is a failure to act reasonably. Restraining someone is an act, and an intentional one."
             },
             {
               "id": "B",
-              "text": "False imprisonment, because the patient was restrained without authority",
+              "text": "False imprisonment",
               "correct": true,
               "rationale": "Restricting a person's movement without consent or a lawful order is false imprisonment, whatever the intention behind it."
             },
             {
               "id": "C",
-              "text": "Battery, because she touched the patient without consent",
+              "text": "Battery",
               "correct": false,
               "rationale": "Battery is harmful or offensive contact. The confinement, rather than the contact, is what the law reaches here."
             },
             {
               "id": "D",
-              "text": "Breach of confidentiality, because the restraint will be visible to others",
+              "text": "Breach of confidentiality",
               "correct": false,
               "rationale": "Confidentiality concerns information, not movement."
             }
@@ -24222,25 +24230,25 @@
           "options": [
             {
               "id": "A",
-              "text": "The patient, because no one has formally declared him incompetent",
+              "text": "The patient",
               "correct": false,
               "rationale": "Consent requires the capacity to understand this decision, and a formal declaration is not what creates or removes that."
             },
             {
               "id": "B",
-              "text": "The provider, acting in the patient's best interest",
+              "text": "The provider",
               "correct": false,
               "rationale": "A provider does not consent on a patient's behalf outside an emergency."
             },
             {
               "id": "C",
-              "text": "Two physicians, under the facility's policy for incapacitated patients",
+              "text": "Two physicians",
               "correct": false,
               "rationale": "Two-physician provisions apply when there is no surrogate, and here there is one."
             },
             {
               "id": "D",
-              "text": "The daughter, because the document gives her authority to decide for him",
+              "text": "The daughter",
               "correct": true,
               "rationale": "An activated durable power of attorney for health care names the person who decides when the patient cannot."
             }
@@ -24390,39 +24398,39 @@
         {
           "id": "ch22-h7",
           "type": "multiple_choice",
-          "stem": "A nurse posts on a private group for nurses that she looked after a 34-year-old motorcyclist from a crash on the bypass last Tuesday. No name or record number is used. Which statement is accurate?",
+          "stem": "A nurse posts in a private online group for nurses that she looked after a 34-year-old motorcyclist from a crash on the bypass last Tuesday. She uses no name and no record number. Which element makes this a breach of confidentiality?",
           "options": [
             {
               "id": "A",
-              "text": "No breach occurred, because no identifiers were used",
-              "correct": false,
-              "rationale": "Identifiability is not limited to names, and age, mechanism, place and date together identify a person in a small community."
+              "text": "The combination of age, mechanism, location and date",
+              "correct": true,
+              "rationale": "Identifiability comes from details in combination, and these four identify one person in a small area."
             },
             {
               "id": "B",
-              "text": "No breach occurred, because the group is restricted to nurses",
+              "text": "The absence of the patient's written consent to be discussed",
               "correct": false,
-              "rationale": "A private audience is still an audience and the information is still disclosed."
+              "rationale": "Consent would not make the post appropriate, and the breach does not turn on a missing form."
             },
             {
               "id": "C",
-              "text": "A breach occurred, because the details together can identify the patient",
-              "correct": true,
-              "rationale": "The combination identifies the patient, and the audience being private does not change that."
+              "text": "The size of the group she posted to",
+              "correct": false,
+              "rationale": "A private audience is still an audience, and the number of members does not decide it."
             },
             {
               "id": "D",
-              "text": "A breach occurred only if a member of that group knows the patient",
+              "text": "Nothing, since no name or record number appeared",
               "correct": false,
-              "rationale": "The breach is the disclosure, not whether it is recognized."
+              "rationale": "Removing the name does not anonymize a case that the remaining details identify."
             }
           ],
-          "answer": "C",
-          "takeaway": "Identifiability comes from the combination. Removing the name does not anonymize a case.",
-          "strategy": "Two options rely on the audience being private and one on nobody noticing. The disclosure is the breach.",
+          "answer": "A",
+          "takeaway": "Identifiability comes from the combination. Removing the name does not anonymize a case, and a private audience is still a disclosure.",
+          "strategy": "The post contains no identifier in the usual sense, which is what makes the option saying no breach occurred tempting. Read the four details together.",
           "elimination": {
             "strategies": [
-              "Ask whether he could be identified"
+              "Ask whether the patient could be picked out"
             ],
             "steps": [
               {
@@ -24430,15 +24438,15 @@
                 "detail": "Yes, in a small area."
               },
               {
-                "action": "Cut the privacy of the group",
-                "detail": "Irrelevant."
+                "action": "Cut consent and group size",
+                "detail": "Neither decides it."
               },
               {
-                "action": "Cut whether anyone recognizes him",
-                "detail": "The disclosure is the breach."
+                "action": "Cut nothing",
+                "detail": "The details identify him."
               }
             ],
-            "verdict": "That leaves the breach from combined details."
+            "verdict": "That leaves the combination of details."
           },
           "new": true,
           "difficulty": "difficult"
@@ -25318,13 +25326,13 @@
           "options": [
             {
               "id": "A",
-              "text": "It is acceptable, since the change was communicated in some form",
+              "text": "It is acceptable",
               "correct": false,
               "rationale": "Mentioning is not communicating. The specific findings are what allow someone else to act on it."
             },
             {
               "id": "B",
-              "text": "This is a safety concern, because professional communication supports safety and clinical decision-making",
+              "text": "This is a safety concern",
               "correct": true,
               "rationale": "Professional communication supports safety and clinical decision-making. A provider cannot act on information he did not receive."
             },
@@ -26997,25 +27005,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Cognitive, by explaining how daily weights detect fluid retention",
+              "text": "Cognitive",
               "correct": false,
               "rationale": "This is reasonable teaching aimed at knowledge he may already have. He never said he did not understand."
             },
             {
               "id": "B",
-              "text": "All three simultaneously, to be thorough",
+              "text": "All three at once",
               "correct": false,
               "rationale": "Spreads effort across two domains where there is no gap, and misses that his objection is about meaning."
             },
             {
               "id": "C",
-              "text": "Affective, because his attitude and motivation are the obstacle",
+              "text": "Affective",
               "correct": true,
               "rationale": "He is not lacking the knowledge or the skill. Feelings, attitudes, values and motivation sit in the affective domain."
             },
             {
               "id": "D",
-              "text": "Psychomotor, by demonstrating correct use of the scale",
+              "text": "Psychomotor",
               "correct": false,
               "rationale": "Weighing is not the skill gap. He knows how to stand on a scale."
             }
@@ -28670,25 +28678,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Compensation, making up for a weakness by excelling elsewhere",
+              "text": "Compensation",
               "correct": false,
               "rationale": "Compensation involves building up one area to offset another. Nothing here describes that."
             },
             {
               "id": "B",
-              "text": "Denial, refusing to accept that something is real",
+              "text": "Denial",
               "correct": true,
               "rationale": "She is rejecting the reality of the diagnosis outright rather than reinterpreting what it means."
             },
             {
               "id": "C",
-              "text": "Projection, attributing her own feelings to someone else",
+              "text": "Projection",
               "correct": false,
               "rationale": "Projection means putting your own feeling onto another person. She is not describing anyone else's feelings."
             },
             {
               "id": "D",
-              "text": "Dissociation, detaching from thoughts, feelings or surroundings",
+              "text": "Dissociation",
               "correct": false,
               "rationale": "Dissociation means detaching from your own experience. She is fully present and arguing the point."
             }
@@ -28724,25 +28732,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Compensation, offsetting a loss in one area with achievement in another",
+              "text": "Compensation",
               "correct": false,
               "rationale": "Nothing here describes achievement somewhere else. Compensation offsets a weakness by excelling elsewhere."
             },
             {
               "id": "B",
-              "text": "Dissociation, detaching from the situation",
+              "text": "Dissociation",
               "correct": false,
               "rationale": "Dissociation is separation from your own thoughts, feelings or surroundings. Bedwetting is not that."
             },
             {
               "id": "C",
-              "text": "Denial, refusing to accept the separation is real",
+              "text": "Denial",
               "correct": false,
               "rationale": "Denial rejects the reality. The bedwetting is a return to earlier functioning rather than a rejection of facts."
             },
             {
               "id": "D",
-              "text": "Regression, returning to an earlier stage of functioning under stress",
+              "text": "Regression",
               "correct": true,
               "rationale": "A behavior that belonged to a younger age has come back because coping is overwhelmed. That is regression."
             }
@@ -28856,25 +28864,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Emotion-focused coping, managing feelings related to the stressor",
+              "text": "Emotion-focused coping",
               "correct": false,
               "rationale": "Emotion-focused coping works on the feelings. Everything she is doing works on the circumstances instead."
             },
             {
               "id": "B",
-              "text": "Problem-focused coping, taking action to change or solve the stressor",
+              "text": "Problem-focused coping",
               "correct": true,
               "rationale": "Every action she has taken alters the situation itself rather than her feelings about it."
             },
             {
               "id": "C",
-              "text": "Maladaptive coping, because she is avoiding her feelings",
+              "text": "Maladaptive coping",
               "correct": false,
               "rationale": "Nothing suggests avoidance, and problem-focused coping is not maladaptive. She is acting on a stressor she can change."
             },
             {
               "id": "D",
-              "text": "Defense mechanisms operating unconsciously",
+              "text": "Defense mechanisms",
               "correct": false,
               "rationale": "Defense mechanisms operate unconsciously. Everything she did was deliberate and planned."
             }
@@ -29797,25 +29805,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Alarm, because her sympathetic nervous system is activated",
+              "text": "Alarm",
               "correct": false,
               "rationale": "Alarm is the initial surge and it lasts hours to days, not months."
             },
             {
               "id": "B",
-              "text": "Resistance, because her body has stabilized against the ongoing demand",
+              "text": "Resistance",
               "correct": false,
               "rationale": "In resistance the body copes and hormone levels return toward normal. Hers has stopped coping."
             },
             {
               "id": "C",
-              "text": "Exhaustion, because the demand has outlasted her adaptive reserves",
+              "text": "Exhaustion",
               "correct": true,
               "rationale": "Prolonged stress depletes the adaptive response, physiological effects intensify, and illness appears."
             },
             {
               "id": "D",
-              "text": "Recovery, because her body is returning to baseline after the acute phase",
+              "text": "Recovery",
               "correct": false,
               "rationale": "Nothing here is returning to baseline."
             }
@@ -37487,7 +37495,7 @@
           "options": [
             {
               "id": "A",
-              "text": "The temperature alone, since a fever of this size most likely indicates a developing infection",
+              "text": "The temperature alone",
               "correct": false,
               "rationale": "Separating the two loses the pattern. Together, a rising rate and a rising temperature point at thyroid storm."
             },
@@ -37499,13 +37507,13 @@
             },
             {
               "id": "C",
-              "text": "The fatigue, since it is the symptom the patient reported directly",
+              "text": "The fatigue",
               "correct": false,
               "rationale": "The fatigue is real, and it is not the finding that can deteriorate within the hour."
             },
             {
               "id": "D",
-              "text": "Neither finding, since tachycardia and warmth are both expected features of hyperthyroidism",
+              "text": "Neither finding",
               "correct": false,
               "rationale": "Tachycardia is expected in hyperthyroidism. A rise of this size with a fever on top of it is not."
             }
@@ -38906,7 +38914,7 @@
           "options": [
             {
               "id": "A",
-              "text": "Gloves only, since the mask is needed only for airborne organisms",
+              "text": "Gloves only",
               "correct": false,
               "rationale": "Droplet precautions require a mask within three feet of the patient, so gloves alone are not enough."
             },
@@ -38924,7 +38932,7 @@
             },
             {
               "id": "D",
-              "text": "A surgical mask alone, since droplet precautions require nothing further",
+              "text": "A surgical mask alone",
               "correct": false,
               "rationale": "A mask alone is the baseline, and anticipated splashing of secretions raises the requirement above it."
             }
@@ -41008,13 +41016,13 @@
             },
             {
               "id": "B",
-              "text": "Colonization, because the organism is present without producing disease",
+              "text": "Colonization",
               "correct": true,
               "rationale": "Organisms are present and multiplying without a host response or clinical signs. Contact precautions still apply."
             },
             {
               "id": "C",
-              "text": "Infection, because MRSA has been identified",
+              "text": "Infection",
               "correct": false,
               "rationale": "Identifying the organism is not enough. Infection means the organism is producing a host response and clinical signs."
             },
@@ -41304,13 +41312,13 @@
           "options": [
             {
               "id": "A",
-              "text": "Wash with soap and water, because alcohol does not kill spores",
+              "text": "Wash with soap and water",
               "correct": true,
               "rationale": "C. difficile forms spores that alcohol-based rub does not destroy. Soap and water physically remove them through friction and rinsing."
             },
             {
               "id": "B",
-              "text": "Use the alcohol-based hand rub, since the hands are not visibly soiled",
+              "text": "Use the alcohol-based hand rub",
               "correct": false,
               "rationale": "Visible soiling is one indication for soap and water. Spore-forming organisms are another, and this patient has one."
             },
@@ -42065,7 +42073,7 @@
             },
             {
               "id": "B",
-              "text": "Select the largest listed volume, since it is easiest to draw accurately",
+              "text": "Select the largest listed volume",
               "correct": false,
               "rationale": "Picking the largest volume is arbitrary, and it may produce a dose too large for the route."
             },
@@ -42077,7 +42085,7 @@
             },
             {
               "id": "D",
-              "text": "Select any listed volume, since the total drug in the vial is unchanged",
+              "text": "Select any listed volume",
               "correct": false,
               "rationale": "The total is unchanged and the concentration is not, and concentration is what the dose calculation uses."
             }
@@ -42702,13 +42710,13 @@
           "options": [
             {
               "id": "A",
-              "text": "The regular insulin, because it is clear and clear is drawn before cloudy",
+              "text": "The regular insulin",
               "correct": true,
               "rationale": "Drawing the clear insulin first prevents the cloudy suspension contaminating the clear vial."
             },
             {
               "id": "B",
-              "text": "Neither, because regular and NPH insulin cannot be combined in the same syringe",
+              "text": "Neither",
               "correct": false,
               "rationale": "Regular and NPH may be mixed. Long-acting insulins such as glargine and detemir may not."
             },
@@ -42720,7 +42728,7 @@
             },
             {
               "id": "D",
-              "text": "The NPH, because the cloudy suspension must be resuspended and drawn before the clear insulin",
+              "text": "The NPH",
               "correct": false,
               "rationale": "The NPH does get rolled before you draw, but it is still withdrawn second, after the clear insulin."
             }

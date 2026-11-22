@@ -2478,7 +2478,7 @@
             },
             {
               "id": "D",
-              "text": "The patient lacks capacity, since the choice is unwise",
+              "text": "The patient lacks capacity",
               "correct": false,
               "rationale": "Near miss concept Capacity is about understanding and reasoning, not agreeing."
             }

@@ -2352,25 +2352,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Lisinopril, to protect the kidneys",
+              "text": "Lisinopril",
               "correct": true,
               "rationale": "Diabetes with protein in the urine points to early kidney damage. An ACE inhibitor (or an ARB) lowers pressure and slows the loss of protein and kidney function."
             },
             {
               "id": "B",
-              "text": "Spironolactone, for resistant pressure",
+              "text": "Spironolactone",
               "correct": false,
               "rationale": "Near miss concept The pressure is not resistant; no drug has been tried."
             },
             {
               "id": "C",
-              "text": "Furosemide, for fluid overload",
+              "text": "Furosemide",
               "correct": false,
               "rationale": "Near miss concept There is no fluid overload, and loops are not for long term pressure."
             },
             {
               "id": "D",
-              "text": "Metoprolol, to slow the heart",
+              "text": "Metoprolol",
               "correct": false,
               "rationale": "Near miss concept There is no MI, heart failure or atrial fibrillation to justify a beta blocker."
             }
@@ -2884,25 +2884,25 @@
           "options": [
             {
               "id": "A",
-              "text": "The drug reference, since orders never include them",
+              "text": "The drug reference",
               "correct": false,
               "rationale": "Absolute language Orders often include parameters; never is false."
             },
             {
               "id": "B",
-              "text": "The order, which the nurse reads each time",
+              "text": "The order",
               "correct": true,
               "rationale": "Hold parameters are part of the order, such as hold for heart rate under 60 or systolic under 100. A heart rate under 60 is a common threshold, but you always read the order. If there is none and the findings worry you, you hold and clarify."
             },
             {
               "id": "C",
-              "text": "The nurse's judgment of a heart rate under 50",
+              "text": "The nurse's judgment",
               "correct": false,
               "rationale": "Near miss concept The common threshold is 60, and even that comes from the order."
             },
             {
               "id": "D",
-              "text": "Hospital policy, which applies the same number to every patient",
+              "text": "Hospital policy",
               "correct": false,
               "rationale": "Institution as rationale Parameters can differ by patient; the order governs."
             }
@@ -7350,7 +7350,7 @@
             },
             {
               "id": "E",
-              "text": "Ketoacidosis, which is rare",
+              "text": "Ketoacidosis",
               "correct": true,
               "rationale": "Glucose in the urine feeds yeast and bacteria, so genital infections and urinary infections rise. Fluid loss can cause dehydration and low pressure. Rarely, ketoacidosis occurs even with a normal glucose. Teach hygiene, fluids and to report nausea, vomiting or belly pain."
             },
@@ -7961,25 +7961,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Spironolactone, since it raises potassium",
+              "text": "Spironolactone",
               "correct": true,
               "rationale": "Spironolactone and the ARB in the ARNI both raise potassium, and spironolactone is the drug most often held for hyperkalemia. Furosemide lowers potassium. The nurse holds spironolactone, notifies the provider and asks about the ARNI."
             },
             {
               "id": "B",
-              "text": "None, since the blood pressure is normal",
+              "text": "None of them",
               "correct": false,
               "rationale": "Accurate but inert data A normal pressure does not cancel a high potassium."
             },
             {
               "id": "C",
-              "text": "Sacubitril/valsartan, since it lowers pressure",
+              "text": "Sacubitril/valsartan",
               "correct": false,
               "rationale": "Near miss concept The pressure is fine; the potassium is the problem."
             },
             {
               "id": "D",
-              "text": "Furosemide, since it changes potassium",
+              "text": "Furosemide",
               "correct": false,
               "rationale": "Near miss concept Furosemide lowers potassium, so it does not add to the problem."
             }

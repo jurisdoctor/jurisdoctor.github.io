@@ -4328,25 +4328,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Whichever has the larger dose",
+              "text": "The larger dose",
               "correct": false,
               "rationale": "Near miss concept Dose size does not decide the order."
             },
             {
               "id": "B",
-              "text": "NPH, because it is cloudy",
+              "text": "NPH",
               "correct": false,
               "rationale": "Near miss concept Cloudy first risks contaminating the clear vial with NPH."
             },
             {
               "id": "C",
-              "text": "Regular, because clear comes before cloudy",
+              "text": "Regular",
               "correct": true,
               "rationale": "Clear before cloudy: drawing regular first keeps NPH out of the regular vial, which would change its action."
             },
             {
               "id": "D",
-              "text": "Either one, as long as the total is correct",
+              "text": "Either one",
               "correct": false,
               "rationale": "Near miss concept The order matters to keep the regular vial pure."
             }
@@ -5568,7 +5568,7 @@
             },
             {
               "id": "B",
-              "text": "The fatigue, since it limits activity",
+              "text": "The fatigue",
               "correct": false,
               "rationale": "Near miss concept Fatigue is common and not life threatening."
             },
@@ -10236,7 +10236,7 @@
           "options": [
             {
               "id": "A",
-              "text": "A significant change from baseline that needs assessment",
+              "text": "A significant change from baseline",
               "correct": true,
               "rationale": "A 48 point drop from baseline with a fast heart rate suggests hypovolemia or another problem. The nurse compares with the baseline, assesses and reports."
             },
@@ -10248,13 +10248,13 @@
             },
             {
               "id": "C",
-              "text": "A measurement error, since it changed so much",
+              "text": "A measurement error",
               "correct": false,
               "rationale": "Near miss concept Assume it is real until reassessed."
             },
             {
               "id": "D",
-              "text": "Normal, since 104/62 is within range",
+              "text": "A normal reading",
               "correct": false,
               "rationale": "Near miss concept Normal for the population is not normal for this patient."
             }
@@ -11418,7 +11418,7 @@
           "options": [
             {
               "id": "A",
-              "text": "The left side, the strong side",
+              "text": "The left side",
               "correct": true,
               "rationale": "The cane goes in the hand on the strong side and moves with the weak leg. This widens the base of support and shifts weight away from the weak leg."
             },
@@ -11436,7 +11436,7 @@
             },
             {
               "id": "D",
-              "text": "The right side, next to the weak leg",
+              "text": "The right side",
               "correct": false,
               "rationale": "Near miss concept Holding it on the weak side does not widen the base on the side that needs it."
             }

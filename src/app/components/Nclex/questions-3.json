@@ -3774,7 +3774,7 @@
                 },
                 {
                   "id": "B",
-                  "text": "infection, because redness and swelling are present on both hands",
+                  "text": "a skin infection",
                   "correct": false,
                   "rationale": "Redness and swelling alone do not establish infection. Inflammation can occur without infection."
                 },
@@ -3826,25 +3826,25 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "swelling, a cardinal sign of inflammation",
+                  "text": "swelling",
                   "correct": false,
                   "rationale": "Swelling is a separate cardinal sign. Being unable to close the hand is a loss of function, which is documented as decreased function."
                 },
                 {
                   "id": "B",
-                  "text": "a finding unrelated to the inflammation on the hands",
+                  "text": "an unrelated finding",
                   "correct": false,
                   "rationale": "Decreased function is one of the five cardinal signs, so it is part of the inflammatory picture."
                 },
                 {
                   "id": "C",
-                  "text": "decreased function, a cardinal sign of inflammation",
+                  "text": "decreased function",
                   "correct": true,
                   "rationale": "The five cardinal signs are warmth, redness, swelling, pain, and decreased function. Not being able to close the hands is decreased function."
                 },
                 {
                   "id": "D",
-                  "text": "evidence that an infection has developed in both hands",
+                  "text": "a sign of infection",
                   "correct": false,
                   "rationale": "Decreased function is a sign of inflammation, and inflammation can occur without infection."
                 }
@@ -3887,7 +3887,7 @@
                 "detail": "Cannot fully close the hands is decreased function."
               }
             ],
-            "verdict": "Inflammation without infection, triggered by an irritant; basophils and mast cells; decreased function, a cardinal sign of inflammation."
+            "verdict": "Inflammation without infection, triggered by an irritant; basophils and mast cells; decreased function."
           },
           "caseGroup": "ig16-case12",
           "caseStep": 2,
@@ -5503,25 +5503,25 @@
           "options": [
             {
               "id": "A",
-              "text": "An allergic response, such as to pollen",
+              "text": "An allergic response",
               "correct": true,
               "rationale": "Eosinophils mediate allergic responses. A high eosinophil percentage with normal neutrophils, plus itchy eyes and sneezing, fits an allergic response."
             },
             {
               "id": "B",
-              "text": "A bacterial infection of the airways",
+              "text": "A bacterial infection",
               "correct": false,
               "rationale": "Neutrophils are the first responders to bacteria, so a bacterial infection would usually raise the neutrophils. The cough pulls toward infection, but the neutrophils are normal."
             },
             {
               "id": "C",
-              "text": "A parasitic infection needing stool tests",
+              "text": "A parasitic infection",
               "correct": false,
               "rationale": "Eosinophils also defend against parasites, which makes this tempting. The patient has not traveled, and itchy eyes with sneezing point to allergy without a parasite."
             },
             {
               "id": "D",
-              "text": "A viral infection of the upper airways",
+              "text": "A viral infection",
               "correct": false,
               "rationale": "Sneezing and a cough can come with a cold, but a viral infection does not explain a high eosinophil percentage, and itchy eyes point to allergy."
             }
@@ -10514,13 +10514,13 @@
           "options": [
             {
               "id": "A",
-              "text": "Stiffer arteries with a higher systolic pressure",
+              "text": "Stiffer arteries",
               "correct": true,
               "rationale": "Arteries lose elasticity, so systolic pressure rises."
             },
             {
               "id": "B",
-              "text": "Less sensitive baroreceptors, causing orthostatic dizziness",
+              "text": "Less sensitive baroreceptors",
               "correct": true,
               "rationale": "Slower reflexes let pressure fall on standing."
             },
@@ -10532,7 +10532,7 @@
             },
             {
               "id": "D",
-              "text": "Thicker, stiffer valves that may cause a soft murmur",
+              "text": "Thicker, stiffer valves",
               "correct": true,
               "rationale": "Valve thickening and calcification can produce a murmur."
             },
@@ -10763,13 +10763,13 @@
             },
             {
               "id": "B",
-              "text": "Raised right sided pressure, as in fluid overload",
+              "text": "Raised right sided pressure",
               "correct": true,
               "rationale": "Venous pressure backs up into the neck veins when the right heart cannot move blood forward."
             },
             {
               "id": "C",
-              "text": "Low cardiac output from the left ventricle only",
+              "text": "Low left ventricular output",
               "correct": false,
               "rationale": "Left sided failure first backs fluid into the lungs."
             },
@@ -11952,25 +11952,25 @@
           "options": [
             {
               "id": "A",
-              "text": "An S3 gallop from decreased ventricular compliance",
+              "text": "An S3 gallop",
               "correct": false,
               "rationale": "An S3 can also reflect decreased compliance, but it is heard during rapid ventricular filling, just after S2. A sound just before S1 is timed to atrial contraction."
             },
             {
               "id": "B",
-              "text": "An S4 gallop from a stiff, noncompliant ventricle",
+              "text": "An S4 gallop",
               "correct": true,
               "rationale": "An S4 is heard during atrial contraction, just before S1, and reflects a stiff, noncompliant ventricle. It may occur with hypertension."
             },
             {
               "id": "C",
-              "text": "A pericardial friction rub from an inflamed pericardium",
+              "text": "A pericardial friction rub",
               "correct": false,
               "rationale": "A friction rub comes from an inflamed pericardium. It is not tied to atrial contraction, and nothing in the stem suggests pericarditis."
             },
             {
               "id": "D",
-              "text": "A diastolic murmur from turbulent flow through a valve",
+              "text": "A diastolic murmur",
               "correct": false,
               "rationale": "A murmur is a whooshing or swishing sound from turbulent flow, not a short, low pitched extra sound."
             }
@@ -12271,7 +12271,7 @@
               "id": "B",
               "text": "It is below the expected range for an adult",
               "correct": false,
-              "rationale": "Output depends on both factors. 125 times 40 mL is 5.0 L/min, which is within the expected range of about 4 to 8 L/min, because a fast rate can offset a low stroke volume."
+              "rationale": "Output depends on both factors. 125 times 40 mL is 5.0 L/min, which is adequate for an adult, because a fast rate can offset a low stroke volume."
             },
             {
               "id": "C",
@@ -13405,7 +13405,7 @@
                 },
                 {
                   "id": "D",
-                  "text": "An S3 gallop from rapid ventricular filling",
+                  "text": "An S3 gallop",
                   "correct": false,
                   "rationale": "An S3 is a single brief sound early in the pause after the pulse. This sound fills the whole pause, which makes it a murmur."
                 }
@@ -13463,7 +13463,7 @@
                 },
                 {
                   "id": "D",
-                  "text": "Timing and radiation only, since location is always the apex",
+                  "text": "Timing and radiation only",
                   "correct": false,
                   "rationale": "Murmurs can be loudest at any valve area, so location is always part of the description."
                 }
@@ -20462,27 +20462,27 @@
           "options": [
             {
               "id": "A",
-              "text": "Left sided failure with blood backing up into the lungs",
+              "text": "Left sided failure",
               "correct": false,
-              "rationale": "Orthopnea and a low SpO2 can come from pulmonary congestion, but both have been unchanged for years and fit the lung disease. Backup into the lungs would add crackles, and there are none."
+              "rationale": "Orthopnea and a low SpO2 can come from pulmonary congestion, but both have been unchanged for years and fit the lung disease. Left sided failure would add crackles, and there are none."
             },
             {
               "id": "B",
-              "text": "Failure of both ventricles, with lung and systemic venous backup",
+              "text": "Failure of both ventricles",
               "correct": false,
               "rationale": "This is the tempting choice, since orthopnea is a left sided finding. The 3 pillows have been unchanged for 5 years, before any of the new findings, and the lungs have no crackles, so nothing new points to the left side."
             },
             {
               "id": "C",
-              "text": "Right sided failure with blood backing up into the lungs",
+              "text": "Right sided failure caused by left sided failure",
               "correct": false,
-              "rationale": "Right sided failure is correct, but the direction is wrong. Blood that the right ventricle cannot move backs up into the systemic veins, not the lungs."
+              "rationale": "Right sided failure is correct, but left sided failure as the cause would bring new lung congestion and crackles. The lung findings have been unchanged for years, and the long standing lung disease is the cause."
             },
             {
               "id": "D",
-              "text": "Right sided failure from lung disease, with systemic backup",
+              "text": "Right sided failure caused by lung disease",
               "correct": true,
-              "rationale": "Severe lung disease is a listed cause of heart failure and strains the right ventricle. Neck vein distention, ankle edema, weight gain, a distended abdomen, and nausea are systemic venous congestion findings, and they are the only new findings."
+              "rationale": "Severe lung disease strains the right ventricle and is a listed cause of heart failure. Neck vein distention, ankle edema, weight gain, a distended abdomen, and nausea are systemic venous congestion findings, and they are the only new findings."
             }
           ],
           "answer": "D",
@@ -20512,11 +20512,11 @@
                 "detail": "None, so nothing new points to the left side."
               },
               {
-                "action": "Check the direction",
-                "detail": "Right sided backup goes to the systemic veins, not the lungs."
+                "action": "Name the cause",
+                "detail": "Nothing new points to the left side, so the right sided failure comes from the lung disease."
               }
             ],
-            "verdict": "Right sided failure from the lung disease, with systemic backup."
+            "verdict": "D. Right sided failure caused by lung disease."
           },
           "caseGroup": "ig29-case7",
           "caseStep": 3,
@@ -21418,7 +21418,7 @@
             },
             {
               "id": "D",
-              "text": "Systemic venous congestion, like the neck veins",
+              "text": "Systemic venous congestion",
               "correct": true,
               "rationale": "With distended neck veins and clear lungs, the nocturia fits systemic venous congestion from right sided failure. Fluid that pools in the legs by day returns to the circulation when the patient lies down."
             }
@@ -24220,25 +24220,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Orthostatic hypotension, shown by the faster rate",
+              "text": "Orthostatic hypotension",
               "correct": false,
               "rationale": "Orthostatic hypotension is a drop of 20 mm Hg systolic or 10 mm Hg diastolic on standing. This drop is 4/2 mm Hg, and a modest rise in rate is the body's normal correction."
             },
             {
               "id": "B",
-              "text": "A renin angiotensin aldosterone response raising the rate",
+              "text": "A renin angiotensin aldosterone response",
               "correct": false,
               "rationale": "The renin angiotensin aldosterone system acts through vasoconstriction and sodium and water retention. The quick rise in rate is a reflex from the pressure sensors."
             },
             {
               "id": "C",
-              "text": "An expected baroreceptor reflex holding the pressure",
+              "text": "An expected baroreceptor reflex",
               "correct": true,
               "rationale": "Baroreceptors sense the small fall in arterial pressure on standing and raise the heart rate. A faster rate raises cardiac output, and cardiac output times resistance holds the pressure close to the lying value."
             },
             {
               "id": "D",
-              "text": "Baroreceptor failure, shown by the small pressure drop",
+              "text": "Baroreceptor failure",
               "correct": false,
               "rationale": "A small drop on standing is expected as blood shifts to the legs. The rise in rate shows the sensors are working."
             }
@@ -29984,25 +29984,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Droplet, from the cough",
+              "text": "Droplet",
               "correct": false,
               "rationale": "The organism came from a cough, but it reached the nurse's eyes on the nurse's own hands after touching the call light. No droplets traveled through the air to the nurse."
             },
             {
               "id": "B",
-              "text": "Indirect contact, through the call light",
+              "text": "Indirect contact",
               "correct": true,
               "rationale": "The organism reached the nurse's hands on a contaminated item and then the eyes. Touching a person or a contaminated item is the contact route, and spread through an item is indirect contact."
             },
             {
               "id": "C",
-              "text": "Direct contact, through touching the patient",
+              "text": "Direct contact",
               "correct": false,
               "rationale": "Contact is the right route, but direct contact is touch between people, and none happened here. The organism traveled on the call light."
             },
             {
               "id": "D",
-              "text": "Airborne, through particles in the room air",
+              "text": "Airborne",
               "correct": false,
               "rationale": "Airborne spread explains illness without touch or close range. Here the nurse touched a contaminated item and then the eyes, which accounts for the spread."
             }
@@ -30035,7 +30035,7 @@
                 "detail": "The stem shows touch of an item, not touch between people."
               }
             ],
-            "verdict": "B. Indirect contact, through the call light."
+            "verdict": "B. Indirect contact."
           },
           "caseGroup": "ig31-case7",
           "caseStep": 1,
@@ -30520,27 +30520,27 @@
           "options": [
             {
               "id": "A",
-              "text": "Respiratory tract, through aspirated liquid",
+              "text": "Respiratory tract",
               "correct": true,
               "rationale": "Coughing and a wet voice with thin liquids mean the liquid is going into the airway. Aspiration leads to respiratory infection such as pneumonia."
             },
             {
               "id": "B",
-              "text": "Gastrointestinal tract, through swallowed liquid",
+              "text": "Gastrointestinal tract",
               "correct": false,
               "rationale": "The liquid is swallowed, but the cough and wet voice show it is not staying in the gastrointestinal tract. Ask where the organism actually gets in."
             },
             {
               "id": "C",
-              "text": "Respiratory tract, through droplets from visitors",
+              "text": "Urinary tract",
               "correct": false,
-              "rationale": "The portal is right, but nothing in the stem points to visitors. The cough and wet voice show the liquid itself entering the airway."
+              "rationale": "Nothing in the stem involves the urinary tract. The cough and wet voice show liquid entering the airway."
             },
             {
               "id": "D",
-              "text": "Respiratory tract, through a weakened immune response",
+              "text": "Broken skin",
               "correct": false,
-              "rationale": "The portal is right, but the reason is not. The stem shows liquid entering the airway, not a change in immunity."
+              "rationale": "No break in the skin is described. The cough and wet voice show liquid entering the airway."
             }
           ],
           "answer": "A",
@@ -30566,11 +30566,11 @@
                 "detail": "Swallowing names the gastrointestinal tract, but the liquid is not staying there."
               },
               {
-                "action": "Check the mechanism",
-                "detail": "Three options name the respiratory tract; only one gives the path the stem supports."
+                "action": "Check the evidence",
+                "detail": "Nothing in the stem points to the urinary tract or the skin."
               }
             ],
-            "verdict": "A. Respiratory tract, through aspirated liquid."
+            "verdict": "A. Respiratory tract."
           },
           "caseGroup": "ig31-case9",
           "caseStep": 2,
@@ -35319,13 +35319,13 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "shows that the infection stayed in the lungs, so it was not sepsis",
+                  "text": "rules out sepsis",
                   "correct": false,
                   "rationale": "The infection did start in the lungs, which is the true part. Sepsis does not require the organism to spread into the blood; it is the body's response that causes organ dysfunction."
                 },
                 {
                   "id": "B",
-                  "text": "does not rule out sepsis, because the diagnosis is based on organ dysfunction",
+                  "text": "does not rule out sepsis",
                   "correct": true,
                   "rationale": "An organism does not need to be found in the bloodstream for sepsis to be present. The infection was in the lungs, and the diagnosis was clinical, based on organ dysfunction."
                 },
@@ -38815,25 +38815,25 @@
           "options": [
             {
               "id": "A",
-              "text": "New heart failure causing venous congestion",
+              "text": "New heart failure",
               "correct": false,
               "rationale": "Edema can be a heart failure finding, but clear lungs and an unchanged weight do not support venous congestion or fluid gain."
             },
             {
               "id": "B",
-              "text": "A desired drug effect from better perfusion",
+              "text": "A desired drug effect",
               "correct": false,
               "rationale": "Fewer episodes do show benefit, but edema is not a sign of better perfusion. It is an adverse effect that the nurse monitors."
             },
             {
               "id": "C",
-              "text": "Edema from the drug, to report",
+              "text": "An adverse drug effect",
               "correct": true,
               "rationale": "Calcium channel blockers cause vasodilation, and the nurse monitors for hypotension and peripheral edema. With clear lungs and no weight gain, the edema fits the drug rather than heart failure, and it is reported to the provider."
             },
             {
               "id": "D",
-              "text": "Fluid overload calling for a fluid restriction",
+              "text": "Fluid overload",
               "correct": false,
               "rationale": "The weight is unchanged and the lungs are clear, so there is no evidence of fluid overload. Fluid restriction is not a nursing decision and does not address a drug effect."
             }
@@ -57924,13 +57924,13 @@
           "options": [
             {
               "id": "A",
-              "text": "Slower peristalsis, raising the risk of constipation",
+              "text": "Slower peristalsis",
               "correct": true,
               "rationale": "Slower motility lets more water be absorbed from stool."
             },
             {
               "id": "B",
-              "text": "Atrophy of the gastric mucosa, lowering vitamin B12 absorption",
+              "text": "Atrophy of the gastric mucosa",
               "correct": true,
               "rationale": "Less intrinsic factor and acid reduce B12 and iron absorption."
             },
@@ -75622,7 +75622,7 @@
             },
             {
               "id": "D",
-              "text": "Find the angle of Louis, the ridge on the sternum",
+              "text": "Find the angle of Louis",
               "rationale": "The angle of Louis is the next landmark below the notch.",
               "position": 2
             },
@@ -76252,25 +76252,25 @@
           "options": [
             {
               "id": "A",
-              "text": "120/min, from 12 R waves in 30 large squares times 10",
+              "text": "120/min",
               "correct": true,
               "rationale": "With an irregular rhythm the rate is found by counting the R waves in 30 large squares, which is 6 seconds, and multiplying by 10. This gives 120 beats per minute, above the expected range."
             },
             {
               "id": "B",
-              "text": "100/min, from 300 divided by the first R to R interval",
+              "text": "100/min",
               "correct": false,
               "rationale": "The 300 rule is a correct method, but only for a regular rhythm. Here the spacing varies from 2 to 4 large squares, so one pair of R waves does not represent the rate, and the result falsely sits inside the expected range."
             },
             {
               "id": "C",
-              "text": "75/min, from 300 divided by the widest R to R interval",
+              "text": "75/min",
               "correct": false,
               "rationale": "The widest space gives the slowest beats only. With an irregular rhythm, no single R to R space gives the rate."
             },
             {
               "id": "D",
-              "text": "110/min, from 11 R to R intervals in 30 large squares times 10",
+              "text": "110/min",
               "correct": false,
               "rationale": "The 6 second method and the multiplier are right, but the method counts R waves, not the spaces between them. 12 R waves have only 11 spaces, so this undercounts by 1 beat in every 6 seconds."
             }
@@ -77145,25 +77145,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Infarction of the inferior wall, from the right coronary artery",
+              "text": "Infarction of the inferior wall",
               "correct": false,
               "rationale": "The inferior leads are II, III and aVF, supplied by the right coronary artery. The changes here are in other leads, and ST depression suggests ischemia rather than a definite infarction."
             },
             {
               "id": "B",
-              "text": "Possible ischemia of the lateral wall, from the circumflex artery",
+              "text": "Possible ischemia of the lateral wall",
               "correct": true,
               "rationale": "Leads I, aVL, V5 and V6 look at the lateral wall, supplied by the left circumflex artery. ST depression or T wave inversion could indicate ischemia. The ECG is reviewed with a clinician skilled in interpretation and reported with the ongoing tightness."
             },
             {
               "id": "C",
-              "text": "Possible ischemia of the anterior wall, from the left anterior descending artery",
+              "text": "Possible ischemia of the anterior wall",
               "correct": false,
               "rationale": "ST depression could indicate ischemia, so half of this is right. But the anterior leads are V3 and V4, with the septal leads V1 and V2, all supplied by the left anterior descending artery."
             },
             {
               "id": "D",
-              "text": "No infarction, because no lead shows ST elevation",
+              "text": "No infarction",
               "correct": false,
               "rationale": "This sounds reassuring, but a myocardial infarction can occur without ST elevation, and ST depression with chest tightness still needs reporting."
             }
@@ -77196,7 +77196,7 @@
                 "detail": "An infarction can occur without ST elevation."
               }
             ],
-            "verdict": "B. Possible ischemia of the lateral wall, from the circumflex artery."
+            "verdict": "B. Possible ischemia of the lateral wall."
           },
           "caseGroup": "sk-cardiac-review18",
           "caseStep": 2,
@@ -78773,7 +78773,7 @@
               "options": [
                 {
                   "id": "A",
-                  "text": "only the radial rate, because it shows perfusion",
+                  "text": "only the radial rate",
                   "correct": false,
                   "rationale": "The radial rate alone hides the beats that are not reaching the periphery."
                 },
@@ -81478,25 +81478,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Chemical, from the solution",
+              "text": "Chemical",
               "correct": false,
               "rationale": "Chemical phlebitis comes from an irritating solution. Isotonic 0.9% sodium chloride is not an irritant, so the solution is not the cause."
             },
             {
               "id": "B",
-              "text": "Bacterial, from a break in asepsis",
+              "text": "Bacterial",
               "correct": false,
               "rationale": "Bacterial phlebitis follows poor aseptic technique and may bring purulent drainage. Nothing in the stem points to a break in asepsis."
             },
             {
               "id": "C",
-              "text": "Mechanical, from catheter movement",
+              "text": "Mechanical",
               "correct": true,
               "rationale": "A catheter that shifts with every bend of the wrist rubs the vein wall. Movement of the catheter is the cause of mechanical phlebitis. The nurse stops the infusion, removes the catheter, applies a warm moist compress, notifies the provider and documents the grade."
             },
             {
               "id": "D",
-              "text": "Postinfusion, after catheter removal",
+              "text": "Postinfusion",
               "correct": false,
               "rationale": "Postinfusion phlebitis appears after a catheter comes out. This catheter is still in place."
             }
@@ -81528,7 +81528,7 @@
                 "detail": "No break in asepsis is described, and the catheter is still in."
               }
             ],
-            "verdict": "C. Mechanical, from catheter movement."
+            "verdict": "C. Mechanical."
           },
           "caseGroup": "sk-infusion-c17e",
           "caseStep": 1,

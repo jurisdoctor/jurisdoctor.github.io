@@ -29533,7 +29533,7 @@
             },
             {
               "id": "C",
-              "text": "Unknown, because no one saw the onset",
+              "text": "Unknown",
               "correct": false,
               "rationale": "It is true that no one saw the symptoms start. A last known well time can still be set from when she was last seen normal."
             },
@@ -36681,25 +36681,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Unstageable pressure injury, because the blister hides the wound bed",
+              "text": "Unstageable pressure injury",
               "correct": false,
               "rationale": "Unstageable means slough or eschar obscures the base. A blood blister over purple skin has its own category, deep tissue pressure injury."
             },
             {
               "id": "B",
-              "text": "Stage 2 pressure injury, because a blister means partial thickness loss",
+              "text": "Stage 2 pressure injury",
               "correct": false,
               "rationale": "Stage 2 blisters are filled with clear serum. A blood filled blister over purple skin signals damage that started deep and is moving outward."
             },
             {
               "id": "C",
-              "text": "Stage 1 pressure injury, because the skin was intact at first",
+              "text": "Stage 1 pressure injury",
               "correct": false,
               "rationale": "Deep tissue injury can first look like stage 1, but stage 1 is never purple or maroon. Persistent purple color and a blood filled blister point deeper."
             },
             {
               "id": "D",
-              "text": "Deep tissue pressure injury, because damage began at muscle and bone",
+              "text": "Deep tissue pressure injury",
               "correct": true,
               "rationale": "Persistent purple, nonblanchable color and a blood filled blister define deep tissue injury, which begins at the muscle and bone interface. Long immobility during surgery is a common cause."
             }
@@ -36725,7 +36725,7 @@
                 "detail": "No slough or eschar, so it is not unstageable."
               }
             ],
-            "verdict": "Deep tissue pressure injury, because damage began at muscle and bone."
+            "verdict": "Deep tissue pressure injury."
           },
           "coverage": "Covered in Lecture PPT.",
           "coverageDetail": {
