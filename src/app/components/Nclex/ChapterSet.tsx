@@ -669,7 +669,10 @@ const ChapterSet = ({
                 )}
                 <Fill {...progress} />
                 {chapter.members && chapter.members.length > 1 ? (
-                  <Flash items={chapter.members.map(memberTile)} />
+                  <Flash
+                    className="relative"
+                    items={chapter.members.map(memberTile)}
+                  />
                 ) : (
                   <span className="relative">{displayNumberOf(chapter)}</span>
                 )}
