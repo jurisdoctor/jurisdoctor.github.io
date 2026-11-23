@@ -659,13 +659,12 @@ const ChapterSet = ({
 
       {shown && (
         <div className="relative mt-6 animate-fadeIn">
-          <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-            <span className="font-bold text-[var(--title-color)]">
+          <div className="mb-3 flex items-baseline justify-between gap-x-4">
+            <span className="min-w-0 flex-1 truncate font-bold text-[var(--title-color)]">
               {shown.members && shown.members.length > 1 ? (
                 shown.members.some((member) => member.named) ? (
                   <Flash
                     fluid
-                    className="!text-left"
                     items={shown.members.map(
                       (member) => `${memberName(member)} · ${member.title}`,
                     )}
@@ -680,7 +679,7 @@ const ChapterSet = ({
                 labelFor(shown)
               )}
             </span>
-            <span className="text-xs text-[var(--muted-color)]">
+            <span className="shrink-0 text-xs text-[var(--muted-color)]">
               {shown.questions.length} questions
             </span>
           </div>

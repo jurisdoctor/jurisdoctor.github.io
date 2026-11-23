@@ -36,27 +36,8 @@ const Flash = ({
 
   if (fluid) {
     return (
-      <span className={`inline-grid text-left ${className ?? ""}`}>
-        {items.map((item, at) =>
-          at === index ? (
-            <span
-              key={`on-${at}`}
-              className="flash-num"
-              style={{ gridArea: "1 / 1" }}
-            >
-              {item}
-            </span>
-          ) : (
-            <span
-              key={`off-${at}`}
-              aria-hidden
-              className="invisible"
-              style={{ gridArea: "1 / 1" }}
-            >
-              {item}
-            </span>
-          ),
-        )}
+      <span key={index} className={`flash-num ${className ?? ""}`}>
+        {items[index]}
       </span>
     );
   }
