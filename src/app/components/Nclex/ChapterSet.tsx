@@ -1,5 +1,6 @@
 "use client";
 import {
+  CSSProperties,
   KeyboardEvent as ReactKeyboardEvent,
   ReactNode,
   useCallback,
@@ -78,6 +79,43 @@ const calm = () =>
   typeof window !== "undefined" &&
   window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+const wavePath = (period: number, rise: number) => {
+  const half = period / 2;
+  const third = period / 6;
+  return `M0 4 C${third} ${4 - rise} ${half - third} ${4 - rise} ${half} 4 S${period - third} ${4 + rise} ${period} 4 V8 H0 Z`;
+};
+
+const waveMask = (period: number, rise: number) =>
+  `url("data:image/svg+xml,${encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${period} 8" preserveAspectRatio="none"><path d="${wavePath(period, rise)}"/></svg>`,
+  )}")`;
+
+const glintMask = (period: number, rise: number) => {
+  const half = period / 2;
+  const third = period / 6;
+  const lift = 0.9;
+  let d = `M${-period} ${4 + lift}`;
+  for (let step = 0; step < 6; step += 1) {
+    const from = -period + step * half;
+    const bend = (step % 2 === 0 ? -1 : 1) * rise;
+    d += ` C${from + third} ${4 + lift + bend} ${from + half - third} ${4 + lift + bend} ${from + half} ${4 + lift}`;
+  }
+  return `url("data:image/svg+xml,${encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${period} 8" preserveAspectRatio="none"><path d="${d}" fill="none" stroke="#000" stroke-width="1.1"/></svg>`,
+  )}")`;
+};
+
+const WAVES = {
+  back: waveMask(34, 3),
+  front: waveMask(21, 2.4),
+  glint: glintMask(21, 2.4),
+};
+
+const SOLVED_TONE =
+  "color-mix(in srgb, rgb(var(--success-rgb)) 55%, var(--body-color))";
+const MISSED_TONE =
+  "color-mix(in srgb, var(--danger-color) 50%, var(--body-color))";
+
 const Fill = ({
   solved,
   missed,
@@ -88,34 +126,11 @@ const Fill = ({
   total: number;
 }) => {
   const ref = useRef<HTMLSpanElement>(null);
-  const crestRef = useRef<HTMLSpanElement>(null);
-  const swellRef = useRef<HTMLSpanElement>(null);
   const was = useRef(solved + missed);
+  const phase = useRef(Math.random() * 9);
   const done = solved + missed;
   const level = total ? (done / total) * 100 : 0;
-  const crest =
-    missed > 0
-      ? "bg-[color-mix(in_srgb,var(--danger-color)_50%,transparent)]"
-      : "bg-[rgba(var(--success-rgb),0.55)]";
-
-  useEffect(() => {
-    if (!done || calm()) return;
-    const spin = (node: HTMLSpanElement | null, ms: number, back: boolean) =>
-      node?.animate(
-        [
-          { transform: `translateX(-50%) rotate(${back ? 360 : 0}deg)` },
-          { transform: `translateX(-50%) rotate(${back ? 0 : 360}deg)` },
-        ],
-        { duration: ms, iterations: Infinity, easing: "linear" },
-      );
-
-    const a = spin(crestRef.current, 6200, false);
-    const b = spin(swellRef.current, 9400, true);
-    return () => {
-      a?.cancel();
-      b?.cancel();
-    };
-  }, [done]);
+  const surface = missed > 0 ? MISSED_TONE : SOLVED_TONE;
 
   useEffect(() => {
     if (was.current === done) return;
@@ -151,25 +166,37 @@ const Fill = ({
         className="absolute -inset-x-1 bottom-0 flex origin-bottom flex-col-reverse transition-[height] duration-[900ms] ease-[cubic-bezier(0.34,1.4,0.64,1)]"
       >
         <span
-          style={{ flexGrow: solved }}
-          className="w-full bg-[rgba(var(--success-rgb),0.55)]"
+          style={{ flexGrow: solved, backgroundColor: SOLVED_TONE }}
+          className="w-full"
         />
         <span
-          style={{ flexGrow: missed }}
-          className="w-full bg-[color-mix(in_srgb,var(--danger-color)_50%,transparent)]"
+          style={{ flexGrow: missed, backgroundColor: MISSED_TONE }}
+          className="w-full"
+        />
+
+        <span
+          className="tile-water-depth absolute inset-0"
+          style={{ "--tide": surface } as CSSProperties}
         />
 
         {done > 0 && (
-          <span className="absolute inset-x-0 -top-[6px] h-[10px] overflow-hidden">
+          <span
+            className="tile-swell absolute inset-x-0 bottom-full h-2"
+            style={
+              { "--tide": surface, "--phase": phase.current } as CSSProperties
+            }
+          >
             <span
-              ref={swellRef}
-              style={{ top: "2px", borderRadius: "38% 62% 44% 56%" }}
-              className={`absolute left-1/2 h-[3.5rem] w-[3.5rem] -translate-x-1/2 opacity-55 ${crest}`}
+              className="tile-wave tile-wave-back"
+              style={{ "--wave": WAVES.back } as CSSProperties}
             />
             <span
-              ref={crestRef}
-              style={{ top: "4px", borderRadius: "58% 42% 63% 37%" }}
-              className={`absolute left-1/2 h-[3.25rem] w-[3.25rem] -translate-x-1/2 ${crest}`}
+              className="tile-wave tile-wave-front"
+              style={{ "--wave": WAVES.front } as CSSProperties}
+            />
+            <span
+              className="tile-wave tile-wave-glint"
+              style={{ "--wave": WAVES.glint } as CSSProperties}
             />
           </span>
         )}
