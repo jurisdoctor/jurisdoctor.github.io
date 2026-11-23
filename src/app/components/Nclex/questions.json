@@ -352,7 +352,7 @@
               "id": "D",
               "text": "This is a system failure",
               "correct": false,
-              "rationale": "Leaving syringes at the bedside is a real system problem, and it still does not excuse giving a drug nobody verified."
+              "rationale": "Leaving syringes at the bedside is a real system problem, but it still does not excuse giving a drug nobody verified."
             }
           ],
           "answer": "B",
@@ -3389,7 +3389,7 @@
               "id": "C",
               "text": "Function should be reassessed once she is fully recovered from the infection",
               "correct": false,
-              "rationale": "Sensible-sounding, and it loses the window in which the decline can be reversed."
+              "rationale": "Sensible-sounding, but it loses the window in which the decline can be reversed."
             },
             {
               "id": "D",
@@ -3507,7 +3507,7 @@
               "id": "C",
               "text": "Set a goal of returning to her prior level of function in all activities",
               "correct": false,
-              "rationale": "A reasonable-sounding goal set without her, and it may be neither what she wants nor achievable."
+              "rationale": "A reasonable-sounding goal set without her, but it may be neither what she wants nor achievable."
             },
             {
               "id": "D",
@@ -3663,7 +3663,7 @@
               "id": "B",
               "text": "Tell the daughter her mother has the right to decide and end the discussion",
               "correct": false,
-              "rationale": "This is accurate about autonomy and it leaves the daughter holding an unaddressed worry. The pressure on her mother usually continues."
+              "rationale": "This is accurate about autonomy, but it leaves the daughter holding an unaddressed worry. The pressure on her mother usually continues."
             },
             {
               "id": "C",
@@ -4563,7 +4563,7 @@
               "id": "D",
               "text": "Care is directed by the family when cognition is changing",
               "correct": false,
-              "rationale": "Family involvement is part of it, and it does not replace the older adult's participation."
+              "rationale": "Family involvement is part of it, but it does not replace the older adult's participation."
             }
           ],
           "answer": "C",
@@ -4950,13 +4950,13 @@
               "id": "C",
               "text": "Maternal and infant health",
               "correct": false,
-              "rationale": "Maternal and infant health is a real Healthy People area, and it is not one of the concerns listed for older adults."
+              "rationale": "Maternal and infant health is a real Healthy People area, but it is not one of the concerns listed for older adults."
             },
             {
               "id": "D",
               "text": "Occupational injury prevention",
               "correct": false,
-              "rationale": "A real public health objective, and not one of the older adult focus areas listed."
+              "rationale": "A real public health objective, but not one of the older adult focus areas listed."
             }
           ],
           "answer": "B",
@@ -5323,7 +5323,7 @@
               "id": "D",
               "text": "Simplify the information down to the essential points only",
               "correct": false,
-              "rationale": "Prioritizing is reasonable, and deciding in advance how much she can absorb is the assumption to avoid."
+              "rationale": "Prioritizing is reasonable, but deciding in advance how much she can absorb is the assumption to avoid."
             }
           ],
           "answer": "C",
@@ -6604,7 +6604,7 @@
               "id": "B",
               "text": "Reluctance to burden family during an acute admission",
               "correct": false,
-              "rationale": "A real reason people give, and it does not explain a 41-year relationship going unnamed."
+              "rationale": "A real reason people give, but it does not explain a 41-year relationship going unnamed."
             },
             {
               "id": "C",
@@ -6931,7 +6931,7 @@
               "id": "F",
               "text": "Reluctance to disclose pregnancy intentions to an employer",
               "correct": false,
-              "rationale": "This is plausible as a life stressor and it is not one of the recognized contributors. The recognized ones happen inside the care encounter itself."
+              "rationale": "This is plausible as a life stressor, but it is not one of the recognized contributors. The recognized ones happen inside the care encounter itself."
             },
             {
               "id": "G",
@@ -7051,7 +7051,7 @@
               "id": "D",
               "text": "Affirming care improves patient satisfaction survey scores",
               "correct": false,
-              "rationale": "This is true and it is the wrong basis. Dignity is not owed to a patient because respecting it scores well on a survey."
+              "rationale": "This is true, but it is the wrong basis. Dignity is not owed to a patient because respecting it scores well on a survey."
             }
           ],
           "answer": "B",
@@ -7258,7 +7258,7 @@
               "id": "D",
               "text": "Nurses should refer LGBTQ+ patients to specialist clinicians where possible",
               "correct": false,
-              "rationale": "Reasonable-sounding and it routes patients away from the care in front of them, which is how needs get overlooked."
+              "rationale": "Reasonable-sounding, but it routes patients away from the care in front of them, which is how needs get overlooked."
             }
           ],
           "answer": "A",
@@ -7494,7 +7494,7 @@
               "id": "C",
               "text": "Beneficence",
               "correct": false,
-              "rationale": "This is true of the nurse's motive and too broad to name the problem. Beneficence does not explain why giving everyone the same thing fails here."
+              "rationale": "This is true of the nurse's motive, but too broad to name the problem. Beneficence does not explain why giving everyone the same thing fails here."
             },
             {
               "id": "D",
@@ -7874,7 +7874,7 @@
               "id": "B",
               "text": "Place him in a room with other male patients, since that matches his gender identity",
               "correct": false,
-              "rationale": "Reasonable as a default and it still decides something for him that he may have a view about."
+              "rationale": "Reasonable as a default, but it still decides something for him that he may have a view about."
             },
             {
               "id": "C",
@@ -10060,7 +10060,7 @@
           "strategy": "Two options are internal and two are external, so naming the category is not enough. The question is which specific influence he described.",
           "elimination": {
             "strategies": [
-              "Find what he actually said"
+              "Find what he said"
             ],
             "steps": [
               {
@@ -11309,7 +11309,7 @@
               "id": "A",
               "text": "It gives the patient unrealistic expectations of the surgical outcome",
               "correct": false,
-              "rationale": "A fair concern about the specific claim, and the broader fault is what the response does to the exchange."
+              "rationale": "Promising an outcome is part of it. The larger problem is that the patient now has nowhere to take the fear he just raised."
             },
             {
               "id": "B",
@@ -12514,7 +12514,7 @@
               "id": "D",
               "text": "The second patient needs a psychiatric referral",
               "correct": false,
-              "rationale": "Depression is a genuine psychosocial concern in chronic illness, and concluding it from this comparison alone skips the assessment."
+              "rationale": "Depression is a real psychosocial concern in chronic illness, but concluding it from this comparison alone skips the assessment."
             }
           ],
           "answer": "A",
@@ -12562,7 +12562,7 @@
               "id": "C",
               "text": "Having no formal training in caregiving",
               "correct": false,
-              "rationale": "A real difficulty and not one of the five risk factors. Training does not shorten the hours or the years."
+              "rationale": "A real difficulty, but not one of the five risk factors. Training does not shorten the hours or the years."
             },
             {
               "id": "D",
@@ -12634,7 +12634,7 @@
               "id": "B",
               "text": "The patient takes nine prescription medications every day",
               "correct": false,
-              "rationale": "Polypharmacy is a real concern for him. Whoever administers them may also need assessing, and the stem does not say anyone else does."
+              "rationale": "Polypharmacy is a real concern for him, but it is a finding about the patient. Nothing here says anyone else manages those medications."
             },
             {
               "id": "C",
@@ -13233,7 +13233,7 @@
               "id": "D",
               "text": "Clinical information systems",
               "correct": false,
-              "rationale": "This is plausible and it is not what he said. He describes conflicting advice, not missing records."
+              "rationale": "This is plausible, but it is not what he said. He describes conflicting advice, not missing records."
             }
           ],
           "answer": "B",
@@ -13347,7 +13347,7 @@
               "id": "A",
               "text": "Focus teaching on individual dietary choices within each consultation",
               "correct": false,
-              "rationale": "This is correct clinical teaching, and it addresses one person at a time while the conditions driving the rise stay exactly as they are."
+              "rationale": "This is correct clinical teaching, but it addresses one person at a time while the conditions driving the rise stay exactly as they are."
             },
             {
               "id": "B",
@@ -13407,7 +13407,7 @@
               "id": "B",
               "text": "The treatment plan should be simplified to improve adherence",
               "correct": false,
-              "rationale": "May be reasonable eventually, and it acts before understanding why the missing started."
+              "rationale": "May be reasonable eventually, but it acts before anyone has found out why he stopped taking them."
             },
             {
               "id": "C",
@@ -14280,7 +14280,7 @@
               "id": "D",
               "text": "The cause matters less than the management from here",
               "correct": false,
-              "rationale": "True and it refuses her question, which was about blame."
+              "rationale": "True, but it refuses her question, which was about blame."
             }
           ],
           "answer": "B",
@@ -14663,7 +14663,7 @@
           "strategy": "Three options assess the learner. The stem says nothing about the learner and one thing about her circumstances, and that is where the barrier is.",
           "elimination": {
             "strategies": [
-              "Work from what the stem actually gives you"
+              "Work from what the stem gives you"
             ],
             "steps": [
               {
@@ -14952,7 +14952,7 @@
               "id": "A",
               "text": "She applied group knowledge to an individual without checking",
               "correct": true,
-              "rationale": "Cultural knowledge is a genuine construct and becomes stereotyping the moment it is applied without asking. Culturally congruent care is based on the individual's beliefs, practices and values."
+              "rationale": "Cultural knowledge is one of the five constructs, but it becomes stereotyping the moment it is applied without asking. Culturally congruent care is based on the individual's beliefs, practices and values."
             },
             {
               "id": "B",
@@ -14970,7 +14970,7 @@
               "id": "D",
               "text": "She failed to obtain the patient's consent for the arrangement",
               "correct": false,
-              "rationale": "Consent is a real issue here, and it is a consequence of the underlying error rather than the error itself."
+              "rationale": "Consent is a real issue here, but it follows from the underlying error rather than being the error itself."
             }
           ],
           "answer": "A",
@@ -15018,7 +15018,7 @@
               "id": "C",
               "text": "Digital access and health technology literacy",
               "correct": false,
-              "rationale": "Genuinely affects care and is not one of the five domains. It sits inside health care access and quality rather than beside it."
+              "rationale": "Affects care, but it is not one of the five domains. It sits inside health care access and quality rather than beside it."
             },
             {
               "id": "D",
@@ -15036,7 +15036,7 @@
               "id": "F",
               "text": "Genetic predisposition to disease",
               "correct": false,
-              "rationale": "A genuine influence on health, and it is a biological factor rather than a social determinant. Determinants are non-medical conditions."
+              "rationale": "A real influence on health, but it is a biological factor rather than a social determinant. Determinants are the non-medical conditions around the patient."
             },
             {
               "id": "G",
@@ -15156,7 +15156,7 @@
               "id": "B",
               "text": "Overlapping identities interact, so privilege and oppression work as interlocking systems",
               "correct": true,
-              "rationale": "The identities do not simply add up. A person can hold advantage in one dimension and disadvantage in another, and the combination shapes the outcome."
+              "rationale": "The identities do not add up. A person can hold advantage in one dimension and disadvantage in another, and the combination shapes the outcome."
             },
             {
               "id": "C",
@@ -15794,7 +15794,7 @@
               "id": "A",
               "text": "With learning the health beliefs of the groups served by the hospital",
               "correct": false,
-              "rationale": "Cultural knowledge is a genuine construct and it is the second one. Knowledge without awareness becomes assumption."
+              "rationale": "Cultural knowledge is one of the five constructs, but it is the second one. Knowledge without awareness becomes assumption."
             },
             {
               "id": "B",
@@ -17400,7 +17400,7 @@
               "id": "D",
               "text": "Anxiety about the diagnosis",
               "correct": false,
-              "rationale": "This is a genuine problem, and psychosocial diagnoses are not the ones to dismiss. It still ranks below hypoxia."
+              "rationale": "This is a real problem, and psychosocial diagnoses are not the ones to dismiss. It still ranks below hypoxia."
             }
           ],
           "answer": "C",
@@ -17697,7 +17697,7 @@
               "id": "A",
               "text": "Occupational therapist",
               "correct": false,
-              "rationale": "Occupational therapy addresses daily activities and adaptation, which is relevant to other parts of his care."
+              "rationale": "Occupational therapy addresses daily activities and adaptation, which is relevant to other parts of his care but not to swallowing."
             },
             {
               "id": "B",
@@ -17930,7 +17930,7 @@
               "id": "A",
               "text": "Individualization takes precedence over standardization",
               "correct": false,
-              "rationale": "That tension is real in implementation, and nothing here is being individualized. She is preparing, not adapting."
+              "rationale": "That tension is real in implementation, but nothing here is being individualized. She is preparing, not adapting."
             },
             {
               "id": "B",
@@ -18220,7 +18220,7 @@
               "id": "D",
               "text": "Not met",
               "correct": false,
-              "rationale": "Technically accurate about the target and it discards a tripling of his distance, which the plan revision needs to know."
+              "rationale": "Technically accurate about the target, but it discards a tripling of his distance, which the plan revision needs to know."
             }
           ],
           "answer": "B",
@@ -18805,7 +18805,7 @@
               "id": "C",
               "text": "Write a more demanding mobility outcome before discharge",
               "correct": false,
-              "rationale": "Raising the bar may be reasonable and it is not automatic, and it is not what evaluation requires."
+              "rationale": "Raising the bar may be reasonable, but it is not automatic and it is not what evaluation requires."
             },
             {
               "id": "D",
@@ -20080,7 +20080,7 @@
               "id": "D",
               "text": "Cost containment per patient day",
               "correct": false,
-              "rationale": "A real organizational concern and not among the Magnet standards. The standards concern how nursing is practised and supported."
+              "rationale": "A real organizational concern, but not among the Magnet standards. The standards concern how nursing is practised and supported."
             },
             {
               "id": "E",
@@ -20816,7 +20816,7 @@
               "id": "D",
               "text": "Right supervision",
               "correct": false,
-              "rationale": "Supervision would matter after a valid delegation, and this one fails before that."
+              "rationale": "Supervision would matter after a valid delegation, but this one fails before that."
             }
           ],
           "answer": "C",
@@ -21817,7 +21817,7 @@
               "id": "E",
               "text": "Efficiency in the use of resources",
               "correct": false,
-              "rationale": "This is a legitimate organizational value and it is not among the code's key principles."
+              "rationale": "This is a legitimate organizational value, but it is not among the code's key principles."
             },
             {
               "id": "F",
@@ -21876,7 +21876,7 @@
               "id": "C",
               "text": "It reflects poorly on the profession but breaches no principle",
               "correct": false,
-              "rationale": "Professional image is a real concern and the confidentiality breach is the specific problem here."
+              "rationale": "Professional image is a real concern, but the confidentiality breach is the specific problem here."
             },
             {
               "id": "D",
@@ -21930,7 +21930,7 @@
               "id": "C",
               "text": "Document that the patient is refusing recommended treatment",
               "correct": false,
-              "rationale": "Documenting is necessary and it does nothing about whether the decision was informed in the first place."
+              "rationale": "Documenting is necessary, but it does nothing about whether the decision was informed in the first place."
             },
             {
               "id": "D",
@@ -24911,7 +24911,7 @@
               "id": "A",
               "text": "The patient's level of education",
               "correct": false,
-              "rationale": "A genuine factor influencing communication and it is not environmental. The environment is what surrounds the exchange."
+              "rationale": "A real factor influencing communication, but it is not environmental. The environment is what surrounds the conversation."
             },
             {
               "id": "B",
@@ -26015,7 +26015,7 @@
           ],
           "answer": "B",
           "takeaway": "Blocks include leading questions and judging. A single sentence can carry more than one.",
-          "strategy": "Two options list therapeutic techniques or blocks that are simply not present. Read the sentence for what it does to him.",
+          "strategy": "Two options list therapeutic techniques or blocks that are not present. Read the sentence for what it does to him.",
           "elimination": {
             "strategies": [
               "Treat each option as true or false"
@@ -26064,7 +26064,7 @@
               "id": "D",
               "text": "“Therapeutic communication is purposeful rather than simply being nice.”",
               "correct": false,
-              "rationale": "This is accurate. Therapeutic communication is purposeful and goal-directed, not simply being pleasant."
+              "rationale": "This is accurate. Therapeutic communication is purposeful and goal-directed, not the same as being pleasant."
             }
           ],
           "answer": "B",
@@ -26579,7 +26579,7 @@
               "id": "B",
               "text": "Provide written instructions to reinforce the teaching",
               "correct": false,
-              "rationale": "Reinforcement is a legitimate later step, and it does not tell you whether he can use the device."
+              "rationale": "Reinforcement is a legitimate later step, but it does not tell you whether he can use the device."
             },
             {
               "id": "C",
@@ -26639,7 +26639,7 @@
               "id": "C",
               "text": "Arrange home health so that nobody at home needs to be taught",
               "correct": false,
-              "rationale": "May be appropriate and it does not remove the need for someone in the house to recognize problems."
+              "rationale": "May be appropriate, but it does not remove the need for someone in the house to recognize problems."
             },
             {
               "id": "D",
@@ -27507,7 +27507,7 @@
               "id": "D",
               "text": "Ask the patient if any questions remain about it",
               "correct": false,
-              "rationale": "A reasonable courtesy and not an evaluation. Someone who does not know what they missed has no question to ask."
+              "rationale": "A reasonable courtesy, but not an evaluation. Someone who does not know what they missed has no question to ask."
             }
           ],
           "answer": "A",
@@ -27549,7 +27549,7 @@
               "id": "B",
               "text": "Delegation is acceptable with documented AP competency",
               "correct": false,
-              "rationale": "Competence with the device is real and it is not the issue. The AP cannot assess readiness, adapt to the patient, or evaluate learning."
+              "rationale": "Competence with the device is real, but it is not the issue. The AP cannot assess readiness, adapt to the patient, or evaluate learning."
             },
             {
               "id": "C",
@@ -27652,13 +27652,13 @@
               "id": "A",
               "text": "Continue the teaching, since discharge is tomorrow",
               "correct": false,
-              "rationale": "The deadline is real and the learning will not happen. A patient who cannot look at the stoma is not going to retain a procedure performed on it."
+              "rationale": "The deadline is real, but the learning will not happen. A patient who cannot look at the stoma is not going to retain a procedure performed on it."
             },
             {
               "id": "B",
               "text": "Reassure the patient that it becomes easier with time",
               "correct": false,
-              "rationale": "Probably true and it closes the subject the patient just opened. Reassurance substitutes for presence here."
+              "rationale": "Probably true, but it closes the subject the patient just opened. Reassurance substitutes for presence here."
             },
             {
               "id": "C",
@@ -27961,7 +27961,7 @@
           "strategy": "He never says he cannot read, and the question is whether you recognize the pattern without being told.",
           "elimination": {
             "strategies": [
-              "Ask what has actually been confirmed"
+              "Ask what has been confirmed"
             ],
             "steps": [
               {
@@ -28295,7 +28295,7 @@
             "E"
           ],
           "takeaway": "Teaching fails on ability, resources and acceptance. A practical question about the drug is engagement, and verbatim repetition hides a gap.",
-          "strategy": "One option is engagement dressed as a problem and one is a problem already solved. Separate what blocks learning from what simply looks awkward.",
+          "strategy": "One option is engagement dressed as a problem and one is a problem already solved. Separate what blocks learning from what only looks awkward.",
           "elimination": {
             "strategies": [
               "Ask whether each finding blocks the plan"
@@ -28926,7 +28926,7 @@
               "id": "B",
               "text": "The patient should be encouraged to use both types equally",
               "correct": false,
-              "rationale": "Balance sounds sensible and it ignores that some stressors offer nothing to solve."
+              "rationale": "Balance sounds sensible, but it ignores that some stressors offer nothing to solve."
             },
             {
               "id": "C",
@@ -29157,7 +29157,7 @@
               "id": "D",
               "text": "Explain that the coat must be removed for the examination",
               "correct": false,
-              "rationale": "May be true eventually, and stated as an instruction it removes the choice she has just asked for."
+              "rationale": "May be true eventually, but stated as an instruction it removes the choice she has just asked for."
             }
           ],
           "answer": "A",
@@ -29331,7 +29331,7 @@
               "id": "B",
               "text": "Recommend she take time away from clinical practice",
               "correct": false,
-              "rationale": "May be appropriate and it is a decision, not a support. Offered first it can read as removal."
+              "rationale": "May be appropriate, but it is a decision, not a support. Offered first it can read as removal."
             },
             {
               "id": "C",
@@ -29343,7 +29343,7 @@
               "id": "D",
               "text": "Advise her to focus on the system factors rather than her own role",
               "correct": false,
-              "rationale": "System analysis is necessary and it does not address what she is feeling."
+              "rationale": "System analysis is necessary, but it does not address what she is feeling."
             }
           ],
           "answer": "C",
@@ -29517,13 +29517,13 @@
               "id": "B",
               "text": "Cognitive function and memory",
               "correct": false,
-              "rationale": "This is relevant generally, and it is not what is recognized for stress and coping in older adults."
+              "rationale": "This is relevant generally, but it is not what is recognized for stress and coping in older adults."
             },
             {
               "id": "C",
               "text": "Medication adherence and polypharmacy",
               "correct": false,
-              "rationale": "Important in older adults generally and not what this chapter names for stress and coping."
+              "rationale": "Important in older adults generally, but not what this chapter names for stress and coping."
             },
             {
               "id": "D",
@@ -31599,13 +31599,13 @@
               "id": "A",
               "text": "Delayed wound healing from reduced growth hormone",
               "correct": false,
-              "rationale": "A genuine consequence of poor sleep and it is not the immediate safety concern."
+              "rationale": "A real consequence of poor sleep, but it is not the immediate safety concern."
             },
             {
               "id": "B",
               "text": "Impaired immune function raising infection risk",
               "correct": false,
-              "rationale": "This is genuine, and it develops over a longer period than the next few hours. The fall could happen tonight."
+              "rationale": "This is real, but it develops over a longer period than the next few hours. The fall could happen tonight."
             },
             {
               "id": "C",
@@ -32027,7 +32027,7 @@
               "id": "B",
               "text": "Close his door and turn off the overhead light",
               "correct": false,
-              "rationale": "Useful and it does not address what is waking him."
+              "rationale": "Useful, but it does not address what is waking him."
             },
             {
               "id": "C",
@@ -32039,7 +32039,7 @@
               "id": "D",
               "text": "Move him to a room farther from the nurses' station",
               "correct": false,
-              "rationale": "Reasonable and it does nothing about the staff entering the room."
+              "rationale": "Reasonable, but it does nothing about the staff entering the room."
             }
           ],
           "answer": "C",
@@ -32077,7 +32077,7 @@
               "id": "A",
               "text": "Teach her the medication is intended for short-term use only",
               "correct": false,
-              "rationale": "True and it does not address what could happen tonight."
+              "rationale": "True, but it does not address what could happen tonight."
             },
             {
               "id": "B",
@@ -32191,7 +32191,7 @@
               "id": "B",
               "text": "Take short scheduled naps during the day",
               "correct": false,
-              "rationale": "Helpful and it is not what prevents a death."
+              "rationale": "Helpful, but it is not what prevents a death."
             },
             {
               "id": "C",
@@ -32587,7 +32587,7 @@
               "id": "C",
               "text": "Insulin is broken down before reaching tissues without receptors",
               "correct": false,
-              "rationale": "Nothing selectively destroys it en route. It simply has no effect where there is nothing to bind."
+              "rationale": "Nothing selectively destroys it en route. It has no effect where there is nothing to bind."
             },
             {
               "id": "D",
@@ -32641,7 +32641,7 @@
               "id": "C",
               "text": "Receptor specificity",
               "correct": false,
-              "rationale": "A real concept and it explains which tissues act, not how secretion is regulated."
+              "rationale": "A real concept, but it explains which tissues act, not how secretion is regulated."
             },
             {
               "id": "D",
@@ -33500,7 +33500,7 @@
               "id": "C",
               "text": "Insulin use always indicates that oral medications have failed",
               "correct": false,
-              "rationale": "Calling it a failure is what makes patients resist it. Insulin may be needed simply because the pancreas can no longer keep up."
+              "rationale": "Calling it a failure is what makes patients resist it. Insulin may be needed because the pancreas can no longer keep up."
             },
             {
               "id": "D",
@@ -33548,7 +33548,7 @@
               "id": "B",
               "text": "The patient's most recent A1C",
               "correct": false,
-              "rationale": "Useful for evaluating control over time and it does not determine whether this dose is safe now."
+              "rationale": "Useful for evaluating control over time, but it does not determine whether this dose is safe now."
             },
             {
               "id": "C",
@@ -34176,7 +34176,7 @@
               "id": "B",
               "text": "Carry a fast-acting carbohydrate at all times",
               "correct": false,
-              "rationale": "Necessary and it does nothing to tell him when to use it."
+              "rationale": "Necessary, but it does nothing to tell him when to use it."
             },
             {
               "id": "C",
@@ -34188,7 +34188,7 @@
               "id": "D",
               "text": "Eat on a fixed schedule so your glucose stays stable",
               "correct": false,
-              "rationale": "Helpful and it does not restore a warning he has lost."
+              "rationale": "Helpful, but it does not restore a warning he has lost."
             }
           ],
           "answer": "A",
@@ -37509,7 +37509,7 @@
               "id": "C",
               "text": "The fatigue",
               "correct": false,
-              "rationale": "The fatigue is real, and it is not the finding that can deteriorate within the hour."
+              "rationale": "The fatigue is real, but it is not the finding that can deteriorate within the hour."
             },
             {
               "id": "D",
@@ -40497,7 +40497,7 @@
               },
               {
                 "action": "Cut B",
-                "detail": "The issue is that they are altered, not simply quieter."
+                "detail": "The issue is that they are altered, not only quieter."
               },
               {
                 "action": "Cut C",
@@ -44100,7 +44100,7 @@
               "id": "B",
               "text": "Provide the written medication information sheet for reference",
               "correct": false,
-              "rationale": "Useful reinforcement, and it still does not tell you whether the teaching landed."
+              "rationale": "Useful reinforcement, but it still does not tell you whether the teaching landed."
             },
             {
               "id": "C",

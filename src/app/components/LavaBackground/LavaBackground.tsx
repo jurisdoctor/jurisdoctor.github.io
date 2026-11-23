@@ -107,10 +107,13 @@ const roll = (): LavaStart[] =>
 
 const LavaBackground = () => {
   const [starts, setStarts] = useState<LavaStart[] | null>(null);
-  useEffect(() => setStarts(roll()), []);
+  useEffect(() => {
+    if (document.documentElement.classList.contains("no-bg-motion")) return;
+    setStarts(roll());
+  }, []);
   return (
     <div
-      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden [transform:translateZ(0)]"
+      className="bg-motion pointer-events-none fixed inset-0 -z-10 overflow-hidden [transform:translateZ(0)]"
       aria-hidden
     >
       <svg className="absolute h-0 w-0">

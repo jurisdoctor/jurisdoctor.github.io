@@ -12,6 +12,8 @@ const WEBKIT_SCRIPT = `(function(){try{var u=navigator.userAgent;if(/iP(hone|ad|
 
 const THEME_SCRIPT = `(function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light");}}catch(e){}})();`;
 
+const MOTION_SCRIPT = `(function(){try{if(localStorage.getItem("bg-motion")==="off"){document.documentElement.classList.add("no-bg-motion");}}catch(e){}})();`;
+
 const HTTPS_SCRIPT = `(function(){if(location.protocol==="http:"&&/(^|\\.)icutom\\.com$/.test(location.hostname)){location.replace("https://"+location.host+location.pathname+location.search+location.hash);}})();`;
 
 export default function RootLayout({
@@ -34,6 +36,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        <script dangerouslySetInnerHTML={{ __html: MOTION_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: WEBKIT_SCRIPT }} />
       </head>
       <body>

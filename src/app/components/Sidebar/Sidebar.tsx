@@ -12,6 +12,7 @@ import {
 import { useState } from "react";
 import { SCROLL_TO } from "../ScrollReset";
 import ThemeToggle from "../ThemeToggle";
+import MotionToggle from "../MotionToggle";
 const Sidebar = () => {
   const [toggle, setToggle] = useState(false);
   const path = usePathname();
@@ -111,7 +112,8 @@ const Sidebar = () => {
           </div>
         </nav>
 
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center gap-y-4">
+          <MotionToggle />
           <ThemeToggle />
         </div>
       </aside>

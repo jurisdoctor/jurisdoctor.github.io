@@ -78,7 +78,10 @@ const Shapes = () => {
   const [spots, setSpots] = useState<{ left: number; top: number }[] | null>(
     null,
   );
-  useEffect(() => setSpots(rollSpots()), []);
+  useEffect(() => {
+    if (document.documentElement.classList.contains("no-bg-motion")) return;
+    setSpots(rollSpots());
+  }, []);
   const containerRef = useRef<HTMLDivElement>(null);
   const shapeRefs = useRef<(SVGSVGElement | null)[]>([]);
   const states = useRef<ShapeState[]>([]);
@@ -346,7 +349,7 @@ const Shapes = () => {
   return (
     <div
       ref={containerRef}
-      className="pointer-events-none absolute left-0 top-0 z-0 h-full w-full"
+      className="bg-motion pointer-events-none absolute left-0 top-0 z-0 h-full w-full"
     >
       <svg
         className="absolute left-0 top-0 h-full w-full"

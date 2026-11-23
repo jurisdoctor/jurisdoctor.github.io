@@ -110,6 +110,26 @@ html[data-theme="light"] .theme-moon {
   display: block;
 }
 
+.motion-on {
+  display: block;
+}
+
+.motion-off {
+  display: none;
+}
+
+html.no-bg-motion .motion-on {
+  display: none;
+}
+
+html.no-bg-motion .motion-off {
+  display: block;
+}
+
+html.no-bg-motion .bg-motion {
+  display: none;
+}
+
 body {
   background-color: var(--body-color);
   color: var(--text-color);
