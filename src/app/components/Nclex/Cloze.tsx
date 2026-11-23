@@ -103,7 +103,7 @@ const Blank = ({
     <span
       ref={root}
       onKeyDown={onKeyDown}
-      className="relative mx-1 inline-block align-middle"
+      className="relative mx-1 inline-block max-w-[calc(100%-0.5rem)] align-middle"
     >
       <button
         type="button"
@@ -116,8 +116,8 @@ const Blank = ({
       >
         <span className={`truncate ${current ? "" : "font-normal"}`}>
           {current?.text ?? "Select"}
-          {mark}
         </span>
+        {mark && <span className="shrink-0">{mark}</span>}
         {!disabled && (
           <PiCaretDownBold
             aria-hidden
