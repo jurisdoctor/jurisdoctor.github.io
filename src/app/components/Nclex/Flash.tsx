@@ -34,12 +34,39 @@ const Flash = ({
 
   if (items.length < 2) return <>{items[0]}</>;
 
+  if (fluid) {
+    return (
+      <span className={`inline-grid text-left ${className ?? ""}`}>
+        {items.map((item, at) =>
+          at === index ? (
+            <span
+              key={`on-${at}`}
+              className="flash-num"
+              style={{ gridArea: "1 / 1" }}
+            >
+              {item}
+            </span>
+          ) : (
+            <span
+              key={`off-${at}`}
+              aria-hidden
+              className="invisible"
+              style={{ gridArea: "1 / 1" }}
+            >
+              {item}
+            </span>
+          ),
+        )}
+      </span>
+    );
+  }
+
   const widest = items.reduce((a, b) => Math.max(a, b.length), 0);
 
   return (
     <span
       className={`inline-block text-center tabular-nums ${className ?? ""}`}
-      style={fluid ? undefined : { minWidth: `${widest}ch` }}
+      style={{ minWidth: `${widest}ch` }}
     >
       <span key={index} className="flash-num">
         {items[index]}
