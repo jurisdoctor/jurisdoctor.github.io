@@ -2545,30 +2545,30 @@
           "options": [
             {
               "id": "A",
+              "text": "The experienced nurse is an expert, because she acted on the whole picture without analyzing the individual findings",
+              "correct": false,
+              "rationale": "She did not act, she escalated and asked for review. An expert moves on an intuitive grasp of the problem without needing to check it against anyone."
+            },
+            {
+              "id": "B",
+              "text": "The difference is knowledge of sepsis, not stage of skill acquisition",
+              "correct": false,
+              "rationale": "Both nurses collected the same data. What differed was what the data added up to."
+            },
+            {
+              "id": "C",
               "text": "The experienced nurse is proficient and perceives the situation as a whole rather than as a list of findings",
               "correct": true,
               "rationale": "Proficiency is where the pattern starts carrying more weight than the parts, and where a nurse notices that the expected picture has not arrived."
             },
             {
-              "id": "B",
-              "text": "The experienced nurse is an expert, because she acted without analyzing individual findings",
-              "correct": false,
-              "rationale": "She did not act, she escalated and asked for review. An expert moves on an intuitive grasp of the problem without needing to check it against anyone."
-            },
-            {
-              "id": "C",
+              "id": "D",
               "text": "The newer nurse is a novice and is still working from rules",
               "correct": false,
               "rationale": "Eighteen months of practice is competent. A novice has no experience of the situation at all and is usually a student."
-            },
-            {
-              "id": "D",
-              "text": "The difference is knowledge of sepsis, not stage of skill acquisition",
-              "correct": false,
-              "rationale": "Both nurses collected the same data. What differed was what the data added up to."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Competent nurses see findings. Proficient nurses see situations and notice when the whole does not fit. Experts act on that perception without pausing to verify it.",
           "strategy": "Two options describe the same perception. The difference is what she did with it: asking for review is proficient, acting alone is expert.",
           "elimination": {
@@ -2607,9 +2607,9 @@
             },
             {
               "id": "B",
-              "text": "Adding a heart failure booklet to every discharge packet",
+              "text": "Surveying patients two weeks after discharge about how satisfied they were with the information they were given",
               "correct": false,
-              "rationale": "Printed material distributes information and evaluates nothing. Nobody finds out whether the patient can use it."
+              "rationale": "Satisfaction with teaching and the ability to carry it out are different measurements."
             },
             {
               "id": "C",
@@ -2619,9 +2619,9 @@
             },
             {
               "id": "D",
-              "text": "Surveying patients after discharge about how satisfied they were with the information",
+              "text": "Adding a heart failure booklet to every discharge packet",
               "correct": false,
-              "rationale": "Satisfaction with teaching and the ability to carry it out are different measurements."
+              "rationale": "Printed material distributes information and evaluates nothing. Nobody finds out whether the patient can use it."
             }
           ],
           "answer": "A",
@@ -2669,15 +2669,15 @@
             },
             {
               "id": "C",
-              "text": "Continue the procedure as written, because policy defines the standard of care",
-              "correct": false,
-              "rationale": "Policy is evidence of the standard and it is not a reason to stop reading. Leaving the review on her desk is how an outdated step survives another decade."
-            },
-            {
-              "id": "D",
               "text": "Ask colleagues whether they have had problems with the current step",
               "correct": false,
               "rationale": "Shared impressions are not evidence, and a step can be wrong without anyone noticing the harm."
+            },
+            {
+              "id": "D",
+              "text": "Continue the procedure as written, because policy defines the standard of care",
+              "correct": false,
+              "rationale": "Policy is evidence of the standard and it is not a reason to stop reading. Leaving the review on her desk is how an outdated step survives another decade."
             }
           ],
           "answer": "A",
@@ -2713,30 +2713,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Rebuilding the documentation workflow so charting is completed at the point of care instead of after the shift",
-              "correct": true,
-              "rationale": "Documentation burden and unpaid time past the end of a shift are recognized drivers of burnout, and the fourth aim is about the workforce."
-            },
-            {
-              "id": "B",
-              "text": "Hiring additional case managers to reduce length of stay",
-              "correct": false,
-              "rationale": "That targets cost. It may relieve nurses and that is not what the project is aimed at."
-            },
-            {
-              "id": "C",
               "text": "Adding bedside handoff so patients hear the report",
               "correct": false,
               "rationale": "This serves patient experience and safety."
             },
             {
+              "id": "B",
+              "text": "Rebuilding the documentation workflow so charting is completed at the point of care instead of after the shift",
+              "correct": true,
+              "rationale": "Documentation burden and unpaid time past the end of a shift are recognized drivers of burnout, and the fourth aim is about the workforce."
+            },
+            {
+              "id": "C",
+              "text": "Hiring additional case managers to reduce length of stay",
+              "correct": false,
+              "rationale": "That targets cost. It may relieve nurses and that is not what the project is aimed at."
+            },
+            {
               "id": "D",
-              "text": "Offering a resilience workshop during unpaid time off the unit",
+              "text": "Offering an optional resilience workshop that staff attend on their own unpaid time away from the unit",
               "correct": false,
               "rationale": "Asking staff to spend their own time fixing a workload problem puts the burden back on the person. It also treats burnout as an individual failing."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "The fourth aim is a system obligation to the workforce. Changing the work counts. Asking the worker to cope better does not.",
           "strategy": "Two options mention staff. One changes the conditions, one asks the staff to absorb them.",
           "elimination": {
@@ -2745,7 +2745,7 @@
             ],
             "steps": [
               {
-                "action": "Sort the first three",
+                "action": "Sort the three that name another aim",
                 "detail": "Cost, then experience."
               },
               {
@@ -2775,27 +2775,27 @@
             },
             {
               "id": "B",
+              "text": "Using supplies and staff time in a way that considers cost and safety together",
+              "correct": true,
+              "rationale": "Resource stewardship is a performance standard."
+            },
+            {
+              "id": "C",
               "text": "Clustering assessment findings to name the patient's problem",
               "correct": false,
               "rationale": "That is diagnosis, the second Standard of Practice."
             },
             {
-              "id": "C",
-              "text": "Advocating for a patient whose pain report is being discounted",
-              "correct": true,
-              "rationale": "Advocacy is a performance standard and applies whether or not the nurse is at that bedside."
-            },
-            {
               "id": "D",
-              "text": "Writing an outcome the patient will achieve and by when",
+              "text": "Writing an outcome that states what the patient will achieve and by when",
               "correct": false,
               "rationale": "Outcomes identification is a Standard of Practice."
             },
             {
               "id": "E",
-              "text": "Completing continuing education to maintain competence",
+              "text": "Advocating for a patient whose pain report is being discounted",
               "correct": true,
-              "rationale": "Education is a performance standard, directed at the nurse rather than the patient."
+              "rationale": "Advocacy is a performance standard and applies whether or not the nurse is at that bedside."
             },
             {
               "id": "F",
@@ -2805,14 +2805,14 @@
             },
             {
               "id": "G",
-              "text": "Using supplies and staff time in a way that considers cost and safety together",
+              "text": "Completing continuing education to maintain competence",
               "correct": true,
-              "rationale": "Resource stewardship is a performance standard."
+              "rationale": "Education is a performance standard, directed at the nurse rather than the patient."
             }
           ],
           "answer": [
             "A",
-            "C",
+            "B",
             "E",
             "G"
           ],
@@ -6370,21 +6370,21 @@
             },
             {
               "id": "B",
-              "text": "Dementia is emerging, and that is why the confusion comes on later in the day",
-              "correct": false,
-              "rationale": "Evening confusion fits the pattern and so does an anticholinergic peaking after the bedtime dose. A three-week onset with a clear drug trigger is not a progressive disease."
-            },
-            {
-              "id": "C",
               "text": "Reduced fluid intake has produced dehydration",
               "correct": false,
               "rationale": "Possible, and it does not account for a change that began when a new drug did."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Her sleep pattern has changed with age and she is disoriented on waking",
               "correct": false,
               "rationale": "Age changes sleep. It does not produce constipation and a dry mouth."
+            },
+            {
+              "id": "D",
+              "text": "Dementia is emerging, and that is why the confusion comes on later in the day and at night",
+              "correct": false,
+              "rationale": "Evening confusion fits the pattern and so does an anticholinergic peaking after the bedtime dose. A three-week onset with a clear drug trigger is not a progressive disease."
             }
           ],
           "answer": "A",
@@ -6426,7 +6426,7 @@
             },
             {
               "id": "B",
-              "text": "The falls caused a head injury that is producing the confusion",
+              "text": "The falls caused a head injury, and that is what is producing the confusion and disorientation she now shows",
               "correct": false,
               "rationale": "Head injury has to be assessed and it does not fit the sequence. She was off before she fell, so the confusion is a cause of the falls rather than a result."
             },
@@ -6476,15 +6476,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Hypoactive delirium, because the inattention is what separates it from low mood",
-              "correct": true,
-              "rationale": "Inattention is the cardinal feature of delirium in any form. The quiet presentation is the one that gets charted as cooperative and missed."
+              "text": "Oversedation from her analgesia",
+              "correct": false,
+              "rationale": "Opioids are a common precipitant and reviewing them belongs in the workup. Naming the drug names a possible cause, not what is in front of her."
             },
             {
               "id": "B",
-              "text": "Depression related to the surgery and her loss of independence",
-              "correct": false,
-              "rationale": "Depression fits the withdrawal and the poor intake. It does not produce a patient who cannot hold a sequence in mind, and it does not appear over three days."
+              "text": "Hypoactive delirium, because the inattention is what separates it from low mood",
+              "correct": true,
+              "rationale": "Inattention is the cardinal feature of delirium in any form. The quiet presentation is the one that gets charted as cooperative and missed."
             },
             {
               "id": "C",
@@ -6494,12 +6494,12 @@
             },
             {
               "id": "D",
-              "text": "Oversedation from her analgesia",
+              "text": "Depression related to the surgery and her loss of independence",
               "correct": false,
-              "rationale": "Opioids are a common precipitant and reviewing them belongs in the workup. Naming the drug names a possible cause, not what is in front of her."
+              "rationale": "Depression fits the withdrawal and the poor intake. It does not produce a patient who cannot hold a sequence in mind, and it does not appear over three days."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "Hypoactive delirium looks like a good patient. Test attention on anyone whose engagement has dropped, because inattention is the finding that forces the question.",
           "strategy": "Two options explain a withdrawn patient. Only one explains a patient who cannot keep her place in a list.",
           "elimination": {
@@ -6532,9 +6532,9 @@
           "options": [
             {
               "id": "A",
-              "text": "Move to a quieter space, face him directly, lower the pitch of her voice, and ask the questions again",
-              "correct": true,
-              "rationale": "Age-related loss takes the high frequencies first, and background noise masks what is left. Watching her mouth says he is working to fill in what he cannot hear."
+              "text": "Ask his daughter in the hallway to supply the rest of the history so the admission is not delayed",
+              "correct": false,
+              "rationale": "It takes the patient out of his own assessment over a problem that takes two minutes to fix."
             },
             {
               "id": "B",
@@ -6544,20 +6544,20 @@
             },
             {
               "id": "C",
-              "text": "Raise her voice and carry on with the interview",
-              "correct": false,
-              "rationale": "Shouting raises pitch into the range he has lost and distorts the consonants. It makes him harder to understand, not easier."
+              "text": "Move to a quieter space, face him directly, lower the pitch of her voice, and ask the questions again",
+              "correct": true,
+              "rationale": "Age-related loss takes the high frequencies first, and background noise masks what is left. Watching her mouth says he is working to fill in what he cannot hear."
             },
             {
               "id": "D",
-              "text": "Ask his daughter in the hallway to supply the remaining history",
+              "text": "Raise her voice and carry on with the interview",
               "correct": false,
-              "rationale": "It takes the patient out of his own assessment over a problem that takes two minutes to fix."
+              "rationale": "Shouting raises pitch into the range he has lost and distorts the consonants. It makes him harder to understand, not easier."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Correct sensory barriers before you test cognition. Hearing loss that is mistaken for confusion follows an older adult through the whole admission.",
-          "strategy": "Both of the first two options respond to the same observation. Ask which one would produce a trustworthy result.",
+          "strategy": "Two options respond to the same observation. Ask which one would produce a trustworthy result.",
           "elimination": {
             "strategies": [
               "Ask what the finding really shows"
@@ -6588,51 +6588,51 @@
           "options": [
             {
               "id": "A",
-              "text": "Walking him to the bathroom with assistance rather than offering a bedpan",
-              "correct": true,
-              "rationale": "Every trip is practice. The bedpan saves the nurse ten minutes and costs him the walking he came in with."
-            },
-            {
-              "id": "B",
-              "text": "Getting him up to a chair for meals",
-              "correct": true,
-              "rationale": "Sitting upright protects strength, swallowing and intake at the same time."
-            },
-            {
-              "id": "C",
-              "text": "Keeping the urinary catheter until his gait is steadier",
-              "correct": false,
-              "rationale": "A catheter is a tether and an infection risk. It removes the reason to stand up, which is what makes the gait steadier."
-            },
-            {
-              "id": "D",
-              "text": "Maintaining bed rest until physical therapy has evaluated him",
-              "correct": false,
-              "rationale": "Muscle is lost within days. Waiting for a consult to permit ordinary mobility is how function disappears during an admission."
-            },
-            {
-              "id": "E",
-              "text": "Having him wear his own clothes and glasses during the day",
-              "correct": true,
-              "rationale": "Clothes and glasses orient a person and make moving around plausible. A gown keeps people in bed."
-            },
-            {
-              "id": "F",
               "text": "Reviewing the medication list for anything causing sedation or orthostasis",
               "correct": true,
               "rationale": "The most common reason a hospitalized older adult stops walking safely is something that was started in the hospital."
             },
             {
-              "id": "G",
+              "id": "B",
+              "text": "Having him wear his own clothes and glasses during the day",
+              "correct": true,
+              "rationale": "Clothes and glasses orient a person and make moving around plausible. A gown keeps people in bed."
+            },
+            {
+              "id": "C",
               "text": "Applying a chair alarm so he does not stand without help",
               "correct": false,
               "rationale": "Alarms have not been shown to prevent falls and they teach a patient that standing up is the wrong thing to do."
+            },
+            {
+              "id": "D",
+              "text": "Getting him up to a chair for meals",
+              "correct": true,
+              "rationale": "Sitting upright protects strength, swallowing and intake at the same time."
+            },
+            {
+              "id": "E",
+              "text": "Keeping the urinary catheter until his gait is steadier",
+              "correct": false,
+              "rationale": "A catheter is a tether and an infection risk. It removes the reason to stand up, which is what makes the gait steadier."
+            },
+            {
+              "id": "F",
+              "text": "Walking him to the bathroom with assistance rather than offering a bedpan",
+              "correct": true,
+              "rationale": "Every trip is practice. The bedpan saves the nurse ten minutes and costs him the walking he came in with."
+            },
+            {
+              "id": "G",
+              "text": "Maintaining bed rest until physical therapy has evaluated him",
+              "correct": false,
+              "rationale": "Muscle is lost within days. Waiting for a consult to permit ordinary mobility is how function disappears during an admission."
             }
           ],
           "answer": [
             "A",
             "B",
-            "E",
+            "D",
             "F"
           ],
           "takeaway": "Hospital-associated functional decline comes from the tethers and the waiting, not from the illness. Protect mobility like a vital sign.",
@@ -8829,30 +8829,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Honor the request for this conversation and ask him what he wants shared, with whom, and when",
-              "correct": true,
-              "rationale": "Disclosure is decided again in every room and with every team. The right nursing action is finding out where his line is rather than assuming one disclosure settled it."
-            },
-            {
-              "id": "B",
-              "text": "Explain that the information is already documented, so the team will have it regardless",
-              "correct": false,
-              "rationale": "True, and it answers a question he did not ask. He is telling her about this conversation with these people, and the reply hands the decision back to the record."
-            },
-            {
-              "id": "C",
               "text": "Reassure him that the surgical team are professionals who will not judge him",
               "correct": false,
               "rationale": "Whether they will judge him is not hers to promise, and the reassurance ends the conversation before he says why he asked."
             },
             {
-              "id": "D",
+              "id": "B",
+              "text": "Explain that the information is already documented, so the team will have it regardless once they open the chart",
+              "correct": false,
+              "rationale": "True, and it answers a question he did not ask. He is telling her about this conversation with these people, and the reply hands the decision back to the record."
+            },
+            {
+              "id": "C",
               "text": "Remove the information from the chart at his request",
               "correct": false,
               "rationale": "Clinically relevant information is not deleted, and altering the record is not how a privacy concern is handled."
+            },
+            {
+              "id": "D",
+              "text": "Honor the request for this conversation and ask him what he wants shared, with whom, and when",
+              "correct": true,
+              "rationale": "Disclosure is decided again in every room and with every team. The right nursing action is finding out where his line is rather than assuming one disclosure settled it."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Coming out is not an event that happens once. A patient controls what is said, to whom, in each situation, and documentation does not transfer that consent.",
           "strategy": "The accurate option and the correct option are different things here. Ask what he was asking for.",
           "elimination": {
@@ -8885,21 +8885,21 @@
           "options": [
             {
               "id": "A",
+              "text": "Treat the unflagged value as normal, since the laboratory applies the range in the record",
+              "correct": false,
+              "rationale": "The system compared his result to the wrong population. A missing flag is not a normal result."
+            },
+            {
+              "id": "B",
               "text": "Record gender identity and an inventory of the organs he has as separate fields, so results are interpreted correctly and screening is not dropped",
               "correct": true,
               "rationale": "Reference ranges and screening both follow anatomy and physiology. Recording them separately from identity is what lets the record be right about both things at once."
             },
             {
-              "id": "B",
-              "text": "Change the sex marker to female so laboratory values flag against the correct range",
+              "id": "C",
+              "text": "Change the sex marker in the record to female, so that his laboratory values flag correctly against the right reference range for every test from now on",
               "correct": false,
               "rationale": "It fixes one flag by misgendering him in every other screen, document and conversation. The marker is not the tool for this problem and it is not the nurse's to change."
-            },
-            {
-              "id": "C",
-              "text": "Treat the unflagged value as normal, since the laboratory applies the range in the record",
-              "correct": false,
-              "rationale": "The system compared his result to the wrong population. A missing flag is not a normal result."
             },
             {
               "id": "D",
@@ -8908,7 +8908,7 @@
               "rationale": "Passing along a number without the context that makes it meaningful leaves the same error in place."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "Identity and anatomy are two different pieces of data and the record needs both. Laboratory ranges and screening follow the body; names and pronouns follow the person.",
           "strategy": "One option solves the immediate problem and creates a larger one. Ask what else the change would touch.",
           "elimination": {
@@ -8941,30 +8941,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Establish what is documented, ask both of them what the patient had said about his wishes, and bring it to the provider and the facility's process for identifying a surrogate",
-              "correct": true,
-              "rationale": "Who decides is a legal determination the nurse does not make at the bedside. Her job is to gather what is known and move it to the people and the process that resolve it."
-            },
-            {
-              "id": "B",
-              "text": "Defer to the brother, since in the absence of documentation the legal next of kin usually decides",
-              "correct": false,
-              "rationale": "Often true and it varies by state, and some states recognize a domestic partner. Settling it on a general rule at the bedside is deciding something that is not hers to decide."
-            },
-            {
-              "id": "C",
               "text": "Defer to the partner, since twenty years means he knows the patient's wishes better than anyone",
               "correct": false,
               "rationale": "Knowing the wishes and holding the authority are different things. Both belong in the conversation and neither is settled by the nurse."
             },
             {
-              "id": "D",
+              "id": "B",
               "text": "Ask the two of them to reach agreement before any decision is made",
               "correct": false,
               "rationale": "It hands a legal and emotional conflict to two people in crisis and leaves the patient without a decision maker."
+            },
+            {
+              "id": "C",
+              "text": "Establish what is documented, ask both of them what the patient had said about his wishes, and bring it to the provider and the facility's process for identifying a surrogate",
+              "correct": true,
+              "rationale": "Who decides is a legal determination the nurse does not make at the bedside. Her job is to gather what is known and move it to the people and the process that resolve it."
+            },
+            {
+              "id": "D",
+              "text": "Defer to the brother, since in the absence of any advance directive it is usually the legal next of kin whom the law recognizes as the decision maker, especially with no marriage on record",
+              "correct": false,
+              "rationale": "Often true and it varies by state, and some states recognize a domestic partner. Settling it on a general rule at the bedside is deciding something that is not hers to decide."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "When authority is contested, the nurse gathers facts and escalates. She does not pick the decision maker, and she does not leave the family to settle it.",
           "strategy": "Two options are defensible positions in a dispute. The question is not who is right, it is whose job this is.",
           "elimination": {
@@ -8997,13 +8997,13 @@
           "options": [
             {
               "id": "A",
-              "text": "Explain why it has to come off before anesthesia, offer privacy and a gown that covers his chest, and ask who he wants in the room",
-              "correct": true,
-              "rationale": "A binder restricts chest expansion, and under anesthesia he cannot adjust it or tell anyone. The affirming part is how it comes off and what covers him afterward, not whether."
+              "text": "Ask the surgeon to make the decision and tell the patient",
+              "correct": false,
+              "rationale": "The clinical answer is already clear and handing the conversation away leaves him without one."
             },
             {
               "id": "B",
-              "text": "Allow him to keep it on, since respecting gender expression is part of affirming care",
+              "text": "Allow him to keep it on, since respecting a patient's gender expression is part of affirming care, he has asked for it directly, and he wore it through two earlier admissions",
               "correct": false,
               "rationale": "Affirming care does not override a physiological limit. Restricted chest expansion in a patient who cannot breathe for himself is a safety problem, not a preference."
             },
@@ -9015,12 +9015,12 @@
             },
             {
               "id": "D",
-              "text": "Ask the surgeon to make the decision and tell the patient",
-              "correct": false,
-              "rationale": "The clinical answer is already clear and handing the conversation away leaves him without one."
+              "text": "Explain why it has to come off before anesthesia, offer privacy and a gown that covers his chest, and ask who he wants in the room",
+              "correct": true,
+              "rationale": "A binder restricts chest expansion, and under anesthesia he cannot adjust it or tell anyone. The affirming part is how it comes off and what covers him afterward, not whether."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Affirming care and physiological safety are not in competition. When a safety limit is real, the affirming work moves into how you explain it and how you protect dignity around it.",
           "strategy": "The two reasonable options split on whether respect means agreeing. Respect is in the method, not the yes.",
           "elimination": {
@@ -9053,15 +9053,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Which organs the patient currently has",
+              "text": "The number and gender of current and past partners",
               "correct": true,
-              "rationale": "Screening follows anatomy. A cervix needs cervical screening whatever the patient's name, pronouns or sex marker say."
+              "rationale": "Partner history affects risk and is asked of every patient rather than of some."
             },
             {
               "id": "B",
-              "text": "What kinds of sexual contact the patient has",
-              "correct": true,
-              "rationale": "Exposure risk follows practices. This is the question that determines which sites to test."
+              "text": "The details of gender-affirming surgery unrelated to the current problem",
+              "correct": false,
+              "rationale": "Curiosity dressed as history taking. Ask about procedures that change the anatomy in front of you and leave the rest alone."
             },
             {
               "id": "C",
@@ -9071,34 +9071,34 @@
             },
             {
               "id": "D",
-              "text": "The patient's gender identity, used to decide which screens to order",
-              "correct": false,
-              "rationale": "Identity belongs in the record and it is the wrong input for a screening decision. Ordering from identity is how patients lose the screening their anatomy needs."
+              "text": "What kinds of sexual contact the patient has",
+              "correct": true,
+              "rationale": "Exposure risk follows practices. This is the question that determines which sites to test."
             },
             {
               "id": "E",
-              "text": "The number and gender of current and past partners",
-              "correct": true,
-              "rationale": "Partner history affects risk and is asked of every patient rather than of some."
-            },
-            {
-              "id": "F",
-              "text": "The details of gender-affirming surgery unrelated to the current problem",
-              "correct": false,
-              "rationale": "Curiosity dressed as history taking. Ask about procedures that change the anatomy in front of you and leave the rest alone."
-            },
-            {
-              "id": "G",
               "text": "Whether the patient's family knows about their identity",
               "correct": false,
               "rationale": "It changes nothing about screening, and asking it signals that disclosure is the interesting part of the visit."
+            },
+            {
+              "id": "F",
+              "text": "Which organs the patient currently has",
+              "correct": true,
+              "rationale": "Screening follows anatomy. A cervix needs cervical screening whatever the patient's name, pronouns or sex marker say."
+            },
+            {
+              "id": "G",
+              "text": "The patient's gender identity, used to decide which screens to order",
+              "correct": false,
+              "rationale": "Identity belongs in the record and it is the wrong input for a screening decision. Ordering from identity is how patients lose the screening their anatomy needs."
             }
           ],
           "answer": [
             "A",
-            "B",
             "C",
-            "E"
+            "D",
+            "F"
           ],
           "takeaway": "Screening is decided by anatomy and practices. Identity tells you how to address the patient, never what to order.",
           "strategy": "Ask of each item whether the answer would change a screening decision. Three would not.",
@@ -11230,25 +11230,25 @@
           "options": [
             {
               "id": "A",
-              "text": "Build the specific plan for the quit date with him: what he will do with his usual triggers, what he will use, and who he will call on the first bad day",
+              "text": "Build the plan for the quit date with him: what he does about his triggers, what he will use, and who he calls on a bad day",
               "correct": true,
               "rationale": "He has committed to a date and started changing his environment. That is preparation, and preparation needs a plan detailed enough to survive the first week."
             },
             {
               "id": "B",
-              "text": "Explore the advantages and disadvantages of quitting with him to strengthen his motivation",
+              "text": "Explore the advantages and the disadvantages of quitting with him in detail, so the motivation behind the decision is stronger before the date arrives, given that he has not yet cut down at all",
               "correct": false,
               "rationale": "That belongs a stage earlier. Weighing it up again with a man who has already set a date can unsettle a decision he has made."
             },
             {
               "id": "C",
-              "text": "Reinforce his success and start planning for relapse",
+              "text": "Reinforce how well he has done so far and begin planning for the situations that could cause a relapse",
               "correct": false,
               "rationale": "He has not stopped yet. Relapse planning is part of the work once the behavior has changed."
             },
             {
               "id": "D",
-              "text": "Give him written information on the cardiovascular effects of smoking",
+              "text": "Give him written information on what smoking does to the heart and blood vessels over time",
               "correct": false,
               "rationale": "Information is for someone who has not yet seen the problem. He named it himself."
             }
@@ -11286,30 +11286,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Treat the stop as information, ask what was going on in the week it happened, and build the restart around that",
-              "correct": true,
-              "rationale": "Returning to an old behavior is an expected part of change rather than a failure of it. What made this week different is the piece the next plan needs."
-            },
-            {
-              "id": "B",
-              "text": "Point out how well he did for months and encourage him to start again tomorrow",
+              "text": "Point out how well he did over those months and encourage him to make a start again tomorrow morning with a shorter walk",
               "correct": false,
               "rationale": "Encouraging and kind, and it sends him back into the same plan that stopped working. Nothing has been learned about why."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Ask what made him think he could keep it up without a backup plan",
               "correct": false,
               "rationale": "It assigns blame and tells him the gap was in his judgment."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Suggest he wait until things settle down before committing to a routine again",
               "correct": false,
               "rationale": "Waiting for a calm stretch postpones the behavior indefinitely and treats the setback as disqualifying."
+            },
+            {
+              "id": "D",
+              "text": "Treat the stop as information, ask what was going on in the week it happened, and build the restart around that",
+              "correct": true,
+              "rationale": "Returning to an old behavior is an expected part of change rather than a failure of it. What made this week different is the piece the next plan needs."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Relapse is a stage, not an ending. The useful question is what changed in the week the behavior stopped.",
           "strategy": "The warm option and the useful option are not the same. Ask which one changes the next plan.",
           "elimination": {
@@ -11342,30 +11342,30 @@
           "options": [
             {
               "id": "A",
-              "text": "His is secondary prevention and hers is tertiary prevention",
-              "correct": true,
-              "rationale": "Finding disease in someone who feels well is secondary. Monitoring an established condition to limit its complications is tertiary. The same cuff serves two different purposes."
-            },
-            {
-              "id": "B",
-              "text": "Both are secondary prevention, since screening detects disease early",
-              "correct": false,
-              "rationale": "Hers detects nothing. She already has the diagnosis, so the reading manages a known disease."
-            },
-            {
-              "id": "C",
               "text": "His is primary prevention, since he has no disease to detect",
               "correct": false,
               "rationale": "Primary prevention stops disease from starting. A measurement cannot do that. He may already have hypertension, and finding it is the point."
             },
             {
-              "id": "D",
+              "id": "B",
               "text": "Both are primary prevention, because the setting is a community health event",
               "correct": false,
               "rationale": "The level of prevention comes from what the action does, never from where it happens."
+            },
+            {
+              "id": "C",
+              "text": "Both are secondary prevention, since screening detects disease early",
+              "correct": false,
+              "rationale": "Hers detects nothing. She already has the diagnosis, so the reading manages a known disease."
+            },
+            {
+              "id": "D",
+              "text": "His is secondary prevention and hers is tertiary prevention",
+              "correct": true,
+              "rationale": "Finding disease in someone who feels well is secondary. Monitoring an established condition to limit its complications is tertiary. The same cuff serves two different purposes."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "The level of prevention is set by the patient's disease status, not by the intervention. The same action can be secondary for one person and tertiary for another.",
           "strategy": "Do not classify the activity. Classify what it does for each of these two people.",
           "elimination": {
@@ -11404,15 +11404,15 @@
             },
             {
               "id": "B",
-              "text": "Clinical",
-              "correct": false,
-              "rationale": "The clinical model calls a person healthy when signs and symptoms are absent. The policy does not ask about symptoms, it asks about tasks."
-            },
-            {
-              "id": "C",
               "text": "Adaptive",
               "correct": false,
               "rationale": "The adaptive model asks whether a person can adjust flexibly to change. Modified duty sounds like adjustment and the policy measures output, not adjustment."
+            },
+            {
+              "id": "C",
+              "text": "Clinical",
+              "correct": false,
+              "rationale": "The clinical model calls a person healthy when signs and symptoms are absent. The policy does not ask about symptoms, it asks about tasks."
             },
             {
               "id": "D",
@@ -11454,21 +11454,21 @@
           "options": [
             {
               "id": "A",
-              "text": "Enrollment in pulmonary rehabilitation",
-              "correct": true,
-              "rationale": "It limits disability and improves function in a disease he already has, which is what tertiary prevention does."
-            },
-            {
-              "id": "B",
               "text": "Influenza vaccination",
               "correct": false,
               "rationale": "Vaccination stops a disease he does not have from occurring, so it is primary prevention. The reason he needs it is his lung disease, and that does not change the level."
             },
             {
-              "id": "C",
-              "text": "Teaching pursed-lip breathing for use during exertion",
+              "id": "B",
+              "text": "A written action plan for recognizing and treating an exacerbation early",
               "correct": true,
-              "rationale": "A technique that reduces the functional cost of established disease."
+              "rationale": "It limits the damage of a complication he is already at risk for."
+            },
+            {
+              "id": "C",
+              "text": "Enrollment in pulmonary rehabilitation",
+              "correct": true,
+              "rationale": "It limits disability and improves function in a disease he already has, which is what tertiary prevention does."
             },
             {
               "id": "D",
@@ -11478,19 +11478,19 @@
             },
             {
               "id": "E",
-              "text": "A written action plan for recognizing and treating an exacerbation early",
-              "correct": true,
-              "rationale": "It limits the damage of a complication he is already at risk for."
-            },
-            {
-              "id": "F",
               "text": "Smoking cessation support to slow further loss of lung function",
               "correct": true,
               "rationale": "In someone who already has the disease, cessation limits progression. In someone who does not, the same support would be primary prevention."
+            },
+            {
+              "id": "F",
+              "text": "Teaching pursed-lip breathing for use during exertion",
+              "correct": true,
+              "rationale": "A technique that reduces the functional cost of established disease."
             }
           ],
           "answer": [
-            "A",
+            "B",
             "C",
             "E",
             "F"
@@ -13549,9 +13549,9 @@
           "options": [
             {
               "id": "A",
-              "text": "An ethic of care, which reasons from relationship and responsibility rather than from a rule",
-              "correct": true,
-              "rationale": "It asks what this situation and these people require, which is the caring tradition's alternative to deciding by principle alone."
+              "text": "Moral distress, because she disagrees with the plan",
+              "correct": false,
+              "rationale": "Moral distress is knowing the right action and being prevented from taking it. Nothing is blocking her."
             },
             {
               "id": "B",
@@ -13561,20 +13561,20 @@
             },
             {
               "id": "C",
-              "text": "Paternalism, because she is placing his needs above his stated decision",
-              "correct": false,
-              "rationale": "She has not proposed overriding him. Attending to fear is not the same as deciding for someone."
+              "text": "An ethic of care, which reasons from relationship and responsibility rather than from a rule",
+              "correct": true,
+              "rationale": "It asks what this situation and these people require, which is the caring tradition's alternative to deciding by principle alone."
             },
             {
               "id": "D",
-              "text": "Moral distress, because she disagrees with the plan",
+              "text": "Paternalism, because she is placing what he needs above the decision he has already stated",
               "correct": false,
-              "rationale": "Moral distress is knowing the right action and being prevented from taking it. Nothing is blocking her."
+              "rationale": "She has not proposed overriding him. Attending to fear is not the same as deciding for someone."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Principle-based ethics asks which rule governs. An ethic of care asks what this relationship requires. Nursing uses both and they do not always point the same way.",
-          "strategy": "Both of the first two options sound like concern for the patient. The difference is whether a rule is doing the work.",
+          "strategy": "Two options sound like concern for the patient. The difference is whether a rule is doing the work.",
           "elimination": {
             "strategies": [
               "Ask what each nurse is reasoning from"
@@ -13605,15 +13605,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Name the drift to herself, set a response standard she holds to, and ask the team for help with the behavior itself",
-              "correct": true,
-              "rationale": "Caring is conduct, and conduct is correctable once you have noticed it. The behavior is a separate problem that the team addresses rather than one nurse absorbing it through slower care."
+              "text": "Tell him that his manner toward staff is affecting how quickly people come",
+              "correct": false,
+              "rationale": "That makes the slower response a consequence she is imposing. It converts a lapse into a policy."
             },
             {
               "id": "B",
-              "text": "Ask to be reassigned, since she cannot provide caring care to a patient she resents",
-              "correct": false,
-              "rationale": "Reassignment is sometimes right and it is not the first move. It treats caring as a feeling she either has or lacks, when what has changed is something she can change back."
+              "text": "Name the drift to herself, set a response standard she holds to, and ask the team for help with the behavior itself",
+              "correct": true,
+              "rationale": "Caring is conduct, and conduct is correctable once you have noticed it. The behavior is a separate problem that the team addresses rather than one nurse absorbing it through slower care."
             },
             {
               "id": "C",
@@ -13623,12 +13623,12 @@
             },
             {
               "id": "D",
-              "text": "Tell him that his manner toward staff is affecting how quickly people come",
+              "text": "Ask to be reassigned, since she does not believe she can provide caring care to a patient she has come to resent",
               "correct": false,
-              "rationale": "That makes the slower response a consequence she is imposing. It converts a lapse into a policy."
+              "rationale": "Reassignment is sometimes right and it is not the first move. It treats caring as a feeling she either has or lacks, when what has changed is something she can change back."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "Caring is behavior, not warmth. You do not have to like a patient to owe him the same response time, and the first repair is noticing the drift.",
           "strategy": "Two options respond to a real problem. Ask which one keeps her accountable and which one hands the patient off.",
           "elimination": {
@@ -13667,21 +13667,21 @@
             },
             {
               "id": "B",
-              "text": "Take her to the waiting area, since the provider performing the procedure has asked",
+              "text": "Decide based on whether she seems likely to become distressed",
+              "correct": false,
+              "rationale": "Nurses do assess readiness and that is not a reason to exclude a family member by prediction. Support is what makes presence workable."
+            },
+            {
+              "id": "C",
+              "text": "Take her to the waiting area, since the provider performing the procedure has asked for the room to be cleared before he begins and the sterile field is already open",
               "correct": false,
               "rationale": "It settles the question by rank. The patient has not been asked and the request has not been raised."
             },
             {
-              "id": "C",
+              "id": "D",
               "text": "Let her stay without raising it again, since family presence is supported by evidence",
               "correct": false,
               "rationale": "Acting around a colleague rather than with him is how a disagreement becomes an incident at the bedside."
-            },
-            {
-              "id": "D",
-              "text": "Decide based on whether she seems likely to become distressed",
-              "correct": false,
-              "rationale": "Nurses do assess readiness and that is not a reason to exclude a family member by prediction. Support is what makes presence workable."
             }
           ],
           "answer": "A",
@@ -13717,15 +13717,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Tell me what you picture when you think about him",
-              "correct": true,
-              "rationale": "It stays with what she raised and asks her to say the part she has not said yet, which is where the specific fear is."
-            },
-            {
-              "id": "B",
               "text": "He is fortunate to have a mother thinking of him at a time like this",
               "correct": false,
               "rationale": "Warm and it closes the subject. She has been complimented instead of heard."
+            },
+            {
+              "id": "B",
+              "text": "Families often cope better than people expect",
+              "correct": false,
+              "rationale": "Reassurance about a future nobody can promise, and it contradicts what she just told you."
             },
             {
               "id": "C",
@@ -13735,12 +13735,12 @@
             },
             {
               "id": "D",
-              "text": "Families often cope better than people expect",
-              "correct": false,
-              "rationale": "Reassurance about a future nobody can promise, and it contradicts what she just told you."
+              "text": "Tell me what you picture when you think about him",
+              "correct": true,
+              "rationale": "It stays with what she raised and asks her to say the part she has not said yet, which is where the specific fear is."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "When a dying patient names a worry, the work is to open it, not to answer it. The offer to help comes after you know what the help is for.",
           "strategy": "Two options are kind. Ask which one keeps her talking.",
           "elimination": {
@@ -13773,21 +13773,21 @@
           "options": [
             {
               "id": "A",
-              "text": "Allowing the twelve minutes and staying in the room while she works",
-              "correct": true,
-              "rationale": "Presence without takeover. She gets the practice and the company at the same time."
-            },
-            {
-              "id": "B",
               "text": "Buttoning the shirt for her so she is not late to therapy",
               "correct": false,
               "rationale": "Efficiency bought with her independence, and the dressing is therapy too."
             },
             {
-              "id": "C",
-              "text": "Offering clothing with larger buttons and letting her choose",
+              "id": "B",
+              "text": "Allowing the twelve minutes and staying in the room while she works",
               "correct": true,
-              "rationale": "Changing the task rather than doing the task. The capability stays hers."
+              "rationale": "Presence without takeover. She gets the practice and the company at the same time."
+            },
+            {
+              "id": "C",
+              "text": "Asking whether she would like the last two done when she becomes frustrated, and doing them if she says yes",
+              "correct": true,
+              "rationale": "Help offered and accepted keeps her in charge of when she has had enough."
             },
             {
               "id": "D",
@@ -13797,28 +13797,28 @@
             },
             {
               "id": "E",
-              "text": "Asking whether she would like the last two done when she becomes frustrated, and doing them if she says yes",
+              "text": "Offering clothing with larger buttons and letting her choose",
               "correct": true,
-              "rationale": "Help offered and accepted keeps her in charge of when she has had enough."
+              "rationale": "Changing the task rather than doing the task. The capability stays hers."
             },
             {
               "id": "F",
-              "text": "Moving her morning care earlier so the time exists",
-              "correct": true,
-              "rationale": "The schedule is the obstacle, so the schedule is what changes."
+              "text": "Reassuring her that the staff are glad to dress her on any morning when she would rather not do it herself",
+              "correct": false,
+              "rationale": "It offers the exit as the standing alternative, and on a hard morning the exit is what gets taken."
             },
             {
               "id": "G",
-              "text": "Reassuring her that staff are glad to dress her on any morning she would rather not",
-              "correct": false,
-              "rationale": "It offers the exit as the standing alternative, and on a hard morning the exit is what gets taken."
+              "text": "Moving her morning care earlier so the time exists",
+              "correct": true,
+              "rationale": "The schedule is the obstacle, so the schedule is what changes."
             }
           ],
           "answer": [
-            "A",
+            "B",
             "C",
             "E",
-            "F"
+            "G"
           ],
           "takeaway": "Doing for a patient and enabling a patient are different acts of care. When the goal is function, change the task or the conditions rather than taking it over.",
           "strategy": "Every wrong option is kind. Ask which ones leave her more able at the end of the week.",
@@ -15976,30 +15976,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Treat the decision as a reasoned trade-off, work out a dosing time that fits the mornings he has to drive, and tell the provider what was changed and why",
-              "correct": true,
-              "rationale": "He made a choice between two things he values. The intervention has to change the fit between the regimen and the day, because nothing about his understanding needs changing."
+              "text": "Document the nonadherence in the record and notify the provider that he has not been taking it",
+              "correct": false,
+              "rationale": "Accurate as a label and it hands over a judgment instead of a reason. The provider gets no information that leads anywhere."
             },
             {
               "id": "B",
-              "text": "Reteach the purpose of the diuretic and why taking it consistently matters",
+              "text": "Reteach the purpose of the diuretic, how it works, and why taking it at the same time every day matters, since missed doses are a common reason for readmission",
               "correct": false,
               "rationale": "Teaching treats a knowledge gap. He described the mechanism correctly, so repeating it tells him something he used to decide."
             },
             {
               "id": "C",
-              "text": "Document nonadherence and notify the provider",
-              "correct": false,
-              "rationale": "Accurate as a label and it hands over a judgment instead of a reason. The provider gets no information that leads anywhere."
+              "text": "Treat it as a reasoned trade-off, find a dosing time that fits the mornings he drives, and tell the provider what changed and why",
+              "correct": true,
+              "rationale": "He made a choice between two things he values. The intervention has to change the fit between the regimen and the day, because nothing about his understanding needs changing."
             },
             {
               "id": "D",
-              "text": "Set up a pill organizer and reminder calls",
+              "text": "Set up a weekly pill organizer and arrange daily reminder calls from the clinic",
               "correct": false,
               "rationale": "A solution for forgetting, applied to a man who did not forget."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Find out whether the patient could not or chose not. Unintentional nonadherence needs reminders and skills. Intentional nonadherence needs the regimen renegotiated against the life it has to fit inside.",
           "strategy": "Three options assume a deficit the stem has already ruled out. Read what he knows before choosing.",
           "elimination": {
@@ -16032,9 +16032,9 @@
           "options": [
             {
               "id": "A",
-              "text": "The three episodes, what she said she is aiming for, and the question of whether the target still fits her",
-              "correct": true,
-              "rationale": "She has given the goal that the plan should be measured against, and the episodes are the data that makes the question answerable. Framing it as a question keeps the decision where it belongs and still forces it."
+              "text": "A plan to teach her hypoglycemia symptoms and recheck in a month",
+              "correct": false,
+              "rationale": "Education applied to a dosing problem. She can learn the symptoms and still fall on a Saturday."
             },
             {
               "id": "B",
@@ -16044,18 +16044,18 @@
             },
             {
               "id": "C",
-              "text": "A request to add a third agent so the target is reached more consistently",
+              "text": "A request to add a third agent so that the target is reached more consistently through the day and through the night as well",
               "correct": false,
               "rationale": "It treats the number as the goal in a patient whose risk from a fall exceeds her risk from a slightly higher value."
             },
             {
               "id": "D",
-              "text": "A plan to teach her hypoglycemia symptoms and recheck in a month",
-              "correct": false,
-              "rationale": "Education applied to a dosing problem. She can learn the symptoms and still fall on a Saturday."
+              "text": "The three episodes, what she said she is aiming for, and the question of whether the target still fits her",
+              "correct": true,
+              "rationale": "She has given the goal that the plan should be measured against, and the episodes are the data that makes the question answerable. Framing it as a question keeps the decision where it belongs and still forces it."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "In chronic illness the target serves the patient's goal, not the other way around. Bring the goal and the data, and let the question be asked rather than answered for the provider.",
           "strategy": "Two options point the same clinical direction. Ask which one brings the reasoning with it.",
           "elimination": {
@@ -16088,30 +16088,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Delivery system design",
-              "correct": true,
-              "rationale": "This component decides who does what, who coordinates, and how a patient moves between clinicians. Three people acting independently with no one holding the whole is a design failure."
+              "text": "Decision support",
+              "correct": false,
+              "rationale": "Decision support puts current evidence in front of clinicians. Each change may have been evidence-based on its own, and they still collided."
             },
             {
               "id": "B",
-              "text": "Clinical information systems",
-              "correct": false,
-              "rationale": "The strongest distractor and the stem closes it. One record, shared, and each of them read it. The information was present and nobody owned the coordination."
-            },
-            {
-              "id": "C",
               "text": "Self-management support",
               "correct": false,
               "rationale": "Keeping three specialists aligned is not a task the patient should be carrying, and calling it his failure misplaces the problem."
             },
             {
-              "id": "D",
-              "text": "Decision support",
+              "id": "C",
+              "text": "Clinical information systems",
               "correct": false,
-              "rationale": "Decision support puts current evidence in front of clinicians. Each change may have been evidence-based on its own, and they still collided."
+              "rationale": "The strongest distractor and the stem closes it. One record, shared, and each of them read it. The information was present and nobody owned the coordination."
+            },
+            {
+              "id": "D",
+              "text": "Delivery system design",
+              "correct": true,
+              "rationale": "This component decides who does what, who coordinates, and how a patient moves between clinicians. Three people acting independently with no one holding the whole is a design failure."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Information available to everyone and coordinated by nobody is a design problem. Ask who was responsible for the whole patient before blaming the record or the patient.",
           "strategy": "The detail about the shared record is placed there to eliminate the tempting answer. Read it.",
           "elimination": {
@@ -16144,30 +16144,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Have him walk the corridor until he is short of breath and use the technique there, with the nurse alongside, until it works",
-              "correct": true,
-              "rationale": "A success under the conditions where he needs it is the strongest source of confidence. Performing it calm and seated proves nothing about the moment that matters."
-            },
-            {
-              "id": "B",
               "text": "Show him a recording of another patient with the same diagnosis using it during exertion",
               "correct": false,
               "rationale": "Watching someone similar succeed does raise confidence and it is weaker than doing it. Use it when the patient cannot attempt the task yet."
             },
             {
-              "id": "C",
-              "text": "Tell him he has done it correctly twice and that he is more capable than he thinks",
-              "correct": false,
-              "rationale": "Encouragement is the weakest of the routes to confidence and it tends to evaporate at the first failure."
-            },
-            {
-              "id": "D",
+              "id": "B",
               "text": "Explain how pursed-lip breathing keeps the small airways open",
               "correct": false,
               "rationale": "Understanding why is not the gap. He knows the technique and does not believe he can produce it when breathless."
+            },
+            {
+              "id": "C",
+              "text": "Have him walk the corridor until he is short of breath and use the technique there, with the nurse alongside, until it works",
+              "correct": true,
+              "rationale": "A success under the conditions where he needs it is the strongest source of confidence. Performing it calm and seated proves nothing about the moment that matters."
+            },
+            {
+              "id": "D",
+              "text": "Tell him he has done it correctly twice already and that he is a good deal more capable of doing it at home than he believes",
+              "correct": false,
+              "rationale": "Encouragement is the weakest of the routes to confidence and it tends to evaporate at the first failure."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Confidence in a skill comes mostly from having done it, and it has to be done under the conditions it is for. Watching and encouragement are second and third.",
           "strategy": "All four are real teaching strategies. Rank them by strength, then check which matches the condition he described.",
           "elimination": {
@@ -16200,33 +16200,33 @@
           "options": [
             {
               "id": "A",
-              "text": "He names every medication and the time each is due, and takes about half of them",
-              "correct": true,
-              "rationale": "Knowing and not doing is the signature. Something other than understanding is stopping him."
-            },
-            {
-              "id": "B",
-              "text": "He has four appointments in two weeks at three locations and misses the third",
-              "correct": true,
-              "rationale": "The schedule exceeds what one person with his transport and energy can execute."
-            },
-            {
-              "id": "C",
-              "text": "He asks what the newest medication is for",
+              "text": "He asks what the newest medication on his list is for",
               "correct": false,
               "rationale": "A direct knowledge gap and an easy one to close."
             },
             {
-              "id": "D",
+              "id": "B",
               "text": "He says he spends about two hours a day on his health and has stopped seeing friends",
               "correct": true,
               "rationale": "The regimen has taken over the life it exists to protect. That cost is the burden itself."
             },
             {
-              "id": "E",
-              "text": "He cannot name his inhaler and his technique is wrong",
+              "id": "C",
+              "text": "He names every medication and the time each is due, and takes about half of them",
+              "correct": true,
+              "rationale": "Knowing and not doing is the signature. Something other than understanding is stopping him."
+            },
+            {
+              "id": "D",
+              "text": "He cannot name his inhaler and his technique with it is wrong in several steps",
               "correct": false,
               "rationale": "Skill and knowledge, both teachable."
+            },
+            {
+              "id": "E",
+              "text": "He has four appointments in two weeks at three locations and misses the third",
+              "correct": true,
+              "rationale": "The schedule exceeds what one person with his transport and energy can execute."
             },
             {
               "id": "F",
@@ -16236,9 +16236,9 @@
             }
           ],
           "answer": [
-            "A",
             "B",
-            "D",
+            "C",
+            "E",
             "F"
           ],
           "takeaway": "Treatment burden is the work a regimen demands. When a patient knows the plan and cannot run it, teaching harder makes the burden heavier.",
@@ -18250,30 +18250,30 @@
           "options": [
             {
               "id": "A",
+              "text": "Do you believe the medication will work?",
+              "correct": false,
+              "rationale": "Closed, and it jumps to adherence before anyone knows what she thinks she is treating."
+            },
+            {
+              "id": "B",
               "text": "What do you think the illness is doing inside your body?",
               "correct": true,
               "rationale": "It asks for her model of the illness, which is what she will be reasoning from when she decides whether to take a tablet every morning for the rest of her life."
             },
             {
-              "id": "B",
+              "id": "C",
               "text": "Would it help if I explained what causes type 2 diabetes?",
               "correct": false,
               "rationale": "Correcting her before you have heard her tells her the conversation is about who is right. The explanation is the second move, not the first."
             },
             {
-              "id": "C",
+              "id": "D",
               "text": "Has anyone else in your family had the same condition?",
               "correct": false,
               "rationale": "A useful history question that collects facts rather than meaning."
-            },
-            {
-              "id": "D",
-              "text": "Do you believe the medication will work?",
-              "correct": false,
-              "rationale": "Closed, and it jumps to adherence before anyone knows what she thinks she is treating."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "Find out what the patient thinks the illness is, what caused it, what it is doing, and what she fears. You cannot negotiate a plan with a belief you have not heard.",
           "strategy": "Two options are about the cause of diabetes. One asks her, one tells her.",
           "elimination": {
@@ -18312,15 +18312,15 @@
             },
             {
               "id": "B",
-              "text": "Cultural imposition, because she is applying her own standard to everyone",
-              "correct": false,
-              "rationale": "The closest option. Imposition is pressing your own beliefs and practices onto a patient. She is not pressing anything, she is declining to look."
-            },
-            {
-              "id": "C",
               "text": "Cultural competence, because equal treatment is the goal",
               "correct": false,
               "rationale": "Competence adapts care so different patients can reach the same outcome. Sameness of input is the opposite of that."
+            },
+            {
+              "id": "C",
+              "text": "Cultural imposition, because she is applying her own standard of care to every patient",
+              "correct": false,
+              "rationale": "The closest option. Imposition is pressing your own beliefs and practices onto a patient. She is not pressing anything, she is declining to look."
             },
             {
               "id": "D",
@@ -18362,30 +18362,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Find out exactly what is in it and how much he drinks, tell him what it can do to his bleeding risk, and build a plan with him that includes closer monitoring",
-              "correct": true,
-              "rationale": "It keeps him talking, gets the information the team needs, states the risk plainly, and ends in a plan he has agreed to. Negotiation is the step that produces a plan both sides can live with."
-            },
-            {
-              "id": "B",
-              "text": "Tell him he has to stop the tea while he is taking warfarin",
+              "text": "Tell him that he has to stop drinking the tea for as long as he remains on warfarin, and explain that the combination can make his level unpredictable",
               "correct": false,
               "rationale": "Clinically tidy and it ends the conversation. He will drink it anyway and will stop mentioning it, which removes the only safeguard he had."
             },
             {
+              "id": "B",
+              "text": "Find out what is in it and how much he drinks, tell him what it does to his bleeding risk, and plan closer monitoring with him",
+              "correct": true,
+              "rationale": "It keeps him talking, gets the information the team needs, states the risk plainly, and ends in a plan he has agreed to. Negotiation is the step that produces a plan both sides can live with."
+            },
+            {
               "id": "C",
-              "text": "Document that he declines to stop it and notify the provider",
+              "text": "Reassure him that herbal preparations are generally safe when they are taken in small amounts",
               "correct": false,
-              "rationale": "Accurate and inert. Nobody learns what is in the tea and nothing changes about his monitoring."
+              "rationale": "Untrue in this case and it closes the subject with false comfort."
             },
             {
               "id": "D",
-              "text": "Reassure him that herbal preparations are generally safe in small amounts",
+              "text": "Document that he declines to stop it and notify the provider of his decision",
               "correct": false,
-              "rationale": "Untrue in this case and it closes the subject with false comfort."
+              "rationale": "Accurate and inert. Nobody learns what is in the tea and nothing changes about his monitoring."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "Negotiate rather than prohibit. A practice the patient will keep either way is safer inside the plan than outside it.",
           "strategy": "The strictest option looks safest. Ask what he will do after each response.",
           "elimination": {
@@ -18418,30 +18418,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Arrange a qualified sign language interpreter before the consent conversation goes ahead",
-              "correct": true,
-              "rationale": "For many people whose first language is a signed one, written English is a second language. Consent requires comprehension, and notes passed under time pressure do not establish it."
-            },
-            {
-              "id": "B",
               "text": "Agree to written notes, since he can read and the information will be in writing for him to keep",
               "correct": false,
               "rationale": "Reading ability is not fluency, and a written record of something not understood is still not consent."
             },
             {
-              "id": "C",
-              "text": "Ask the family member in the waiting room who signs to interpret",
-              "correct": false,
-              "rationale": "A family member is not a qualified interpreter, and consent is the conversation where that matters most."
+              "id": "B",
+              "text": "Arrange a qualified sign language interpreter before the consent conversation goes ahead",
+              "correct": true,
+              "rationale": "For many people whose first language is a signed one, written English is a second language. Consent requires comprehension, and notes passed under time pressure do not establish it."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Speak slowly and clearly facing him so he can lip read",
               "correct": false,
               "rationale": "Only a fraction of speech is visible on the lips, and none of the detail that makes a risk discussion meaningful."
+            },
+            {
+              "id": "D",
+              "text": "Ask the family member in the waiting room who signs to interpret",
+              "correct": false,
+              "rationale": "A family member is not a qualified interpreter, and consent is the conversation where that matters most."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "A qualified interpreter is required for consent. Convenience, a willing relative, and the patient's reading ability are the three reasons it gets skipped.",
           "strategy": "Every distractor is a workaround that would move things along. Ask which one produces understanding.",
           "elimination": {
@@ -18474,52 +18474,52 @@
           "options": [
             {
               "id": "A",
-              "text": "Ask what his fasting usually looks like and bring it to the provider so the regimen can be reviewed before the month begins",
-              "correct": true,
-              "rationale": "The medications, not the fast, are what need adjusting, and the time to do it is before rather than after the first hypoglycemic episode."
-            },
-            {
-              "id": "B",
-              "text": "Teach him the symptoms that mean he must break the fast, and that breaking it for illness is permitted within the practice",
-              "correct": true,
-              "rationale": "Knowing the exemption exists is often what makes a patient willing to act on symptoms instead of pushing through them."
-            },
-            {
-              "id": "C",
-              "text": "Explain that fasting is unsafe with diabetes and advise him against it",
-              "correct": false,
-              "rationale": "It presents a yearly religious obligation as a choice he should drop, and it guarantees he will fast without telling anyone."
-            },
-            {
-              "id": "D",
-              "text": "Arrange monitoring supplies and set a schedule for checking across the fasting hours",
-              "correct": true,
-              "rationale": "Measurement replaces the warning signs that a fasting patient on a sulfonylurea most needs."
-            },
-            {
-              "id": "E",
               "text": "Ask who he consults about religious questions and whether he would like that person involved in the planning",
               "correct": true,
               "rationale": "Many traditions have established guidance for people with chronic illness, and the person who carries that authority for him can make the plan workable."
             },
             {
-              "id": "F",
-              "text": "Document that he is declining medical advice",
+              "id": "B",
+              "text": "Ask what his fasting usually looks like and bring it to the provider so the regimen can be reviewed before the month begins",
+              "correct": true,
+              "rationale": "The medications, not the fast, are what need adjusting, and the time to do it is before rather than after the first hypoglycemic episode."
+            },
+            {
+              "id": "C",
+              "text": "Arrange monitoring supplies and set a schedule for checking across the fasting hours",
+              "correct": true,
+              "rationale": "Measurement replaces the warning signs that a fasting patient on a sulfonylurea most needs."
+            },
+            {
+              "id": "D",
+              "text": "Document that he is declining medical advice about the fast",
               "correct": false,
               "rationale": "Nothing has been declined. Recording it that way frames the patient as the problem and closes the planning."
             },
             {
-              "id": "G",
-              "text": "Suggest he take both medications at dawn so the whole day is covered",
+              "id": "E",
+              "text": "Suggest that he take both of his medications at dawn so that the whole of the fasting day is covered without needing a second dose later",
               "correct": false,
               "rationale": "A sulfonylurea at dawn with no food until sunset is the exact setup for hypoglycemia. Timing is a prescribing decision and this is the wrong one."
+            },
+            {
+              "id": "F",
+              "text": "Explain that fasting is not safe for a person with diabetes and advise him against it this year",
+              "correct": false,
+              "rationale": "It presents a yearly religious obligation as a choice he should drop, and it guarantees he will fast without telling anyone."
+            },
+            {
+              "id": "G",
+              "text": "Teach him the symptoms that mean he must break the fast, and that breaking it for illness is permitted within the practice",
+              "correct": true,
+              "rationale": "Knowing the exemption exists is often what makes a patient willing to act on symptoms instead of pushing through them."
             }
           ],
           "answer": [
             "A",
             "B",
-            "D",
-            "E"
+            "C",
+            "G"
           ],
           "takeaway": "Culturally congruent care plans around the practice rather than against it. Move the medication, not the fast, and build in measurement where symptoms will be unreliable.",
           "strategy": "Two wrong options sound protective. Ask whether each one would still be followed in week three of the fast.",
@@ -21320,7 +21320,7 @@
             },
             {
               "id": "B",
-              "text": "Impaired physical mobility related to hip fracture, as evidenced by inability to transfer without two staff",
+              "text": "Impaired physical mobility related to hip fracture, as evidenced by an inability to transfer without two members of staff",
               "correct": false,
               "rationale": "The closest distractor. The response and the evidence are fine and the related factor is a medical diagnosis, which nursing cannot treat. Name the pain and the weakness instead."
             },
@@ -21370,21 +21370,21 @@
           "options": [
             {
               "id": "A",
+              "text": "Impaired skin integrity, because it is already causing harm while the aspiration has not happened and may never happen",
+              "correct": false,
+              "rationale": "The same reasoning worded as urgency. Harm that has already occurred is not the same as harm that is about to."
+            },
+            {
+              "id": "B",
               "text": "Risk for aspiration, because a potential problem outranks an actual one when what it threatens is the airway",
               "correct": true,
               "rationale": "Actual before potential is a tiebreaker, and the ABCs sit above it. A risk that would take the airway beats a problem already present in the skin."
             },
             {
-              "id": "B",
+              "id": "C",
               "text": "Impaired skin integrity, because an actual problem always takes priority over a potential one",
               "correct": false,
               "rationale": "The rule is real and it is not the top rule. Applied without the ABCs above it, it ranks a wound over an airway."
-            },
-            {
-              "id": "C",
-              "text": "Impaired skin integrity, because it is already causing harm and the aspiration has not happened",
-              "correct": false,
-              "rationale": "The same reasoning worded as urgency. Harm that has already occurred is not the same as harm that is about to."
             },
             {
               "id": "D",
@@ -21393,7 +21393,7 @@
               "rationale": "Both do get addressed. The question asks which comes first, and declining to rank is how the airway waits."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "Actual before potential is a tiebreaker, not the first rule. Airway, breathing and circulation sit above it, and a life-threatening risk outranks a non-urgent actual problem.",
           "strategy": "Two options apply a rule you were taught correctly. The question is whether a higher rule applies first.",
           "elimination": {
@@ -21426,30 +21426,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Respirations 24, saturation 91 percent, pain on deep breathing, and the compression sleeves removed overnight",
-              "correct": true,
-              "rationale": "Four cues from the same story: a postoperative patient without mechanical prophylaxis, now hypoxic with pleuritic pain and a rising respiratory rate."
-            },
-            {
-              "id": "B",
               "text": "Temperature 37.8 C, heart rate 104, incision drainage, and postoperative day two",
               "correct": false,
               "rationale": "The tempting cluster, and the cues are the weak ones. Scant serous drainage from a clean incision is expected, a low-grade temperature on day two is common, and this grouping leaves the breathing out."
             },
             {
-              "id": "C",
-              "text": "Heart rate 104, temperature 37.8 C, respirations 24, and saturation 91 percent",
-              "correct": false,
-              "rationale": "A real deterioration pattern with the specific cue removed. Without the pleuritic pain and the missing prophylaxis it names that he is unwell without naming why."
+              "id": "B",
+              "text": "Respirations 24, saturation 91 percent, pain on deep breathing, and the compression sleeves removed overnight",
+              "correct": true,
+              "rationale": "Four cues from the same story: a postoperative patient without mechanical prophylaxis, now hypoxic with pleuritic pain and a rising respiratory rate."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Soft nontender calf, clean incision, and scant serous drainage",
               "correct": false,
               "rationale": "These are the findings that are reassuring, and a soft calf does not exclude a clot."
+            },
+            {
+              "id": "D",
+              "text": "Heart rate 104, temperature 37.8 C, respirations 24, and saturation 91 percent, taken together as a deterioration pattern",
+              "correct": false,
+              "rationale": "A real deterioration pattern with the specific cue removed. Without the pleuritic pain and the missing prophylaxis it names that he is unwell without naming why."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "Clustering means finding the cues that tell one story. The strongest cluster usually contains a cue about what was not done, not only the measurements.",
           "strategy": "Two clusters are internally consistent. Ask which one includes the finding that only fits one diagnosis.",
           "elimination": {
@@ -21488,9 +21488,9 @@
             },
             {
               "id": "B",
-              "text": "Problem-focused",
+              "text": "Emergency",
               "correct": false,
-              "rationale": "The strongest distractor, since hypertension is a named problem. A problem-focused assessment examines one concern right now and is not built on comparison with a previous database."
+              "rationale": "That is a rapid assessment of life-threatening problems in an unstable patient."
             },
             {
               "id": "C",
@@ -21500,9 +21500,9 @@
             },
             {
               "id": "D",
-              "text": "Emergency",
+              "text": "Problem-focused",
               "correct": false,
-              "rationale": "That is a rapid assessment of life-threatening problems in an unstable patient."
+              "rationale": "The strongest distractor, since hypertension is a named problem. A problem-focused assessment examines one concern right now and is not built on comparison with a previous database."
             }
           ],
           "answer": "A",
@@ -21538,9 +21538,9 @@
           "options": [
             {
               "id": "A",
-              "text": "Repositioning a patient at risk for pressure injury every two hours",
-              "correct": true,
-              "rationale": "Nurse-initiated, within scope, needs nobody's authorization."
+              "text": "Consulting physical therapy under the unit's mobility protocol",
+              "correct": false,
+              "rationale": "Collaborative. The protocol permits it and the work is carried out with another discipline."
             },
             {
               "id": "B",
@@ -21550,21 +21550,21 @@
             },
             {
               "id": "C",
+              "text": "Repositioning a patient at risk for pressure injury every two hours",
+              "correct": true,
+              "rationale": "Nurse-initiated, within scope, needs nobody's authorization."
+            },
+            {
+              "id": "D",
               "text": "Teaching splinted coughing before abdominal surgery",
               "correct": true,
               "rationale": "Patient education is nurse-initiated and is not delegable or prescribable."
             },
             {
-              "id": "D",
+              "id": "E",
               "text": "Raising the head of the bed for a patient reporting breathlessness",
               "correct": true,
               "rationale": "A positioning decision the nurse makes on her own assessment."
-            },
-            {
-              "id": "E",
-              "text": "Consulting physical therapy under the unit's mobility protocol",
-              "correct": false,
-              "rationale": "Collaborative. The protocol permits it and the work is carried out with another discipline."
             },
             {
               "id": "F",
@@ -21580,9 +21580,9 @@
             }
           ],
           "answer": [
-            "A",
             "C",
             "D",
+            "E",
             "G"
           ],
           "takeaway": "Independent interventions need no order. Dependent ones carry one out. Collaborative ones are shared with another discipline, and a protocol does not make an action independent.",
@@ -23753,21 +23753,21 @@
             },
             {
               "id": "B",
-              "text": "The situational background",
-              "correct": false,
-              "rationale": "She gave the history and the events, which is the background."
-            },
-            {
-              "id": "C",
-              "text": "The receiving nurse's summary back of what she heard",
+              "text": "The receiving nurse's summary back of everything she has just heard and what she plans to watch for",
               "correct": false,
               "rationale": "The closest alternative and it is also missing. The question asks what she did not say, and she never got to the worries for the receiving nurse to repeat."
             },
             {
-              "id": "D",
-              "text": "The assessment of the patient's current condition",
+              "id": "C",
+              "text": "The assessment of the patient's condition as it stands now",
               "correct": false,
               "rationale": "Covered under the day's events and current status."
+            },
+            {
+              "id": "D",
+              "text": "The background and context of the admission",
+              "correct": false,
+              "rationale": "She gave the history and the events, which is the background."
             }
           ],
           "answer": "A",
@@ -23803,15 +23803,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Accommodating",
-              "correct": true,
-              "rationale": "She has yielded entirely to keep the relationship smooth. The work is covered and her concern never enters the record of what happened."
-            },
-            {
-              "id": "B",
               "text": "Compromising",
               "correct": false,
               "rationale": "The closest option. Compromise means both parties give something up. Here one person gave up everything and the other gave up nothing."
+            },
+            {
+              "id": "B",
+              "text": "Collaborating",
+              "correct": false,
+              "rationale": "Collaboration produces a solution both sides consider better than their starting positions. Nothing was built here."
             },
             {
               "id": "C",
@@ -23821,12 +23821,12 @@
             },
             {
               "id": "D",
-              "text": "Collaborating",
-              "correct": false,
-              "rationale": "Collaboration produces a solution both sides consider better than their starting positions. Nothing was built here."
+              "text": "Accommodating",
+              "correct": true,
+              "rationale": "She has yielded entirely to keep the relationship smooth. The work is covered and her concern never enters the record of what happened."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Accommodating ends the conflict and keeps the problem. It is the approach most likely to be mistaken for teamwork, and it is why the same unfair pattern repeats next week.",
           "strategy": "Count what each side gave up. One-sided yielding is accommodating; two-sided yielding is compromise.",
           "elimination": {
@@ -23859,21 +23859,21 @@
           "options": [
             {
               "id": "A",
-              "text": "Take that patient's vital signs herself and tell the assistive personnel why the delegation changed",
-              "correct": true,
-              "rationale": "The task and the person were both appropriate and the circumstance was not. An unstable patient's vital signs are assessment data the nurse has to gather and interpret in the same moment."
-            },
-            {
-              "id": "B",
               "text": "Let her continue, since taking vital signs is within her role and she is competent at it",
               "correct": false,
               "rationale": "Right task and right person, which is what makes this tempting. Two of the five rights holding does not make a delegation safe when the third has changed."
             },
             {
-              "id": "C",
+              "id": "B",
               "text": "Let her continue but have her report the numbers immediately",
               "correct": false,
               "rationale": "It adds a reporting rule to a delegation that should not be in place, and the delay is not the problem. The nurse needs to see the patient, not the numbers."
+            },
+            {
+              "id": "C",
+              "text": "Take that patient's vital signs herself and tell the assistive personnel why the delegation changed",
+              "correct": true,
+              "rationale": "The task and the person were both appropriate and the circumstance was not. An unstable patient's vital signs are assessment data the nurse has to gather and interpret in the same moment."
             },
             {
               "id": "D",
@@ -23882,7 +23882,7 @@
               "rationale": "The other three patients have not changed. Pulling back work that is still appropriate wastes the only help she has."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "The five rights are checked continuously, not once. The right that most often changes during a shift is the circumstance, and a patient becoming unstable revokes the delegation.",
           "strategy": "Three options are about the assistive personnel. The thing that changed is the patient.",
           "elimination": {
@@ -23921,15 +23921,15 @@
             },
             {
               "id": "B",
-              "text": "Give the mealtime insulin while the tray is in front of the patient",
-              "correct": false,
-              "rationale": "Time-critical, and the window is measured in minutes rather than seconds. The tray will keep for the five minutes this call takes."
-            },
-            {
-              "id": "C",
               "text": "Assess the patient who has not been seen",
               "correct": false,
               "rationale": "Assessment before intervention is the right instinct and the wrong application. An unassessed patient is an unknown risk; the potassium is a known one."
+            },
+            {
+              "id": "C",
+              "text": "Give the mealtime insulin while the tray is in front of the patient",
+              "correct": false,
+              "rationale": "Time-critical, and the window is measured in minutes rather than seconds. The tray will keep for the five minutes this call takes."
             },
             {
               "id": "D",
@@ -23971,9 +23971,9 @@
           "options": [
             {
               "id": "A",
-              "text": "Tell the charge nurse specifically what makes it unsafe and what she needs to make it workable",
+              "text": "Record the concern through the facility's reporting process",
               "correct": true,
-              "rationale": "A named problem with a named remedy can be acted on. This assignment is too heavy cannot."
+              "rationale": "It creates the pattern evidence that changes staffing, and it protects her if something goes wrong."
             },
             {
               "id": "B",
@@ -23983,21 +23983,21 @@
             },
             {
               "id": "C",
-              "text": "Record the concern through the facility's reporting process",
+              "text": "Tell the charge nurse specifically what makes it unsafe and what she needs to make it workable",
               "correct": true,
-              "rationale": "It creates the pattern evidence that changes staffing, and it protects her if something goes wrong."
+              "rationale": "A named problem with a named remedy can be acted on. This assignment is too heavy cannot."
             },
             {
               "id": "D",
-              "text": "Refuse the assignment and leave the unit",
+              "text": "Decide privately which patients she will not get to and work through the shift from that",
               "correct": false,
-              "rationale": "Leaving patients already in her care is abandonment and a licensure matter, whatever the staffing was."
+              "rationale": "A silent rationing plan nobody else knows about. The patients who get dropped are chosen without anyone able to check the choice."
             },
             {
               "id": "E",
-              "text": "Escalate to the next level of management if the charge nurse cannot resolve it",
-              "correct": true,
-              "rationale": "The chain of command exists for exactly this, and stopping at the first no is where escalation usually fails."
+              "text": "Refuse the assignment outright and leave the unit",
+              "correct": false,
+              "rationale": "Leaving patients already in her care is abandonment and a licensure matter, whatever the staffing was."
             },
             {
               "id": "F",
@@ -24007,16 +24007,16 @@
             },
             {
               "id": "G",
-              "text": "Decide privately which patients she will not get to and work from that",
-              "correct": false,
-              "rationale": "A silent rationing plan nobody else knows about. The patients who get dropped are chosen without anyone able to check the choice."
+              "text": "Escalate to the next level of management if the charge nurse cannot resolve it",
+              "correct": true,
+              "rationale": "The chain of command exists for exactly this, and stopping at the first no is where escalation usually fails."
             }
           ],
           "answer": [
             "A",
             "B",
             "C",
-            "E"
+            "G"
           ],
           "takeaway": "Speak specifically, stay with the patients, document, and escalate. Refusing to care and quietly triaging in your head are the two ways this goes wrong.",
           "strategy": "Separate protesting the assignment from abandoning the patients. The first is required and the second is never an option.",
@@ -27305,9 +27305,9 @@
           "options": [
             {
               "id": "A",
-              "text": "Duty",
-              "correct": true,
-              "rationale": "Malpractice requires a professional relationship that creates an obligation to this person. A nurse off duty in a shop has not accepted that relationship, and most states impose no legal duty to rescue a stranger."
+              "text": "Causation",
+              "correct": false,
+              "rationale": "An argument could be made that the delay worsened the outcome. It never gets examined if there was no duty."
             },
             {
               "id": "B",
@@ -27317,9 +27317,9 @@
             },
             {
               "id": "C",
-              "text": "Causation",
-              "correct": false,
-              "rationale": "An argument could be made that the delay worsened the outcome. It never gets examined if there was no duty."
+              "text": "Duty",
+              "correct": true,
+              "rationale": "Malpractice requires a professional relationship that creates an obligation to this person. A nurse off duty in a shop has not accepted that relationship, and most states impose no legal duty to rescue a stranger."
             },
             {
               "id": "D",
@@ -27328,7 +27328,7 @@
               "rationale": "A permanent deficit is a clear injury, so this element is the one most obviously present."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "All four elements have to be present: duty, breach, causation and damages. Duty is the one that fails off duty, and Good Samaritan laws exist to protect the nurse who chooses to help anyway.",
           "strategy": "The morally uncomfortable option is not the legally weak one. Test the elements in order and stop where the chain breaks.",
           "elimination": {
@@ -27361,9 +27361,9 @@
           "options": [
             {
               "id": "A",
-              "text": "Report it to the supervisor now",
-              "correct": true,
-              "rationale": "She has three observations and an admission. Patients are receiving care from an impaired nurse during the hour this is being discussed, and reporting is both a practice act obligation and the route to treatment."
+              "text": "Watch her closely for the rest of the shift and decide at the end",
+              "correct": false,
+              "rationale": "Assessing before acting is usually right and here the assessment is complete. Waiting adds no information and adds eight hours of exposure."
             },
             {
               "id": "B",
@@ -27373,18 +27373,18 @@
             },
             {
               "id": "C",
-              "text": "Watch her closely for the rest of the shift and decide at the end",
-              "correct": false,
-              "rationale": "Assessing before acting is usually right and here the assessment is complete. Waiting adds no information and adds eight hours of exposure."
-            },
-            {
-              "id": "D",
               "text": "Suggest she report herself sick and go home",
               "correct": false,
               "rationale": "It removes the immediate risk and leaves no record, no evaluation and nothing that stops the same shift happening next week."
+            },
+            {
+              "id": "D",
+              "text": "Report it to the supervisor now",
+              "correct": true,
+              "rationale": "She has three observations and an admission. Patients are receiving care from an impaired nurse during the hour this is being discussed, and reporting is both a practice act obligation and the route to treatment."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Impairment is reported, not managed privately. The consequences the colleague fears are real and they do not transfer the risk away from the patients.",
           "strategy": "Three options delay or privatize. Ask who is receiving care while each one plays out.",
           "elimination": {
@@ -27417,30 +27417,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Battery",
-              "correct": true,
-              "rationale": "Consent can be withdrawn at any point up to and during a procedure. Touching that continues after withdrawal is intentional unconsented contact, whatever the paperwork says."
-            },
-            {
-              "id": "B",
-              "text": "Assault",
-              "correct": false,
-              "rationale": "The strongest distractor. Assault is placing someone in fear of unwanted contact. Once the contact happens it is battery, and the two are routinely confused in exactly this scenario."
-            },
-            {
-              "id": "C",
               "text": "Negligence",
               "correct": false,
               "rationale": "Negligence is unintentional. This was deliberate and against a stated refusal."
             },
             {
-              "id": "D",
+              "id": "B",
+              "text": "Battery",
+              "correct": true,
+              "rationale": "Consent can be withdrawn at any point up to and during a procedure. Touching that continues after withdrawal is intentional unconsented contact, whatever the paperwork says."
+            },
+            {
+              "id": "C",
               "text": "False imprisonment",
               "correct": false,
               "rationale": "That is unjustified restriction of movement. The wrong here is the touching, not the confinement."
+            },
+            {
+              "id": "D",
+              "text": "Assault",
+              "correct": false,
+              "rationale": "The strongest distractor. Assault is placing someone in fear of unwanted contact. Once the contact happens it is battery, and the two are routinely confused in exactly this scenario."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "A signature records a decision at a moment. The decision belongs to the patient continuously, and proceeding past a withdrawal is battery.",
           "strategy": "Assault and battery split on whether contact occurred. Read the stem for whether anything was done.",
           "elimination": {
@@ -27473,30 +27473,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Hold the dose and take the question to the pharmacist and up the chain of command",
-              "correct": true,
-              "rationale": "A nurse who administers answers for the administration. The order is in dispute, so the dose waits while the question is resolved by people with the information to resolve it."
-            },
-            {
-              "id": "B",
               "text": "Give it, since the prescriber confirmed the order and the responsibility is his",
               "correct": false,
               "rationale": "An order authorizes a drug and transfers nothing. A nurse who gives a dose she believed was wrong is answerable for having given it."
             },
             {
+              "id": "B",
+              "text": "Ask a colleague to give it instead",
+              "correct": false,
+              "rationale": "It passes a known risk to someone with less information than she has."
+            },
+            {
               "id": "C",
-              "text": "Give it and document that she questioned the dose and was told to proceed",
+              "text": "Give it and document that she questioned the dose and was told to proceed by the prescriber she called",
               "correct": false,
               "rationale": "The most tempting wrong answer, because documenting feels like protection. Writing down that you knew and did it anyway documents the breach rather than excusing it."
             },
             {
               "id": "D",
-              "text": "Ask a colleague to give it instead",
-              "correct": false,
-              "rationale": "It passes a known risk to someone with less information than she has."
+              "text": "Hold the dose and take the question to the pharmacist and up the chain of command",
+              "correct": true,
+              "rationale": "A nurse who administers answers for the administration. The order is in dispute, so the dose waits while the question is resolved by people with the information to resolve it."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Documenting a concern is not a substitute for acting on it. When an order looks wrong, the dose waits and the question goes up.",
           "strategy": "Two options give the drug with a justification attached. Ask whether the justification would help in a review afterward.",
           "elimination": {
@@ -27529,52 +27529,52 @@
           "options": [
             {
               "id": "A",
+              "text": "Explain the risks, the benefits and the alternatives to him herself before he signs",
+              "correct": false,
+              "rationale": "That belongs to the person performing the procedure. A nurse who provides the explanation has taken on a duty that is not hers and let the provider skip one that is."
+            },
+            {
+              "id": "B",
               "text": "Confirm the patient can say what the procedure is, why it is being done, and what the main risks are",
               "correct": true,
               "rationale": "She is attesting that this is informed consent, and the only way to know is to hear him say it."
             },
             {
-              "id": "B",
-              "text": "Explain the risks, benefits and alternatives to him herself",
-              "correct": false,
-              "rationale": "That belongs to the person performing the procedure. A nurse who provides the explanation has taken on a duty that is not hers and let the provider skip one that is."
-            },
-            {
               "id": "C",
-              "text": "Verify that the signature is his and that he is signing without pressure",
-              "correct": true,
-              "rationale": "Identity and voluntariness are exactly what a witness attests to."
-            },
-            {
-              "id": "D",
-              "text": "Check whether he has received a sedative before signing",
-              "correct": true,
-              "rationale": "A premedicated patient cannot give informed consent, and this is one of the most common reasons a consent is later challenged."
-            },
-            {
-              "id": "E",
               "text": "Confirm that a qualified interpreter was used if the conversation was not in his own language",
               "correct": true,
               "rationale": "Consent obtained without comprehension is not consent, and the language barrier is the most common place comprehension fails."
             },
             {
-              "id": "F",
-              "text": "Have him sign and then let the provider know he still had questions",
+              "id": "D",
+              "text": "Accept a family member's signature when the patient hesitates about signing",
               "correct": false,
-              "rationale": "The order is wrong. Unanswered questions stop the signing, because the signature says the questions were answered."
+              "rationale": "A competent patient's hesitation is information, not a problem to route around. A relative has no authority unless the patient lacks capacity and that relative is the named surrogate."
+            },
+            {
+              "id": "E",
+              "text": "Check whether he has received a sedative before signing",
+              "correct": true,
+              "rationale": "A premedicated patient cannot give informed consent, and this is one of the most common reasons a consent is later challenged."
+            },
+            {
+              "id": "F",
+              "text": "Verify that the signature is his and that he is signing without pressure",
+              "correct": true,
+              "rationale": "Identity and voluntariness are exactly what a witness attests to."
             },
             {
               "id": "G",
-              "text": "Accept a family member's signature when the patient hesitates",
+              "text": "Have him sign the form and then let the provider know afterward that he still had some questions before the procedure starts",
               "correct": false,
-              "rationale": "A competent patient's hesitation is information, not a problem to route around. A relative has no authority unless the patient lacks capacity and that relative is the named surrogate."
+              "rationale": "The order is wrong. Unanswered questions stop the signing, because the signature says the questions were answered."
             }
           ],
           "answer": [
-            "A",
+            "B",
             "C",
-            "D",
-            "E"
+            "E",
+            "F"
           ],
           "takeaway": "The nurse witnesses, she does not obtain. She attests to identity, voluntariness and comprehension, and she stops the process when any of the three is missing.",
           "strategy": "Sort each action into obtaining consent and witnessing consent. Everything in the first pile belongs to the provider.",
@@ -31230,21 +31230,21 @@
           "options": [
             {
               "id": "A",
+              "text": "Write the questions down so he can read them at his own pace",
+              "correct": false,
+              "rationale": "Reading comprehension is usually affected alongside listening comprehension, so this changes the channel and not the barrier."
+            },
+            {
+              "id": "B",
               "text": "Use gestures and demonstration, give one idea at a time, and judge whether he understood by what he does rather than what he says",
               "correct": true,
               "rationale": "Comprehension is the impaired side here. Speech output is fluent and empty, so his words cannot be used to check whether the message arrived."
             },
             {
-              "id": "B",
-              "text": "Give him extra time to find his words and ask questions he can answer yes or no",
+              "id": "C",
+              "text": "Give him extra time to find his words and ask him questions that he is able to answer with a yes or a no",
               "correct": false,
               "rationale": "These are the right adaptations for the opposite problem. A patient who cannot understand the question gains nothing from being given longer to answer it, and a yes means nothing."
-            },
-            {
-              "id": "C",
-              "text": "Write the questions down so he can read them at his own pace",
-              "correct": false,
-              "rationale": "Reading comprehension is usually affected alongside listening comprehension, so this changes the channel and not the barrier."
             },
             {
               "id": "D",
@@ -31253,7 +31253,7 @@
               "rationale": "Volume treats a hearing problem. His hearing is intact and the words are arriving without meaning."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "Work out which side is broken before adapting. Impaired output needs time and yes-or-no questions. Impaired comprehension needs gestures, demonstration and evidence from behavior.",
           "strategy": "The detail that decides it is that he is not frustrated. A patient who knows what he wants to say and cannot say it is frustrated.",
           "elimination": {
@@ -31286,30 +31286,30 @@
           "options": [
             {
               "id": "A",
-              "text": "I am not going to give you that one. What would you want to be different a year from now?",
-              "correct": true,
-              "rationale": "It declines the fight he is braced for and opens the only line that leads anywhere, which is what he wants rather than what everyone wants for him."
-            },
-            {
-              "id": "B",
-              "text": "I understand, and your liver numbers are worse than last admission and you should know what that means",
-              "correct": false,
-              "rationale": "Honest and it takes the argument he offered. Pushing against resistance reliably produces more of it, and he has heard the numbers."
-            },
-            {
-              "id": "C",
               "text": "It sounds like you are not ready to discuss this. I will come back later",
               "correct": false,
               "rationale": "The closest wrong answer. It respects his autonomy and abandons the conversation, and not ready is a conclusion he did not state."
             },
             {
-              "id": "D",
+              "id": "B",
+              "text": "I understand, and your liver numbers are worse than they were last admission and you should know what that means for the next year",
+              "correct": false,
+              "rationale": "Honest and it takes the argument he offered. Pushing against resistance reliably produces more of it, and he has heard the numbers."
+            },
+            {
+              "id": "C",
               "text": "Why do you think everyone keeps raising it with you?",
               "correct": false,
               "rationale": "A why question that invites him to defend himself, and it carries an accusation inside a question mark."
+            },
+            {
+              "id": "D",
+              "text": "I am not going to give you that one. What would you want to be different a year from now?",
+              "correct": true,
+              "rationale": "It declines the fight he is braced for and opens the only line that leads anywhere, which is what he wants rather than what everyone wants for him."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Roll with resistance rather than meeting it. Drop the argument he is expecting and ask about his own goals, because the reasons that change behavior are his, not yours.",
           "strategy": "Two options avoid arguing. One stays in the room and one leaves.",
           "elimination": {
@@ -31342,30 +31342,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Teach him directly, ask who at school he is willing to have know, and bring his mother in on terms he has agreed",
+              "text": "Teach the two of them together and then repeat the whole session for his mother on her own, so neither of them misses anything",
+              "correct": false,
+              "rationale": "A fair instinct and it quietly tells him the real teaching is the one he is not in."
+            },
+            {
+              "id": "B",
+              "text": "Teach him directly, ask who at school he is willing to have know, and bring his mother in on his terms",
               "correct": true,
               "rationale": "He is the one holding the syringe in a school bathroom. At this age the practical barrier is usually who finds out, not how to draw up a dose, and planning that with him is what makes the regimen survive."
             },
             {
-              "id": "B",
-              "text": "Teach his mother thoroughly, since she will be supervising at home",
-              "correct": false,
-              "rationale": "Reasonable and it makes him a bystander in his own care at the age where ownership has to start. It also leaves the school hours, which she is not there for, unplanned."
-            },
-            {
               "id": "C",
-              "text": "Focus the teaching on the long-term complications so he takes it seriously",
+              "text": "Focus the teaching on the long-term complications of poor control so that he takes it seriously",
               "correct": false,
               "rationale": "Consequences twenty years away move almost no adolescent. What moves this age group is what happens this week, among people they know."
             },
             {
               "id": "D",
-              "text": "Teach them together, then repeat the whole session for his mother alone",
+              "text": "Teach his mother thoroughly, since she is the one who will be supervising him at home",
               "correct": false,
-              "rationale": "A fair instinct and it quietly tells him the real teaching is the one he is not in."
+              "rationale": "Reasonable and it makes him a bystander in his own care at the age where ownership has to start. It also leaves the school hours, which she is not there for, unplanned."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "Teaching is adapted to developmental stage, not only to reading level. For an adolescent the social cost of the regimen is usually the obstacle that decides whether it gets followed.",
           "strategy": "Two options include the parent appropriately. Ask which one leaves the adolescent in charge of his own management.",
           "elimination": {
@@ -31398,30 +31398,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Short sentences at about a sixth-grade reading level, one idea per paragraph, and a picture of what to do if a dose is missed",
-              "correct": true,
-              "rationale": "Written patient material is aimed at roughly a sixth-grade level because that is where the majority of adults can read under stress. The illustration carries the action for the people who will not read the text at all."
+              "text": "The manufacturer's printed leaflet, since it is accurate and already approved",
+              "correct": false,
+              "rationale": "Written for regulators and prescribers, at a reading level far above most patients."
             },
             {
               "id": "B",
-              "text": "Complete coverage including how the drug works and every reportable interaction, so nothing important is left out",
-              "correct": false,
-              "rationale": "Completeness and usability pull against each other. A page nobody finishes has communicated less than a page with four things on it."
-            },
-            {
-              "id": "C",
               "text": "A bulleted summary using the correct clinical terms, with a glossary defining them at the end",
               "correct": false,
               "rationale": "The tempting one, because it looks organized and honest. A glossary asks the reader to interrupt themselves and look things up, which is exactly what a struggling reader will not do."
             },
             {
+              "id": "C",
+              "text": "Short sentences at about a sixth-grade reading level, one idea per paragraph, and a picture of what to do if a dose is missed",
+              "correct": true,
+              "rationale": "Written patient material is aimed at roughly a sixth-grade level because that is where the majority of adults can read under stress. The illustration carries the action for the people who will not read the text at all."
+            },
+            {
               "id": "D",
-              "text": "The manufacturer's printed leaflet, since it is accurate and already approved",
+              "text": "Complete coverage including how the drug works and every interaction that should be reported, so that nothing important is left out by the time he gets home",
               "correct": false,
-              "rationale": "Written for regulators and prescribers, at a reading level far above most patients."
+              "rationale": "Completeness and usability pull against each other. A page nobody finishes has communicated less than a page with four things on it."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Patient material is written at about a sixth-grade level, one idea at a time, with the action shown rather than described. Accuracy that cannot be read has not been communicated.",
           "strategy": "Three options optimize for completeness or correctness. Ask what the patient can act on at the kitchen table.",
           "elimination": {
@@ -31454,52 +31454,52 @@
           "options": [
             {
               "id": "A",
-              "text": "Asking him to explain in his own words how he will take the medication once he is home",
-              "correct": true,
-              "rationale": "Own words is the whole method. It produces understanding rather than recall."
-            },
-            {
-              "id": "B",
               "text": "Framing the check as finding out whether she explained it clearly enough",
               "correct": true,
               "rationale": "Putting the burden on the teaching rather than the learner is what makes a patient willing to show what he does not know."
             },
             {
+              "id": "B",
+              "text": "Handing him the written instructions and asking him to read the key points back aloud while she listens for the parts he stumbles over",
+              "correct": false,
+              "rationale": "Reading aloud demonstrates decoding, not comprehension, and it puts a patient with low literacy in an impossible position."
+            },
+            {
               "id": "C",
-              "text": "Asking whether he understands and recording that he said yes",
-              "correct": false,
-              "rationale": "The question most people answer yes to regardless, and the answer is evidence of nothing."
-            },
-            {
-              "id": "D",
-              "text": "Reteaching the part he could not explain and then checking that part again",
-              "correct": true,
-              "rationale": "The loop is teach, check, reteach, check. Stopping after the first check leaves the gap it just found."
-            },
-            {
-              "id": "E",
-              "text": "Asking him to repeat the instructions back word for word",
-              "correct": false,
-              "rationale": "Repetition tests short-term memory. A patient can return the sentence perfectly and have no idea what it means."
-            },
-            {
-              "id": "F",
               "text": "Continuing the loop into a second session if he cannot yet explain all of it",
               "correct": true,
               "rationale": "Teach-back is finished when he can do it, not when the teaching has been delivered."
             },
             {
-              "id": "G",
-              "text": "Handing him the written instructions and asking him to read them aloud",
+              "id": "D",
+              "text": "Asking whether he understands and recording that he said yes",
               "correct": false,
-              "rationale": "Reading aloud demonstrates decoding, not comprehension, and it puts a patient with low literacy in an impossible position."
+              "rationale": "The question most people answer yes to regardless, and the answer is evidence of nothing."
+            },
+            {
+              "id": "E",
+              "text": "Asking him to explain in his own words how he will take the medication once he is home",
+              "correct": true,
+              "rationale": "Own words is the whole method. It produces understanding rather than recall."
+            },
+            {
+              "id": "F",
+              "text": "Asking him to repeat the instructions back to her word for word",
+              "correct": false,
+              "rationale": "Repetition tests short-term memory. A patient can return the sentence perfectly and have no idea what it means."
+            },
+            {
+              "id": "G",
+              "text": "Reteaching the part he could not explain and then checking that part again",
+              "correct": true,
+              "rationale": "The loop is teach, check, reteach, check. Stopping after the first check leaves the gap it just found."
             }
           ],
           "answer": [
             "A",
-            "B",
-            "D",
-            "F"
+            "C",
+            "E",
+            "G"
           ],
           "takeaway": "Teach-back is own words, no shame, and a loop that closes. Anything a patient can pass by nodding, repeating or reading is not teach-back.",
           "strategy": "Ask of each option whether a patient who understood nothing could still get through it. Three of them he could.",
@@ -33643,21 +33643,21 @@
             },
             {
               "id": "B",
-              "text": "Moderate anxiety, so the nurse repeats the explanation and backs it up in writing",
-              "correct": false,
-              "rationale": "At a moderate level she could still take in the explanation if directed to it. She cannot, and giving her a handout adds to the input she is already failing to process."
-            },
-            {
-              "id": "C",
               "text": "Panic, so the nurse stays with her and does not leave her alone",
               "correct": false,
               "rationale": "Panic brings disorganized thinking and an inability to communicate at all. She is still oriented and still asking coherent questions."
             },
             {
-              "id": "D",
+              "id": "C",
               "text": "Mild anxiety, so the nurse proceeds as planned while her alertness is heightened",
               "correct": false,
               "rationale": "Mild anxiety sharpens attention. Hers has collapsed."
+            },
+            {
+              "id": "D",
+              "text": "Moderate anxiety, so the nurse repeats the explanation and backs it up with something in writing for her to look at later",
+              "correct": false,
+              "rationale": "At a moderate level she could still take in the explanation if directed to it. She cannot, and giving her a handout adds to the input she is already failing to process."
             }
           ],
           "answer": "A",
@@ -33693,30 +33693,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Displacement",
-              "correct": true,
-              "rationale": "Feeling that cannot be directed at the real target is discharged onto a safe one. Coffee and corridor noise are safe to be angry about and the diagnosis is not."
-            },
-            {
-              "id": "B",
-              "text": "Projection",
-              "correct": false,
-              "rationale": "The deliberate second distractor, and it does explain his other remark. Attributing his own resentment to the staff is projection; being angry about the coffee is not."
-            },
-            {
-              "id": "C",
               "text": "Reaction formation",
               "correct": false,
               "rationale": "That is behaving as the opposite of what you feel, such as being conspicuously cheerful. He is not concealing the anger, he is aiming it elsewhere."
             },
             {
-              "id": "D",
+              "id": "B",
+              "text": "Projection",
+              "correct": false,
+              "rationale": "This does explain his other remark. Attributing his own resentment to the staff is projection, and being angry about the coffee is not."
+            },
+            {
+              "id": "C",
               "text": "Rationalization",
               "correct": false,
               "rationale": "That substitutes an acceptable reason for the real one. He has offered no explanation for anything."
+            },
+            {
+              "id": "D",
+              "text": "Displacement",
+              "correct": true,
+              "rationale": "Feeling that cannot be directed at the real target is discharged onto a safe one. Coffee and corridor noise are safe to be angry about and the diagnosis is not."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "Two mechanisms can run in the same patient in the same hour. Read which behavior the question is asking about before matching.",
           "strategy": "The stem contains one example of each of the two leading options. Find out which sentence is being asked about.",
           "elimination": {
@@ -33749,15 +33749,15 @@
           "options": [
             {
               "id": "A",
-              "text": "Stop, tell her she decides whether and when this goes ahead, and ask what would make it manageable for her",
-              "correct": true,
-              "rationale": "Control is the thing that was taken from a person who reacts this way, and giving it back is the intervention. Stopping is not a delay, it is the care."
+              "text": "Document that she refused care and arrange for a different nurse to try again later in the shift when she is more settled",
+              "correct": false,
+              "rationale": "The closest wrong answer. It respects the no and treats the nurse as the problem, when what she needs is choice over the procedure itself."
             },
             {
               "id": "B",
-              "text": "Finish as quickly as possible, since stopping partway is more distressing than completing it",
-              "correct": false,
-              "rationale": "It overrides a refusal for her own good and repeats the pattern that produced the reaction."
+              "text": "Stop, tell her she decides whether and when this goes ahead, and ask what would make it manageable for her",
+              "correct": true,
+              "rationale": "Control is the thing that was taken from a person who reacts this way, and giving it back is the intervention. Stopping is not a delay, it is the care."
             },
             {
               "id": "C",
@@ -33767,12 +33767,12 @@
             },
             {
               "id": "D",
-              "text": "Document that she refused care and arrange for a different nurse to try later",
+              "text": "Finish as quickly as possible, since stopping partway is more distressing than completing it",
               "correct": false,
-              "rationale": "The closest wrong answer. It respects the no and treats the nurse as the problem, when what she needs is choice over the procedure itself."
+              "rationale": "It overrides a refusal for her own good and repeats the pattern that produced the reaction."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "Trauma-informed care gives back control, offers choice, and does not require the patient to explain herself. You can respond to the reaction without ever learning the cause.",
           "strategy": "Two options stop the procedure. The difference is whether she is left with any say in what happens next.",
           "elimination": {
@@ -33805,30 +33805,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Stay with her, make sure she is physically safe and warm, and tell her in plain terms what is going to happen next",
-              "correct": true,
-              "rationale": "Safety, basic physical needs and orientation to what comes next are the first things anyone needs after an overwhelming event. Nothing else works until the person is settled enough to take it in."
+              "text": "Give her a quiet room on her own so that she can recover",
+              "correct": false,
+              "rationale": "It looks considerate and it leaves a frightened person alone, which is the opposite of what the first hours call for."
             },
             {
               "id": "B",
-              "text": "Encourage her to describe the event now, while her memory of it is clear",
+              "text": "Encourage her to describe the event now, while her memory of what happened is still clear and before the details blur",
               "correct": false,
               "rationale": "Pressing someone to recount a trauma in the first hours does not help and can make the outcome worse."
             },
             {
               "id": "C",
-              "text": "Ask whether she would like to speak with a counselor or a chaplain",
-              "correct": false,
-              "rationale": "A reasonable offer and it is not first. A woman who cannot say what happened is not in a position to choose a referral."
+              "text": "Stay with her, make sure she is physically safe and warm, and tell her plainly what happens next",
+              "correct": true,
+              "rationale": "Safety, basic physical needs and orientation to what comes next are the first things anyone needs after an overwhelming event. Nothing else works until the person is settled enough to take it in."
             },
             {
               "id": "D",
-              "text": "Give her a quiet room on her own to recover",
+              "text": "Ask whether she would like to speak with a counselor or with a hospital chaplain",
               "correct": false,
-              "rationale": "It looks considerate and it leaves a frightened person alone, which is the opposite of what the first hours call for."
+              "rationale": "A reasonable offer and it is not first. A woman who cannot say what happened is not in a position to choose a referral."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "In the immediate aftermath the work is safety, comfort, company and orientation. Encouraging retelling is not a neutral act, and solitude is not calm.",
           "strategy": "All four options are things people do after a disaster. Order them, and start with the most basic.",
           "elimination": {
@@ -33861,9 +33861,9 @@
           "options": [
             {
               "id": "A",
-              "text": "He has begun drinking most nights to get to sleep",
+              "text": "He says there is no point making plans now",
               "correct": true,
-              "rationale": "A new substance pattern used to manage the aftermath is maladaptive coping and it establishes itself quickly."
+              "rationale": "A foreshortened sense of the future is a warning sign and warrants a careful conversation about how he is doing and what he is thinking."
             },
             {
               "id": "B",
@@ -33873,9 +33873,9 @@
             },
             {
               "id": "C",
-              "text": "He has not gone back to work and has stopped answering calls from his family",
+              "text": "He has begun drinking most nights to get to sleep",
               "correct": true,
-              "rationale": "Withdrawal from both role and support at three weeks is functional decline rather than recovery in progress."
+              "rationale": "A new substance pattern used to manage the aftermath is maladaptive coping and it establishes itself quickly."
             },
             {
               "id": "D",
@@ -33885,9 +33885,9 @@
             },
             {
               "id": "E",
-              "text": "He says there is no point making plans now",
+              "text": "He has not gone back to work and has stopped answering calls from his family",
               "correct": true,
-              "rationale": "A foreshortened sense of the future is a warning sign and warrants a careful conversation about how he is doing and what he is thinking."
+              "rationale": "Withdrawal from both role and support at three weeks is functional decline rather than recovery in progress."
             },
             {
               "id": "F",
@@ -35979,30 +35979,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Get out of bed after about twenty minutes awake, do something quiet in low light, and come back when sleepy, with the morning rise time unchanged",
-              "correct": true,
-              "rationale": "Her trouble is staying asleep, and lying awake for two hours teaches the bed to mean wakefulness. Leaving and returning breaks that, and a fixed rise time protects the drive to sleep the next night."
+              "text": "Nap in the early afternoon to make up some of the hours she is losing overnight",
+              "correct": false,
+              "rationale": "Napping lowers the pressure to sleep at night and makes the 0200 waking longer."
             },
             {
               "id": "B",
-              "text": "Add a warm bath and a wind-down routine in the hour before bed",
+              "text": "Add a warm bath and a wind-down routine in the hour before bed, with the lights kept low so her body learns the hour means sleep",
               "correct": false,
               "rationale": "A good intervention for the opposite problem. She already falls asleep in ten minutes, so nothing about the approach to sleep needs fixing."
             },
             {
               "id": "C",
-              "text": "Request a hypnotic at bedtime",
-              "correct": false,
-              "rationale": "Behavioral measures come first, and a drug taken at bedtime does little for a wakening five hours later except leave residual sedation in the morning."
+              "text": "Get out of bed after twenty minutes awake, do something quiet in low light, and return when sleepy, with the rise time fixed",
+              "correct": true,
+              "rationale": "Her trouble is staying asleep, and lying awake for two hours teaches the bed to mean wakefulness. Leaving and returning breaks that, and a fixed rise time protects the drive to sleep the next night."
             },
             {
               "id": "D",
-              "text": "Nap in the afternoon to make up the hours she is losing",
+              "text": "Request a hypnotic to take at bedtime",
               "correct": false,
-              "rationale": "Napping lowers the pressure to sleep at night and makes the 0200 waking longer."
+              "rationale": "Behavioral measures come first, and a drug taken at bedtime does little for a wakening five hours later except leave residual sedation in the morning."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Insomnia has two shapes and they need different interventions. Trouble falling asleep is treated at the start of the night. Trouble staying asleep is treated with stimulus control and a fixed rise time.",
           "strategy": "Read which half of the night is broken before choosing. Two of these options treat the half that is working.",
           "elimination": {
@@ -36047,15 +36047,15 @@
             },
             {
               "id": "C",
-              "text": "Peripheral neuropathy",
-              "correct": false,
-              "rationale": "A real contender, since neuropathic symptoms are often worse at night. Neuropathy does not produce an urge to move and is not relieved by walking."
-            },
-            {
-              "id": "D",
               "text": "Periodic limb movement disorder",
               "correct": false,
               "rationale": "The other strong option. Those movements happen during sleep, are usually reported by a bed partner, and the patient is unaware of them. Hers happen while she is awake and sitting."
+            },
+            {
+              "id": "D",
+              "text": "Peripheral neuropathy",
+              "correct": false,
+              "rationale": "A real contender, since neuropathic symptoms are often worse at night. Neuropathy does not produce an urge to move and is not relieved by walking."
             }
           ],
           "answer": "A",
@@ -36091,9 +36091,9 @@
           "options": [
             {
               "id": "A",
-              "text": "Rapid eye movement sleep behavior disorder, with bedroom safety as the first intervention",
-              "correct": true,
-              "rationale": "Acting out a dream that the patient can recall on waking is the defining feature, and it appears in later life. The muscle paralysis that normally accompanies dreaming has failed."
+              "text": "Nocturnal seizures, with a neurology referral as the first step",
+              "correct": false,
+              "rationale": "Worth excluding and the picture does not fit. Seizure activity is stereotyped and followed by a period of confusion rather than immediate clear recall."
             },
             {
               "id": "B",
@@ -36103,18 +36103,18 @@
             },
             {
               "id": "C",
-              "text": "Night terrors",
-              "correct": false,
-              "rationale": "These bring a scream, a surge of heart rate and sweating, and no memory of anything afterward. They belong mostly to childhood."
+              "text": "Rapid eye movement sleep behavior disorder, with bedroom safety as the first intervention",
+              "correct": true,
+              "rationale": "Acting out a dream that the patient can recall on waking is the defining feature, and it appears in later life. The muscle paralysis that normally accompanies dreaming has failed."
             },
             {
               "id": "D",
-              "text": "Nocturnal seizures",
+              "text": "Night terrors, with reassurance for his wife as the first step",
               "correct": false,
-              "rationale": "Worth excluding and the picture does not fit. Seizure activity is stereotyped and followed by a period of confusion rather than immediate clear recall."
+              "rationale": "These bring a scream, a surge of heart rate and sweating, and no memory of anything afterward. They belong mostly to childhood."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Dream recall on waking is the finding that separates this from the parasomnias that arise from deep sleep. Safety for the bed partner comes before anything else.",
           "strategy": "Two options lead to the same first action. The question is still asking you to name it, and one detail in the stem does that.",
           "elimination": {
@@ -36147,30 +36147,30 @@
           "options": [
             {
               "id": "A",
-              "text": "Supplemental oxygen can hold the saturation in an acceptable range while carbon dioxide climbs, so the number on the monitor will not show the problem developing",
-              "correct": true,
-              "rationale": "Oxygen treats the desaturation and not the hypoventilation. With untreated sleep apnea and an opioid on board, the thing to watch is respiratory rate and depth of sedation, not the pulse oximeter."
-            },
-            {
-              "id": "B",
-              "text": "A saturation of 94 percent shows hypoventilation and calls for immediate intervention",
+              "text": "A saturation of 94 percent in a sleeping postoperative patient shows hypoventilation and calls for immediate intervention, with oxygen already running at the prescribed flow",
               "correct": false,
               "rationale": "Taken on its own that value is unremarkable. Treating the number as the finding is how the real risk gets missed in both directions."
             },
             {
-              "id": "C",
-              "text": "The patient-controlled analgesia should be discontinued",
+              "id": "B",
+              "text": "The patient-controlled analgesia should be discontinued until he is fully awake",
               "correct": false,
               "rationale": "Pain after abdominal surgery has to be treated and worsens breathing if it is not. The answer is monitoring and settings, not removing analgesia."
             },
             {
-              "id": "D",
-              "text": "He should be positioned supine so the airway is in line",
+              "id": "C",
+              "text": "He should be repositioned supine so that the airway is brought into line",
               "correct": false,
               "rationale": "Supine is the worst position for an obstructing airway. Side-lying or head of bed raised is what helps."
+            },
+            {
+              "id": "D",
+              "text": "Supplemental oxygen can hold the saturation in range while carbon dioxide climbs, so the monitor will not show the problem developing",
+              "correct": true,
+              "rationale": "Oxygen treats the desaturation and not the hypoventilation. With untreated sleep apnea and an opioid on board, the thing to watch is respiratory rate and depth of sedation, not the pulse oximeter."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "In untreated sleep apnea with opioids, oxygen masks the warning. Monitor respiratory rate and sedation level, because saturation falls last.",
           "strategy": "Two options are built on the saturation reading. Ask what that number can and cannot tell you in a patient receiving oxygen.",
           "elimination": {
@@ -36203,50 +36203,50 @@
           "options": [
             {
               "id": "A",
-              "text": "Loud snoring with pauses in breathing that a partner has watched",
-              "correct": true,
-              "rationale": "A witnessed pause is the single most useful piece of history for obstructive sleep apnea."
-            },
-            {
-              "id": "B",
-              "text": "One broken night after a difficult day at work",
-              "correct": false,
-              "rationale": "A single night is not a sleep disorder."
-            },
-            {
-              "id": "C",
-              "text": "Falling asleep while stopped at traffic lights",
-              "correct": true,
-              "rationale": "Sleepiness that intrudes during an activity like driving is both a diagnostic red flag and an immediate safety problem."
-            },
-            {
-              "id": "D",
               "text": "Feeling sleepy on the drive home after a run of night shifts",
               "correct": false,
               "rationale": "An expected consequence of the schedule. It is worth planning around and it is not a disorder of sleep itself."
             },
             {
-              "id": "E",
-              "text": "Morning headaches with daytime sleepiness in a man with a thick neck and untreated hypertension",
-              "correct": true,
-              "rationale": "Morning headache suggests overnight carbon dioxide retention, and the rest of the picture fits the same diagnosis."
-            },
-            {
-              "id": "F",
+              "id": "B",
               "text": "Waking twice nightly to pass urine in a 70-year-old who takes a diuretic at suppertime",
               "correct": false,
               "rationale": "Move the dose to the morning and see what is left. Fix the obvious cause before referring."
             },
             {
-              "id": "G",
+              "id": "C",
+              "text": "Morning headaches with daytime sleepiness in a man with a thick neck and untreated hypertension",
+              "correct": true,
+              "rationale": "Morning headache suggests overnight carbon dioxide retention, and the rest of the picture fits the same diagnosis."
+            },
+            {
+              "id": "D",
+              "text": "Falling asleep while stopped at traffic lights",
+              "correct": true,
+              "rationale": "Sleepiness that intrudes during an activity like driving is both a diagnostic red flag and an immediate safety problem."
+            },
+            {
+              "id": "E",
               "text": "Acting out dreams, with a bed partner injured",
               "correct": true,
               "rationale": "Dream enactment needs evaluation, and the injury makes it urgent."
+            },
+            {
+              "id": "F",
+              "text": "One broken night after a difficult day at work",
+              "correct": false,
+              "rationale": "A single night is not a sleep disorder."
+            },
+            {
+              "id": "G",
+              "text": "Loud snoring with pauses in breathing that a partner has watched",
+              "correct": true,
+              "rationale": "A witnessed pause is the single most useful piece of history for obstructive sleep apnea."
             }
           ],
           "answer": [
-            "A",
             "C",
+            "D",
             "E",
             "G"
           ],
@@ -38351,30 +38351,30 @@
           "options": [
             {
               "id": "A",
-              "text": "A rise driven by the early morning release of counterregulatory hormones, which may call for an increase in the evening dose or moving it later",
-              "correct": true,
-              "rationale": "The overnight values are in range, so nothing dropped and nothing rebounded. The glucose climbs between 0300 and waking, which is the hormone surge before dawn."
-            },
-            {
-              "id": "B",
-              "text": "Rebound hyperglycemia following an unrecognized overnight low, which calls for reducing the evening dose",
-              "correct": false,
-              "rationale": "The reason the 0300 checks were ordered. A rebound requires a low at 0300 and there is none. Reducing the evening dose here would make the fasting values worse."
-            },
-            {
-              "id": "C",
-              "text": "Insufficient coverage during the day carrying over into the morning",
+              "text": "Insufficient coverage during the day that is carrying over into the morning values",
               "correct": false,
               "rationale": "Daytime dosing would show in the daytime values, and the 0300 readings sit in range."
             },
             {
-              "id": "D",
-              "text": "A meter that reads inaccurately overnight",
+              "id": "B",
+              "text": "A meter that reads inaccurately in the small hours",
               "correct": false,
               "rationale": "Three consistent values in a plausible range, taken on three separate nights, do not suggest equipment failure."
+            },
+            {
+              "id": "C",
+              "text": "Rebound hyperglycemia after an overnight low that nobody caught, which would call for reducing the evening dose rather than raising it",
+              "correct": false,
+              "rationale": "The reason the 0300 checks were ordered. A rebound requires a low at 0300 and there is none. Reducing the evening dose here would make the fasting values worse."
+            },
+            {
+              "id": "D",
+              "text": "A rise driven by the early morning release of counterregulatory hormones, which may call for increasing the evening dose or moving it later",
+              "correct": true,
+              "rationale": "The overnight values are in range, so nothing dropped and nothing rebounded. The glucose climbs between 0300 and waking, which is the hormone surge before dawn."
             }
           ],
-          "answer": "A",
+          "answer": "D",
           "takeaway": "A high fasting glucose has two explanations with opposite treatments. The 0300 value is what separates them, and you do not change the evening dose until you have it.",
           "strategy": "Two options describe real causes of a high morning value, and the actions they lead to are opposite. The overnight number decides it.",
           "elimination": {
@@ -38407,21 +38407,21 @@
           "options": [
             {
               "id": "A",
-              "text": "The A1C is not a reliable picture of his control here, and the log and the low values are what the team acts on",
+              "text": "His medications can be increased, since the result sits below the usual target for most patients",
+              "correct": false,
+              "rationale": "Increasing therapy in a patient who is already dropping below 60 would make the lows more frequent."
+            },
+            {
+              "id": "B",
+              "text": "The A1C is not a reliable picture here, and the log and the low values are what the team acts on",
               "correct": true,
               "rationale": "An average sits between a 48 and a 290 and describes neither. Recent transfusion also distorts the result, because the transfused cells carry the donor's exposure rather than his."
             },
             {
-              "id": "B",
-              "text": "His control is good and the home readings most likely reflect technique or meter error",
+              "id": "C",
+              "text": "His control is good and the home readings most likely reflect poor technique or an inaccurate meter, which are a common source of error at home",
               "correct": false,
               "rationale": "The comfortable reading, and it discards the data that shows he is having repeated lows. Four values under 60 are the most dangerous thing in the record."
-            },
-            {
-              "id": "C",
-              "text": "His medications can be increased, since the result is below the usual target",
-              "correct": false,
-              "rationale": "Increasing therapy in a patient who is already dropping below 60 would make the lows more frequent."
             },
             {
               "id": "D",
@@ -38430,7 +38430,7 @@
               "rationale": "It measures the preceding two to three months, so repeating it the same week returns the same distorted value."
             }
           ],
-          "answer": "A",
+          "answer": "B",
           "takeaway": "A1C is an average over months and it hides swings. Transfusion, bleeding and anemia distort it, and a reassuring number beside repeated lows is a warning rather than a result.",
           "strategy": "Two options accept the A1C at face value. Ask what an average does to a patient who is going from 48 to 290.",
           "elimination": {
@@ -38463,27 +38463,27 @@
           "options": [
             {
               "id": "A",
-              "text": "Check for facial twitching and carpal spasm, notify the provider, and confirm that intravenous calcium and emergency airway equipment are at hand",
+              "text": "Check for facial twitching and carpal spasm, notify the provider, and confirm that calcium and airway equipment are at hand",
               "correct": true,
               "rationale": "Tingling around the mouth and in the fingertips after this surgery is low calcium from parathyroid injury until proven otherwise, and the progression runs to tetany and laryngospasm."
             },
             {
               "id": "B",
-              "text": "Reassure her that tingling and hoarseness are expected after neck surgery",
+              "text": "Raise the head of the bed and give the analgesic that has been ordered",
               "correct": false,
-              "rationale": "Hoarseness alone is common. Hoarseness with perioral and fingertip tingling is a specific pattern that is never dismissed."
+              "rationale": "Comfort measures applied to a finding that needs a cause."
             },
             {
               "id": "C",
-              "text": "Inspect the dressing and slide a hand behind her neck to check for swelling",
+              "text": "Inspect the dressing and slide a hand behind her neck to check for swelling or firmness, which is the standard check after this operation",
               "correct": false,
               "rationale": "The other emergency after this operation, and it has to be checked. The symptom pattern she describes points at calcium rather than at a hematoma, and she has no respiratory distress or sensation of pressure."
             },
             {
               "id": "D",
-              "text": "Raise the head of the bed and give the ordered analgesic",
+              "text": "Reassure her that tingling and hoarseness are both expected after surgery on the neck",
               "correct": false,
-              "rationale": "Comfort measures applied to a finding that needs a cause."
+              "rationale": "Hoarseness alone is common. Hoarseness with perioral and fingertip tingling is a specific pattern that is never dismissed."
             }
           ],
           "answer": "A",
@@ -38519,9 +38519,9 @@
           "options": [
             {
               "id": "A",
-              "text": "Acute adrenal insufficiency from abrupt withdrawal, needing intravenous fluid and corticosteroid replacement",
-              "correct": true,
-              "rationale": "Long-term therapy suppresses the body's own production, and the glands cannot restart in four days. Weakness, gastrointestinal symptoms and hypotension together are the crisis presentation."
+              "text": "A delayed adverse effect of the corticosteroid he had been taking",
+              "correct": false,
+              "rationale": "Excess corticosteroid raises blood pressure and glucose. These findings are what happens when there is not enough."
             },
             {
               "id": "B",
@@ -38531,9 +38531,9 @@
             },
             {
               "id": "C",
-              "text": "A delayed adverse effect of the corticosteroid he had been taking",
-              "correct": false,
-              "rationale": "Excess corticosteroid raises blood pressure and glucose. These findings are what happens when there is not enough."
+              "text": "Acute adrenal insufficiency from abrupt withdrawal, needing intravenous fluid and corticosteroid replacement",
+              "correct": true,
+              "rationale": "Long-term therapy suppresses the body's own production, and the glands cannot restart in four days. Weakness, gastrointestinal symptoms and hypotension together are the crisis presentation."
             },
             {
               "id": "D",
@@ -38542,7 +38542,7 @@
               "rationale": "It can occur alongside and it does not explain the hypotension or the abdominal pain, and he is not taking a glucose-lowering drug."
             }
           ],
-          "answer": "A",
+          "answer": "C",
           "takeaway": "Long-term corticosteroids are never stopped abruptly. The adrenal glands have been idle and need weeks of tapering, and the crisis that follows a sudden stop is life-threatening.",
           "strategy": "The deciding fact is not a symptom. It is what he stopped and when.",
           "elimination": {
@@ -38575,52 +38575,52 @@
           "options": [
             {
               "id": "A",
-              "text": "Urine output of about 400 mL per hour for four hours in a row",
-              "correct": true,
-              "rationale": "Large volumes that do not slow down are the first sign, and the sustained rate is what separates it from an expected postoperative diuresis."
-            },
-            {
-              "id": "B",
-              "text": "Urine that is pale and watery",
-              "correct": true,
-              "rationale": "Without the hormone the kidney cannot concentrate, so the volume is high and the urine is dilute."
-            },
-            {
-              "id": "C",
-              "text": "A serum sodium that is climbing",
-              "correct": true,
-              "rationale": "Water is leaving and sodium is staying, so the concentration rises."
-            },
-            {
-              "id": "D",
-              "text": "Weight gain of 2 kg since yesterday",
-              "correct": false,
-              "rationale": "Retaining water is the opposite problem. Here the patient is losing it."
-            },
-            {
-              "id": "E",
               "text": "Intense thirst",
               "correct": true,
               "rationale": "The thirst mechanism responds to the rising concentration, and it is what keeps an alert patient alive until the deficit is treated."
             },
             {
-              "id": "F",
-              "text": "Urine specific gravity of 1.030",
+              "id": "B",
+              "text": "A serum sodium of 124 mmol/L",
+              "correct": false,
+              "rationale": "A low sodium from retained water belongs to the opposite complication."
+            },
+            {
+              "id": "C",
+              "text": "Urine output of about 400 mL per hour for four hours",
+              "correct": true,
+              "rationale": "Large volumes that do not slow down are the first sign, and the sustained rate is what separates it from an expected postoperative diuresis."
+            },
+            {
+              "id": "D",
+              "text": "A urine specific gravity of 1.030",
               "correct": false,
               "rationale": "That is concentrated urine, which is what you see when too much of the hormone is being released rather than too little."
             },
             {
-              "id": "G",
-              "text": "Serum sodium of 124 mmol/L",
+              "id": "E",
+              "text": "Weight gain of 2 kg since yesterday morning",
               "correct": false,
-              "rationale": "A low sodium from retained water belongs to the opposite complication."
+              "rationale": "Retaining water is the opposite problem. Here the patient is losing it."
+            },
+            {
+              "id": "F",
+              "text": "A serum sodium that is climbing",
+              "correct": true,
+              "rationale": "Water is leaving and sodium is staying, so the concentration rises."
+            },
+            {
+              "id": "G",
+              "text": "Urine that is pale and watery",
+              "correct": true,
+              "rationale": "Without the hormone the kidney cannot concentrate, so the volume is high and the urine is dilute."
             }
           ],
           "answer": [
             "A",
-            "B",
             "C",
-            "E"
+            "F",
+            "G"
           ],
           "takeaway": "Too little antidiuretic hormone means water pouring out: high volume, dilute urine, rising sodium, thirst. Too much means water held back: low output, concentrated urine, falling sodium, weight gain.",
           "strategy": "Pick one anchor, such as where the water is going, and read every option against it. The two sets are mirror images.",
