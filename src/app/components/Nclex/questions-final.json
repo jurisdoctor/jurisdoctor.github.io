@@ -2894,6 +2894,216 @@
           "answer": "C",
           "takeaway": "Prepared caregivers cope better.",
           "strategy": "Choose the option that equips the caregiver."
+        },
+        {
+          "id": "eol-h01",
+          "topic": "Support for caregivers and nurses",
+          "stem": "A nurse who cared for a patient for three weeks is found crying in the medication room after the patient's death. What should the charge nurse do first?",
+          "objective": "Support for caregivers and nurses",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Refer the nurse to the employee assistance program",
+              "correct": false,
+              "rationale": "Correct but premature A referral helps if grief is prolonged or interferes with work, but support comes first."
+            },
+            {
+              "id": "B",
+              "text": "Reassign the nurse away from dying patients for the rest of the week",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Well meant, but it treats normal grief as a problem."
+            },
+            {
+              "id": "C",
+              "text": "Remind the nurse that professional boundaries prevent this kind of grief",
+              "correct": false,
+              "rationale": "Near miss concept Grief after a patient's death is a normal response, not a boundary violation."
+            },
+            {
+              "id": "D",
+              "text": "Acknowledge the loss and offer time to talk or a team debriefing",
+              "correct": true,
+              "rationale": "Nurses grieve too. Normal grief is acknowledged, not avoided. Immediate support, a moment away and a debriefing help the nurse process the loss. Formal referral is for grief that persists or impairs functioning."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Nurse grief: acknowledge and debrief first.",
+          "strategy": "Choose support before referral."
+        },
+        {
+          "id": "eol-h02",
+          "topic": "Therapeutic communication",
+          "stem": "A patient with advanced cancer and decision making capacity asks, \"Am I dying?\" Earlier, the family asked the nurse not to discuss dying with the patient. What is the best response?",
+          "objective": "Therapeutic communication",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"What have you noticed that makes you ask that today?\"",
+              "correct": true,
+              "rationale": "The patient with capacity has the right to information. The nurse first explores what the patient already senses and wants to know, which keeps the conversation open and honest. The answer then guides who should share the prognosis and how."
+            },
+            {
+              "id": "B",
+              "text": "\"Your family wants us to focus on keeping you comfortable.\"",
+              "correct": false,
+              "rationale": "Institution as rationale The family's request does not override the patient's right to information."
+            },
+            {
+              "id": "C",
+              "text": "\"I can't answer that, but I can ask your provider to come talk with you.\"",
+              "correct": false,
+              "rationale": "Correct but premature Involving the provider may follow, but first learn what the patient knows and wants."
+            },
+            {
+              "id": "D",
+              "text": "\"You are very sick, but everyone here is doing everything we can.\"",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Reassurance closes the conversation the patient opened."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "\"Am I dying?\": explore first.",
+          "strategy": "Open the conversation before handing it off."
+        },
+        {
+          "id": "eol-h03",
+          "topic": "Grief responses and assessment",
+          "stem": "Eighteen months after a spouse's death, a patient still cannot enter the bedroom, has stopped seeing friends and says, \"Nothing matters anymore.\" What should the nurse do?",
+          "objective": "Grief responses and assessment",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Encourage the patient to begin clearing out the bedroom slowly",
+              "correct": false,
+              "rationale": "Correct action, wrong question It addresses one behavior and misses the risk."
+            },
+            {
+              "id": "B",
+              "text": "Ask directly about thoughts of self harm and refer for further evaluation",
+              "correct": true,
+              "rationale": "Intense grief that persists beyond a year with withdrawal and hopelessness suggests prolonged grief and possible depression. A statement like \"nothing matters\" requires a direct question about suicide, then referral."
+            },
+            {
+              "id": "C",
+              "text": "Reassure the patient that grief has no timeline and will ease with time",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Grief has no deadline, but hopelessness and withdrawal at this point need assessment."
+            },
+            {
+              "id": "D",
+              "text": "Suggest a bereavement support group that meets weekly",
+              "correct": false,
+              "rationale": "Correct but premature A group may help after safety is assessed."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Prolonged grief with hopelessness: ask about suicide.",
+          "strategy": "Safety before support."
+        },
+        {
+          "id": "eol-h04",
+          "topic": "Culture and spirituality",
+          "stem": "A patient with capacity is from a culture in which serious news is traditionally shared with the family first. The provider needs to discuss new test results. What should the nurse do?",
+          "objective": "Culture and spirituality",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Follow the cultural practice and share the results with the family first",
+              "correct": false,
+              "rationale": "Label instead of mechanism A cultural pattern does not decide for this patient."
+            },
+            {
+              "id": "B",
+              "text": "Share the results with the patient alone to protect confidentiality",
+              "correct": false,
+              "rationale": "Absolute language The patient may want family present; assuming either way skips the patient."
+            },
+            {
+              "id": "C",
+              "text": "Ask the family how they would like the results to be shared",
+              "correct": false,
+              "rationale": "Near miss concept The family does not decide for a patient with capacity."
+            },
+            {
+              "id": "D",
+              "text": "Ask the patient how information should be shared and with whom",
+              "correct": true,
+              "rationale": "Culture informs care, but the individual defines their preferences. The nurse asks the patient how and with whom information should be shared and then honors that choice, which may include family first."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Ask the person, not the culture.",
+          "strategy": "The patient with capacity sets the plan."
+        },
+        {
+          "id": "eol-h05",
+          "topic": "Advance directives, DNR and POLST",
+          "stem": "A nursing home resident has a POLST marked comfort measures only. After a fall, the resident has a deformed hip and severe pain that the available medications do not control. What should the nurse do?",
+          "objective": "Advance directives, DNR and POLST",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Call the family to decide whether the resident should go to the hospital",
+              "correct": false,
+              "rationale": "Outside the nurse's scope The POLST already states the resident's wishes."
+            },
+            {
+              "id": "B",
+              "text": "Arrange transfer to the hospital for comfort care",
+              "correct": true,
+              "rationale": "Comfort measures only means treatment is aimed at relief, not cure. The POLST allows transfer to the hospital when comfort cannot be achieved in the current setting, such as for a fracture with uncontrolled pain."
+            },
+            {
+              "id": "C",
+              "text": "Keep the resident in the facility, since comfort measures only means no transfer",
+              "correct": false,
+              "rationale": "Absolute language Comfort measures allow transfer when comfort cannot be met where the resident is."
+            },
+            {
+              "id": "D",
+              "text": "Give the maximum dose of the available analgesic and reassess in four hours",
+              "correct": false,
+              "rationale": "Correct but premature Waiting four hours with uncontrolled pain fails the comfort goal."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Comfort only can still mean transfer, for comfort.",
+          "strategy": "Read what the order is for, not only what it limits."
         }
       ]
     },
@@ -6625,6 +6835,232 @@
           "answer": "C",
           "takeaway": "One temperature plus neutropenia is an emergency. Looking well means nothing here.",
           "strategy": "Every wrong option buys time, and this is the patient with the least of it."
+        },
+        {
+          "id": "ig18-h01",
+          "topic": "Differentiate tumor grade from cancer stage",
+          "stem": "Patient A has a grade 1, stage IV tumor. Patient B has a grade 3, stage I tumor. Which statement is most accurate?",
+          "objective": "Differentiate tumor grade from cancer stage",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Patient B's cancer is the more advanced one because poorly differentiated cells have already spread",
+              "correct": false,
+              "rationale": "Label instead of mechanism Grade describes the cells, not how far the cancer has spread."
+            },
+            {
+              "id": "B",
+              "text": "Both tumors are equally advanced because the numbers add to the same total",
+              "correct": false,
+              "rationale": "Near miss concept Grade and stage are separate scales and are never combined."
+            },
+            {
+              "id": "C",
+              "text": "Patient A's tumor is more aggressive because stage IV is the highest number",
+              "correct": false,
+              "rationale": "Near miss concept Stage IV means distant spread, not that the cells are more aggressive."
+            },
+            {
+              "id": "D",
+              "text": "Patient A's cancer has spread further even though its cells look more like normal tissue",
+              "correct": true,
+              "rationale": "Grade describes how abnormal the cells look under a microscope: grade 1 cells resemble normal tissue, grade 3 cells are poorly differentiated. Stage describes how far the cancer has spread: stage IV is distant metastasis. A well differentiated tumor can still be widely spread."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Grade is the cells. Stage is the spread.",
+          "strategy": "Assign each number to its own scale."
+        },
+        {
+          "id": "ig18-h02",
+          "topic": "Explain how cancer develops, invades nearby tissue, and spreads",
+          "stem": "A patient who has smoked for 20 years asks, \"Is there any point in quitting now? The damage is done.\" Which response reflects how cancer develops?",
+          "objective": "Explain how cancer develops, invades nearby tissue, and spreads",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Quitting lowers lung cancer risk only if it happens before any cell damage starts.\"",
+              "correct": false,
+              "rationale": "Near miss concept Initiated cells still need promotion to become cancer, so quitting later still helps."
+            },
+            {
+              "id": "B",
+              "text": "\"Yes. Quitting reverses the damage to the cell DNA within a few years.\"",
+              "correct": false,
+              "rationale": "Absolute language Initiation damage to DNA is permanent; what changes is the promotion."
+            },
+            {
+              "id": "C",
+              "text": "\"Quitting mainly helps the heart; the cancer risk is already fixed.\"",
+              "correct": false,
+              "rationale": "Near miss concept Cancer risk is not fixed; it falls over time after quitting."
+            },
+            {
+              "id": "D",
+              "text": "\"Yes. Changes that have started can still be slowed when the promoter is removed.\"",
+              "correct": true,
+              "rationale": "Initiation is a permanent change to cell DNA. Promotion is the repeated exposure that pushes initiated cells to divide, and it can be slowed or stopped when the promoter, such as tobacco, is removed. That is why risk falls after quitting at any age."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Initiation is permanent; promotion is reversible.",
+          "strategy": "Ask which phase the action affects."
+        },
+        {
+          "id": "ig18-h03",
+          "topic": "Plan patient and caregiver teaching for symptom management, follow up, and survivorship",
+          "stem": "Six years after finishing chemotherapy that included doxorubicin, a patient reports new fatigue, ankle swelling and shortness of breath when climbing stairs. What should the nurse teach?",
+          "objective": "Plan patient and caregiver teaching for symptom management, follow up, and survivorship",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "These may be late effects of treatment on the heart and need evaluation",
+              "correct": true,
+              "rationale": "Survivorship care includes late effects that appear years after treatment. Doxorubicin can damage the heart muscle and cause heart failure long after the last dose. New fatigue, edema and exertional dyspnea need evaluation, and survivors are taught to report them."
+            },
+            {
+              "id": "B",
+              "text": "Fatigue after cancer is common and improves with rest and pacing",
+              "correct": false,
+              "rationale": "Expected finding offered as a problem Cancer related fatigue is real, but swelling and breathlessness point to the heart."
+            },
+            {
+              "id": "C",
+              "text": "These symptoms most likely mean the cancer has returned",
+              "correct": false,
+              "rationale": "Most dramatic finding Recurrence is the feared answer, but this pattern fits a known late effect."
+            },
+            {
+              "id": "D",
+              "text": "Ankle swelling is expected with aging and can be managed with leg elevation",
+              "correct": false,
+              "rationale": "Expected finding offered as a problem Treating the findings as normal aging misses heart failure."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Survivors: late effects can appear years later.",
+          "strategy": "Match the symptom cluster to the treatment history."
+        },
+        {
+          "id": "ig18-h04",
+          "topic": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "stem": "A patient with breast cancer and bone metastasis reports back pain that is worse lying down, new constipation and difficulty starting urination. The calcium level is 10.2 mg/dL. Which emergency do these findings point to?",
+          "objective": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tumor lysis syndrome",
+              "correct": false,
+              "rationale": "Near miss concept Tumor lysis follows treatment and shows as electrolyte changes."
+            },
+            {
+              "id": "B",
+              "text": "Superior vena cava syndrome",
+              "correct": false,
+              "rationale": "Near miss concept That causes facial and arm swelling, not back pain."
+            },
+            {
+              "id": "C",
+              "text": "Spinal cord compression",
+              "correct": true,
+              "rationale": "Back pain worse lying down is often the first sign of spinal cord compression from vertebral metastasis. Bowel and bladder changes mean the cord is already affected. It is an emergency because delay leads to permanent paralysis; the provider is notified at once."
+            },
+            {
+              "id": "D",
+              "text": "Hypercalcemia of malignancy",
+              "correct": false,
+              "rationale": "Near miss concept Constipation fits hypercalcemia, but the calcium is normal and back pain with urinary retention points to the cord."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Back pain plus bowel or bladder change: think cord compression.",
+          "strategy": "Rule out the look alike with the lab value given."
+        },
+        {
+          "id": "ig18-h05",
+          "topic": "Apply safety precautions when caring for patients receiving cancer treatment",
+          "stem": "A patient received IV cyclophosphamide 12 hours ago. Select all of the precautions the nurse should take.",
+          "objective": "Apply safety precautions when caring for patients receiving cancer treatment",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wear only standard exam gloves since urine is not the drug",
+              "correct": false,
+              "rationale": "Near miss concept Urine contains active drug and metabolites for about 48 hours."
+            },
+            {
+              "id": "B",
+              "text": "Keep visitors out of the room for 48 hours",
+              "correct": false,
+              "rationale": "Near miss concept Chemotherapy does not make the patient a hazard to visitors."
+            },
+            {
+              "id": "C",
+              "text": "Wash soiled linens separately from other laundry",
+              "correct": true,
+              "rationale": "Many chemotherapy drugs are excreted in urine, stool and other body fluids for about 48 hours. Staff wear a gown and double chemotherapy gloves to handle body fluids, flush with the lid closed, launder soiled linens separately and discard gloves in hazardous waste. Visitors are not restricted."
+            },
+            {
+              "id": "D",
+              "text": "Remove the gloves and discard them in a regular trash container",
+              "correct": false,
+              "rationale": "Near miss concept Contaminated gloves go in a hazardous drug waste container."
+            },
+            {
+              "id": "E",
+              "text": "Wear a gown and double chemotherapy gloves to empty the urinal",
+              "correct": true,
+              "rationale": "Many chemotherapy drugs are excreted in urine, stool and other body fluids for about 48 hours. Staff wear a gown and double chemotherapy gloves to handle body fluids, flush with the lid closed, launder soiled linens separately and discard gloves in hazardous waste. Visitors are not restricted."
+            },
+            {
+              "id": "F",
+              "text": "Flush the toilet with the lid closed after disposing of urine",
+              "correct": true,
+              "rationale": "Many chemotherapy drugs are excreted in urine, stool and other body fluids for about 48 hours. Staff wear a gown and double chemotherapy gloves to handle body fluids, flush with the lid closed, launder soiled linens separately and discard gloves in hazardous waste. Visitors are not restricted."
+            }
+          ],
+          "answer": [
+            "C",
+            "E",
+            "F"
+          ],
+          "takeaway": "Chemotherapy body fluids: 48 hours of hazardous drug precautions.",
+          "strategy": "Separate fluid exposure from contact with the patient."
         }
       ]
     },
@@ -9666,6 +10102,216 @@
           "answer": "A",
           "takeaway": "Evaluate the patient's response.",
           "strategy": "Pick measurable change in the patient."
+        },
+        {
+          "id": "cai-h01",
+          "topic": "Complementary, alternative and integrative care",
+          "stem": "On the advice of an Ayurvedic practitioner, a patient stops a prescribed antidepressant and uses herbs, yoga and dietary changes instead. Which description is most accurate?",
+          "objective": "Complementary, alternative and integrative care",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Complementary care using mind body therapies",
+              "correct": false,
+              "rationale": "Near miss concept Yoga is mind body, but nothing is being added alongside the conventional treatment."
+            },
+            {
+              "id": "B",
+              "text": "Integrative care using mind body therapies",
+              "correct": false,
+              "rationale": "Near miss concept Integrative care needs conventional treatment in the plan."
+            },
+            {
+              "id": "C",
+              "text": "Alternative care using a whole medical system",
+              "correct": true,
+              "rationale": "When a therapy replaces conventional treatment, it is alternative. Ayurveda is a whole medical system, and whole systems used in place of biomedicine are always alternative."
+            },
+            {
+              "id": "D",
+              "text": "Integrative care using a whole medical system",
+              "correct": false,
+              "rationale": "Near miss concept Integrative care coordinates both; here the prescribed drug was replaced."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Replaced, not added: alternative.",
+          "strategy": "Decide added or replaced before naming the category."
+        },
+        {
+          "id": "cai-h02",
+          "topic": "Herbs and natural products",
+          "stem": "A patient with heart failure takes digoxin and furosemide and has started licorice root for indigestion. Which assessment is the priority?",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Blood glucose",
+              "correct": false,
+              "rationale": "Accurate but inert data Glucose is not affected in this combination."
+            },
+            {
+              "id": "B",
+              "text": "Liver enzymes",
+              "correct": false,
+              "rationale": "Accurate but inert data Liver enzymes are not the concern with licorice."
+            },
+            {
+              "id": "C",
+              "text": "Potassium level",
+              "correct": true,
+              "rationale": "Licorice root lowers potassium, and furosemide does too. Low potassium makes digoxin more toxic, raising the risk of dysrhythmias. The nurse checks the potassium level and assesses for signs of digoxin toxicity."
+            },
+            {
+              "id": "D",
+              "text": "Blood pressure",
+              "correct": false,
+              "rationale": "Near miss concept Licorice interacts with antihypertensives, but the danger with digoxin is potassium."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Licorice plus a loop diuretic plus digoxin: check potassium.",
+          "strategy": "Follow the interaction to the most dangerous effect."
+        },
+        {
+          "id": "cai-h03",
+          "topic": "Mind body techniques",
+          "stem": "A patient with generalized anxiety disorder has meditated daily for four months and says, \"I feel so much calmer that I stopped my alprazolam three days ago.\" What is the nurse's best response?",
+          "objective": "Mind body techniques",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Meditation can reduce the need for antianxiety drugs, so that is reasonable\"",
+              "correct": false,
+              "rationale": "Near miss concept The dose may come down, but stopping a benzodiazepine abruptly can cause withdrawal."
+            },
+            {
+              "id": "B",
+              "text": "\"Keep meditating, and call if your anxiety comes back\"",
+              "correct": false,
+              "rationale": "Correct but premature It ignores the withdrawal risk of stopping suddenly."
+            },
+            {
+              "id": "C",
+              "text": "\"Stop meditating until your provider reviews your medications\"",
+              "correct": false,
+              "rationale": "Near miss concept Meditation is helping and does not need to stop."
+            },
+            {
+              "id": "D",
+              "text": "\"Restart it as prescribed and talk with your provider about tapering\"",
+              "correct": true,
+              "rationale": "Prolonged meditation can reduce the need for psychotropic medications, but the provider adjusts doses. Stopping a benzodiazepine abruptly can cause withdrawal and seizures, so the patient restarts it as prescribed and the provider plans any taper."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Therapy working: the provider adjusts the dose, never the patient alone.",
+          "strategy": "Keep the benefit and remove the danger."
+        },
+        {
+          "id": "cai-h04",
+          "topic": "Traditional and energy therapies",
+          "stem": "A patient with a history of assault asks a nurse certified in therapeutic touch for a session to ease chronic pain. What should the nurse do?",
+          "objective": "Traditional and energy therapies",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Explain what the session involves, get consent and keep it brief and gentle",
+              "correct": true,
+              "rationale": "Patients with trauma may misinterpret touch and feel threatened, so the nurse assesses first. When the patient understands and requests it, the nurse explains what will happen, gets consent, keeps the session gentle and time limited and stops if distress appears."
+            },
+            {
+              "id": "B",
+              "text": "Decline the request because touch therapies are contraindicated for patients after trauma",
+              "correct": false,
+              "rationale": "Absolute language Trauma calls for caution, not automatic refusal of a requested therapy."
+            },
+            {
+              "id": "C",
+              "text": "Offer guided imagery in place of touch and avoid discussing the request at all",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Substituting without discussion overrides the patient's choice."
+            },
+            {
+              "id": "D",
+              "text": "Provide the full session as requested because the patient chose the therapy freely",
+              "correct": false,
+              "rationale": "Near miss concept The request does not remove the need to explain, consent and watch for distress."
+            }
+          ],
+          "answer": "A",
+          "takeaway": "Trauma and touch: inform, consent, go gently.",
+          "strategy": "Respect the request while adding safety."
+        },
+        {
+          "id": "cai-h05",
+          "topic": "Nursing process and teaching",
+          "stem": "During a preoperative assessment three days before surgery, a patient reports taking ginkgo and garlic capsules daily. What should the nurse do first?",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Document the supplements on the medication history",
+              "correct": false,
+              "rationale": "Documenting instead of acting Documenting is needed but does not get the bleeding risk addressed."
+            },
+            {
+              "id": "B",
+              "text": "Check the platelet count before the day of surgery",
+              "correct": false,
+              "rationale": "Correct but premature A normal platelet count does not rule out the antiplatelet effect."
+            },
+            {
+              "id": "C",
+              "text": "Report the supplements to the surgical provider",
+              "correct": true,
+              "rationale": "Ginkgo and garlic inhibit platelet function and increase bleeding during surgery. The nurse reports them to the surgical provider, who decides about stopping them or delaying surgery. A platelet count measures the number of platelets, not how well they work."
+            },
+            {
+              "id": "D",
+              "text": "Tell the patient to stop both supplements today",
+              "correct": false,
+              "rationale": "Outside the nurse's scope The surgical team decides whether to stop the supplements or change the plan."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Bleeding herbs before surgery: tell the surgical team.",
+          "strategy": "Route the risk to the one who decides."
         }
       ]
     },
@@ -12332,6 +12978,216 @@
           "answer": "B",
           "takeaway": "Reticulocytes are young red cells. A rising count within days of starting iron, B12 or folate shows the marrow is responding; hemoglobin rises later.",
           "strategy": "Know which lab moves first: the reticulocyte count, then hemoglobin."
+        },
+        {
+          "id": "ig33-h01",
+          "topic": "Explain clot formation and breakdown mechanisms",
+          "stem": "On the second day after a long orthopedic surgery, a patient's D dimer comes back elevated. The patient is resting comfortably, and the nurse is asked what the result means. Which interpretation is most accurate?",
+          "objective": "Explain clot formation and breakdown mechanisms",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "The patient is deficient in clotting factors and may bleed",
+              "correct": false,
+              "rationale": "Near miss concept An elevated D dimer shows clotting and breakdown are occurring, not a factor deficiency."
+            },
+            {
+              "id": "B",
+              "text": "The platelets are being destroyed faster than they are made",
+              "correct": false,
+              "rationale": "Near miss concept Platelet destruction is measured by the platelet count, not the D dimer."
+            },
+            {
+              "id": "C",
+              "text": "A clot has formed somewhere and is being broken down",
+              "correct": true,
+              "rationale": "D dimer is a fragment released when fibrin is broken down during fibrinolysis. An elevated level shows that a clot formed and is being dissolved somewhere, but it does not say where. After surgery it is often elevated, so it raises suspicion for a deep vein thrombosis or pulmonary embolism without proving either; imaging confirms."
+            },
+            {
+              "id": "D",
+              "text": "The patient has a pulmonary embolism that needs treatment",
+              "correct": false,
+              "rationale": "Label instead of mechanism A D dimer is not specific; a pulmonary embolism is one possible source, not the meaning of the result."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "High D dimer: a clot is being broken down somewhere.",
+          "strategy": "Separate what a lab measures from the diagnosis it raises."
+        },
+        {
+          "id": "ig33-h02",
+          "topic": "Describe major blood components and their functions",
+          "stem": "A patient with cirrhosis has oozing gums, bruises on the forearms and pitting edema of both legs. The platelet count is normal. Which explanation best links the findings?",
+          "objective": "Describe major blood components and their functions",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Portal hypertension forces fluid and blood out of vessels",
+              "correct": false,
+              "rationale": "Near miss concept Portal hypertension causes ascites and varices, but it does not explain gum oozing with a normal platelet count."
+            },
+            {
+              "id": "B",
+              "text": "A low red cell count lowers the plasma oncotic pressure",
+              "correct": false,
+              "rationale": "Near miss concept Albumin, not red cells, holds fluid in the vessels."
+            },
+            {
+              "id": "C",
+              "text": "The liver makes both clotting factors and albumin",
+              "correct": true,
+              "rationale": "Plasma proteins come from the liver. When the liver fails, clotting factor production falls, so the patient bleeds even with normal platelets, and albumin falls, so oncotic pressure drops and fluid leaks into tissues. One organ explains both findings."
+            },
+            {
+              "id": "D",
+              "text": "Low platelets cause both bleeding and capillary leak",
+              "correct": false,
+              "rationale": "Accurate but inert data The platelet count is normal, so platelets do not explain the bleeding."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Liver failure: bleeding and edema from missing plasma proteins.",
+          "strategy": "Use the normal platelet count to rule out the obvious answer."
+        },
+        {
+          "id": "ig33-h03",
+          "topic": "Recognize carbon monoxide poisoning and nursing priorities",
+          "stem": "Three members of one household arrive in winter with headaches and nausea. One is confused, with an oxygen saturation of 99% on room air by pulse oximeter. What should the nurse do first for the confused patient?",
+          "objective": "Recognize carbon monoxide poisoning and nursing priorities",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Obtain a carboxyhemoglobin level to confirm exposure",
+              "correct": false,
+              "rationale": "Correct but premature The level confirms the diagnosis, but treatment starts on suspicion."
+            },
+            {
+              "id": "B",
+              "text": "Recheck the oxygen saturation on a different finger",
+              "correct": false,
+              "rationale": "Accurate but inert data A pulse oximeter reads carboxyhemoglobin as oxygenated hemoglobin; another finger will read the same."
+            },
+            {
+              "id": "C",
+              "text": "Perform a full neurological assessment and document it",
+              "correct": false,
+              "rationale": "Documenting instead of acting Assessment and documentation delay the treatment that reverses the poisoning."
+            },
+            {
+              "id": "D",
+              "text": "Apply 100% oxygen by nonrebreather mask",
+              "correct": true,
+              "rationale": "Carbon monoxide binds hemoglobin far more tightly than oxygen, and a standard pulse oximeter cannot tell the two apart, so the saturation reads falsely normal. A household cluster with headache, nausea and confusion is carbon monoxide until proven otherwise. High flow 100% oxygen shortens the half life of carboxyhemoglobin and is started before the level returns."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Suspected carbon monoxide: 100% oxygen now; the oximeter lies.",
+          "strategy": "Treat on suspicion when the test is slow and the oximeter is unreliable."
+        },
+        {
+          "id": "ig33-h04",
+          "topic": "Understand nursing care before and after bone marrow tests",
+          "stem": "Two hours after a posterior iliac crest bone marrow aspiration, a patient with a platelet count of 40,000/mm³ reports throbbing pain at the site. The dressing is dry, but the nurse feels a firm swelling beneath it. What should the nurse do first?",
+          "objective": "Understand nursing care before and after bone marrow tests",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the prescribed acetaminophen for the procedure pain",
+              "correct": false,
+              "rationale": "Correct action, wrong question Treating the pain ignores the cause, a likely hematoma."
+            },
+            {
+              "id": "B",
+              "text": "Apply ice and recheck the dressing again in one hour",
+              "correct": false,
+              "rationale": "Correct but premature Ice may help later, but waiting an hour allows bleeding to continue."
+            },
+            {
+              "id": "C",
+              "text": "Reinforce the dressing and help the patient lie on the site",
+              "correct": false,
+              "rationale": "Near miss concept A dry dressing hides bleeding into the tissue; reinforcing it treats the wrong problem."
+            },
+            {
+              "id": "D",
+              "text": "Apply firm pressure to the site and notify the provider",
+              "correct": true,
+              "rationale": "With a low platelet count, bleeding after the procedure may collect under the skin instead of soaking the dressing. A firm, painful swelling suggests a hematoma. The nurse applies direct pressure to stop the bleeding and reports it, then monitors the site and vital signs."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Dry dressing, firm swelling, low platelets: bleeding under the skin.",
+          "strategy": "Look past the dressing to the finding beneath it."
+        },
+        {
+          "id": "ig33-h05",
+          "topic": "Identify environmental exposures affecting blood health",
+          "stem": "A patient who restores old houses has fatigue and pallor. The hemoglobin is low and the red cells are small. Which assessment question will be most useful?",
+          "objective": "Identify environmental exposures affecting blood health",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Have you noticed black or tarry stools lately?\"",
+              "correct": false,
+              "rationale": "Near miss concept Blood loss is worth asking about, but it ignores the clue in the history."
+            },
+            {
+              "id": "B",
+              "text": "\"Does anyone in your family have anemia?\"",
+              "correct": false,
+              "rationale": "Accurate but inert data Family history is less useful than a direct exposure clue."
+            },
+            {
+              "id": "C",
+              "text": "\"Do you sand or scrape old paint at work?\"",
+              "correct": true,
+              "rationale": "Lead blocks hemoglobin synthesis and causes a small cell anemia that looks like iron deficiency. Older homes often contain lead paint, and sanding or scraping creates dust. The occupational clue in the stem makes the exposure history the most useful question."
+            },
+            {
+              "id": "D",
+              "text": "\"How often do you eat red meat or leafy greens?\"",
+              "correct": false,
+              "rationale": "Near miss concept Diet fits iron deficiency, but this patient's work points to another cause of small red cells."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Small red cells plus old paint: ask about lead.",
+          "strategy": "Use the history detail the stem gives you."
         }
       ]
     }
