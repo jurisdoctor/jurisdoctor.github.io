@@ -28,10 +28,8 @@
           "stem": "Match each loss to its type.",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Actual",
@@ -87,10 +85,8 @@
           "stem": "Match each term to its definition.",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Grief",
@@ -131,10 +127,8 @@
           "stem": "Match each situation to the grief experience it describes.",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Anticipatory grief",
@@ -182,10 +176,8 @@
           "stem": "Which statement about the five stages of grief is correct?",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -223,10 +215,8 @@
           "stem": "Match each statement to the grief response it reflects.",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Denial",
@@ -283,10 +273,8 @@
           "stem": "According to attachment theory, why does losing a loved one cause grief?",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -324,10 +312,8 @@
           "stem": "Match each example to Worden's task of mourning.",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Accept the reality of the loss",
@@ -376,10 +362,8 @@
           "stem": "Classify each activity in the dual process model of grief.",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Loss oriented coping",
@@ -433,10 +417,8 @@
           "stem": "In the dual process model, what is oscillation?",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -474,10 +456,8 @@
           "stem": "Complete the statement about Rando's six R processes of mourning.",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "cloze",
           "sentence": "The processes are grouped into three phases. Recognizing the death belongs to [[1]]. Reacting, recollecting and relinquishing belong to [[2]]. Readjusting and reinvesting belong to [[3]].",
           "blanks": [
@@ -565,10 +545,8 @@
           "stem": "In Rando's model, what does reinvesting mean?",
           "objective": "Types of loss and grief",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -606,10 +584,8 @@
           "stem": "Select all of the factors that shape how a person grieves.",
           "objective": "Grief responses and assessment",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -664,10 +640,8 @@
           "stem": "Select all of the considerations when assessing grief in older adults.",
           "objective": "Grief responses and assessment",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -722,10 +696,8 @@
           "stem": "Which question is the best way to open a grief assessment?",
           "objective": "Grief responses and assessment",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -763,10 +735,8 @@
           "stem": "Select all of the statements the nurse should avoid with a grieving family.",
           "objective": "Therapeutic communication",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -820,10 +790,8 @@
           "stem": "What is the best way for the nurse to learn a dying patient's cultural and spiritual preferences?",
           "objective": "Culture and spirituality",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -861,10 +829,8 @@
           "stem": "Match each practice to the tradition commonly associated with it. Always confirm with the individual patient and family.",
           "objective": "Culture and spirituality",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Islam",
@@ -913,10 +879,8 @@
           "stem": "A patient has no religious affiliation. Select all of the things that can still provide spiritual support.",
           "objective": "Culture and spirituality",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -971,10 +935,8 @@
           "stem": "Complete the HOPE mnemonic for spiritual assessment at end of life.",
           "objective": "Culture and spirituality",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "cloze",
           "sentence": "H stands for sources of [[1]]. O stands for [[2]]. P stands for personal spirituality and practices. E stands for [[3]] of spirituality on care and decisions.",
           "blanks": [
@@ -1062,10 +1024,8 @@
           "stem": "Classify each statement as palliative care, hospice or both.",
           "objective": "Palliative care and hospice",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Palliative care",
@@ -1120,10 +1080,8 @@
           "stem": "Which statement about palliative care is correct?",
           "objective": "Palliative care and hospice",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -1161,10 +1119,8 @@
           "stem": "Select all of the areas a palliative care team addresses.",
           "objective": "Palliative care and hospice",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -1219,10 +1175,8 @@
           "stem": "Match each situation to the hospice level of care.",
           "objective": "Palliative care and hospice",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Routine home care",
@@ -1271,10 +1225,8 @@
           "stem": "Classify each statement about hospice as true or a misconception.",
           "objective": "Palliative care and hospice",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "True",
@@ -1328,10 +1280,8 @@
           "stem": "Which statement about routine home hospice is correct?",
           "objective": "Palliative care and hospice",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -1369,10 +1319,8 @@
           "stem": "Match each statement to the document it describes.",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Advance directive",
@@ -1426,10 +1374,8 @@
           "stem": "A patient has an advance directive stating no mechanical ventilation. Is a DNR order now in place?",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -1467,10 +1413,8 @@
           "stem": "A patient has a DNR order and no other limitations. Select all of the care that may continue according to the orders and goals.",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -1526,10 +1470,8 @@
           "stem": "When does Section A of the California POLST apply?",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -1567,10 +1509,8 @@
           "stem": "Select all of the correct steps in completing and sharing an advance directive.",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -1625,10 +1565,8 @@
           "stem": "When is the best time to start advance care planning conversations?",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -1666,10 +1604,8 @@
           "stem": "Select all of the abilities that show decision making capacity.",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -1724,10 +1660,8 @@
           "stem": "A patient cannot make decisions. Place the steps for deciding whose wishes guide care in order.",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "ordered_response",
           "options": [
             {
@@ -1763,10 +1697,8 @@
           "stem": "Select all of the steps of postmortem care.",
           "objective": "Care during dying and after death",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -1821,10 +1753,8 @@
           "stem": "Which comfort measure is correct for a dying patient with cool, mottled extremities?",
           "objective": "Care during dying and after death",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -1862,10 +1792,8 @@
           "stem": "Select all of the ways a nurse can cope with repeated patient deaths and prevent burnout.",
           "objective": "Support for caregivers and nurses",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -1920,10 +1848,8 @@
           "stem": "A nurse visits a patient whose spouse died 3 months ago. Classify each finding as a common grief response or one that needs further assessment or referral.",
           "objective": "Grief responses and assessment",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Common grief response",
@@ -1984,10 +1910,8 @@
           "stem": "A patient whose child died 6 weeks ago says, \"I do not see the point of anything anymore. Sometimes I think everyone would be better off without me.\" What should the nurse do first?",
           "objective": "Grief responses and assessment",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2025,10 +1949,8 @@
           "stem": "A nurse writes a care plan for a widowed patient who is isolated after a spouse's death. Which outcome is best?",
           "objective": "Grief responses and assessment",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2066,10 +1988,8 @@
           "stem": "A patient recovering from a below the knee amputation says, \"Everyone keeps telling me I am lucky to be alive. They do not understand that my whole life has changed.\" Select all of the losses the nurse should explore.",
           "objective": "Grief responses and assessment",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -2124,10 +2044,8 @@
           "stem": "A family member sits by a dying patient and says, \"I keep thinking I should have brought them to the doctor sooner.\" Which response is best?",
           "objective": "Therapeutic communication",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2165,10 +2083,8 @@
           "stem": "A dying patient's spouse sits silently and tearful at the bedside. The nurse has no urgent tasks. Which action is most therapeutic?",
           "objective": "Therapeutic communication",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2206,10 +2122,8 @@
           "stem": "A patient has just died. The family has said their faith includes specific practices around the body. What should the nurse do before washing or repositioning the body?",
           "objective": "Culture and spirituality",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2247,10 +2161,8 @@
           "stem": "A patient with advanced heart failure continues treatment but has persistent breathlessness, poor sleep and anxiety. The spouse says they feel overwhelmed. What should the nurse do?",
           "objective": "Palliative care and hospice",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2288,10 +2200,8 @@
           "stem": "A patient enrolled in hospice 7 months ago is still alive and eligible. The family asks whether hospice will now end. Which response is best?",
           "objective": "Palliative care and hospice",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2329,10 +2239,8 @@
           "stem": "A family caring for a patient at home on hospice says they have not slept in days and are exhausted. Which option should the nurse discuss with the hospice team?",
           "objective": "Palliative care and hospice",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2370,10 +2278,8 @@
           "stem": "A patient lacks capacity and has a valid DNR POLST. The patient's adult child says, \"I do not care what that paper says. Do everything.\" What should the nurse do first?",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2411,10 +2317,8 @@
           "stem": "After confirming a valid DNR POLST, the nurse speaks with the patient's adult child, who still wants everything done. What should the nurse do next?",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2452,10 +2356,8 @@
           "stem": "A patient with decision making capacity chooses to stop dialysis. The nurse thinks this decision is unwise. What does this mean for the patient's capacity?",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2493,10 +2395,8 @@
           "stem": "A patient with decision making capacity wants to enroll in hospice. The adult child says, \"You are giving up. We want another treatment.\" What should the nurse do first?",
           "objective": "Advance directives, DNR and POLST",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2534,10 +2434,8 @@
           "stem": "A nurse assesses a patient on home hospice. Select all of the findings that suggest death is approaching.",
           "objective": "Care during dying and after death",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -2592,10 +2490,8 @@
           "stem": "A dying patient has loud, gurgling respirations. The family is distressed. What should the nurse do first?",
           "objective": "Care during dying and after death",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2633,10 +2529,8 @@
           "stem": "A patient in hospice has dyspnea with a respiratory rate of 30. SpO2 is 93%. Select all of the appropriate nursing actions.",
           "objective": "Care during dying and after death",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -2691,10 +2585,8 @@
           "stem": "A family asks the nurse to start IV fluids because their dying relative has stopped eating and drinking. Which response is best?",
           "objective": "Care during dying and after death",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2732,10 +2624,8 @@
           "stem": "A dying patient becomes restless and agitated. What should the nurse assess first?",
           "objective": "Care during dying and after death",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2773,10 +2663,8 @@
           "stem": "A patient expected to die is on home hospice. The family calls to say the patient has stopped breathing. What should the nurse tell the family?",
           "objective": "Care during dying and after death",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -2814,10 +2702,8 @@
           "stem": "A patient has just died in the hospital. No autopsy is planned. Place the nurse's postmortem actions in order.",
           "objective": "Care during dying and after death",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "ordered_response",
           "options": [
             {
@@ -2860,10 +2746,8 @@
           "stem": "A spouse caring for a patient on home hospice says, \"I do not know what to do if the patient is in pain at night.\" What should the nurse do?",
           "objective": "Support for caregivers and nurses",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -7076,10 +6960,8 @@
           "stem": "Classify how each therapy is being used.",
           "objective": "Complementary, alternative and integrative care",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Complementary",
@@ -7134,10 +7016,8 @@
           "stem": "What makes a therapy alternative rather than complementary?",
           "objective": "Complementary, alternative and integrative care",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -7175,10 +7055,8 @@
           "stem": "Select all of the features of integrative health care.",
           "objective": "Complementary, alternative and integrative care",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -7233,10 +7111,8 @@
           "stem": "Why do many patients seek complementary therapies?",
           "objective": "Complementary, alternative and integrative care",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -7274,10 +7150,8 @@
           "stem": "Classify each therapy as one a nurse can use independently or one that requires additional training or certification.",
           "objective": "Complementary, alternative and integrative care",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Nursing accessible",
@@ -7338,10 +7212,8 @@
           "stem": "What determines which complementary therapies a nurse may perform?",
           "objective": "Complementary, alternative and integrative care",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -7379,10 +7251,8 @@
           "stem": "Match each therapy to its category.",
           "objective": "Categories of therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Mind body",
@@ -7446,10 +7316,8 @@
           "stem": "Which statement about whole medical systems is correct?",
           "objective": "Categories of therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -7487,10 +7355,8 @@
           "stem": "Match each whole medical system to its central idea.",
           "objective": "Categories of therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Traditional Chinese medicine",
@@ -7539,10 +7405,8 @@
           "stem": "Classify each finding as part of the stress response or the relaxation response.",
           "objective": "Stress and relaxation response",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Stress response",
@@ -7603,10 +7467,8 @@
           "stem": "Why is chronic stress harmful even though the stress response is protective?",
           "objective": "Stress and relaxation response",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -7644,10 +7506,8 @@
           "stem": "Select all of the cognitive skills a patient develops through relaxation practice.",
           "objective": "Stress and relaxation response",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -7701,10 +7561,8 @@
           "stem": "How does passive relaxation differ from progressive relaxation?",
           "objective": "Stress and relaxation response",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -7742,10 +7600,8 @@
           "stem": "Place the steps for guiding progressive muscle relaxation in order.",
           "objective": "Stress and relaxation response",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "ordered_response",
           "options": [
             {
@@ -7795,10 +7651,8 @@
           "stem": "Which patient is the poorest candidate for active progressive relaxation?",
           "objective": "Stress and relaxation response",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -7836,10 +7690,8 @@
           "stem": "Select all of the features of meditation.",
           "objective": "Mind body techniques",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -7894,10 +7746,8 @@
           "stem": "Select all of the cautions for a patient learning meditation.",
           "objective": "Mind body techniques",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -7952,10 +7802,8 @@
           "stem": "A nurse is guiding imagery for a patient. What step comes first?",
           "objective": "Mind body techniques",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -7993,10 +7841,8 @@
           "stem": "Why does the nurse individualize the image used in guided imagery?",
           "objective": "Mind body techniques",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -8034,10 +7880,8 @@
           "stem": "Match each description to music therapy or therapeutic music.",
           "objective": "Mind body techniques",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Music therapy",
@@ -8084,10 +7928,8 @@
           "stem": "How does biofeedback work?",
           "objective": "Mind body techniques",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -8125,10 +7967,8 @@
           "stem": "Select all of the conditions biofeedback has evidence for managing.",
           "objective": "Mind body techniques",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -8176,10 +8016,8 @@
           "stem": "Which precaution applies to biofeedback?",
           "objective": "Mind body techniques",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -8217,10 +8055,8 @@
           "stem": "According to traditional Chinese medicine, what causes illness?",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -8258,10 +8094,8 @@
           "stem": "Match each traditional Chinese medicine practice to its description.",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Acupuncture",
@@ -8318,10 +8152,8 @@
           "stem": "Select all of the patients for whom acupuncture is contraindicated or requires caution.",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -8376,10 +8208,8 @@
           "stem": "Which requirement protects patients from infection during acupuncture?",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -8417,10 +8247,8 @@
           "stem": "Select all of the conditions acupuncture has evidence for treating.",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -8475,10 +8303,8 @@
           "stem": "Place the phases of therapeutic touch in order.",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "ordered_response",
           "options": [
             {
@@ -8528,10 +8354,8 @@
           "stem": "Select all of the patients for whom therapeutic touch requires caution or may be inappropriate.",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -8586,10 +8410,8 @@
           "stem": "Which statement about touch and older adults is correct?",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -8627,10 +8449,8 @@
           "stem": "Which movement therapy is best supported for preventing falls in older adults?",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -8668,10 +8488,8 @@
           "stem": "Which statement about herbal supplements in the United States is correct?",
           "objective": "Herbs and natural products",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -8709,10 +8527,8 @@
           "stem": "Match each herb to its main drug interaction concern.",
           "objective": "Herbs and natural products",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Increased bleeding",
@@ -8775,10 +8591,8 @@
           "stem": "Select all of the herbs that increase bleeding risk with warfarin.",
           "objective": "Herbs and natural products",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -8833,10 +8647,8 @@
           "stem": "Select all of the information a safe herbal product label should include.",
           "objective": "Herbs and natural products",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -8891,10 +8703,8 @@
           "stem": "Classify each herb as generally considered safe for its use or unsafe.",
           "objective": "Herbs and natural products",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Generally safe",
@@ -8955,10 +8765,8 @@
           "stem": "Which patient should avoid ephedra?",
           "objective": "Herbs and natural products",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -8996,10 +8804,8 @@
           "stem": "Which statement about aromatherapy is correct?",
           "objective": "Herbs and natural products",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9037,10 +8843,8 @@
           "stem": "Select all of the questions to include when assessing a patient's use of complementary therapies.",
           "objective": "Nursing process and teaching",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "sata",
           "options": [
             {
@@ -9095,10 +8899,8 @@
           "stem": "Why must the nurse keep evaluating a patient who uses relaxation, meditation or biofeedback regularly?",
           "objective": "Nursing process and teaching",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9136,10 +8938,8 @@
           "stem": "What most strongly predicts whether a complementary therapy such as meditation or imagery will help?",
           "objective": "Nursing process and teaching",
           "tags": [
-            "Concepts",
-            "new"
+            "Concepts"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9177,10 +8977,8 @@
           "stem": "A patient taking warfarin tells the nurse, \"I started ginkgo to help my memory.\" The patient has new bruises on both arms. What should the nurse do first?",
           "objective": "Herbs and natural products",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9218,10 +9016,8 @@
           "stem": "A patient on warfarin reports taking ginkgo daily. Place the nurse's actions in order.",
           "objective": "Herbs and natural products",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "ordered_response",
           "options": [
             {
@@ -9271,10 +9067,8 @@
           "stem": "A patient taking warfarin reports drinking garlic and ginger tea several times a day. The patient has bleeding gums and dark stools. Complete the diagram: the condition the patient is most likely experiencing, two actions to take, and two parameters to monitor.",
           "objective": "Herbs and natural products",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "bowtie",
           "pools": {
             "actions": {
@@ -9402,10 +9196,8 @@
           "stem": "A patient taking sertraline for depression asks whether adding St. John's wort would help. What is the nurse's best response?",
           "objective": "Herbs and natural products",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9443,10 +9235,8 @@
           "stem": "A patient with type 2 diabetes taking metformin has started ginseng. Which assessment is most important?",
           "objective": "Herbs and natural products",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9484,10 +9274,8 @@
           "stem": "A patient scheduled for surgery tomorrow takes valerian nightly for sleep. Why is this important to report?",
           "objective": "Herbs and natural products",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9525,10 +9313,8 @@
           "stem": "A patient with pneumonia is anxious and short of breath. Oxygen saturation is 85%. The patient asks the nurse to lead a breathing exercise to calm down. What should the nurse do first?",
           "objective": "Mind body techniques",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9566,10 +9352,8 @@
           "stem": "A patient on the first postoperative day rates pain 6 out of 10 and says, \"I'm so anxious I can't relax.\" Analgesia is due now. What should the nurse do?",
           "objective": "Mind body techniques",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9607,10 +9391,8 @@
           "stem": "A patient with advanced heart failure is exhausted and anxious and asks for help relaxing. Which technique should the nurse offer?",
           "objective": "Stress and relaxation response",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9648,10 +9430,8 @@
           "stem": "A patient practicing progressive relaxation for several weeks reports new chest tightness during sessions. What should the nurse do?",
           "objective": "Stress and relaxation response",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9689,10 +9469,8 @@
           "stem": "A patient with hypertension has meditated daily for three months. Blood pressure readings are now 98/60 and the patient feels lightheaded on standing. What should the nurse do?",
           "objective": "Mind body techniques",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9730,10 +9508,8 @@
           "stem": "A patient with a history of physical abuse is anxious before a procedure. Which complementary therapy is the best choice?",
           "objective": "Mind body techniques",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9771,10 +9547,8 @@
           "stem": "A patient taking apixaban asks whether acupuncture could help chronic neck pain. What is the nurse's best response?",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9812,10 +9586,8 @@
           "stem": "A patient from a Chinese cultural background uses herbal teas from a traditional practitioner along with prescribed digoxin. What should the nurse do?",
           "objective": "Traditional and energy therapies",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9853,10 +9625,8 @@
           "stem": "A patient with new right lower abdominal pain, nausea and vomiting says, \"I'm going to try herbal tea and meditation before seeing a doctor.\" What should the nurse do?",
           "objective": "Nursing process and teaching",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9894,10 +9664,8 @@
           "stem": "A patient had a first chiropractic treatment for chronic low back pain and is going home. Classify each teaching point.",
           "objective": "Nursing process and teaching",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "matrix",
           "columns": [
             "Indicated",
@@ -9945,10 +9713,8 @@
           "stem": "The nurse taught a patient creative visualization. Which statement shows the teaching was effective?",
           "objective": "Nursing process and teaching",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -9986,10 +9752,8 @@
           "stem": "An older adult with a history of falls asks about an exercise to improve balance. Which recommendation is best?",
           "objective": "Nursing process and teaching",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -10027,10 +9791,8 @@
           "stem": "A patient says, \"I've decided to stop chemotherapy and use only a macrobiotic diet and herbs.\" What is the nurse's best response?",
           "objective": "Nursing process and teaching",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
@@ -10068,10 +9830,8 @@
           "stem": "A nurse gave guided imagery to a patient for procedure anxiety. Which finding best shows the therapy was effective?",
           "objective": "Nursing process and teaching",
           "tags": [
-            "application",
-            "new"
+            "application"
           ],
-          "new": true,
           "type": "multiple_choice",
           "options": [
             {
