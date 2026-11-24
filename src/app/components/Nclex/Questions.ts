@@ -430,10 +430,10 @@ const clean = (question: QuestionType): QuestionType => ({
   })),
 });
 
-// A question's saved result is tied to what counts as correct, not to how it
-// is worded or ordered. Rewording a stem or options, or reshuffling the
-// options of a drop-down or bow tie, keeps progress; changing the type, the
-// answer key, or bumping `revision` in the data, resets it.
+// A question's saved result is tied to its type and how many answers it takes,
+// not to wording, option order or which letter is correct. Rewording a stem or
+// options, reshuffling options, or rewriting rationales keeps progress; changing
+// the type, the number of answers, or bumping `revision` in the data, resets it.
 const keySignature = (question: QuestionType) => {
   if (question.type === "cloze")
     return question.blanks?.map(
@@ -446,15 +446,10 @@ const keySignature = (question: QuestionType) => {
         key,
         pool.options.filter((option) => option.correct).length,
       ]);
-  if (
-    question.answer &&
-    typeof question.answer === "object" &&
-    !Array.isArray(question.answer)
-  )
-    return Object.values(question.answer)
-      .map((value) => JSON.stringify(value))
-      .sort();
-  return question.answer;
+  const answer = question.answer;
+  if (Array.isArray(answer)) return answer.length;
+  if (answer && typeof answer === "object") return Object.keys(answer).length;
+  return 1;
 };
 
 const contentHashOf = (question: QuestionType) =>

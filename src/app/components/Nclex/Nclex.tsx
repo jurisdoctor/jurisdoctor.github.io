@@ -292,7 +292,7 @@ const ExamView = ({
     validAttempts,
   );
   const [hashes, setHashes, hashesReady] = useSaved<Record<string, string>>(
-    `${set.scope}:hashes:v4:${exam}`,
+    `${set.scope}:hashes:v5:${exam}`,
     freshHashes,
     validHashes,
   );
