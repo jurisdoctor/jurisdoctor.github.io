@@ -8,6 +8,7 @@ import Highlight from "./Highlight";
 import Matching from "./Matching";
 import Matrix from "./Matrix";
 import Temps from "./Temps";
+import Correct from "./Correct";
 import Ordered from "./Ordered";
 import {
   isCloze,
@@ -132,31 +133,20 @@ const Option = ({
   );
 };
 
-const Verdict = ({ correct, multi }: { correct: boolean; multi: boolean }) => (
-  <div
-    className={`mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl p-5 ${
-      correct
-        ? "bg-[rgba(var(--success-rgb),0.12)]"
-        : "bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)]"
-    }`}
-  >
-    <span
-      className={`rounded-md px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white ${
-        correct ? "bg-[rgb(var(--success-rgb))]" : "bg-[var(--danger-color)]"
-      }`}
-    >
-      {correct ? "Correct ✅" : "Not quite"}
-    </span>
+const Verdict = ({ correct }: { correct: boolean }) =>
+  correct ? (
+    <Correct />
+  ) : (
+    <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)] p-5">
+      <span className="rounded-md bg-[var(--danger-color)] px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white">
+        Not quite
+      </span>
 
-    <span className="text-lg font-bold text-[var(--title-color)]">
-      {correct
-        ? multi
-          ? "Every one of them, and nothing extra."
-          : "That is the one."
-        : "Read the rationales below, they explain every option."}
-    </span>
-  </div>
-);
+      <span className="text-lg font-bold text-[var(--title-color)]">
+        Read the rationales below, they explain every option.
+      </span>
+    </div>
+  );
 
 const Aside = ({
   label,
@@ -609,7 +599,7 @@ const Quiz = ({
 
       {answered && (
         <div className="animate-fadeIn">
-          <Verdict correct={correct} multi={multi} />
+          <Verdict correct={correct} />
 
           <div className="mb-6 grid gap-y-4 rounded-2xl bg-[var(--body-color)] p-5">
             {question.takeaway ? (
