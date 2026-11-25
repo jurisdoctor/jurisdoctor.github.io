@@ -469,6 +469,7 @@ const ExamView = ({
 
     setDeck(run);
     setAt(startAt);
+    setPass((prev) => prev + 1);
     setStarted({ pick: next, at: startAt });
   };
 

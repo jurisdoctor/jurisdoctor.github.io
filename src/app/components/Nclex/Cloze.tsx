@@ -112,10 +112,25 @@ const Blank = ({
         aria-haspopup="listbox"
         aria-expanded={shown}
         onClick={() => (shown ? setShown(false) : show())}
-        className={`inline-flex min-w-[8.5rem] max-w-[min(20rem,100%)] items-center justify-between gap-x-2 rounded-lg border-2 border-solid px-3 py-0.5 text-left text-sm font-bold outline-none duration-300 focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] disabled:cursor-default sm:min-w-[6.5rem] ${tone}`}
+        className={`inline-flex max-w-[min(20rem,100%)] items-center justify-between gap-x-2 rounded-lg border-2 border-solid px-3 py-0.5 text-left text-sm font-bold outline-none duration-300 focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] disabled:cursor-default ${tone}`}
       >
-        <span className={`truncate ${current ? "" : "font-normal"}`}>
-          {current?.text ?? "Select"}
+        <span className="grid min-w-0">
+          <span
+            className={`col-start-1 row-start-1 truncate ${current ? "" : "font-normal"}`}
+          >
+            {current?.text ?? "Select"}
+          </span>
+          {["Select", ...choices.map((choice) => choice.text)].map(
+            (text, index) => (
+              <span
+                key={index}
+                aria-hidden
+                className="invisible col-start-1 row-start-1 h-0 overflow-hidden whitespace-nowrap font-bold"
+              >
+                {text}
+              </span>
+            ),
+          )}
         </span>
         {mark && <span className="shrink-0">{mark}</span>}
         {!disabled && (
