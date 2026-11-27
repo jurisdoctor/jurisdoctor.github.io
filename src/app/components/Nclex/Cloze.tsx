@@ -221,10 +221,10 @@ const Cloze = ({
   };
 
   return (
-    <div className="mb-6">
+    <div className="mb-5">
       <div
         ref={frameRef}
-        className="mb-6 rounded-2xl bg-[var(--body-color)] p-5 leading-[1.875rem] sm:p-4"
+        className="mb-5 rounded-2xl bg-[var(--body-color)] p-5 leading-[1.875rem] sm:p-4"
       >
         {parts.map((part, index) => {
           const hit = part.match(/^\[\[(\d+)\]\]$/);
@@ -263,7 +263,7 @@ const Cloze = ({
       </div>
 
       {answered && (
-        <div className="mb-6 grid gap-y-3">
+        <div className="mb-5 grid gap-y-3">
           {blanks.map((blank) => {
             const chosen = picks[blank.id];
             const right = rightFor(blank.id);

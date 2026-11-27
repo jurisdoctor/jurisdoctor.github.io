@@ -232,10 +232,10 @@ const Bowtie = ({
   };
 
   return (
-    <div className="mb-6">
+    <div className="mb-5">
       <div
         ref={frameRef}
-        className="mb-6 grid grid-cols-[1fr_2.5rem_1fr_2.5rem_1fr] items-center gap-x-2 gap-y-6 lg:grid-cols-1"
+        className="mb-5 grid grid-cols-[1fr_2.5rem_1fr_2.5rem_1fr] items-center gap-x-2 gap-y-6 lg:grid-cols-1"
       >
         {column(pools[0][0], pools[0][1])}
         <Connector />

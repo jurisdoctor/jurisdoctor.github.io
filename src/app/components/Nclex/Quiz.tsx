@@ -9,6 +9,7 @@ import Matching from "./Matching";
 import Matrix from "./Matrix";
 import Temps from "./Temps";
 import Correct from "./Correct";
+import NotQuite from "./NotQuite";
 import Ordered from "./Ordered";
 import {
   isCloze,
@@ -125,28 +126,13 @@ const Option = ({
       </button>
 
       {answered && (
-        <p className="mt-1.5 animate-fadeIn px-[max(0px,calc(18px-2px))] text-sm leading-6 text-[var(--muted-color)]">
+        <p className="mt-[13px] animate-fadeIn px-[max(0px,calc(18px-2px))] text-sm leading-6 text-[var(--muted-color)]">
           <Temps>{option.rationale}</Temps>
         </p>
       )}
     </div>
   );
 };
-
-const Verdict = ({ correct }: { correct: boolean }) =>
-  correct ? (
-    <Correct />
-  ) : (
-    <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl bg-[color-mix(in_srgb,var(--danger-color)_10%,transparent)] p-5">
-      <span className="rounded-md bg-[var(--danger-color)] px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white">
-        Not quite
-      </span>
-
-      <span className="text-lg font-bold text-[var(--title-color)]">
-        Read the rationales below, they explain every option.
-      </span>
-    </div>
-  );
 
 const Aside = ({
   label,
@@ -561,8 +547,10 @@ const Quiz = ({
           />
         ) : (
           <div
-            className={`grid ${answered ? "gap-y-6" : "gap-y-3"} ${
-              answered || multi ? "mb-6" : ""
+            className={`grid ${
+              answered
+                ? "mb-[13px] gap-y-[13px]"
+                : `gap-y-3 ${multi ? "mb-6" : ""}`
             }`}
           >
             {question.options.map((option) => (
@@ -599,9 +587,9 @@ const Quiz = ({
 
       {answered && (
         <div className="animate-fadeIn">
-          <Verdict correct={correct} />
+          {correct ? <Correct /> : <NotQuite />}
 
-          <div className="mb-6 grid gap-y-4 rounded-2xl bg-[var(--body-color)] p-5">
+          <div className="mb-5 grid gap-y-4 rounded-2xl bg-[var(--body-color)] p-5">
             {question.takeaway ? (
               <Aside
                 label="Takeaway"

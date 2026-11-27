@@ -106,7 +106,7 @@ const Highlight = ({
   };
 
   return (
-    <div className="mb-6">
+    <div className="mb-5">
       {!answered && question.note && (
         <p className="mb-4 rounded-2xl bg-[var(--body-color)] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
@@ -115,7 +115,7 @@ const Highlight = ({
 
       <div
         ref={frameRef}
-        className="mb-6 rounded-2xl bg-[var(--body-color)] p-5 leading-9"
+        className="mb-5 rounded-2xl bg-[var(--body-color)] p-5 leading-9"
       >
         {segments.map((segment) => (
           <Segment
@@ -129,7 +129,7 @@ const Highlight = ({
       </div>
 
       {answered && (
-        <div className="mb-6 grid gap-y-3">
+        <div className="mb-5 grid gap-y-3">
           {segments.map((segment) => {
             const took = picked.includes(segment.id);
             if (!took && !segment.correct) return null;

@@ -77,14 +77,14 @@ const Matching = ({
   };
 
   return (
-    <div className="mb-6">
+    <div className="mb-5">
       {!answered && question.note && (
         <p className="mb-4 rounded-2xl bg-[var(--body-color)] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}
 
-      <div ref={frameRef} className="mb-6 grid gap-y-3">
+      <div ref={frameRef} className="mb-5 grid gap-y-3">
         {items.map((item) => {
           const chosen = picks[item.id];
           const right = answered && rightFor(item.id);

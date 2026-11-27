@@ -81,14 +81,14 @@ const Ordered = ({
   const pool = deck.filter((option) => !placed.includes(option.id));
 
   return (
-    <div className="mb-6">
+    <div className="mb-5">
       {!answered && question.note && (
         <p className="mb-4 rounded-2xl bg-[var(--body-color)] p-4 text-sm text-[var(--muted-color)]">
           {question.note}
         </p>
       )}
 
-      <div ref={frameRef} className="mb-6 grid gap-y-2">
+      <div ref={frameRef} className="mb-5 grid gap-y-2">
         {order.map((_, index) => {
           const id = placed[index];
           const option = id ? optionOf(id) : undefined;
@@ -153,7 +153,7 @@ const Ordered = ({
       </div>
 
       {!answered && pool.length > 0 && (
-        <div className="mb-6 grid gap-y-2">
+        <div className="mb-5 grid gap-y-2">
           <span className="text-xs font-bold uppercase tracking-wide text-[var(--muted-color)]">
             Remaining actions
           </span>
@@ -174,7 +174,7 @@ const Ordered = ({
       )}
 
       {answered && (
-        <div className="mb-6 grid gap-y-2">
+        <div className="mb-5 grid gap-y-2">
           {order.map((id, index) => {
             const option = optionOf(id);
             if (!option) return null;

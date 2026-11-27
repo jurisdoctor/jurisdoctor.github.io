@@ -1209,3 +1209,197 @@ button {
     animation-delay: calc(var(--phase) * -0.5s);
   }
 }
+
+.puppy-flip,
+.puppy-spin {
+  transform-origin: 54% 64%;
+}
+
+@keyframes puppyJump {
+  0% {
+    transform: translateY(0) scaleY(1);
+    animation-timing-function: ease-in-out;
+  }
+  14% {
+    transform: translateY(7%) scaleY(0.9);
+    animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+  }
+  47% {
+    transform: translateY(-22%) scaleY(1);
+    animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+  }
+  80% {
+    transform: translateY(7%) scaleY(0.9);
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes puppySpin {
+  0%,
+  12% {
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.42, 0.12, 0.58, 0.88);
+  }
+  82%,
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes puppyTuckFore {
+  0%,
+  14%,
+  80%,
+  100% {
+    transform: rotate(0deg);
+  }
+  36%,
+  58% {
+    transform: rotate(48deg);
+  }
+}
+
+@keyframes puppyTuckHind {
+  0%,
+  14%,
+  80%,
+  100% {
+    transform: rotate(0deg);
+  }
+  36%,
+  58% {
+    transform: rotate(-48deg);
+  }
+}
+
+@keyframes puppyTuckPaw {
+  0%,
+  14%,
+  80%,
+  100% {
+    transform: rotate(0deg);
+  }
+  36%,
+  58% {
+    transform: rotate(64deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .puppy-flip {
+    animation: puppyJump 1.6s 0.35s infinite;
+  }
+  .puppy-spin {
+    animation: puppySpin 1.6s 0.35s infinite;
+  }
+  .puppy-flip .dog-fore-up {
+    animation: puppyTuckFore 1.6s 0.35s ease-in-out infinite !important;
+  }
+  .puppy-flip .dog-hind-up {
+    animation: puppyTuckHind 1.6s 0.35s ease-in-out infinite !important;
+  }
+  .puppy-flip .dog-fore-low,
+  .puppy-flip .dog-hind-low {
+    animation: puppyTuckPaw 1.6s 0.35s ease-in-out infinite !important;
+  }
+  .puppy-flip .dog-body,
+  .puppy-flip .dog-head,
+  .puppy-flip .dog-ear {
+    animation: none;
+  }
+}
+
+.shake-head,
+.shake-face,
+.shake-ear-left,
+.shake-ear-right {
+  transform-box: view-box;
+}
+
+.shake-head {
+  transform-origin: 32px 40px;
+}
+
+.shake-ear-left {
+  transform-origin: 21px 10px;
+}
+
+.shake-ear-right {
+  transform-origin: 43px 10px;
+}
+
+@keyframes shakeHead {
+  0%,
+  64%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  8% {
+    transform: translateX(-2px) rotate(-7deg);
+  }
+  22% {
+    transform: translateX(2px) rotate(7deg);
+  }
+  36% {
+    transform: translateX(-2px) rotate(-6deg);
+  }
+  50% {
+    transform: translateX(1.5px) rotate(5deg);
+  }
+}
+
+@keyframes shakeFace {
+  0%,
+  64%,
+  100% {
+    transform: translateX(0);
+  }
+  8% {
+    transform: translateX(-4.5px);
+  }
+  22% {
+    transform: translateX(4.5px);
+  }
+  36% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes shakeEar {
+  0%,
+  70%,
+  100% {
+    transform: rotate(0deg);
+  }
+  14% {
+    transform: rotate(16deg);
+  }
+  28% {
+    transform: rotate(-16deg);
+  }
+  42% {
+    transform: rotate(13deg);
+  }
+  56% {
+    transform: rotate(-9deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .shake-head {
+    animation: shakeHead 1.6s 0.35s ease-in-out infinite;
+  }
+  .shake-face {
+    animation: shakeFace 1.6s 0.35s ease-in-out infinite;
+  }
+  .shake-ear-left,
+  .shake-ear-right {
+    animation: shakeEar 1.6s 0.35s ease-in-out infinite;
+  }
+}
