@@ -12,7 +12,7 @@ import { PiCaretDownBold, PiStar, PiStarFill } from "react-icons/pi";
 import Flash from "./Flash";
 import { useKeepInView } from "./KeepInView";
 import Glow from "./Glow";
-import { flameHueAt } from "./FlamePalette";
+import { flameHueAt, caseShade } from "./FlamePalette";
 import {
   ChapterType,
   memberName,
@@ -518,6 +518,9 @@ const ChapterSet = ({
     0,
   );
   const shown = chapters.find((chapter) => chapter.id === open);
+  const cases = Array.from(
+    new Set(shown?.questions.filter(isStory).map((step) => step.caseId)),
+  );
 
   return (
     <div
@@ -719,6 +722,11 @@ const ChapterSet = ({
               const state = results[question.id];
               const here = current === question.id;
               const glitching = hasTag(question, "review") && !state;
+              const shade = isStory(question)
+                ? caseShade(hueOf(shown.id), cases.indexOf(question.caseId))
+                : null;
+              const ringed =
+                (question.new || question.dailySet || glitching) && !state;
               return (
                 <button
                   key={question.id}
@@ -726,7 +734,10 @@ const ChapterSet = ({
                   title={`Question ${index + 1}`}
                   aria-current={here}
                   onClick={() => onStart(shown.id, index)}
-                  className={`relative h-9 rounded-lg text-xs font-bold duration-300 ${
+                  style={
+                    shade && !ringed ? { borderColor: shade.edge } : undefined
+                  }
+                  className={`${shade && !ringed ? "border-2 border-solid" : ""} relative h-9 rounded-lg text-xs font-bold duration-300 ${
                     glitching ? "tile-glitch" : ""
                   } ${
                     here
@@ -740,10 +751,13 @@ const ChapterSet = ({
                         : "bg-[var(--body-color)] text-[var(--muted-color)] hover:bg-[var(--chip-blue)] hover:text-[var(--title-color)]"
                   }`}
                 >
-                  {(question.new || question.dailySet || glitching) &&
-                    !state && (
-                      <Glow label="New question" hue={hueOf(shown.id)} />
-                    )}
+                  {ringed && (
+                    <Glow
+                      label="New question"
+                      hue={hueOf(shown.id)}
+                      lift={shade?.lift}
+                    />
+                  )}
                   {isStory(question) ? (
                     <span
                       aria-label="Case study"

@@ -21,10 +21,12 @@ const Glow = ({
   label,
   hue,
   edge = 0,
+  lift = 0,
 }: {
   label: string;
   hue?: number;
   edge?: number;
+  lift?: number;
 }) => {
   const inset = edge ? edge / 2 : 1;
   const radius = Math.max(0, 6 - inset);
@@ -62,13 +64,15 @@ const Glow = ({
             dur="2.8s"
             repeatCount="indefinite"
           />
-          {flameStops(hue ?? 28, hue === undefined ? 1 : 0.25).map((stop) => (
-            <stop
-              key={stop.offset}
-              offset={stop.offset}
-              stopColor={stop.color}
-            />
-          ))}
+          {flameStops(hue ?? 28, hue === undefined ? 1 : 0.25, lift).map(
+            (stop) => (
+              <stop
+                key={stop.offset}
+                offset={stop.offset}
+                stopColor={stop.color}
+              />
+            ),
+          )}
         </linearGradient>
       </defs>
       <rect

@@ -505,7 +505,9 @@ export const hasTag = (question: QuestionType, name: string) =>
   );
 
 export const isStory = (question: QuestionType) =>
-  hasTag(question, "case-study") && !!question.caseGroup;
+  ["case-study", "case study", "unfolding"].some((name) =>
+    hasTag(question, name),
+  ) && !!question.caseGroup;
 
 // Moves every unfolding case study to the end of its chapter, each case kept
 // together and in step order, and gives its steps the case fields the quiz
@@ -529,7 +531,7 @@ const withStories = (questions: QuestionType[], title: string) => {
     ...sorted.map((step) => ({
       ...step,
       caseId: step.caseGroup,
-      caseTitle: title,
+      caseTitle: step.caseTitle ?? title,
       caseSteps: sizes.get(step.caseGroup ?? ""),
     })),
   ];

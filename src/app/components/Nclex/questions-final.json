@@ -2780,48 +2780,6 @@
           "strategy": "Choose the option that equips the caregiver."
         },
         {
-          "id": "eol-h01",
-          "topic": "Support for caregivers and nurses",
-          "stem": "A nurse who cared for a patient for three weeks is found crying in the medication room after the patient's death. What should the charge nurse do first?",
-          "objective": "Support for caregivers and nurses",
-          "tags": [
-            "application",
-            "new"
-          ],
-          "new": true,
-          "difficulty": "difficult",
-          "type": "multiple_choice",
-          "options": [
-            {
-              "id": "A",
-              "text": "Refer the nurse to the employee assistance program",
-              "correct": false,
-              "rationale": "Correct but premature A referral helps if grief is prolonged or interferes with work, but support comes first."
-            },
-            {
-              "id": "B",
-              "text": "Reassign the nurse away from dying patients for the rest of the week",
-              "correct": false,
-              "rationale": "Kind but non therapeutic Well meant, but it treats normal grief as a problem."
-            },
-            {
-              "id": "C",
-              "text": "Remind the nurse that professional boundaries prevent this kind of grief",
-              "correct": false,
-              "rationale": "Near miss concept Grief after a patient's death is a normal response, not a boundary violation."
-            },
-            {
-              "id": "D",
-              "text": "Acknowledge the loss and offer time to talk or a team debriefing",
-              "correct": true,
-              "rationale": "Nurses grieve too. Normal grief is acknowledged, not avoided. Immediate support, a moment away and a debriefing help the nurse process the loss. Formal referral is for grief that persists or impairs functioning."
-            }
-          ],
-          "answer": "D",
-          "takeaway": "Nurse grief: acknowledge and debrief first.",
-          "strategy": "Choose support before referral."
-        },
-        {
           "id": "eol-h02",
           "topic": "Therapeutic communication",
           "stem": "A patient with advanced cancer and decision making capacity asks, \"Am I dying?\" Earlier, the family asked the nurse not to discuss dying with the patient. What is the best response?",
@@ -2838,114 +2796,30 @@
               "id": "A",
               "text": "\"What have you noticed that makes you ask that today?\"",
               "correct": true,
-              "rationale": "The patient with capacity has the right to information. The nurse first explores what the patient already senses and wants to know, which keeps the conversation open and honest. The answer then guides who should share the prognosis and how."
+              "rationale": "The patient with capacity has the right to information. The nurse first explores what the patient already senses and wants to know, which keeps the conversation open and honest. That answer then guides who shares the prognosis and how."
             },
             {
               "id": "B",
               "text": "\"Your family wants us to focus on keeping you comfortable.\"",
               "correct": false,
-              "rationale": "Institution as rationale The family's request does not override the patient's right to information."
+              "rationale": "Institution as rationale It sounds gentle and respects the family. The family's request does not override the right of a patient with capacity to information, and it shuts down the patient's question."
             },
             {
               "id": "C",
               "text": "\"I can't answer that, but I can ask your provider to come talk with you.\"",
               "correct": false,
-              "rationale": "Correct but premature Involving the provider may follow, but first learn what the patient knows and wants."
+              "rationale": "Correct but premature Bringing in the provider is a reasonable later step, which is why it tempts. Deflecting first leaves the patient alone with the question; the nurse first learns what the patient senses and wants to know."
             },
             {
               "id": "D",
               "text": "\"You are very sick, but everyone here is doing everything we can.\"",
               "correct": false,
-              "rationale": "Kind but non therapeutic Reassurance closes the conversation the patient opened."
+              "rationale": "Kind but non therapeutic It is kind and partly honest. It reassures instead of exploring and closes the conversation the patient just opened."
             }
           ],
           "answer": "A",
           "takeaway": "\"Am I dying?\": explore first.",
           "strategy": "Open the conversation before handing it off."
-        },
-        {
-          "id": "eol-h03",
-          "topic": "Grief responses and assessment",
-          "stem": "Eighteen months after a spouse's death, a patient still cannot enter the bedroom, has stopped seeing friends and says, \"Nothing matters anymore.\" What should the nurse do?",
-          "objective": "Grief responses and assessment",
-          "tags": [
-            "application",
-            "new"
-          ],
-          "new": true,
-          "difficulty": "difficult",
-          "type": "multiple_choice",
-          "options": [
-            {
-              "id": "A",
-              "text": "Encourage the patient to begin clearing out the bedroom slowly",
-              "correct": false,
-              "rationale": "Correct action, wrong question It addresses one behavior and misses the risk."
-            },
-            {
-              "id": "B",
-              "text": "Ask directly about thoughts of self harm and refer for further evaluation",
-              "correct": true,
-              "rationale": "Intense grief that persists beyond a year with withdrawal and hopelessness suggests prolonged grief and possible depression. A statement like \"nothing matters\" requires a direct question about suicide, then referral."
-            },
-            {
-              "id": "C",
-              "text": "Reassure the patient that grief has no timeline and will ease with time",
-              "correct": false,
-              "rationale": "Kind but non therapeutic Grief has no deadline, but hopelessness and withdrawal at this point need assessment."
-            },
-            {
-              "id": "D",
-              "text": "Suggest a bereavement support group that meets weekly",
-              "correct": false,
-              "rationale": "Correct but premature A group may help after safety is assessed."
-            }
-          ],
-          "answer": "B",
-          "takeaway": "Prolonged grief with hopelessness: ask about suicide.",
-          "strategy": "Safety before support."
-        },
-        {
-          "id": "eol-h04",
-          "topic": "Culture and spirituality",
-          "stem": "A patient with capacity is from a culture in which serious news is traditionally shared with the family first. The provider needs to discuss new test results. What should the nurse do?",
-          "objective": "Culture and spirituality",
-          "tags": [
-            "application",
-            "new"
-          ],
-          "new": true,
-          "difficulty": "difficult",
-          "type": "multiple_choice",
-          "options": [
-            {
-              "id": "A",
-              "text": "Follow the cultural practice and share the results with the family first",
-              "correct": false,
-              "rationale": "Label instead of mechanism A cultural pattern does not decide for this patient."
-            },
-            {
-              "id": "B",
-              "text": "Share the results with the patient alone to protect confidentiality",
-              "correct": false,
-              "rationale": "Absolute language The patient may want family present; assuming either way skips the patient."
-            },
-            {
-              "id": "C",
-              "text": "Ask the family how they would like the results to be shared",
-              "correct": false,
-              "rationale": "Near miss concept The family does not decide for a patient with capacity."
-            },
-            {
-              "id": "D",
-              "text": "Ask the patient how information should be shared and with whom",
-              "correct": true,
-              "rationale": "Culture informs care, but the individual defines their preferences. The nurse asks the patient how and with whom information should be shared and then honors that choice, which may include family first."
-            }
-          ],
-          "answer": "D",
-          "takeaway": "Ask the person, not the culture.",
-          "strategy": "The patient with capacity sets the plan."
         },
         {
           "id": "eol-h05",
@@ -2964,7 +2838,7 @@
               "id": "A",
               "text": "Call the family to decide whether the resident should go to the hospital",
               "correct": false,
-              "rationale": "Outside the nurse's scope The POLST already states the resident's wishes."
+              "rationale": "Outside the nurse's scope Involving family is good practice, which makes this tempting. The POLST already records the resident's wishes, and the family does not override them."
             },
             {
               "id": "B",
@@ -2976,18 +2850,578 @@
               "id": "C",
               "text": "Keep the resident in the facility, since comfort measures only means no transfer",
               "correct": false,
-              "rationale": "Absolute language Comfort measures allow transfer when comfort cannot be met where the resident is."
+              "rationale": "Absolute language Many people read comfort only as no hospital. The POLST allows transfer when comfort cannot be met in the current setting, so refusing transfer here fails the resident's own goal."
             },
             {
               "id": "D",
               "text": "Give the maximum dose of the available analgesic and reassess in four hours",
               "correct": false,
-              "rationale": "Correct but premature Waiting four hours with uncontrolled pain fails the comfort goal."
+              "rationale": "Correct but premature Giving available analgesia is reasonable, but the stem says it does not control the pain. Waiting four hours with an unstabilized fracture leaves the resident suffering."
             }
           ],
           "answer": "B",
           "takeaway": "Comfort only can still mean transfer, for comfort.",
           "strategy": "Read what the order is for, not only what it limits."
+        },
+        {
+          "id": "eol-h3",
+          "topic": "Care during dying and after death",
+          "stem": "A patient is in the last days of life. Select all of the findings the nurse can explain to the family as expected.",
+          "objective": "Care during dying and after death",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Noisy breathing from secretions in the throat",
+              "correct": true,
+              "rationale": "Mottling, changing breathing patterns, terminal secretions and declining intake are expected as circulation and body systems slow. Signs of pain or a full bladder have causes the nurse can treat and are not normal parts of dying."
+            },
+            {
+              "id": "B",
+              "text": "Grimacing and moaning when turned",
+              "correct": false,
+              "rationale": "Expected finding offered as a problem Many changes near death are expected, so it is tempting to include this. Grimacing and moaning with movement are signs of pain, which is treated, not explained away."
+            },
+            {
+              "id": "C",
+              "text": "Restlessness with a firm, distended lower abdomen",
+              "correct": false,
+              "rationale": "Expected finding offered as a problem Restlessness is common near death, which makes this look expected. A firm, distended lower abdomen suggests urinary retention, a correctable cause of distress."
+            },
+            {
+              "id": "D",
+              "text": "Mottling of the knees and feet",
+              "correct": true,
+              "rationale": "Mottling, changing breathing patterns, terminal secretions and declining intake are expected as circulation and body systems slow. Signs of pain or a full bladder have causes the nurse can treat and are not normal parts of dying."
+            },
+            {
+              "id": "E",
+              "text": "Pauses in breathing that lengthen and shorten",
+              "correct": true,
+              "rationale": "Mottling, changing breathing patterns, terminal secretions and declining intake are expected as circulation and body systems slow. Signs of pain or a full bladder have causes the nurse can treat and are not normal parts of dying."
+            },
+            {
+              "id": "F",
+              "text": "Little interest in food or fluids",
+              "correct": true,
+              "rationale": "Mottling, changing breathing patterns, terminal secretions and declining intake are expected as circulation and body systems slow. Signs of pain or a full bladder have causes the nurse can treat and are not normal parts of dying."
+            }
+          ],
+          "answer": [
+            "A",
+            "D",
+            "E",
+            "F"
+          ],
+          "takeaway": "Expected changes are explained; treatable distress is treated.",
+          "strategy": "Look for a cause behind the behavior."
+        },
+        {
+          "id": "eol-h4",
+          "topic": "Palliative care and hospice",
+          "stem": "A hospice nurse has four patients. Which patient should the nurse see first?",
+          "objective": "Palliative care and hospice",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "A dying patient with loud, gurgling respirations whose family is sitting calmly at the bedside",
+              "correct": false,
+              "rationale": "Most dramatic finding Gurgling respirations sound alarming and draw students to this choice. Terminal secretions are expected, the patient is usually unaware of them, and the family is calm."
+            },
+            {
+              "id": "B",
+              "text": "A family member asking for information about funeral homes",
+              "correct": false,
+              "rationale": "Correct but premature Practical planning matters to the family. It can wait without anyone suffering."
+            },
+            {
+              "id": "C",
+              "text": "A spouse who wants to talk about the patient's death last week",
+              "correct": false,
+              "rationale": "Correct but premature Bereavement support is part of hospice care. A spouse who wants to talk is not in acute distress, and the visit can follow."
+            },
+            {
+              "id": "D",
+              "text": "A patient rating pain 9 out of 10 who is grimacing despite the scheduled dose",
+              "correct": true,
+              "rationale": "Uncontrolled pain is an unmet need causing active suffering and is the priority in hospice. Expected changes such as terminal secretions, planning questions and bereavement conversations are addressed after the suffering is relieved."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "In hospice, uncontrolled symptoms come first.",
+          "strategy": "Choose suffering over the dramatic but expected."
+        },
+        {
+          "id": "eol-h5",
+          "topic": "Advance directives, DNR and POLST",
+          "stem": "A patient has a DNR order and is admitted with pneumonia. The patient wants full treatment short of resuscitation. Classify each nursing action.",
+          "objective": "Advance directives, DNR and POLST",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "matrix",
+          "columns": [
+            "Indicated",
+            "Contraindicated"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Hold meals because the patient has a DNR order",
+              "answer": "Contraindicated",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Notify the provider of a new drop in blood pressure",
+              "answer": "Indicated",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Give the ordered IV antibiotics",
+              "answer": "Indicated",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Give oxygen for shortness of breath",
+              "answer": "Indicated",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Start CPR if the patient becomes pulseless",
+              "answer": "Contraindicated",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Contraindicated",
+            "r2": "Indicated",
+            "r3": "Indicated",
+            "r4": "Indicated",
+            "r5": "Contraindicated"
+          },
+          "takeaway": "A DNR order applies only after cardiopulmonary arrest. Before that, the patient receives every treatment that matches the goals of care, including oxygen, antibiotics, nutrition and prompt reporting of changes. CPR is withheld only if the heart or breathing stops. DNR means do not resuscitate, not do not treat.",
+          "strategy": "Ask whether the patient has arrested."
+        },
+        {
+          "id": "eol-u01",
+          "topic": "Care during dying and after death",
+          "stem": "A patient with end stage heart failure is in home hospice. The adult child is the main caregiver. During a home visit, the nurse notes the findings listed. Classify each finding.",
+          "objective": "Care during dying and after death",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "eolu",
+          "caseStep": 1,
+          "caseTitle": "Last days at home",
+          "cjmmStep": "recognize cues",
+          "scenario": "Home visit findings.",
+          "type": "matrix",
+          "columns": [
+            "Expected near death",
+            "Needs intervention"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Cool, mottled feet",
+              "answer": "Expected near death",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Gasping, frightened and saying \"I can't breathe\"",
+              "answer": "Needs intervention",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Sleeping most of the day",
+              "answer": "Expected near death",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Drinking only sips of water",
+              "answer": "Expected near death",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Lips dry and cracked",
+              "answer": "Needs intervention",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Gurgling sounds the patient does not seem aware of",
+              "answer": "Expected near death",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Expected near death",
+            "r2": "Needs intervention",
+            "r3": "Expected near death",
+            "r4": "Expected near death",
+            "r5": "Needs intervention",
+            "r6": "Expected near death"
+          },
+          "takeaway": "Mottling, increased sleep, decreased intake and terminal secretions are expected as the body slows. Air hunger with fear is a distressing symptom that hospice treats, and dry, cracked lips need mouth care. Expected changes are explained; distress is treated.",
+          "strategy": "Ask whether the patient is suffering."
+        },
+        {
+          "id": "eol-u02",
+          "topic": "Care during dying and after death",
+          "stem": "A patient with end stage heart failure is in home hospice. The adult child is the main caregiver. The patient is gasping and frightened, saying \"I can't breathe.\" Complete the statement.",
+          "objective": "Care during dying and after death",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "eolu",
+          "caseStep": 2,
+          "caseTitle": "Last days at home",
+          "cjmmStep": "analyze cues",
+          "scenario": "Air hunger with fear.",
+          "type": "cloze",
+          "sentence": "The patient's distress is most likely caused by [[1]]. The fear makes the breathing [[2]], and the hospice goal is to [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "fluid backing up into the lungs from the failing heart",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "an allergic reaction to medication",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "a new blood clot in the leg",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "slower and deeper",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "no different",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "faster and less effective",
+                  "correct": true,
+                  "rationale": ""
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "normalize the oxygen saturation",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "relieve the sensation of breathlessness",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "prepare the patient for transfer to the hospital",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "C",
+            "3": "B"
+          },
+          "takeaway": "In end stage heart failure, the failing left ventricle lets fluid back up into the lungs. Breathlessness causes fear, and fear drives faster, shallower breathing, which worsens the sensation. In hospice, the goal is comfort: relieving the feeling of breathlessness rather than chasing a number. Hospice treats the sensation, not the saturation.",
+          "strategy": "Name the goal before choosing the action."
+        },
+        {
+          "id": "eol-u03",
+          "topic": "Palliative care and hospice",
+          "stem": "A patient with end stage heart failure is in home hospice. The adult child is the main caregiver. The patient is gasping and frightened, the adult child is tearful, and the patient's mouth is dry. Which need is the nurse's priority?",
+          "objective": "Palliative care and hospice",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "eolu",
+          "caseStep": 3,
+          "caseTitle": "Last days at home",
+          "cjmmStep": "prioritize hypotheses",
+          "scenario": "Patient gasping; caregiver tearful.",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Teaching the caregiver about the signs of approaching death",
+              "correct": false,
+              "rationale": "Correct but premature Teaching prepares the family and is part of the plan. It cannot come before relieving the patient's acute distress."
+            },
+            {
+              "id": "B",
+              "text": "Relief of breathlessness",
+              "correct": true,
+              "rationale": "Air hunger is one of the most distressing symptoms at the end of life and is a hospice priority. Once it is relieved, the nurse supports the caregiver, gives mouth care and teaches about what to expect."
+            },
+            {
+              "id": "C",
+              "text": "Support for the tearful caregiver",
+              "correct": false,
+              "rationale": "Kind but non therapeutic The caregiver's distress is real and deserves attention. The patient's air hunger is causing active suffering now, and relieving it also eases the caregiver."
+            },
+            {
+              "id": "D",
+              "text": "Mouth care for the dry lips",
+              "correct": false,
+              "rationale": "Correct but premature Mouth care is needed and improves comfort. It does not address the symptom causing fear."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Relieve the worst symptom first.",
+          "strategy": "Comfort priorities still follow suffering."
+        },
+        {
+          "id": "eol-u04",
+          "topic": "Palliative care and hospice",
+          "stem": "A patient with end stage heart failure is in home hospice. The adult child is the main caregiver. The patient has air hunger. Select all of the comfort measures the nurse should use or teach.",
+          "objective": "Palliative care and hospice",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "eolu",
+          "caseStep": 4,
+          "caseTitle": "Last days at home",
+          "cjmmStep": "generate solutions",
+          "scenario": "Comfort plan for air hunger.",
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the prescribed low dose morphine",
+              "correct": true,
+              "rationale": "Positioning upright eases breathing, a fan moving air across the face reduces the sensation of breathlessness, low dose morphine relieves air hunger, and a calm presence lowers fear that drives rapid breathing."
+            },
+            {
+              "id": "B",
+              "text": "Suction deeply every hour to clear the airway",
+              "correct": false,
+              "rationale": "Near miss concept Suctioning seems to fit noisy or difficult breathing. Deep suctioning is uncomfortable, stimulates more secretions and does not treat air hunger from heart failure."
+            },
+            {
+              "id": "C",
+              "text": "Raise the head of the bed",
+              "correct": true,
+              "rationale": "Positioning upright eases breathing, a fan moving air across the face reduces the sensation of breathlessness, low dose morphine relieves air hunger, and a calm presence lowers fear that drives rapid breathing."
+            },
+            {
+              "id": "D",
+              "text": "Start an IV fluid bolus to support the blood pressure",
+              "correct": false,
+              "rationale": "Near miss concept Fluids support blood pressure in other settings. In heart failure they add to the fluid in the lungs and worsen breathlessness, and they do not match the hospice goal."
+            },
+            {
+              "id": "E",
+              "text": "Direct a fan gently toward the face",
+              "correct": true,
+              "rationale": "Positioning upright eases breathing, a fan moving air across the face reduces the sensation of breathlessness, low dose morphine relieves air hunger, and a calm presence lowers fear that drives rapid breathing."
+            },
+            {
+              "id": "F",
+              "text": "Stay calm and speak slowly to the patient",
+              "correct": true,
+              "rationale": "Positioning upright eases breathing, a fan moving air across the face reduces the sensation of breathlessness, low dose morphine relieves air hunger, and a calm presence lowers fear that drives rapid breathing."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          "takeaway": "Air hunger: upright, fan, morphine, calm.",
+          "strategy": "Pick measures that ease the sensation."
+        },
+        {
+          "id": "eol-u05",
+          "topic": "Care during dying and after death",
+          "stem": "A patient with end stage heart failure is in home hospice. The adult child is the main caregiver. Two days later, the adult child calls at 3 AM: \"I think my parent just died. Should I call 911?\" What should the nurse say?",
+          "objective": "Care during dying and after death",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "eolu",
+          "caseStep": 5,
+          "caseTitle": "Last days at home",
+          "cjmmStep": "take action",
+          "scenario": "Call at 3 AM.",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "\"Call the funeral home now so they can come right away.\"",
+              "correct": false,
+              "rationale": "Correct but premature The funeral home will be called, but not first. The hospice nurse comes to confirm the death and support the family, and the family may want time with the body."
+            },
+            {
+              "id": "B",
+              "text": "\"Try CPR while I stay on the phone with you.\"",
+              "correct": false,
+              "rationale": "Near miss concept CPR conflicts with the hospice plan and the patient's wishes. It would cause distress without benefit."
+            },
+            {
+              "id": "C",
+              "text": "\"No need for 911. I'll come now; take time with your parent.\"",
+              "correct": true,
+              "rationale": "In an expected death at home under hospice, the family calls the hospice, not 911. The hospice nurse comes to confirm the death, supports the family, notifies the provider and helps with the funeral home, and the family may take as much time as they need."
+            },
+            {
+              "id": "D",
+              "text": "\"Yes, call 911 right away so the paramedics can confirm the death.\"",
+              "correct": false,
+              "rationale": "Institution as rationale Calling 911 is the usual response to a death at home, which makes this tempting. In an expected hospice death, 911 can bring resuscitation attempts and police involvement the patient did not want; the hospice is called instead."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Expected home hospice death: call hospice, not 911.",
+          "strategy": "Match the response to the plan already in place."
+        },
+        {
+          "id": "eol-u06",
+          "topic": "Grief responses and assessment",
+          "stem": "A patient with end stage heart failure is in home hospice. The adult child is the main caregiver. Three weeks after the death, the hospice nurse makes a bereavement call to the adult child. Classify each finding.",
+          "objective": "Grief responses and assessment",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "eolu",
+          "caseStep": 6,
+          "caseTitle": "Last days at home",
+          "cjmmStep": "evaluate outcomes",
+          "scenario": "Bereavement call at three weeks.",
+          "type": "matrix",
+          "columns": [
+            "Expected grief",
+            "Needs further assessment"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Cries when looking at photos",
+              "answer": "Expected grief",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Says \"I keep thinking I should have done more\"",
+              "answer": "Expected grief",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Has not eaten a full meal in two weeks and lost 4.5 kg",
+              "answer": "Needs further assessment",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Says \"I don't see the point in going on\"",
+              "answer": "Needs further assessment",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Returned to work part time",
+              "answer": "Expected grief",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Dreams about the parent",
+              "answer": "Expected grief",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Expected grief",
+            "r2": "Expected grief",
+            "r3": "Needs further assessment",
+            "r4": "Needs further assessment",
+            "r5": "Expected grief",
+            "r6": "Expected grief"
+          },
+          "takeaway": "Crying, guilt, dreams and a gradual return to routines are normal grief. Significant weight loss from not eating and a statement of hopelessness suggest depression or suicide risk, and the nurse asks directly about thoughts of self harm and refers. Grief is expected; hopelessness is assessed.",
+          "strategy": "Ask whether the finding threatens safety or health."
         }
       ]
     },
@@ -3521,6 +3955,48 @@
           "answer": "B",
           "takeaway": "Metastasis changes M. Grading and staging answer two different questions.",
           "strategy": "If an option confuses grade with stage, or primary with secondary, it is testing whether you can keep those pairs apart."
+        },
+        {
+          "id": "ig18-h01",
+          "topic": "Differentiate tumor grade from cancer stage",
+          "stem": "Patient A has a grade 1, stage IV tumor. Patient B has a grade 3, stage I tumor. Which statement is most accurate?",
+          "objective": "Differentiate tumor grade from cancer stage",
+          "tags": [
+            "Concepts",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Patient B's cancer is the more advanced one because poorly differentiated cells have already spread",
+              "correct": false,
+              "rationale": "Label instead of mechanism Poorly differentiated cells do tend to grow faster, which makes this tempting. Grade describes how the cells look, not how far they have gone; stage I means the cancer is still localized."
+            },
+            {
+              "id": "B",
+              "text": "Both tumors are equally advanced because the numbers add to the same total",
+              "correct": false,
+              "rationale": "Near miss concept Grade and stage are separate scales. Adding them has no meaning."
+            },
+            {
+              "id": "C",
+              "text": "Patient A's tumor is more aggressive because stage IV is the highest number",
+              "correct": false,
+              "rationale": "Near miss concept Stage IV means distant spread, not aggressive cells. Aggressiveness of the cells is what the grade describes, and grade 1 is the least aggressive."
+            },
+            {
+              "id": "D",
+              "text": "Patient A's cancer has spread further even though its cells look more like normal tissue",
+              "correct": true,
+              "rationale": "Grade describes how abnormal the cells look under a microscope: grade 1 cells resemble normal tissue, grade 3 cells are poorly differentiated. Stage describes how far the cancer has spread: stage IV is distant metastasis. A well differentiated tumor can still be widely spread."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Grade is the cells. Stage is the spread.",
+          "strategy": "Assign each number to its own scale."
         },
         {
           "id": "ig18-m01",
@@ -6721,132 +7197,6 @@
           "strategy": "Every wrong option buys time, and this is the patient with the least of it."
         },
         {
-          "id": "ig18-h01",
-          "topic": "Differentiate tumor grade from cancer stage",
-          "stem": "Patient A has a grade 1, stage IV tumor. Patient B has a grade 3, stage I tumor. Which statement is most accurate?",
-          "objective": "Differentiate tumor grade from cancer stage",
-          "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true,
-          "difficulty": "difficult",
-          "type": "multiple_choice",
-          "options": [
-            {
-              "id": "A",
-              "text": "Patient B's cancer is the more advanced one because poorly differentiated cells have already spread",
-              "correct": false,
-              "rationale": "Label instead of mechanism Grade describes the cells, not how far the cancer has spread."
-            },
-            {
-              "id": "B",
-              "text": "Both tumors are equally advanced because the numbers add to the same total",
-              "correct": false,
-              "rationale": "Near miss concept Grade and stage are separate scales and are never combined."
-            },
-            {
-              "id": "C",
-              "text": "Patient A's tumor is more aggressive because stage IV is the highest number",
-              "correct": false,
-              "rationale": "Near miss concept Stage IV means distant spread, not that the cells are more aggressive."
-            },
-            {
-              "id": "D",
-              "text": "Patient A's cancer has spread further even though its cells look more like normal tissue",
-              "correct": true,
-              "rationale": "Grade describes how abnormal the cells look under a microscope: grade 1 cells resemble normal tissue, grade 3 cells are poorly differentiated. Stage describes how far the cancer has spread: stage IV is distant metastasis. A well differentiated tumor can still be widely spread."
-            }
-          ],
-          "answer": "D",
-          "takeaway": "Grade is the cells. Stage is the spread.",
-          "strategy": "Assign each number to its own scale."
-        },
-        {
-          "id": "ig18-h02",
-          "topic": "Explain how cancer develops, invades nearby tissue, and spreads",
-          "stem": "A patient who has smoked for 20 years asks, \"Is there any point in quitting now? The damage is done.\" Which response reflects how cancer develops?",
-          "objective": "Explain how cancer develops, invades nearby tissue, and spreads",
-          "tags": [
-            "application",
-            "new"
-          ],
-          "new": true,
-          "difficulty": "difficult",
-          "type": "multiple_choice",
-          "options": [
-            {
-              "id": "A",
-              "text": "\"Quitting lowers lung cancer risk only if it happens before any cell damage starts.\"",
-              "correct": false,
-              "rationale": "Near miss concept Initiated cells still need promotion to become cancer, so quitting later still helps."
-            },
-            {
-              "id": "B",
-              "text": "\"Yes. Quitting reverses the damage to the cell DNA within a few years.\"",
-              "correct": false,
-              "rationale": "Absolute language Initiation damage to DNA is permanent; what changes is the promotion."
-            },
-            {
-              "id": "C",
-              "text": "\"Quitting mainly helps the heart; the cancer risk is already fixed.\"",
-              "correct": false,
-              "rationale": "Near miss concept Cancer risk is not fixed; it falls over time after quitting."
-            },
-            {
-              "id": "D",
-              "text": "\"Yes. Changes that have started can still be slowed when the promoter is removed.\"",
-              "correct": true,
-              "rationale": "Initiation is a permanent change to cell DNA. Promotion is the repeated exposure that pushes initiated cells to divide, and it can be slowed or stopped when the promoter, such as tobacco, is removed. That is why risk falls after quitting at any age."
-            }
-          ],
-          "answer": "D",
-          "takeaway": "Initiation is permanent; promotion is reversible.",
-          "strategy": "Ask which phase the action affects."
-        },
-        {
-          "id": "ig18-h03",
-          "topic": "Plan patient and caregiver teaching for symptom management, follow up, and survivorship",
-          "stem": "Six years after finishing chemotherapy that included doxorubicin, a patient reports new fatigue, ankle swelling and shortness of breath when climbing stairs. What should the nurse teach?",
-          "objective": "Plan patient and caregiver teaching for symptom management, follow up, and survivorship",
-          "tags": [
-            "application",
-            "new"
-          ],
-          "new": true,
-          "difficulty": "difficult",
-          "type": "multiple_choice",
-          "options": [
-            {
-              "id": "A",
-              "text": "These may be late effects of treatment on the heart and need evaluation",
-              "correct": true,
-              "rationale": "Survivorship care includes late effects that appear years after treatment. Doxorubicin can damage the heart muscle and cause heart failure long after the last dose. New fatigue, edema and exertional dyspnea need evaluation, and survivors are taught to report them."
-            },
-            {
-              "id": "B",
-              "text": "Fatigue after cancer is common and improves with rest and pacing",
-              "correct": false,
-              "rationale": "Expected finding offered as a problem Cancer related fatigue is real, but swelling and breathlessness point to the heart."
-            },
-            {
-              "id": "C",
-              "text": "These symptoms most likely mean the cancer has returned",
-              "correct": false,
-              "rationale": "Most dramatic finding Recurrence is the feared answer, but this pattern fits a known late effect."
-            },
-            {
-              "id": "D",
-              "text": "Ankle swelling is expected with aging and can be managed with leg elevation",
-              "correct": false,
-              "rationale": "Expected finding offered as a problem Treating the findings as normal aging misses heart failure."
-            }
-          ],
-          "answer": "A",
-          "takeaway": "Survivors: late effects can appear years later.",
-          "strategy": "Match the symptom cluster to the treatment history."
-        },
-        {
           "id": "ig18-h04",
           "topic": "Recognize oncologic emergencies and prioritize the initial nursing response",
           "stem": "A patient with breast cancer and bone metastasis reports back pain that is worse lying down, new constipation and difficulty starting urination. The calcium level is 10.2 mg/dL. Which emergency do these findings point to?",
@@ -6863,25 +7213,25 @@
               "id": "A",
               "text": "Tumor lysis syndrome",
               "correct": false,
-              "rationale": "Near miss concept Tumor lysis follows treatment and shows as electrolyte changes."
+              "rationale": "Near miss concept Tumor lysis follows the rapid death of cancer cells after treatment and shows up as electrolyte changes. Nothing in the stem describes recent treatment or abnormal potassium, phosphate or uric acid."
             },
             {
               "id": "B",
               "text": "Superior vena cava syndrome",
               "correct": false,
-              "rationale": "Near miss concept That causes facial and arm swelling, not back pain."
+              "rationale": "Near miss concept This is an emergency from compression of the superior vena cava, causing swelling of the face and arms and dilated chest veins. It does not cause back pain or bladder changes."
             },
             {
               "id": "C",
               "text": "Spinal cord compression",
               "correct": true,
-              "rationale": "Back pain worse lying down is often the first sign of spinal cord compression from vertebral metastasis. Bowel and bladder changes mean the cord is already affected. It is an emergency because delay leads to permanent paralysis; the provider is notified at once."
+              "rationale": "Back pain worse lying down is often the first sign of spinal cord compression from a vertebral metastasis. Bowel and bladder changes mean the cord is already affected. Delay leads to permanent paralysis, so the provider is notified at once."
             },
             {
               "id": "D",
               "text": "Hypercalcemia of malignancy",
               "correct": false,
-              "rationale": "Near miss concept Constipation fits hypercalcemia, but the calcium is normal and back pain with urinary retention points to the cord."
+              "rationale": "Near miss concept Bone metastasis and constipation make hypercalcemia an attractive choice. The calcium in the stem is normal, and back pain worse lying down with trouble starting urination points to the spinal cord, not to calcium."
             }
           ],
           "answer": "C",
@@ -6905,13 +7255,13 @@
               "id": "A",
               "text": "Wear only standard exam gloves since urine is not the drug",
               "correct": false,
-              "rationale": "Near miss concept Urine contains active drug and metabolites for about 48 hours."
+              "rationale": "Near miss concept It seems reasonable that urine is just waste. Many chemotherapy drugs and their active metabolites are excreted in urine for about 48 hours, so it is handled as hazardous."
             },
             {
               "id": "B",
               "text": "Keep visitors out of the room for 48 hours",
               "correct": false,
-              "rationale": "Near miss concept Chemotherapy does not make the patient a hazard to visitors."
+              "rationale": "Near miss concept Restricting visitors confuses chemotherapy with a sealed radiation implant. The drug in body fluids is a hazard to the people handling those fluids, not to visitors."
             },
             {
               "id": "C",
@@ -6923,7 +7273,7 @@
               "id": "D",
               "text": "Remove the gloves and discard them in a regular trash container",
               "correct": false,
-              "rationale": "Near miss concept Contaminated gloves go in a hazardous drug waste container."
+              "rationale": "Near miss concept Gloves used with contaminated fluids are themselves contaminated. They go in a labeled hazardous drug waste container."
             },
             {
               "id": "E",
@@ -6944,7 +7294,554 @@
             "F"
           ],
           "takeaway": "Chemotherapy body fluids: 48 hours of hazardous drug precautions.",
-          "strategy": "Separate fluid exposure from contact with the patient."
+          "strategy": "Separate exposure to fluids from contact with the patient."
+        },
+        {
+          "id": "ig18-h4",
+          "topic": "Identify common treatment side effects and appropriate nursing interventions",
+          "stem": "A patient receiving chemotherapy has an absolute neutrophil count of 700/mm³. Which task can the nurse delegate to assistive personnel?",
+          "objective": "Identify common treatment side effects and appropriate nursing interventions",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Inspect the mouth for new ulcers or white patches at each meal tray",
+              "correct": false,
+              "rationale": "Outside the nurse's scope Looking in the mouth seems like a basic task. Inspecting for mucositis or thrush is assessment, and interpreting what is found is within the nurse's scope."
+            },
+            {
+              "id": "B",
+              "text": "Evaluate whether the scheduled antiemetic relieved the nausea",
+              "correct": false,
+              "rationale": "Outside the nurse's scope Asking whether the nausea is better sounds like a simple question. Evaluating a medication's effect is a nursing judgment that guides the next dose."
+            },
+            {
+              "id": "C",
+              "text": "Measure vital signs and report a temperature of 38 °C or higher",
+              "correct": true,
+              "rationale": "Assistive personnel may measure and record vital signs when the nurse gives clear direction about what to report. Teaching, assessment and evaluation require nursing judgment. A clear reporting threshold such as 38 °C makes the delegated task safe for a neutropenic patient."
+            },
+            {
+              "id": "D",
+              "text": "Teach the patient how to recognize early signs of infection",
+              "correct": false,
+              "rationale": "Outside the nurse's scope Teaching seems simple, which is why it tempts. Patient teaching requires nursing knowledge and assessment of understanding, so it stays with the nurse."
+            }
+          ],
+          "answer": "C",
+          "takeaway": "Delegate measuring; keep teaching, assessing and evaluating.",
+          "strategy": "Ask whether the task needs judgment."
+        },
+        {
+          "id": "ig18-h5",
+          "topic": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "stem": "Two days after induction chemotherapy for leukemia, a patient's laboratory results are potassium 6.1 mEq/L, phosphorus 6.8 mg/dL, calcium 7.4 mg/dL and uric acid 11 mg/dL. Urine output has dropped to 20 mL/hr. Complete the statement.",
+          "objective": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "cloze",
+          "sentence": "These findings indicate [[1]], caused by [[2]]. The nurse's priority concern is [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "tumor lysis syndrome",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "hypercalcemia of malignancy",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "syndrome of inappropriate antidiuretic hormone",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "tumor invasion of the bone",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "rapid release of contents from dying cancer cells",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "fluid retention from the kidneys",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "hair loss from the chemotherapy",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "nausea from the chemotherapy",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "cardiac dysrhythmias and kidney injury",
+                  "correct": true,
+                  "rationale": ""
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "B",
+            "3": "C"
+          },
+          "takeaway": "When chemotherapy kills many cancer cells at once, they release potassium, phosphate and nucleic acids. Uric acid rises, phosphate binds calcium so calcium falls, and the kidneys are overwhelmed, so urine output drops. High potassium threatens the heart and crystals threaten the kidneys, which is why cardiac monitoring, IV hydration and urine output come first. Tumor lysis: three up, calcium down, kidneys and heart at risk.",
+          "strategy": "Tie each lab to the cells breaking open."
+        },
+        {
+          "id": "ig18-u01",
+          "topic": "Identify common treatment side effects and appropriate nursing interventions",
+          "stem": "A 64 year old patient with lung cancer received chemotherapy 10 days ago and comes to the emergency department with chills and feeling unwell. Classify each finding.",
+          "objective": "Identify common treatment side effects and appropriate nursing interventions",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig18u",
+          "caseStep": 1,
+          "caseTitle": "Fever at the nadir",
+          "cjmmStep": "recognize cues",
+          "scenario": "T 38.4 °C, ANC 400/mm³, HR 118, BP 98/58 (baseline 132/80).",
+          "type": "matrix",
+          "columns": [
+            "Requires immediate follow up",
+            "Not immediately concerning"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Temperature 38.4 °C",
+              "answer": "Requires immediate follow up",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Absolute neutrophil count 400/mm³",
+              "answer": "Requires immediate follow up",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Heart rate 118/min",
+              "answer": "Requires immediate follow up",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Thinning hair",
+              "answer": "Not immediately concerning",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Blood pressure 98/58, baseline 132/80",
+              "answer": "Requires immediate follow up",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Mild fatigue since treatment",
+              "answer": "Not immediately concerning",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Requires immediate follow up",
+            "r2": "Requires immediate follow up",
+            "r3": "Requires immediate follow up",
+            "r4": "Not immediately concerning",
+            "r5": "Requires immediate follow up",
+            "r6": "Not immediately concerning"
+          },
+          "takeaway": "Fever with a neutrophil count under 500 is febrile neutropenia, an oncologic emergency. Tachycardia and a blood pressure well below baseline suggest the infection is progressing toward sepsis. Hair loss and mild fatigue are expected effects of chemotherapy. Fever plus neutropenia plus falling pressure: emergency.",
+          "strategy": "Compare the blood pressure with the baseline, not with normal."
+        },
+        {
+          "id": "ig18-u02",
+          "topic": "Identify common treatment side effects and appropriate nursing interventions",
+          "stem": "A 64 year old patient with lung cancer received chemotherapy 10 days ago and comes to the emergency department with chills and feeling unwell. Temperature is 38.4 °C, the absolute neutrophil count is 400/mm³ and the blood pressure is 98/58. Complete the statement.",
+          "objective": "Identify common treatment side effects and appropriate nursing interventions",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig18u",
+          "caseStep": 2,
+          "caseTitle": "Fever at the nadir",
+          "cjmmStep": "analyze cues",
+          "scenario": "Day 10 after chemotherapy.",
+          "type": "cloze",
+          "sentence": "Day 10 after chemotherapy is usually the [[1]], when the neutrophil count is lowest. With so few neutrophils, the patient [[2]], so a fever must be treated as [[3]].",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "peak response",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "nadir",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "recovery phase",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "cannot mount the usual signs of infection",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "develops pus at infection sites quickly",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "has an overactive immune response",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "a viral illness that will pass",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "an expected effect of chemotherapy",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "a sign of serious infection until proven otherwise",
+                  "correct": true,
+                  "rationale": ""
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "B",
+            "2": "A",
+            "3": "C"
+          },
+          "takeaway": "The nadir, usually 7 to 14 days after chemotherapy, is when blood counts are lowest. Without neutrophils, redness, swelling and pus may not appear, so fever may be the only sign of infection. Febrile neutropenia is treated as a serious infection until proven otherwise. At the nadir, fever may be the only sign.",
+          "strategy": "Connect the timing to the count."
+        },
+        {
+          "id": "ig18-u03",
+          "topic": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "stem": "A 64 year old patient with lung cancer received chemotherapy 10 days ago and comes to the emergency department with chills and feeling unwell. Temperature is 38.4 °C, the absolute neutrophil count is 400/mm³, heart rate is 118/min and blood pressure is 98/58, down from a baseline of 132/80. Which problem is the priority?",
+          "objective": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig18u",
+          "caseStep": 3,
+          "caseTitle": "Fever at the nadir",
+          "cjmmStep": "prioritize hypotheses",
+          "scenario": "Same findings; provider at bedside.",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Pneumonia from the lung tumor blocking an airway",
+              "correct": false,
+              "rationale": "Label instead of mechanism Pneumonia may be the source, which is why this tempts. Naming a possible site misses the bigger problem: the whole body response to infection is threatening perfusion."
+            },
+            {
+              "id": "B",
+              "text": "Sepsis developing from infection during neutropenia",
+              "correct": true,
+              "rationale": "Fever with severe neutropenia, tachycardia and a blood pressure far below baseline are the cues of sepsis developing in a patient who cannot fight infection. That threatens perfusion now and outranks the other explanations."
+            },
+            {
+              "id": "C",
+              "text": "Dehydration from poor oral intake after chemotherapy",
+              "correct": false,
+              "rationale": "Near miss concept Dehydration can lower blood pressure and raise the heart rate, so it fits part of the picture. It does not explain the fever, and assuming it delays antibiotics in an infection that can kill within hours."
+            },
+            {
+              "id": "D",
+              "text": "Anxiety about the cancer causing tachycardia",
+              "correct": false,
+              "rationale": "Kind but non therapeutic Anxiety is understandable and can raise the heart rate. It does not cause fever or a 34 point drop in systolic pressure."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Neutropenic fever with falling pressure: sepsis.",
+          "strategy": "Name the problem that explains every cue."
+        },
+        {
+          "id": "ig18-u04",
+          "topic": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "stem": "A 64 year old patient with lung cancer received chemotherapy 10 days ago and comes to the emergency department with chills and feeling unwell. Febrile neutropenia with early sepsis is suspected. Select all of the actions the nurse should anticipate.",
+          "objective": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig18u",
+          "caseStep": 4,
+          "caseTitle": "Fever at the nadir",
+          "cjmmStep": "generate solutions",
+          "scenario": "Orders received.",
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Wait for culture results before starting antibiotics",
+              "correct": false,
+              "rationale": "Correct but premature Culture results guide the final antibiotic choice, which is why waiting sounds careful. They take days, and in neutropenic sepsis each hour without antibiotics raises the risk of death."
+            },
+            {
+              "id": "B",
+              "text": "Take the temperature rectally for accuracy",
+              "correct": false,
+              "rationale": "Near miss concept Rectal temperatures are accurate, but the rectal mucosa can tear and let bacteria into the blood. They are avoided in neutropenia."
+            },
+            {
+              "id": "C",
+              "text": "Draw blood cultures before the first antibiotic dose",
+              "correct": true,
+              "rationale": "Cultures are drawn first so the antibiotic does not hide the organism, but antibiotics are not delayed; broad spectrum coverage is started within the first hour. Fluids treat the falling pressure, and lactate measures how well the tissues are being perfused."
+            },
+            {
+              "id": "D",
+              "text": "Give broad spectrum IV antibiotics within the first hour",
+              "correct": true,
+              "rationale": "Cultures are drawn first so the antibiotic does not hide the organism, but antibiotics are not delayed; broad spectrum coverage is started within the first hour. Fluids treat the falling pressure, and lactate measures how well the tissues are being perfused."
+            },
+            {
+              "id": "E",
+              "text": "Give an IV fluid bolus as ordered",
+              "correct": true,
+              "rationale": "Cultures are drawn first so the antibiotic does not hide the organism, but antibiotics are not delayed; broad spectrum coverage is started within the first hour. Fluids treat the falling pressure, and lactate measures how well the tissues are being perfused."
+            },
+            {
+              "id": "F",
+              "text": "Measure a serum lactate level",
+              "correct": true,
+              "rationale": "Cultures are drawn first so the antibiotic does not hide the organism, but antibiotics are not delayed; broad spectrum coverage is started within the first hour. Fluids treat the falling pressure, and lactate measures how well the tissues are being perfused."
+            }
+          ],
+          "answer": [
+            "C",
+            "D",
+            "E",
+            "F"
+          ],
+          "takeaway": "Cultures, then antibiotics within the hour, fluids, lactate.",
+          "strategy": "Never let a lab result delay the antibiotic."
+        },
+        {
+          "id": "ig18-u05",
+          "topic": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "stem": "A 64 year old patient with lung cancer received chemotherapy 10 days ago and comes to the emergency department with chills and feeling unwell. Febrile neutropenia with early sepsis is suspected, and the orders are written. Place the nurse's actions in order.",
+          "objective": "Recognize oncologic emergencies and prioritize the initial nursing response",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig18u",
+          "caseStep": 5,
+          "caseTitle": "Fever at the nadir",
+          "cjmmStep": "take action",
+          "scenario": "Cultures, antibiotics and fluids ordered.",
+          "type": "ordered_response",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give the first dose of broad spectrum IV antibiotic",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "B",
+              "text": "Draw two sets of blood cultures",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "C",
+              "text": "Place the patient in a private room and perform hand hygiene",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "D",
+              "text": "Start the IV fluid bolus",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "E",
+              "text": "Reassess blood pressure, heart rate and mental status",
+              "correct": false,
+              "rationale": ""
+            }
+          ],
+          "answer": [
+            "C",
+            "B",
+            "A",
+            "D",
+            "E"
+          ],
+          "takeaway": "Protecting the patient from new organisms comes first and takes seconds. Cultures are drawn before the antibiotic so the organism can be identified, then the antibiotic is given without delay. The fluid bolus treats the low pressure, and reassessment shows whether the interventions are working. Protect, culture, antibiotic, fluids, reassess.",
+          "strategy": "Cultures go before the antibiotic, never after it."
+        },
+        {
+          "id": "ig18-u06",
+          "topic": "Identify common treatment side effects and appropriate nursing interventions",
+          "stem": "A 64 year old patient with lung cancer received chemotherapy 10 days ago and comes to the emergency department with chills and feeling unwell. Twenty four hours after antibiotics and fluids, the nurse evaluates the patient. Classify each finding.",
+          "objective": "Identify common treatment side effects and appropriate nursing interventions",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig18u",
+          "caseStep": 6,
+          "caseTitle": "Fever at the nadir",
+          "cjmmStep": "evaluate outcomes",
+          "scenario": "24 hours after antibiotics and fluids.",
+          "type": "matrix",
+          "columns": [
+            "Improving",
+            "Not improving"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Blood pressure 124/76",
+              "answer": "Improving",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Temperature 37.6 °C",
+              "answer": "Improving",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Urine output 15 mL/hr for 3 hours",
+              "answer": "Not improving",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Lactate lower than on admission",
+              "answer": "Improving",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "New confusion about the date",
+              "answer": "Not improving",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Heart rate 92/min",
+              "answer": "Improving",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Improving",
+            "r2": "Improving",
+            "r3": "Not improving",
+            "r4": "Improving",
+            "r5": "Not improving",
+            "r6": "Improving"
+          },
+          "takeaway": "Rising blood pressure, falling temperature, a lower lactate and a slower heart rate show the treatment is working. Low urine output means the kidneys are still poorly perfused, and new confusion suggests worsening brain perfusion; both are reported immediately. Evaluate perfusion: kidneys and brain count too.",
+          "strategy": "One improving vital sign does not cancel a failing organ."
         }
       ]
     },
@@ -9864,48 +10761,6 @@
           "strategy": "Pick measurable change in the patient."
         },
         {
-          "id": "cai-h01",
-          "topic": "Complementary, alternative and integrative care",
-          "stem": "On the advice of an Ayurvedic practitioner, a patient stops a prescribed antidepressant and uses herbs, yoga and dietary changes instead. Which description is most accurate?",
-          "objective": "Complementary, alternative and integrative care",
-          "tags": [
-            "Concepts",
-            "new"
-          ],
-          "new": true,
-          "difficulty": "difficult",
-          "type": "multiple_choice",
-          "options": [
-            {
-              "id": "A",
-              "text": "Complementary care using mind body therapies",
-              "correct": false,
-              "rationale": "Near miss concept Yoga is mind body, but nothing is being added alongside the conventional treatment."
-            },
-            {
-              "id": "B",
-              "text": "Integrative care using mind body therapies",
-              "correct": false,
-              "rationale": "Near miss concept Integrative care needs conventional treatment in the plan."
-            },
-            {
-              "id": "C",
-              "text": "Alternative care using a whole medical system",
-              "correct": true,
-              "rationale": "When a therapy replaces conventional treatment, it is alternative. Ayurveda is a whole medical system, and whole systems used in place of biomedicine are always alternative."
-            },
-            {
-              "id": "D",
-              "text": "Integrative care using a whole medical system",
-              "correct": false,
-              "rationale": "Near miss concept Integrative care coordinates both; here the prescribed drug was replaced."
-            }
-          ],
-          "answer": "C",
-          "takeaway": "Replaced, not added: alternative.",
-          "strategy": "Decide added or replaced before naming the category."
-        },
-        {
           "id": "cai-h02",
           "topic": "Herbs and natural products",
           "stem": "A patient with heart failure takes digoxin and furosemide and has started licorice root for indigestion. Which assessment is the priority?",
@@ -9922,25 +10777,25 @@
               "id": "A",
               "text": "Blood glucose",
               "correct": false,
-              "rationale": "Accurate but inert data Glucose is not affected in this combination."
+              "rationale": "Accurate but inert data Glucose is not affected by this combination."
             },
             {
               "id": "B",
               "text": "Liver enzymes",
               "correct": false,
-              "rationale": "Accurate but inert data Liver enzymes are not the concern with licorice."
+              "rationale": "Accurate but inert data Liver toxicity is a concern with herbs such as comfrey or chaparral, not licorice."
             },
             {
               "id": "C",
               "text": "Potassium level",
               "correct": true,
-              "rationale": "Licorice root lowers potassium, and furosemide does too. Low potassium makes digoxin more toxic, raising the risk of dysrhythmias. The nurse checks the potassium level and assesses for signs of digoxin toxicity."
+              "rationale": "Licorice root lowers potassium, and furosemide does too. Low potassium increases the effect of digoxin and the risk of dysrhythmias. The nurse checks potassium and assesses for signs of digoxin toxicity."
             },
             {
               "id": "D",
               "text": "Blood pressure",
               "correct": false,
-              "rationale": "Near miss concept Licorice interacts with antihypertensives, but the danger with digoxin is potassium."
+              "rationale": "Near miss concept Licorice does interact with blood pressure drugs, so this option is defensible. The deadlier risk here is low potassium, which makes digoxin toxic."
             }
           ],
           "answer": "C",
@@ -9964,19 +10819,19 @@
               "id": "A",
               "text": "\"Meditation can reduce the need for antianxiety drugs, so that is reasonable\"",
               "correct": false,
-              "rationale": "Near miss concept The dose may come down, but stopping a benzodiazepine abruptly can cause withdrawal."
+              "rationale": "Near miss concept Prolonged meditation can reduce the need for antianxiety drugs, so this sounds evidence based. The provider adjusts doses, and stopping a benzodiazepine abruptly risks withdrawal and seizures."
             },
             {
               "id": "B",
               "text": "\"Keep meditating, and call if your anxiety comes back\"",
               "correct": false,
-              "rationale": "Correct but premature It ignores the withdrawal risk of stopping suddenly."
+              "rationale": "Correct but premature It supports the meditation, which is good. It ignores the withdrawal risk of the sudden stop."
             },
             {
               "id": "C",
               "text": "\"Stop meditating until your provider reviews your medications\"",
               "correct": false,
-              "rationale": "Near miss concept Meditation is helping and does not need to stop."
+              "rationale": "Near miss concept Meditation is helping and is not the problem. Stopping it removes the benefit without addressing the danger."
             },
             {
               "id": "D",
@@ -9990,51 +10845,68 @@
           "strategy": "Keep the benefit and remove the danger."
         },
         {
-          "id": "cai-h04",
-          "topic": "Traditional and energy therapies",
-          "stem": "A patient with a history of assault asks a nurse certified in therapeutic touch for a session to ease chronic pain. What should the nurse do?",
-          "objective": "Traditional and energy therapies",
+          "id": "cai-h3",
+          "topic": "Nursing process and teaching",
+          "stem": "A patient scheduled for surgery next week lists the products below. Select all that the nurse should report to the surgical team.",
+          "objective": "Nursing process and teaching",
           "tags": [
             "application",
             "new"
           ],
           "new": true,
           "difficulty": "difficult",
-          "type": "multiple_choice",
+          "type": "sata",
           "options": [
             {
               "id": "A",
-              "text": "Explain what the session involves, get consent and keep it brief and gentle",
+              "text": "Garlic supplements daily",
               "correct": true,
-              "rationale": "Patients with trauma may misinterpret touch and feel threatened, so the nurse assesses first. When the patient understands and requests it, the nurse explains what will happen, gets consent, keeps the session gentle and time limited and stops if distress appears."
+              "rationale": "Ginkgo and garlic impair platelets and increase surgical bleeding. Valerian adds to the sedation of anesthesia and opioids. St. John's wort speeds the breakdown of many drugs, including some anesthetic agents. All four are reported so the team can plan."
             },
             {
               "id": "B",
-              "text": "Decline the request because touch therapies are contraindicated for patients after trauma",
+              "text": "Probiotic capsules daily",
               "correct": false,
-              "rationale": "Absolute language Trauma calls for caution, not automatic refusal of a requested therapy."
+              "rationale": "Accurate but inert data Probiotics are a natural product the nurse records. They do not affect bleeding, sedation or drug metabolism during surgery."
             },
             {
               "id": "C",
-              "text": "Offer guided imagery in place of touch and avoid discussing the request at all",
-              "correct": false,
-              "rationale": "Kind but non therapeutic Substituting without discussion overrides the patient's choice."
+              "text": "St. John's wort daily",
+              "correct": true,
+              "rationale": "Ginkgo and garlic impair platelets and increase surgical bleeding. Valerian adds to the sedation of anesthesia and opioids. St. John's wort speeds the breakdown of many drugs, including some anesthetic agents. All four are reported so the team can plan."
             },
             {
               "id": "D",
-              "text": "Provide the full session as requested because the patient chose the therapy freely",
+              "text": "Valerian at bedtime",
+              "correct": true,
+              "rationale": "Ginkgo and garlic impair platelets and increase surgical bleeding. Valerian adds to the sedation of anesthesia and opioids. St. John's wort speeds the breakdown of many drugs, including some anesthetic agents. All four are reported so the team can plan."
+            },
+            {
+              "id": "E",
+              "text": "Aloe vera gel on a healed scar",
               "correct": false,
-              "rationale": "Near miss concept The request does not remove the need to explain, consent and watch for distress."
+              "rationale": "Accurate but inert data Aloe vera does interact with some drugs when taken by mouth. Applied to the skin over a healed scar, it does not affect bleeding or anesthesia."
+            },
+            {
+              "id": "F",
+              "text": "Ginkgo capsules daily",
+              "correct": true,
+              "rationale": "Ginkgo and garlic impair platelets and increase surgical bleeding. Valerian adds to the sedation of anesthesia and opioids. St. John's wort speeds the breakdown of many drugs, including some anesthetic agents. All four are reported so the team can plan."
             }
           ],
-          "answer": "A",
-          "takeaway": "Trauma and touch: inform, consent, go gently.",
-          "strategy": "Respect the request while adding safety."
+          "answer": [
+            "A",
+            "C",
+            "D",
+            "F"
+          ],
+          "takeaway": "Before surgery: report the bleeders, the sedatives and St. John's wort.",
+          "strategy": "Ask what each product does during surgery."
         },
         {
-          "id": "cai-h05",
+          "id": "cai-h4",
           "topic": "Nursing process and teaching",
-          "stem": "During a preoperative assessment three days before surgery, a patient reports taking ginkgo and garlic capsules daily. What should the nurse do first?",
+          "stem": "A nurse is planning nonpharmacological comfort measures for a postoperative patient. Which task can the nurse delegate to assistive personnel?",
           "objective": "Nursing process and teaching",
           "tags": [
             "application",
@@ -10046,32 +10918,577 @@
           "options": [
             {
               "id": "A",
-              "text": "Document the supplements on the medication history",
-              "correct": false,
-              "rationale": "Documenting instead of acting Documenting is needed but does not get the bleeding risk addressed."
+              "text": "Play the patient's preferred calming music during the dressing change",
+              "correct": true,
+              "rationale": "Therapeutic music offered for comfort is a simple, standard task once the nurse has assessed the patient and identified the preferred music. Leading imagery, teaching and evaluating require nursing judgment."
             },
             {
               "id": "B",
-              "text": "Check the platelet count before the day of surgery",
+              "text": "Lead the patient through guided imagery for incision pain",
               "correct": false,
-              "rationale": "Correct but premature A normal platelet count does not rule out the antiplatelet effect."
+              "rationale": "Outside the nurse's scope Guided imagery seems simple to follow along with. Leading it requires assessing the patient and choosing an image that will not trigger distress, which is nursing work."
             },
             {
               "id": "C",
-              "text": "Report the supplements to the surgical provider",
-              "correct": true,
-              "rationale": "Ginkgo and garlic inhibit platelet function and increase bleeding during surgery. The nurse reports them to the surgical provider, who decides about stopping them or delaying surgery. A platelet count measures the number of platelets, not how well they work."
+              "text": "Teach the patient progressive muscle relaxation before the next dressing change",
+              "correct": false,
+              "rationale": "Outside the nurse's scope Teaching a technique requires checking understanding and adapting to the patient. It is not delegated."
             },
             {
               "id": "D",
-              "text": "Tell the patient to stop both supplements today",
+              "text": "Evaluate whether the relaxation exercises reduced the pain rating",
               "correct": false,
-              "rationale": "Outside the nurse's scope The surgical team decides whether to stop the supplements or change the plan."
+              "rationale": "Outside the nurse's scope Asking about the pain rating sounds like data collection. Evaluating the response to an intervention is a nursing judgment."
             }
           ],
-          "answer": "C",
-          "takeaway": "Bleeding herbs before surgery: tell the surgical team.",
-          "strategy": "Route the risk to the one who decides."
+          "answer": "A",
+          "takeaway": "Delegate the simple comfort task; keep teaching and evaluating.",
+          "strategy": "Ask whether the task needs judgment."
+        },
+        {
+          "id": "cai-h5",
+          "topic": "Herbs and natural products",
+          "stem": "A patient taking sertraline started St. John's wort a week ago. The patient is agitated and diaphoretic, with tremor, diarrhea, a temperature of 38.4 °C and a heart rate of 118/min. Complete the diagram: the condition most likely developing, two actions the nurse takes, and two parameters to monitor.",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "bowtie",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Give the next sertraline dose to prevent withdrawal",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "Hold the next doses of sertraline and St. John's wort and notify the provider",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "Assess and stay with the patient for safety",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "D",
+                  "text": "Encourage more St. John's wort to calm the agitation",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "E",
+                  "text": "Apply a heating pad for the abdominal cramping",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            "condition": {
+              "label": "Condition",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Serotonin syndrome",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "Generalized anxiety",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "Viral gastroenteritis",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "D",
+                  "text": "Alcohol withdrawal",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to monitor",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Hemoglobin",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "Serum albumin",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "Peak expiratory flow",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "D",
+                  "text": "Temperature",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "E",
+                  "text": "Heart rate",
+                  "correct": true,
+                  "rationale": ""
+                }
+              ]
+            }
+          },
+          "answer": {
+            "actions": [
+              "B",
+              "C"
+            ],
+            "condition": [
+              "A"
+            ],
+            "parameters": [
+              "D",
+              "E"
+            ]
+          },
+          "takeaway": "St. John's wort adds serotonin effects to sertraline. Agitation, tremor, sweating, diarrhea, fever and tachycardia are the pattern of serotonin syndrome, which can progress to severe hyperthermia. The nurse holds the serotonergic agents and notifies the provider, keeps the patient safe, and monitors temperature and heart rate. Anxiety and gastroenteritis explain only part of the picture. Antidepressant plus St. John's wort plus fever and tremor: serotonin syndrome.",
+          "strategy": "Explain every cue, not just the loudest."
+        },
+        {
+          "id": "cai-u01",
+          "topic": "Nursing process and teaching",
+          "stem": "A 70 year old patient with chronic low back pain takes hydrocodone and takes warfarin for atrial fibrillation. The patient wants to reduce the opioid and try complementary therapies. At the clinic visit, the nurse collects the data listed. Classify each finding.",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "caiu",
+          "caseStep": 1,
+          "caseTitle": "Back pain and the plan to cut opioids",
+          "cjmmStep": "recognize cues",
+          "scenario": "Ginger tea, garlic, acupuncture planned, INR 3.6, new bruises.",
+          "type": "matrix",
+          "columns": [
+            "Relevant to safety of the plan",
+            "Not relevant to safety of the plan"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Drinks ginger tea and takes garlic capsules daily",
+              "answer": "Relevant to safety of the plan",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Plans to start acupuncture next week",
+              "answer": "Relevant to safety of the plan",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "International normalized ratio 3.6, goal 2 to 3",
+              "answer": "Relevant to safety of the plan",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Enjoys gardening on weekends",
+              "answer": "Not relevant to safety of the plan",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "New bruises on both forearms",
+              "answer": "Relevant to safety of the plan",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Prefers morning appointments",
+              "answer": "Not relevant to safety of the plan",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Relevant to safety of the plan",
+            "r2": "Relevant to safety of the plan",
+            "r3": "Relevant to safety of the plan",
+            "r4": "Not relevant to safety of the plan",
+            "r5": "Relevant to safety of the plan",
+            "r6": "Not relevant to safety of the plan"
+          },
+          "takeaway": "Ginger and garlic add antiplatelet effects to warfarin, the international normalized ratio is above goal, new bruising suggests bleeding, and acupuncture needles in a patient with bleeding risk need provider involvement. Gardening and appointment preference do not affect the safety of the plan. Warfarin, herbs, needles, high INR, bruising: one safety story.",
+          "strategy": "Sort by what changes the risk."
+        },
+        {
+          "id": "cai-u02",
+          "topic": "Herbs and natural products",
+          "stem": "A 70 year old patient with chronic low back pain takes hydrocodone and takes warfarin for atrial fibrillation. The patient wants to reduce the opioid and try complementary therapies. The patient drinks ginger tea and takes garlic daily, the international normalized ratio is 3.6 with a goal of 2 to 3, and new bruises are present. Complete the statement.",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "caiu",
+          "caseStep": 2,
+          "caseTitle": "Back pain and the plan to cut opioids",
+          "cjmmStep": "analyze cues",
+          "scenario": "Same findings.",
+          "type": "cloze",
+          "sentence": "Ginger and garlic [[1]] the effect of warfarin, which explains the [[2]]. Starting acupuncture now would add a risk of [[3]] at the needle sites.",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "increase",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "decrease",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "do not change",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "chronic back pain",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "new bruising and high INR",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "request to reduce the opioid",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "nerve damage only",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "allergic reaction",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "bleeding",
+                  "correct": true,
+                  "rationale": ""
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "B",
+            "3": "C"
+          },
+          "takeaway": "Ginger and garlic inhibit platelets and add to warfarin, so the international normalized ratio rises and bruising appears. Acupuncture is contraindicated with bleeding disorders and needs caution with anticoagulants because of bleeding at needle sites. Herbs plus warfarin: high INR, bruises, needle bleeding risk.",
+          "strategy": "Link each cue to the same mechanism."
+        },
+        {
+          "id": "cai-u03",
+          "topic": "Herbs and natural products",
+          "stem": "A 70 year old patient with chronic low back pain takes hydrocodone and takes warfarin for atrial fibrillation. The patient wants to reduce the opioid and try complementary therapies. The patient drinks ginger tea and takes garlic daily, the INR is 3.6 with a goal of 2 to 3, and new bruises are present. Which problem is the priority?",
+          "objective": "Herbs and natural products",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "caiu",
+          "caseStep": 3,
+          "caseTitle": "Back pain and the plan to cut opioids",
+          "cjmmStep": "prioritize hypotheses",
+          "scenario": "INR 3.6, bruising, herbs.",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chronic pain that is limiting the patient's daily function",
+              "correct": false,
+              "rationale": "Correct action, wrong question Chronic pain is why the patient came, which makes this attractive. It is long standing; the bleeding risk is new, measurable and dangerous."
+            },
+            {
+              "id": "B",
+              "text": "Risk for opioid dependence",
+              "correct": false,
+              "rationale": "Correct but premature Reducing opioid use is the patient's goal and a valid concern. It is not urgent compared with an anticoagulant effect above range."
+            },
+            {
+              "id": "C",
+              "text": "Knowledge deficit about complementary therapies",
+              "correct": false,
+              "rationale": "Label instead of mechanism A knowledge gap contributes to the problem. Naming it misses the physical risk it has already created."
+            },
+            {
+              "id": "D",
+              "text": "Risk for bleeding from herb and anticoagulant interaction",
+              "correct": true,
+              "rationale": "An international normalized ratio above goal with new bruising in a patient adding antiplatelet herbs to warfarin is an actual, measurable bleeding risk. It outranks chronic pain, future dependence and teaching needs, which are addressed once the bleeding risk is controlled."
+            }
+          ],
+          "answer": "D",
+          "takeaway": "Measurable bleeding risk outranks chronic problems.",
+          "strategy": "Choose the physiological risk over the long term goal."
+        },
+        {
+          "id": "cai-u04",
+          "topic": "Nursing process and teaching",
+          "stem": "A 70 year old patient with chronic low back pain takes hydrocodone and takes warfarin for atrial fibrillation. The patient wants to reduce the opioid and try complementary therapies. The bleeding risk is reported, and the plan now turns to the patient's goal of reducing the opioid. Select all of the appropriate interventions.",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "caiu",
+          "caseStep": 4,
+          "caseTitle": "Back pain and the plan to cut opioids",
+          "cjmmStep": "generate solutions",
+          "scenario": "Planning for opioid reduction.",
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Teach the patient to tell every provider about all herbs and supplements",
+              "correct": true,
+              "rationale": "Breathing and imagery are nursing accessible therapies that ease pain without bleeding risk. Acupuncture can help back pain, but with an anticoagulant the provider is involved first. Tai chi improves balance and reduces falls, which matters for a patient who bleeds easily. Full disclosure of supplements prevents future interactions."
+            },
+            {
+              "id": "B",
+              "text": "Replace the hydrocodone with ginger capsules at the same times",
+              "correct": false,
+              "rationale": "Near miss concept This substitutes an herb for a prescribed drug, which is alternative, not complementary, care. It also adds to the bleeding risk that is already present."
+            },
+            {
+              "id": "C",
+              "text": "Teach slow abdominal breathing and guided imagery",
+              "correct": true,
+              "rationale": "Breathing and imagery are nursing accessible therapies that ease pain without bleeding risk. Acupuncture can help back pain, but with an anticoagulant the provider is involved first. Tai chi improves balance and reduces falls, which matters for a patient who bleeds easily. Full disclosure of supplements prevents future interactions."
+            },
+            {
+              "id": "D",
+              "text": "Involve the provider before the patient starts acupuncture",
+              "correct": true,
+              "rationale": "Breathing and imagery are nursing accessible therapies that ease pain without bleeding risk. Acupuncture can help back pain, but with an anticoagulant the provider is involved first. Tai chi improves balance and reduces falls, which matters for a patient who bleeds easily. Full disclosure of supplements prevents future interactions."
+            },
+            {
+              "id": "E",
+              "text": "Advise stopping warfarin for a few days before each acupuncture visit",
+              "correct": false,
+              "rationale": "Outside the nurse's scope Holding an anticoagulant before a procedure is sometimes done, which is why this sounds plausible. Only the provider makes that decision, and stopping warfarin raises the risk of stroke with atrial fibrillation."
+            },
+            {
+              "id": "F",
+              "text": "Suggest a tai chi class to improve balance and reduce pain",
+              "correct": true,
+              "rationale": "Breathing and imagery are nursing accessible therapies that ease pain without bleeding risk. Acupuncture can help back pain, but with an anticoagulant the provider is involved first. Tai chi improves balance and reduces falls, which matters for a patient who bleeds easily. Full disclosure of supplements prevents future interactions."
+            }
+          ],
+          "answer": [
+            "A",
+            "C",
+            "D",
+            "F"
+          ],
+          "takeaway": "Add safe therapies; route the risky ones through the provider.",
+          "strategy": "Complementary means added, not swapped."
+        },
+        {
+          "id": "cai-u05",
+          "topic": "Mind body techniques",
+          "stem": "A 70 year old patient with chronic low back pain takes hydrocodone and takes warfarin for atrial fibrillation. The patient wants to reduce the opioid and try complementary therapies. The nurse guides the patient through a first guided imagery session for back pain. Place the steps in order.",
+          "objective": "Mind body techniques",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "caiu",
+          "caseStep": 5,
+          "caseTitle": "Back pain and the plan to cut opioids",
+          "cjmmStep": "take action",
+          "scenario": "First guided imagery session.",
+          "type": "ordered_response",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ask the patient to notice sounds, smells and temperature in the scene",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "B",
+              "text": "Help the patient into a comfortable position in a quiet room",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "C",
+              "text": "Have the patient visualize a calm place the patient chose",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "D",
+              "text": "Begin slow abdominal breathing and focus on its rhythm",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "E",
+              "text": "Picture warmth entering with each breath and tension leaving with each exhalation",
+              "correct": false,
+              "rationale": ""
+            }
+          ],
+          "answer": [
+            "B",
+            "D",
+            "C",
+            "A",
+            "E"
+          ],
+          "takeaway": "Imagery begins in a quiet, comfortable setting with slow abdominal breathing. The patient then builds a self chosen image, adds the other senses and finally links warmth and release of tension to the breath. A patient chosen image avoids evoking negative memories. Settle, breathe, picture, add senses, release.",
+          "strategy": "Breathing comes before the image."
+        },
+        {
+          "id": "cai-u06",
+          "topic": "Nursing process and teaching",
+          "stem": "A 70 year old patient with chronic low back pain takes hydrocodone and takes warfarin for atrial fibrillation. The patient wants to reduce the opioid and try complementary therapies. Four weeks later, the nurse evaluates the plan. Classify each finding.",
+          "objective": "Nursing process and teaching",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "caiu",
+          "caseStep": 6,
+          "caseTitle": "Back pain and the plan to cut opioids",
+          "cjmmStep": "evaluate outcomes",
+          "scenario": "Four weeks later.",
+          "type": "matrix",
+          "columns": [
+            "Effective",
+            "Not effective"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Pain rating fell from 7 to 4 out of 10",
+              "answer": "Effective",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Uses imagery twice a day as practiced",
+              "answer": "Effective",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "International normalized ratio 2.5",
+              "answer": "Effective",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Started turmeric capsules without telling the provider",
+              "answer": "Not effective",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Takes fewer hydrocodone doses each week",
+              "answer": "Effective",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "New dark bruises on the shins",
+              "answer": "Not effective",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Effective",
+            "r2": "Effective",
+            "r3": "Effective",
+            "r4": "Not effective",
+            "r5": "Effective",
+            "r6": "Not effective"
+          },
+          "takeaway": "Lower pain, regular practice, fewer opioid doses and an international normalized ratio back in range show the plan is working. Starting a new supplement without disclosure means the teaching about supplements needs reinforcing, and new bruising needs assessment and reporting. Evaluate the pain, the practice and the safety teaching.",
+          "strategy": "One new supplement can undo a safe plan."
         }
       ]
     },
@@ -12740,10 +14157,10 @@
           "strategy": "Know which lab moves first: the reticulocyte count, then hemoglobin."
         },
         {
-          "id": "ig33-h01",
-          "topic": "Explain clot formation and breakdown mechanisms",
-          "stem": "On the second day after a long orthopedic surgery, a patient's D dimer comes back elevated. The patient is resting comfortably, and the nurse is asked what the result means. Which interpretation is most accurate?",
-          "objective": "Explain clot formation and breakdown mechanisms",
+          "id": "ig33-h03",
+          "topic": "Recognize carbon monoxide poisoning and nursing priorities",
+          "stem": "Three members of one household arrive in winter with headaches and nausea. One is confused, with an oxygen saturation of 99% on room air by pulse oximeter. What should the nurse do first for the confused patient?",
+          "objective": "Recognize carbon monoxide poisoning and nursing priorities",
           "tags": [
             "application",
             "new"
@@ -12754,32 +14171,32 @@
           "options": [
             {
               "id": "A",
-              "text": "The patient is deficient in clotting factors and may bleed",
+              "text": "Obtain a carboxyhemoglobin level to confirm exposure",
               "correct": false,
-              "rationale": "Near miss concept An elevated D dimer shows clotting and breakdown are occurring, not a factor deficiency."
+              "rationale": "Correct but premature This is tempting because confirming a diagnosis before treating usually feels safer. Here the level takes time to result, and every minute of exposure keeps oxygen off hemoglobin; treatment starts on suspicion and the level is drawn alongside it."
             },
             {
               "id": "B",
-              "text": "The platelets are being destroyed faster than they are made",
+              "text": "Recheck the oxygen saturation on a different finger",
               "correct": false,
-              "rationale": "Near miss concept Platelet destruction is measured by the platelet count, not the D dimer."
+              "rationale": "Accurate but inert data A standard pulse oximeter cannot tell carboxyhemoglobin from oxygenated hemoglobin, so every finger will read falsely normal. Rechecking treats a misleading number as if it were the problem."
             },
             {
               "id": "C",
-              "text": "A clot has formed somewhere and is being broken down",
-              "correct": true,
-              "rationale": "D dimer is a fragment released when fibrin is broken down during fibrinolysis. An elevated level shows that a clot formed and is being dissolved somewhere, but it does not say where. After surgery it is often elevated, so it raises suspicion for a deep vein thrombosis or pulmonary embolism without proving either; imaging confirms."
+              "text": "Perform a full neurological assessment and document it",
+              "correct": false,
+              "rationale": "Documenting instead of acting Confusion is a cue that the brain is hypoxic. A full assessment and charting delay the one intervention that reverses the cause."
             },
             {
               "id": "D",
-              "text": "The patient has a pulmonary embolism that needs treatment",
-              "correct": false,
-              "rationale": "Label instead of mechanism A D dimer is not specific; a pulmonary embolism is one possible source, not the meaning of the result."
+              "text": "Apply 100% oxygen by nonrebreather mask",
+              "correct": true,
+              "rationale": "Carbon monoxide binds hemoglobin far more tightly than oxygen, and a standard pulse oximeter reads carboxyhemoglobin as if it were oxygenated, so the saturation is falsely normal. A household cluster in winter with headache, nausea and confusion is carbon monoxide until proven otherwise. High flow 100% oxygen speeds removal of carbon monoxide from hemoglobin and is started before any confirming level returns."
             }
           ],
-          "answer": "C",
-          "takeaway": "High D dimer: a clot is being broken down somewhere.",
-          "strategy": "Separate what a lab measures from the diagnosis it raises."
+          "answer": "D",
+          "takeaway": "Suspected carbon monoxide: 100% oxygen now; the oximeter lies.",
+          "strategy": "Treat on suspicion when the test is slow and the monitor is unreliable."
         },
         {
           "id": "ig33-h02",
@@ -12798,25 +14215,25 @@
               "id": "A",
               "text": "Portal hypertension forces fluid and blood out of vessels",
               "correct": false,
-              "rationale": "Near miss concept Portal hypertension causes ascites and varices, but it does not explain gum oozing with a normal platelet count."
+              "rationale": "Near miss concept Portal hypertension is real in cirrhosis and causes ascites and varices. It does not explain oozing gums in a patient with a normal platelet count, and it is a pressure problem, not a protein problem."
             },
             {
               "id": "B",
               "text": "A low red cell count lowers the plasma oncotic pressure",
               "correct": false,
-              "rationale": "Near miss concept Albumin, not red cells, holds fluid in the vessels."
+              "rationale": "Near miss concept Oncotic pressure comes from plasma proteins, mainly albumin, not from red cells. This option names the right mechanism but blames the wrong blood component."
             },
             {
               "id": "C",
               "text": "The liver makes both clotting factors and albumin",
               "correct": true,
-              "rationale": "Plasma proteins come from the liver. When the liver fails, clotting factor production falls, so the patient bleeds even with normal platelets, and albumin falls, so oncotic pressure drops and fluid leaks into tissues. One organ explains both findings."
+              "rationale": "Plasma proteins come from the liver. When the liver fails, clotting factor production falls, so the patient bleeds even with normal platelets, and albumin falls, so oncotic pressure drops and fluid leaks into the tissues. One organ explains both findings."
             },
             {
               "id": "D",
               "text": "Low platelets cause both bleeding and capillary leak",
               "correct": false,
-              "rationale": "Accurate but inert data The platelet count is normal, so platelets do not explain the bleeding."
+              "rationale": "Accurate but inert data Low platelets are the usual first thought for gum bleeding and bruising, but the stem gives a normal platelet count. That one value rules this option out."
             }
           ],
           "answer": "C",
@@ -12824,51 +14241,9 @@
           "strategy": "Use the normal platelet count to rule out the obvious answer."
         },
         {
-          "id": "ig33-h03",
-          "topic": "Recognize carbon monoxide poisoning and nursing priorities",
-          "stem": "Three members of one household arrive in winter with headaches and nausea. One is confused, with an oxygen saturation of 99% on room air by pulse oximeter. What should the nurse do first for the confused patient?",
-          "objective": "Recognize carbon monoxide poisoning and nursing priorities",
-          "tags": [
-            "application",
-            "new"
-          ],
-          "new": true,
-          "difficulty": "difficult",
-          "type": "multiple_choice",
-          "options": [
-            {
-              "id": "A",
-              "text": "Obtain a carboxyhemoglobin level to confirm exposure",
-              "correct": false,
-              "rationale": "Correct but premature The level confirms the diagnosis, but treatment starts on suspicion."
-            },
-            {
-              "id": "B",
-              "text": "Recheck the oxygen saturation on a different finger",
-              "correct": false,
-              "rationale": "Accurate but inert data A pulse oximeter reads carboxyhemoglobin as oxygenated hemoglobin; another finger will read the same."
-            },
-            {
-              "id": "C",
-              "text": "Perform a full neurological assessment and document it",
-              "correct": false,
-              "rationale": "Documenting instead of acting Assessment and documentation delay the treatment that reverses the poisoning."
-            },
-            {
-              "id": "D",
-              "text": "Apply 100% oxygen by nonrebreather mask",
-              "correct": true,
-              "rationale": "Carbon monoxide binds hemoglobin far more tightly than oxygen, and a standard pulse oximeter cannot tell the two apart, so the saturation reads falsely normal. A household cluster with headache, nausea and confusion is carbon monoxide until proven otherwise. High flow 100% oxygen shortens the half life of carboxyhemoglobin and is started before the level returns."
-            }
-          ],
-          "answer": "D",
-          "takeaway": "Suspected carbon monoxide: 100% oxygen now; the oximeter lies.",
-          "strategy": "Treat on suspicion when the test is slow and the oximeter is unreliable."
-        },
-        {
-          "id": "ig33-h04",
+          "id": "ig33-h3",
           "topic": "Understand nursing care before and after bone marrow tests",
-          "stem": "Two hours after a posterior iliac crest bone marrow aspiration, a patient with a platelet count of 40,000/mm³ reports throbbing pain at the site. The dressing is dry, but the nurse feels a firm swelling beneath it. What should the nurse do first?",
+          "stem": "A patient with a platelet count of 40,000/mm³ returns from a posterior iliac crest bone marrow aspiration. Select all of the nursing actions that are appropriate.",
           "objective": "Understand nursing care before and after bone marrow tests",
           "tags": [
             "application",
@@ -12876,42 +14251,59 @@
           ],
           "new": true,
           "difficulty": "difficult",
-          "type": "multiple_choice",
+          "type": "sata",
           "options": [
             {
               "id": "A",
-              "text": "Give the prescribed acetaminophen for the procedure pain",
-              "correct": false,
-              "rationale": "Correct action, wrong question Treating the pain ignores the cause, a likely hematoma."
+              "text": "Offer acetaminophen for site discomfort",
+              "correct": true,
+              "rationale": "After the procedure, pressure is held until bleeding stops, the site is inspected and palpated for a hematoma, and discomfort is treated with acetaminophen rather than aspirin or nonsteroidal anti inflammatory drugs. A firm, increasingly painful swelling suggests bleeding into the tissue and is reported."
             },
             {
               "id": "B",
-              "text": "Apply ice and recheck the dressing again in one hour",
+              "text": "Accept a dry dressing as proof there is no bleeding",
               "correct": false,
-              "rationale": "Correct but premature Ice may help later, but waiting an hour allows bleeding to continue."
+              "rationale": "Expected finding offered as a problem A dry dressing is reassuring on most procedure sites. With low platelets, blood can collect under the skin as a hematoma while the dressing stays dry, so the nurse looks and feels beneath it."
             },
             {
               "id": "C",
-              "text": "Reinforce the dressing and help the patient lie on the site",
-              "correct": false,
-              "rationale": "Near miss concept A dry dressing hides bleeding into the tissue; reinforcing it treats the wrong problem."
+              "text": "Report increasing pain with a firm swelling at the site",
+              "correct": true,
+              "rationale": "After the procedure, pressure is held until bleeding stops, the site is inspected and palpated for a hematoma, and discomfort is treated with acetaminophen rather than aspirin or nonsteroidal anti inflammatory drugs. A firm, increasingly painful swelling suggests bleeding into the tissue and is reported."
             },
             {
               "id": "D",
-              "text": "Apply firm pressure to the site and notify the provider",
+              "text": "Give ibuprofen for site pain to reduce inflammation",
+              "correct": false,
+              "rationale": "Near miss concept Ibuprofen relieves the pain, which is why it tempts. It also impairs platelet function, and this patient already has too few platelets."
+            },
+            {
+              "id": "E",
+              "text": "Feel under the dressing for a firm, swelling area",
               "correct": true,
-              "rationale": "With a low platelet count, bleeding after the procedure may collect under the skin instead of soaking the dressing. A firm, painful swelling suggests a hematoma. The nurse applies direct pressure to stop the bleeding and reports it, then monitors the site and vital signs."
+              "rationale": "After the procedure, pressure is held until bleeding stops, the site is inspected and palpated for a hematoma, and discomfort is treated with acetaminophen rather than aspirin or nonsteroidal anti inflammatory drugs. A firm, increasingly painful swelling suggests bleeding into the tissue and is reported."
+            },
+            {
+              "id": "F",
+              "text": "Apply firm pressure to the site until bleeding stops",
+              "correct": true,
+              "rationale": "After the procedure, pressure is held until bleeding stops, the site is inspected and palpated for a hematoma, and discomfort is treated with acetaminophen rather than aspirin or nonsteroidal anti inflammatory drugs. A firm, increasingly painful swelling suggests bleeding into the tissue and is reported."
             }
           ],
-          "answer": "D",
-          "takeaway": "Dry dressing, firm swelling, low platelets: bleeding under the skin.",
-          "strategy": "Look past the dressing to the finding beneath it."
+          "answer": [
+            "A",
+            "C",
+            "E",
+            "F"
+          ],
+          "takeaway": "Low platelets after a marrow test: pressure, palpate, acetaminophen.",
+          "strategy": "Ask which option protects platelets and which only looks at the surface."
         },
         {
-          "id": "ig33-h05",
-          "topic": "Identify environmental exposures affecting blood health",
-          "stem": "A patient who restores old houses has fatigue and pallor. The hemoglobin is low and the red cells are small. Which assessment question will be most useful?",
-          "objective": "Identify environmental exposures affecting blood health",
+          "id": "ig33-h4",
+          "topic": "Recognize hematologic abnormalities from assessments",
+          "stem": "The nurse receives report on four patients. Which patient should the nurse assess first?",
+          "objective": "Recognize hematologic abnormalities from assessments",
           "tags": [
             "application",
             "new"
@@ -12922,32 +14314,577 @@
           "options": [
             {
               "id": "A",
-              "text": "\"Have you noticed black or tarry stools lately?\"",
+              "text": "A patient receiving chemotherapy with an absolute neutrophil count of 600/mm³ and a temperature of 37.9 °C",
               "correct": false,
-              "rationale": "Near miss concept Blood loss is worth asking about, but it ignores the clue in the history."
+              "rationale": "Most dramatic finding Neutropenia with a rising temperature is serious, and many students choose it. At 37.9 °C the patient has not reached the febrile threshold, and no other sign of infection is given, so this patient is next, not first."
             },
             {
               "id": "B",
-              "text": "\"Does anyone in your family have anemia?\"",
+              "text": "A patient with iron deficiency anemia and a hemoglobin of 8.1 g/dL who reports fatigue walking to the bathroom",
               "correct": false,
-              "rationale": "Accurate but inert data Family history is less useful than a direct exposure clue."
+              "rationale": "Expected finding offered as a problem Fatigue with a hemoglobin of 8.1 is expected with this anemia. It is a chronic, stable finding that does not threaten life in the next few minutes."
             },
             {
               "id": "C",
-              "text": "\"Do you sand or scrape old paint at work?\"",
-              "correct": true,
-              "rationale": "Lead blocks hemoglobin synthesis and causes a small cell anemia that looks like iron deficiency. Older homes often contain lead paint, and sanding or scraping creates dust. The occupational clue in the stem makes the exposure history the most useful question."
+              "text": "A patient 20 minutes into a red cell transfusion whose temperature rose from 37.0 to 37.3 °C with no other symptoms",
+              "correct": false,
+              "rationale": "Expected finding offered as a problem A rise of 0.3 °C with no chills, back pain or blood pressure change does not meet the criteria for a reaction. The nurse keeps monitoring, but this is not the priority."
             },
             {
               "id": "D",
-              "text": "\"How often do you eat red meat or leafy greens?\"",
-              "correct": false,
-              "rationale": "Near miss concept Diet fits iron deficiency, but this patient's work points to another cause of small red cells."
+              "text": "A patient with a platelet count of 18,000/mm³ who reports a new severe headache and has vomited once",
+              "correct": true,
+              "rationale": "A platelet count under 20,000 carries a risk of spontaneous bleeding. A new severe headache with vomiting suggests intracranial hemorrhage, a neurological emergency. The neutropenic patient needs close watching but is not yet febrile; the other two findings are expected or below the threshold for a reaction."
             }
           ],
-          "answer": "C",
-          "takeaway": "Small red cells plus old paint: ask about lead.",
-          "strategy": "Use the history detail the stem gives you."
+          "answer": "D",
+          "takeaway": "Very low platelets plus a new headache: think brain bleed.",
+          "strategy": "Choose the unexpected, acute finding over the expected or borderline one."
+        },
+        {
+          "id": "ig33-h5",
+          "topic": "Connect lab tests with clinical purposes",
+          "stem": "Ten minutes into a red blood cell transfusion, a patient reports chills and low back pain. The temperature is 38.6 °C, up from 37.0 °C, and the blood pressure has dropped from 128/76 to 96/58. Complete the diagram: the condition the patient is most likely experiencing, two actions the nurse takes, and two parameters to monitor.",
+          "objective": "Connect lab tests with clinical purposes",
+          "tags": [
+            "application",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "type": "bowtie",
+          "pools": {
+            "actions": {
+              "label": "Actions to take",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Stop the transfusion",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "Slow the transfusion rate and recheck in 15 minutes",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "Give the prescribed acetaminophen and continue the transfusion",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "D",
+                  "text": "Flush the remaining blood through with normal saline",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "E",
+                  "text": "Keep the IV access open with normal saline using new tubing",
+                  "correct": true,
+                  "rationale": ""
+                }
+              ]
+            },
+            "condition": {
+              "label": "Condition",
+              "select": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Febrile nonhemolytic reaction",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "Acute hemolytic transfusion reaction",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "Circulatory overload",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "D",
+                  "text": "Mild allergic reaction",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            "parameters": {
+              "label": "Parameters to monitor",
+              "select": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Skin for hives only",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "Serum sodium",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "Blood pressure",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "D",
+                  "text": "Urine output and color",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "E",
+                  "text": "Blood glucose",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            }
+          },
+          "answer": {
+            "actions": [
+              "A",
+              "E"
+            ],
+            "condition": [
+              "B"
+            ],
+            "parameters": [
+              "C",
+              "D"
+            ]
+          },
+          "takeaway": "Chills, back pain, fever and falling blood pressure within minutes of starting a red cell transfusion point to an acute hemolytic reaction, in which the recipient's antibodies destroy the donor cells. A febrile nonhemolytic reaction causes fever and chills without hypotension or back pain. The nurse stops the transfusion and keeps the vein open with normal saline through new tubing so no more donor blood enters, then notifies the provider and blood bank. Hemoglobin released from the destroyed cells can injure the kidneys, so urine output and color are watched, along with blood pressure for shock. Slowing the rate, giving acetaminophen and continuing, or flushing the remaining blood all expose the patient to more incompatible cells. Hemolytic reaction: stop, new tubing with saline, watch urine and pressure.",
+          "strategy": "Back pain and hypotension separate hemolysis from a simple fever."
+        },
+        {
+          "id": "ig33-u01",
+          "topic": "Recognize hematologic abnormalities from assessments",
+          "stem": "A 72 year old patient takes ibuprofen 800 mg three times daily and aspirin 81 mg daily for arthritis and heart protection, and is admitted with two weeks of fatigue, shortness of breath on exertion and black stools. Admission findings are listed. Classify each finding.",
+          "objective": "Recognize hematologic abnormalities from assessments",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig33u",
+          "caseStep": 1,
+          "caseTitle": "Fatigue and black stools",
+          "cjmmStep": "recognize cues",
+          "scenario": "HR 112, BP 118/70 lying and 96/60 standing, black stools, pale conjunctivae.",
+          "type": "matrix",
+          "columns": [
+            "Requires follow up",
+            "Expected or not concerning"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Heart rate 112/min",
+              "answer": "Requires follow up",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Black, tarry stools",
+              "answer": "Requires follow up",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "Blood pressure drops from 118/70 lying to 96/60 standing",
+              "answer": "Requires follow up",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "Mild stiffness in both knees in the morning",
+              "answer": "Expected or not concerning",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Pale conjunctivae",
+              "answer": "Requires follow up",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Temperature 36.9 °C",
+              "answer": "Expected or not concerning",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Requires follow up",
+            "r2": "Requires follow up",
+            "r3": "Requires follow up",
+            "r4": "Expected or not concerning",
+            "r5": "Requires follow up",
+            "r6": "Expected or not concerning"
+          },
+          "takeaway": "Tachycardia, an orthostatic drop in blood pressure and pale conjunctivae are cues of blood loss and reduced oxygen carrying capacity. Black, tarry stools suggest upper gastrointestinal bleeding. Morning knee stiffness fits the known osteoarthritis, and a normal temperature does not point to infection. Fast heart, orthostatic drop, pallor, melena: think bleeding.",
+          "strategy": "Sort by what fits the new problem, not the old diagnosis."
+        },
+        {
+          "id": "ig33-u02",
+          "topic": "Connect lab tests with clinical purposes",
+          "stem": "A 72 year old patient takes ibuprofen 800 mg three times daily and aspirin 81 mg daily for arthritis and heart protection, and is admitted with two weeks of fatigue, shortness of breath on exertion and black stools. Laboratory results return: hemoglobin 7.2 g/dL, mean corpuscular volume 72 fL, ferritin low, platelets 260,000/mm³. Complete the statement.",
+          "objective": "Connect lab tests with clinical purposes",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig33u",
+          "caseStep": 2,
+          "caseTitle": "Fatigue and black stools",
+          "cjmmStep": "analyze cues",
+          "scenario": "Hgb 7.2 g/dL, MCV 72 fL, ferritin low, platelets 260,000/mm³.",
+          "type": "cloze",
+          "sentence": "The small red cells and low ferritin point to [[1]] anemia, most likely caused by [[2]], which the patient's [[3]] have made more likely.",
+          "blanks": [
+            {
+              "id": 1,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "iron deficiency",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "vitamin B12 deficiency",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "hemolytic",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "low dietary iron",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "slow gastrointestinal blood loss",
+                  "correct": true,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "bone marrow failure",
+                  "correct": false,
+                  "rationale": ""
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "options": [
+                {
+                  "id": "A",
+                  "text": "normal platelet count",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "B",
+                  "text": "age and activity level",
+                  "correct": false,
+                  "rationale": ""
+                },
+                {
+                  "id": "C",
+                  "text": "daily ibuprofen and aspirin",
+                  "correct": true,
+                  "rationale": ""
+                }
+              ]
+            }
+          ],
+          "answer": {
+            "1": "A",
+            "2": "B",
+            "3": "C"
+          },
+          "takeaway": "A low mean corpuscular volume with low ferritin is the pattern of iron deficiency. In an adult with black stools, the cause is chronic blood loss, not diet. Ibuprofen and aspirin injure the stomach lining and impair platelet function, which makes gastrointestinal bleeding more likely; the platelet count is normal, but the platelets do not work well on aspirin. Small cells plus melena: iron lost through the gut.",
+          "strategy": "In an adult, iron deficiency means find the bleeding."
+        },
+        {
+          "id": "ig33-u03",
+          "topic": "Recognize hematologic abnormalities from assessments",
+          "stem": "A 72 year old patient takes ibuprofen 800 mg three times daily and aspirin 81 mg daily for arthritis and heart protection, and is admitted with two weeks of fatigue, shortness of breath on exertion and black stools. Hemoglobin is 7.2 g/dL, heart rate is 112/min and the blood pressure drops on standing. Which problem is the priority?",
+          "objective": "Recognize hematologic abnormalities from assessments",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig33u",
+          "caseStep": 3,
+          "caseTitle": "Fatigue and black stools",
+          "cjmmStep": "prioritize hypotheses",
+          "scenario": "Hgb 7.2, HR 112, orthostatic drop.",
+          "type": "multiple_choice",
+          "options": [
+            {
+              "id": "A",
+              "text": "Knowledge deficit about the safe use of pain relievers",
+              "correct": false,
+              "rationale": "Correct but premature Teaching about pain relievers is needed and is part of the plan. It addresses future risk; the bleeding and poor perfusion threaten the patient now."
+            },
+            {
+              "id": "B",
+              "text": "Ongoing blood loss with reduced oxygen delivery",
+              "correct": true,
+              "rationale": "Tachycardia and orthostatic hypotension with a hemoglobin of 7.2 mean the body is compensating for lost volume and oxygen carrying capacity. Ongoing gastrointestinal blood loss threatens circulation, so it outranks the chronic and educational problems."
+            },
+            {
+              "id": "C",
+              "text": "Iron deficiency from inadequate dietary intake",
+              "correct": false,
+              "rationale": "Near miss concept The cells are iron deficient, which makes diet sound reasonable. In an adult with melena, diet is not the cause, and treating it as a nutrition problem misses active bleeding."
+            },
+            {
+              "id": "D",
+              "text": "Activity intolerance from chronic arthritis pain",
+              "correct": false,
+              "rationale": "Near miss concept Activity intolerance is present, but it is caused by anemia, not by arthritis. Naming the effect instead of the cause leads to the wrong plan."
+            }
+          ],
+          "answer": "B",
+          "takeaway": "Compensating for blood loss: circulation comes first.",
+          "strategy": "Pick the problem that threatens perfusion now."
+        },
+        {
+          "id": "ig33-u04",
+          "topic": "Connect lab tests with clinical purposes",
+          "stem": "A 72 year old patient takes ibuprofen 800 mg three times daily and aspirin 81 mg daily for arthritis and heart protection, and is admitted with two weeks of fatigue, shortness of breath on exertion and black stools. The provider is notified of a hemoglobin of 7.2 g/dL with orthostatic hypotension. Select all of the actions the nurse should anticipate.",
+          "objective": "Connect lab tests with clinical purposes",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig33u",
+          "caseStep": 4,
+          "caseTitle": "Fatigue and black stools",
+          "cjmmStep": "generate solutions",
+          "scenario": "Provider notified; orders pending.",
+          "type": "sata",
+          "options": [
+            {
+              "id": "A",
+              "text": "Give oral iron now as the main treatment for the bleeding",
+              "correct": false,
+              "rationale": "Correct action, wrong question Iron will be needed to rebuild stores, so it sounds right. It does not stop the bleeding, and oral iron takes weeks to raise the hemoglobin, so it is not the treatment for this situation."
+            },
+            {
+              "id": "B",
+              "text": "Obtain a type and crossmatch",
+              "correct": true,
+              "rationale": "The plan treats the bleeding and its effects: blood is matched in case transfusion is needed, the drugs that injure the stomach and impair platelets are held and clarified, the orthostatic drop calls for fall precautions, and an endoscopy finds and treats the source."
+            },
+            {
+              "id": "C",
+              "text": "Implement fall precautions",
+              "correct": true,
+              "rationale": "The plan treats the bleeding and its effects: blood is matched in case transfusion is needed, the drugs that injure the stomach and impair platelets are held and clarified, the orthostatic drop calls for fall precautions, and an endoscopy finds and treats the source."
+            },
+            {
+              "id": "D",
+              "text": "Encourage walking in the hall to build endurance",
+              "correct": false,
+              "rationale": "Near miss concept Activity builds endurance in stable anemia. With orthostatic hypotension and a hemoglobin of 7.2, walking raises oxygen demand and fall risk."
+            },
+            {
+              "id": "E",
+              "text": "Prepare for an endoscopy to find the bleeding source",
+              "correct": true,
+              "rationale": "The plan treats the bleeding and its effects: blood is matched in case transfusion is needed, the drugs that injure the stomach and impair platelets are held and clarified, the orthostatic drop calls for fall precautions, and an endoscopy finds and treats the source."
+            },
+            {
+              "id": "F",
+              "text": "Hold the ibuprofen and aspirin and clarify with the provider",
+              "correct": true,
+              "rationale": "The plan treats the bleeding and its effects: blood is matched in case transfusion is needed, the drugs that injure the stomach and impair platelets are held and clarified, the orthostatic drop calls for fall precautions, and an endoscopy finds and treats the source."
+            }
+          ],
+          "answer": [
+            "B",
+            "C",
+            "E",
+            "F"
+          ],
+          "takeaway": "Find and stop the bleeding, prepare blood, prevent falls.",
+          "strategy": "Choose actions that address the cause and the risk now."
+        },
+        {
+          "id": "ig33-u05",
+          "topic": "Connect lab tests with clinical purposes",
+          "stem": "A 72 year old patient takes ibuprofen 800 mg three times daily and aspirin 81 mg daily for arthritis and heart protection, and is admitted with two weeks of fatigue, shortness of breath on exertion and black stools. The provider orders one unit of packed red blood cells. Place the nurse's actions in order.",
+          "objective": "Connect lab tests with clinical purposes",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig33u",
+          "caseStep": 5,
+          "caseTitle": "Fatigue and black stools",
+          "cjmmStep": "take action",
+          "scenario": "One unit of packed red blood cells ordered.",
+          "type": "ordered_response",
+          "options": [
+            {
+              "id": "A",
+              "text": "Begin the infusion slowly and stay with the patient for the first 15 minutes",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "B",
+              "text": "Verify the order and signed consent",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "C",
+              "text": "Obtain baseline vital signs",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "D",
+              "text": "Check the blood product and the patient's identity with a second licensed nurse at the bedside",
+              "correct": false,
+              "rationale": ""
+            },
+            {
+              "id": "E",
+              "text": "Prime the tubing with normal saline only",
+              "correct": false,
+              "rationale": ""
+            }
+          ],
+          "answer": [
+            "B",
+            "E",
+            "C",
+            "D",
+            "A"
+          ],
+          "takeaway": "The order and consent are confirmed first, the tubing is primed with normal saline, and baseline vital signs are taken so any change can be recognized. The two person bedside check comes just before the infusion, so the product checked is the one hung. Most severe reactions occur early, so the infusion starts slowly with the nurse present. Order, saline, baseline, two person check, start slow and stay.",
+          "strategy": "Baselines come before the blood, and the check comes right before hanging it."
+        },
+        {
+          "id": "ig33-u06",
+          "topic": "Connect lab tests with clinical purposes",
+          "stem": "A 72 year old patient takes ibuprofen 800 mg three times daily and aspirin 81 mg daily for arthritis and heart protection, and is admitted with two weeks of fatigue, shortness of breath on exertion and black stools. The day after a transfusion and endoscopic treatment of a gastric ulcer, the nurse evaluates the patient. Classify each finding.",
+          "objective": "Connect lab tests with clinical purposes",
+          "tags": [
+            "Concepts",
+            "case-study",
+            "new"
+          ],
+          "new": true,
+          "difficulty": "difficult",
+          "caseGroup": "ig33u",
+          "caseStep": 6,
+          "caseTitle": "Fatigue and black stools",
+          "cjmmStep": "evaluate outcomes",
+          "scenario": "Day after transfusion and endoscopy.",
+          "type": "matrix",
+          "columns": [
+            "Improved",
+            "Not improved"
+          ],
+          "rows": [
+            {
+              "id": "r1",
+              "text": "Hemoglobin 8.9 g/dL",
+              "answer": "Improved",
+              "rationale": ""
+            },
+            {
+              "id": "r2",
+              "text": "Heart rate 84/min",
+              "answer": "Improved",
+              "rationale": ""
+            },
+            {
+              "id": "r3",
+              "text": "No orthostatic drop in blood pressure",
+              "answer": "Improved",
+              "rationale": ""
+            },
+            {
+              "id": "r4",
+              "text": "New black stool this morning",
+              "answer": "Not improved",
+              "rationale": ""
+            },
+            {
+              "id": "r5",
+              "text": "Patient asks for ibuprofen for knee pain",
+              "answer": "Not improved",
+              "rationale": ""
+            },
+            {
+              "id": "r6",
+              "text": "Walks to the bathroom without shortness of breath",
+              "answer": "Improved",
+              "rationale": ""
+            }
+          ],
+          "answer": {
+            "r1": "Improved",
+            "r2": "Improved",
+            "r3": "Improved",
+            "r4": "Not improved",
+            "r5": "Not improved",
+            "r6": "Improved"
+          },
+          "takeaway": "A rising hemoglobin, a slower heart rate, no orthostatic drop and tolerance of activity show the transfusion and treatment worked. A new black stool may mean ongoing or recurrent bleeding and is reported. Asking for ibuprofen shows the teaching about avoiding these drugs has not taken hold. Evaluate both the body and the teaching.",
+          "strategy": "A new black stool is never an old finding."
         }
       ]
     }

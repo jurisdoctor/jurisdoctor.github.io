@@ -30,15 +30,15 @@ const Segment = ({
 }) => {
   const shell = answered
     ? picked && segment.correct
-      ? "bg-[rgba(var(--success-rgb),0.35)] decoration-[rgb(var(--success-rgb))]"
+      ? "border-[rgb(var(--success-rgb))] bg-[rgba(var(--success-rgb),0.35)]"
       : picked && !segment.correct
-        ? "bg-[color-mix(in_srgb,var(--danger-color)_22%,transparent)] line-through decoration-[var(--danger-color)]"
+        ? "border-[var(--danger-color)] bg-[color-mix(in_srgb,var(--danger-color)_22%,transparent)] line-through decoration-[var(--danger-color)]"
         : segment.correct
-          ? "bg-transparent underline decoration-dashed decoration-[rgb(var(--success-rgb))] underline-offset-4"
-          : "bg-transparent"
+          ? "border-dashed border-[rgb(var(--success-rgb))] bg-[var(--container-color)]"
+          : "border-transparent bg-[var(--container-color)] opacity-60"
     : picked
-      ? "bg-[#fdf06a]"
-      : "bg-transparent hover:bg-[var(--chip-blue)]";
+      ? "border-[#fdf06a] bg-[#fdf06a] text-[#1c1c1c]"
+      : "border-[var(--border-color)] bg-[var(--container-color)] hover:border-[var(--chip-blue-border)]";
 
   return (
     <button
@@ -46,7 +46,7 @@ const Segment = ({
       disabled={answered}
       aria-pressed={picked}
       onClick={onToggle}
-      className={`mr-1 rounded-[3px] px-0.5 text-left duration-200 ${shell} ${
+      className={`max-w-full rounded-lg border-2 border-solid px-3 py-1 text-left leading-6 duration-200 ${shell} ${
         answered ? "cursor-default" : "cursor-pointer"
       }`}
     >
@@ -115,7 +115,7 @@ const Highlight = ({
 
       <div
         ref={frameRef}
-        className="mb-5 rounded-2xl bg-[var(--body-color)] p-5 leading-9"
+        className="mb-5 flex flex-wrap gap-2.5 rounded-2xl bg-[var(--body-color)] p-4"
       >
         {segments.map((segment) => (
           <Segment

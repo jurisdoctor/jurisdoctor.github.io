@@ -45,10 +45,10 @@ const wrap = (hue: number) => ((hue % 360) + 360) % 360;
 // original red-to-yellow ember; a chapter's flame uses a small value so the
 // whole ring reads as that chapter's one color, with only its lightness
 // (dark rim to pale tip) changing as the gradient turns.
-export const flameStops = (hue: number, spread = 1) =>
+export const flameStops = (hue: number, spread = 1, lift = 0) =>
   STOPS.map(([offset, shift, sat, light]) => ({
     offset: `${offset}%`,
-    color: `hsl(${wrap(hue + shift * spread)}, ${sat}%, ${light}%)`,
+    color: `hsl(${wrap(hue + shift * spread)}, ${sat}%, ${Math.min(94, Math.max(18, light + lift))}%)`,
   }));
 
 export const flameHueAt = (index: number) =>
@@ -56,3 +56,12 @@ export const flameHueAt = (index: number) =>
     ((index % FLAME_PALETTE.length) + FLAME_PALETTE.length) %
       FLAME_PALETTE.length
   ].hue;
+
+const CASE_LIFTS = [-26, 26, 0];
+
+// Gives each case study in a chapter its own shade of the chapter's color, so
+// cases that sit side by side can be told apart.
+export const caseShade = (hue: number, order: number) => {
+  const lift = CASE_LIFTS[order % CASE_LIFTS.length];
+  return { lift, edge: `hsl(${wrap(hue)}, 85%, ${54 + lift}%)` };
+};

@@ -5,10 +5,10 @@ const STEP = 2500;
 const slotNow = () => Math.floor(Date.now() / STEP);
 
 // Cycles through chapter numbers for a topic built from several chapters.
-// One number is in the DOM at a time (no overlap/garble). It sits in a plain
-// inline-block sized to the widest value with tabular figures, so the glyph
-// keeps the normal text baseline (never clipped) and the surrounding text
-// never shifts. Each change flashes in with a simple opacity fade.
+// Only one value is visible at a time (no overlap/garble). All of them share
+// one grid cell, so the box is exactly as wide as the widest value, the glyph
+// keeps the normal text baseline and the surrounding text never shifts. Each
+// change flashes in with a simple opacity fade.
 const Flash = ({
   items,
   className,
@@ -42,16 +42,21 @@ const Flash = ({
     );
   }
 
-  const widest = items.reduce((a, b) => Math.max(a, b.length), 0);
-
   return (
     <span
-      className={`inline-block text-center tabular-nums ${className ?? ""}`}
-      style={{ minWidth: `${widest}ch` }}
+      className={`inline-grid justify-items-center tabular-nums ${className ?? ""}`}
     >
-      <span key={index} className="flash-num">
-        {items[index]}
-      </span>
+      {items.map((item, at) => (
+        <span
+          key={`${at}-${at === index}`}
+          aria-hidden={at !== index}
+          className={`col-start-1 row-start-1 whitespace-nowrap ${
+            at === index ? "flash-num" : "invisible"
+          }`}
+        >
+          {item}
+        </span>
+      ))}
     </span>
   );
 };
